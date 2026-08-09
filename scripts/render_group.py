@@ -21,17 +21,17 @@ TEXT = {
         "note": "",
     },
     "2028": {
-        "eyebrow": "Girls beach volleyball &#183; Class of 2028 &#183; National top 30",
-        "title": "The class of 2028, and <em>where the top 30 keep meeting</em>",
+        "eyebrow": "Girls beach volleyball &#183; Class of 2028 &#183; National top {N}",
+        "title": "The class of 2028, and <em>where the top {N} keep meeting</em>",
         "lede": "The {N} highest-rated girls in the graduating class of 2028, against their "
                 "Volleyball Life record",
-        "note": "<li><b>How these 60 were chosen.</b> Volleyball Life publishes no class "
+        "note": "<li><b>How these {N} were chosen.</b> Volleyball Life publishes no class "
                 "ranking, so the field was built by crawling the partner graph outward from "
                 "known 2028 athletes and keeping every profile that reports a 2028 graduation "
                 "year. The crawl was then run to closure &#8212; repeatedly expanding the "
                 "partners of every player already found until a full round turned up nobody "
                 "new above a 7.0 rating floor. That took the population to <b>1,574 girls in "
-                "the class, 1,373 of them rated</b>; the 60 highest TruVolley scores are the "
+                "the class, 1,373 of them rated</b>; the {N} highest TruVolley scores are the "
                 "roster here. The final round added 563 players and not one of them cleared "
                 "the floor, so the cut is stable &#8212; though it is tight: #61 is Nikolina "
                 "Mimic at 7.331, fifteen thousandths behind #60. This is a ranking by rating, "
@@ -222,7 +222,14 @@ def build(group):
 body {{ margin:0; background:var(--ground); color:var(--body);
   font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   font-size:15px; line-height:1.6; -webkit-font-smoothing:antialiased; }}
-.wrap {{ max-width:1120px; margin:0 auto; padding:0 28px; }}
+.wrap {{ max-width:none; margin:0; padding:0 clamp(18px,2.4vw,44px); }}
+/* The matrix earns the whole viewport; running text keeps a readable measure. */
+h1 {{ max-width:24ch; }}
+.standfirst {{ max-width:66ch; }}
+.facts {{ max-width:1460px; }}
+.panel {{ max-width:1560px; }}
+.figwrap {{ max-width:1180px; }}
+footer {{ max-width:82ch; }}
 
 header {{ padding:64px 0 34px; border-bottom:1px solid var(--line); }}
 .eyebrow {{ font-size:11px; letter-spacing:.16em; text-transform:uppercase;
@@ -243,7 +250,7 @@ h1 em {{ font-style:italic; color:var(--accent); }}
 section {{ padding:48px 0 0; }}
 h2 {{ font-family:"Iowan Old Style",Georgia,"Times New Roman",serif;
   font-size:25px; color:var(--ink); font-weight:600; letter-spacing:-.01em; margin:0 0 6px; }}
-.lede {{ color:var(--muted); margin:0 0 22px; max-width:70ch; font-size:14.5px; }}
+.lede {{ color:var(--muted); margin:0 0 22px; max-width:72ch; font-size:14.5px; }}
 
 .panel {{ border:1px solid var(--line); border-radius:3px; background:var(--surface); overflow-x:auto; }}
 table {{ border-collapse:collapse; width:100%; }}
@@ -368,15 +375,15 @@ a {{ color:var(--accent); }}
 :focus-visible {{ outline:2px solid var(--accent); outline-offset:2px; }}
 @media (prefers-reduced-motion:reduce) {{ * {{ transition:none !important; animation:none !important; }} }}
 @media (max-width:720px) {{
-  .wrap {{ padding:0 18px; }} header {{ padding-top:40px; }}
+  header {{ padding-top:40px; }}
   .matrix .rowh, .matrix thead .corner {{ width:150px; min-width:150px; }}
 }}
 </style>
 
 <div class="wrap">
 <header>
-  <p class="eyebrow">{T['eyebrow']}</p>
-  <h1>{T['title']}</h1>
+  <p class="eyebrow">{T['eyebrow'].format(N=N)}</p>
+  <h1>{T['title'].format(N=N)}</h1>
   <p class="standfirst">{T['lede'].format(N=N)} for the twelve months
   ending 9 August 2026. <b>Doubles only</b> &#8212; club and five-a-side results are excluded,
   because a squad finish says little about the individual. Each age division counts as its own
@@ -488,7 +495,7 @@ a {{ color:var(--accent); }}
     denominator unchanged.</li>
     <li><b>Sanctioning bodies</b> are tagged in each column head: AVPA (AVP and AVP Juniors),
     USAV, AAU, BVCA, CBVA and p1440.</li>
-    {T['note']}
+    {T['note'].format(N=N)}
   </ul>
 </section>
 <footer>
