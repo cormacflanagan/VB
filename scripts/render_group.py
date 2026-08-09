@@ -72,6 +72,23 @@ def esc(s):
     return html.escape(str(s), quote=True)
 
 
+VBL = "https://volleyballlife.com"
+
+
+def plink(name, pid, cls="lnk"):
+    """Athlete name linked to her Volleyball Life profile."""
+    if not pid:
+        return esc(name)
+    return (f'<a class="{cls}" href="{VBL}/player/{pid}" target="_blank" '
+            f'rel="noopener">{esc(name)}</a>')
+
+
+def clink(c, text, cls="lnk"):
+    """Competition name linked to its division page, which is the field the cell scores."""
+    return (f'<a class="{cls}" href="{VBL}/tournament/{c["tid"]}/division/{c["tdId"]}" '
+            f'target="_blank" rel="noopener">{esc(text)}</a>')
+
+
 def build(group):
     D = json.load(open(f"{group}_site.json"))
     players, comps, pairs = D["players"], D["comps"], D["pairs"]
@@ -88,7 +105,7 @@ def build(group):
     for p in players:
         pct = max(0, min(100, ((p["tv"] or lo) - lo) / (hi - lo) * 100))
         roster.append(f"""      <tr>
-        <th scope="row"><span class="pn">{esc(p['name'])}</span><span class="pc">{esc(nicecity(p['city']))}</span></th>
+        <th scope="row"><span class="pn">{plink(p['name'], p.get('id'))}</span><span class="pc">{esc(nicecity(p['city']))}</span></th>
         <td>{esc(p['region'])}</td>
         <td class="clubc">{esc(p['club'] or '—')}</td>{htcell(p)}
         <td class="num">
@@ -106,7 +123,7 @@ def build(group):
         fld = f'{c["field"]} teams' if c["field"] else "field n/a"
         head.append(
             f'      <th scope="col" class="evh" title="{esc(c["event"])} &#183; {esc(c["division"])} &#183; {esc(fld)} &#183; {esc(c["date"])}">'
-            f'<span class="evn">{esc(c["short"])}</span>'
+            f'<span class="evn">{clink(c, c["short"])}</span>'
             f'<span class="evdiv">{esc(c["division"])}</span>'
             f'<span class="field">{esc(fld)}</span>'
             f'<span class="evd">{c["date"][5:7]}/{c["date"][8:10]} &#183; {esc(c["sanction"])}</span>'
@@ -128,7 +145,7 @@ def build(group):
             tds.append(f'        <td class="cell {cls(f, c["field"])}" title="{esc(tip)}">'
                        f'<span class="fin">{f}</span></td>')
         rows.append(f"""      <tr>
-        <th scope="row" class="rowh"><span class="pn">{esc(p['name'])}</span>
+        <th scope="row" class="rowh"><span class="pn">{plink(p['name'], p.get('id'))}</span>
           <span class="rmeta"><span class="tvchip">{p['tv']:.2f}</span>
           <span class="rsum">{len(p['cells'])} shared &#183; {pod} podium{'s' if pod != 1 else ''}</span></span></th>
 {chr(10).join(tds)}
@@ -139,10 +156,10 @@ def build(group):
         a, b = c["players"]
         prs.append(f"""      <tr>
         <td class="num dim nw">{esc(c['date'])}</td>
-        <td><span class="evn2">{esc(tidy(c['event']))}</span><span class="dv">{esc(c['division'])}</span></td>
+        <td><span class="evn2">{clink(c, tidy(c['event']))}</span><span class="dv">{esc(c['division'])}</span></td>
         <td class="num">{c['field'] if c['field'] else '&#8211;'}</td>
-        <td>{esc(a['name'])} <b class="pos">{a['f']}{ord_(a['f'])}</b></td>
-        <td>{esc(b['name'])} <b class="pos">{b['f']}{ord_(b['f'])}</b></td>
+        <td>{plink(a['name'], a.get('id'))} <b class="pos">{a['f']}{ord_(a['f'])}</b></td>
+        <td>{plink(b['name'], b.get('id'))} <b class="pos">{b['f']}{ord_(b['f'])}</b></td>
       </tr>""")
 
     HILITE = {"2028": ("Lucy Matuszak", "Haisley Flanagan", "Lia Ray",
@@ -344,6 +361,10 @@ table {{ border-collapse:collapse; width:100%; }}
 .notes b {{ color:var(--body); font-weight:600; }}
 footer {{ border-top:1px solid var(--line); padding:22px 0 70px; font-size:12px; color:var(--faint); }}
 a {{ color:var(--accent); }}
+.lnk {{ color:inherit; text-decoration:none; }}
+.lnk:hover, .lnk:focus-visible {{ color:var(--accent);
+  text-decoration:underline; text-underline-offset:2px; text-decoration-thickness:1px; }}
+.evn .lnk:hover {{ color:var(--accent); }}
 :focus-visible {{ outline:2px solid var(--accent); outline-offset:2px; }}
 @media (prefers-reduced-motion:reduce) {{ * {{ transition:none !important; animation:none !important; }} }}
 @media (max-width:720px) {{

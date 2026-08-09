@@ -22,8 +22,12 @@ def _fit(xs, ys):
     return b, a, r
 
 
+VBL = "https://volleyballlife.com"
+
+
 def scatter(players, label_names=(), w=860, h=430):
-    pts = [(p["comps"], p["tv"], p["name"]) for p in players if p.get("tv") is not None]
+    pts = [(p["comps"], p["tv"], p["name"], p.get("id"))
+           for p in players if p.get("tv") is not None]
     if len(pts) < 3:
         return ""
     xs = [p[0] for p in pts]
@@ -75,15 +79,17 @@ def scatter(players, label_names=(), w=860, h=430):
                f'linear fit</text>')
 
     labels = set(label_names)
-    for cx, cy, nm in sorted(pts, key=lambda p: p[2] in labels):
+    for cx, cy, nm, pid in sorted(pts, key=lambda p: p[2] in labels):
         X, Y = sx(cx), sy(cy)
         cls = "dot hi" if nm in labels else "dot"
-        out.append(f'<circle class="{cls}" cx="{X:.1f}" cy="{Y:.1f}" r="5.5">'
-                   f'<title>{html.escape(nm)} — TruVolley {cy:.3f}, {cx} competition'
-                   f'{"" if cx == 1 else "s"}</title></circle>')
+        mark = (f'<circle class="{cls}" cx="{X:.1f}" cy="{Y:.1f}" r="5.5">'
+                f'<title>{html.escape(nm)} — TruVolley {cy:.3f}, {cx} competition'
+                f'{"" if cx == 1 else "s"}</title></circle>')
+        out.append(f'<a href="{VBL}/player/{pid}" target="_blank" rel="noopener">{mark}</a>'
+                   if pid else mark)
     # direct labels last so they sit above the marks; nudge any that would collide
     placed = []
-    for cx, cy, nm in sorted((p for p in pts if p[2] in labels), key=lambda p: sy(p[1])):
+    for cx, cy, nm, pid in sorted((p for p in pts if p[2] in labels), key=lambda p: sy(p[1])):
         X, Y = sx(cx), sy(cy)
         anchor = "end" if X > ml + pw * 0.72 else "start"
         dx = -10 if anchor == "end" else 10
@@ -92,8 +98,10 @@ def scatter(players, label_names=(), w=860, h=430):
             if abs(px - X) < 150 and abs(py - ly) < 15:
                 ly = py + 15
         placed.append((X, ly))
-        out.append(f'<text class="ptlab" text-anchor="{anchor}" x="{X+dx:.1f}" '
-                   f'y="{ly:.1f}">{html.escape(nm)}</text>')
+        lab = (f'<text class="ptlab" text-anchor="{anchor}" x="{X+dx:.1f}" '
+               f'y="{ly:.1f}">{html.escape(nm)}</text>')
+        out.append(f'<a href="{VBL}/player/{pid}" target="_blank" rel="noopener">{lab}</a>'
+                   if pid else lab)
     out.append("</svg>")
     return "".join(out), b, r
 
@@ -120,6 +128,10 @@ FIG_CSS = """
   font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
 .fig .dot { fill:var(--mark); stroke:var(--surface); stroke-width:2; }
 .fig .dot.hi { fill:var(--surface); stroke:var(--mark); stroke-width:3; }
+.fig a { cursor:pointer; }
+.fig a:hover .dot { fill:var(--ink); }
+.fig a:hover .dot.hi { stroke:var(--ink); }
+.fig a:hover .ptlab { fill:var(--mark); }
 .fig .ptlab { fill:var(--ink); font-size:11.5px; font-weight:600;
   font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   paint-order:stroke; stroke:var(--surface); stroke-width:3px; }

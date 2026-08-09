@@ -117,6 +117,19 @@ brackets rather than converging on a single selection event.
 Dropping club formats hit the U17 group hardest — 73 results removed against the U18s' 40 —
 and removed the BVCA Orange County 5v5 series, which had been the U17s' densest column.
 
+## Links out to Volleyball Life
+
+Every athlete name and every competition name in the reports is a link:
+
+| Element | Target |
+| --- | --- |
+| Athlete name (roster, matrix row, appendix, chart label and dot) | `volleyballlife.com/player/{playerProfileId}` |
+| Competition name (matrix column head, appendix) | `volleyballlife.com/tournament/{tournamentId}/division/{tdId}` |
+
+Competitions link to the **division** page rather than the event, so the destination is the
+exact field the cell is scored against — the 16U bracket, not the whole tournament that also
+ran 18U and 15U beside it. Both URL shapes were checked against the live site.
+
 ## The rating-against-workload figure
 
 Each report carries a scatter of TruVolley against number of doubles competitions, with a

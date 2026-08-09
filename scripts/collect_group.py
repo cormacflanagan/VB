@@ -129,7 +129,7 @@ def main(group):
     for name in order:
         p = tv[name]
         pl.append({
-            "name": name, "region": p["region"], "club": p["club"],
+            "name": name, "id": p["id"], "region": p["region"], "club": p["club"],
             "height": p.get("height"),
             "city": p["cityState"], "tv": p["truvolley"], "peak": p["peak"],
             "w": p["w"], "l": (p["matches"] or 0) - (p["w"] or 0),
@@ -143,8 +143,8 @@ def main(group):
     for k, m in who.items():
         if len(m) == 2:
             c = dict(comp[k])
-            c["players"] = sorted(({"name": n, "f": e["finish"]} for n, e in m.items()),
-                                  key=lambda x: x["f"])
+            c["players"] = sorted(({"name": n, "id": tv[n]["id"], "f": e["finish"]}
+                                   for n, e in m.items()), key=lambda x: x["f"])
             pairs.append(c)
     pairs.sort(key=lambda c: c["date"], reverse=True)
 
