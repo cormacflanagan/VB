@@ -1,0 +1,1578 @@
+<title>BNTDP 17U Girls &#183; Record by Competition</title>
+<style>
+:root {
+  --ground:#EFF1EE; --surface:#FAFBFA; --raise:#FFFFFF;
+  --ink:#111B19; --body:#2C3A37; --muted:#5F6E6A; --faint:#8B9995;
+  --line:#D5DCD9; --hair:#E4E9E7;
+  --accent:#0B6E68; --accent-soft:#D9E7E5;
+  --gold:#9A6B12; --gold-soft:#F3E4C4;
+  --wash:#EAEDEB;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:#0B1211; --surface:#121B19; --raise:#182322;
+    --ink:#E9EFEC; --body:#C6D2CE; --muted:#93A29E; --faint:#6E7D79;
+    --line:#243330; --hair:#1C2827;
+    --accent:#57C3B6; --accent-soft:#123733;
+    --gold:#DCA84A; --gold-soft:#382B12;
+    --wash:#161F1E;
+  }
+}
+:root[data-theme="dark"] {
+  --ground:#0B1211; --surface:#121B19; --raise:#182322;
+  --ink:#E9EFEC; --body:#C6D2CE; --muted:#93A29E; --faint:#6E7D79;
+  --line:#243330; --hair:#1C2827;
+  --accent:#57C3B6; --accent-soft:#123733;
+  --gold:#DCA84A; --gold-soft:#382B12;
+  --wash:#161F1E;
+}
+
+* { box-sizing:border-box; }
+body { margin:0; background:var(--ground); color:var(--body);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:15px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+.wrap { max-width:1120px; margin:0 auto; padding:0 28px; }
+
+header { padding:64px 0 34px; border-bottom:1px solid var(--line); }
+.eyebrow { font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--accent); font-weight:650; margin:0 0 18px; }
+h1 { font-family:"Iowan Old Style",Georgia,"Times New Roman",serif;
+  font-size:clamp(34px,5.2vw,54px); line-height:1.05; letter-spacing:-.02em;
+  color:var(--ink); margin:0 0 16px; font-weight:600; text-wrap:balance; }
+h1 em { font-style:italic; color:var(--accent); }
+.standfirst { font-size:17px; color:var(--muted); max-width:64ch; margin:0; }
+.facts { display:flex; flex-wrap:wrap; margin:32px 0 0;
+  border:1px solid var(--line); border-radius:3px; background:var(--surface); overflow:hidden; }
+.fact { flex:1 1 130px; padding:14px 18px; border-right:1px solid var(--hair); }
+.fact:last-child { border-right:0; }
+.fact b { display:block; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:23px; color:var(--ink); font-weight:600; font-variant-numeric:tabular-nums; line-height:1.2; }
+.fact span { font-size:11px; letter-spacing:.09em; text-transform:uppercase; color:var(--faint); }
+
+section { padding:48px 0 0; }
+h2 { font-family:"Iowan Old Style",Georgia,"Times New Roman",serif;
+  font-size:25px; color:var(--ink); font-weight:600; letter-spacing:-.01em; margin:0 0 6px; }
+.lede { color:var(--muted); margin:0 0 22px; max-width:70ch; font-size:14.5px; }
+
+.panel { border:1px solid var(--line); border-radius:3px; background:var(--surface); overflow-x:auto; }
+table { border-collapse:collapse; width:100%; }
+.roster th, .roster td, .pairs th, .pairs td {
+  padding:11px 14px; text-align:left; border-bottom:1px solid var(--hair); }
+.roster thead th, .pairs thead th {
+  font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint);
+  font-weight:650; background:var(--wash); border-bottom:1px solid var(--line); white-space:nowrap; }
+.roster tbody tr:last-child th, .roster tbody tr:last-child td,
+.pairs tbody tr:last-child td { border-bottom:0; }
+.roster tbody tr:hover, .pairs tbody tr:hover { background:var(--raise); }
+.roster th[scope="row"] { font-weight:500; }
+.pn { display:block; color:var(--ink); font-weight:600; white-space:nowrap; }
+.pc { display:block; font-size:11.5px; color:var(--faint); }
+.clubc { font-size:13px; color:var(--muted); }
+.num { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-variant-numeric:tabular-nums; font-size:13.5px; }
+.dim { color:var(--faint); }
+.nw { white-space:nowrap; }
+.rate { display:flex; align-items:center; gap:9px; }
+.rv { color:var(--ink); font-weight:600; font-size:14.5px; }
+.bar { display:block; width:74px; height:5px; background:var(--wash);
+  border:1px solid var(--hair); border-radius:2px; overflow:hidden; }
+.fill { display:block; height:100%; background:var(--accent); }
+
+.matrix-wrap { border:1px solid var(--line); border-radius:3px; background:var(--surface); overflow-x:auto; }
+.matrix { border-collapse:separate; border-spacing:0; }
+.matrix th, .matrix td { border-bottom:1px solid var(--hair); border-right:1px solid var(--hair); }
+.matrix .evh { width:112px; min-width:112px; vertical-align:bottom; padding:12px 10px 10px;
+  background:var(--wash); border-bottom:1px solid var(--line);
+  position:sticky; top:0; z-index:2; text-align:left; }
+.evn { display:block; font-size:11.5px; line-height:1.3; color:var(--ink); font-weight:600; }
+.evdiv { display:block; font-size:10.5px; line-height:1.3; color:var(--muted); margin-top:2px; }
+.field { display:inline-block; margin-top:6px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:11px; font-weight:650;
+  color:var(--accent); background:var(--accent-soft); border-radius:2px; padding:2px 6px;
+  font-variant-numeric:tabular-nums; white-space:nowrap; }
+.evd { display:block; margin-top:6px; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:10px; color:var(--faint); font-variant-numeric:tabular-nums; }
+.evc { display:block; margin-top:3px; font-size:9.5px; letter-spacing:.05em;
+  text-transform:uppercase; color:var(--muted); font-weight:650; }
+.matrix .rowh { position:sticky; left:0; z-index:3; background:var(--surface);
+  width:196px; min-width:196px; padding:10px 14px 10px 16px; text-align:left;
+  border-right:1px solid var(--line); font-weight:500; }
+.matrix thead .corner { position:sticky; left:0; top:0; z-index:4; background:var(--wash);
+  border-right:1px solid var(--line); border-bottom:1px solid var(--line);
+  width:196px; min-width:196px; padding:12px 16px; text-align:left; vertical-align:bottom;
+  font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); font-weight:650; }
+.rmeta { display:flex; align-items:center; gap:8px; margin-top:4px; }
+.tvchip { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:12px; font-weight:650; color:var(--accent); background:var(--accent-soft);
+  border-radius:2px; padding:1px 5px; font-variant-numeric:tabular-nums; }
+.rsum { font-size:10.5px; color:var(--faint); white-space:nowrap; }
+.matrix tbody tr:hover .cell { box-shadow:inset 0 0 0 99px rgba(127,127,127,.055); }
+.cell { width:112px; min-width:112px; padding:11px 8px; text-align:center;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-variant-numeric:tabular-nums; }
+.fin { font-size:17px; font-weight:700; letter-spacing:-.01em; }
+.cell.win { background:var(--gold-soft); color:var(--gold); box-shadow:inset 3px 0 0 var(--gold); }
+.cell.pod { background:var(--gold-soft); color:var(--gold); }
+.cell.t1 { background:var(--accent-soft); color:var(--accent); }
+.cell.t2 { background:color-mix(in srgb,var(--accent-soft) 58%,transparent); color:var(--accent); }
+.cell.t3 { background:color-mix(in srgb,var(--accent-soft) 28%,transparent); color:var(--body); }
+.cell.t4 { color:var(--muted); }
+.cell.t5, .cell.na { color:var(--faint); }
+.cell.empty { color:var(--hair);
+  background:repeating-linear-gradient(-45deg,transparent,transparent 5px,var(--hair) 5px,var(--hair) 6px); }
+.cell.empty span { opacity:.55; font-size:13px; }
+
+.legend { display:flex; flex-wrap:wrap; gap:8px 20px; align-items:center; margin:16px 0 0;
+  font-size:12px; color:var(--muted); }
+.key { display:inline-flex; align-items:center; gap:7px; }
+.sw { width:22px; height:14px; border:1px solid var(--line); border-radius:2px; display:inline-block; }
+.sw.win { background:var(--gold-soft); box-shadow:inset 3px 0 0 var(--gold); }
+.sw.pod { background:var(--gold-soft); }
+.sw.t1 { background:var(--accent-soft); }
+.sw.t2 { background:color-mix(in srgb,var(--accent-soft) 58%,transparent); }
+.sw.t3 { background:color-mix(in srgb,var(--accent-soft) 28%,transparent); }
+.sw.t5 { background:var(--surface); }
+.evn2 { display:block; color:var(--ink); font-weight:600; font-size:13.5px; }
+.dv { display:block; font-size:11.5px; color:var(--faint); }
+.pos { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  color:var(--ink); font-weight:700; font-variant-numeric:tabular-nums; }
+.pairs td { font-size:13.5px; }
+.pairs td:nth-child(2) { max-width:330px; }
+
+.notes { margin:0 0 60px; }
+.notes ul { padding-left:19px; margin:10px 0 0; }
+.notes li { margin:7px 0; font-size:13.5px; color:var(--muted); max-width:76ch; }
+.notes b { color:var(--body); font-weight:600; }
+footer { border-top:1px solid var(--line); padding:22px 0 70px; font-size:12px; color:var(--faint); }
+a { color:var(--accent); }
+:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+@media (prefers-reduced-motion:reduce) { * { transition:none !important; animation:none !important; } }
+@media (max-width:720px) {
+  .wrap { padding:0 18px; } header { padding-top:40px; }
+  .matrix .rowh, .matrix thead .corner { width:150px; min-width:150px; }
+}
+</style>
+
+<div class="wrap">
+<header>
+  <p class="eyebrow">USA Volleyball &#183; Beach NTDP Summer Training Series 2026 &#183; Girls U17</p>
+  <h1>The 17U girls, and <em>who they actually played</em></h1>
+  <p class="standfirst">All 20 athletes named to the Girls U17 roster for the Beach NTDP
+  Summer Training Series at Chula Vista, against their Volleyball Life record for the twelve months
+  ending 9 August 2026. Each age division counts as its own competition &#8212; a 16U bracket and
+  the 18U bracket running beside it are different fields, so they are different columns. Every cell
+  is a finishing position; the size of that field is in the column head.</p>
+  <div class="facts">
+    <div class="fact"><b>20</b><span>Athletes</span></div>
+    <div class="fact"><b>135</b><span>Events attended</span></div>
+    <div class="fact"><b>172</b><span>Competitions</span></div>
+    <div class="fact"><b>33</b><span>Shared by 3+</span></div>
+    <div class="fact"><b>12&#8202;mo</b><span>Aug &#8217;25 &#8211; Aug &#8217;26</span></div>
+  </div>
+</header>
+
+<section>
+  <h2>The roster</h2>
+  <p class="lede">TruVolley is Volleyball Life's skill rating &#8212; one number derived from
+  match-by-match results against rated opposition. Sorted strongest first.</p>
+  <div class="panel">
+    <table class="roster">
+      <thead><tr>
+        <th scope="col">Athlete</th><th scope="col">USAV region</th><th scope="col">Club</th>
+        <th scope="col">TruVolley</th><th scope="col">Peak</th>
+        <th scope="col">W&#8211;L</th><th scope="col">Comps</th>
+      </tr></thead>
+      <tbody>
+      <tr>
+        <th scope="row"><span class="pn">Lucy Matuszak</span><span class="pc">Los Angeles, CA</span></th>
+        <td>So. Cal / So. Nevada</td>
+        <td class="clubc">MBsand</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.821</span>
+            <span class="bar"><span class="fill" style="width:70.7%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.921</td>
+        <td class="num nw">254&#8202;&#8211;&#8202;61</td>
+        <td class="num">10</td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn">Nariah Johnson</span><span class="pc">Rcho Santa Fe, CA</span></th>
+        <td>So. Cal / So. Nevada</td>
+        <td class="clubc">WAVE Beach</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.572</span>
+            <span class="bar"><span class="fill" style="width:62.4%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.572</td>
+        <td class="num nw">219&#8202;&#8211;&#8202;37</td>
+        <td class="num">18</td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn">Madison Gillinger</span><span class="pc">Huntington Beach, CA</span></th>
+        <td>So. Cal / So. Nevada</td>
+        <td class="clubc">Spiker Beach Volleyball Club</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.552</span>
+            <span class="bar"><span class="fill" style="width:61.7%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.628</td>
+        <td class="num nw">247&#8202;&#8211;&#8202;127</td>
+        <td class="num">24</td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn">Brooke Proctor</span><span class="pc">Coronado, CA</span></th>
+        <td>So. Cal / So. Nevada</td>
+        <td class="clubc">WAVE Beach</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.428</span>
+            <span class="bar"><span class="fill" style="width:57.6%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.428</td>
+        <td class="num nw">189&#8202;&#8211;&#8202;32</td>
+        <td class="num">11</td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn">Reagan Carlin</span><span class="pc">Encinitas, CA</span></th>
+        <td>So. Cal / So. Nevada</td>
+        <td class="clubc">WAVE Beach</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.385</span>
+            <span class="bar"><span class="fill" style="width:56.2%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.385</td>
+        <td class="num nw">273&#8202;&#8211;&#8202;47</td>
+        <td class="num">17</td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn">Haisley Flanagan</span><span class="pc">Santa Cruz, CA</span></th>
+        <td>Northern California</td>
+        <td class="clubc">Santa Cruz Beach Volleyball Club</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.377</span>
+            <span class="bar"><span class="fill" style="width:55.9%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.434</td>
+        <td class="num nw">258&#8202;&#8211;&#8202;73</td>
+        <td class="num">18</td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn">Ashley Ruschill</span><span class="pc">Mckinney, TX</span></th>
+        <td>North Texas</td>
+        <td class="clubc">Jaja beach</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.370</span>
+            <span class="bar"><span class="fill" style="width:55.7%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.474</td>
+        <td class="num nw">525&#8202;&#8211;&#8202;149</td>
+        <td class="num">24</td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn">Cayden Dorger</span><span class="pc">Spanish Fort, AL</span></th>
+        <td>Gulf Coast</td>
+        <td class="clubc">MVP Beach </td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.228</span>
+            <span class="bar"><span class="fill" style="width:50.9%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.360</td>
+        <td class="num nw">183&#8202;&#8211;&#8202;72</td>
+        <td class="num">20</td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn">Julianna Godbey</span><span class="pc">Mckinney, TX</span></th>
+        <td>North Texas</td>
+        <td class="clubc">Spiker Beach Volleyball Club</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.109</span>
+            <span class="bar"><span class="fill" style="width:47.0%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.194</td>
+        <td class="num nw">455&#8202;&#8211;&#8202;130</td>
+        <td class="num">17</td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn">Taylie Hansen</span><span class="pc">Vero Beach, FL</span></th>
+        <td>Florida</td>
+        <td class="clubc">Vero Beach Beach Club (VBVB)</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.072</span>
+            <span class="bar"><span class="fill" style="width:45.7%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.492</td>
+        <td class="num nw">243&#8202;&#8211;&#8202;99</td>
+        <td class="num">13</td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn">Charlotte Jansen</span><span class="pc">Del Mar, CA</span></th>
+        <td>So. Cal / So. Nevada</td>
+        <td class="clubc">WAVE Beach</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.019</span>
+            <span class="bar"><span class="fill" style="width:44.0%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.159</td>
+        <td class="num nw">270&#8202;&#8211;&#8202;118</td>
+        <td class="num">26</td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn">Sienna Cicero</span><span class="pc">Villa Park, CA</span></th>
+        <td>So. Cal / So. Nevada</td>
+        <td class="clubc">Spiker Beach Volleyball Club</td>
+        <td class="num">
+          <div class="rate"><span class="rv">7.920</span>
+            <span class="bar"><span class="fill" style="width:40.7%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.002</td>
+        <td class="num nw">219&#8202;&#8211;&#8202;73</td>
+        <td class="num">11</td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn">Elle Sossong</span><span class="pc">Phoenixville, PA</span></th>
+        <td>Keystone</td>
+        <td class="clubc">—</td>
+        <td class="num">
+          <div class="rate"><span class="rv">7.916</span>
+            <span class="bar"><span class="fill" style="width:40.5%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.559</td>
+        <td class="num nw">261&#8202;&#8211;&#8202;81</td>
+        <td class="num">9</td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn">Regina Stella Broshear</span><span class="pc">Saratoga, CA</span></th>
+        <td>Northern California</td>
+        <td class="clubc">Golden Gate volleyball</td>
+        <td class="num">
+          <div class="rate"><span class="rv">7.843</span>
+            <span class="bar"><span class="fill" style="width:38.1%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.087</td>
+        <td class="num nw">393&#8202;&#8211;&#8202;107</td>
+        <td class="num">17</td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn">Elyse Smelcer</span><span class="pc">Cary, NC</span></th>
+        <td>Carolina</td>
+        <td class="clubc">Sinjin Beach Volleyball</td>
+        <td class="num">
+          <div class="rate"><span class="rv">7.778</span>
+            <span class="bar"><span class="fill" style="width:35.9%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.126</td>
+        <td class="num nw">312&#8202;&#8211;&#8202;146</td>
+        <td class="num">7</td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn">Ella Buchanan</span><span class="pc">San Luis Obispo, CA</span></th>
+        <td>So. Cal / So. Nevada</td>
+        <td class="clubc">SLOVBC</td>
+        <td class="num">
+          <div class="rate"><span class="rv">7.763</span>
+            <span class="bar"><span class="fill" style="width:35.4%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">7.966</td>
+        <td class="num nw">151&#8202;&#8211;&#8202;62</td>
+        <td class="num">14</td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn">Milana Rivera</span><span class="pc">Spring, TX</span></th>
+        <td>Lone Star</td>
+        <td class="clubc">Third Coast</td>
+        <td class="num">
+          <div class="rate"><span class="rv">7.669</span>
+            <span class="bar"><span class="fill" style="width:32.3%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.232</td>
+        <td class="num nw">220&#8202;&#8211;&#8202;139</td>
+        <td class="num">17</td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn">Olivia LeDoyen</span><span class="pc">Viera, FL</span></th>
+        <td>So. Cal / So. Nevada</td>
+        <td class="clubc">Southbay Sand</td>
+        <td class="num">
+          <div class="rate"><span class="rv">7.494</span>
+            <span class="bar"><span class="fill" style="width:26.5%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">7.867</td>
+        <td class="num nw">820&#8202;&#8211;&#8202;269</td>
+        <td class="num">41</td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn">Emerson Harper</span><span class="pc">Los Angeles, CA</span></th>
+        <td>So. Cal / So. Nevada</td>
+        <td class="clubc">South Bay Sand</td>
+        <td class="num">
+          <div class="rate"><span class="rv">7.435</span>
+            <span class="bar"><span class="fill" style="width:24.5%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">7.521</td>
+        <td class="num nw">298&#8202;&#8211;&#8202;53</td>
+        <td class="num">15</td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn">Ella Whiteside</span><span class="pc">Millsap, TX</span></th>
+        <td>North Texas</td>
+        <td class="clubc">Southbay Sand</td>
+        <td class="num">
+          <div class="rate"><span class="rv">6.862</span>
+            <span class="bar"><span class="fill" style="width:5.4%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">7.875</td>
+        <td class="num nw">314&#8202;&#8211;&#8202;135</td>
+        <td class="num">17</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>Players against shared competitions</h2>
+  <p class="lede">The 33 competitions entered by at least three of the 20, biggest
+  turnout first. A cell is that athlete's finishing position in the field named above it;
+  hatched means she did not enter. Hover any cell for her partner.</p>
+</section>
+</div>
+
+<div class="wrap">
+  <div class="matrix-wrap">
+    <table class="matrix">
+      <thead><tr>
+        <th class="corner">Athlete &#183; TruVolley</th>
+      <th scope="col" class="evh" title="2025-26 BVCA Orange County Spring &#183; Open (5v5) &#183; 12 teams &#183; 2026-05-10"><span class="evn">BVCA Orange Cty Spring</span><span class="evdiv">Open (5v5)</span><span class="field">12 teams</span><span class="evd">05/10 &#183; BVCA</span><span class="evc">9&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2026 BVCA Individual Pairs National Championship &#183; Girls 16U &#183; 159 teams &#183; 2026-07-11"><span class="evn">BVCA Pairs Nationals</span><span class="evdiv">Girls 16U</span><span class="field">159 teams</span><span class="evd">07/11 &#183; BVCA</span><span class="evc">9&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="AVP Juniors National Championships 2026 &#183; Girls 16U &#183; 72 teams &#183; 2026-07-26"><span class="evn">AVP Jrs Nationals</span><span class="evdiv">Girls 16U</span><span class="field">72 teams</span><span class="evd">07/26 &#183; AVPA</span><span class="evc">9&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2026 Futures Tour Spring Championship &#183; Class of &#x27;26 &amp; Younger &#183; 59 teams &#183; 2026-03-29"><span class="evn">Futures Spring Champ</span><span class="evdiv">Class of &#x27;26 &amp; Younger</span><span class="field">59 teams</span><span class="evd">03/29 &#183; p1440</span><span class="evc">8&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="33rd AAU Hermosa Beach National Pairs Championships &#183; Girls 16 - 2028 &#183; 59 teams &#183; 2026-07-19"><span class="evn">AAU Hermosa Nat&#x27;l Pairs</span><span class="evdiv">Girls 16 - 2028</span><span class="field">59 teams</span><span class="evd">07/19 &#183; AAU</span><span class="evc">8&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="AVP Juniors West Coast Championships 2025 &#183; Girls 16U &#183; 23 teams &#183; 2025-11-09"><span class="evn">AVP Jrs West Coast</span><span class="evdiv">Girls 16U</span><span class="field">23 teams</span><span class="evd">11/09 &#183; AVPA</span><span class="evc">7&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2026 Futures Tour: Arizona &#183; Class of &#x27;28 &amp; Younger &#183; 36 teams &#183; 2026-01-18"><span class="evn">Futures Tour: Arizona</span><span class="evdiv">Class of &#x27;28 &amp; Younger</span><span class="field">36 teams</span><span class="evd">01/18 &#183; p1440</span><span class="evc">7&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier &#183; Girls 16 Open &#183; 104 teams &#183; 2026-05-03"><span class="evn">USAV BeachFest Qualifier</span><span class="evdiv">Girls 16 Open</span><span class="field">104 teams</span><span class="evd">05/03 &#183; USAV</span><span class="evc">7&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2026 BVCA Club V Club National Championships &#183; OPEN Division &#183; 24 teams &#183; 2026-07-11"><span class="evn">BVCA Club v Club Nats</span><span class="evdiv">OPEN Division</span><span class="field">24 teams</span><span class="evd">07/11 &#183; BVCA</span><span class="evc">7&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2026 USA Volleyball U18 Beach National Team Trials &#183; U18 Girls &#183; 12 teams &#183; 2026-01-31"><span class="evn">USAV U18 Trials</span><span class="evdiv">U18 Girls</span><span class="field">12 teams</span><span class="evd">01/31 &#183; USAV</span><span class="evc">6&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2025-26 BVCA Orange County Winter &#183; Open (5v5) &#183; 16 teams &#183; 2026-02-08"><span class="evn">BVCA Orange Cty Winter</span><span class="evdiv">Open (5v5)</span><span class="field">16 teams</span><span class="evd">02/08 &#183; BVCA</span><span class="evc">6&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2026 Futures Tour: Florida &#183; Class of &#x27;26 &amp; Younger &#183; 56 teams &#183; 2026-03-15"><span class="evn">Futures Tour: Florida</span><span class="evdiv">Class of &#x27;26 &amp; Younger</span><span class="field">56 teams</span><span class="evd">03/15 &#183; p1440</span><span class="evc">6&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2026 USA Volleyball Youth Olympic Games Trials &#183; U18 Girls &#183; 9 teams &#183; 2026-06-18"><span class="evn">USAV YOG Trials</span><span class="evdiv">U18 Girls</span><span class="field">9 teams</span><span class="evd">06/18 &#183; USAV</span><span class="evc">6&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2026/27 BVCA Orange County Summer Club Challenge &#183; Open (5v5) &#183; 6 teams &#183; 2026-07-02"><span class="evn">BVCA Orange Cty Summer</span><span class="evdiv">Open (5v5)</span><span class="field">6 teams</span><span class="evd">07/02 &#183; BVCA</span><span class="evc">6&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2026 Futures Tour: Texas &#183; Class of &#x27;26 &amp; Younger &#183; 32 teams &#183; 2026-04-12"><span class="evn">Futures Tour: Texas</span><span class="evdiv">Class of &#x27;26 &amp; Younger</span><span class="field">32 teams</span><span class="evd">04/12 &#183; p1440</span><span class="evc">5&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2026 Futures Tour WESTERN NATIONAL CHAMPIONSHIPS &#183; Class of 2028 &amp; Younger &#183; 31 teams &#183; 2026-06-19"><span class="evn">Futures Western Nats</span><span class="evdiv">Class of 2028 &amp; Younger</span><span class="field">31 teams</span><span class="evd">06/19 &#183; p1440</span><span class="evc">5&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="33rd AAU Hermosa Beach National Pairs Championships &#183; Girls 15 - 2029 &#183; 38 teams &#183; 2026-07-19"><span class="evn">AAU Hermosa Nat&#x27;l Pairs</span><span class="evdiv">Girls 15 - 2029</span><span class="field">38 teams</span><span class="evd">07/19 &#183; AAU</span><span class="evc">5&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="AVP Juniors National Championships 2026 &#183; Girls 15U &#183; 64 teams &#183; 2026-07-26"><span class="evn">AVP Jrs Nationals</span><span class="evdiv">Girls 15U</span><span class="field">64 teams</span><span class="evd">07/26 &#183; AVPA</span><span class="evc">5&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2025-26 BVCA Orange County Fall &#183; Open (5v5) &#183; 12 teams &#183; 2025-12-07"><span class="evn">BVCA Orange Cty Fall</span><span class="evdiv">Open (5v5)</span><span class="field">12 teams</span><span class="evd">12/07 &#183; BVCA</span><span class="evc">4&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="AAU Hermosa Beach Club Championships &#183; Girls Open (5 Pairs) &#183; 13 teams &#183; 2026-07-14"><span class="evn">AAU Hermosa Club Champs</span><span class="evdiv">Girls Open (5 Pairs)</span><span class="field">13 teams</span><span class="evd">07/14 &#183; —</span><span class="evc">4&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="AVP Juniors National Championships 2026 &#183; Girls 18U &#183; 64 teams &#183; 2026-07-26"><span class="evn">AVP Jrs Nationals</span><span class="evdiv">Girls 18U</span><span class="field">64 teams</span><span class="evd">07/26 &#183; AVPA</span><span class="evc">4&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2025 CBVA Fall Championships: Invitation Only Girl&#x27;s 16u at Newland, Huntington Beach &#183; Girls 16U &#183; 9 teams &#183; 2025-10-12"><span class="evn">CBVA Fall Champs (Inv)</span><span class="evdiv">Girls 16U</span><span class="field">9 teams</span><span class="evd">10/12 &#183; AVPA</span><span class="evc">3&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="Women&#x27;s Open at Main Beach, Santa Cruz &#183; Womens Open &#183; 18 teams &#183; 2025-10-25"><span class="evn">Main Beach Santa Cruz</span><span class="evdiv">Womens Open</span><span class="field">18 teams</span><span class="evd">10/25 &#183; AVPA</span><span class="evc">3&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="AVP Next Men’s &amp; Women’s Fall Triple Crown Series #2 $8,000 Purse &#183; Women&#x27;s Open &#183; 21 teams &#183; 2025-10-26"><span class="evn">AVP Next Triple Crown 2</span><span class="evdiv">Women&#x27;s Open</span><span class="field">21 teams</span><span class="evd">10/26 &#183; AVPA</span><span class="evc">3&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="AVP Juniors West Coast Championships 2025 &#183; Girls 15U &#183; 24 teams &#183; 2025-11-09"><span class="evn">AVP Jrs West Coast</span><span class="evdiv">Girls 15U</span><span class="field">24 teams</span><span class="evd">11/09 &#183; AVPA</span><span class="evc">3&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2025 p1440 Elite Dev Open Tournament &#183; Girls 18U &#183; 31 teams &#183; 2025-11-16"><span class="evn">p1440 Elite Dev Open</span><span class="evdiv">Girls 18U</span><span class="field">31 teams</span><span class="evd">11/16 &#183; p1440</span><span class="evc">3&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="AVP Juniors East Coast Championships 2025 &#183; Girls 16U &#183; 54 teams &#183; 2025-11-30"><span class="evn">AVP Jrs East Coast</span><span class="evdiv">Girls 16U</span><span class="field">54 teams</span><span class="evd">11/30 &#183; AVPA</span><span class="evc">3&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="210 Beach Texas Recruiting Showcase Texas, LSU, ASU, South Carolina, Arizona, UTEP, and more tba &#183; Girls 18U &#183; 40 teams &#183; 2026-02-01"><span class="evn">210 Beach Showcase</span><span class="evdiv">Girls 18U</span><span class="field">40 teams</span><span class="evd">02/01 &#183; AVPA</span><span class="evc">3&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="3/8/26, Dockweiler, Los Angeles &#183; Womens AA &#183; 19 teams &#183; 2026-03-08"><span class="evn">Dockweiler, Los Angeles</span><span class="evdiv">Womens AA</span><span class="field">19 teams</span><span class="evd">03/08 &#183; AVPA</span><span class="evc">3&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="BVCA AZ Club Challenge RPM &#x27;26 &#183; OPEN &#183; 12 teams &#183; 2026-04-12"><span class="evn">BVCA AZ Club Challenge</span><span class="evdiv">OPEN</span><span class="field">12 teams</span><span class="evd">04/12 &#183; BVCA</span><span class="evc">3&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier &#183; Girls 18U Open &#183; 103 teams &#183; 2026-05-03"><span class="evn">USAV BeachFest Qualifier</span><span class="evdiv">Girls 18U Open</span><span class="field">103 teams</span><span class="evd">05/03 &#183; USAV</span><span class="evc">3&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2026 BVCA Club V Club National Championships &#183; Club Division &#183; 24 teams &#183; 2026-07-11"><span class="evn">BVCA Club v Club Nats</span><span class="evdiv">Club Division</span><span class="field">24 teams</span><span class="evd">07/11 &#183; BVCA</span><span class="evc">3&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2026 BVCA Individual Pairs National Championship &#183; Girls 18U &#183; 160 teams &#183; 2026-07-11"><span class="evn">BVCA Pairs Nationals</span><span class="evdiv">Girls 18U</span><span class="field">160 teams</span><span class="evd">07/11 &#183; BVCA</span><span class="evc">3&#8201;of&#8201;20</span></th>
+      </tr></thead>
+      <tbody>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn">Lucy Matuszak</span>
+          <span class="rmeta"><span class="tvchip">8.82</span>
+          <span class="rsum">5 shared &#183; 3 podiums</span></span></th>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Lucy Matuszak — 2nd of 159 · BVCA Pairs Nationals · Girls 16U · with Sarah Cowan"><span class="fin">2</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t1" title="Lucy Matuszak — 5th of 59 · Futures Spring Champ · Class of &#x27;26 &amp; Younger · with Sage Illian"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell win" title="Lucy Matuszak — 1st of 24 · BVCA Club v Club Nats · OPEN Division · with Addison Junk, Avery Junk, Shayla Martinez, Ruby Cochrane, Cora Loomer, Sarah Gyepes, Macy Ludwig, Ciela Hendrickson, Sara Moynihan"><span class="fin">1</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Lucy Matuszak — 3rd of 9 · USAV YOG Trials · U18 Girls · with Olivia Herron"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Lucy Matuszak — 9th of 64 · AVP Jrs Nationals · Girls 18U · with Olivia Herron"><span class="fin">9</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn">Nariah Johnson</span>
+          <span class="rmeta"><span class="tvchip">8.57</span>
+          <span class="rsum">13 shared &#183; 6 podiums</span></span></th>
+        <td class="cell t3" title="Nariah Johnson — 4th of 12 · BVCA Orange Cty Spring · Open (5v5) · with Sarah Uebelhoer, Vivian Roberts, Summer Tukua, Ashlynn Proctor, Charlotte Jansen, Stella Snyder, Paisley Mahn, Ella Hughes, Isabel Ruiz"><span class="fin">4</span></td>
+        <td class="cell win" title="Nariah Johnson — 1st of 159 · BVCA Pairs Nationals · Girls 16U · with Ashlynn Proctor"><span class="fin">1</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Nariah Johnson — 9th of 59 · Futures Spring Champ · Class of &#x27;26 &amp; Younger · with Ashlynn Proctor"><span class="fin">9</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Nariah Johnson — 5th of 36 · Futures Tour: Arizona · Class of &#x27;28 &amp; Younger · with Taylor Daley"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t3" title="Nariah Johnson — 5th of 12 · USAV U18 Trials · U18 Girls · with Jordyn Wilson"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t1" title="Nariah Johnson — 5th of 56 · Futures Tour: Florida · Class of &#x27;26 &amp; Younger · with Charlotte Jansen"><span class="fin">5</span></td>
+        <td class="cell t4" title="Nariah Johnson — 5th of 9 · USAV YOG Trials · U18 Girls · with Sadie Stafford"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Nariah Johnson — 2nd of 31 · Futures Western Nats · Class of 2028 &amp; Younger · with Charlotte Jansen"><span class="fin">2</span></td>
+        <td class="cell pod" title="Nariah Johnson — 2nd of 38 · AAU Hermosa Nat&#x27;l Pairs · Girls 15 - 2029 · with Julianna Godbey"><span class="fin">2</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Nariah Johnson — 3rd of 12 · BVCA Orange Cty Fall · Open (5v5) · with Sarah Uebelhoer, Sam Krystkowiak, Paisley Mahn, Stella Snyder, Caroline Tadder, Vivian Roberts, Charlotte Jansen, Isabel Ruiz, Ella Hughes"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell win" title="Nariah Johnson — 1st of 19 · Dockweiler, Los Angeles · Womens AA · with Charlotte Jansen"><span class="fin">1</span></td>
+        <td class="cell win" title="Nariah Johnson — 1st of 12 · BVCA AZ Club Challenge · OPEN · with Ashlynn Proctor, Summer Tukua, Brooke Proctor, Reagan Carlin, Brynn Harris"><span class="fin">1</span></td>
+        <td class="cell t1" title="Nariah Johnson — 5th of 103 · USAV BeachFest Qualifier · Girls 18U Open · with Sarah Uebelhoer"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn">Madison Gillinger</span>
+          <span class="rmeta"><span class="tvchip">8.55</span>
+          <span class="rsum">12 shared &#183; 4 podiums</span></span></th>
+        <td class="cell t3" title="Madison Gillinger — 6th of 12 · BVCA Orange Cty Spring · Open (5v5) · with Molly Serafin, Skylar Noble, Abigail Moffett, Brooklyn Lopez, Sadie Harris, Caroline Stafford, Julianna Godbey, Kara Boas, Ava Champagne"><span class="fin">6</span></td>
+        <td class="cell pod" title="Madison Gillinger — 3rd of 159 · BVCA Pairs Nationals · Girls 16U · with Sadie Harris"><span class="fin">3</span></td>
+        <td class="cell pod" title="Madison Gillinger — 2nd of 72 · AVP Jrs Nationals · Girls 16U · with Haisley Flanagan"><span class="fin">2</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t3" title="Madison Gillinger — 9th of 23 · AVP Jrs West Coast · Girls 16U · with Aubree Marsden"><span class="fin">9</span></td>
+        <td class="cell t2" title="Madison Gillinger — 9th of 36 · Futures Tour: Arizona · Class of &#x27;28 &amp; Younger · with Sadie Harris"><span class="fin">9</span></td>
+        <td class="cell t1" title="Madison Gillinger — 9th of 104 · USAV BeachFest Qualifier · Girls 16 Open · with Sadie Harris"><span class="fin">9</span></td>
+        <td class="cell pod" title="Madison Gillinger — 2nd of 24 · BVCA Club v Club Nats · OPEN Division · with Olga Nikolaeva, Olivia Herron, Estelle Reese, Thalia Lindahl, Jordyn Wilson, Zoe Znider, Sandie Souza, Abigail Moffett, Marley Robinson"><span class="fin">2</span></td>
+        <td class="cell t3" title="Madison Gillinger — 5th of 12 · USAV U18 Trials · U18 Girls · with Sadie Harris"><span class="fin">5</span></td>
+        <td class="cell t5" title="Madison Gillinger — 13th of 16 · BVCA Orange Cty Winter · Open (5v5) · with Brooklyn Lopez, Abigail Moffett, Sadie Harris, Katherine Jackson, Berit Brinkema, Zoe Znider, Emerson Butler, Molly Serafin, Skylar Noble"><span class="fin">13</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell win" title="Madison Gillinger — 1st of 6 · BVCA Orange Cty Summer · Open (5v5) · with Jordyn Wilson, Zoe Znider, Sandie Souza, Abigail Moffett, Skylar Noble, Sadie Harris, Marley Robinson, Katherine Jackson, Molly Serafin"><span class="fin">1</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t3" title="Madison Gillinger — 4th of 12 · BVCA Orange Cty Fall · Open (5v5) · with Abigail Moffett, Emerson Butler, Kara Boas, Olivia Marroquin, Piper Owen, Sadie Harris, Cienna Enriquez, Brooklyn Lopez, Sienna Cicero"><span class="fin">4</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t4" title="Madison Gillinger — 5th of 9 · CBVA Fall Champs (Inv) · Girls 16U · with Aubree Marsden"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn">Brooke Proctor</span>
+          <span class="rmeta"><span class="tvchip">8.43</span>
+          <span class="rsum">8 shared &#183; 6 podiums</span></span></th>
+        <td class="cell t5" title="Brooke Proctor — 10th of 12 · BVCA Orange Cty Spring · Open (5v5) · with Kennedy Carlin, Reagan Carlin, Brynn Harris, Abigail Goble, Gracie Moffet, Elizabeth Willis, Ellie Burr, Aubrie Campbell, Kloe Fulenwider"><span class="fin">10</span></td>
+        <td class="cell t1" title="Brooke Proctor — 5th of 159 · BVCA Pairs Nationals · Girls 16U · with Reagan Carlin"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Brooke Proctor — 2nd of 16 · BVCA Orange Cty Winter · Open (5v5) · with Sarah Uebelhoer, Ella Hughes, Vivian Roberts, Charlotte Jansen, Isabel Ruiz, Paisley Mahn, JoJo Wilson, Reagan Carlin, Ashlynn Proctor"><span class="fin">2</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Brooke Proctor — 3rd of 38 · AAU Hermosa Nat&#x27;l Pairs · Girls 15 - 2029 · with Reagan Carlin"><span class="fin">3</span></td>
+        <td class="cell win" title="Brooke Proctor — 1st of 64 · AVP Jrs Nationals · Girls 15U · with Reagan Carlin"><span class="fin">1</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell win" title="Brooke Proctor — 1st of 9 · CBVA Fall Champs (Inv) · Girls 16U · with Reagan Carlin"><span class="fin">1</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell win" title="Brooke Proctor — 1st of 24 · AVP Jrs West Coast · Girls 15U · with Reagan Carlin"><span class="fin">1</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell win" title="Brooke Proctor — 1st of 12 · BVCA AZ Club Challenge · OPEN · with Ashlynn Proctor, Summer Tukua, Reagan Carlin, Nariah Johnson, Brynn Harris"><span class="fin">1</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn">Reagan Carlin</span>
+          <span class="rmeta"><span class="tvchip">8.38</span>
+          <span class="rsum">10 shared &#183; 7 podiums</span></span></th>
+        <td class="cell t5" title="Reagan Carlin — 10th of 12 · BVCA Orange Cty Spring · Open (5v5) · with Brooke Proctor, Kennedy Carlin, Brynn Harris, Abigail Goble, Gracie Moffet, Elizabeth Willis, Ellie Burr, Aubrie Campbell, Kloe Fulenwider"><span class="fin">10</span></td>
+        <td class="cell t1" title="Reagan Carlin — 5th of 159 · BVCA Pairs Nationals · Girls 16U · with Brooke Proctor"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Reagan Carlin — 2nd of 36 · Futures Tour: Arizona · Class of &#x27;28 &amp; Younger · with Brynn Harris"><span class="fin">2</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t4" title="Reagan Carlin — 9th of 12 · USAV U18 Trials · U18 Girls · with Parker Wilson"><span class="fin">9</span></td>
+        <td class="cell pod" title="Reagan Carlin — 2nd of 16 · BVCA Orange Cty Winter · Open (5v5) · with Sarah Uebelhoer, Ella Hughes, Vivian Roberts, Charlotte Jansen, Isabel Ruiz, Paisley Mahn, JoJo Wilson, Brooke Proctor, Ashlynn Proctor"><span class="fin">2</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Reagan Carlin — 3rd of 38 · AAU Hermosa Nat&#x27;l Pairs · Girls 15 - 2029 · with Brooke Proctor"><span class="fin">3</span></td>
+        <td class="cell win" title="Reagan Carlin — 1st of 64 · AVP Jrs Nationals · Girls 15U · with Brooke Proctor"><span class="fin">1</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell win" title="Reagan Carlin — 1st of 9 · CBVA Fall Champs (Inv) · Girls 16U · with Brooke Proctor"><span class="fin">1</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell win" title="Reagan Carlin — 1st of 24 · AVP Jrs West Coast · Girls 15U · with Brooke Proctor"><span class="fin">1</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell win" title="Reagan Carlin — 1st of 12 · BVCA AZ Club Challenge · OPEN · with Ashlynn Proctor, Summer Tukua, Brooke Proctor, Nariah Johnson, Brynn Harris"><span class="fin">1</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn">Haisley Flanagan</span>
+          <span class="rmeta"><span class="tvchip">8.38</span>
+          <span class="rsum">6 shared &#183; 2 podiums</span></span></th>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Haisley Flanagan — 2nd of 72 · AVP Jrs Nationals · Girls 16U · with Madison Gillinger"><span class="fin">2</span></td>
+        <td class="cell t2" title="Haisley Flanagan — 9th of 59 · Futures Spring Champ · Class of &#x27;26 &amp; Younger · with Ella Buchanan"><span class="fin">9</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Haisley Flanagan — 5th of 23 · AVP Jrs West Coast · Girls 16U · with Charlotte Jansen"><span class="fin">5</span></td>
+        <td class="cell pod" title="Haisley Flanagan — 3rd of 36 · Futures Tour: Arizona · Class of &#x27;28 &amp; Younger · with Haven Gindoff"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t5" title="Haisley Flanagan — 17th of 18 · Main Beach Santa Cruz · Womens Open · with Charlotte Jansen"><span class="fin">17</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Haisley Flanagan — 33rd of 160 · BVCA Pairs Nationals · Girls 18U · with Hayden Smith"><span class="fin">33</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn">Ashley Ruschill</span>
+          <span class="rmeta"><span class="tvchip">8.37</span>
+          <span class="rsum">18 shared &#183; 7 podiums</span></span></th>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t1" title="Ashley Ruschill — 5th of 72 · AVP Jrs Nationals · Girls 16U · with Edie Joseph"><span class="fin">5</span></td>
+        <td class="cell t2" title="Ashley Ruschill — 13th of 59 · Futures Spring Champ · Class of &#x27;26 &amp; Younger · with Julianna Godbey"><span class="fin">13</span></td>
+        <td class="cell pod" title="Ashley Ruschill — 3rd of 59 · AAU Hermosa Nat&#x27;l Pairs · Girls 16 - 2028 · with Cayden Dorger"><span class="fin">3</span></td>
+        <td class="cell t2" title="Ashley Ruschill — 5th of 23 · AVP Jrs West Coast · Girls 16U · with Julianna Godbey"><span class="fin">5</span></td>
+        <td class="cell t2" title="Ashley Ruschill — 5th of 36 · Futures Tour: Arizona · Class of &#x27;28 &amp; Younger · with Brazos Allred"><span class="fin">5</span></td>
+        <td class="cell t1" title="Ashley Ruschill — 5th of 104 · USAV BeachFest Qualifier · Girls 16 Open · with Julianna Godbey"><span class="fin">5</span></td>
+        <td class="cell t3" title="Ashley Ruschill — 11th of 24 · BVCA Club v Club Nats · OPEN Division · with Naomi Lygas, Milana Rivera, Finley Saxon, Brooke Brown, Camila Foreman, Mikayla Moore, Maiya Kohn, Sadie Kendrick, Tesa Solis"><span class="fin">11</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Ashley Ruschill — 9th of 56 · Futures Tour: Florida · Class of &#x27;26 &amp; Younger · with Haven Gindoff"><span class="fin">9</span></td>
+        <td class="cell pod" title="Ashley Ruschill — 3rd of 9 · USAV YOG Trials · U18 Girls · with Cayden Dorger"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Ashley Ruschill — 5th of 32 · Futures Tour: Texas · Class of &#x27;26 &amp; Younger · with Cayden Dorger"><span class="fin">5</span></td>
+        <td class="cell pod" title="Ashley Ruschill — 3rd of 31 · Futures Western Nats · Class of 2028 &amp; Younger · with Cayden Dorger"><span class="fin">3</span></td>
+        <td class="cell win" title="Ashley Ruschill — 1st of 38 · AAU Hermosa Nat&#x27;l Pairs · Girls 15 - 2029 · with Lily Vandeweghe"><span class="fin">1</span></td>
+        <td class="cell pod" title="Ashley Ruschill — 3rd of 64 · AVP Jrs Nationals · Girls 15U · with Julianna Godbey"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t4" title="Ashley Ruschill — 13th of 21 · AVP Next Triple Crown 2 · Women&#x27;s Open · with Julianna Godbey"><span class="fin">13</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Ashley Ruschill — 5th of 31 · p1440 Elite Dev Open · Girls 18U · with Julianna Godbey"><span class="fin">5</span></td>
+        <td class="cell pod" title="Ashley Ruschill — 2nd of 54 · AVP Jrs East Coast · Girls 16U · with Julianna Godbey"><span class="fin">2</span></td>
+        <td class="cell pod" title="Ashley Ruschill — 2nd of 40 · 210 Beach Showcase · Girls 18U · with Cayden Dorger"><span class="fin">2</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Ashley Ruschill — 17th of 160 · BVCA Pairs Nationals · Girls 18U · with Tesa Solis"><span class="fin">17</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn">Cayden Dorger</span>
+          <span class="rmeta"><span class="tvchip">8.23</span>
+          <span class="rsum">9 shared &#183; 6 podiums</span></span></th>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Cayden Dorger — 3rd of 72 · AVP Jrs Nationals · Girls 16U · with Stella Sheeran"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Cayden Dorger — 3rd of 59 · AAU Hermosa Nat&#x27;l Pairs · Girls 16 - 2028 · with Ashley Ruschill"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Cayden Dorger — 2nd of 104 · USAV BeachFest Qualifier · Girls 16 Open · with Stella Sheeran"><span class="fin">2</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Cayden Dorger — 11th of 56 · Futures Tour: Florida · Class of &#x27;26 &amp; Younger · with Skye Douglass"><span class="fin">11</span></td>
+        <td class="cell pod" title="Cayden Dorger — 3rd of 9 · USAV YOG Trials · U18 Girls · with Ashley Ruschill"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Cayden Dorger — 5th of 32 · Futures Tour: Texas · Class of &#x27;26 &amp; Younger · with Ashley Ruschill"><span class="fin">5</span></td>
+        <td class="cell pod" title="Cayden Dorger — 3rd of 31 · Futures Western Nats · Class of 2028 &amp; Younger · with Ashley Ruschill"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t1" title="Cayden Dorger — 5th of 54 · AVP Jrs East Coast · Girls 16U · with Savannah Hastings"><span class="fin">5</span></td>
+        <td class="cell pod" title="Cayden Dorger — 2nd of 40 · 210 Beach Showcase · Girls 18U · with Ashley Ruschill"><span class="fin">2</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn">Julianna Godbey</span>
+          <span class="rmeta"><span class="tvchip">8.11</span>
+          <span class="rsum">16 shared &#183; 5 podiums</span></span></th>
+        <td class="cell t3" title="Julianna Godbey — 6th of 12 · BVCA Orange Cty Spring · Open (5v5) · with Molly Serafin, Skylar Noble, Abigail Moffett, Brooklyn Lopez, Madison Gillinger, Sadie Harris, Caroline Stafford, Kara Boas, Ava Champagne"><span class="fin">6</span></td>
+        <td class="cell t1" title="Julianna Godbey — 9th of 159 · BVCA Pairs Nationals · Girls 16U · with Abigail Moffett"><span class="fin">9</span></td>
+        <td class="cell t1" title="Julianna Godbey — 5th of 72 · AVP Jrs Nationals · Girls 16U · with Emma Abernathy"><span class="fin">5</span></td>
+        <td class="cell t2" title="Julianna Godbey — 13th of 59 · Futures Spring Champ · Class of &#x27;26 &amp; Younger · with Ashley Ruschill"><span class="fin">13</span></td>
+        <td class="cell t2" title="Julianna Godbey — 9th of 59 · AAU Hermosa Nat&#x27;l Pairs · Girls 16 - 2028 · with Lily Vandeweghe"><span class="fin">9</span></td>
+        <td class="cell t2" title="Julianna Godbey — 5th of 23 · AVP Jrs West Coast · Girls 16U · with Ashley Ruschill"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t1" title="Julianna Godbey — 5th of 104 · USAV BeachFest Qualifier · Girls 16 Open · with Ashley Ruschill"><span class="fin">5</span></td>
+        <td class="cell t2" title="Julianna Godbey — 5th of 24 · BVCA Club v Club Nats · OPEN Division · with Molly Serafin, Skylar Noble, Sadie Harris, Kara Boas, Brooklyn Lopez, Rylee Hartwell, Caroline Stafford, Cienna Enriquez, Katherine Jackson"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Julianna Godbey — 3rd of 6 · BVCA Orange Cty Summer · Open (5v5) · with Aubree Marsden, Rylee Hartwell, Caroline Stafford, Sadie Calderone, Cienna Enriquez, Olivia Marroquin, Emerson Butler, Payton Durante, Piper Owen, Sierra Leeper"><span class="fin">3</span></td>
+        <td class="cell t3" title="Julianna Godbey — 9th of 32 · Futures Tour: Texas · Class of &#x27;26 &amp; Younger · with Haven Gindoff"><span class="fin">9</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Julianna Godbey — 2nd of 38 · AAU Hermosa Nat&#x27;l Pairs · Girls 15 - 2029 · with Nariah Johnson"><span class="fin">2</span></td>
+        <td class="cell pod" title="Julianna Godbey — 3rd of 64 · AVP Jrs Nationals · Girls 15U · with Ashley Ruschill"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t4" title="Julianna Godbey — 13th of 21 · AVP Next Triple Crown 2 · Women&#x27;s Open · with Ashley Ruschill"><span class="fin">13</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Julianna Godbey — 5th of 31 · p1440 Elite Dev Open · Girls 18U · with Ashley Ruschill"><span class="fin">5</span></td>
+        <td class="cell pod" title="Julianna Godbey — 2nd of 54 · AVP Jrs East Coast · Girls 16U · with Ashley Ruschill"><span class="fin">2</span></td>
+        <td class="cell pod" title="Julianna Godbey — 3rd of 40 · 210 Beach Showcase · Girls 18U · with Emma Abernathy"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn">Taylie Hansen</span>
+          <span class="rmeta"><span class="tvchip">8.07</span>
+          <span class="rsum">6 shared &#183; 3 podiums</span></span></th>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t3" title="Taylie Hansen — 21st of 59 · Futures Spring Champ · Class of &#x27;26 &amp; Younger · with Kendyl Maxwell"><span class="fin">21</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Taylie Hansen — 3rd of 23 · AVP Jrs West Coast · Girls 16U · with Emma Abernathy"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Taylie Hansen — 9th of 56 · Futures Tour: Florida · Class of &#x27;26 &amp; Younger · with Elle Sossong"><span class="fin">9</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t4" title="Taylie Hansen — 41st of 64 · AVP Jrs Nationals · Girls 18U · with Elle Sossong"><span class="fin">41</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Taylie Hansen — 3rd of 31 · p1440 Elite Dev Open · Girls 18U · with Ella Grimes"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell win" title="Taylie Hansen — 1st of 103 · USAV BeachFest Qualifier · Girls 18U Open · with Brooklyn Rosales"><span class="fin">1</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn">Charlotte Jansen</span>
+          <span class="rmeta"><span class="tvchip">8.02</span>
+          <span class="rsum">16 shared &#183; 7 podiums</span></span></th>
+        <td class="cell t3" title="Charlotte Jansen — 4th of 12 · BVCA Orange Cty Spring · Open (5v5) · with Sarah Uebelhoer, Vivian Roberts, Summer Tukua, Ashlynn Proctor, Nariah Johnson, Stella Snyder, Paisley Mahn, Ella Hughes, Isabel Ruiz"><span class="fin">4</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Charlotte Jansen — 9th of 72 · AVP Jrs Nationals · Girls 16U · with Abigail Moffett"><span class="fin">9</span></td>
+        <td class="cell t3" title="Charlotte Jansen — 19th of 59 · Futures Spring Champ · Class of &#x27;26 &amp; Younger · with Abigail Moffett"><span class="fin">19</span></td>
+        <td class="cell t1" title="Charlotte Jansen — 5th of 59 · AAU Hermosa Nat&#x27;l Pairs · Girls 16 - 2028 · with Tristan Ana Del Riego"><span class="fin">5</span></td>
+        <td class="cell t2" title="Charlotte Jansen — 5th of 23 · AVP Jrs West Coast · Girls 16U · with Haisley Flanagan"><span class="fin">5</span></td>
+        <td class="cell win" title="Charlotte Jansen — 1st of 36 · Futures Tour: Arizona · Class of &#x27;28 &amp; Younger · with Abigail Moffett"><span class="fin">1</span></td>
+        <td class="cell pod" title="Charlotte Jansen — 3rd of 104 · USAV BeachFest Qualifier · Girls 16 Open · with Abigail Moffett"><span class="fin">3</span></td>
+        <td class="cell pod" title="Charlotte Jansen — 3rd of 24 · BVCA Club v Club Nats · OPEN Division · with Sarah Uebelhoer, Sam Krystkowiak, Ashlynn Proctor, JoJo Wilson, Vivian Roberts, Ella Hughes, Isabel Ruiz, Caroline Tadder, Paisley Mahn"><span class="fin">3</span></td>
+        <td class="cell t4" title="Charlotte Jansen — 9th of 12 · USAV U18 Trials · U18 Girls · with Abigail Moffett"><span class="fin">9</span></td>
+        <td class="cell pod" title="Charlotte Jansen — 2nd of 16 · BVCA Orange Cty Winter · Open (5v5) · with Sarah Uebelhoer, Ella Hughes, Vivian Roberts, Isabel Ruiz, Paisley Mahn, JoJo Wilson, Brooke Proctor, Reagan Carlin, Ashlynn Proctor"><span class="fin">2</span></td>
+        <td class="cell t1" title="Charlotte Jansen — 5th of 56 · Futures Tour: Florida · Class of &#x27;26 &amp; Younger · with Nariah Johnson"><span class="fin">5</span></td>
+        <td class="cell t5" title="Charlotte Jansen — 9th of 9 · USAV YOG Trials · U18 Girls · with Ella Buchanan"><span class="fin">9</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Charlotte Jansen — 2nd of 31 · Futures Western Nats · Class of 2028 &amp; Younger · with Nariah Johnson"><span class="fin">2</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Charlotte Jansen — 3rd of 12 · BVCA Orange Cty Fall · Open (5v5) · with Sarah Uebelhoer, Sam Krystkowiak, Paisley Mahn, Stella Snyder, Caroline Tadder, Vivian Roberts, Isabel Ruiz, Nariah Johnson, Ella Hughes"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t5" title="Charlotte Jansen — 17th of 18 · Main Beach Santa Cruz · Womens Open · with Haisley Flanagan"><span class="fin">17</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell win" title="Charlotte Jansen — 1st of 19 · Dockweiler, Los Angeles · Womens AA · with Nariah Johnson"><span class="fin">1</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn">Sienna Cicero</span>
+          <span class="rmeta"><span class="tvchip">7.92</span>
+          <span class="rsum">6 shared &#183; 3 podiums</span></span></th>
+        <td class="cell t4" title="Sienna Cicero — 8th of 12 · BVCA Orange Cty Spring · Open (5v5) · with Piper Owen, Payton Durante, Aubree Marsden, Sadie Calderone, Rylee Hartwell, Taylor Daley, Jordyn Flynn, Kendyl Clem, Cienna Enriquez"><span class="fin">8</span></td>
+        <td class="cell pod" title="Sienna Cicero — 3rd of 159 · BVCA Pairs Nationals · Girls 16U · with Brooklyn Lopez"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t5" title="Sienna Cicero — 13th of 16 · BVCA Orange Cty Winter · Open (5v5) · with Cienna Enriquez, Jordyn Flynn, Sadie Calderone, Olivia Marroquin, Caroline Stafford, Rylee Hartwell, Piper Owen, Payton Durante, Kendyl Clem"><span class="fin">13</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Sienna Cicero — 3rd of 64 · AVP Jrs Nationals · Girls 15U · with Brooklyn Lopez"><span class="fin">3</span></td>
+        <td class="cell t3" title="Sienna Cicero — 4th of 12 · BVCA Orange Cty Fall · Open (5v5) · with Abigail Moffett, Madison Gillinger, Emerson Butler, Kara Boas, Olivia Marroquin, Piper Owen, Sadie Harris, Cienna Enriquez, Brooklyn Lopez"><span class="fin">4</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Sienna Cicero — 2nd of 24 · AVP Jrs West Coast · Girls 15U · with Brooklyn Lopez"><span class="fin">2</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn">Elle Sossong</span>
+          <span class="rmeta"><span class="tvchip">7.92</span>
+          <span class="rsum">5 shared &#183; 0 podiums</span></span></th>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t4" title="Elle Sossong — 9th of 12 · USAV U18 Trials · U18 Girls · with Sarah Albers"><span class="fin">9</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Elle Sossong — 9th of 56 · Futures Tour: Florida · Class of &#x27;26 &amp; Younger · with Taylie Hansen"><span class="fin">9</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t3" title="Elle Sossong — 9th of 32 · Futures Tour: Texas · Class of &#x27;26 &amp; Younger · with Lyla Paulsen"><span class="fin">9</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t4" title="Elle Sossong — 41st of 64 · AVP Jrs Nationals · Girls 18U · with Taylie Hansen"><span class="fin">41</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t1" title="Elle Sossong — 4th of 103 · USAV BeachFest Qualifier · Girls 18U Open · with Breeze Johnson"><span class="fin">4</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn">Regina Stella Broshear</span>
+          <span class="rmeta"><span class="tvchip">7.84</span>
+          <span class="rsum">9 shared &#183; 3 podiums</span></span></th>
+        <td class="cell pod" title="Regina Stella Broshear — 3rd of 12 · BVCA Orange Cty Spring · Open (5v5) · with Abby King, Maddy Wagner, Milan Hendrickson, Katie Hamburger, Lekhana Donnies, Eden Cisneros, Logan Leverte, Liliana Huerta, Sydney Scovic"><span class="fin">3</span></td>
+        <td class="cell t1" title="Regina Stella Broshear — 9th of 159 · BVCA Pairs Nationals · Girls 16U · with Katie Hamburger"><span class="fin">9</span></td>
+        <td class="cell t1" title="Regina Stella Broshear — 5th of 72 · AVP Jrs Nationals · Girls 16U · with Sadie Harris"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t1" title="Regina Stella Broshear — 5th of 59 · AAU Hermosa Nat&#x27;l Pairs · Girls 16 - 2028 · with Eden Cisneros"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Regina Stella Broshear — 5th of 24 · BVCA Club v Club Nats · OPEN Division · with Abby King, Maddy Wagner, Sydney Scovic, Liliana Huerta, Milan Hendrickson, Eden Cisneros, Katie Hamburger, Lekhana Donnies, Logan Leverte"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Regina Stella Broshear — 3rd of 16 · BVCA Orange Cty Winter · Open (5v5) · with Abby King, Lekhana Donnies, Maddy Wagner, Milan Hendrickson, Logan Leverte, Katie Hamburger, Liliana Huerta, Eden Cisneros, Sydney Scovic"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Regina Stella Broshear — 2nd of 6 · BVCA Orange Cty Summer · Open (5v5) · with Abby King, Maddy Wagner, Calista Chou, Milan Hendrickson, Sydney Scovic, Logan Leverte, Talula Walsh, Eden Cisneros, Lekhana Donnies"><span class="fin">2</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Regina Stella Broshear — 5th of 31 · Futures Western Nats · Class of 2028 &amp; Younger · with Kate Berry"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t4" title="Regina Stella Broshear — 13th of 18 · Main Beach Santa Cruz · Womens Open · with Lekhana Donnies"><span class="fin">13</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn">Elyse Smelcer</span>
+          <span class="rmeta"><span class="tvchip">7.78</span>
+          <span class="rsum">1 shared &#183; 0 podiums</span></span></th>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t5" title="Elyse Smelcer — 63rd of 64 · AVP Jrs Nationals · Girls 18U · with Sarah Albers"><span class="fin">63</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn">Ella Buchanan</span>
+          <span class="rmeta"><span class="tvchip">7.76</span>
+          <span class="rsum">8 shared &#183; 2 podiums</span></span></th>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Ella Buchanan — 9th of 72 · AVP Jrs Nationals · Girls 16U · with Brooke Canaday"><span class="fin">9</span></td>
+        <td class="cell t2" title="Ella Buchanan — 9th of 59 · Futures Spring Champ · Class of &#x27;26 &amp; Younger · with Haisley Flanagan"><span class="fin">9</span></td>
+        <td class="cell pod" title="Ella Buchanan — 2nd of 59 · AAU Hermosa Nat&#x27;l Pairs · Girls 16 - 2028 · with Brooke Canaday"><span class="fin">2</span></td>
+        <td class="cell t2" title="Ella Buchanan — 5th of 23 · AVP Jrs West Coast · Girls 16U · with Brooke Canaday"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t4" title="Ella Buchanan — 9th of 12 · USAV U18 Trials · U18 Girls · with Brooke Canaday"><span class="fin">9</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t5" title="Ella Buchanan — 9th of 9 · USAV YOG Trials · U18 Girls · with Charlotte Jansen"><span class="fin">9</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t4" title="Ella Buchanan — 7th of 13 · AAU Hermosa Club Champs · Girls Open (5 Pairs) · with Brooke Canaday, Charlie Gerencser, Naomi Pankratz, Sally Weisenberg, Riley Isfeld, Olive Petersen, Ella Bodnar, Carly Baker, Leila Haller, Lily Larrabee"><span class="fin">7</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Ella Buchanan — 2nd of 19 · Dockweiler, Los Angeles · Womens AA · with Brooke Canaday"><span class="fin">2</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn">Milana Rivera</span>
+          <span class="rmeta"><span class="tvchip">7.67</span>
+          <span class="rsum">5 shared &#183; 2 podiums</span></span></th>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Milana Rivera — 3rd of 72 · AVP Jrs Nationals · Girls 16U · with Hannah Perez"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t3" title="Milana Rivera — 11th of 24 · BVCA Club v Club Nats · OPEN Division · with Naomi Lygas, Finley Saxon, Brooke Brown, Camila Foreman, Mikayla Moore, Maiya Kohn, Sadie Kendrick, Tesa Solis, Ashley Ruschill"><span class="fin">11</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Milana Rivera — 3rd of 32 · Futures Tour: Texas · Class of &#x27;26 &amp; Younger · with Sarah Cowan"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t3" title="Milana Rivera — 9th of 21 · AVP Next Triple Crown 2 · Women&#x27;s Open · with Olivia Herron"><span class="fin">9</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Milana Rivera — 17th of 160 · BVCA Pairs Nationals · Girls 18U · with Naomi Lygas"><span class="fin">17</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn">Olivia LeDoyen</span>
+          <span class="rmeta"><span class="tvchip">7.49</span>
+          <span class="rsum">6 shared &#183; 1 podium</span></span></th>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t4" title="Olivia LeDoyen — 31st of 59 · AAU Hermosa Nat&#x27;l Pairs · Girls 16 - 2028 · with Ella Whiteside"><span class="fin">31</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Olivia LeDoyen — 5th of 36 · Futures Tour: Arizona · Class of &#x27;28 &amp; Younger · with Reese Trebisacci"><span class="fin">5</span></td>
+        <td class="cell t1" title="Olivia LeDoyen — 5th of 104 · USAV BeachFest Qualifier · Girls 16 Open · with Ella Whiteside"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Olivia LeDoyen — 3rd of 6 · BVCA Orange Cty Summer · Open (5v5) · with Allyn Hilt, Stacy Balestrieri, Sofia Sala, Avery Tussing, Ella Whiteside, Tegan Smith, Christa Wilcox, Emerson Harper, Alana Mahan, Gemma Waldman, Halima Guidera"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t4" title="Olivia LeDoyen — 8th of 13 · AAU Hermosa Club Champs · Girls Open (5 Pairs) · with Ella Whiteside, Tegan Smith, Alana Mahan, Christa Wilcox, Locklyn Vaughn, Halima Guidera, Sofia Ventimiglia, Annika Johnson, Sarah Etzler, Avery Bennett"><span class="fin">8</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Olivia LeDoyen — 5th of 24 · BVCA Club v Club Nats · Club Division · with Tegan Smith, Ella Whiteside, Halima Guidera, Madison Nolting, Avery Bennett, Taylor Banczak, Emerson Harper"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn">Emerson Harper</span>
+          <span class="rmeta"><span class="tvchip">7.43</span>
+          <span class="rsum">3 shared &#183; 1 podium</span></span></th>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Emerson Harper — 3rd of 6 · BVCA Orange Cty Summer · Open (5v5) · with Allyn Hilt, Stacy Balestrieri, Sofia Sala, Avery Tussing, Ella Whiteside, Tegan Smith, Christa Wilcox, Alana Mahan, Olivia LeDoyen, Gemma Waldman, Halima Guidera"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t4" title="Emerson Harper — 7th of 13 · AAU Hermosa Club Champs · Girls Open (5 Pairs) · with Allyn Hilt, Sofia Sala, Avery Tussing, Stacy Balestrieri, Stephanie Balestrieri, Hailey Hertlein, Lily Enfield, Ava Saffell, Jayden Meyer, Brynn Barry, Sarah Etzler, Avery Bennett"><span class="fin">7</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Emerson Harper — 5th of 24 · BVCA Club v Club Nats · Club Division · with Tegan Smith, Ella Whiteside, Halima Guidera, Madison Nolting, Avery Bennett, Taylor Banczak, Olivia LeDoyen"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn">Ella Whiteside</span>
+          <span class="rmeta"><span class="tvchip">6.86</span>
+          <span class="rsum">7 shared &#183; 1 podium</span></span></th>
+        <td class="cell t4" title="Ella Whiteside — 9th of 12 · BVCA Orange Cty Spring · Open (5v5) · with Sienna Castillo, Stacy Balestrieri, Allyn Hilt, Sofia Sala, Ahnika Smith, Stephanie Balestrieri, Abby Zimmerman, Avery Tussing, Ava Saffell, Isabella Elston, Lily Enfield"><span class="fin">9</span></td>
+        <td class="cell t2" title="Ella Whiteside — 33rd of 159 · BVCA Pairs Nationals · Girls 16U · with Tegan Smith"><span class="fin">33</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t4" title="Ella Whiteside — 31st of 59 · AAU Hermosa Nat&#x27;l Pairs · Girls 16 - 2028 · with Olivia LeDoyen"><span class="fin">31</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t1" title="Ella Whiteside — 5th of 104 · USAV BeachFest Qualifier · Girls 16 Open · with Olivia LeDoyen"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Ella Whiteside — 3rd of 6 · BVCA Orange Cty Summer · Open (5v5) · with Allyn Hilt, Stacy Balestrieri, Sofia Sala, Avery Tussing, Tegan Smith, Christa Wilcox, Emerson Harper, Alana Mahan, Olivia LeDoyen, Gemma Waldman, Halima Guidera"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t4" title="Ella Whiteside — 8th of 13 · AAU Hermosa Club Champs · Girls Open (5 Pairs) · with Tegan Smith, Alana Mahan, Christa Wilcox, Locklyn Vaughn, Olivia LeDoyen, Halima Guidera, Sofia Ventimiglia, Annika Johnson, Sarah Etzler, Avery Bennett"><span class="fin">8</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Ella Whiteside — 5th of 24 · BVCA Club v Club Nats · Club Division · with Tegan Smith, Halima Guidera, Madison Nolting, Avery Bennett, Taylor Banczak, Olivia LeDoyen, Emerson Harper"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="legend">
+    <span class="key"><span class="sw win"></span> Won it</span>
+    <span class="key"><span class="sw pod"></span> Podium (2nd&#8211;3rd)</span>
+    <span class="key"><span class="sw t1"></span> Top 10&#8202;% of field</span>
+    <span class="key"><span class="sw t2"></span> Top 25&#8202;%</span>
+    <span class="key"><span class="sw t3"></span> Top half</span>
+    <span class="key"><span class="sw t5"></span> Bottom half</span>
+  </div>
+</div>
+
+<div class="wrap">
+<section>
+  <h2>Where only two of them met</h2>
+  <p class="lede">A further 38 competitions drew exactly two of the roster &#8212; too thin
+  for the matrix, but still head-to-heads. Newest first.</p>
+  <div class="panel">
+    <table class="pairs">
+      <thead><tr>
+        <th scope="col">Date</th><th scope="col">Competition</th><th scope="col">Field</th>
+        <th scope="col" colspan="2">Finishes</th>
+      </tr></thead>
+      <tbody>
+      <tr>
+        <td class="num dim nw">2026-08-08</td>
+        <td><span class="evn2">8/8/26, Main Beach, Santa Cruz</span><span class="dv">Womens Open</span></td>
+        <td class="num">20</td>
+        <td>Ella Buchanan <b class="pos">1st</b></td>
+        <td>Haisley Flanagan <b class="pos">1st</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-07-26</td>
+        <td><span class="evn2">AVP Juniors National Championships 2026</span><span class="dv">Girls 14U</span></td>
+        <td class="num">64</td>
+        <td>Olivia LeDoyen <b class="pos">5th</b></td>
+        <td>Emerson Harper <b class="pos">17th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-07-26</td>
+        <td><span class="evn2">AVP Juniors National Championships 2026</span><span class="dv">Girls 17U</span></td>
+        <td class="num">63</td>
+        <td>Nariah Johnson <b class="pos">1st</b></td>
+        <td>Milana Rivera <b class="pos">63rd</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-07-11</td>
+        <td><span class="evn2">2026 BVCA Individual Pairs National Championship</span><span class="dv">Girls 14U</span></td>
+        <td class="num">119</td>
+        <td>Emerson Harper <b class="pos">2nd</b></td>
+        <td>Olivia LeDoyen <b class="pos">2nd</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-07-11</td>
+        <td><span class="evn2">2026 BVCA Club V Club National Championships</span><span class="dv">Future Division</span></td>
+        <td class="num">24</td>
+        <td>Emerson Harper <b class="pos">5th</b></td>
+        <td>Olivia LeDoyen <b class="pos">5th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-06-30</td>
+        <td><span class="evn2">BVCA Pairs West Coast Championships 2026</span><span class="dv">17U (2027 Grad Year)</span></td>
+        <td class="num">24</td>
+        <td>Madison Gillinger <b class="pos">1st</b></td>
+        <td>Sienna Cicero <b class="pos">3rd</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-06-27</td>
+        <td><span class="evn2">6/27/26, Main Beach, Santa Cruz</span><span class="dv">Womens AA</span></td>
+        <td class="num">25</td>
+        <td>Regina Stella Broshear <b class="pos">1st</b></td>
+        <td>Haisley Flanagan <b class="pos">2nd</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-06-25</td>
+        <td><span class="evn2">Cal Cup Tour Stop, 6/25/26, North Beach, Santa Monica</span><span class="dv">Girls 16U</span></td>
+        <td class="num">6</td>
+        <td>Madison Gillinger <b class="pos">1st</b></td>
+        <td>Lucy Matuszak <b class="pos">1st</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-06-19</td>
+        <td><span class="evn2">2026 Futures Tour WESTERN NATIONAL CHAMPIONSHIPS</span><span class="dv">Class of 2026 &amp; Younger</span></td>
+        <td class="num">24</td>
+        <td>Haisley Flanagan <b class="pos">7th</b></td>
+        <td>Madison Gillinger <b class="pos">7th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-05-17</td>
+        <td><span class="evn2">GNBV National Recruiting Showcase Texas</span><span class="dv">Girls 16U</span></td>
+        <td class="num">28</td>
+        <td>Olivia LeDoyen <b class="pos">9th</b></td>
+        <td>Ella Whiteside <b class="pos">9th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-05-17</td>
+        <td><span class="evn2">GNBV National Recruiting Showcase Texas</span><span class="dv">Girls 18U</span></td>
+        <td class="num">28</td>
+        <td>Olivia LeDoyen <b class="pos">9th</b></td>
+        <td>Ella Whiteside <b class="pos">9th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-05-03</td>
+        <td><span class="evn2">USA Volleyball Beach Tour - Gulf Coast - BeachFest Regional Qualifier May 2 &amp; 3</span><span class="dv">Girls 18U - USA</span></td>
+        <td class="num">39</td>
+        <td>Olivia LeDoyen <b class="pos">9th</b></td>
+        <td>Ella Whiteside <b class="pos">9th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-04-19</td>
+        <td><span class="evn2">4/19/26, Newland, Huntington Beach</span><span class="dv">Girls 16U</span></td>
+        <td class="num">7</td>
+        <td>Madison Gillinger <b class="pos">2nd</b></td>
+        <td>Charlotte Jansen <b class="pos">2nd</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-04-12</td>
+        <td><span class="evn2">2026 Futures Tour: Texas</span><span class="dv">Class of &#x27;28 &amp; Younger</span></td>
+        <td class="num">18</td>
+        <td>Olivia LeDoyen <b class="pos">5th</b></td>
+        <td>Ella Whiteside <b class="pos">5th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-04-05</td>
+        <td><span class="evn2">BVCA CLUB CHALLENGE ~ 6th Annual Third Coast Round-Up (Open 5V5, Club 3V3)</span><span class="dv">Open</span></td>
+        <td class="num">7</td>
+        <td>Milana Rivera <b class="pos">2nd</b></td>
+        <td>Ashley Ruschill <b class="pos">2nd</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-03-29</td>
+        <td><span class="evn2">2026 Futures Tour Spring Championship</span><span class="dv">Class of &#x27;28 &amp; Younger</span></td>
+        <td class="num">38</td>
+        <td>Regina Stella Broshear <b class="pos">1st</b></td>
+        <td>Reagan Carlin <b class="pos">5th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-03-22</td>
+        <td><span class="evn2">210 Beach OPEN BVCA Club Challenge</span><span class="dv">5v5 OPEN Division</span></td>
+        <td class="num">11</td>
+        <td>Milana Rivera <b class="pos">5th</b></td>
+        <td>Ashley Ruschill <b class="pos">5th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-03-15</td>
+        <td><span class="evn2">2026 Futures Tour: Florida</span><span class="dv">Class of &#x27;28 &amp; Younger</span></td>
+        <td class="num">48</td>
+        <td>Olivia LeDoyen <b class="pos">1st</b></td>
+        <td>Ella Whiteside <b class="pos">1st</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-02-22</td>
+        <td><span class="evn2">2026 Futures Tour: Alabama</span><span class="dv">Class of &#x27;26 &amp; Younger</span></td>
+        <td class="num">75</td>
+        <td>Cayden Dorger <b class="pos">5th</b></td>
+        <td>Taylie Hansen <b class="pos">13th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-02-22</td>
+        <td><span class="evn2">BVCA - AJV SAND &#x27;26</span><span class="dv">Open Division 5v5</span></td>
+        <td class="num">8</td>
+        <td>Milana Rivera <b class="pos">3rd</b></td>
+        <td>Ashley Ruschill <b class="pos">3rd</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-02-08</td>
+        <td><span class="evn2">2025-26 BVCA Orange County Winter</span><span class="dv">Futures (3v3)</span></td>
+        <td class="num">12</td>
+        <td>Emerson Harper <b class="pos">1st</b></td>
+        <td>Olivia LeDoyen <b class="pos">1st</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-01-25</td>
+        <td><span class="evn2">Mandala BVCA Club v Club Tourney (Open, Club &amp; Futures) 2026</span><span class="dv">OPEN DIVISION</span></td>
+        <td class="num">8</td>
+        <td>Regina Stella Broshear <b class="pos">2nd</b></td>
+        <td>Ella Buchanan <b class="pos">6th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-01-18</td>
+        <td><span class="evn2">2026 Futures Tour: Arizona</span><span class="dv">Class of &#x27;26 &amp; Younger</span></td>
+        <td class="num">48</td>
+        <td>Taylie Hansen <b class="pos">5th</b></td>
+        <td>Elle Sossong <b class="pos">9th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-01-04</td>
+        <td><span class="evn2">BVCA 692 West Coronado Beach Challenge #1 Jan 3&amp;4 &#x27;26</span><span class="dv">Club Div 3v3</span></td>
+        <td class="num">28</td>
+        <td>Ella Buchanan <b class="pos">1st</b></td>
+        <td>Reagan Carlin <b class="pos">2nd</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-01-04</td>
+        <td><span class="evn2">BVCA 300 Open Invitational- Oceanside CA.</span><span class="dv">Open Division</span></td>
+        <td class="num">8</td>
+        <td>Madison Gillinger <b class="pos">1st</b></td>
+        <td>Emerson Harper <b class="pos">5th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2025-12-29</td>
+        <td><span class="evn2">2025 Futures Tour Winter Championship</span><span class="dv">Class of &#x27;28 &amp; Younger</span></td>
+        <td class="num">36</td>
+        <td>Regina Stella Broshear <b class="pos">2nd</b></td>
+        <td>Cayden Dorger <b class="pos">5th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2025-12-29</td>
+        <td><span class="evn2">2025 Futures Tour Winter Championship</span><span class="dv">Class of &#x27;26 &amp; Younger</span></td>
+        <td class="num">36</td>
+        <td>Elle Sossong <b class="pos">2nd</b></td>
+        <td>Ashley Ruschill <b class="pos">9th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2025-12-14</td>
+        <td><span class="evn2">AAU Herrmosa Beach Winter Series Championships</span><span class="dv">Girls 18U</span></td>
+        <td class="num">13</td>
+        <td>Lucy Matuszak <b class="pos">5th</b></td>
+        <td>Nariah Johnson <b class="pos">10th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2025-11-30</td>
+        <td><span class="evn2">AVP Juniors East Coast Championships 2025</span><span class="dv">Girls 17U</span></td>
+        <td class="num">46</td>
+        <td>Elle Sossong <b class="pos">1st</b></td>
+        <td>Regina Stella Broshear <b class="pos">9th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2025-11-30</td>
+        <td><span class="evn2">AVP Juniors East Coast Championships 2025</span><span class="dv">Girls 15U</span></td>
+        <td class="num">47</td>
+        <td>Olivia LeDoyen <b class="pos">1st</b></td>
+        <td>Ella Whiteside <b class="pos">1st</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2025-11-09</td>
+        <td><span class="evn2">AVP Juniors West Coast Championships 2025</span><span class="dv">Girls 18U</span></td>
+        <td class="num">23</td>
+        <td>Lucy Matuszak <b class="pos">13th</b></td>
+        <td>Elyse Smelcer <b class="pos">15th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2025-10-11</td>
+        <td><span class="evn2">Battle for Lulu &amp; AVP Bids</span><span class="dv">Girls 18U</span></td>
+        <td class="num">9</td>
+        <td>Olivia LeDoyen <b class="pos">1st</b></td>
+        <td>Ella Whiteside <b class="pos">1st</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2025-10-09</td>
+        <td><span class="evn2">FBV Sunset Series AAU 10/09</span><span class="dv">Girls 18U</span></td>
+        <td class="num">6</td>
+        <td>Olivia LeDoyen <b class="pos">1st</b></td>
+        <td>Ella Whiteside <b class="pos">1st</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2025-10-05</td>
+        <td><span class="evn2">CBVA Fall Championship Bid + AVP Bid Event Girl&#x27;s 18u at Central Beach, Coronado, San Diego</span><span class="dv">Girls 18U</span></td>
+        <td class="num">9</td>
+        <td>Reagan Carlin <b class="pos">2nd</b></td>
+        <td>Brooke Proctor <b class="pos">2nd</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2025-10-05</td>
+        <td><span class="evn2">GNBV National Recruiting Showcase Oct 2025</span><span class="dv">16U Elite (1300 Pts Required)</span></td>
+        <td class="num">14</td>
+        <td>Haisley Flanagan <b class="pos">1st</b></td>
+        <td>Charlotte Jansen <b class="pos">1st</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2025-09-20</td>
+        <td><span class="evn2">CBVA Fall Championship Bid + AVP Bid Event Girl&#x27;s 18u at Mira Costa College, Oceanside</span><span class="dv">Girls 18U</span></td>
+        <td class="num">6</td>
+        <td>Reagan Carlin <b class="pos">1st</b></td>
+        <td>Brooke Proctor <b class="pos">1st</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2025-08-24</td>
+        <td><span class="evn2">CBVA Fall Championship Bid + AVP Bid Event Girl&#x27;s 16u at Central Beach, Coronado, San Diego</span><span class="dv">Girls 16U</span></td>
+        <td class="num">19</td>
+        <td>Reagan Carlin <b class="pos">1st</b></td>
+        <td>Brooke Proctor <b class="pos">1st</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2025-08-24</td>
+        <td><span class="evn2">Women&#x27;s A at Manhattan Pier, Manhattan Beach</span><span class="dv">Womens A</span></td>
+        <td class="num">27</td>
+        <td>Charlotte Jansen <b class="pos">1st</b></td>
+        <td>Emerson Harper <b class="pos">2nd</b></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="notes">
+  <h2>How to read it</h2>
+  <ul>
+    <li><b>Each division is its own competition.</b> At the AVP Juniors National Championships the
+    18U, 17U, 16U and 15U brackets ran as separate fields; they appear as separate columns, and a
+    5th in one says nothing about a 5th in another.</li>
+    <li><b>Five-a-side and club-format competitions are included.</b> The BVCA Orange County dates,
+    Club&#8202;v&#8202;Club and the AAU club championships are team events, so a finish there
+    reflects a squad rather than a pair. The division line names them.</li>
+    <li><b>Ties are shared.</b> Beach draws award equal finishes to every team knocked out in the
+    same round, which is why blocks of 5th, 9th and 17th recur down a column.</li>
+    <li><b>Field size is the number of teams registered in that division</b>, as recorded by
+    Volleyball Life &#8212; not the number that ultimately played, so a withdrawal leaves the
+    denominator unchanged.</li>
+    <li><b>Sanctioning bodies</b> are tagged in each column head: AVPA (AVP and AVP Juniors),
+    USAV, AAU, BVCA, CBVA and p1440.</li>
+    
+  </ul>
+</section>
+<footer>
+  Roster from USA Volleyball's 2026 Beach NTDP Summer Training Series listing (Girls U17).
+  Results, field sizes and TruVolley ratings from Volleyball Life, retrieved 9 August 2026.
+  A companion report covers the 18U group.
+</footer>
+</div>

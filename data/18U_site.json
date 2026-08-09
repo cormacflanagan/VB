@@ -1,4 +1,10 @@
 {
+ "group": "18U",
+ "label": "Girls U18",
+ "window": [
+  "2025-08-09",
+  "2026-08-09"
+ ],
  "players": [
   {
    "name": "Lauren Leach",
@@ -9,7 +15,6 @@
    "peak": 9.518,
    "w": 361,
    "l": 72,
-   "played": 20,
    "comps": 20,
    "cells": {
     "34180:125823": {
@@ -123,7 +128,6 @@
    "peak": 9.326,
    "w": 335,
    "l": 107,
-   "played": 13,
    "comps": 13,
    "cells": {
     "34180:125823": {
@@ -221,7 +225,6 @@
    "peak": 9.53,
    "w": 530,
    "l": 191,
-   "played": 35,
    "comps": 35,
    "cells": {
     "36451:133267": {
@@ -383,7 +386,6 @@
    "peak": 8.876,
    "w": 173,
    "l": 66,
-   "played": 20,
    "comps": 20,
    "cells": {
     "34180:125823": {
@@ -507,7 +509,6 @@
    "peak": 8.929,
    "w": 362,
    "l": 117,
-   "played": 26,
    "comps": 26,
    "cells": {
     "34180:125823": {
@@ -615,7 +616,6 @@
    "peak": 8.644,
    "w": 263,
    "l": 110,
-   "played": 15,
    "comps": 15,
    "cells": {
     "34180:125823": {
@@ -709,7 +709,6 @@
    "peak": 8.709,
    "w": 349,
    "l": 91,
-   "played": 22,
    "comps": 22,
    "cells": {
     "34180:125823": {
@@ -771,7 +770,6 @@
    "peak": 8.649,
    "w": 348,
    "l": 149,
-   "played": 15,
    "comps": 15,
    "cells": {
     "34180:125823": {
@@ -846,12 +844,11 @@
    "name": "Sage Illian",
    "region": "Heart of America",
    "club": "P4:13 Beach",
-   "city": "Wichita, KS",
+   "city": "Wichita , KS",
    "tv": 8.512,
    "peak": 8.827,
    "w": 244,
    "l": 74,
-   "played": 16,
    "comps": 16,
    "cells": {
     "34180:125823": {
@@ -926,12 +923,11 @@
    "name": "Georgeann Lee",
    "region": "Aloha",
    "club": "Outrigger Canoe Club Girls Beach Volleyball",
-   "city": "Honolulu, HI",
+   "city": "Honolulu , HI",
    "tv": 8.455,
    "peak": 8.554,
    "w": 196,
    "l": 98,
-   "played": 18,
    "comps": 18,
    "cells": {
     "34180:125823": {
@@ -1021,7 +1017,6 @@
    "peak": 8.38,
    "w": 416,
    "l": 178,
-   "played": 29,
    "comps": 29,
    "cells": {
     "34180:125823": {
@@ -1173,7 +1168,6 @@
    "peak": 8.163,
    "w": 148,
    "l": 60,
-   "played": 11,
    "comps": 11,
    "cells": {
     "34180:125823": {
@@ -1223,7 +1217,6 @@
    "peak": 8.263,
    "w": 224,
    "l": 121,
-   "played": 24,
    "comps": 24,
    "cells": {
     "34180:125823": {
@@ -1540,7 +1533,7 @@
    "field": 8,
    "date": "2026-01-04",
    "sanction": "BVCA",
-   "team": false,
+   "team": true,
    "n": 4
   },
   {
@@ -1661,7 +1654,6 @@
    "n": 3
   }
  ],
- "totalComps": 116,
  "pairs": [
   {
    "key": "33876:124946",
@@ -1734,12 +1726,12 @@
    "tid": 31485,
    "tdId": 117406,
    "event": "AAU Hermosa Beach Club Championships",
-   "short": "AAU Hermosa Beach Club C",
+   "short": "AAU Hermosa Club Champs",
    "division": "Girls Open (5 Pairs)",
    "field": 13,
    "date": "2026-07-14",
    "sanction": "AAU",
-   "team": false,
+   "team": true,
    "players": [
     {
      "name": "Georgeann Lee",
@@ -1778,7 +1770,7 @@
    "tid": 35591,
    "tdId": 130349,
    "event": "2026/27 BVCA Orange County Summer Club Challenge",
-   "short": "2026/27 BVCA Orange Coun",
+   "short": "BVCA Orange Cty Summer",
    "division": "Open (5v5)",
    "field": 6,
    "date": "2026-07-02",
@@ -1822,7 +1814,7 @@
    "tid": 39831,
    "tdId": 145855,
    "event": "6/28/26, Santa Monica Pier, Santa Monica",
-   "short": "6/28/26, Santa Monica Pi",
+   "short": "6/28/26, Santa Monica",
    "division": "Womens Open",
    "field": 30,
    "date": "2026-06-28",
@@ -1866,7 +1858,7 @@
    "tid": 36774,
    "tdId": 134451,
    "event": "AVP Virginia Beach - Contender 2026",
-   "short": "AVP Virginia Beach - Con",
+   "short": "AVP Virginia Beach",
    "division": "Womens Open",
    "field": 24,
    "date": "2026-06-13",
@@ -1888,7 +1880,7 @@
    "tid": 39012,
    "tdId": 143207,
    "event": "5/23/26, Hermosa Pier, Hermosa Beach",
-   "short": "5/23/26, Hermosa Pier, H",
+   "short": "5/23/26, Hermosa Pier",
    "division": "Womens Open",
    "field": 16,
    "date": "2026-05-23",
@@ -1910,7 +1902,7 @@
    "tid": 37126,
    "tdId": 135800,
    "event": "AVP Huntington Beach - Heritage Major 2026",
-   "short": "AVP Huntington Beach - H",
+   "short": "AVP Huntington Bch",
    "division": "Womens",
    "field": 45,
    "date": "2026-05-17",
@@ -1932,7 +1924,7 @@
    "tid": 38620,
    "tdId": 141512,
    "event": "5/10/26, Ocean Park, Santa Monica",
-   "short": "5/10/26, Ocean Park, San",
+   "short": "5/10/26, Ocean Park",
    "division": "Womens AA",
    "field": 13,
    "date": "2026-05-10",
@@ -1954,7 +1946,7 @@
    "tid": 38462,
    "tdId": 140958,
    "event": "CIFSS Pairs Championship 2026",
-   "short": "CIFSS Pairs Championship",
+   "short": "CIFSS Pairs Champ 2026",
    "division": "Varsity Pairs",
    "field": 64,
    "date": "2026-05-07",
@@ -1976,7 +1968,7 @@
    "tid": 37794,
    "tdId": 138424,
    "event": "Men's A + Women's B + Women's Open at Ocean Park, Santa Monica",
-   "short": "Men's A + Women's B + Wo",
+   "short": "Men's A + Women's B +",
    "division": "Womens Open",
    "field": 12,
    "date": "2026-04-12",
@@ -1998,7 +1990,7 @@
    "tid": 31625,
    "tdId": 117914,
    "event": "2026 Futures Tour: Texas",
-   "short": "2026 Futures Tour: Texas",
+   "short": "Futures Tour: Texas",
    "division": "Class of '26 & Younger",
    "field": 32,
    "date": "2026-04-12",
@@ -2042,7 +2034,7 @@
    "tid": 37252,
    "tdId": 136218,
    "event": "Men's Open + Women's Open at Manhattan Pier, Manhattan Beach",
-   "short": "Men's Open + Women's Ope",
+   "short": "Men's Open + Women's Open",
    "division": "Womens Open",
    "field": 9,
    "date": "2026-03-07",
@@ -2086,7 +2078,7 @@
    "tid": 32392,
    "tdId": 121505,
    "event": "Girls Beach High School Pre-Season Tournament",
-   "short": "Girls Beach High School ",
+   "short": "Girls Beach High School",
    "division": "Girls Varsity",
    "field": 24,
    "date": "2026-02-01",
@@ -2108,7 +2100,7 @@
    "tid": 25008,
    "tdId": 124255,
    "event": "IBVL Winter Nationals & U18 ISF Trials",
-   "short": "IBVL Winter Nationals & ",
+   "short": "IBVL Winter Nationals &",
    "division": "Girls U18 (Year Born: 2008-2009-2010)",
    "field": 8,
    "date": "2026-01-25",
@@ -2130,7 +2122,7 @@
    "tid": 32390,
    "tdId": 120204,
    "event": "AAU MLK Open",
-   "short": "AAU MLK Open ",
+   "short": "AAU MLK Open",
    "division": "Girls 18U",
    "field": 9,
    "date": "2026-01-19",
@@ -2152,7 +2144,7 @@
    "tid": 25718,
    "tdId": 97612,
    "event": "California IBVL Winter Classic - p1440",
-   "short": "California IBVL Winter C",
+   "short": "California IBVL Winter",
    "division": "Girls 18:U (Grad Year 2026-2027)",
    "field": 13,
    "date": "2026-01-11",
@@ -2196,7 +2188,7 @@
    "tid": 31995,
    "tdId": 119079,
    "event": "2025 p1440 Elite Dev Open Tournament",
-   "short": "2025 p1440 Elite Dev Ope",
+   "short": "p1440 Elite Dev Open",
    "division": "Girls 18U",
    "field": 31,
    "date": "2025-11-16",
@@ -2240,7 +2232,7 @@
    "tid": 33020,
    "tdId": 121928,
    "event": "Women's Open at Manhattan Pier, Manhattan Beach",
-   "short": "Women's Open at Manhatta",
+   "short": "Women's Open at Manhattan",
    "division": "Womens Open",
    "field": 14,
    "date": "2025-10-05",
@@ -2257,5 +2249,8 @@
     }
    ]
   }
- ]
+ ],
+ "totalComps": 116,
+ "totalEvents": 100,
+ "totalEntries": 264
 }

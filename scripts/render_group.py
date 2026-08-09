@@ -1,10 +1,19 @@
-import json, html
+"""Render one group's competition matrix to a self-contained HTML page.
 
-D = json.load(open("site_data2.json"))
-clean = json.load(open("clean.json"))
-players, comps, pairs = D["players"], D["comps"], D["pairs"]
-total_entries = sum(len(v) for v in clean["entries"].values())
-total_events = len({str(e["tid"]) for v in clean["entries"].values() for e in v})
+  python3 render_group.py 17U      ->  bntdp-17u.html
+"""
+import json, sys, html
+
+TEXT = {
+    "18U": {
+        "title": "The 18U girls, and <em>who they actually played</em>",
+        "note": "",
+    },
+    "17U": {
+        "title": "The 17U girls, and <em>who they actually played</em>",
+        "note": "",
+    },
+}
 
 
 def cls(f, y):
@@ -15,32 +24,22 @@ def cls(f, y):
     if f <= 3:
         return "pod"
     p = f / y
-    if p <= 0.10:
-        return "t1"
-    if p <= 0.25:
-        return "t2"
-    if p <= 0.50:
-        return "t3"
-    if p <= 0.75:
-        return "t4"
-    return "t5"
+    return "t1" if p <= .10 else "t2" if p <= .25 else "t3" if p <= .50 else "t4" if p <= .75 else "t5"
 
 
 def ord_(n):
-    if 10 <= n % 100 <= 20:
-        return "th"
-    return {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")
+    return "th" if 10 <= n % 100 <= 20 else {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")
 
 
 def nicecity(c):
-    if not c:
+    if not c or c.startswith("None"):
         return ""
     city, _, st = c.rpartition(",")
     return (" ".join(w.capitalize() for w in city.split()) + ", " + st.strip()) if city else c
 
 
 def tidy(n):
-    n = " ".join(n.split())
+    n = " ".join(n.split()).lstrip(", ")
     return n[:1].upper() + n[1:] if n else n
 
 
@@ -48,15 +47,20 @@ def esc(s):
     return html.escape(str(s), quote=True)
 
 
-# ---------- roster ----------
-lo, hi = 7.5, 9.7
-roster = []
-for p in players:
-    pct = max(0, min(100, (p["tv"] - lo) / (hi - lo) * 100))
-    roster.append(f"""      <tr>
+def build(group):
+    D = json.load(open(f"{group}_site.json"))
+    players, comps, pairs = D["players"], D["comps"], D["pairs"]
+    N = len(players)
+    T = TEXT[group]
+
+    lo, hi = 6.7, 9.7
+    roster = []
+    for p in players:
+        pct = max(0, min(100, ((p["tv"] or lo) - lo) / (hi - lo) * 100))
+        roster.append(f"""      <tr>
         <th scope="row"><span class="pn">{esc(p['name'])}</span><span class="pc">{esc(nicecity(p['city']))}</span></th>
         <td>{esc(p['region'])}</td>
-        <td class="clubc">{esc(p['club'])}</td>
+        <td class="clubc">{esc(p['club'] or '—')}</td>
         <td class="num">
           <div class="rate"><span class="rv">{p['tv']:.3f}</span>
             <span class="bar"><span class="fill" style="width:{pct:.1f}%"></span></span>
@@ -67,54 +71,52 @@ for p in players:
         <td class="num">{p['comps']}</td>
       </tr>""")
 
-# ---------- matrix ----------
-head = []
-for c in comps:
-    fld = f'{c["field"]} teams' if c["field"] else "field n/a"
-    head.append(
-        f'      <th scope="col" class="evh" title="{esc(c["event"])} &#183; {esc(c["division"])} &#183; {esc(fld)} &#183; {esc(c["date"])}">'
-        f'<span class="evn">{esc(c["short"])}</span>'
-        f'<span class="evdiv">{esc(c["division"])}</span>'
-        f'<span class="field">{esc(fld)}</span>'
-        f'<span class="evd">{c["date"][5:7]}/{c["date"][8:10]} &#183; {esc(c["sanction"])}</span>'
-        f'<span class="evc">{c["n"]}&#8201;of&#8201;13</span></th>')
-
-rows = []
-for p in players:
-    tds = []
-    pod = sum(1 for x in p["cells"].values() if x["f"] <= 3)
+    head = []
     for c in comps:
-        cell = p["cells"].get(c["key"])
-        if not cell:
-            tds.append('        <td class="cell empty"><span>&#183;</span></td>')
-            continue
-        f = cell["f"]
-        tip = f'{p["name"]} — {f}{ord_(f)} of {c["field"] or "?"} · {c["short"]} · {c["division"]}'
-        if cell["partners"]:
-            tip += " · with " + ", ".join(cell["partners"])
-        tds.append(f'        <td class="cell {cls(f, c["field"])}" title="{esc(tip)}">'
-                   f'<span class="fin">{f}</span></td>')
-    rows.append(f"""      <tr>
+        fld = f'{c["field"]} teams' if c["field"] else "field n/a"
+        head.append(
+            f'      <th scope="col" class="evh" title="{esc(c["event"])} &#183; {esc(c["division"])} &#183; {esc(fld)} &#183; {esc(c["date"])}">'
+            f'<span class="evn">{esc(c["short"])}</span>'
+            f'<span class="evdiv">{esc(c["division"])}</span>'
+            f'<span class="field">{esc(fld)}</span>'
+            f'<span class="evd">{c["date"][5:7]}/{c["date"][8:10]} &#183; {esc(c["sanction"])}</span>'
+            f'<span class="evc">{c["n"]}&#8201;of&#8201;{N}</span></th>')
+
+    rows = []
+    for p in players:
+        tds = []
+        pod = sum(1 for x in p["cells"].values() if x["f"] <= 3)
+        for c in comps:
+            cell = p["cells"].get(c["key"])
+            if not cell:
+                tds.append('        <td class="cell empty"><span>&#183;</span></td>')
+                continue
+            f = cell["f"]
+            tip = f'{p["name"]} — {f}{ord_(f)} of {c["field"] or "?"} · {c["short"]} · {c["division"]}'
+            if cell["partners"]:
+                tip += " · with " + ", ".join(cell["partners"])
+            tds.append(f'        <td class="cell {cls(f, c["field"])}" title="{esc(tip)}">'
+                       f'<span class="fin">{f}</span></td>')
+        rows.append(f"""      <tr>
         <th scope="row" class="rowh"><span class="pn">{esc(p['name'])}</span>
           <span class="rmeta"><span class="tvchip">{p['tv']:.2f}</span>
           <span class="rsum">{len(p['cells'])} shared &#183; {pod} podium{'s' if pod != 1 else ''}</span></span></th>
 {chr(10).join(tds)}
       </tr>""")
 
-# ---------- appendix: head-to-heads ----------
-prs = []
-for c in pairs:
-    a, b = c["players"]
-    fld = f'{c["field"]}' if c["field"] else "&#8211;"
-    prs.append(f"""      <tr>
+    prs = []
+    for c in pairs:
+        a, b = c["players"]
+        prs.append(f"""      <tr>
         <td class="num dim nw">{esc(c['date'])}</td>
         <td><span class="evn2">{esc(tidy(c['event']))}</span><span class="dv">{esc(c['division'])}</span></td>
-        <td class="num">{fld}</td>
+        <td class="num">{c['field'] if c['field'] else '&#8211;'}</td>
         <td>{esc(a['name'])} <b class="pos">{a['f']}{ord_(a['f'])}</b></td>
         <td>{esc(b['name'])} <b class="pos">{b['f']}{ord_(b['f'])}</b></td>
       </tr>""")
 
-HTML = f"""<title>BNTDP 18U Girls &#183; Head-to-Head Record by Competition</title>
+    other = "17U" if group == "18U" else "18U"
+    return f"""<title>BNTDP {group} Girls &#183; Record by Competition</title>
 <style>
 :root {{
   --ground:#EFF1EE; --surface:#FAFBFA; --raise:#FFFFFF;
@@ -144,11 +146,9 @@ HTML = f"""<title>BNTDP 18U Girls &#183; Head-to-Head Record by Competition</tit
 }}
 
 * {{ box-sizing:border-box; }}
-body {{
-  margin:0; background:var(--ground); color:var(--body);
+body {{ margin:0; background:var(--ground); color:var(--body);
   font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-  font-size:15px; line-height:1.6; -webkit-font-smoothing:antialiased;
-}}
+  font-size:15px; line-height:1.6; -webkit-font-smoothing:antialiased; }}
 .wrap {{ max-width:1120px; margin:0 auto; padding:0 28px; }}
 
 header {{ padding:64px 0 34px; border-bottom:1px solid var(--line); }}
@@ -196,7 +196,6 @@ table {{ border-collapse:collapse; width:100%; }}
   border:1px solid var(--hair); border-radius:2px; overflow:hidden; }}
 .fill {{ display:block; height:100%; background:var(--accent); }}
 
-/* ---- matrix ---- */
 .matrix-wrap {{ border:1px solid var(--line); border-radius:3px; background:var(--surface); overflow-x:auto; }}
 .matrix {{ border-collapse:separate; border-spacing:0; }}
 .matrix th, .matrix td {{ border-bottom:1px solid var(--hair); border-right:1px solid var(--hair); }}
@@ -214,11 +213,11 @@ table {{ border-collapse:collapse; width:100%; }}
 .evc {{ display:block; margin-top:3px; font-size:9.5px; letter-spacing:.05em;
   text-transform:uppercase; color:var(--muted); font-weight:650; }}
 .matrix .rowh {{ position:sticky; left:0; z-index:3; background:var(--surface);
-  width:186px; min-width:186px; padding:10px 14px 10px 16px; text-align:left;
+  width:196px; min-width:196px; padding:10px 14px 10px 16px; text-align:left;
   border-right:1px solid var(--line); font-weight:500; }}
 .matrix thead .corner {{ position:sticky; left:0; top:0; z-index:4; background:var(--wash);
   border-right:1px solid var(--line); border-bottom:1px solid var(--line);
-  width:186px; min-width:186px; padding:12px 16px; text-align:left; vertical-align:bottom;
+  width:196px; min-width:196px; padding:12px 16px; text-align:left; vertical-align:bottom;
   font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); font-weight:650; }}
 .rmeta {{ display:flex; align-items:center; gap:8px; margin-top:4px; }}
 .tvchip {{ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
@@ -227,8 +226,7 @@ table {{ border-collapse:collapse; width:100%; }}
 .rsum {{ font-size:10.5px; color:var(--faint); white-space:nowrap; }}
 .matrix tbody tr:hover .cell {{ box-shadow:inset 0 0 0 99px rgba(127,127,127,.055); }}
 .cell {{ width:112px; min-width:112px; padding:11px 8px; text-align:center;
-  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-  font-variant-numeric:tabular-nums; }}
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-variant-numeric:tabular-nums; }}
 .fin {{ font-size:17px; font-weight:700; letter-spacing:-.01em; }}
 .cell.win {{ background:var(--gold-soft); color:var(--gold); box-shadow:inset 3px 0 0 var(--gold); }}
 .cell.pod {{ background:var(--gold-soft); color:var(--gold); }}
@@ -262,8 +260,6 @@ table {{ border-collapse:collapse; width:100%; }}
 .notes ul {{ padding-left:19px; margin:10px 0 0; }}
 .notes li {{ margin:7px 0; font-size:13.5px; color:var(--muted); max-width:76ch; }}
 .notes b {{ color:var(--body); font-weight:600; }}
-code {{ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:12.5px;
-  background:var(--wash); padding:1px 5px; border-radius:2px; color:var(--body); }}
 footer {{ border-top:1px solid var(--line); padding:22px 0 70px; font-size:12px; color:var(--faint); }}
 a {{ color:var(--accent); }}
 :focus-visible {{ outline:2px solid var(--accent); outline-offset:2px; }}
@@ -276,16 +272,16 @@ a {{ color:var(--accent); }}
 
 <div class="wrap">
 <header>
-  <p class="eyebrow">USA Volleyball &#183; Beach NTDP Summer Training Series 2026</p>
-  <h1>The 18U girls, and <em>who they actually played</em></h1>
-  <p class="standfirst">All thirteen athletes named to the Girls U18 roster for the Beach NTDP
-  Summer Training Series at Chula Vista, against their Volleyball Life record for the twelve
-  months ending 9 August 2026. Each age division counts as its own competition &#8212; an 18U
-  bracket and the 16U bracket running beside it are different fields, so they are different
-  columns. Every cell is a finishing position; the size of that field is in the column head.</p>
+  <p class="eyebrow">USA Volleyball &#183; Beach NTDP Summer Training Series 2026 &#183; {esc(D['label'])}</p>
+  <h1>{T['title']}</h1>
+  <p class="standfirst">All {N} athletes named to the {esc(D['label'])} roster for the Beach NTDP
+  Summer Training Series at Chula Vista, against their Volleyball Life record for the twelve months
+  ending 9 August 2026. Each age division counts as its own competition &#8212; a 16U bracket and
+  the 18U bracket running beside it are different fields, so they are different columns. Every cell
+  is a finishing position; the size of that field is in the column head.</p>
   <div class="facts">
-    <div class="fact"><b>13</b><span>Athletes</span></div>
-    <div class="fact"><b>{total_events}</b><span>Events attended</span></div>
+    <div class="fact"><b>{N}</b><span>Athletes</span></div>
+    <div class="fact"><b>{D['totalEvents']}</b><span>Events attended</span></div>
     <div class="fact"><b>{D['totalComps']}</b><span>Competitions</span></div>
     <div class="fact"><b>{len(comps)}</b><span>Shared by 3+</span></div>
     <div class="fact"><b>12&#8202;mo</b><span>Aug &#8217;25 &#8211; Aug &#8217;26</span></div>
@@ -295,8 +291,7 @@ a {{ color:var(--accent); }}
 <section>
   <h2>The roster</h2>
   <p class="lede">TruVolley is Volleyball Life's skill rating &#8212; one number derived from
-  match-by-match results against rated opposition. All thirteen carry 100&#8202;% confidence,
-  so the ratings are directly comparable. Sorted strongest first.</p>
+  match-by-match results against rated opposition. Sorted strongest first.</p>
   <div class="panel">
     <table class="roster">
       <thead><tr>
@@ -313,7 +308,7 @@ a {{ color:var(--accent); }}
 
 <section>
   <h2>Players against shared competitions</h2>
-  <p class="lede">The {len(comps)} competitions entered by at least three of the thirteen, biggest
+  <p class="lede">The {len(comps)} competitions entered by at least three of the {N}, biggest
   turnout first. A cell is that athlete's finishing position in the field named above it;
   hatched means she did not enter. Hover any cell for her partner.</p>
 </section>
@@ -345,7 +340,7 @@ a {{ color:var(--accent); }}
 <section>
   <h2>Where only two of them met</h2>
   <p class="lede">A further {len(pairs)} competitions drew exactly two of the roster &#8212; too thin
-  for the matrix, but they are still head-to-heads. Newest first.</p>
+  for the matrix, but still head-to-heads. Newest first.</p>
   <div class="panel">
     <table class="pairs">
       <thead><tr>
@@ -363,29 +358,32 @@ a {{ color:var(--accent); }}
   <h2>How to read it</h2>
   <ul>
     <li><b>Each division is its own competition.</b> At the AVP Juniors National Championships the
-    18U, 17U and 16U brackets ran as separate 64-, 63- and 72-team fields; they appear as separate
-    columns, and a 5th in one says nothing about a 5th in another. This is why the roster's
-    younger-division players &#8212; Sadie Harris above all, who competes mostly at 16U &#8212;
-    overlap with the group less than their event count suggests.</li>
-    <li><b>Five-a-side club competitions are included.</b> The BVCA Orange County dates,
-    Kauai Club Open and Club&#8202;v&#8202;Club are team events, so a finish there reflects a squad
-    of five or more rather than a pair. They are labelled in the division line.</li>
+    18U, 17U, 16U and 15U brackets ran as separate fields; they appear as separate columns, and a
+    5th in one says nothing about a 5th in another.</li>
+    <li><b>Five-a-side and club-format competitions are included.</b> The BVCA Orange County dates,
+    Club&#8202;v&#8202;Club and the AAU club championships are team events, so a finish there
+    reflects a squad rather than a pair. The division line names them.</li>
     <li><b>Ties are shared.</b> Beach draws award equal finishes to every team knocked out in the
     same round, which is why blocks of 5th, 9th and 17th recur down a column.</li>
     <li><b>Field size is the number of teams registered in that division</b>, as recorded by
     Volleyball Life &#8212; not the number that ultimately played, so a withdrawal leaves the
     denominator unchanged.</li>
     <li><b>Sanctioning bodies</b> are tagged in each column head: AVPA (AVP and AVP Juniors),
-    USAV, AAU, BVCA and p1440.</li>
+    USAV, AAU, BVCA, CBVA and p1440.</li>
+    {T['note']}
   </ul>
 </section>
 <footer>
-  Roster from USA Volleyball's 2026 Beach NTDP Summer Training Series listing. Results, field sizes
-  and TruVolley ratings from Volleyball Life, retrieved 9 August 2026.
+  Roster from USA Volleyball's 2026 Beach NTDP Summer Training Series listing ({esc(D['label'])}).
+  Results, field sizes and TruVolley ratings from Volleyball Life, retrieved 9 August 2026.
+  A companion report covers the {other} group.
 </footer>
 </div>
 """
 
-open("bntdp.html", "w").write(HTML)
-print("wrote bntdp.html", len(HTML), "bytes")
-print("columns:", len(comps), "pairs rows:", len(pairs))
+
+if __name__ == "__main__":
+    for grp in (sys.argv[1:] or ["18U", "17U"]):
+        out = f"bntdp-{grp.lower()}.html"
+        open(out, "w").write(build(grp))
+        print("wrote", out)
