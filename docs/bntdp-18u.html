@@ -138,6 +138,32 @@ table { border-collapse:collapse; width:100%; }
 .pairs td { font-size:13.5px; }
 .pairs td:nth-child(2) { max-width:330px; }
 
+
+.figwrap { border:1px solid var(--line); border-radius:3px; background:var(--surface);
+  padding:18px 20px 10px; overflow-x:auto; }
+.fig { display:block; min-width:620px; --mark:#00A385; --fitink:var(--muted); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .fig { --mark:#00AB87; }
+}
+:root[data-theme="dark"] .fig { --mark:#00AB87; }
+.fig .grid { stroke:var(--hair); stroke-width:1; }
+.fig .axis { stroke:var(--line); stroke-width:1; }
+.fig .tick { fill:var(--faint); font-size:11px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-variant-numeric:tabular-nums; }
+.fig .ty { text-anchor:end; }
+.fig .tx { text-anchor:middle; }
+.fig .axlab { fill:var(--muted); font-size:11.5px; text-anchor:middle;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; letter-spacing:.02em; }
+.fig .fit { stroke:var(--fitink); stroke-width:2; stroke-dasharray:7 5; opacity:.75; }
+.fig .fitlab { fill:var(--muted); font-size:11px; text-anchor:end;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+.fig .dot { fill:var(--mark); stroke:var(--surface); stroke-width:2; }
+.fig .dot.hi { fill:var(--surface); stroke:var(--mark); stroke-width:3; }
+.fig .ptlab { fill:var(--ink); font-size:11.5px; font-weight:600;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  paint-order:stroke; stroke:var(--surface); stroke-width:3px; }
+.figcap { color:var(--faint); font-size:12px; margin:10px 0 0; max-width:76ch; }
+
 .notes { margin:0 0 60px; }
 .notes ul { padding-left:19px; margin:10px 0 0; }
 .notes li { margin:7px 0; font-size:13.5px; color:var(--muted); max-width:76ch; }
@@ -368,6 +394,16 @@ a { color:var(--accent); }
       </tbody>
     </table>
   </div>
+</section>
+
+<section>
+  <h2>Rating against workload</h2>
+  <p class="lede">Whether the athletes with the highest ratings are the ones playing the most.
+  TruVolley on the vertical, doubles competitions in the window on the horizontal.</p>
+  <div class="figwrap">
+<svg class="fig" viewBox="0 0 860 430" role="img" width="100%" aria-label="Scatter plot of TruVolley rating against number of doubles competitions played, with a linear fit."><line class="grid" x1="62" y1="322.8" x2="834" y2="322.8"/><text class="tick ty" x="52" y="326.8">8.1</text><line class="grid" x1="62" y1="260.3" x2="834" y2="260.3"/><text class="tick ty" x="52" y="264.3">8.4</text><line class="grid" x1="62" y1="197.7" x2="834" y2="197.7"/><text class="tick ty" x="52" y="201.7">8.7</text><line class="grid" x1="62" y1="135.2" x2="834" y2="135.2"/><text class="tick ty" x="52" y="139.2">9.0</text><line class="grid" x1="62" y1="72.7" x2="834" y2="72.7"/><text class="tick ty" x="52" y="76.7">9.3</text><line class="grid" x1="62.0" y1="16" x2="62.0" y2="378"/><text class="tick tx" x="62.0" y="400">0</text><line class="grid" x1="182.6" y1="16" x2="182.6" y2="378"/><text class="tick tx" x="182.6" y="400">5</text><line class="grid" x1="303.2" y1="16" x2="303.2" y2="378"/><text class="tick tx" x="303.2" y="400">10</text><line class="grid" x1="423.9" y1="16" x2="423.9" y2="378"/><text class="tick tx" x="423.9" y="400">15</text><line class="grid" x1="544.5" y1="16" x2="544.5" y2="378"/><text class="tick tx" x="544.5" y="400">20</text><line class="grid" x1="665.1" y1="16" x2="665.1" y2="378"/><text class="tick tx" x="665.1" y="400">25</text><line class="grid" x1="785.8" y1="16" x2="785.8" y2="378"/><text class="tick tx" x="785.8" y="400">30</text><line class="axis" x1="62" y1="378" x2="834" y2="378"/><line class="axis" x1="62" y1="16" x2="62" y2="378"/><text class="axlab" x="448" y="422">Doubles competitions played (12 months to 9 Aug 2026)</text><text class="axlab" transform="translate(15,197) rotate(-90)" x="0" y="0">TruVolley rating</text><line class="fit" x1="62.0" y1="222.0" x2="834.0" y2="209.1"/><text class="fitlab" x="186" y="211">linear fit</text><circle class="dot" cx="423.9" cy="171.9" r="5.5"><title>Sienna Castillo — TruVolley 8.824, 15 competitions</title></circle><circle class="dot" cx="592.8" cy="193.1" r="5.5"><title>Simrin Adams — TruVolley 8.722, 22 competitions</title></circle><circle class="dot" cx="327.4" cy="209.4" r="5.5"><title>Milaniakai Padilla — TruVolley 8.644, 11 competitions</title></circle><circle class="dot" cx="592.8" cy="218.8" r="5.5"><title>Sadie Stafford — TruVolley 8.599, 22 competitions</title></circle><circle class="dot" cx="423.9" cy="229.2" r="5.5"><title>Sarah Cowan — TruVolley 8.549, 15 competitions</title></circle><circle class="dot" cx="448.0" cy="236.9" r="5.5"><title>Sage Illian — TruVolley 8.512, 16 competitions</title></circle><circle class="dot" cx="399.8" cy="248.8" r="5.5"><title>Georgeann Lee — TruVolley 8.455, 14 competitions</title></circle><circle class="dot" cx="472.1" cy="353.0" r="5.5"><title>Sadie Harris — TruVolley 7.955, 17 competitions</title></circle><circle class="dot hi" cx="496.2" cy="41.0" r="5.5"><title>Lauren Leach — TruVolley 9.452, 18 competitions</title></circle><circle class="dot hi" cx="303.2" cy="75.2" r="5.5"><title>Janie McCanna — TruVolley 9.288, 10 competitions</title></circle><circle class="dot hi" cx="785.8" cy="157.7" r="5.5"><title>Olivia Herron — TruVolley 8.892, 30 competitions</title></circle><circle class="dot hi" cx="616.9" cy="322.1" r="5.5"><title>Jordyn Wilson — TruVolley 8.103, 23 competitions</title></circle><circle class="dot hi" cx="327.4" cy="338.2" r="5.5"><title>Sarah Albers — TruVolley 8.026, 11 competitions</title></circle><text class="ptlab" text-anchor="start" x="506.2" y="45.0">Lauren Leach</text><text class="ptlab" text-anchor="start" x="313.2" y="79.2">Janie McCanna</text><text class="ptlab" text-anchor="end" x="775.8" y="161.7">Olivia Herron</text><text class="ptlab" text-anchor="start" x="626.9" y="326.1">Jordyn Wilson</text><text class="ptlab" text-anchor="start" x="337.4" y="342.2">Sarah Albers</text></svg>
+  </div>
+  <p class="figcap">Each dot is one athlete; 13 plotted. The fit is essentially flat (r&nbsp;=&nbsp;+0.02, r&#178;&nbsp;=&nbsp;0.00): how much an athlete plays has all but no bearing on her rating. Named points are the extremes and the athletes discussed in the notes; the roster table above is the full table view.</p>
 </section>
 
 <section>

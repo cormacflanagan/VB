@@ -10,7 +10,7 @@ Three groups are covered:
 | --- | --- | --- | --- |
 | Girls U18 | 13 | Published NTDP roster | [`docs/bntdp-18u.html`](docs/bntdp-18u.html) |
 | Girls U17 | 20 | Published NTDP roster | [`docs/bntdp-17u.html`](docs/bntdp-17u.html) |
-| Class of 2028 | 30 | Derived — see below | [`docs/bntdp-2028.html`](docs/bntdp-2028.html) |
+| Class of 2028 | 60 | Derived — see below | [`docs/bntdp-2028.html`](docs/bntdp-2028.html) |
 
 **Doubles only.** Club, 3v3 and 5v5 results are excluded: a placing there reflects a squad
 of five to twelve, not the individual. The test is roster size rather than the division
@@ -42,17 +42,21 @@ Two needed manual resolution, both in the U17 group:
 Volleyball Life publishes no class ranking, so this group is derived rather than read off a
 page. `scripts/discover2028.py` crawls the partner graph outward from 16 known 2028 athletes
 on the two NTDP rosters, keeping every player whose profile reports `gradYear == 2028` and
-`male == false`, to two hops. That found **449 girls in the class, 410 of them rated**; the
-30 highest TruVolley scores become the roster (`scripts/roster_2028.json`, full population in
-`data/pop2028.json`).
+`male == false`. `scripts/close2028.py` then runs that crawl **to closure**: it repeatedly
+expands the partners of every player already found, stopping only when a full round turns up
+nobody new above a 7.0 rating floor.
 
-A convergence pass then expanded the partners of the top 60 — 985 previously unseen player
-IDs, of which 50 turned out to be class-of-2028 girls, and **none scored above the #30
-cut-off** (7.906). The top 30 is therefore stable with respect to the crawl. The cut is tight
-though: #31 is Regina Stella Broshear at 7.843, 0.06 behind #30.
+Closure matters more than it sounds. A two-hop crawl found 449 girls, and spot-checking it
+against a top-30 cut suggested it was complete — but that only ever proved completeness
+*above* that cut. Running to closure took the population to **1,574 girls in the class, 1,373
+of them rated**, and six of the players it added land inside a top-60 cut. The final round
+added 563 players and not one cleared the floor, so the ranking is now stable at this depth.
 
-Because the group is 30 rather than 13, its matrix uses a shared-by-5 threshold instead of 3;
-proportionally that is a slightly weaker bar than the NTDP groups' 3-of-13.
+The 60 highest TruVolley scores are the roster (`scripts/roster_2028.json`; full population
+kept in `data/pop2028.json` so the cut can be redrawn without re-crawling). The cut is tight:
+#61 is Nikolina Mimic at 7.331, fifteen thousandths behind #60.
+
+Because the group is 60 rather than 13, its matrix uses a shared-by-8 threshold instead of 3.
 
 The script also harvests `/vision/players`, Volleyball Life's opt-in recruiting directory,
 which exposes height, playing side and block-touch metrics. Coverage proved too thin to use
@@ -96,14 +100,14 @@ be regenerated without re-querying the API.
 
 | | Girls U18 | Girls U17 | Class of 2028 |
 | --- | --- | --- | --- |
-| Athletes | 13 | 20 | 30 |
-| Events attended (doubles) | 89 | 111 | 143 |
-| Pairs competitions (event × division) | 105 | 142 | 174 |
-| Matrix threshold | 3+ | 3+ | 5+ |
-| Matrix columns | 20 | 25 | 20 |
-| Shared by exactly 2 | 25 | 30 | 45 |
-| Club results dropped | 40 | 73 | 75 |
-| Largest single turnout | 12 of 13 (U18 Trials) | 9 of 20 | 13 of 30 |
+| Athletes | 13 | 20 | 60 |
+| Events attended (doubles) | 89 | 111 | 282 |
+| Pairs competitions (event × division) | 105 | 142 | 353 |
+| Matrix threshold | 3+ | 3+ | 8+ |
+| Matrix columns | 20 | 25 | 21 |
+| Shared by exactly 2 | 25 | 30 | 87 |
+| Club results dropped | 40 | 73 | 171 |
+| Largest single turnout | 12 of 13 (U18 Trials) | 9 of 20 | 26 of 60 |
 
 The U18 group is far more concentrated: the U18 Beach National Team Trials put 12 of its
 13 into one 12-team field, and two more competitions drew 11. Nothing in the U17 year
@@ -112,6 +116,22 @@ brackets rather than converging on a single selection event.
 
 Dropping club formats hit the U17 group hardest — 73 results removed against the U18s' 40 —
 and removed the BVCA Orange County 5v5 series, which had been the U17s' densest column.
+
+## The rating-against-workload figure
+
+Each report carries a scatter of TruVolley against number of doubles competitions, with a
+least-squares fit. Across the 60-player class group the fit slopes **down**: r = −0.33,
+r² = 0.11. The effect survives dropping the light schedules (r = −0.32 for the 52 players
+with eight or more competitions), so it is not an artifact of a few inactive profiles.
+
+The likely mechanism is that TruVolley rewards win rate, so a player who enters fewer, more
+selective events protects her rating while one who plays a heavy national schedule against
+strong fields spends it. Read the rating alongside the workload axis, not on its own.
+
+`scripts/scatter.py` renders the figure as inline SVG — one hue, no legend, identity on the
+notable points carried by direct labels rather than colour, and hover text in an SVG `<title>`
+so the page still needs no JavaScript. The palette was checked with the dataviz validator and
+passes all six checks against both the light and dark chart surfaces.
 
 ## Caveats
 

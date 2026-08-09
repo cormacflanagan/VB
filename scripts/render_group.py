@@ -3,6 +3,7 @@
   python3 render_group.py 17U      ->  bntdp-17u.html
 """
 import json, sys, html
+from scatter import scatter
 
 TEXT = {
     "18U": {
@@ -24,14 +25,18 @@ TEXT = {
         "title": "The class of 2028, and <em>where the top 30 keep meeting</em>",
         "lede": "The {N} highest-rated girls in the graduating class of 2028, against their "
                 "Volleyball Life record",
-        "note": "<li><b>How these 30 were chosen.</b> Volleyball Life publishes no class "
+        "note": "<li><b>How these 60 were chosen.</b> Volleyball Life publishes no class "
                 "ranking, so the field was built by crawling the partner graph outward from "
-                "known 2028 athletes: 449 girls in the class were found, 410 of them rated, "
-                "and the 30 highest TruVolley scores were taken. A convergence pass over the "
-                "top 60's partners turned up 50 more players and <i>none</i> above the "
-                "cut-off, so the top 30 is stable. It is a ranking by rating, not a scouting "
-                "opinion &#8212; and TruVolley rewards win rate, so a light schedule in small "
-                "fields can flatter a player.</li>",
+                "known 2028 athletes and keeping every profile that reports a 2028 graduation "
+                "year. The crawl was then run to closure &#8212; repeatedly expanding the "
+                "partners of every player already found until a full round turned up nobody "
+                "new above a 7.0 rating floor. That took the population to <b>1,574 girls in "
+                "the class, 1,373 of them rated</b>; the 60 highest TruVolley scores are the "
+                "roster here. The final round added 563 players and not one of them cleared "
+                "the floor, so the cut is stable &#8212; though it is tight: #61 is Nikolina "
+                "Mimic at 7.331, fifteen thousandths behind #60. This is a ranking by rating, "
+                "not a scouting opinion, and TruVolley rewards win rate, so a light schedule "
+                "in small fields can flatter a player.</li>",
     },
 }
 
@@ -139,6 +144,29 @@ def build(group):
         <td>{esc(a['name'])} <b class="pos">{a['f']}{ord_(a['f'])}</b></td>
         <td>{esc(b['name'])} <b class="pos">{b['f']}{ord_(b['f'])}</b></td>
       </tr>""")
+
+    HILITE = {"2028": ("Lucy Matuszak", "Haisley Flanagan", "Lia Ray",
+                       "Reese Hislop", "Karsyn Smith", "Ella Buchanan"),
+              "17U": ("Lucy Matuszak", "Haisley Flanagan", "Olivia LeDoyen",
+                      "Charlotte Jansen", "Elyse Smelcer"),
+              "18U": ("Lauren Leach", "Olivia Herron", "Janie McCanna",
+                      "Sarah Albers", "Jordyn Wilson")}[group]
+    fig, slope, rr = scatter(players, HILITE)
+    per10 = slope * 10
+    stat = f"r&nbsp;=&nbsp;{rr:+.2f}, r&#178;&nbsp;=&nbsp;{rr * rr:.2f}"
+    if abs(rr) < 0.15:
+        trend = f"The fit is essentially flat ({stat}): how much an athlete plays has all but no bearing on her rating."
+    elif abs(rr) < 0.45:
+        trend = (f"The fit slopes {abs(per10):.2f} of a rating point "
+                 f"{'down' if slope < 0 else 'up'} per additional ten competitions, but the "
+                 f"relationship is weak ({stat}) and explains little of the spread.")
+    else:
+        trend = (f"The fit slopes {abs(per10):.2f} of a rating point "
+                 f"{'down' if slope < 0 else 'up'} per additional ten competitions "
+                 f"({stat}), a meaningful share of the spread.")
+    figcap = (f"Each dot is one athlete; {len(players)} plotted. " + trend
+              + " Named points are the extremes and the athletes discussed in the notes; "
+                "the roster table above is the full table view.")
 
     regionhdr = "State" if group == "2028" else "USAV region"
     others = {"18U": "17U group and the class of 2028",
@@ -284,6 +312,32 @@ table {{ border-collapse:collapse; width:100%; }}
 .pairs td {{ font-size:13.5px; }}
 .pairs td:nth-child(2) {{ max-width:330px; }}
 
+
+.figwrap {{ border:1px solid var(--line); border-radius:3px; background:var(--surface);
+  padding:18px 20px 10px; overflow-x:auto; }}
+.fig {{ display:block; min-width:620px; --mark:#00A385; --fitink:var(--muted); }}
+@media (prefers-color-scheme: dark) {{
+  :root:not([data-theme="light"]) .fig {{ --mark:#00AB87; }}
+}}
+:root[data-theme="dark"] .fig {{ --mark:#00AB87; }}
+.fig .grid {{ stroke:var(--hair); stroke-width:1; }}
+.fig .axis {{ stroke:var(--line); stroke-width:1; }}
+.fig .tick {{ fill:var(--faint); font-size:11px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-variant-numeric:tabular-nums; }}
+.fig .ty {{ text-anchor:end; }}
+.fig .tx {{ text-anchor:middle; }}
+.fig .axlab {{ fill:var(--muted); font-size:11.5px; text-anchor:middle;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; letter-spacing:.02em; }}
+.fig .fit {{ stroke:var(--fitink); stroke-width:2; stroke-dasharray:7 5; opacity:.75; }}
+.fig .fitlab {{ fill:var(--muted); font-size:11px; text-anchor:end;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }}
+.fig .dot {{ fill:var(--mark); stroke:var(--surface); stroke-width:2; }}
+.fig .dot.hi {{ fill:var(--surface); stroke:var(--mark); stroke-width:3; }}
+.fig .ptlab {{ fill:var(--ink); font-size:11.5px; font-weight:600;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  paint-order:stroke; stroke:var(--surface); stroke-width:3px; }}
+.figcap {{ color:var(--faint); font-size:12px; margin:10px 0 0; max-width:76ch; }}
+
 .notes {{ margin:0 0 60px; }}
 .notes ul {{ padding-left:19px; margin:10px 0 0; }}
 .notes li {{ margin:7px 0; font-size:13.5px; color:var(--muted); max-width:76ch; }}
@@ -333,6 +387,16 @@ a {{ color:var(--accent); }}
       </tbody>
     </table>
   </div>
+</section>
+
+<section>
+  <h2>Rating against workload</h2>
+  <p class="lede">Whether the athletes with the highest ratings are the ones playing the most.
+  TruVolley on the vertical, doubles competitions in the window on the horizontal.</p>
+  <div class="figwrap">
+{fig}
+  </div>
+  <p class="figcap">{figcap}</p>
 </section>
 
 <section>

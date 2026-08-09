@@ -1,6 +1,6 @@
 {
  "group": "2028",
- "label": "Class of 2028 \u2014 top 30",
+ "label": "Class of 2028 \u2014 top 60",
  "window": [
   "2025-08-09",
   "2026-08-09"
@@ -18,16 +18,16 @@
    "l": 61,
    "comps": 9,
    "cells": {
-    "31567:117695": {
-     "f": 5,
-     "partners": [
-      "Sage Illian"
-     ]
-    },
     "38087:139560": {
      "f": 2,
      "partners": [
       "Sarah Cowan"
+     ]
+    },
+    "31567:117695": {
+     "f": 5,
+     "partners": [
+      "Sage Illian"
      ]
     },
     "36451:133267": {
@@ -40,12 +40,6 @@
      "f": 9,
      "partners": [
       "Olivia Herron"
-     ]
-    },
-    "25578:97147": {
-     "f": 13,
-     "partners": [
-      "Sage Illian"
      ]
     }
    }
@@ -91,12 +85,6 @@
      "partners": [
       "Sarah Cowan"
      ]
-    },
-    "25578:97147": {
-     "f": 14,
-     "partners": [
-      "Sarah Cowan"
-     ]
     }
    }
   },
@@ -112,14 +100,14 @@
    "l": 91,
    "comps": 22,
    "cells": {
-    "31567:117695": {
-     "f": 13,
+    "34243:126056": {
+     "f": 9,
      "partners": [
       "Danica Waterman"
      ]
     },
-    "34243:126056": {
-     "f": 9,
+    "31567:117695": {
+     "f": 13,
      "partners": [
       "Danica Waterman"
      ]
@@ -130,10 +118,22 @@
       "Brooklyn Rosales"
      ]
     },
+    "30985:115903": {
+     "f": 1,
+     "partners": [
+      "Danica Waterman"
+     ]
+    },
     "32578:120658": {
      "f": 3,
      "partners": [
       "Brooke Codey"
+     ]
+    },
+    "25638:97292": {
+     "f": 1,
+     "partners": [
+      "Skyler Smith"
      ]
     },
     "31568:117699": {
@@ -160,22 +160,10 @@
       "Nariah Johnson"
      ]
     },
-    "25638:97292": {
+    "32971:121739": {
      "f": 1,
      "partners": [
-      "Skyler Smith"
-     ]
-    },
-    "31625:117914": {
-     "f": 3,
-     "partners": [
-      "Alayna Smeltzer"
-     ]
-    },
-    "30985:115903": {
-     "f": 1,
-     "partners": [
-      "Danica Waterman"
+      "Cayden Dorger"
      ]
     }
    }
@@ -198,14 +186,14 @@
       "Haisley Flanagan"
      ]
     },
-    "34180:125823": {
-     "f": 5,
+    "38087:139560": {
+     "f": 3,
      "partners": [
       "Sadie Harris"
      ]
     },
-    "38087:139560": {
-     "f": 3,
+    "32578:120659": {
+     "f": 9,
      "partners": [
       "Sadie Harris"
      ]
@@ -216,8 +204,8 @@
       "Aubree Marsden"
      ]
     },
-    "32578:120659": {
-     "f": 9,
+    "34180:125823": {
+     "f": 5,
      "partners": [
       "Sadie Harris"
      ]
@@ -242,6 +230,12 @@
    "l": 149,
    "comps": 15,
    "cells": {
+    "38087:139560": {
+     "f": 2,
+     "partners": [
+      "Lucy Matuszak"
+     ]
+    },
     "31622:117904": {
      "f": 3,
      "partners": [
@@ -266,12 +260,6 @@
       "Milaniakai Padilla"
      ]
     },
-    "38087:139560": {
-     "f": 2,
-     "partners": [
-      "Lucy Matuszak"
-     ]
-    },
     "31569:117703": {
      "f": 9,
      "partners": [
@@ -289,18 +277,6 @@
      "partners": [
       "Milaniakai Padilla"
      ]
-    },
-    "25578:97147": {
-     "f": 14,
-     "partners": [
-      "Milaniakai Padilla"
-     ]
-    },
-    "31625:117914": {
-     "f": 3,
-     "partners": [
-      "Milana Rivera"
-     ]
     }
    }
   },
@@ -316,14 +292,14 @@
    "l": 53,
    "comps": 8,
    "cells": {
-    "31567:117695": {
-     "f": 9,
+    "38087:139560": {
+     "f": 1,
      "partners": [
       "Nariah Johnson"
      ]
     },
-    "38087:139560": {
-     "f": 1,
+    "31567:117695": {
+     "f": 9,
      "partners": [
       "Nariah Johnson"
      ]
@@ -334,16 +310,16 @@
       "Summer Tukua"
      ]
     },
-    "36451:133267": {
-     "f": 5,
-     "partners": [
-      "Milaniakai Padilla"
-     ]
-    },
     "31483:117394": {
      "f": 1,
      "partners": [
       "Summer Tukua"
+     ]
+    },
+    "36451:133267": {
+     "f": 5,
+     "partners": [
+      "Milaniakai Padilla"
      ]
     }
    }
@@ -395,18 +371,6 @@
      "partners": [
       "Dreya Scherfenberg"
      ]
-    },
-    "25578:97147": {
-     "f": 13,
-     "partners": [
-      "Lucy Matuszak"
-     ]
-    },
-    "25638:97290": {
-     "f": 3,
-     "partners": [
-      "Dreya Scherfenberg"
-     ]
     }
    }
   },
@@ -448,16 +412,16 @@
    "l": 73,
    "comps": 15,
    "cells": {
-    "31567:117695": {
-     "f": 9,
-     "partners": [
-      "Ella Buchanan"
-     ]
-    },
     "34243:126056": {
      "f": 2,
      "partners": [
       "Madison Gillinger"
+     ]
+    },
+    "31567:117695": {
+     "f": 9,
+     "partners": [
+      "Ella Buchanan"
      ]
     },
     "25578:97149": {
@@ -529,12 +493,6 @@
      "partners": [
       "Meadow Rosales"
      ]
-    },
-    "25638:97290": {
-     "f": 3,
-     "partners": [
-      "Meadow Rosales"
-     ]
     }
    }
   },
@@ -550,20 +508,8 @@
    "l": 110,
    "comps": 9,
    "cells": {
-    "31567:117695": {
-     "f": 21,
-     "partners": [
-      "Kara Boas"
-     ]
-    },
     "34243:126056": {
      "f": 1,
-     "partners": [
-      "Milan Hendrickson"
-     ]
-    },
-    "31568:117699": {
-     "f": 17,
      "partners": [
       "Milan Hendrickson"
      ]
@@ -572,6 +518,12 @@
      "f": 17,
      "partners": [
       "Milan Hendrickson"
+     ]
+    },
+    "31567:117695": {
+     "f": 21,
+     "partners": [
+      "Kara Boas"
      ]
     },
     "25578:97149": {
@@ -584,6 +536,12 @@
      "f": 5,
      "partners": [
       "Regina Stella Broshear"
+     ]
+    },
+    "31568:117699": {
+     "f": 17,
+     "partners": [
+      "Milan Hendrickson"
      ]
     }
    }
@@ -600,16 +558,22 @@
    "l": 74,
    "comps": 16,
    "cells": {
-    "31569:117703": {
-     "f": 5,
-     "partners": [
-      "Sadie Stafford"
-     ]
-    },
     "32578:120659": {
      "f": 5,
      "partners": [
       "Lily Larrabee"
+     ]
+    },
+    "25638:97292": {
+     "f": 1,
+     "partners": [
+      "Sadie Stafford"
+     ]
+    },
+    "31569:117703": {
+     "f": 5,
+     "partners": [
+      "Sadie Stafford"
      ]
     },
     "31566:117686": {
@@ -618,10 +582,10 @@
       "Sienna Carr"
      ]
     },
-    "25638:97292": {
-     "f": 1,
+    "32971:121739": {
+     "f": 4,
      "partners": [
-      "Sadie Stafford"
+      "Lauren Eklund"
      ]
     }
    }
@@ -661,18 +625,6 @@
      "partners": [
       "Sage Illian"
      ]
-    },
-    "25638:97290": {
-     "f": 3,
-     "partners": [
-      "Sage Illian"
-     ]
-    },
-    "31625:117914": {
-     "f": 5,
-     "partners": [
-      "Megan McLarty"
-     ]
     }
    }
   },
@@ -688,25 +640,25 @@
    "l": 90,
    "comps": 4,
    "cells": {
-    "31567:117695": {
-     "f": 17,
-     "partners": [
-      "Brooke Codey"
-     ]
-    },
     "34243:126056": {
      "f": 1,
      "partners": [
       "Eden Cisneros"
      ]
     },
-    "31568:117699": {
+    "38087:139560": {
      "f": 17,
      "partners": [
       "Eden Cisneros"
      ]
     },
-    "38087:139560": {
+    "31567:117695": {
+     "f": 17,
+     "partners": [
+      "Brooke Codey"
+     ]
+    },
+    "31568:117699": {
      "f": 17,
      "partners": [
       "Eden Cisneros"
@@ -732,25 +684,19 @@
       "Stella Sheeran"
      ]
     },
-    "31622:117904": {
-     "f": 11,
-     "partners": [
-      "Skye Douglass"
-     ]
-    },
-    "31569:117703": {
-     "f": 5,
-     "partners": [
-      "Skye Douglass"
-     ]
-    },
     "32578:120659": {
      "f": 2,
      "partners": [
       "Stella Sheeran"
      ]
     },
-    "36451:133267": {
+    "31622:117904": {
+     "f": 11,
+     "partners": [
+      "Skye Douglass"
+     ]
+    },
+    "30985:115903": {
      "f": 3,
      "partners": [
       "Ashley Ruschill"
@@ -768,16 +714,28 @@
       "Savannah Hastings"
      ]
     },
-    "31625:117914": {
+    "31569:117703": {
      "f": 5,
+     "partners": [
+      "Skye Douglass"
+     ]
+    },
+    "31566:117687": {
+     "f": 5,
+     "partners": [
+      "Callie Hopkins"
+     ]
+    },
+    "36451:133267": {
+     "f": 3,
      "partners": [
       "Ashley Ruschill"
      ]
     },
-    "30985:115903": {
-     "f": 3,
+    "32971:121739": {
+     "f": 1,
      "partners": [
-      "Ashley Ruschill"
+      "Sadie Stafford"
      ]
     }
    }
@@ -807,14 +765,14 @@
    "l": 96,
    "comps": 9,
    "cells": {
-    "31567:117695": {
-     "f": 13,
+    "34243:126056": {
+     "f": 9,
      "partners": [
       "Sadie Stafford"
      ]
     },
-    "34243:126056": {
-     "f": 9,
+    "31567:117695": {
+     "f": 13,
      "partners": [
       "Sadie Stafford"
      ]
@@ -823,6 +781,12 @@
      "f": 9,
      "partners": [
       "Sarah Albers"
+     ]
+    },
+    "30985:115903": {
+     "f": 1,
+     "partners": [
+      "Sadie Stafford"
      ]
     },
     "32578:120658": {
@@ -848,18 +812,6 @@
      "partners": [
       "Isabelle Izzy Ramos"
      ]
-    },
-    "25638:97290": {
-     "f": 5,
-     "partners": [
-      "Taylie Hansen"
-     ]
-    },
-    "30985:115903": {
-     "f": 1,
-     "partners": [
-      "Sadie Stafford"
-     ]
     }
    }
   },
@@ -875,19 +827,7 @@
    "l": 137,
    "comps": 22,
    "cells": {
-    "31567:117695": {
-     "f": 19,
-     "partners": [
-      "Charlotte Jansen"
-     ]
-    },
     "34243:126056": {
-     "f": 9,
-     "partners": [
-      "Charlotte Jansen"
-     ]
-    },
-    "34180:125823": {
      "f": 9,
      "partners": [
       "Charlotte Jansen"
@@ -899,14 +839,26 @@
       "Julianna Godbey"
      ]
     },
+    "32578:120659": {
+     "f": 3,
+     "partners": [
+      "Charlotte Jansen"
+     ]
+    },
+    "31567:117695": {
+     "f": 19,
+     "partners": [
+      "Charlotte Jansen"
+     ]
+    },
     "25578:97149": {
      "f": 2,
      "partners": [
       "Eden Cisneros"
      ]
     },
-    "32578:120659": {
-     "f": 3,
+    "34180:125823": {
+     "f": 9,
      "partners": [
       "Charlotte Jansen"
      ]
@@ -943,6 +895,12 @@
       "Elle Sossong"
      ]
     },
+    "25578:97149": {
+     "f": 3,
+     "partners": [
+      "Emma Abernathy"
+     ]
+    },
     "32578:120658": {
      "f": 1,
      "partners": [
@@ -955,12 +913,6 @@
       "Danica Waterman"
      ]
     },
-    "25578:97149": {
-     "f": 3,
-     "partners": [
-      "Emma Abernathy"
-     ]
-    },
     "31569:117703": {
      "f": 13,
      "partners": [
@@ -971,12 +923,6 @@
      "f": 41,
      "partners": [
       "Elle Sossong"
-     ]
-    },
-    "25638:97290": {
-     "f": 5,
-     "partners": [
-      "Danica Waterman"
      ]
     }
    }
@@ -1011,16 +957,16 @@
       "Taylie Hansen"
      ]
     },
-    "31569:117703": {
-     "f": 13,
-     "partners": [
-      "Edie Joseph"
-     ]
-    },
     "31483:117394": {
      "f": 3,
      "partners": [
       "Kate Berry"
+     ]
+    },
+    "31569:117703": {
+     "f": 13,
+     "partners": [
+      "Edie Joseph"
      ]
     },
     "31566:117686": {
@@ -1043,16 +989,16 @@
    "l": 65,
    "comps": 8,
    "cells": {
-    "31568:117699": {
-     "f": 17,
-     "partners": [
-      "Addison Conner"
-     ]
-    },
     "38087:139560": {
      "f": 9,
      "partners": [
       "Jayzee Hughbanks"
+     ]
+    },
+    "30985:115903": {
+     "f": 5,
+     "partners": [
+      "Regina Stella Broshear"
      ]
     },
     "31483:117394": {
@@ -1061,8 +1007,14 @@
       "Emma Abernathy"
      ]
     },
-    "30985:115903": {
-     "f": 5,
+    "31568:117699": {
+     "f": 17,
+     "partners": [
+      "Addison Conner"
+     ]
+    },
+    "31567:117696": {
+     "f": 1,
      "partners": [
       "Regina Stella Broshear"
      ]
@@ -1107,12 +1059,6 @@
     },
     "34243:126054": {
      "f": 63,
-     "partners": [
-      "Elyse Smelcer"
-     ]
-    },
-    "25578:97147": {
-     "f": 15,
      "partners": [
       "Elyse Smelcer"
      ]
@@ -1163,14 +1109,20 @@
    "l": 118,
    "comps": 22,
    "cells": {
-    "31567:117695": {
-     "f": 19,
+    "34243:126056": {
+     "f": 9,
      "partners": [
       "Abigail Moffett"
      ]
     },
-    "34243:126056": {
-     "f": 9,
+    "32578:120659": {
+     "f": 3,
+     "partners": [
+      "Abigail Moffett"
+     ]
+    },
+    "31567:117695": {
+     "f": 19,
      "partners": [
       "Abigail Moffett"
      ]
@@ -1181,28 +1133,16 @@
       "Nariah Johnson"
      ]
     },
-    "34180:125823": {
-     "f": 9,
-     "partners": [
-      "Abigail Moffett"
-     ]
-    },
     "25578:97149": {
      "f": 5,
      "partners": [
       "Haisley Flanagan"
      ]
     },
-    "32578:120659": {
-     "f": 3,
+    "30985:115903": {
+     "f": 2,
      "partners": [
-      "Abigail Moffett"
-     ]
-    },
-    "36451:133267": {
-     "f": 9,
-     "partners": [
-      "Ella Buchanan"
+      "Nariah Johnson"
      ]
     },
     "31483:117394": {
@@ -1211,16 +1151,22 @@
       "Tristan Ana Del Riego"
      ]
     },
+    "34180:125823": {
+     "f": 9,
+     "partners": [
+      "Abigail Moffett"
+     ]
+    },
     "31568:117700": {
      "f": 1,
      "partners": [
       "Abigail Moffett"
      ]
     },
-    "30985:115903": {
-     "f": 2,
+    "36451:133267": {
+     "f": 9,
      "partners": [
-      "Nariah Johnson"
+      "Ella Buchanan"
      ]
     }
    }
@@ -1243,12 +1189,6 @@
       "Cayden Dorger"
      ]
     },
-    "31568:117699": {
-     "f": 17,
-     "partners": [
-      "Abigail Losey"
-     ]
-    },
     "38087:139560": {
      "f": 17,
      "partners": [
@@ -1268,6 +1208,24 @@
      ]
     },
     "25638:97292": {
+     "f": 3,
+     "partners": [
+      "Haven Gindoff"
+     ]
+    },
+    "31568:117699": {
+     "f": 17,
+     "partners": [
+      "Abigail Losey"
+     ]
+    },
+    "31566:117687": {
+     "f": 2,
+     "partners": [
+      "Regina Stella Broshear"
+     ]
+    },
+    "32034:119223": {
      "f": 3,
      "partners": [
       "Haven Gindoff"
@@ -1298,6 +1256,18 @@
      "partners": [
       "Emerson Thomas"
      ]
+    },
+    "31566:117687": {
+     "f": 5,
+     "partners": [
+      "Emerson Thomas"
+     ]
+    },
+    "32971:121739": {
+     "f": 5,
+     "partners": [
+      "Emerson Thomas"
+     ]
     }
    }
   },
@@ -1319,14 +1289,14 @@
       "Regina Stella Broshear"
      ]
     },
-    "34180:125823": {
-     "f": 5,
+    "38087:139560": {
+     "f": 3,
      "partners": [
       "Madison Gillinger"
      ]
     },
-    "38087:139560": {
-     "f": 3,
+    "32578:120659": {
+     "f": 9,
      "partners": [
       "Madison Gillinger"
      ]
@@ -1337,8 +1307,8 @@
       "Jordyn Flynn"
      ]
     },
-    "32578:120659": {
-     "f": 9,
+    "34180:125823": {
+     "f": 5,
      "partners": [
       "Madison Gillinger"
      ]
@@ -1387,22 +1357,16 @@
       "Sarah Albers"
      ]
     },
-    "34243:126054": {
-     "f": 41,
-     "partners": [
-      "Taylie Hansen"
-     ]
-    },
     "31566:117686": {
      "f": 2,
      "partners": [
       "Breeze Johnson"
      ]
     },
-    "31625:117914": {
-     "f": 9,
+    "34243:126054": {
+     "f": 41,
      "partners": [
-      "Lyla Paulsen"
+      "Taylie Hansen"
      ]
     }
    }
@@ -1425,6 +1389,12 @@
       "Milana Rivera"
      ]
     },
+    "38087:139560": {
+     "f": 9,
+     "partners": [
+      "Averie Ackel"
+     ]
+    },
     "31622:117904": {
      "f": 5,
      "partners": [
@@ -1437,34 +1407,1197 @@
       "Averie Ackel"
      ]
     },
-    "38087:139560": {
+    "31566:117686": {
      "f": 9,
      "partners": [
       "Averie Ackel"
      ]
     },
+    "32034:119223": {
+     "f": 2,
+     "partners": [
+      "Averie Ackel"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Regina Stella Broshear",
+   "region": "CA",
+   "club": "Golden Gate volleyball",
+   "height": "5' 10\"",
+   "city": "Saratoga , CA",
+   "tv": 7.843,
+   "peak": 8.087,
+   "w": 393,
+   "l": 107,
+   "comps": 11,
+   "cells": {
+    "34243:126056": {
+     "f": 5,
+     "partners": [
+      "Sadie Harris"
+     ]
+    },
+    "38087:139560": {
+     "f": 9,
+     "partners": [
+      "Katie Hamburger"
+     ]
+    },
+    "30985:115903": {
+     "f": 5,
+     "partners": [
+      "Kate Berry"
+     ]
+    },
+    "31483:117394": {
+     "f": 5,
+     "partners": [
+      "Eden Cisneros"
+     ]
+    },
+    "31566:117687": {
+     "f": 2,
+     "partners": [
+      "Stella Sheeran"
+     ]
+    },
+    "31567:117696": {
+     "f": 1,
+     "partners": [
+      "Kate Berry"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Elyse Smelcer",
+   "region": "NC",
+   "club": "Sinjin Beach Volleyball",
+   "height": "5' 11\"",
+   "city": "Cary, NC",
+   "tv": 7.778,
+   "peak": 8.126,
+   "w": 312,
+   "l": 146,
+   "comps": 7,
+   "cells": {
+    "34243:126054": {
+     "f": 63,
+     "partners": [
+      "Sarah Albers"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Ella Buchanan",
+   "region": "CA",
+   "club": "SLOVBC",
+   "height": "6'",
+   "city": "San Luis Obispo, CA",
+   "tv": 7.763,
+   "peak": 7.966,
+   "w": 151,
+   "l": 62,
+   "comps": 11,
+   "cells": {
+    "34243:126056": {
+     "f": 9,
+     "partners": [
+      "Brooke Canaday"
+     ]
+    },
+    "31567:117695": {
+     "f": 9,
+     "partners": [
+      "Haisley Flanagan"
+     ]
+    },
+    "25578:97149": {
+     "f": 5,
+     "partners": [
+      "Brooke Canaday"
+     ]
+    },
+    "31483:117394": {
+     "f": 2,
+     "partners": [
+      "Brooke Canaday"
+     ]
+    },
+    "34180:125823": {
+     "f": 9,
+     "partners": [
+      "Brooke Canaday"
+     ]
+    },
+    "36451:133267": {
+     "f": 9,
+     "partners": [
+      "Charlotte Jansen"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Stacy Balestrieri",
+   "region": "CA",
+   "club": "South Bay Sand",
+   "height": "5' 10\"",
+   "city": "San Pedro, CA",
+   "tv": 7.707,
+   "peak": 7.784,
+   "w": 292,
+   "l": 96,
+   "comps": 15,
+   "cells": {
+    "38087:139560": {
+     "f": 17,
+     "partners": [
+      "Avery Tussing"
+     ]
+    },
+    "31567:117696": {
+     "f": 3,
+     "partners": [
+      "Avery Tussing"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Sophia Grish",
+   "region": "FL",
+   "club": "PCA Beach Volleyball Club",
+   "height": "5' 6\"",
+   "city": "Boca Raton, FL",
+   "tv": 7.701,
+   "peak": 7.818,
+   "w": 246,
+   "l": 122,
+   "comps": 22,
+   "cells": {
+    "32578:120659": {
+     "f": 4,
+     "partners": [
+      "Eva Dooley"
+     ]
+    },
+    "31622:117904": {
+     "f": 13,
+     "partners": [
+      "Brooke Smith"
+     ]
+    },
+    "30985:115903": {
+     "f": 7,
+     "partners": [
+      "Makaela Munzon"
+     ]
+    },
+    "31569:117703": {
+     "f": 17,
+     "partners": [
+      "Brooke Smith"
+     ]
+    },
+    "31566:117687": {
+     "f": 3,
+     "partners": [
+      "Katie Hamburger"
+     ]
+    },
+    "31567:117696": {
+     "f": 7,
+     "partners": [
+      "Madison Rantin"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Emerson Thomas",
+   "region": "VA",
+   "club": "108 Beach Volleyball Club",
+   "height": "5' 10\"",
+   "city": "Stafford, VA",
+   "tv": 7.672,
+   "peak": 8.054,
+   "w": 279,
+   "l": 64,
+   "comps": 22,
+   "cells": {
+    "25638:97292": {
+     "f": 5,
+     "partners": [
+      "Kendal Walker"
+     ]
+    },
+    "31566:117687": {
+     "f": 5,
+     "partners": [
+      "Kendal Walker"
+     ]
+    },
+    "32971:121739": {
+     "f": 5,
+     "partners": [
+      "Kendal Walker"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Haven Gindoff",
+   "region": "SC",
+   "club": "Beach Elite CLT ",
+   "height": "5' 10\"",
+   "city": "Fort Mill, SC",
+   "tv": 7.652,
+   "peak": 7.965,
+   "w": 297,
+   "l": 136,
+   "comps": 19,
+   "cells": {
+    "31567:117695": {
+     "f": 21,
+     "partners": [
+      "Giani Boerner"
+     ]
+    },
+    "31622:117904": {
+     "f": 9,
+     "partners": [
+      "Ashley Ruschill"
+     ]
+    },
+    "25638:97292": {
+     "f": 3,
+     "partners": [
+      "Stella Sheeran"
+     ]
+    },
+    "31569:117703": {
+     "f": 13,
+     "partners": [
+      "Giani Boerner"
+     ]
+    },
+    "31566:117686": {
+     "f": 5,
+     "partners": [
+      "Giani Boerner"
+     ]
+    },
+    "31568:117700": {
+     "f": 3,
+     "partners": [
+      "Haisley Flanagan"
+     ]
+    },
+    "32034:119223": {
+     "f": 3,
+     "partners": [
+      "Stella Sheeran"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Isabelle Haas",
+   "region": "OH",
+   "club": "Ohio Valley/Next Level Beach",
+   "height": "5' 4\"",
+   "city": "Cincinnati, OH",
+   "tv": 7.625,
+   "peak": 7.826,
+   "w": 157,
+   "l": 88,
+   "comps": 18,
+   "cells": {
+    "34243:126056": {
+     "f": 25,
+     "partners": [
+      "Emily Sas"
+     ]
+    },
+    "31622:117904": {
+     "f": 9,
+     "partners": [
+      "Alana May"
+     ]
+    },
+    "32578:120658": {
+     "f": 17,
+     "partners": [
+      "Isabel Davidian"
+     ]
+    },
+    "31569:117703": {
+     "f": 13,
+     "partners": [
+      "Ellie Keene"
+     ]
+    },
+    "31566:117686": {
+     "f": 17,
+     "partners": [
+      "Harper Mamele"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Katie Hamburger",
+   "region": "CA",
+   "club": "Golden Gate volleyball",
+   "height": "5' 8\"",
+   "city": "Sunnyvale, CA",
+   "tv": 7.606,
+   "peak": 7.8,
+   "w": 386,
+   "l": 155,
+   "comps": 16,
+   "cells": {
+    "34243:126056": {
+     "f": 34,
+     "partners": [
+      "Avery Bennett"
+     ]
+    },
+    "38087:139560": {
+     "f": 9,
+     "partners": [
+      "Regina Stella Broshear"
+     ]
+    },
+    "25578:97149": {
+     "f": 5,
+     "partners": [
+      "Cienna Enriquez"
+     ]
+    },
+    "30985:115903": {
+     "f": 7,
+     "partners": [
+      "Lily Larrabee"
+     ]
+    },
+    "31566:117687": {
+     "f": 3,
+     "partners": [
+      "Sophia Grish"
+     ]
+    },
+    "31567:117696": {
+     "f": 9,
+     "partners": [
+      "Lily Larrabee"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Sterling Carlile",
+   "region": "FL",
+   "club": "Seminole High Performance",
+   "height": "5' 8\"",
+   "city": "Tallahassee, FL",
+   "tv": 7.6,
+   "peak": 7.794,
+   "w": 199,
+   "l": 85,
+   "comps": 27,
+   "cells": {
+    "32578:120659": {
+     "f": 17,
+     "partners": [
+      "Elsa Schroth"
+     ]
+    },
+    "31566:117687": {
+     "f": 3,
+     "partners": [
+      "Madelyn Maddie Schrand"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Teagan Braun-Duin",
+   "region": "VA",
+   "club": "BRVA Beach",
+   "height": "5' 7\"",
+   "city": "Winchester , VA",
+   "tv": 7.59,
+   "peak": 7.682,
+   "w": 202,
+   "l": 64,
+   "comps": 18,
+   "cells": {
+    "25638:97292": {
+     "f": 19,
+     "partners": [
+      "Avery Fauver"
+     ]
+    },
+    "32971:121739": {
+     "f": 5,
+     "partners": [
+      "Avery Fauver"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Riley Ko",
+   "region": "MD",
+   "club": "Metro",
+   "height": "5' 9\"",
+   "city": "Fulton, MD",
+   "tv": 7.587,
+   "peak": 7.79,
+   "w": 78,
+   "l": 18,
+   "comps": 5,
+   "cells": {}
+  },
+  {
+   "name": "Victoria Azarov",
+   "region": "TX",
+   "club": "AJV Sand",
+   "height": "5' 8\"",
+   "city": "Midland , TX",
+   "tv": 7.584,
+   "peak": 7.686,
+   "w": 198,
+   "l": 45,
+   "comps": 6,
+   "cells": {
+    "34243:126056": {
+     "f": 17,
+     "partners": [
+      "Chloe Jefferson"
+     ]
+    },
+    "38087:139560": {
+     "f": 17,
+     "partners": [
+      "Isabella Cordaway-Dreier"
+     ]
+    },
+    "32578:120659": {
+     "f": 9,
+     "partners": [
+      "Isabella Cordaway-Dreier"
+     ]
+    },
+    "31483:117394": {
+     "f": 10,
+     "partners": [
+      "Chloe Jefferson"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Karsyn Smith",
+   "region": "FL",
+   "club": "On Sand Sports",
+   "height": null,
+   "city": "Jacksonville, FL",
+   "tv": 7.58,
+   "peak": 7.652,
+   "w": 466,
+   "l": 219,
+   "comps": 33,
+   "cells": {
+    "32578:120659": {
+     "f": 9,
+     "partners": [
+      "Madison Rantin"
+     ]
+    },
+    "25638:97292": {
+     "f": 21,
+     "partners": [
+      "Callie Hopkins"
+     ]
+    },
+    "31566:117686": {
+     "f": 17,
+     "partners": [
+      "Mia Kendrick"
+     ]
+    },
+    "32034:119223": {
+     "f": 5,
+     "partners": [
+      "Karsyn Rogers"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Reese Hislop",
+   "region": "NC",
+   "club": "Sinjin Beach Volleyball",
+   "height": "6'",
+   "city": "Swansboro, NC",
+   "tv": 7.543,
+   "peak": 8.269,
+   "w": 259,
+   "l": 83,
+   "comps": 35,
+   "cells": {
+    "34243:126056": {
+     "f": 25,
+     "partners": [
+      "Blake Arzonico"
+     ]
+    },
+    "32578:120659": {
+     "f": 1,
+     "partners": [
+      "Kendal Walker"
+     ]
+    },
+    "31622:117904": {
+     "f": 11,
+     "partners": [
+      "Lauren Eklund"
+     ]
+    },
+    "30985:115903": {
+     "f": 3,
+     "partners": [
+      "Lauren Eklund"
+     ]
+    },
+    "25638:97292": {
+     "f": 5,
+     "partners": [
+      "Paige Moyer"
+     ]
+    },
+    "31568:117699": {
+     "f": 24,
+     "partners": [
+      "Ellie Keene"
+     ]
+    },
+    "31566:117687": {
+     "f": 9,
+     "partners": [
+      "Katie Behr"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Lily Larrabee",
+   "region": "CA",
+   "club": "Golden Gate volleyball",
+   "height": "5' 10\"",
+   "city": "Winters, CA",
+   "tv": 7.49,
+   "peak": 7.654,
+   "w": 208,
+   "l": 97,
+   "comps": 18,
+   "cells": {
+    "34243:126056": {
+     "f": 41,
+     "partners": [
+      "Taylor Chastain"
+     ]
+    },
+    "38087:139560": {
+     "f": 17,
+     "partners": [
+      "Kobi Sanchez"
+     ]
+    },
+    "32578:120659": {
+     "f": 5,
+     "partners": [
+      "Skyler Smith"
+     ]
+    },
+    "30985:115903": {
+     "f": 7,
+     "partners": [
+      "Katie Hamburger"
+     ]
+    },
+    "31483:117394": {
+     "f": 11,
+     "partners": [
+      "Colette Sutton"
+     ]
+    },
+    "31568:117700": {
+     "f": 9,
+     "partners": [
+      "Sienna Utge"
+     ]
+    },
+    "31567:117696": {
+     "f": 9,
+     "partners": [
+      "Katie Hamburger"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Avery Fauver",
+   "region": "VA",
+   "club": "BRVA Beach",
+   "height": "5' 9\"",
+   "city": "Winchester, VA",
+   "tv": 7.481,
+   "peak": 7.816,
+   "w": 302,
+   "l": 96,
+   "comps": 22,
+   "cells": {
+    "32578:120659": {
+     "f": 17,
+     "partners": [
+      "Clara Hays"
+     ]
+    },
+    "25638:97292": {
+     "f": 19,
+     "partners": [
+      "Teagan Braun-Duin"
+     ]
+    },
+    "32971:121739": {
+     "f": 5,
+     "partners": [
+      "Teagan Braun-Duin"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Avea Casperson",
+   "region": "FL",
+   "club": "Seminole High Performance",
+   "height": "5' 5\"",
+   "city": "Tallahassee , FL",
+   "tv": 7.471,
+   "peak": 7.672,
+   "w": 131,
+   "l": 42,
+   "comps": 22,
+   "cells": {
+    "32578:120659": {
+     "f": 17,
+     "partners": [
+      "Mckenna Bjelic"
+     ]
+    },
+    "25638:97292": {
+     "f": 25,
+     "partners": [
+      "Sydney Price"
+     ]
+    },
+    "32034:119223": {
+     "f": 9,
+     "partners": [
+      "Mckenna Bjelic"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Colette Sutton",
+   "region": "CA",
+   "club": "Shorebreak Volleyball Club",
+   "height": "5' 9\"",
+   "city": "Fresno, CA",
+   "tv": 7.455,
+   "peak": 7.548,
+   "w": 237,
+   "l": 130,
+   "comps": 16,
+   "cells": {
+    "34243:126056": {
+     "f": 5,
+     "partners": [
+      "Eva Dooley"
+     ]
+    },
+    "38087:139560": {
+     "f": 5,
+     "partners": [
+      "Eva Dooley"
+     ]
+    },
+    "30985:115903": {
+     "f": 9,
+     "partners": [
+      "Taylor Chastain"
+     ]
+    },
+    "31483:117394": {
+     "f": 11,
+     "partners": [
+      "Lily Larrabee"
+     ]
+    },
+    "31567:117696": {
+     "f": 3,
+     "partners": [
+      "Eva Dooley"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Chloe Jefferson",
+   "region": "TX",
+   "club": "ATX Juniors ",
+   "height": "5' 7\"",
+   "city": "Liberty Hill, TX",
+   "tv": 7.451,
+   "peak": 7.511,
+   "w": 315,
+   "l": 172,
+   "comps": 31,
+   "cells": {
+    "34243:126056": {
+     "f": 17,
+     "partners": [
+      "Victoria Azarov"
+     ]
+    },
+    "38087:139560": {
+     "f": 9,
+     "partners": [
+      "Poppy Timmons"
+     ]
+    },
+    "32578:120659": {
+     "f": 5,
+     "partners": [
+      "Poppy Timmons"
+     ]
+    },
+    "25578:97149": {
+     "f": 17,
+     "partners": [
+      "Avery Gattuso"
+     ]
+    },
+    "31483:117394": {
+     "f": 10,
+     "partners": [
+      "Victoria Azarov"
+     ]
+    },
+    "31568:117700": {
+     "f": 5,
+     "partners": [
+      "Reece Roegelein"
+     ]
+    },
+    "32034:119223": {
+     "f": 9,
+     "partners": [
+      "Brighton Atchley"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Kara Boas",
+   "region": "CA",
+   "club": "Spiker Beach Volleyball Club",
+   "height": "5' 9\"",
+   "city": "Rancho Mission Viejo, CA",
+   "tv": 7.445,
+   "peak": 7.565,
+   "w": 267,
+   "l": 148,
+   "comps": 13,
+   "cells": {
+    "34243:126056": {
+     "f": 9,
+     "partners": [
+      "Ava Champagne"
+     ]
+    },
+    "38087:139560": {
+     "f": 9,
+     "partners": [
+      "Ava Champagne"
+     ]
+    },
+    "31567:117695": {
+     "f": 21,
+     "partners": [
+      "Eden Cisneros"
+     ]
+    },
+    "25578:97149": {
+     "f": 3,
+     "partners": [
+      "Ava Champagne"
+     ]
+    },
+    "30985:115903": {
+     "f": 5,
+     "partners": [
+      "Ava Champagne"
+     ]
+    },
+    "31568:117700": {
+     "f": 3,
+     "partners": [
+      "Brooklynn Gwinn"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Rylee Hartwell",
+   "region": "CA",
+   "club": "Spiker Beach Volleyball Club",
+   "height": "5' 7\"",
+   "city": "West Garden Grove, CA",
+   "tv": 7.434,
+   "peak": 7.434,
+   "w": 305,
+   "l": 155,
+   "comps": 11,
+   "cells": {
+    "38087:139560": {
+     "f": 9,
+     "partners": [
+      "Jordyn Flynn"
+     ]
+    },
+    "31567:117695": {
+     "f": 25,
+     "partners": [
+      "Brooklynn Gwinn"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Lauren Eklund",
+   "region": "NC",
+   "club": "Sinjin Beach Volleyball",
+   "height": "5' 11\"",
+   "city": "Cary, NC",
+   "tv": 7.426,
+   "peak": 7.54,
+   "w": 163,
+   "l": 101,
+   "comps": 14,
+   "cells": {
+    "31567:117695": {
+     "f": 23,
+     "partners": [
+      "Benedetta Andexler"
+     ]
+    },
+    "31622:117904": {
+     "f": 11,
+     "partners": [
+      "Reese Hislop"
+     ]
+    },
+    "30985:115903": {
+     "f": 3,
+     "partners": [
+      "Reese Hislop"
+     ]
+    },
+    "31568:117699": {
+     "f": 17,
+     "partners": [
+      "Gwen Orth"
+     ]
+    },
+    "32971:121739": {
+     "f": 4,
+     "partners": [
+      "Skyler Smith"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Peyton Harrington",
+   "region": "AL",
+   "club": "Birmingham Beach",
+   "height": "5' 7\"",
+   "city": "Birmingham, AL",
+   "tv": 7.419,
+   "peak": 7.553,
+   "w": 191,
+   "l": 50,
+   "comps": 19,
+   "cells": {
+    "32578:120659": {
+     "f": 17,
+     "partners": [
+      "Camdyn Kyes"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Ava Champagne",
+   "region": "CA",
+   "club": "Spiker Beach Volleyball Club",
+   "height": "5' 11\"",
+   "city": "Ladera Ranch, CA",
+   "tv": 7.394,
+   "peak": 7.817,
+   "w": 246,
+   "l": 137,
+   "comps": 12,
+   "cells": {
+    "34243:126056": {
+     "f": 9,
+     "partners": [
+      "Kara Boas"
+     ]
+    },
+    "38087:139560": {
+     "f": 9,
+     "partners": [
+      "Kara Boas"
+     ]
+    },
+    "25578:97149": {
+     "f": 3,
+     "partners": [
+      "Kara Boas"
+     ]
+    },
+    "30985:115903": {
+     "f": 5,
+     "partners": [
+      "Kara Boas"
+     ]
+    },
+    "31568:117700": {
+     "f": 9,
+     "partners": [
+      "Sienna Knight"
+     ]
+    },
+    "31567:117696": {
+     "f": 7,
+     "partners": [
+      "Jordyn Flynn"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Madelyn Maddie Schrand",
+   "region": "OH",
+   "club": "Ohio Valley/Next Level Beach",
+   "height": "5' 10\"",
+   "city": "Cincinnati, OH",
+   "tv": 7.369,
+   "peak": 7.657,
+   "w": 197,
+   "l": 80,
+   "comps": 18,
+   "cells": {
+    "32578:120659": {
+     "f": 9,
+     "partners": [
+      "Addi Wisdom"
+     ]
+    },
+    "31566:117687": {
+     "f": 3,
+     "partners": [
+      "Sterling Carlile"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Brighton Atchley",
+   "region": "TX",
+   "club": "210 Beach",
+   "height": "5' 11\"",
+   "city": "Blanco, TX",
+   "tv": 7.36,
+   "peak": 7.531,
+   "w": 174,
+   "l": 126,
+   "comps": 16,
+   "cells": {
+    "34243:126056": {
+     "f": 21,
+     "partners": [
+      "Averie Ackel"
+     ]
+    },
+    "38087:139560": {
+     "f": 33,
+     "partners": [
+      "Hallie Elrod"
+     ]
+    },
+    "32578:120659": {
+     "f": 17,
+     "partners": [
+      "Hallie Elrod"
+     ]
+    },
+    "30985:115903": {
+     "f": 5,
+     "partners": [
+      "Averie Ackel"
+     ]
+    },
+    "31483:117394": {
+     "f": 5,
+     "partners": [
+      "Stella Sheeran"
+     ]
+    },
+    "31568:117700": {
+     "f": 29,
+     "partners": [
+      "Kendall Mathison"
+     ]
+    },
+    "32034:119223": {
+     "f": 9,
+     "partners": [
+      "Chloe Jefferson"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Averie Ackel",
+   "region": "TX",
+   "club": "210 Beach",
+   "height": "5' 6\"",
+   "city": "San Antonio , TX",
+   "tv": 7.359,
+   "peak": 7.849,
+   "w": 338,
+   "l": 143,
+   "comps": 25,
+   "cells": {
+    "34243:126056": {
+     "f": 21,
+     "partners": [
+      "Brighton Atchley"
+     ]
+    },
+    "38087:139560": {
+     "f": 9,
+     "partners": [
+      "Hannah Perez"
+     ]
+    },
+    "30985:115903": {
+     "f": 5,
+     "partners": [
+      "Brighton Atchley"
+     ]
+    },
+    "32578:120658": {
+     "f": 17,
+     "partners": [
+      "Hannah Perez"
+     ]
+    },
     "31566:117686": {
      "f": 9,
      "partners": [
-      "Averie Ackel"
+      "Hannah Perez"
+     ]
+    },
+    "32034:119223": {
+     "f": 2,
+     "partners": [
+      "Hannah Perez"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Aubree Marsden",
+   "region": "CA",
+   "club": "Spiker Beach Volleyball Club",
+   "height": "5' 11\"",
+   "city": "Irvine, CA",
+   "tv": 7.356,
+   "peak": 7.412,
+   "w": 215,
+   "l": 108,
+   "comps": 12,
+   "cells": {
+    "38087:139560": {
+     "f": 33,
+     "partners": [
+      "Taylor Daley"
+     ]
+    },
+    "25578:97149": {
+     "f": 9,
+     "partners": [
+      "Madison Gillinger"
+     ]
+    },
+    "31567:117696": {
+     "f": 5,
+     "partners": [
+      "Taylor Chastain"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Alaina Scafidi",
+   "region": "FL",
+   "club": "Optimum Beach",
+   "height": "5' 7\"",
+   "city": "Tampa, FL",
+   "tv": 7.346,
+   "peak": 7.497,
+   "w": 82,
+   "l": 23,
+   "comps": 13,
+   "cells": {
+    "25638:97292": {
+     "f": 9,
+     "partners": [
+      "Molly Monday"
+     ]
+    },
+    "31566:117687": {
+     "f": 17,
+     "partners": [
+      "Emily Sas"
      ]
     }
    }
   }
  ],
  "comps": [
-  {
-   "key": "31567:117695",
-   "tid": 31567,
-   "tdId": 117695,
-   "event": "2026 Futures Tour Spring Championship",
-   "short": "Futures Spring Champ",
-   "division": "Class of '26 & Younger",
-   "field": 59,
-   "date": "2026-03-29",
-   "sanction": "p1440",
-   "n": 13
-  },
   {
    "key": "34243:126056",
    "tid": 34243,
@@ -1475,55 +2608,7 @@
    "field": 72,
    "date": "2026-07-26",
    "sanction": "AVPA",
-   "n": 13
-  },
-  {
-   "key": "31622:117904",
-   "tid": 31622,
-   "tdId": 117904,
-   "event": "2026 Futures Tour: Florida",
-   "short": "Futures Tour: Florida",
-   "division": "Class of '26 & Younger",
-   "field": 56,
-   "date": "2026-03-15",
-   "sanction": "p1440",
-   "n": 12
-  },
-  {
-   "key": "32578:120658",
-   "tid": 32578,
-   "tdId": 120658,
-   "event": "2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier",
-   "short": "USAV BeachFest Qualifier",
-   "division": "Girls 18U Open",
-   "field": 103,
-   "date": "2026-05-03",
-   "sanction": "USAV",
-   "n": 12
-  },
-  {
-   "key": "31568:117699",
-   "tid": 31568,
-   "tdId": 117699,
-   "event": "2026 Futures Tour: Arizona",
-   "short": "Futures Tour: Arizona",
-   "division": "Class of '26 & Younger",
-   "field": 48,
-   "date": "2026-01-18",
-   "sanction": "p1440",
-   "n": 11
-  },
-  {
-   "key": "34180:125823",
-   "tid": 34180,
-   "tdId": 125823,
-   "event": "2026 USA Volleyball U18 Beach National Team Trials",
-   "short": "USAV U18 Trials",
-   "division": "U18 Girls",
-   "field": 12,
-   "date": "2026-01-31",
-   "sanction": "USAV",
-   "n": 11
+   "n": 26
   },
   {
    "key": "38087:139560",
@@ -1535,31 +2620,7 @@
    "field": 159,
    "date": "2026-07-11",
    "sanction": "BVCA",
-   "n": 11
-  },
-  {
-   "key": "25578:97149",
-   "tid": 25578,
-   "tdId": 97149,
-   "event": "AVP Juniors West Coast Championships 2025",
-   "short": "AVP Jrs West Coast",
-   "division": "Girls 16U",
-   "field": 23,
-   "date": "2025-11-09",
-   "sanction": "AVPA",
-   "n": 10
-  },
-  {
-   "key": "31569:117703",
-   "tid": 31569,
-   "tdId": 117703,
-   "event": "2026 Futures Tour: Alabama",
-   "short": "Futures Tour: Alabama",
-   "division": "Class of '26 & Younger",
-   "field": 75,
-   "date": "2026-02-22",
-   "sanction": "p1440",
-   "n": 9
+   "n": 24
   },
   {
    "key": "32578:120659",
@@ -1571,115 +2632,43 @@
    "field": 104,
    "date": "2026-05-03",
    "sanction": "USAV",
-   "n": 8
+   "n": 20
   },
   {
-   "key": "36451:133267",
-   "tid": 36451,
-   "tdId": 133267,
-   "event": "2026 USA Volleyball Youth Olympic Games Trials",
-   "short": "USAV YOG Trials",
-   "division": "U18 Girls",
-   "field": 9,
-   "date": "2026-06-18",
-   "sanction": "USAV",
-   "n": 8
-  },
-  {
-   "key": "31483:117394",
-   "tid": 31483,
-   "tdId": 117394,
-   "event": "33rd AAU Hermosa Beach National Pairs Championships",
-   "short": "AAU Hermosa Nat'l Pairs",
-   "division": "Girls 16 - 2028",
-   "field": 59,
-   "date": "2026-07-19",
-   "sanction": "AAU",
-   "n": 8
-  },
-  {
-   "key": "34243:126054",
-   "tid": 34243,
-   "tdId": 126054,
-   "event": "AVP Juniors National Championships 2026",
-   "short": "AVP Jrs Nationals",
-   "division": "Girls 18U",
-   "field": 64,
-   "date": "2026-07-26",
-   "sanction": "AVPA",
-   "n": 8
-  },
-  {
-   "key": "31566:117686",
-   "tid": 31566,
-   "tdId": 117686,
-   "event": "2025 Futures Tour Winter Championship",
-   "short": "Futures Winter Champ",
+   "key": "31567:117695",
+   "tid": 31567,
+   "tdId": 117695,
+   "event": "2026 Futures Tour Spring Championship",
+   "short": "Futures Spring Champ",
    "division": "Class of '26 & Younger",
-   "field": 36,
-   "date": "2025-12-29",
+   "field": 59,
+   "date": "2026-03-29",
    "sanction": "p1440",
-   "n": 7
+   "n": 18
   },
   {
-   "key": "25578:97147",
+   "key": "31622:117904",
+   "tid": 31622,
+   "tdId": 117904,
+   "event": "2026 Futures Tour: Florida",
+   "short": "Futures Tour: Florida",
+   "division": "Class of '26 & Younger",
+   "field": 56,
+   "date": "2026-03-15",
+   "sanction": "p1440",
+   "n": 17
+  },
+  {
+   "key": "25578:97149",
    "tid": 25578,
-   "tdId": 97147,
+   "tdId": 97149,
    "event": "AVP Juniors West Coast Championships 2025",
    "short": "AVP Jrs West Coast",
-   "division": "Girls 18U",
+   "division": "Girls 16U",
    "field": 23,
    "date": "2025-11-09",
    "sanction": "AVPA",
-   "n": 5
-  },
-  {
-   "key": "25638:97292",
-   "tid": 25638,
-   "tdId": 97292,
-   "event": "AVP Juniors East Coast Championships 2025",
-   "short": "AVP Jrs East Coast",
-   "division": "Girls 16U",
-   "field": 54,
-   "date": "2025-11-30",
-   "sanction": "AVPA",
-   "n": 5
-  },
-  {
-   "key": "25638:97290",
-   "tid": 25638,
-   "tdId": 97290,
-   "event": "AVP Juniors East Coast Championships 2025",
-   "short": "AVP Jrs East Coast",
-   "division": "Girls 18U",
-   "field": 54,
-   "date": "2025-11-30",
-   "sanction": "AVPA",
-   "n": 5
-  },
-  {
-   "key": "31568:117700",
-   "tid": 31568,
-   "tdId": 117700,
-   "event": "2026 Futures Tour: Arizona",
-   "short": "Futures Tour: Arizona",
-   "division": "Class of '28 & Younger",
-   "field": 36,
-   "date": "2026-01-18",
-   "sanction": "p1440",
-   "n": 5
-  },
-  {
-   "key": "31625:117914",
-   "tid": 31625,
-   "tdId": 117914,
-   "event": "2026 Futures Tour: Texas",
-   "short": "Futures Tour: Texas",
-   "division": "Class of '26 & Younger",
-   "field": 32,
-   "date": "2026-04-12",
-   "sanction": "p1440",
-   "n": 5
+   "n": 16
   },
   {
    "key": "30985:115903",
@@ -1691,7 +2680,175 @@
    "field": 31,
    "date": "2026-06-19",
    "sanction": "p1440",
-   "n": 5
+   "n": 16
+  },
+  {
+   "key": "31483:117394",
+   "tid": 31483,
+   "tdId": 117394,
+   "event": "33rd AAU Hermosa Beach National Pairs Championships",
+   "short": "AAU Hermosa Nat'l Pairs",
+   "division": "Girls 16 - 2028",
+   "field": 59,
+   "date": "2026-07-19",
+   "sanction": "AAU",
+   "n": 15
+  },
+  {
+   "key": "32578:120658",
+   "tid": 32578,
+   "tdId": 120658,
+   "event": "2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier",
+   "short": "USAV BeachFest Qualifier",
+   "division": "Girls 18U Open",
+   "field": 103,
+   "date": "2026-05-03",
+   "sanction": "USAV",
+   "n": 14
+  },
+  {
+   "key": "25638:97292",
+   "tid": 25638,
+   "tdId": 97292,
+   "event": "AVP Juniors East Coast Championships 2025",
+   "short": "AVP Jrs East Coast",
+   "division": "Girls 16U",
+   "field": 54,
+   "date": "2025-11-30",
+   "sanction": "AVPA",
+   "n": 13
+  },
+  {
+   "key": "31568:117699",
+   "tid": 31568,
+   "tdId": 117699,
+   "event": "2026 Futures Tour: Arizona",
+   "short": "Futures Tour: Arizona",
+   "division": "Class of '26 & Younger",
+   "field": 48,
+   "date": "2026-01-18",
+   "sanction": "p1440",
+   "n": 13
+  },
+  {
+   "key": "34180:125823",
+   "tid": 34180,
+   "tdId": 125823,
+   "event": "2026 USA Volleyball U18 Beach National Team Trials",
+   "short": "USAV U18 Trials",
+   "division": "U18 Girls",
+   "field": 12,
+   "date": "2026-01-31",
+   "sanction": "USAV",
+   "n": 12
+  },
+  {
+   "key": "31569:117703",
+   "tid": 31569,
+   "tdId": 117703,
+   "event": "2026 Futures Tour: Alabama",
+   "short": "Futures Tour: Alabama",
+   "division": "Class of '26 & Younger",
+   "field": 75,
+   "date": "2026-02-22",
+   "sanction": "p1440",
+   "n": 12
+  },
+  {
+   "key": "31566:117686",
+   "tid": 31566,
+   "tdId": 117686,
+   "event": "2025 Futures Tour Winter Championship",
+   "short": "Futures Winter Champ",
+   "division": "Class of '26 & Younger",
+   "field": 36,
+   "date": "2025-12-29",
+   "sanction": "p1440",
+   "n": 11
+  },
+  {
+   "key": "31566:117687",
+   "tid": 31566,
+   "tdId": 117687,
+   "event": "2025 Futures Tour Winter Championship",
+   "short": "Futures Winter Champ",
+   "division": "Class of '28 & Younger",
+   "field": 36,
+   "date": "2025-12-29",
+   "sanction": "p1440",
+   "n": 11
+  },
+  {
+   "key": "31568:117700",
+   "tid": 31568,
+   "tdId": 117700,
+   "event": "2026 Futures Tour: Arizona",
+   "short": "Futures Tour: Arizona",
+   "division": "Class of '28 & Younger",
+   "field": 36,
+   "date": "2026-01-18",
+   "sanction": "p1440",
+   "n": 11
+  },
+  {
+   "key": "31567:117696",
+   "tid": 31567,
+   "tdId": 117696,
+   "event": "2026 Futures Tour Spring Championship",
+   "short": "Futures Spring Champ",
+   "division": "Class of '28 & Younger",
+   "field": 38,
+   "date": "2026-03-29",
+   "sanction": "p1440",
+   "n": 9
+  },
+  {
+   "key": "36451:133267",
+   "tid": 36451,
+   "tdId": 133267,
+   "event": "2026 USA Volleyball Youth Olympic Games Trials",
+   "short": "USAV YOG Trials",
+   "division": "U18 Girls",
+   "field": 9,
+   "date": "2026-06-18",
+   "sanction": "USAV",
+   "n": 9
+  },
+  {
+   "key": "34243:126054",
+   "tid": 34243,
+   "tdId": 126054,
+   "event": "AVP Juniors National Championships 2026",
+   "short": "AVP Jrs Nationals",
+   "division": "Girls 18U",
+   "field": 64,
+   "date": "2026-07-26",
+   "sanction": "AVPA",
+   "n": 9
+  },
+  {
+   "key": "32034:119223",
+   "tid": 32034,
+   "tdId": 119223,
+   "event": "GNBV National Recruiting Showcase Texas",
+   "short": "GNBV Nat'l Recruiting",
+   "division": "Girls 18U",
+   "field": 28,
+   "date": "2026-05-17",
+   "sanction": "BVNE",
+   "n": 8
+  },
+  {
+   "key": "32971:121739",
+   "tid": 32971,
+   "tdId": 121739,
+   "event": "2026 USA Volleyball Beach National Championship",
+   "short": "USAV Beach Nat'l Champ",
+   "division": "Girls 16U Open",
+   "field": 44,
+   "date": "2026-07-18",
+   "sanction": "USAV",
+   "n": 8
   }
  ],
  "pairs": [
@@ -1717,6 +2874,27 @@
    ]
   },
   {
+   "key": "40750:149117",
+   "tid": 40750,
+   "tdId": 149117,
+   "event": "8/8/26, Main Beach, Santa Cruz",
+   "short": "8/8/26, Main Beach, Santa",
+   "division": "Womens Open",
+   "field": 20,
+   "date": "2026-08-08",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Haisley Flanagan",
+     "f": 1
+    },
+    {
+     "name": "Ella Buchanan",
+     "f": 1
+    }
+   ]
+  },
+  {
    "key": "35937:131445",
    "tid": 35937,
    "tdId": 131445,
@@ -1738,44 +2916,65 @@
    ]
   },
   {
-   "key": "34243:126055",
-   "tid": 34243,
-   "tdId": 126055,
-   "event": "AVP Juniors National Championships 2026",
-   "short": "AVP Jrs Nationals",
-   "division": "Girls 17U",
-   "field": 63,
-   "date": "2026-07-26",
+   "key": "40505:148315",
+   "tid": 40505,
+   "tdId": 148315,
+   "event": "7/28/26, Belmont Shore, Long Beach",
+   "short": "7/28/26, Belmont Shore",
+   "division": "Girls 18U",
+   "field": 5,
+   "date": "2026-07-28",
    "sanction": "AVPA",
    "players": [
     {
-     "name": "Milaniakai Padilla",
+     "name": "Abigail Moffett",
      "f": 1
     },
     {
-     "name": "Sadie Stafford",
-     "f": 2
+     "name": "Rylee Hartwell",
+     "f": 1
     }
    ]
   },
   {
-   "key": "31483:117393",
-   "tid": 31483,
-   "tdId": 117393,
-   "event": "33rd AAU Hermosa Beach National Pairs Championships",
-   "short": "AAU Hermosa Nat'l Pairs",
-   "division": "Girls 18 - 2026",
-   "field": 37,
-   "date": "2026-07-19",
-   "sanction": "AAU",
+   "key": "34546:126979",
+   "tid": 34546,
+   "tdId": 126979,
+   "event": "First Coast Volleyball Jax Beach Series presented by Mayo Clinic Orthopedics and Sports Medicine July 25-26 '26",
+   "short": "First Coast Volleyball",
+   "division": "Girls 18U",
+   "field": 19,
+   "date": "2026-07-26",
+   "sanction": "AVPA",
    "players": [
     {
-     "name": "Milaniakai Padilla",
+     "name": "Sterling Carlile",
+     "f": 1
+    },
+    {
+     "name": "Karsyn Smith",
+     "f": 3
+    }
+   ]
+  },
+  {
+   "key": "31582:117787",
+   "tid": 31582,
+   "tdId": 117787,
+   "event": "BVNE 2026 West Coast National Championship",
+   "short": "BVNE 2026 West Coast",
+   "division": "Girls 16U",
+   "field": 33,
+   "date": "2026-07-26",
+   "sanction": "BVNE",
+   "players": [
+    {
+     "name": "Reese Hislop",
      "f": 2
     },
     {
-     "name": "Sage Illian",
-     "f": 5
+     "name": "Alaina Scafidi",
+     "f": 2
     }
    ]
   },
@@ -1801,27 +3000,6 @@
    ]
   },
   {
-   "key": "31483:126666",
-   "tid": 31483,
-   "tdId": 126666,
-   "event": "33rd AAU Hermosa Beach National Pairs Championships",
-   "short": "AAU Hermosa Nat'l Pairs",
-   "division": "Girls 17 - 2027",
-   "field": 54,
-   "date": "2026-07-19",
-   "sanction": "AAU",
-   "players": [
-    {
-     "name": "Sarah Albers",
-     "f": 3
-    },
-    {
-     "name": "Hannah Perez",
-     "f": 11
-    }
-   ]
-  },
-  {
    "key": "38087:139559",
    "tid": 38087,
    "tdId": 139559,
@@ -1843,23 +3021,23 @@
    ]
   },
   {
-   "key": "35588:130319",
+   "key": "35588:130318",
    "tid": 35588,
-   "tdId": 130319,
+   "tdId": 130318,
    "event": "BVCA Pairs West Coast Championships 2026",
    "short": "BVCA Pairs West Coast",
-   "division": "17U (2027 Grad Year)",
-   "field": 24,
+   "division": "18U (2026 Grad Year)",
+   "field": 20,
    "date": "2026-06-30",
    "sanction": "BVCA",
    "players": [
     {
-     "name": "Madison Gillinger",
-     "f": 1
+     "name": "Kara Boas",
+     "f": 11
     },
     {
-     "name": "Sadie Harris",
-     "f": 1
+     "name": "Ava Champagne",
+     "f": 11
     }
    ]
   },
@@ -1885,23 +3063,44 @@
    ]
   },
   {
-   "key": "39800:145771",
-   "tid": 39800,
-   "tdId": 145771,
-   "event": "6/27/26, Main Beach, Santa Cruz",
-   "short": "6/27/26, Main Beach",
-   "division": "Womens AA",
+   "key": "31581:117784",
+   "tid": 31581,
+   "tdId": 117784,
+   "event": "BVNE 2026 East Coast National Championships",
+   "short": "BVNE 2026 East Coast",
+   "division": "Girls 16U",
    "field": 25,
+   "date": "2026-06-28",
+   "sanction": "BVNE",
+   "players": [
+    {
+     "name": "Alaina Scafidi",
+     "f": 1
+    },
+    {
+     "name": "Karsyn Smith",
+     "f": 15
+    }
+   ]
+  },
+  {
+   "key": "37081:135628",
+   "tid": 37081,
+   "tdId": 135628,
+   "event": "Sinjin June U18/U14 Event hosted with Blue Sky",
+   "short": "Sinjin June U18/U14 Event",
+   "division": "Girls 18U",
+   "field": 10,
    "date": "2026-06-27",
    "sanction": "AVPA",
    "players": [
     {
-     "name": "Haisley Flanagan",
-     "f": 2
+     "name": "Elyse Smelcer",
+     "f": 3
     },
     {
-     "name": "Eden Cisneros",
-     "f": 2
+     "name": "Lauren Eklund",
+     "f": 3
     }
    ]
   },
@@ -1923,6 +3122,69 @@
     {
      "name": "Madison Gillinger",
      "f": 1
+    }
+   ]
+  },
+  {
+   "key": "34377:126498",
+   "tid": 34377,
+   "tdId": 126498,
+   "event": "AVP Next Spring Texas Triple Crown Series Finale $12,000 Purse",
+   "short": "AVP Next Spring Texas",
+   "division": "Womens Open",
+   "field": 32,
+   "date": "2026-06-21",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Dreya Scherfenberg",
+     "f": 13
+    },
+    {
+     "name": "Chloe Jefferson",
+     "f": 25
+    }
+   ]
+  },
+  {
+   "key": "33286:122967",
+   "tid": 33286,
+   "tdId": 122967,
+   "event": "Alabama Beach Week AVP (AVPA 2-Star Qualifier) '26 (RallyVB HSV)",
+   "short": "Alabama Beach Week AVP",
+   "division": "Girls 18U",
+   "field": 20,
+   "date": "2026-06-21",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Peyton Harrington",
+     "f": 5
+    },
+    {
+     "name": "Madelyn Maddie Schrand",
+     "f": 5
+    }
+   ]
+  },
+  {
+   "key": "33286:122968",
+   "tid": 33286,
+   "tdId": 122968,
+   "event": "Alabama Beach Week AVP (AVPA 2-Star Qualifier) '26 (RallyVB HSV)",
+   "short": "Alabama Beach Week AVP",
+   "division": "Girls 16U",
+   "field": 27,
+   "date": "2026-06-21",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Madelyn Maddie Schrand",
+     "f": 2
+    },
+    {
+     "name": "Peyton Harrington",
+     "f": 3
     }
    ]
   },
@@ -1969,44 +3231,23 @@
    ]
   },
   {
-   "key": "35172:128924",
-   "tid": 35172,
-   "tdId": 128924,
-   "event": "BRVA Beach AVP Qualifier #6 '26",
-   "short": "BRVA Beach AVP Qual #6 '26",
+   "key": "39439:144622",
+   "tid": 39439,
+   "tdId": 144622,
+   "event": "6/10/26, Main Beach, Santa Cruz",
+   "short": "6/10/26, Main Beach",
    "division": "Girls 18U",
-   "field": 26,
-   "date": "2026-06-14",
+   "field": 15,
+   "date": "2026-06-10",
    "sanction": "AVPA",
    "players": [
     {
-     "name": "Kendal Walker",
-     "f": 1
+     "name": "Haisley Flanagan",
+     "f": 2
     },
     {
-     "name": "Breeze Johnson",
-     "f": 3
-    }
-   ]
-  },
-  {
-   "key": "39469:144760",
-   "tid": 39469,
-   "tdId": 144760,
-   "event": "6/13/26, Manhattan Pier, Manhattan Beach",
-   "short": "Manhattan Pier Open",
-   "division": "Womens Open",
-   "field": 19,
-   "date": "2026-06-13",
-   "sanction": "AVPA",
-   "players": [
-    {
-     "name": "Sarah Cowan",
-     "f": 13
-    },
-    {
-     "name": "Sage Illian",
-     "f": 13
+     "name": "Lily Larrabee",
+     "f": 5
     }
    ]
   },
@@ -2032,44 +3273,149 @@
    ]
   },
   {
-   "key": "32034:119223",
-   "tid": 32034,
-   "tdId": 119223,
-   "event": "GNBV National Recruiting Showcase Texas",
-   "short": "GNBV Nat'l Recruiting",
+   "key": "35171:128920",
+   "tid": 35171,
+   "tdId": 128920,
+   "event": "BRVA Beach AVP Qualifier #5 '26",
+   "short": "BRVA Beach AVP Qual #5 '26",
    "division": "Girls 18U",
-   "field": 28,
-   "date": "2026-05-17",
-   "sanction": "BVNE",
+   "field": 11,
+   "date": "2026-06-07",
+   "sanction": "AVPA",
    "players": [
     {
-     "name": "Hannah Perez",
-     "f": 2
+     "name": "Teagan Braun-Duin",
+     "f": 3
     },
     {
-     "name": "Stella Sheeran",
+     "name": "Avery Fauver",
      "f": 3
     }
    ]
   },
   {
-   "key": "36166:132403",
-   "tid": 36166,
-   "tdId": 132403,
-   "event": "WVS 2026 Adult May Maynia",
-   "short": "WVS 2026 Adult May Maynia",
-   "division": "Womens Open",
-   "field": 8,
-   "date": "2026-05-16",
+   "key": "35171:128921",
+   "tid": 35171,
+   "tdId": 128921,
+   "event": "BRVA Beach AVP Qualifier #5 '26",
+   "short": "BRVA Beach AVP Qual #5 '26",
+   "division": "Girls 16U",
+   "field": 28,
+   "date": "2026-06-07",
    "sanction": "AVPA",
    "players": [
     {
-     "name": "Brooklyn Rosales",
+     "name": "Teagan Braun-Duin",
+     "f": 2
+    },
+    {
+     "name": "Avery Fauver",
+     "f": 2
+    }
+   ]
+  },
+  {
+   "key": "32237:119779",
+   "tid": 32237,
+   "tdId": 119779,
+   "event": "GNBV National Recruiting Showcase June 2026",
+   "short": "GNBV Nat'l Recruiting",
+   "division": "Elite 16",
+   "field": 11,
+   "date": "2026-06-07",
+   "sanction": "BVNE",
+   "players": [
+    {
+     "name": "Lily Larrabee",
      "f": 3
     },
     {
-     "name": "Skyler Smith",
+     "name": "Colette Sutton",
+     "f": 3
+    }
+   ]
+  },
+  {
+   "key": "36551:133620",
+   "tid": 36551,
+   "tdId": 133620,
+   "event": "Eastern Futures Tour Pro (FTP)",
+   "short": "Eastern Futures Tour Pro",
+   "division": "Womens Open",
+   "field": 16,
+   "date": "2026-06-06",
+   "sanction": "p1440",
+   "players": [
+    {
+     "name": "Brooklyn Rosales",
+     "f": 5
+    },
+    {
+     "name": "Isabelle Haas",
+     "f": 13
+    }
+   ]
+  },
+  {
+   "key": "37067:135606",
+   "tid": 37067,
+   "tdId": 135606,
+   "event": "Sinjin Collegiate Showcase #2 U16 hosted with Blue Sky",
+   "short": "Sinjin Collegiate",
+   "division": "Girls 16U",
+   "field": 14,
+   "date": "2026-06-06",
+   "sanction": "p1440",
+   "players": [
+    {
+     "name": "Reese Hislop",
+     "f": 2
+    },
+    {
+     "name": "Lauren Eklund",
+     "f": 2
+    }
+   ]
+  },
+  {
+   "key": "35169:128912",
+   "tid": 35169,
+   "tdId": 128912,
+   "event": "BRVA Beach AVP Qualifier #3 '26",
+   "short": "BRVA Beach AVP Qual #3 '26",
+   "division": "Girls 18U",
+   "field": 8,
+   "date": "2026-05-24",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Avery Fauver",
+     "f": 1
+    },
+    {
+     "name": "Teagan Braun-Duin",
+     "f": 3
+    }
+   ]
+  },
+  {
+   "key": "35431:129833",
+   "tid": 35431,
+   "tdId": 129833,
+   "event": "AVP NEXT South Beach May Open",
+   "short": "AVP NEXT South Beach May",
+   "division": "Womens Open",
+   "field": 28,
+   "date": "2026-05-10",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Sadie Stafford",
      "f": 7
+    },
+    {
+     "name": "Haven Gindoff",
+     "f": 17
     }
    ]
   },
@@ -2095,6 +3441,132 @@
    ]
   },
   {
+   "key": "33323:123077",
+   "tid": 33323,
+   "tdId": 123077,
+   "event": "USA Volleyball Beach Tour - Chesapeake Region Spring Beach National Qualifier #2",
+   "short": "USAV Beach Tour",
+   "division": "Girls 16U",
+   "field": 33,
+   "date": "2026-05-10",
+   "sanction": "USAV",
+   "players": [
+    {
+     "name": "Avery Fauver",
+     "f": 1
+    },
+    {
+     "name": "Riley Ko",
+     "f": 5
+    }
+   ]
+  },
+  {
+   "key": "35021:128494",
+   "tid": 35021,
+   "tdId": 128494,
+   "event": "Battle on the Beach BRQ - Fredericksburg 2026",
+   "short": "Battle on the Beach BRQ",
+   "division": "16 American",
+   "field": 12,
+   "date": "2026-05-09",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Kendal Walker",
+     "f": 1
+    },
+    {
+     "name": "Emerson Thomas",
+     "f": 1
+    }
+   ]
+  },
+  {
+   "key": "35021:128493",
+   "tid": 35021,
+   "tdId": 128493,
+   "event": "Battle on the Beach BRQ - Fredericksburg 2026",
+   "short": "Battle on the Beach BRQ",
+   "division": "18 American",
+   "field": 8,
+   "date": "2026-05-09",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Kendal Walker",
+     "f": 1
+    },
+    {
+     "name": "Emerson Thomas",
+     "f": 1
+    }
+   ]
+  },
+  {
+   "key": "35165:128904",
+   "tid": 35165,
+   "tdId": 128904,
+   "event": "BRVA Beach AVP Qualifier #1  '26",
+   "short": "BRVA Beach AVP Qual #1 '26",
+   "division": "Girls 18U",
+   "field": 10,
+   "date": "2026-04-26",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Riley Ko",
+     "f": 1
+    },
+    {
+     "name": "Teagan Braun-Duin",
+     "f": 3
+    }
+   ]
+  },
+  {
+   "key": "35165:128901",
+   "tid": 35165,
+   "tdId": 128901,
+   "event": "BRVA Beach AVP Qualifier #1  '26",
+   "short": "BRVA Beach AVP Qual #1 '26",
+   "division": "Girls 16U",
+   "field": 27,
+   "date": "2026-04-26",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Teagan Braun-Duin",
+     "f": 3
+    },
+    {
+     "name": "Avery Fauver",
+     "f": 9
+    }
+   ]
+  },
+  {
+   "key": "36712:134250",
+   "tid": 36712,
+   "tdId": 134250,
+   "event": "Sinjin April U18/U14 Event hosted with Blue Sky",
+   "short": "Sinjin April U18/U14",
+   "division": "Girls 18U",
+   "field": 17,
+   "date": "2026-04-26",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Lauren Eklund",
+     "f": 3
+    },
+    {
+     "name": "Reese Hislop",
+     "f": 5
+    }
+   ]
+  },
+  {
    "key": "38207:139909",
    "tid": 38207,
    "tdId": 139909,
@@ -2112,6 +3584,27 @@
     {
      "name": "Eden Cisneros",
      "f": 7
+    }
+   ]
+  },
+  {
+   "key": "38207:139907",
+   "tid": 38207,
+   "tdId": 139907,
+   "event": "4/25/26, Main Beach, Santa Cruz",
+   "short": "4/25/26, Main Beach",
+   "division": "Womens A",
+   "field": 25,
+   "date": "2026-04-25",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Katie Hamburger",
+     "f": 5
+    },
+    {
+     "name": "Colette Sutton",
+     "f": 5
     }
    ]
   },
@@ -2137,6 +3630,48 @@
    ]
   },
   {
+   "key": "32941:139115",
+   "tid": 32941,
+   "tdId": 139115,
+   "event": "West Coast Championships (p1440) & Boys 17U ISF Trials",
+   "short": "p1440 West Coast Champ",
+   "division": "Girls 16:U (Grad Year: 2028-2029)",
+   "field": 9,
+   "date": "2026-04-19",
+   "sanction": "p1440",
+   "players": [
+    {
+     "name": "Stacy Balestrieri",
+     "f": 1
+    },
+    {
+     "name": "Aubree Marsden",
+     "f": 2
+    }
+   ]
+  },
+  {
+   "key": "33819:124803",
+   "tid": 33819,
+   "tdId": 124803,
+   "event": "Cat5BVB Boys & Girls Top Gun Tournament AVP \u2b50\u2b50\u2b50",
+   "short": "Cat5BVB Boys & Girls Top",
+   "division": "Girls 18U",
+   "field": 10,
+   "date": "2026-04-18",
+   "sanction": "BVNE",
+   "players": [
+    {
+     "name": "Karsyn Smith",
+     "f": 2
+    },
+    {
+     "name": "Sterling Carlile",
+     "f": 3
+    }
+   ]
+  },
+  {
    "key": "37793:138421",
    "tid": 37793,
    "tdId": 138421,
@@ -2154,27 +3689,6 @@
     {
      "name": "Sadie Harris",
      "f": 10
-    }
-   ]
-  },
-  {
-   "key": "33322:123070",
-   "tid": 33322,
-   "tdId": 123070,
-   "event": "USA Volleyball Beach Tour - Chesapeake Region Spring Beach National Qualifier #1",
-   "short": "USAV Beach Tour",
-   "division": "Girls 18U",
-   "field": 18,
-   "date": "2026-04-12",
-   "sanction": "USAV",
-   "players": [
-    {
-     "name": "Breeze Johnson",
-     "f": 1
-    },
-    {
-     "name": "Kendal Walker",
-     "f": 2
     }
    ]
   },
@@ -2200,23 +3714,296 @@
    ]
   },
   {
-   "key": "34696:127564",
-   "tid": 34696,
-   "tdId": 127564,
-   "event": "Beach Elite SoCal Series Winter #5 (AVP 3 STAR)-  2026",
-   "short": "Beach Elite SoCal W5",
-   "division": "Girls 16U",
-   "field": 8,
-   "date": "2026-02-14",
+   "key": "36698:134206",
+   "tid": 36698,
+   "tdId": 134206,
+   "event": "Cat5BVB Campus Tournament @ Florida State University",
+   "short": "Cat5BVB Campus Tourney @",
+   "division": "Girls 18U",
+   "field": 7,
+   "date": "2026-04-12",
+   "sanction": "BVNE",
+   "players": [
+    {
+     "name": "Sterling Carlile",
+     "f": 3
+    },
+    {
+     "name": "Karsyn Smith",
+     "f": 3
+    }
+   ]
+  },
+  {
+   "key": "31625:117915",
+   "tid": 31625,
+   "tdId": 117915,
+   "event": "2026 Futures Tour: Texas",
+   "short": "Futures Tour: Texas",
+   "division": "Class of '28 & Younger",
+   "field": 18,
+   "date": "2026-04-12",
+   "sanction": "p1440",
+   "players": [
+    {
+     "name": "Reese Hislop",
+     "f": 2
+    },
+    {
+     "name": "Chloe Jefferson",
+     "f": 3
+    }
+   ]
+  },
+  {
+   "key": "34542:126912",
+   "tid": 34542,
+   "tdId": 126912,
+   "event": "First Coast Volleyball Jax Beach Series March 28-29 '26",
+   "short": "First Coast Volleyball",
+   "division": "Girls 18U",
+   "field": 13,
+   "date": "2026-03-29",
    "sanction": "AVPA",
    "players": [
     {
-     "name": "Madison Gillinger",
+     "name": "Kendal Walker",
+     "f": 2
+    },
+    {
+     "name": "Sterling Carlile",
+     "f": 2
+    }
+   ]
+  },
+  {
+   "key": "33956:125234",
+   "tid": 33956,
+   "tdId": 125234,
+   "event": "$1,000 AVP Womens San Antonio Open",
+   "short": "$1,000 AVP Womens San",
+   "division": "Womens Open",
+   "field": 12,
+   "date": "2026-03-28",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Hannah Perez",
+     "f": 3
+    },
+    {
+     "name": "Averie Ackel",
+     "f": 3
+    }
+   ]
+  },
+  {
+   "key": "33911:125059",
+   "tid": 33911,
+   "tdId": 125059,
+   "event": "WVS 2026 Adult Season Opener",
+   "short": "WVS 2026 Adult Season",
+   "division": "Womens Open",
+   "field": 13,
+   "date": "2026-03-21",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Lauren Eklund",
+     "f": 2
+    },
+    {
+     "name": "Reese Hislop",
+     "f": 5
+    }
+   ]
+  },
+  {
+   "key": "34361:126468",
+   "tid": 34361,
+   "tdId": 126468,
+   "event": "AVP Next Spring Texas Triple Crown Series #2 $8,000 Purse",
+   "short": "AVP Next Spring Texas",
+   "division": "Womens Open",
+   "field": 26,
+   "date": "2026-03-15",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Averie Ackel",
+     "f": 13
+    },
+    {
+     "name": "Chloe Jefferson",
+     "f": 17
+    }
+   ]
+  },
+  {
+   "key": "37255:136225",
+   "tid": 37255,
+   "tdId": 136225,
+   "event": "Women's Open + Women's B at North Beach, Santa Monica",
+   "short": "Women's Open + Women's B",
+   "division": "Womens Open",
+   "field": 16,
+   "date": "2026-03-14",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Kara Boas",
+     "f": 5
+    },
+    {
+     "name": "Ava Champagne",
+     "f": 5
+    }
+   ]
+  },
+  {
+   "key": "40540:148435",
+   "tid": 40540,
+   "tdId": 148435,
+   "event": "3/8/26, Dockweiler, Los Angeles",
+   "short": "Dockweiler, Los Angeles",
+   "division": "Womens AA",
+   "field": 19,
+   "date": "2026-03-08",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Charlotte Jansen",
      "f": 1
     },
     {
-     "name": "Sadie Harris",
+     "name": "Ella Buchanan",
+     "f": 2
+    }
+   ]
+  },
+  {
+   "key": "34540:126904",
+   "tid": 34540,
+   "tdId": 126904,
+   "event": "2/27-28 ~ AVPnext $10K \u2018SIDEOUT Rules\u2019 (M/W O)",
+   "short": "2/27-28 ~ AVPnext $10K",
+   "division": "Womens Open",
+   "field": 8,
+   "date": "2026-02-28",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Hannah Perez",
+     "f": 5
+    },
+    {
+     "name": "Averie Ackel",
+     "f": 5
+    }
+   ]
+  },
+  {
+   "key": "31569:117704",
+   "tid": 31569,
+   "tdId": 117704,
+   "event": "2026 Futures Tour: Alabama",
+   "short": "Futures Tour: Alabama",
+   "division": "Class of '28 & Younger",
+   "field": 33,
+   "date": "2026-02-22",
+   "sanction": "p1440",
+   "players": [
+    {
+     "name": "Madelyn Maddie Schrand",
      "f": 1
+    },
+    {
+     "name": "Brighton Atchley",
+     "f": 5
+    }
+   ]
+  },
+  {
+   "key": "33950:125222",
+   "tid": 33950,
+   "tdId": 125222,
+   "event": "AVP America/p1440 Junior Tournament",
+   "short": "AVP America/p1440 Junior",
+   "division": "Girls 18U",
+   "field": 10,
+   "date": "2026-02-14",
+   "sanction": "p1440",
+   "players": [
+    {
+     "name": "Hannah Perez",
+     "f": 1
+    },
+    {
+     "name": "Averie Ackel",
+     "f": 1
+    }
+   ]
+  },
+  {
+   "key": "31187:116541",
+   "tid": 31187,
+   "tdId": 116541,
+   "event": "GNBV National Recruiting Showcase Feb 2026",
+   "short": "GNBV Nat'l Recruiting",
+   "division": "Girls 18U",
+   "field": 26,
+   "date": "2026-02-08",
+   "sanction": "BVNE",
+   "players": [
+    {
+     "name": "Hannah Perez",
+     "f": 1
+    },
+    {
+     "name": "Averie Ackel",
+     "f": 1
+    }
+   ]
+  },
+  {
+   "key": "31639:117945",
+   "tid": 31639,
+   "tdId": 117945,
+   "event": "Kauai Bikini Open Santa Monica CA",
+   "short": "Kauai Bikini Open Santa",
+   "division": "Girls 18U",
+   "field": 17,
+   "date": "2026-02-07",
+   "sanction": "BVNE",
+   "players": [
+    {
+     "name": "Hannah Perez",
+     "f": 3
+    },
+    {
+     "name": "Averie Ackel",
+     "f": 3
+    }
+   ]
+  },
+  {
+   "key": "31639:117946",
+   "tid": 31639,
+   "tdId": 117946,
+   "event": "Kauai Bikini Open Santa Monica CA",
+   "short": "Kauai Bikini Open Santa",
+   "division": "Girls 16U",
+   "field": 28,
+   "date": "2026-02-07",
+   "sanction": "BVNE",
+   "players": [
+    {
+     "name": "Colette Sutton",
+     "f": 1
+    },
+    {
+     "name": "Chloe Jefferson",
+     "f": 3
     }
    ]
   },
@@ -2242,86 +4029,338 @@
    ]
   },
   {
-   "key": "33052:122007",
-   "tid": 33052,
-   "tdId": 122007,
-   "event": "Snowball '26",
-   "short": "Snowball '26",
+   "key": "33426:123317",
+   "tid": 33426,
+   "tdId": 123317,
+   "event": "SSOVA GASPARILLA THEMED Men's/Women's/Coed\u2019s St. Pete Beach, Beach Volleyball Tournament",
+   "short": "SSOVA GASPARILLA THEMED",
+   "division": "Womens Open",
+   "field": 10,
+   "date": "2026-01-25",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Taylie Hansen",
+     "f": 2
+    },
+    {
+     "name": "Sophia Grish",
+     "f": 7
+    }
+   ]
+  },
+  {
+   "key": "33948:125218",
+   "tid": 33948,
+   "tdId": 125218,
+   "event": "AVP America/p1440 Junior Tournament",
+   "short": "AVP America/p1440 Junior",
    "division": "Girls 18U",
    "field": 8,
-   "date": "2026-01-25",
-   "sanction": "AVPA",
+   "date": "2026-01-17",
+   "sanction": "p1440",
    "players": [
     {
-     "name": "Sadie Stafford",
+     "name": "Hannah Perez",
      "f": 1
     },
     {
-     "name": "Skyler Smith",
+     "name": "Averie Ackel",
      "f": 1
     }
    ]
   },
   {
-   "key": "33052:122095",
-   "tid": 33052,
-   "tdId": 122095,
-   "event": "Snowball '26",
-   "short": "Snowball '26",
-   "division": "Girls 16U",
+   "key": "25718:97612",
+   "tid": 25718,
+   "tdId": 97612,
+   "event": "California IBVL Winter Classic - p1440",
+   "short": "California IBVL Winter",
+   "division": "Girls 18:U (Grad Year 2026-2027)",
+   "field": 13,
+   "date": "2026-01-11",
+   "sanction": "p1440",
+   "players": [
+    {
+     "name": "Lucy Matuszak",
+     "f": 3
+    },
+    {
+     "name": "Stacy Balestrieri",
+     "f": 9
+    }
+   ]
+  },
+  {
+   "key": "33839:124871",
+   "tid": 33839,
+   "tdId": 124871,
+   "event": "AVP NEXT South Beach Art Deco Open",
+   "short": "AVP NEXT South Beach Art",
+   "division": "Womens Open",
+   "field": 22,
+   "date": "2026-01-11",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Haven Gindoff",
+     "f": 7
+    },
+    {
+     "name": "Taylie Hansen",
+     "f": 13
+    }
+   ]
+  },
+  {
+   "key": "33815:124792",
+   "tid": 33815,
+   "tdId": 124792,
+   "event": "Cat5BVB Winter Series",
+   "short": "Cat5BVB Winter Series",
+   "division": "Girls 18U",
    "field": 9,
-   "date": "2026-01-25",
+   "date": "2026-01-11",
+   "sanction": "BVNE",
+   "players": [
+    {
+     "name": "Sterling Carlile",
+     "f": 2
+    },
+    {
+     "name": "Karsyn Smith",
+     "f": 2
+    }
+   ]
+  },
+  {
+   "key": "32973:121751",
+   "tid": 32973,
+   "tdId": 121751,
+   "event": "AJV Sand Jr Fall #6 AVP* & USAV",
+   "short": "AJV Sand Jr Fall #6 AVP*",
+   "division": "Girls 18U",
+   "field": 13,
+   "date": "2026-01-04",
    "sanction": "AVPA",
    "players": [
     {
-     "name": "Sadie Stafford",
+     "name": "Chloe Jefferson",
+     "f": 2
+    },
+    {
+     "name": "Averie Ackel",
+     "f": 5
+    }
+   ]
+  },
+  {
+   "key": "32881:121487",
+   "tid": 32881,
+   "tdId": 121487,
+   "event": "BVNE Triple Qualifier #3",
+   "short": "BVNE Triple Qual #3",
+   "division": "Girls 18U",
+   "field": 14,
+   "date": "2026-01-03",
+   "sanction": "BVNE",
+   "players": [
+    {
+     "name": "Chloe Jefferson",
      "f": 1
     },
     {
-     "name": "Skyler Smith",
+     "name": "Brighton Atchley",
+     "f": 5
+    }
+   ]
+  },
+  {
+   "key": "31527:117546",
+   "tid": 31527,
+   "tdId": 117546,
+   "event": "AAU Herrmosa Beach Winter Series Championships",
+   "short": "AAU Hermosa Winter",
+   "division": "Girls 18U",
+   "field": 13,
+   "date": "2025-12-14",
+   "sanction": "AAU",
+   "players": [
+    {
+     "name": "Lucy Matuszak",
+     "f": 5
+    },
+    {
+     "name": "Ava Champagne",
+     "f": 5
+    }
+   ]
+  },
+  {
+   "key": "32778:121159",
+   "tid": 32778,
+   "tdId": 121159,
+   "event": "Optimum Beach: 2025 GIRLS WINTER SHOWCASE! College Recruiting Clinic &Tournament Weekend",
+   "short": "Optimum Beach: 2025 GIRLS",
+   "division": "Girls 18U",
+   "field": 0,
+   "date": "2025-12-14",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Reese Hislop",
+     "f": 5
+    },
+    {
+     "name": "Alaina Scafidi",
+     "f": 9
+    }
+   ]
+  },
+  {
+   "key": "33051:122091",
+   "tid": 33051,
+   "tdId": 122091,
+   "event": "Gingerbread Volley '25",
+   "short": "Gingerbread Volley '25",
+   "division": "Girls 16U",
+   "field": 5,
+   "date": "2025-12-13",
+   "sanction": "USAV",
+   "players": [
+    {
+     "name": "Kendal Walker",
+     "f": 1
+    },
+    {
+     "name": "Emerson Thomas",
      "f": 1
     }
    ]
   },
   {
-   "key": "33844:124876",
-   "tid": 33844,
-   "tdId": 124876,
-   "event": "Western World Mega Collegiate Showcase Event - Oceanside CA.",
-   "short": "Western World Mega",
-   "division": "18u",
+   "key": "24893:94645",
+   "tid": 24893,
+   "tdId": 94645,
+   "event": "Cin-City AVP America A & B Doubles",
+   "short": "Cin-City AVP America A &",
+   "division": "Womens A",
    "field": 16,
-   "date": "2026-01-25",
-   "sanction": "\u2014",
+   "date": "2025-12-13",
+   "sanction": "AVPA",
    "players": [
     {
-     "name": "Abigail Moffett",
-     "f": 1
+     "name": "Isabelle Haas",
+     "f": 2
     },
     {
-     "name": "Charlotte Jansen",
-     "f": 1
+     "name": "Madelyn Maddie Schrand",
+     "f": 9
     }
    ]
   },
   {
-   "key": "25638:97291",
-   "tid": 25638,
-   "tdId": 97291,
-   "event": "AVP Juniors East Coast Championships 2025",
-   "short": "AVP Jrs East Coast",
-   "division": "Girls 17U",
-   "field": 46,
-   "date": "2025-11-30",
+   "key": "32473:120391",
+   "tid": 32473,
+   "tdId": 120391,
+   "event": "Battle for Lulu & AVP Bids",
+   "short": "Battle for Lulu & AVP Bids",
+   "division": "Girls 18U",
+   "field": 12,
+   "date": "2025-12-13",
    "sanction": "AVPA",
    "players": [
     {
-     "name": "Breeze Johnson",
-     "f": 1
+     "name": "Brighton Atchley",
+     "f": 3
     },
     {
-     "name": "Elle Sossong",
-     "f": 1
+     "name": "Chloe Jefferson",
+     "f": 5
+    }
+   ]
+  },
+  {
+   "key": "25578:97148",
+   "tid": 25578,
+   "tdId": 97148,
+   "event": "AVP Juniors West Coast Championships 2025",
+   "short": "AVP Jrs West Coast",
+   "division": "Girls 17U",
+   "field": 23,
+   "date": "2025-11-09",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Rylee Hartwell",
+     "f": 5
+    },
+    {
+     "name": "Stacy Balestrieri",
+     "f": 9
+    }
+   ]
+  },
+  {
+   "key": "30316:113987",
+   "tid": 30316,
+   "tdId": 113987,
+   "event": "Tally Sand Juniors Event 14's/16's/18's  (EPB) '2025 'FALL",
+   "short": "Tally Sand Jrs Event",
+   "division": "Girls 18U",
+   "field": 11,
+   "date": "2025-11-09",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Sterling Carlile",
+     "f": 3
+    },
+    {
+     "name": "Avea Casperson",
+     "f": 5
+    }
+   ]
+  },
+  {
+   "key": "26011:98783",
+   "tid": 26011,
+   "tdId": 98783,
+   "event": "First Coast Volleyball Jax Beach Series Nov 1-2nd",
+   "short": "First Coast Volleyball",
+   "division": "Womens Open",
+   "field": 8,
+   "date": "2025-11-02",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Emma Abernathy",
+     "f": 2
+    },
+    {
+     "name": "Karsyn Smith",
+     "f": 5
+    }
+   ]
+  },
+  {
+   "key": "26011:98791",
+   "tid": 26011,
+   "tdId": 98791,
+   "event": "First Coast Volleyball Jax Beach Series Nov 1-2nd",
+   "short": "First Coast Volleyball",
+   "division": "Girls 18U",
+   "field": 10,
+   "date": "2025-11-02",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Karsyn Smith",
+     "f": 2
+    },
+    {
+     "name": "Emma Abernathy",
+     "f": 3
     }
    ]
   },
@@ -2347,128 +4386,86 @@
    ]
   },
   {
-   "key": "30469:115528",
-   "tid": 30469,
-   "tdId": 115528,
-   "event": "Surf City/World Mega College Showcase",
-   "short": "Surf City/World Mega",
-   "division": "Girls 16U",
-   "field": 0,
-   "date": "2025-10-26",
+   "key": "30472:114499",
+   "tid": 30472,
+   "tdId": 114499,
+   "event": "Surf City Women\u2019s Open ($1000)",
+   "short": "Surf City Women\u2019s Open",
+   "division": "Womens Open",
+   "field": 13,
+   "date": "2025-10-25",
    "sanction": "\u2014",
    "players": [
     {
      "name": "Stella Sheeran",
-     "f": 1
+     "f": 5
     },
     {
-     "name": "Sadie Harris",
-     "f": 3
-    }
-   ]
-  },
-  {
-   "key": "33446:123435",
-   "tid": 33446,
-   "tdId": 123435,
-   "event": "Women's Open at Main Beach, Santa Cruz",
-   "short": "Main Beach Santa Cruz",
-   "division": "Womens Open",
-   "field": 18,
-   "date": "2025-10-25",
-   "sanction": "AVPA",
-   "players": [
-    {
-     "name": "Haisley Flanagan",
-     "f": 17
-    },
-    {
-     "name": "Charlotte Jansen",
-     "f": 17
-    }
-   ]
-  },
-  {
-   "key": "33136:122338",
-   "tid": 33136,
-   "tdId": 122338,
-   "event": "2025 CBVA Fall Championships: Invitation Only Girl's 16u at Newland, Huntington Beach",
-   "short": "CBVA Fall Champs (Inv)",
-   "division": "Girls 16U",
-   "field": 9,
-   "date": "2025-10-12",
-   "sanction": "AVPA",
-   "players": [
-    {
-     "name": "Sadie Harris",
-     "f": 2
-    },
-    {
-     "name": "Madison Gillinger",
+     "name": "Haven Gindoff",
      "f": 5
     }
    ]
   },
   {
-   "key": "23700:91228",
-   "tid": 23700,
-   "tdId": 91228,
-   "event": "GNBV National Recruiting Showcase Oct 2025",
-   "short": "GNBV Nat'l Recruiting",
-   "division": "16U OPEN",
-   "field": 26,
-   "date": "2025-10-05",
-   "sanction": "BVNE",
-   "players": [
-    {
-     "name": "Madison Gillinger",
-     "f": 1
-    },
-    {
-     "name": "Abigail Moffett",
-     "f": 1
-    }
-   ]
-  },
-  {
-   "key": "23700:119582",
-   "tid": 23700,
-   "tdId": 119582,
-   "event": "GNBV National Recruiting Showcase Oct 2025",
-   "short": "GNBV Nat'l Recruiting",
-   "division": "16U Elite (1300 Pts Required)",
-   "field": 14,
-   "date": "2025-10-05",
-   "sanction": "BVNE",
-   "players": [
-    {
-     "name": "Haisley Flanagan",
-     "f": 1
-    },
-    {
-     "name": "Charlotte Jansen",
-     "f": 1
-    }
-   ]
-  },
-  {
-   "key": "30429:114404",
-   "tid": 30429,
-   "tdId": 114404,
-   "event": "AVP Next Men\u2019s & Women\u2019s Fall Triple Crown Series #1 $8,000 Purse",
-   "short": "AVP Next Triple Crown 1",
-   "division": "Women's Open",
-   "field": 35,
-   "date": "2025-09-28",
+   "key": "32149:119569",
+   "tid": 32149,
+   "tdId": 119569,
+   "event": "Myrtle Beach Open Jr & Coed. '25",
+   "short": "Myrtle Beach Open Jr &",
+   "division": "Girls 18U",
+   "field": 9,
+   "date": "2025-10-19",
    "sanction": "AVPA",
    "players": [
     {
-     "name": "Brooke Codey",
-     "f": 17
+     "name": "Brooklyn Rosales",
+     "f": 1
     },
     {
-     "name": "Hannah Perez",
-     "f": 25
+     "name": "Reese Hislop",
+     "f": 5
+    }
+   ]
+  },
+  {
+   "key": "33260:122916",
+   "tid": 33260,
+   "tdId": 122916,
+   "event": "Women's A at Belmont Shore, Long Beach",
+   "short": "Women's A at Belmont",
+   "division": "Womens A",
+   "field": 17,
+   "date": "2025-10-18",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Sadie Harris",
+     "f": 3
+    },
+    {
+     "name": "Aubree Marsden",
+     "f": 3
+    }
+   ]
+  },
+  {
+   "key": "26799:101366",
+   "tid": 26799,
+   "tdId": 101366,
+   "event": "WVS 2025 Adults Season Championships Sponsored by Castle Productions (100% Open Payout)",
+   "short": "WVS 2025 Adults Season",
+   "division": "Womens Open",
+   "field": 6,
+   "date": "2025-10-04",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Elyse Smelcer",
+     "f": 2
+    },
+    {
+     "name": "Haven Gindoff",
+     "f": 5
     }
    ]
   },
@@ -2494,44 +4491,23 @@
    ]
   },
   {
-   "key": "24075:92429",
-   "tid": 24075,
-   "tdId": 92429,
-   "event": "GNBV National Recruiting Showcase Florida Sep 2025",
-   "short": "GNBV Nat'l Recruiting",
+   "key": "26749:101212",
+   "tid": 26749,
+   "tdId": 101212,
+   "event": "BRVA Beach AVP Qualifier #8",
+   "short": "BRVA Beach AVP Qual #8",
    "division": "Girls 18U",
-   "field": 44,
-   "date": "2025-09-07",
-   "sanction": "BVNE",
-   "players": [
-    {
-     "name": "Brooklyn Rosales",
-     "f": 3
-    },
-    {
-     "name": "Emma Abernathy",
-     "f": 9
-    }
-   ]
-  },
-  {
-   "key": "32315:119972",
-   "tid": 32315,
-   "tdId": 119972,
-   "event": "CBVA Fall Championship Bid + AVP Bid Event Girl's 16u at Belmont Shore, Long Beach",
-   "short": "CBVA Fall Champ Bid + AVP",
-   "division": "Girls 16U",
-   "field": 12,
+   "field": 8,
    "date": "2025-08-31",
    "sanction": "AVPA",
    "players": [
     {
-     "name": "Madison Gillinger",
+     "name": "Kendal Walker",
      "f": 1
     },
     {
-     "name": "Sadie Harris",
-     "f": 1
+     "name": "Avery Fauver",
+     "f": 3
     }
    ]
   },
@@ -2620,6 +4596,48 @@
    ]
   },
   {
+   "key": "32088:119382",
+   "tid": 32088,
+   "tdId": 119382,
+   "event": "Women's AA at Main Beach, Santa Cruz",
+   "short": "Women's AA at Main Beach",
+   "division": "Womens AA",
+   "field": 25,
+   "date": "2025-08-23",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Haisley Flanagan",
+     "f": 13
+    },
+    {
+     "name": "Katie Hamburger",
+     "f": 21
+    }
+   ]
+  },
+  {
+   "key": "26310:99863",
+   "tid": 26310,
+   "tdId": 99863,
+   "event": "MAVERICKS AVP LuluLemon Qualifier - Sunday, August 17 (12u, 14u & 16u)",
+   "short": "MAVERICKS AVP LuluLemon",
+   "division": "Girls 16U",
+   "field": 10,
+   "date": "2025-08-17",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Regina Stella Broshear",
+     "f": 1
+    },
+    {
+     "name": "Katie Hamburger",
+     "f": 1
+    }
+   ]
+  },
+  {
    "key": "26795:101346",
    "tid": 26795,
    "tdId": 101346,
@@ -2639,11 +4657,32 @@
      "f": 9
     }
    ]
+  },
+  {
+   "key": "26794:101343",
+   "tid": 26794,
+   "tdId": 101343,
+   "event": "WVS 2025 Juniors August Heat Wave",
+   "short": "WVS 2025 Jrs August Heat",
+   "division": "Girls 16U",
+   "field": 19,
+   "date": "2025-08-16",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Reese Hislop",
+     "f": 1
+    },
+    {
+     "name": "Emerson Thomas",
+     "f": 2
+    }
+   ]
   }
  ],
- "totalComps": 174,
- "totalEvents": 143,
- "totalEntries": 391,
- "droppedTeam": 75,
- "thresh": 5
+ "totalComps": 353,
+ "totalEvents": 282,
+ "totalEntries": 918,
+ "droppedTeam": 171,
+ "thresh": 8
 }

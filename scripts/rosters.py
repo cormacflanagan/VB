@@ -61,7 +61,7 @@ try:
     _d = _json.load(open(_p))
     GROUPS["2028"] = {"label": _d["label"],
                       "roster": [tuple(x) for x in _d["roster"]],
-                      "meta": _d.get("meta", {}), "thresh": 5}
+                      "meta": _d.get("meta", {}), "thresh": 8}
 except FileNotFoundError:
     pass
 
