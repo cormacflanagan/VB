@@ -5,8 +5,11 @@ Training Series against each athlete's competition record on
 [Volleyball Life](https://volleyballlife.com), for the twelve months ending
 **9 August 2026**.
 
-The output is a players × tournaments matrix: every cell is a finish over the size of
-the field in that athlete's division, alongside each player's TruVolley rating.
+**Each age division is treated as its own competition.** The 18U bracket and the 16U
+bracket running beside it at the same event are different fields, so they are different
+competitions. The output is a players × competitions matrix: every cell is a finishing
+position, and the size of that field is carried in the column heading, alongside each
+player's TruVolley rating.
 
 Rendered report: [`docs/bntdp.html`](docs/bntdp.html)
 
@@ -57,16 +60,26 @@ Run in order from the repository root; each step writes into the working directo
 | `scripts/collect.py` | Pulls finishes, TruVolley ratings and division counts → `raw.json` |
 | `scripts/rebuild.py` | Re-keys entries by division, drops coach registrations → `clean.json` |
 | `scripts/analyze.py`, `scripts/report.py` | Console summaries of shared events and placements |
-| `scripts/build.py` | Shapes the matrix and shared-event list → `site_data.json` |
-| `scripts/render.py` | Emits the static HTML report → `bntdp.html` |
+| `scripts/build2.py` | Keys competitions by (event, division) → `site_data2.json` |
+| `scripts/render2.py` | Emits the static HTML report → `bntdp.html` |
 
-`data/clean.json` and `data/site_data.json` are the retrieved snapshots, so the report
-can be regenerated without re-querying the API.
+`data/clean.json` and `data/site_data2.json` are the retrieved snapshots, so the report
+can be regenerated without re-querying the API. `scripts/shortnames.json` maps full event
+names to the abbreviations used in the matrix column heads.
+
+## What the split changes
+
+Keying by division rather than by event turns 100 events into **116 competitions**. Of
+those, 26 were entered by three or more of the roster and form the matrix; a further 27
+drew exactly two and are listed separately as head-to-heads. The effect is largest for
+athletes who compete outside 18U — Sadie Harris plays mostly 16U, so she shares 8
+competitions with the group rather than the 15 events a division-blind count suggests.
 
 ## Caveats
 
-- **Athletes enter multiple divisions at one event.** The matrix shows the better finish
-  and marks the cell; the second entry is listed in the report's notes.
+- **Athletes who enter two divisions at one event** now appear once in each division's
+  column, which is the point of the split — at AVP Juniors Nationals, Olivia Herron was
+  9th of 64 in 18U and 63rd of 63 in 17U.
 - **Coach and spectator registrations appear in player histories.** These are filtered
   out, otherwise they show up as bogus first-place finishes.
 - **Some events are 5-a-side club competitions**, not pairs — the BVCA Orange County
