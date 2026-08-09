@@ -51,4 +51,18 @@ GROUPS = {
     },
 }
 
+# The class-of-2028 group is generated, not published: see discover2028.py. Its roster is
+# the 30 highest-TruVolley girls in a partner-graph crawl of the class (449 found, 410
+# rated). A convergence pass over the top 60's partners surfaced 50 more players and none
+# above the #30 cut, so the top 30 is stable.
+try:
+    import json as _json, os as _os
+    _p = _os.path.join(_os.path.dirname(__file__), "roster_2028.json")
+    _d = _json.load(open(_p))
+    GROUPS["2028"] = {"label": _d["label"],
+                      "roster": [tuple(x) for x in _d["roster"]],
+                      "meta": _d.get("meta", {}), "thresh": 5}
+except FileNotFoundError:
+    pass
+
 WINDOW = ("2025-08-09", "2026-08-09")

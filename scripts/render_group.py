@@ -6,12 +6,32 @@ import json, sys, html
 
 TEXT = {
     "18U": {
+        "eyebrow": "USA Volleyball &#183; Beach NTDP Summer Training Series 2026 &#183; Girls U18",
         "title": "The 18U girls, and <em>who they actually played</em>",
+        "lede": "All {N} athletes named to the Girls U18 roster for the Beach NTDP Summer "
+                "Training Series at Chula Vista, against their Volleyball Life record",
         "note": "",
     },
     "17U": {
+        "eyebrow": "USA Volleyball &#183; Beach NTDP Summer Training Series 2026 &#183; Girls U17",
         "title": "The 17U girls, and <em>who they actually played</em>",
+        "lede": "All {N} athletes named to the Girls U17 roster for the Beach NTDP Summer "
+                "Training Series at Chula Vista, against their Volleyball Life record",
         "note": "",
+    },
+    "2028": {
+        "eyebrow": "Girls beach volleyball &#183; Class of 2028 &#183; National top 30",
+        "title": "The class of 2028, and <em>where the top 30 keep meeting</em>",
+        "lede": "The {N} highest-rated girls in the graduating class of 2028, against their "
+                "Volleyball Life record",
+        "note": "<li><b>How these 30 were chosen.</b> Volleyball Life publishes no class "
+                "ranking, so the field was built by crawling the partner graph outward from "
+                "known 2028 athletes: 449 girls in the class were found, 410 of them rated, "
+                "and the 30 highest TruVolley scores were taken. A convergence pass over the "
+                "top 60's partners turned up 50 more players and <i>none</i> above the "
+                "cut-off, so the top 30 is stable. It is a ranking by rating, not a scouting "
+                "opinion &#8212; and TruVolley rewards win rate, so a light schedule in small "
+                "fields can flatter a player.</li>",
     },
 }
 
@@ -54,13 +74,18 @@ def build(group):
     T = TEXT[group]
 
     lo, hi = 6.7, 9.7
+    showht = any(p.get("height") for p in players)
+
+    def htcell(p):
+        return f'\n        <td class="num nw">{esc(p.get("height") or "—")}</td>' if showht else ""
+
     roster = []
     for p in players:
         pct = max(0, min(100, ((p["tv"] or lo) - lo) / (hi - lo) * 100))
         roster.append(f"""      <tr>
         <th scope="row"><span class="pn">{esc(p['name'])}</span><span class="pc">{esc(nicecity(p['city']))}</span></th>
         <td>{esc(p['region'])}</td>
-        <td class="clubc">{esc(p['club'] or '—')}</td>
+        <td class="clubc">{esc(p['club'] or '—')}</td>{htcell(p)}
         <td class="num">
           <div class="rate"><span class="rv">{p['tv']:.3f}</span>
             <span class="bar"><span class="fill" style="width:{pct:.1f}%"></span></span>
@@ -115,7 +140,10 @@ def build(group):
         <td>{esc(b['name'])} <b class="pos">{b['f']}{ord_(b['f'])}</b></td>
       </tr>""")
 
-    other = "17U" if group == "18U" else "18U"
+    regionhdr = "State" if group == "2028" else "USAV region"
+    others = {"18U": "17U group and the class of 2028",
+              "17U": "18U group and the class of 2028",
+              "2028": "NTDP 18U and 17U groups"}[group]
     return f"""<title>BNTDP {group} Girls &#183; Record by Competition</title>
 <style>
 :root {{
@@ -272,10 +300,9 @@ a {{ color:var(--accent); }}
 
 <div class="wrap">
 <header>
-  <p class="eyebrow">USA Volleyball &#183; Beach NTDP Summer Training Series 2026 &#183; {esc(D['label'])}</p>
+  <p class="eyebrow">{T['eyebrow']}</p>
   <h1>{T['title']}</h1>
-  <p class="standfirst">All {N} athletes named to the {esc(D['label'])} roster for the Beach NTDP
-  Summer Training Series at Chula Vista, against their Volleyball Life record for the twelve months
+  <p class="standfirst">{T['lede'].format(N=N)} for the twelve months
   ending 9 August 2026. <b>Doubles only</b> &#8212; club and five-a-side results are excluded,
   because a squad finish says little about the individual. Each age division counts as its own
   competition, so a 16U bracket and the 18U bracket running beside it are different columns. Every
@@ -284,7 +311,7 @@ a {{ color:var(--accent); }}
     <div class="fact"><b>{N}</b><span>Athletes</span></div>
     <div class="fact"><b>{D['totalEvents']}</b><span>Events attended</span></div>
     <div class="fact"><b>{D['totalComps']}</b><span>Pairs competitions</span></div>
-    <div class="fact"><b>{len(comps)}</b><span>Shared by 3+</span></div>
+    <div class="fact"><b>{len(comps)}</b><span>Shared by {D.get('thresh', 3)}+</span></div>
     <div class="fact"><b>{D['droppedTeam']}</b><span>Club results dropped</span></div>
   </div>
 </header>
@@ -297,7 +324,7 @@ a {{ color:var(--accent); }}
   <div class="panel">
     <table class="roster">
       <thead><tr>
-        <th scope="col">Athlete</th><th scope="col">USAV region</th><th scope="col">Club</th>
+        <th scope="col">Athlete</th><th scope="col">{regionhdr}</th><th scope="col">Club</th>{'<th scope="col">Height</th>' if showht else ''}
         <th scope="col">TruVolley</th><th scope="col">Peak</th>
         <th scope="col">W&#8211;L</th><th scope="col">Pairs comps</th>
       </tr></thead>
@@ -310,7 +337,7 @@ a {{ color:var(--accent); }}
 
 <section>
   <h2>Players against shared competitions</h2>
-  <p class="lede">The {len(comps)} competitions entered by at least three of the {N}, biggest
+  <p class="lede">The {len(comps)} competitions entered by at least {D.get('thresh', 3)} of the {N}, biggest
   turnout first. A cell is that athlete's finishing position in the field named above it;
   hatched means she did not enter. Hover any cell for her partner.</p>
 </section>
@@ -380,9 +407,8 @@ a {{ color:var(--accent); }}
   </ul>
 </section>
 <footer>
-  Roster from USA Volleyball's 2026 Beach NTDP Summer Training Series listing ({esc(D['label'])}).
-  Results, field sizes and TruVolley ratings from Volleyball Life, retrieved 9 August 2026.
-  A companion report covers the {other} group.
+  {esc(D['label'])}. Results, field sizes and TruVolley ratings from Volleyball Life,
+  retrieved 9 August 2026. Companion reports cover the {others}.
 </footer>
 </div>
 """

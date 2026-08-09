@@ -90,6 +90,7 @@ def main(group):
                                        "sanction": t.get("sanctioningBodyId")}
         entries[name] = rows
         tv[name] = {"region": region, "id": pid, "club": prof.get("club"),
+                    "height": prof.get("height"),
                     "cityState": f'{prof.get("city")}, {prof.get("state")}',
                     "truvolley": rating.get("truVolley"), "peak": rating.get("peak"),
                     "conf": rating.get("confidence"),
@@ -119,7 +120,8 @@ def main(group):
                        "date": ti["date"], "sanction": ti["sanction"] or "—"}
             who[k][name] = e
 
-    cols = [dict(comp[k], n=len(m)) for k, m in who.items() if len(m) >= THRESH]
+    thresh = g.get("thresh", THRESH)
+    cols = [dict(comp[k], n=len(m)) for k, m in who.items() if len(m) >= thresh]
     cols.sort(key=lambda c: (-c["n"], c["date"], c["division"]))
 
     order = sorted(tv, key=lambda n: -(tv[n]["truvolley"] or 0))
@@ -128,6 +130,7 @@ def main(group):
         p = tv[name]
         pl.append({
             "name": name, "region": p["region"], "club": p["club"],
+            "height": p.get("height"),
             "city": p["cityState"], "tv": p["truvolley"], "peak": p["peak"],
             "w": p["w"], "l": (p["matches"] or 0) - (p["w"] or 0),
             "comps": len({f'{x["tid"]}:{x["tdId"]}' for x in entries[name]}),
@@ -150,7 +153,7 @@ def main(group):
             "totalComps": len(who),
             "totalEvents": len({e["tid"] for v in entries.values() for e in v}),
             "totalEntries": sum(len(v) for v in entries.values()),
-            "droppedTeam": len(dropped)}
+            "droppedTeam": len(dropped), "thresh": thresh}
     json.dump({"entries": entries, "tour_info": tour_info, "tv": tv},
               open(f"{group}_clean.json", "w"), indent=1)
     json.dump(site, open(f"{group}_site.json", "w"), indent=1)
@@ -162,7 +165,7 @@ def main(group):
     print(f"\n  dropped {len(dropped)} non-doubles entries (club/5v5/clinic)")
     print(f"  {n} athletes · {site['totalEvents']} events · {site['totalComps']} competitions")
     print("  players-per-competition:", dict(sorted(dist.items(), reverse=True)))
-    print(f"  shared by {THRESH}+: {len(cols)} · by exactly 2: {len(pairs)}")
+    print(f"  shared by {thresh}+: {len(cols)} · by exactly 2: {len(pairs)}")
     return site
 
 
