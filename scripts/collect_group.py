@@ -12,9 +12,12 @@ from rosters import GROUPS, WINDOW
 API = "https://api-v8.volleyballlife.com"
 HDRS = {"User-Agent": "Mozilla/5.0", "Accept": "application/json"}
 COACH = ("coach", "coaches", "spectator", "parent")
-TEAM_DIVS = ("5v5", "club division", "open division", "club open", "future division",
-             "(5 pairs)", "5 pairs")
 THRESH = 3
+# Doubles only. A pairs entry carries exactly one partner; club and 5v5 formats carry
+# three or more, and a finish there reflects a squad rather than the individual. Roster
+# size is the reliable test — division names are inconsistent ("Open (5v5)", "OPEN",
+# "Club Division", "Girls Open (5 Pairs)" are all team events).
+PAIRS_PARTNERS = 1
 
 
 def req(path, data=None):
@@ -63,7 +66,7 @@ def shorten(name, limit=26):
 def main(group):
     g = GROUPS[group]
     lo, hi = WINDOW
-    entries, tour_info, tv = {}, {}, {}
+    entries, tour_info, tv, dropped = {}, {}, {}, []
 
     for name, pid, region in g["roster"]:
         prof = req(f"/playerprofile/{pid}") or {}
@@ -75,9 +78,13 @@ def main(group):
             div = (t.get("division") or "").strip()
             if any(c in div.lower() for c in COACH) or t.get("finish") in (None, 0):
                 continue
+            partners = [p["name"] for p in (t.get("partners") or [])]
+            if len(partners) != PAIRS_PARTNERS:
+                dropped.append((name, div, len(partners)))
+                continue
             rows.append({"tid": t["id"], "tdId": t.get("tdId"), "division": div,
                          "finish": t["finish"], "date": t["date"][:10],
-                         "partners": [p["name"] for p in (t.get("partners") or [])]})
+                         "partners": partners})
             tour_info[str(t["id"])] = {"name": t["tournament"].strip(),
                                        "date": t["date"][:10],
                                        "sanction": t.get("sanctioningBodyId")}
@@ -109,8 +116,7 @@ def main(group):
             comp[k] = {"key": k, "tid": e["tid"], "tdId": e["tdId"],
                        "event": ti["name"], "short": shorten(ti["name"]),
                        "division": e["division"], "field": e["field"],
-                       "date": ti["date"], "sanction": ti["sanction"] or "—",
-                       "team": any(t in e["division"].lower() for t in TEAM_DIVS)}
+                       "date": ti["date"], "sanction": ti["sanction"] or "—"}
             who[k][name] = e
 
     cols = [dict(comp[k], n=len(m)) for k, m in who.items() if len(m) >= THRESH]
@@ -143,7 +149,8 @@ def main(group):
             "players": pl, "comps": cols, "pairs": pairs,
             "totalComps": len(who),
             "totalEvents": len({e["tid"] for v in entries.values() for e in v}),
-            "totalEntries": sum(len(v) for v in entries.values())}
+            "totalEntries": sum(len(v) for v in entries.values()),
+            "droppedTeam": len(dropped)}
     json.dump({"entries": entries, "tour_info": tour_info, "tv": tv},
               open(f"{group}_clean.json", "w"), indent=1)
     json.dump(site, open(f"{group}_site.json", "w"), indent=1)
@@ -152,7 +159,8 @@ def main(group):
     for m in who.values():
         dist[len(m)] += 1
     n = len(g["roster"])
-    print(f"\n  {n} athletes · {site['totalEvents']} events · {site['totalComps']} competitions")
+    print(f"\n  dropped {len(dropped)} non-doubles entries (club/5v5/clinic)")
+    print(f"  {n} athletes · {site['totalEvents']} events · {site['totalComps']} competitions")
     print("  players-per-competition:", dict(sorted(dist.items(), reverse=True)))
     print(f"  shared by {THRESH}+: {len(cols)} · by exactly 2: {len(pairs)}")
     return site

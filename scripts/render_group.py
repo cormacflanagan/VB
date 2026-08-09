@@ -276,28 +276,30 @@ a {{ color:var(--accent); }}
   <h1>{T['title']}</h1>
   <p class="standfirst">All {N} athletes named to the {esc(D['label'])} roster for the Beach NTDP
   Summer Training Series at Chula Vista, against their Volleyball Life record for the twelve months
-  ending 9 August 2026. Each age division counts as its own competition &#8212; a 16U bracket and
-  the 18U bracket running beside it are different fields, so they are different columns. Every cell
-  is a finishing position; the size of that field is in the column head.</p>
+  ending 9 August 2026. <b>Doubles only</b> &#8212; club and five-a-side results are excluded,
+  because a squad finish says little about the individual. Each age division counts as its own
+  competition, so a 16U bracket and the 18U bracket running beside it are different columns. Every
+  cell is a finishing position; the size of that field is in the column head.</p>
   <div class="facts">
     <div class="fact"><b>{N}</b><span>Athletes</span></div>
     <div class="fact"><b>{D['totalEvents']}</b><span>Events attended</span></div>
-    <div class="fact"><b>{D['totalComps']}</b><span>Competitions</span></div>
+    <div class="fact"><b>{D['totalComps']}</b><span>Pairs competitions</span></div>
     <div class="fact"><b>{len(comps)}</b><span>Shared by 3+</span></div>
-    <div class="fact"><b>12&#8202;mo</b><span>Aug &#8217;25 &#8211; Aug &#8217;26</span></div>
+    <div class="fact"><b>{D['droppedTeam']}</b><span>Club results dropped</span></div>
   </div>
 </header>
 
 <section>
   <h2>The roster</h2>
   <p class="lede">TruVolley is Volleyball Life's skill rating &#8212; one number derived from
-  match-by-match results against rated opposition. Sorted strongest first.</p>
+  match-by-match results against rated opposition. It is computed by Volleyball Life across all
+  formats, so unlike the matrix below it still reflects club play. Sorted strongest first.</p>
   <div class="panel">
     <table class="roster">
       <thead><tr>
         <th scope="col">Athlete</th><th scope="col">USAV region</th><th scope="col">Club</th>
         <th scope="col">TruVolley</th><th scope="col">Peak</th>
-        <th scope="col">W&#8211;L</th><th scope="col">Comps</th>
+        <th scope="col">W&#8211;L</th><th scope="col">Pairs comps</th>
       </tr></thead>
       <tbody>
 {chr(10).join(roster)}
@@ -360,9 +362,13 @@ a {{ color:var(--accent); }}
     <li><b>Each division is its own competition.</b> At the AVP Juniors National Championships the
     18U, 17U, 16U and 15U brackets ran as separate fields; they appear as separate columns, and a
     5th in one says nothing about a 5th in another.</li>
-    <li><b>Five-a-side and club-format competitions are included.</b> The BVCA Orange County dates,
-    Club&#8202;v&#8202;Club and the AAU club championships are team events, so a finish there
-    reflects a squad rather than a pair. The division line names them.</li>
+    <li><b>Doubles only &#8212; club formats are excluded.</b> The BVCA Orange County dates,
+    Club&#8202;v&#8202;Club, the AAU club championships and every 3v3 or 5v5 division are team
+    events where a placing reflects a squad of five to twelve, not the athlete. {D['droppedTeam']}
+    such results were dropped. The test is roster size rather than the division name, which is
+    unreliable: &#8220;Open (5v5)&#8221;, &#8220;OPEN&#8221;, &#8220;Club Division&#8221; and
+    &#8220;Girls Open (5 Pairs)&#8221; are all team formats. Every entry kept has exactly one
+    partner.</li>
     <li><b>Ties are shared.</b> Beach draws award equal finishes to every team knocked out in the
     same round, which is why blocks of 5th, 9th and 17th recur down a column.</li>
     <li><b>Field size is the number of teams registered in that division</b>, as recorded by

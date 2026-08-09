@@ -11,6 +11,11 @@ Two groups are covered:
 | Girls U18 | 13 | [`docs/bntdp-18u.html`](docs/bntdp-18u.html) |
 | Girls U17 | 20 | [`docs/bntdp-17u.html`](docs/bntdp-17u.html) |
 
+**Doubles only.** Club, 3v3 and 5v5 results are excluded: a placing there reflects a squad
+of five to twelve, not the individual. The test is roster size rather than the division
+name, which is unreliable — "Open (5v5)", "OPEN", "Club Division" and "Girls Open (5 Pairs)"
+are all team formats. Every entry kept has exactly one partner.
+
 **Each age division is treated as its own competition.** The 18U bracket and the 16U
 bracket running beside it at the same event are different fields, so they are different
 competitions. The output is a players × competitions matrix: every cell is a finishing
@@ -67,16 +72,20 @@ be regenerated without re-querying the API.
 | | Girls U18 | Girls U17 |
 | --- | --- | --- |
 | Athletes | 13 | 20 |
-| Events attended | 100 | 135 |
-| Competitions (event × division) | 116 | 172 |
-| Shared by 3 or more | 26 | 33 |
-| Shared by exactly 2 | 27 | 38 |
+| Events attended (doubles) | 89 | 111 |
+| Pairs competitions (event × division) | 105 | 142 |
+| Shared by 3 or more | 20 | 25 |
+| Shared by exactly 2 | 25 | 30 |
+| Club results dropped | 40 | 73 |
 | Largest single turnout | 12 of 13 (U18 Trials) | 9 of 20 |
 
 The U18 group is far more concentrated: the U18 Beach National Team Trials put 12 of its
-13 into one 12-team field, and three more competitions drew 11. Nothing in the U17 year
+13 into one 12-team field, and two more competitions drew 11. Nothing in the U17 year
 gathers more than 9 of the 20, because that cohort splits across 15U, 16U, 17U and 18U
 brackets rather than converging on a single selection event.
+
+Dropping club formats hit the U17 group hardest — 73 results removed against the U18s' 40 —
+and removed the BVCA Orange County 5v5 series, which had been the U17s' densest column.
 
 ## Caveats
 
@@ -85,9 +94,8 @@ brackets rather than converging on a single selection event.
   in 18U and 63rd of 63 in 17U.
 - **Coach and spectator registrations appear in player histories** with a finish of 1.
   These are filtered out, otherwise they show up as phantom wins.
-- **Some competitions are club or five-a-side formats**, not pairs — the BVCA Orange
-  County dates, Club v Club and the AAU club championships. A finish there reflects a
-  squad rather than a duo; the division label names them.
+- **TruVolley still includes club play.** The rating column comes from Volleyball Life and
+  is computed across all formats, so unlike the matrix it is not doubles-only.
 - **Ties are shared.** Beach draws award equal finishes to teams knocked out in the same
   round, which is why blocks of 5th, 9th and 17th recur.
 - **A few field sizes are unavailable** where Volleyball Life reports a division team
