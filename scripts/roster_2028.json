@@ -727,8 +727,8 @@
  "population": 1574,
  "rated": 1373,
  "cut": {
-  "n60": 7.346,
-  "n61": 7.331,
-  "next": "Nikolina Mimic"
+  "nTop": 7.346,
+  "next": 7.331,
+  "nextName": "Nikolina Mimic"
  }
 }

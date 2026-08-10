@@ -63,6 +63,16 @@ def shorten(name, limit=26):
     return (cut or s[:limit]).rstrip(" -–,")
 
 
+def cutnote(g, n):
+    """One sentence on how close the cut-off was, for the methodology note."""
+    cut = g.get("cut") or {}
+    top, nxt, nm = cut.get("nTop"), cut.get("next"), cut.get("nextName")
+    if not (top and nxt and nm):
+        return ""
+    return (f"The cut is tight: #{n + 1} is {nm} at {nxt:.3f}, "
+            f"{top - nxt:.3f} behind #{n}.")
+
+
 def main(group):
     g = GROUPS[group]
     lo, hi = WINDOW
@@ -153,7 +163,9 @@ def main(group):
             "totalComps": len(who),
             "totalEvents": len({e["tid"] for v in entries.values() for e in v}),
             "totalEntries": sum(len(v) for v in entries.values()),
-            "droppedTeam": len(dropped), "thresh": thresh}
+            "droppedTeam": len(dropped), "thresh": thresh,
+            "population": g.get("population"), "ratedPop": g.get("ratedPop"),
+            "cutNote": cutnote(g, len(pl))}
     json.dump({"entries": entries, "tour_info": tour_info, "tv": tv},
               open(f"{group}_clean.json", "w"), indent=1)
     json.dump(site, open(f"{group}_site.json", "w"), indent=1)

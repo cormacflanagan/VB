@@ -1,17 +1,18 @@
-"""Close the class-of-2028 partner graph.
+"""Close a graduating class's partner graph: python3 close_class.py 2027
 
 The first crawl was only verified complete above the #30 rating cut-off. Widening the
 report to a top 50/60 needs the population complete further down, so this expands the
 partners of every known 2028 girl and repeats until a round finds nobody new above the
 floor. Updates pop2028.json in place.
 """
-import json, time, urllib.request
+import json, sys, time, urllib.request
 from concurrent.futures import ThreadPoolExecutor
 
 API = "https://api-v8.volleyballlife.com"
 HDRS = {"User-Agent": "Mozilla/5.0", "Accept": "application/json"}
-FLOOR = 7.0          # comfortably below any plausible top-60 cut
-MAX_ROUNDS = 4
+YEAR = int(sys.argv[1]) if len(sys.argv) > 1 else 2028
+FLOOR = 7.0   # comfortably below any plausible top-60 cut
+MAX_ROUNDS = 8
 
 
 def get(path):
@@ -25,11 +26,11 @@ def get(path):
     return None
 
 
-pop = json.load(open("pop2028.json"))
+pop = json.load(open(f"pop{YEAR}.json"))
 pop = {int(k): v for k, v in pop.items()}
 checked = set(pop)                      # ids known to be class-2028 girls
 try:
-    checked |= set(json.load(open("checked2028.json")))
+    checked |= set(json.load(open(f"checked{YEAR}.json")))
 except FileNotFoundError:
     pass
 
@@ -38,7 +39,7 @@ for rnd in range(MAX_ROUNDS):
     frontier = [pid for pid in pop if pid not in expanded]
     if not frontier:
         break
-    print(f"round {rnd}: expanding partners of {len(frontier)} known 2028 girls")
+    print(f"round {rnd}: expanding partners of {len(frontier)} known class-of-{YEAR} girls")
     with ThreadPoolExecutor(max_workers=8) as ex:
         profs = list(ex.map(lambda i: get(f"/playerprofile/{i}"), frontier))
     expanded |= set(frontier)
@@ -55,7 +56,7 @@ for rnd in range(MAX_ROUNDS):
 
     def check(pid):
         pr = get(f"/playerprofile/{pid}")
-        if pr and pr.get("gradYear") == 2028 and not pr.get("male"):
+        if pr and pr.get("gradYear") == YEAR and not pr.get("male"):
             tv = get(f"/playerprofile/{pid}/truvolley") or {}
             return pid, pr, tv
         return pid, None, None
@@ -69,7 +70,7 @@ for rnd in range(MAX_ROUNDS):
             added += 1
             pop[pid] = {
                 "id": pid, "name": f'{pr.get("firstName")} {pr.get("lastName")}'.strip(),
-                "grad": 2028, "height": pr.get("height"), "club": pr.get("club"),
+                "grad": YEAR, "height": pr.get("height"), "club": pr.get("club"),
                 "city": pr.get("city"), "state": pr.get("state"),
                 "tv": tv.get("truVolley"), "peak": tv.get("peak"),
                 "conf": tv.get("confidence"), "w": tv.get("wins"),
@@ -77,9 +78,9 @@ for rnd in range(MAX_ROUNDS):
             }
             if (tv.get("truVolley") or 0) >= FLOOR:
                 above += 1
-    print(f"  new class-2028 girls: {added} (above {FLOOR}: {above}); population now {len(pop)}")
-    json.dump({str(k): v for k, v in pop.items()}, open("pop2028.json", "w"), indent=1)
-    json.dump(sorted(checked), open("checked2028.json", "w"))
+    print(f"  new class-{YEAR} girls: {added} (above {FLOOR}: {above}); population now {len(pop)}")
+    json.dump({str(k): v for k, v in pop.items()}, open(f"pop{YEAR}.json", "w"), indent=1)
+    json.dump(sorted(checked), open(f"checked{YEAR}.json", "w"))
     if above == 0:
         print("  converged: no new player above the floor")
         break

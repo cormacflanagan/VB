@@ -21,21 +21,19 @@ TEXT = {
                 "Training Series at Chula Vista, against their Volleyball Life record",
         "note": "",
     },
-    "2028": {
-        "eyebrow": "Girls beach volleyball &#183; Class of 2028 &#183; National top {N}",
-        "title": "The class of 2028, and <em>where the top {N} keep meeting</em>",
-        "lede": "The {N} highest-rated girls in the graduating class of 2028, against their "
+    "CLASS": {
+        "eyebrow": "Girls beach volleyball &#183; Class of {Y} &#183; National top {N}",
+        "title": "The class of {Y}, and <em>where the top {N} keep meeting</em>",
+        "lede": "The {N} highest-rated girls in the graduating class of {Y}, against their "
                 "Volleyball Life record",
         "note": "<li><b>How these {N} were chosen.</b> Volleyball Life publishes no class "
                 "ranking, so the field was built by crawling the partner graph outward from "
-                "known 2028 athletes and keeping every profile that reports a 2028 graduation "
+                "known athletes in the class and keeping every profile that reports a {Y} graduation "
                 "year. The crawl was then run to closure &#8212; repeatedly expanding the "
                 "partners of every player already found until a full round turned up nobody "
-                "new above a 7.0 rating floor. That took the population to <b>1,574 girls in "
-                "the class, 1,373 of them rated</b>; the {N} highest TruVolley scores are the "
-                "roster here. The final round added 563 players and not one of them cleared "
-                "the floor, so the cut is stable &#8212; though it is tight: #61 is Nikolina "
-                "Mimic at 7.331, fifteen thousandths behind #60. This is a ranking by rating, "
+                "new above a 7.0 rating floor. That took the cohort to <b>{POP} girls in "
+                "the class, {RATED} of them rated</b>; the {N} highest TruVolley scores are the "
+                "roster here. {CUT} This is a ranking by rating, "
                 "not a scouting opinion, and TruVolley rewards win rate, so a light schedule "
                 "in small fields can flatter a player.</li>",
     },
@@ -98,7 +96,11 @@ def build(group):
         H2H = None
     players, comps, pairs = D["players"], D["comps"], D["pairs"]
     N = len(players)
-    T = TEXT[group]
+    T = TEXT.get(group) or TEXT["CLASS"]
+    meta = D.get("meta") or {}
+    fmt = {"N": len(D["players"]), "Y": group,
+           "POP": f'{D.get("population") or 0:,}', "RATED": f'{D.get("ratedPop") or 0:,}',
+           "CUT": D.get("cutNote", "")}
 
     lo, hi = 6.7, 9.7
     showht = any(p.get("height") for p in players)
@@ -177,12 +179,18 @@ def build(group):
         <td>{plink(b['name'], b.get('id'))} <b class="pos">{b['f']}{ord_(b['f'])}</b></td>
       </tr>""")
 
-    HILITE = {"2028": ("Lucy Matuszak", "Haisley Flanagan", "Lia Ray",
+    PICKED = {"2028": ("Lucy Matuszak", "Haisley Flanagan", "Lia Ray",
                        "Reese Hislop", "Karsyn Smith", "Ella Buchanan"),
               "17U": ("Lucy Matuszak", "Haisley Flanagan", "Olivia LeDoyen",
                       "Charlotte Jansen", "Elyse Smelcer"),
               "18U": ("Lauren Leach", "Olivia Herron", "Janie McCanna",
-                      "Sarah Albers", "Jordyn Wilson")}[group]
+                      "Sarah Albers", "Jordyn Wilson")}
+    if group in PICKED:
+        HILITE = PICKED[group]
+    else:                      # label the extremes: rating leader, busiest, lightest
+        byc = sorted(players, key=lambda p: p["comps"])
+        HILITE = tuple({players[0]["name"], byc[-1]["name"], byc[-2]["name"],
+                        byc[0]["name"], players[len(players) // 2]["name"]})
     fig, slope, rr = scatter(players, HILITE)
     per10 = slope * 10
     stat = f"r&nbsp;=&nbsp;{rr:+.2f}, r&#178;&nbsp;=&nbsp;{rr * rr:.2f}"
@@ -473,9 +481,9 @@ a {{ color:var(--accent); }}
 
 <div class="wrap">
 <header>
-  <p class="eyebrow">{T['eyebrow'].format(N=N)}</p>
-  <h1>{T['title'].format(N=N)}</h1>
-  <p class="standfirst">{T['lede'].format(N=N)} for the twelve months
+  <p class="eyebrow">{T['eyebrow'].format(**fmt)}</p>
+  <h1>{T['title'].format(**fmt)}</h1>
+  <p class="standfirst">{T['lede'].format(**fmt)} for the twelve months
   ending 9 August 2026. <b>Doubles only</b> &#8212; club and five-a-side results are excluded,
   because a squad finish says little about the individual. Each age division counts as its own
   competition, so a 16U bracket and the 18U bracket running beside it are different columns. Every
@@ -587,7 +595,7 @@ a {{ color:var(--accent); }}
     denominator unchanged.</li>
     <li><b>Sanctioning bodies</b> are tagged in each column head: AVPA (AVP and AVP Juniors),
     USAV, AAU, BVCA, CBVA and p1440.</li>
-    {T['note'].format(N=N)}
+    {T['note'].format(**fmt)}
   </ul>
 </section>
 <footer>

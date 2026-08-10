@@ -37,14 +37,24 @@ Two needed manual resolution, both in the U17 group:
 - **Ashley Ruschill** has two profiles; 105245 is the active one (118 events), 247847 is a
   near-empty duplicate with nothing inside the window.
 
-## The class-of-2028 group
+## Graduating-class groups
 
-Volleyball Life publishes no class ranking, so this group is derived rather than read off a
-page. `scripts/discover2028.py` crawls the partner graph outward from 16 known 2028 athletes
-on the two NTDP rosters, keeping every player whose profile reports `gradYear == 2028` and
-`male == false`. `scripts/close2028.py` then runs that crawl **to closure**: it repeatedly
-expands the partners of every player already found, stopping only when a full round turns up
-nobody new above a 7.0 rating floor.
+Volleyball Life publishes no class ranking, so these groups are derived rather than read off
+a page. `scripts/discover_class.py <year>` crawls the partner graph outward from a seed set
+of known athletes in that class, keeping every player whose profile reports the matching
+`gradYear` and `male == false`. `scripts/close_class.py <year>` then runs that crawl **to
+closure**: it repeatedly expands the partners of every player already found, stopping only
+when a full round turns up nobody new above a 7.0 rating floor.
+
+Adding a class means adding a seed dictionary to `discover_class.py`; any `roster_<year>.json`
+it produces is auto-registered as a group by `rosters.py`, which also picks the
+shared-competition threshold from the roster size.
+
+**Closure is not optional.** A discovery run that stops on its round cap has *not* proved
+anything about the cut-off, and the 2027 run did exactly that on its first attempt — six
+rounds, 1,780 girls found, and 737 candidates still unchecked. `discover_class.py` now tracks
+convergence explicitly and prints a warning when it stops on the cap, so a capped run cannot
+be mistaken for a closed one.
 
 Closure matters more than it sounds. A two-hop crawl found 449 girls, and spot-checking it
 against a top-30 cut suggested it was complete — but that only ever proved completeness

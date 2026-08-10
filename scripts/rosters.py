@@ -51,18 +51,21 @@ GROUPS = {
     },
 }
 
-# The class-of-2028 group is generated, not published: see discover2028.py. Its roster is
-# the 30 highest-TruVolley girls in a partner-graph crawl of the class (449 found, 410
-# rated). A convergence pass over the top 60's partners surfaced 50 more players and none
-# above the #30 cut, so the top 30 is stable.
-try:
-    import json as _json, os as _os
-    _p = _os.path.join(_os.path.dirname(__file__), "roster_2028.json")
+# Class groups are generated rather than published: see discover_class.py. Each
+# roster_<year>.json holds the top N of that graduating class by TruVolley, drawn from a
+# partner-graph crawl run to closure. Any such file present is registered as a group.
+import glob as _glob, json as _json, os as _os, re as _re
+
+for _p in sorted(_glob.glob(_os.path.join(_os.path.dirname(__file__) or ".", "roster_*.json"))):
+    _m = _re.search(r"roster_(\d{4})\.json$", _p)
+    if not _m:
+        continue
     _d = _json.load(open(_p))
-    GROUPS["2028"] = {"label": _d["label"],
-                      "roster": [tuple(x) for x in _d["roster"]],
-                      "meta": _d.get("meta", {}), "thresh": 8}
-except FileNotFoundError:
-    pass
+    GROUPS[_m.group(1)] = {"label": _d["label"],
+                           "roster": [tuple(x) for x in _d["roster"]],
+                           "meta": _d.get("meta", {}),
+                           "cut": _d.get("cut"), "population": _d.get("population"),
+                           "ratedPop": _d.get("rated"),
+                           "thresh": 8 if len(_d["roster"]) >= 50 else 5}
 
 WINDOW = ("2025-08-09", "2026-08-09")
