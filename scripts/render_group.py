@@ -4,6 +4,7 @@
 """
 import json, sys, html
 from scatter import scatter
+from h2hview import crosstable, rivalries, summarise
 
 TEXT = {
     "18U": {
@@ -91,12 +92,26 @@ def clink(c, text, cls="lnk"):
 
 def build(group):
     D = json.load(open(f"{group}_site.json"))
+    try:
+        H2H = json.load(open(f"{group}_h2h.json"))
+    except FileNotFoundError:
+        H2H = None
     players, comps, pairs = D["players"], D["comps"], D["pairs"]
     N = len(players)
     T = TEXT[group]
 
     lo, hi = 6.7, 9.7
     showht = any(p.get("height") for p in players)
+    HREC = summarise(H2H) if H2H else {}
+
+    def h2hcell(p):
+        if not H2H:
+            return ""
+        r = HREC.get(p["name"])
+        if not r or not (r["w"] + r["l"]):
+            return '\n        <td class="num dim">&#8212;</td>'
+        return (f'\n        <td class="num nw">{r["w"]}&#8202;&#8211;&#8202;{r["l"]}'
+                f'<span class="dv"> {r["w"]/(r["w"]+r["l"])*100:.0f}%</span></td>')
 
     def htcell(p):
         return f'\n        <td class="num nw">{esc(p.get("height") or "—")}</td>' if showht else ""
@@ -115,7 +130,7 @@ def build(group):
         </td>
         <td class="num dim">{p['peak']:.3f}</td>
         <td class="num nw">{p['w']}&#8202;&#8211;&#8202;{p['l']}</td>
-        <td class="num">{p['comps']}</td>
+        <td class="num">{p['comps']}</td>{h2hcell(p)}
       </tr>""")
 
     head = []
@@ -184,6 +199,44 @@ def build(group):
     figcap = (f"Each dot is one athlete; {len(players)} plotted. " + trend
               + " Named points are the extremes and the athletes discussed in the notes; "
                 "the roster table above is the full table view.")
+
+    h2h_section = ""
+    if H2H:
+        nmatch = sum(p["aWins"] + p["bWins"] for p in H2H["pairs"])
+        met = len(H2H["pairs"])
+        possible = N * (N - 1) // 2
+        h2h_section = f"""<section>
+  <h2>Head to head</h2>
+  <p class="lede">Actual matches, not finishing positions. {met} of the {possible} possible
+  pairings in this group have met across the net at least once, over {nmatch} results drawn
+  from {H2H['matches']:,} doubles matches. Rows are athletes in rating order, columns are the
+  same athletes by rank number; a cell is the row player's record against that column player.
+  Hover for the last meeting.</p>
+  {crosstable(players, H2H)}
+  <div class="legend">
+    <span class="key"><span class="sw ct-up"></span> Row player ahead</span>
+    <span class="key"><span class="sw ct-dn"></span> Row player behind</span>
+    <span class="key"><span class="sw ct-lv"></span> Level</span>
+    <span class="key"><span class="sw ct-none"></span> Never met</span>
+  </div>
+</section>
+
+<section>
+  <h2>The rivalries</h2>
+  <p class="lede">The pairings contested most often, with the result of their latest meeting.</p>
+  <div class="panel">
+    <table class="pairs">
+      <thead><tr>
+        <th scope="col">Mtchs</th><th scope="col">Athlete</th><th scope="col">Record</th>
+        <th scope="col">Athlete</th><th scope="col">Last meeting</th>
+      </tr></thead>
+      <tbody>
+{rivalries(players, H2H)}
+      </tbody>
+    </table>
+  </div>
+</section>
+"""
 
     regionhdr = "State" if group == "2028" else "USAV region"
     others = {"18U": "17U group and the class of 2028",
@@ -362,6 +415,44 @@ table {{ border-collapse:collapse; width:100%; }}
   paint-order:stroke; stroke:var(--surface); stroke-width:3px; }}
 .figcap {{ color:var(--faint); font-size:12px; margin:10px 0 0; max-width:76ch; }}
 
+
+.ct-wrap {{ border:1px solid var(--line); border-radius:3px; background:var(--surface);
+  overflow:auto; max-height:78vh; }}
+.ct {{ border-collapse:separate; border-spacing:0; }}
+.ct th, .ct td {{ border-bottom:1px solid var(--hair); border-right:1px solid var(--hair); }}
+.ct-corner {{ position:sticky; left:0; top:0; z-index:4; background:var(--wash);
+  width:210px; min-width:210px; padding:10px 14px; text-align:left; vertical-align:bottom;
+  font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint);
+  font-weight:650; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }}
+.ct-h {{ position:sticky; top:0; z-index:2; background:var(--wash); width:40px; min-width:40px;
+  padding:8px 2px; border-bottom:1px solid var(--line);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:10.5px;
+  color:var(--muted); font-weight:650; font-variant-numeric:tabular-nums; }}
+.ct-row {{ position:sticky; left:0; z-index:3; background:var(--surface); width:210px;
+  min-width:210px; padding:7px 12px 7px 10px; text-align:left; font-weight:500;
+  font-size:12.5px; color:var(--ink); white-space:nowrap;
+  border-right:1px solid var(--line); }}
+.ct-rank {{ display:inline-block; min-width:22px; color:var(--faint);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:11px; }}
+.ct-c {{ width:40px; min-width:40px; text-align:center; padding:6px 2px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:11.5px;
+  font-variant-numeric:tabular-nums; color:var(--body); }}
+.ct-c.up {{ background:var(--accent-soft); color:var(--accent); font-weight:650; }}
+.ct-c.dn {{ background:var(--gold-soft); color:var(--gold); font-weight:650; }}
+.ct-c.lv {{ background:color-mix(in srgb,var(--wash) 70%,transparent); }}
+.ct-c.none {{ background:transparent; }}
+.ct-c.self {{ background:repeating-linear-gradient(-45deg,transparent,transparent 4px,
+  var(--hair) 4px,var(--hair) 5px); }}
+.ct tbody tr:hover .ct-c {{ box-shadow:inset 0 0 0 99px rgba(127,127,127,.05); }}
+.sc.up {{ color:var(--accent); font-weight:700; }}
+.sc.dn {{ color:var(--gold); font-weight:700; }}
+.sc.lv {{ color:var(--muted); font-weight:700; }}
+.ct-last {{ font-size:12px; color:var(--muted); }}
+
+.sw.ct-up {{ background:var(--accent-soft); }}
+.sw.ct-dn {{ background:var(--gold-soft); }}
+.sw.ct-lv {{ background:color-mix(in srgb,var(--wash) 70%,transparent); }}
+.sw.ct-none {{ background:var(--surface); }}
 .notes {{ margin:0 0 60px; }}
 .notes ul {{ padding-left:19px; margin:10px 0 0; }}
 .notes li {{ margin:7px 0; font-size:13.5px; color:var(--muted); max-width:76ch; }}
@@ -408,7 +499,7 @@ a {{ color:var(--accent); }}
       <thead><tr>
         <th scope="col">Athlete</th><th scope="col">{regionhdr}</th><th scope="col">Club</th>{'<th scope="col">Height</th>' if showht else ''}
         <th scope="col">TruVolley</th><th scope="col">Peak</th>
-        <th scope="col">W&#8211;L</th><th scope="col">Pairs comps</th>
+        <th scope="col">W&#8211;L</th><th scope="col">Pairs comps</th>{'<th scope="col">Vs this group</th>' if H2H else ''}
       </tr></thead>
       <tbody>
 {chr(10).join(roster)}
@@ -475,6 +566,7 @@ a {{ color:var(--accent); }}
   </div>
 </section>
 
+{h2h_section}
 <section class="notes">
   <h2>How to read it</h2>
   <ul>

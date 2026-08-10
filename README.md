@@ -74,6 +74,7 @@ All read from the Volleyball Life public API at `https://api-v8.volleyballlife.c
 | `GET /playerprofile/{id}/truvolley` | TruVolley rating, peak, confidence, win/loss record |
 | `POST /Tournament/CountsV3Bulk` | Team count per division — the field size denominator |
 | `GET /vision/players` | Opt-in recruiting directory: height, side, block touch (sparse) |
+| `POST /playerprofile/feed/matches` | Match-level results: opponents, sets, phase — the head-to-head source |
 
 Field size comes from the team count of the specific division the athlete competed in,
 matched by `tdId`. Division names alone are not sufficient: one event runs several
@@ -129,6 +130,25 @@ Every athlete name and every competition name in the reports is a link:
 Competitions link to the **division** page rather than the event, so the destination is the
 exact field the cell is scored against — the 16U bracket, not the whole tournament that also
 ran 18U and 15U beside it. Both URL shapes were checked against the live site.
+
+## Head-to-head
+
+A finishing position only says who placed higher in the same field; it does not say the two
+players ever met. `scripts/h2h.py` pulls actual matches from `POST /playerprofile/feed/matches`
+(body `{playerIds, tournamentIds}`) and reconstructs both sides of the net from the querying
+player plus her partners versus her opponents.
+
+A match is returned once per player queried, so results are de-duplicated on `matchId`. Where
+two group members were opponents *as a pair*, the match correctly counts against each of them;
+where they played together it is recorded as a partnership instead, not a head-to-head. Only
+doubles matches are kept, the same rule the rest of the analysis uses.
+
+For the class-of-2028 group that is **3,498 distinct doubles matches**, of which **607 results
+across 451 pairings** were contested between two members of the top 60 — 451 of the 1,770
+possible pairings have met at least once. `scripts/h2hview.py` renders a round-robin
+crosstable (rows are athletes in rating order, columns the same athletes by rank number) and a
+rivalry list. Cell colour is diverging: one pole for the row player ahead, the other for
+behind, neutral for level, blank for never met.
 
 ## The rating-against-workload figure
 
