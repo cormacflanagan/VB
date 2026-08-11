@@ -46,6 +46,7 @@ def build(group):
                 f'{esc(nm)}</a>') if pid else esc(nm)
 
     # ---- matrix ----
+    tvof = {p["name"]: p["tv"] for p in players}
     mrows = []
     for a in order:
         cells = []
@@ -59,7 +60,8 @@ def build(group):
                 continue
             cells.append(f'<td class="pc s{step(n)}" title="{esc(a)} and {esc(b)} played '
                          f'{n} competition{"s" if n != 1 else ""} together">{n}</td>')
-        mrows.append(f'<tr><th class="pr"><span class="rk">{rank[a]}</span>{lnk(a)}</th>'
+        mrows.append(f'<tr><th class="pr"><span class="rk">{rank[a]}</span>{lnk(a)}'
+                     f'<span class="tvc">{tvof[a]:.2f}</span></th>'
                      + "".join(cells) + "</tr>")
     heads = "".join(f'<th class="ph" title="{esc(n)}">{rank[n]}</th>' for n in order)
 
@@ -76,6 +78,7 @@ def build(group):
         outside = "" if top in grp else '<i class="out" title="not in this group">&#9679;</i>'
         prows.append(f"""      <tr>
         <th scope="row"><span class="rk">{rank[n]}</span>{lnk(n)}</th>
+        <td class="num tv">{p['tv']:.3f}</td>
         <td class="num">{comps}</td>
         <td class="num big">{distinct or '&#8212;'}</td>
         <td class="num dim">{ingrp}</td>
@@ -164,6 +167,10 @@ tbody tr:hover td {{ background:var(--raise); }}
 .num {{ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   font-variant-numeric:tabular-nums; font-size:13px; }}
 .big {{ font-size:15px; font-weight:700; color:var(--ink); }}
+.tv {{ color:var(--ink); font-weight:600; }}
+.tvc {{ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:11px;
+  font-weight:650; color:var(--accent); background:var(--accent-soft); border-radius:2px;
+  padding:1px 5px; margin-left:7px; font-variant-numeric:tabular-nums; }}
 .dim {{ color:var(--faint); }}
 .nw {{ white-space:nowrap; }}
 .rk {{ display:inline-block; min-width:24px; color:var(--faint);
@@ -243,7 +250,8 @@ a {{ color:var(--accent); }}
   <div class="panel">
     <table>
       <thead><tr>
-        <th scope="col">Athlete</th><th scope="col">Comps</th><th scope="col">Partners</th>
+        <th scope="col">Athlete</th><th scope="col">TruVolley</th>
+        <th scope="col">Comps</th><th scope="col">Partners</th>
         <th scope="col">In group</th><th scope="col">Most-used partner</th>
         <th scope="col">Share with her</th>
       </tr></thead>
