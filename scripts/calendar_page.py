@@ -43,21 +43,32 @@ NTDP_NEXT = [{"date": "2026-09-25", "endDate": "2026-09-27", "season": "Fall",
                      "/beach-ntdp/beach-ntdp-training-series/"}]
 
 
-def as_training(t):
+def as_training(t, tiers):
+    """Fill the tier columns for a camp: how many of each cut were on its roster."""
     """A training series dressed up as a calendar event: a date to hold, not a field to win.
 
     Each girls' age group becomes a bracket, so a camp reads in the same shape as a
     tournament that ran several draws, with the roster size where the field size goes.
     """
+    def count(v):
+        """A camp roster against the class cuts, on id where we have one and name otherwise."""
+        ids = {a["id"] for a in v if a.get("id")}
+        names = {f"{a['first']} {a['last']}" for a in v}
+        return {k: sum(1 for n, i in cut.items() if i in ids or n in names)
+                for k, cut in tiers.items()}
+
+    brackets = []
+    for g, v in t["groups"].items():
+        c = count(v)
+        brackets.append({"bracket": g.replace("Girls ", "").replace("Women's ", ""),
+                         "roster": v, "divisions": [{"name": g, "n": len(v)}],
+                         "topFinishers": [], **c})
     return {"tid": None, "training": True, "url": t["story"],
             "name": f"Beach NTDP {t['season']} Training Series",
             "date": t["date"], "endDate": t["endDate"], "sanction": "USAV",
             "location": t["location"], "note": t.get("note", ""),
-            "t60": 0, "t30": 0, "t15": 0,
-            "brackets": [{"bracket": g.replace("Girls ", "").replace("Women's ", ""),
-                          "t60": 0, "t30": 0, "t15": 0, "roster": v,
-                          "divisions": [{"name": g, "n": len(v)}], "topFinishers": []}
-                         for g, v in t["groups"].items()]}
+            "brackets": brackets,
+            **{k: max((b[k] for b in brackets), default=0) for k in tiers}}
 
 
 def ntdp_attendance():
@@ -200,7 +211,10 @@ def build(group):
         if e:
             local_added.append(e)
     events += local_added
-    events += [as_training(t) for t in SERIES["series"]
+    # the class in rank order, so a camp roster can be scored against the same cuts
+    order = [(p["name"], p.get("id")) for p in json.load(open(f"{group}_site.json"))["players"]]
+    tiers = {"t60": dict(order), "t30": dict(order[:30]), "t15": dict(order[:15])}
+    events += [as_training(t, tiers) for t in SERIES["series"]
                if D["window"][0] <= t["date"] <= D["window"][1]]
     events.sort(key=lambda e: (e["date"], -max(b["t60"] for b in e["brackets"])))
     rowcount = sum(len(e["brackets"]) for e in events)
@@ -600,17 +614,23 @@ a {{ color:var(--accent); }}
   <p class="lede">One row per <i>bracket</i>, not per event: the 18U field and the 17U field
   running beside it are separate competitions, so each is counted and judged on its own. Every
   bracket that drew at least {MIN_TURNOUT} of the top 60 is here, oldest first; {dropped}
-  further brackets drew fewer and are left out &#8212; <b>except at {LOCAL_LABEL}</b>, where
-  {len(local_added)} dates are admitted by geography instead, marked <span class="lt">local</span>
-  and carrying no turnout because nobody in the class travelled to them. Those come from CBVA's
-  listing rather than the class's record, and show only the draws she would enter: the women's
-  open and A fields, and the girls' 18U. The NTDP's own four residential training series are in
-  too, marked <span class="lt tr">training</span>: they are invitational and produce no results,
-  so no turnout figure applies, but they are the dates the programme is actually built around.
-  Shading runs on the share of
-  each tier present, so the three columns are directly comparable: 12 of the top 15 shades
-  darker than 21 of the top 30. Event names link to Volleyball Life; the last column is next
-  season's edition where one is already scheduled.</p>
+  further brackets drew fewer and are left out &#8212; with two exceptions, both admitted on
+  something other than turnout.</p>
+  <p class="lede"><b>{LOCAL_LABEL}</b>, marked <span class="lt">local</span>: {len(local_added)}
+  dates admitted by geography, because an hour's drive changes what is worth entering. They come
+  from CBVA's listing rather than the class's record, so they appear whether or not anyone in the
+  class went, and show only the draws she would enter &#8212; the women's open and A fields, and
+  the girls' 18U. An 18U date nobody in the class entered is dropped: the Cal&#8202;Cup bid series
+  runs the same Wednesday draw eight times, and an empty one carries nothing the week either side
+  does not.</p>
+  <p class="lede"><b>The four NTDP training series</b>, marked
+  <span class="lt tr">training</span>: invitational residential camps that produce no result, so
+  their turnout columns count who was <i>selected</i>, not who entered. Rosters come from USA
+  Volleyball &#8212; one row per girls' age group, the roster size where a field size would go,
+  and the names on hover.</p>
+  <p class="lede">Shading runs on the share of each tier present, so the three columns are
+  directly comparable: 12 of the top 15 shades darker than 21 of the top 30. Event names link to
+  Volleyball Life; the last column is next season's edition where one is already scheduled.</p>
   <div class="panel">
     <table>
       <thead><tr>
@@ -693,7 +713,8 @@ a {{ color:var(--accent); }}
     <li><b>The training series are not tournaments.</b> They are invitational residential
     camps with no draw and no result, so Volleyball Life has no record of them; dates and
     rosters come from USA Volleyball, and each row links to the announcement they were read
-    from. The age groups vary by series &#8212; the spring series ran no U18 group at all,
+    from. Their turnout columns are a count of selections, not entries, and they are not
+    comparable with a tournament's: a camp roster is a dozen or two by design. The age groups vary by series &#8212; the spring series ran no U18 group at all,
     because the Girls U18 National Team trained alongside it instead. The winter series for
     {int(wto[:4])}&#8211;{int(wto[:4])+1} has not been dated yet.</li>
     <li><b>An invitation is not a result, but it repeats.</b> Across the four series
