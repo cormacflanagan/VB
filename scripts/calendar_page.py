@@ -12,6 +12,14 @@ FOCUS = "17U"
 TIERS = (("t60", 60, "Top 60"), ("t30", 30, "Top 30"), ("t15", 15, "Top 15"))
 
 
+# CBVA runs much of the Southern California circuit but Volleyball Life sanctions it
+# "AVPA", so membership comes from CBVA's own listing (scripts/cbva.py), not the name.
+try:
+    CBVA = json.load(open("cbva_links.json"))
+except FileNotFoundError:
+    CBVA = {}
+
+
 def esc(s):
     return html.escape(str(s), quote=True)
 
@@ -19,6 +27,16 @@ def esc(s):
 def dfmt(iso):
     y, m, d = (int(x) for x in iso.split("-"))
     return datetime.date(y, m, d)
+
+
+def body(e):
+    """Sanctioning tag, plus a link out to CBVA's own page where CBVA lists the event."""
+    out = f'<span class="sanc">{esc(e["sanction"])}</span>'
+    cb = CBVA.get(str(e["tid"]))
+    if cb:
+        out += (f'<a class="sanc cbva" href="{esc(cb["url"])}" target="_blank" '
+                f'rel="noopener" title="This event on CBVA">CBVA</a>')
+    return out
 
 
 def heat(n, size):
@@ -111,7 +129,7 @@ def build(group):
           rel="noopener">{esc(e['name'])}</a></td>"""
                 tail = "" if i else f"""
         <td class="loc"{rs}>{esc(e['location']) if e['location'] else '&#8212;'}</td>
-        <td{rs}><span class="sanc">{esc(e['sanction'])}</span></td>
+        <td class="bdy"{rs}>{body(e)}</td>
         <td class="nxc"{rs}>{nxt or '<span class="dim">&#8212;</span>'}</td>"""
                 rows.append(f"""      <tr class="{'evs' if not i else 'evc2'}">{lead}
         <td class="brk"><b>{esc(b['bracket'])}</b><span class="dv">{divs}</span></td>
@@ -125,7 +143,7 @@ def build(group):
           rel="noopener">{esc(e['name'])}</a><span class="dv">{
           ", ".join(esc(d['name']) for d in b['divisions'])}</span></td>
         <td class="loc">{esc(e['location']) if e['location'] else '&#8212;'}</td>
-        <td><span class="sanc">{esc(e['sanction'])}</span></td>""" + "".join(
+        <td class="bdy">{body(e)}</td>""" + "".join(
             f'<td class="ht h{heat(b[k2], size)}" title="{b[k2]} of the {label.lower()}">'
             f'{b[k2] or "&#183;"}</td>' for k2, size, label in TIERS) + f"""
         <td class="nxc">{
@@ -247,7 +265,12 @@ tbody tr:hover td {{ background:var(--raise); }}
   font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:10.5px; }}
 .loc {{ font-size:12.5px; color:var(--muted); max-width:200px; }}
 .sanc {{ font-size:9.5px; letter-spacing:.07em; text-transform:uppercase; color:var(--muted);
-  border:1px solid var(--line); border-radius:2px; padding:2px 5px; white-space:nowrap; }}
+  border:1px solid var(--line); border-radius:2px; padding:2px 5px; white-space:nowrap;
+  display:inline-block; }}
+.bdy {{ white-space:nowrap; }}
+.cbva {{ color:var(--accent); border-color:var(--accent-soft); text-decoration:none;
+  font-weight:650; margin-left:5px; }}
+.cbva:hover {{ background:var(--accent-soft); }}
 .ht {{ width:52px; text-align:center; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   font-variant-numeric:tabular-nums; font-size:13.5px; font-weight:650; color:var(--hink1);
   border-left:2px solid var(--surface); }}
@@ -417,6 +440,12 @@ a {{ color:var(--accent); }}
     stops are typically published a few months out, so they will appear closer to the date.
     Matching is by name after stripping years and ordinals, so a renamed event will also
     miss.</li>
+    <li><b>CBVA events link out to CBVA.</b> CBVA runs much of the Southern California
+    circuit, but Volleyball Life records the sanction as "AVPA", so the name and the sanction
+    field cannot tell you which events are theirs. The tag is set by matching our events against
+    CBVA's own tournament listing on date and venue, so an event carries it only when CBVA
+    lists it; the link goes to that event's CBVA page, and to the specific division where the
+    two agree on its name.</li>
     <li><b>Locations come from the tournament record</b> and are blank where the organiser left
     them unset, which is common for one-day local events.</li>
   </ul>

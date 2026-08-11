@@ -164,10 +164,28 @@ Every athlete name and every competition name in the reports is a link:
 | --- | --- |
 | Athlete name (roster, matrix row, appendix, chart label and dot) | `volleyballlife.com/player/{playerProfileId}` |
 | Competition name (matrix column head, appendix) | `volleyballlife.com/tournament/{tournamentId}/division/{tdId}` |
+| CBVA tag, where CBVA runs the event | `cbva.com/tournaments/{id}[/{divisionId}]` |
 
 Competitions link to the **division** page rather than the event, so the destination is the
 exact field the cell is scored against — the 16U bracket, not the whole tournament that also
 ran 18U and 15U beside it. Both URL shapes were checked against the live site.
+
+## CBVA
+
+CBVA runs much of the Southern California circuit, but Volleyball Life records the sanction as
+"AVPA" — the field is useless for identifying their events, and the name only sometimes says
+"CBVA". So membership is established against CBVA itself. `scripts/cbva.py` crawls
+`cbva.com/tournaments`, which is server-rendered and filterable by date, a month at a time —
+**194 tournaments** across the window — then `--link` matches ours to theirs on date plus venue,
+after normalising away the words the two sites disagree about ("pier", "beach", "courts").
+
+**48 of our 467 events matched**, 46 of them to a specific division, and only 8 carry "CBVA" in
+the Volleyball Life name — so a name test would have missed five in six. Matched events carry a
+CBVA tag beside the sanction: in the reports on the matrix column head and the appendix row, in
+the calendar in the Body column.
+
+CBVA's tournament pages render client-side, so their content cannot be verified by fetching
+them; the IDs come from CBVA's own anchors on the listing page and the URLs return 200.
 
 ## Head-to-head
 

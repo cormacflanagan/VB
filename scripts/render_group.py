@@ -83,10 +83,28 @@ def plink(name, pid, cls="lnk"):
             f'rel="noopener">{esc(name)}</a>')
 
 
-def clink(c, text, cls="lnk"):
+# CBVA runs much of the Southern California circuit but Volleyball Life sanctions it
+# "AVPA", so membership is taken from CBVA's own listing rather than from the name.
+try:
+    CBVA = json.load(open("cbva_links.json"))
+except FileNotFoundError:
+    CBVA = {}
+
+
+def cbva_tag(c, sep=" &#183; "):
+    """A link out to CBVA's own page, where CBVA lists the event."""
+    cb = CBVA.get(str(c["tid"]))
+    if not cb:
+        return ""
+    return (f'{sep}<a class="cbva" href="{esc(cb["url"])}" target="_blank" rel="noopener" '
+            f'title="This event on CBVA">CBVA</a>')
+
+
+def clink(c, text, cls="lnk", cbva=False):
     """Competition name linked to its division page, which is the field the cell scores."""
-    return (f'<a class="{cls}" href="{VBL}/tournament/{c["tid"]}/division/{c["tdId"]}" '
-            f'target="_blank" rel="noopener">{esc(text)}</a>')
+    out = (f'<a class="{cls}" href="{VBL}/tournament/{c["tid"]}/division/{c["tdId"]}" '
+           f'target="_blank" rel="noopener">{esc(text)}</a>')
+    return out + (cbva_tag(c, sep=" ") if cbva else "")
 
 
 def build(group):
@@ -153,7 +171,8 @@ def build(group):
             f'<span class="evn">{clink(c, c["short"])}</span>'
             f'<span class="evdiv">{esc(c["division"])}</span>'
             f'<span class="field">{esc(fld)}</span>'
-            f'<span class="evd">{c["date"][5:7]}/{c["date"][8:10]} &#183; {esc(c["sanction"])}</span>'
+            f'<span class="evd">{c["date"][5:7]}/{c["date"][8:10]} &#183; {esc(c["sanction"])}'
+            f'{cbva_tag(c, sep="<br>")}</span>'
             f'<span class="evc">{c["n"]}&#8201;of&#8201;{N}</span></th>')
 
     rows = []
@@ -183,7 +202,7 @@ def build(group):
         a, b = c["players"]
         prs.append(f"""      <tr>
         <td class="num dim nw">{esc(c['date'])}</td>
-        <td><span class="evn2">{clink(c, tidy(c['event']))}</span><span class="dv">{esc(c['division'])}</span></td>
+        <td><span class="evn2">{clink(c, tidy(c['event']), cbva=True)}</span><span class="dv">{esc(c['division'])}</span></td>
         <td class="num">{c['field'] if c['field'] else '&#8211;'}</td>
         <td>{plink(a['name'], a.get('id'))} <b class="pos">{a['f']}{ord_(a['f'])}</b></td>
         <td>{plink(b['name'], b.get('id'))} <b class="pos">{b['f']}{ord_(b['f'])}</b></td>
@@ -403,6 +422,10 @@ table {{ border-collapse:collapse; width:100%; }}
 .sw.t5 {{ background:var(--surface); }}
 .evn2 {{ display:block; color:var(--ink); font-weight:600; font-size:13.5px; }}
 .dv {{ display:block; font-size:11.5px; color:var(--faint); }}
+.cbva {{ font-size:9.5px; letter-spacing:.07em; text-transform:uppercase; color:var(--accent);
+  border:1px solid var(--accent-soft); border-radius:2px; padding:1px 4px; margin-left:6px;
+  text-decoration:none; white-space:nowrap; vertical-align:1px; font-weight:650; }}
+.cbva:hover {{ background:var(--accent-soft); }}
 .pos {{ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   color:var(--ink); font-weight:700; font-variant-numeric:tabular-nums; }}
 .pairs td {{ font-size:13.5px; }}
@@ -599,6 +622,9 @@ a {{ color:var(--accent); }}
     unreliable: &#8220;Open (5v5)&#8221;, &#8220;OPEN&#8221;, &#8220;Club Division&#8221; and
     &#8220;Girls Open (5 Pairs)&#8221; are all team formats. Every entry kept has exactly one
     partner.</li>
+    <li><b>CBVA events carry a link to CBVA.</b> Volleyball Life sanctions the Southern
+    California circuit as "AVPA", so membership is taken from CBVA's own tournament listing,
+    matched on date and venue &#8212; an event is tagged only when CBVA itself lists it.</li>
     <li><b>Ties are shared.</b> Beach draws award equal finishes to every team knocked out in the
     same round, which is why blocks of 5th, 9th and 17th recur down a column.</li>
     <li><b>Field size is the number of teams registered in that division</b>, as recorded by
