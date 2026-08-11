@@ -14,6 +14,7 @@ Three groups are covered:
 | Class of 2028 | 60 | Derived — see below | [`docs/bntdp-2028.html`](docs/bntdp-2028.html) |
 | Class of 2028 | 30 | Same cohort, tighter cut | [`docs/bntdp-2028_top30.html`](docs/bntdp-2028_top30.html) |
 | Class of 2028 | 20 | Same cohort, tightest cut | [`docs/bntdp-2028_top20.html`](docs/bntdp-2028_top20.html) |
+| **2027 and younger** | 60 | Age-eligible — see below | [`docs/bntdp-2027_younger.html`](docs/bntdp-2027_younger.html) |
 | **2028 and younger** | 60 | Age-eligible — see below | [`docs/bntdp-2028_younger.html`](docs/bntdp-2028_younger.html) |
 
 Two companion pages answer planning questions the matrix cannot:
@@ -71,6 +72,12 @@ third of the real field was invisible to the class grouping. They cluster at the
 inside the top 15 (Nariah Johnson at #6, Tristan Ana Del Riego #10, Brooke Proctor #12, Reagan
 Carlin #13 as a 2030, Ashley Ruschill #14), and eight in the last sixteen places. The cut is
 tight: #60 is Isabella Cordaway-Dreier at 7.625, a thousandth ahead of #61.
+
+**The 2027-and-younger cohort closed at 17,178 girls, 14,398 rated**, and it is the more
+striking of the two: **28 of its top 60 are younger than 2027** — 20 from 2028, 6 from 2029,
+2 from 2030. Nearly half the 18U field is younger than the class that names it. The top ten
+stays age-segregated (seven of the first ten are 2027s), but from #8 downward the classes
+interleave completely. Its cut is at 8.102, half a rating point above the 17U group's 7.625.
 
 Because a cohort spans several classes, the roster table carries a **Class** column and each
 matrix row a year badge — shown only when the group actually spans more than one year.
