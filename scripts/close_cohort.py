@@ -21,6 +21,7 @@ DATA = os.path.join(os.path.dirname(__file__) or ".", "..", "data")
 FLOOR = 7.0        # comfortably below any plausible top-60 cut
 MAX_ROUNDS = 8
 WORKERS = 10
+CHUNK = 400        # expansion checkpoint size
 
 
 def get(path):
@@ -79,20 +80,41 @@ def main(year):
 
     # a crawl this long will not always survive the machine it runs on, so pick up any
     # partial cohort left behind rather than paying for the early rounds twice
-    resumed = False
+    resumed, expanded = False, set(pop)
     try:
         prior = {int(k): v for k, v in
                  json.load(open(f"{DATA}/cohort{year}.json")).items()}
         if len(prior) > len(pop):
             pop, resumed = prior, True
             checked = set(pop) | set(json.load(open(f"{DATA}/cohortchecked{year}.json")))
-            print(f"resuming: {len(pop)} already admitted, {len(checked)} ids checked")
+            try:
+                expanded = set(json.load(open(f"{DATA}/cohortexpanded{year}.json")))
+            except FileNotFoundError:
+                expanded = set()
+            print(f"resuming: {len(pop)} admitted, {len(checked)} checked, "
+                  f"{len(expanded)} already expanded")
     except FileNotFoundError:
         pass
 
+    def expand(frontier):
+        """Fetch partners in chunks, checkpointing as we go: a long round has to survive
+        the machine restarting under it, or the crawl never finishes at all."""
+        out = set()
+        for i in range(0, len(frontier), CHUNK):
+            part = frontier[i:i + CHUNK]
+            with ThreadPoolExecutor(max_workers=WORKERS) as ex:
+                profs = list(ex.map(lambda p: get(f"/playerprofile/{p}"), part))
+            out |= {q["id"] for pr in profs for t in (pr or {}).get("tournaments", [])
+                    for q in (t.get("partners") or [])
+                    if q.get("id") and q["id"] not in checked}
+            expanded.update(part)
+            json.dump(sorted(expanded), open(f"{DATA}/cohortexpanded{year}.json", "w"))
+            print(f"    expanded {min(i + CHUNK, len(frontier))}/{len(frontier)}, "
+                  f"{len(out)} candidates so far", flush=True)
+        return out
+
     # round 0 is a re-check of what the class crawls threw away, not a fresh expansion
     cand = rejected_pool() - checked
-    expanded = set(pop) if not resumed else set()
     for rnd in range(MAX_ROUNDS):
         if rnd or resumed:
             frontier = [p for p in pop if p not in expanded]
@@ -100,12 +122,7 @@ def main(year):
                 print("converged: nobody left to expand")
                 break
             print(f"round {rnd}: expanding partners of {len(frontier)} new girls")
-            with ThreadPoolExecutor(max_workers=WORKERS) as ex:
-                profs = list(ex.map(lambda i: get(f"/playerprofile/{i}"), frontier))
-            expanded |= set(frontier)
-            cand = {q["id"] for pr in profs for t in (pr or {}).get("tournaments", [])
-                    for q in (t.get("partners") or [])
-                    if q.get("id") and q["id"] not in checked}
+            cand = expand(frontier)
         else:
             print(f"round 0: re-checking {len(cand)} ids the class crawls rejected")
         if not cand:
