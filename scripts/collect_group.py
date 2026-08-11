@@ -100,7 +100,7 @@ def main(group):
                                        "sanction": t.get("sanctioningBodyId")}
         entries[name] = rows
         tv[name] = {"region": region, "id": pid, "club": prof.get("club"),
-                    "height": prof.get("height"),
+                    "height": prof.get("height"), "grad": prof.get("gradYear"),
                     "cityState": f'{prof.get("city")}, {prof.get("state")}',
                     "truvolley": rating.get("truVolley"), "peak": rating.get("peak"),
                     "conf": rating.get("confidence"),
@@ -140,7 +140,7 @@ def main(group):
         p = tv[name]
         pl.append({
             "name": name, "id": p["id"], "region": p["region"], "club": p["club"],
-            "height": p.get("height"),
+            "height": p.get("height"), "grad": p.get("grad"),
             "city": p["cityState"], "tv": p["truvolley"], "peak": p["peak"],
             "w": p["w"], "l": (p["matches"] or 0) - (p["w"] or 0),
             "comps": len({f'{x["tid"]}:{x["tdId"]}' for x in entries[name]}),

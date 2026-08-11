@@ -21,7 +21,8 @@ def main(year, n=60):
         "label": f"{year} and younger &#8212; top {n}",
         "roster": [[p["name"], p["id"], p.get("state") or ""] for p in top],
         "meta": {str(p["id"]): {k: p.get(k) for k in
-                                ("height", "club", "city", "state", "tv")} for p in top},
+                                ("height", "club", "city", "state", "tv", "grad")}
+                 for p in top},
         "population": len(pop), "rated": len(rated),
         "cut": {"nTop": top[-1]["tv"],
                 "next": rated[n]["tv"] if len(rated) > n else None,

@@ -131,6 +131,15 @@ def build(group):
     N = len(players)
     T = TEXT.get(group) or (TEXT["COHORT"] if group.endswith("_younger") else TEXT["CLASS"])
     meta = D.get("meta") or {}
+    try:                            # graduating year, for groups collected before it was kept
+        from rosters import GROUPS
+        rmeta = GROUPS.get(group, {}).get("meta") or {}
+        for pl in players:
+            pl.setdefault("grad", None)
+            if not pl["grad"]:
+                pl["grad"] = (rmeta.get(str(pl.get("id"))) or {}).get("grad")
+    except Exception:
+        pass
     year = re.match(r"(\d{4})", group)
     fmt = {"N": len(D["players"]), "Y": year.group(1) if year else group,
            "NEXT": str(int(year.group(1)) + 1) if year else "",
@@ -148,6 +157,8 @@ def build(group):
 
     lo, hi = 6.7, 9.7
     showht = any(p.get("height") for p in players)
+    # an age-eligible group spans several graduating years, so it has to say which
+    showgrad = len({p.get("grad") for p in players if p.get("grad")}) > 1
     HREC = summarise(H2H) if H2H else {}
 
     def h2hcell(p):
@@ -167,6 +178,7 @@ def build(group):
         pct = max(0, min(100, ((p["tv"] or lo) - lo) / (hi - lo) * 100))
         roster.append(f"""      <tr>
         <th scope="row"><span class="pn">{plink(p['name'], p.get('id'))}</span><span class="pc">{esc(nicecity(p['city']))}</span></th>
+        {f'<td class="num gy">{p.get("grad") or "&#8212;"}</td>' if showgrad else ''}
         <td>{esc(p['region'])}</td>
         <td class="clubc">{esc(p['club'] or '—')}</td>{htcell(p)}
         <td class="num">
@@ -207,7 +219,8 @@ def build(group):
             tds.append(f'        <td class="cell {cls(f, c["field"])}" title="{esc(tip)}">'
                        f'<span class="fin">{f}</span></td>')
         rows.append(f"""      <tr>
-        <th scope="row" class="rowh"><span class="pn">{plink(p['name'], p.get('id'))}</span>
+        <th scope="row" class="rowh"><span class="pn">{plink(p['name'], p.get('id'))}{
+          f'<span class="gyd">{p.get("grad")}</span>' if showgrad and p.get("grad") else ''}</span>
           <span class="rmeta"><span class="tvchip">{p['tv']:.2f}</span>
           <span class="rsum">{len(p['cells'])} shared &#183; {pod} podium{'s' if pod != 1 else ''}</span></span></th>
 {chr(10).join(tds)}
@@ -375,6 +388,10 @@ table {{ border-collapse:collapse; width:100%; }}
 .pn {{ display:block; color:var(--ink); font-weight:600; white-space:nowrap; }}
 .pc {{ display:block; font-size:11.5px; color:var(--faint); }}
 .clubc {{ font-size:13px; color:var(--muted); }}
+.gy {{ color:var(--muted); }}
+.gyd {{ font-size:10.5px; color:var(--accent); background:var(--accent-soft);
+  border-radius:2px; padding:0 4px; margin-left:6px; font-weight:650;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }}
 .num {{ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   font-variant-numeric:tabular-nums; font-size:13.5px; }}
 .dim {{ color:var(--faint); }}
@@ -557,7 +574,7 @@ a {{ color:var(--accent); }}
   <div class="panel">
     <table class="roster">
       <thead><tr>
-        <th scope="col">Athlete</th><th scope="col">{regionhdr}</th><th scope="col">Club</th>{'<th scope="col">Height</th>' if showht else ''}
+        <th scope="col">Athlete</th>{'<th scope="col">Class</th>' if showgrad else ''}<th scope="col">{regionhdr}</th><th scope="col">Club</th>{'<th scope="col">Height</th>' if showht else ''}
         <th scope="col">TruVolley</th><th scope="col">Peak</th>
         <th scope="col">W&#8211;L</th><th scope="col">Pairs comps</th>{'<th scope="col">Vs this group</th>' if H2H else ''}
       </tr></thead>
