@@ -30,14 +30,8 @@ PATHWAY = re.compile(r"national team trials|isf trials|youth olympic games trial
 NTDP_GROUPS = (("18U", "Girls U18", 13), ("17U", "Girls U17", 20))
 
 
-def ntdp_attendance(season_end):
-    """Which of each published NTDP roster played each bracket, keyed by (tid, bracket).
-
-    Bucketed with the same rule as the rest of the table, so an NTDP count sits beside the
-    turnout for the field it was actually in rather than for the whole event.
-    """
-    from calendar import bracket  # our own module, alongside this one
-
+def ntdp_attendance():
+    """How many of each published NTDP roster played each event, keyed by tournament id."""
     out = {}
     for g, _, _ in NTDP_GROUPS:
         try:
@@ -46,18 +40,8 @@ def ntdp_attendance(season_end):
             continue
         for name, rows in d["entries"].items():
             for e in rows:
-                out.setdefault((str(e["tid"]), bracket(e["division"], season_end)),
-                               {}).setdefault(g, set()).add(name)
+                out.setdefault(str(e["tid"]), {}).setdefault(g, set()).add(name)
     return out
-
-
-def ntdp_cells(att, tid, brk):
-    """The two NTDP columns for one row: count, shaded on the share of that roster."""
-    a = att.get((str(tid), brk), {})
-    return "".join(
-        f'<td class="ht h{heat(len(a.get(g, ())), n)}" '
-        f'title="{len(a.get(g, ()))} of the {n} on the {esc(lab)} NTDP roster">'
-        f'{len(a.get(g, ())) or "&#183;"}</td>' for g, lab, n in NTDP_GROUPS)
 
 
 # CBVA runs much of the Southern California circuit but Volleyball Life sanctions it
@@ -213,13 +197,10 @@ def build(group):
             f'<span class="mbar" style="height:{h:.0f}%"></span>'
             f'<span class="mbn">{peak[k]}</span><span class="mbl">{lab}</span></div>')
 
-    att = ntdp_attendance(int(wto[:4]))
-    selection = {e["tid"] for e in D["events"] if PATHWAY.search(e["name"])}
-
     rows = []
     for k, v in months:
         d0 = datetime.date(int(k[:4]), int(k[5:7]), 1)
-        rows.append(f'<tr class="mrow"><th colspan="11" scope="rowgroup">'
+        rows.append(f'<tr class="mrow"><th colspan="9" scope="rowgroup">'
                     f'{d0.strftime("%B %Y")}<span class="mcount">{len(v)} event'
                     f'{"s" if len(v) != 1 else ""}</span></th></tr>')
         for e in v:
@@ -248,8 +229,7 @@ def build(group):
           CBVA_URL + '/tournaments/' + str(e['cbvaId']) if e.get('local') and not e.get('tid')
           else VBL + '/tournament/' + str(e['tid'])}" target="_blank"
           rel="noopener">{esc(e['name'])}</a>{
-          '<span class="lt">local</span>' if e.get('local') else ''}{
-          '<span class="lt sel">trials</span>' if e['tid'] in selection else ''}</td>"""
+          '<span class="lt">local</span>' if e.get('local') else ''}</td>"""
                 tail = "" if i else f"""
         <td class="loc"{rs}>{esc(e['location']) if e['location'] else '&#8212;'}</td>
         <td class="bdy"{rs}>{body(e)}</td>
@@ -257,7 +237,7 @@ def build(group):
                 cls = ('evs' if not i else 'evc2') + (' lcl' if e.get('local') else '')
                 rows.append(f"""      <tr class="{cls}">{lead}
         <td class="brk"><b>{esc(b['bracket'])}</b><span class="dv">{divs}</span></td>
-{cells}{ntdp_cells(att, e['tid'], b['bracket'])}{tail}
+{cells}{tail}
       </tr>""")
 
     foc = "".join(
@@ -276,6 +256,23 @@ def build(group):
           + dfmt(e['next']['date']).strftime('%-d %b %Y') + '</a>'
           if e.get('next') else '<span class="dim">&#8212;</span>'}</td>
       </tr>""" for e, b in focus)
+
+    att = ntdp_attendance()
+    path = sorted((e for e in D["events"] if PATHWAY.search(e["name"])),
+                  key=lambda e: e["date"])
+    pathrows = "".join(
+        f"""      <tr>
+        <td class="num dim nw">{dfmt(e['date']).strftime('%-d %b %Y')}</td>
+        <td class="evc"><a class="lnk" href="{VBL}/tournament/{e['tid']}" target="_blank"
+          rel="noopener">{esc(e['name'])}</a><span class="dv">{esc(e['location'])
+          if e['location'] else ''}</span></td>""" + "".join(
+            f'<td class="ht h{heat(e[k2], size)}" title="{e[k2]} of the {label.lower()}">'
+            f'{e[k2] or "&#183;"}</td>' for k2, size, label in TIERS) + "".join(
+            f'<td class="ht h{heat(len(att.get(str(e["tid"]), {}).get(g, ())), n)}" '
+            f'title="{len(att.get(str(e["tid"]), {}).get(g, ()))} of the {n} on the '
+            f'{esc(lab)} roster">{len(att.get(str(e["tid"]), {}).get(g, ())) or "&#183;"}'
+            f'</td>' for g, lab, n in NTDP_GROUPS) + """
+      </tr>""" for e in path)
 
     def top_bracket(e):
         return max(e["brackets"], key=lambda b: b["t60"])
@@ -409,7 +406,6 @@ h3 {{ font-family:"Iowan Old Style",Georgia,serif; font-size:17px; color:var(--i
   font-weight:600; margin:0 0 10px; }}
 .ldivs {{ display:flex; flex-wrap:wrap; gap:5px; max-width:460px; }}
 .lcl td {{ background:color-mix(in srgb,var(--accent-soft) 24%,transparent); }}
-.sel {{ color:var(--gold); background:var(--gold-soft); }}
 .lt {{ display:inline-block; margin-left:7px; font-size:9px; letter-spacing:.09em;
   text-transform:uppercase; color:var(--accent); background:var(--accent-soft);
   border-radius:2px; padding:1px 5px; font-weight:650; vertical-align:1px; }}
@@ -478,6 +474,64 @@ a {{ color:var(--accent); }}
 </section>
 
 <section>
+  <h2>The national-team pathway</h2>
+  <p class="lede">The dates that decide selection, and who was actually in them. The last two
+  columns count the athletes later named to the {NTDP_GROUPS[0][1]} and {NTDP_GROUPS[1][1]}
+  NTDP rosters &#8212; {NTDP_GROUPS[0][2]} and {NTDP_GROUPS[1][2]} girls &#8212; so they read as
+  the share of the selected group that was in the room, not as ordinary turnout. Shading is on
+  the same share-of-tier scale as the calendar below.</p>
+  <div class="panel">
+    <table>
+      <thead><tr>
+        <th scope="col">Date</th><th scope="col">Event</th>
+        <th scope="col" style="text-align:center">Top 60</th>
+        <th scope="col" style="text-align:center">Top 30</th>
+        <th scope="col" style="text-align:center">Top 15</th>
+        <th scope="col" style="text-align:center">NTDP U18</th>
+        <th scope="col" style="text-align:center">NTDP U17</th>
+      </tr></thead>
+      <tbody>
+{pathrows}
+      </tbody>
+    </table>
+  </div>
+  <p class="lede" style="margin-top:14px">Two dates carry the selection: the <b>U18 Beach
+  National Team Trials</b> at the end of January and the <b>Youth Olympic Games Trials</b> in
+  June, which between them held 12 and 11 of the eventual U18 roster of
+  {NTDP_GROUPS[0][2]}. Everything else on this list is a national title or a qualifier rather
+  than a selection event, and the NTDP columns show it &#8212; one or two names apiece.</p>
+</section>
+
+<section>
+  <h2>Where the {FOCUS} draw actually exists</h2>
+  <p class="lede">This class <em>was</em> last season's {FOCUS} age group, so these are the
+  fields a {FOCUS} player meets. The striking thing is how few of them there are: of the
+  {len(D['events'])} events the class entered, <b>{len(focus)} ran a {FOCUS} bracket at all</b>
+  &#8212; {focus_ent} of their {all_ent} entries. Everywhere else the choice was to play up into
+  18U. No turnout bar is applied here; a {FOCUS} draw existing is the fact worth knowing.</p>
+  <div class="panel">
+    <table>
+      <thead><tr>
+        <th scope="col">Date</th><th scope="col">Tournament</th><th scope="col">Location</th>
+        <th scope="col">Body</th>
+        <th scope="col" style="text-align:center">Top 60</th>
+        <th scope="col" style="text-align:center">Top 30</th>
+        <th scope="col" style="text-align:center">Top 15</th>
+        <th scope="col">Next edition</th>
+      </tr></thead>
+      <tbody>
+{foc}
+      </tbody>
+    </table>
+  </div>
+  <p class="lede" style="margin-top:14px">Three series carry it: AVP Juniors (all three
+  championships), the AAU Hermosa pairs, and BVCA's West Coast pairs &#8212; plus one recruiting
+  showcase that drew the bracket by graduating class. Everything else on the calendar below
+  offers 18U or the adult women's open and nothing in between, which is why the class's {FOCUS}
+  record is thin: the draw was not there to enter, not avoided.</p>
+</section>
+
+<section>
   <h2>The calendar</h2>
   <p class="lede">One row per <i>bracket</i>, not per event: the 18U field and the 17U field
   running beside it are separate competitions, so each is counted and judged on its own. Every
@@ -486,10 +540,7 @@ a {{ color:var(--accent); }}
   {len(local_added)} dates are admitted by geography instead, marked <span class="lt">local</span>
   and carrying no turnout because nobody in the class travelled to them. Those come from CBVA's
   listing rather than the class's record, and show only the draws she would enter: the women's
-  open and A fields, and the girls' 18U. The last two turnout columns count the athletes later
-  named to the {NTDP_GROUPS[0][1]} and {NTDP_GROUPS[1][1]} NTDP rosters &#8212;
-  {NTDP_GROUPS[0][2]} and {NTDP_GROUPS[1][2]} girls &#8212; and the dates that decide that
-  selection are marked <span class="lt sel">trials</span>. Shading runs on the share of
+  open and A fields, and the girls' 18U. Shading runs on the share of
   each tier present, so the three columns are directly comparable: 12 of the top 15 shades
   darker than 21 of the top 30. Event names link to Volleyball Life; the last column is next
   season's edition where one is already scheduled.</p>
@@ -500,8 +551,6 @@ a {{ color:var(--accent); }}
         <th scope="col" style="text-align:center">Top 60</th>
         <th scope="col" style="text-align:center">Top 30</th>
         <th scope="col" style="text-align:center">Top 15</th>
-        <th scope="col" style="text-align:center">NTDP U18</th>
-        <th scope="col" style="text-align:center">NTDP U17</th>
         <th scope="col">Location</th><th scope="col">Body</th>
         <th scope="col">Next edition</th>
       </tr></thead>
