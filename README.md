@@ -11,6 +11,7 @@ Three groups are covered:
 | Girls U18 | 13 | Published NTDP roster | [`docs/bntdp-18u.html`](docs/bntdp-18u.html) |
 | Girls U17 | 20 | Published NTDP roster | [`docs/bntdp-17u.html`](docs/bntdp-17u.html) |
 | Class of 2028 | 60 | Derived — see below | [`docs/bntdp-2028.html`](docs/bntdp-2028.html) |
+| Class of 2028 | 30 | Same cohort, tighter cut | [`docs/bntdp-2028_top30.html`](docs/bntdp-2028_top30.html) |
 
 **Doubles only.** Club, 3v3 and 5v5 results are excluded: a placing there reflects a squad
 of five to twelve, not the individual. The test is roster size rather than the division
@@ -46,9 +47,13 @@ of known athletes in that class, keeping every player whose profile reports the 
 closure**: it repeatedly expands the partners of every player already found, stopping only
 when a full round turns up nobody new above a 7.0 rating floor.
 
-Adding a class means adding a seed dictionary to `discover_class.py`; any `roster_<year>.json`
-it produces is auto-registered as a group by `rosters.py`, which also picks the
-shared-competition threshold from the roster size.
+Adding a class means adding a seed dictionary to `discover_class.py`; any
+`roster_<year>[_suffix].json` is auto-registered as a group by `rosters.py`, which also picks
+the shared-competition threshold from the roster size (8+ for fifty or more athletes, 5+
+below). The suffix lets one cohort carry several cuts side by side without their data files
+colliding — `roster_2028_top30.json` produces the group `2028_top30`, writes
+`2028_top30_{clean,site,h2h}.json`, and still renders as "class of 2028" because the year is
+parsed off the front of the key.
 
 Ratings move as results process, so a cut drawn days ago is drawn on stale numbers.
 `scripts/refresh_class.py <year>` re-rates an already-closed cohort — reusing the cached

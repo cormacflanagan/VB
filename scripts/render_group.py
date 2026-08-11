@@ -3,7 +3,7 @@
   python3 render_group.py 17U      ->  bntdp-17u.html
 """
 import datetime
-import json, sys, html
+import json, re, sys, html
 from scatter import scatter
 from h2hview import crosstable, rivalries, summarise
 
@@ -99,7 +99,8 @@ def build(group):
     N = len(players)
     T = TEXT.get(group) or TEXT["CLASS"]
     meta = D.get("meta") or {}
-    fmt = {"N": len(D["players"]), "Y": group,
+    year = re.match(r"(\d{4})", group)
+    fmt = {"N": len(D["players"]), "Y": year.group(1) if year else group,
            "POP": f'{D.get("population") or 0:,}', "RATED": f'{D.get("ratedPop") or 0:,}',
            "CUT": D.get("cutNote", "")}
 
@@ -255,10 +256,11 @@ def build(group):
 </section>
 """
 
-    regionhdr = "State" if group == "2028" else "USAV region"
+    isclass = bool(re.match(r"\d{4}", group))
+    regionhdr = "State" if isclass else "USAV region"
     others = {"18U": "17U group and the class of 2028",
-              "17U": "18U group and the class of 2028",
-              "2028": "NTDP 18U and 17U groups"}[group]
+              "17U": "18U group and the class of 2028"}.get(
+                  group, "NTDP 18U and 17U groups")
     return f"""<title>BNTDP {group} Girls &#183; Record by Competition</title>
 <style>
 :root {{

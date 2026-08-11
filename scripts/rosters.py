@@ -57,7 +57,7 @@ GROUPS = {
 import glob as _glob, json as _json, os as _os, re as _re
 
 for _p in sorted(_glob.glob(_os.path.join(_os.path.dirname(__file__) or ".", "roster_*.json"))):
-    _m = _re.search(r"roster_(\d{4})\.json$", _p)
+    _m = _re.search(r"roster_(\d{4}[A-Za-z0-9_]*)\.json$", _p)
     if not _m:
         continue
     _d = _json.load(open(_p))
