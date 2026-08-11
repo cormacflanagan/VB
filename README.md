@@ -210,15 +210,17 @@ passes all six checks against both the light and dark chart surfaces.
 per tournament rather than per division — and counts how many of the top 60, top 30 and top 15
 turned up. `scripts/calendar_page.py` renders it in calendar order with a sequential heat ramp
 on the three turnout columns, so the events the cohort converges on stand out from the ones a
-single pair happened to enter. Events drawing fewer than two of the top 60 are dropped.
+single pair happened to enter. `MIN_TURNOUT` sets the bar; at 4 of the top 60 the list stays
+short enough to plan from, and it also clears out the weekly 2v2 mini-tournaments that
+dominated the next-edition matches at a lower bar.
 
-For the class of 2027 that is **294 events**, of which 132 clear the bar. The season has one
+For the class of 2027 that is **294 events, of which 55 clear the bar**. The season has one
 clear peak: AVP Juniors National Championships drew 40 of the 60, BVCA Individual Pairs 34, and
 AAU Hermosa Beach 27 — all three inside three weeks in July, all three at Hermosa Beach.
 
 Because the page exists to pick next year's schedule, each row is matched to its 2026-27
 edition where one is already on Volleyball Life's upcoming feed, by a name normalised to strip
-years and ordinals (`norm()` in `calendar.py`). **29 of the 132** matched; the rest are either
+years and ordinals (`norm()` in `calendar.py`). **4 of the 55** matched; the rest are either
 not yet posted or genuinely one-off.
 
 ## Partnerships

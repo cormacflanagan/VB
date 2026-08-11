@@ -7,7 +7,7 @@ shaded by the share of that tier present, so 12 of 15 reads darker than 21 of 30
 import datetime, html, json, sys
 
 VBL = "https://volleyballlife.com"
-MIN_TURNOUT = 2
+MIN_TURNOUT = 4
 TIERS = (("t60", 60, "Top 60"), ("t30", 30, "Top 30"), ("t15", 15, "Top 15"))
 
 
@@ -251,7 +251,8 @@ a {{ color:var(--accent); }}
 <section>
   <h2>The calendar</h2>
   <p class="lede">Every event that drew at least {MIN_TURNOUT} of the top 60, oldest first.
-  {dropped} further events drew a single player and are left out. Shading runs on the share of
+  {dropped} further events drew fewer than that and are left out &#8212; a pair or two entering
+  a local event says little about the field. Shading runs on the share of
   each tier present, so the three columns are directly comparable: 12 of the top 15 shades
   darker than 21 of the top 30. Event names link to Volleyball Life; the last column is next
   season's edition where one is already scheduled.</p>
@@ -283,10 +284,10 @@ a {{ color:var(--accent); }}
 <section>
   <h2>Already on next season's schedule</h2>
   <p class="lede">Only {len(returning)} of the {len(events)} events above have a
-  {int(wto[:4])}&#8211;{int(wto[:4])+1} edition on Volleyball Life yet, and they are almost all
-  in the autumn &#8212; the winter and summer majors simply have not been posted this far out.
-  These are the ones you can enter today, with last season's turnout as a guide to the field
-  you would be walking into.</p>
+  {int(wto[:4])}&#8211;{int(wto[:4])+1} edition on Volleyball Life yet &#8212; most of the
+  calendar simply has not been posted this far out, so a blank here means unscheduled, not
+  discontinued. These are the ones you can enter today, with last season's turnout as a guide
+  to the field you would be walking into.</p>
   <div class="panel">
     <table>
       <thead><tr>
@@ -314,10 +315,10 @@ a {{ color:var(--accent); }}
     columns tell you how deep the older class's field was, which is the part worth chasing.</li>
     <li><b>An empty last column mostly means "not posted yet", not "not happening".</b> Only
     {len(returning)} of these {len(events)} events have a {int(wto[:4])}&#8211;{int(wto[:4])+1}
-    edition listed so far: the big July fixtures &#8212; AVP Juniors Nationals, BVCA Pairs
-    Nationals, the AAU Hermosa pairs &#8212; and the domestic Futures Tour stops are typically
-    published a few months out. Matching is by name after stripping years and ordinals, so a
-    renamed event will also miss.</li>
+    edition listed so far. AVP Juniors Nationals, BVCA Pairs Nationals and the Futures Tour
+    stops are typically published a few months out, so they will appear closer to the date.
+    Matching is by name after stripping years and ordinals, so a renamed event will also
+    miss.</li>
     <li><b>Locations come from the tournament record</b> and are blank where the organiser left
     them unset, which is common for one-day local events.</li>
   </ul>
