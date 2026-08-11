@@ -16,9 +16,10 @@ TIERS = (("t60", 60, "Top 60"), ("t30", 30, "Top 30"), ("t15", 15, "Top 15"))
 # an hour in the car rather than a flight; these are matched against CBVA's venue string
 LOCAL = ("santa cruz",)
 LOCAL_LABEL = "Santa Cruz"
-# the divisions a 17U girl can enter there: the women's ladder, and the girls' 18U draw
-LOCAL_DIV = re.compile(r"women|girl'?s\s*18u", re.I)
-NOT_LOCAL_DIV = re.compile(r"\bmen'?s|boy'?s", re.I)
+# the draws worth her entering: the open women's field and the girls' 18U. CBVA's ladder
+# runs Open, AA, A, B, and the dates alternate between an Open+A card and an AA+B one, so
+# dropping AA and B drops the second card entirely rather than trimming a column.
+LOCAL_DIV = re.compile(r"^(?:women'?s\s*(?:open|a)|.*girl'?s\s*18u)$", re.I)
 
 
 # the national-team pathway: selection events, not ordinary tournaments. Turnout here is
@@ -70,34 +71,31 @@ def local_events(fname):
     for t in cb.values():
         if not any(v in t["venue"].lower() for v in LOCAL):
             continue
-        divs = [d for d in t["divisions"]
-                if LOCAL_DIV.search(d["name"]) and not NOT_LOCAL_DIV.search(d["name"])]
+        divs = [d for d in t["divisions"] if LOCAL_DIV.match(d["name"].strip())]
         if divs:
-            out.append(dict(t, divisions=divs))
+            out.append(dict(t, divisions=divs,
+                            venue=re.sub(r"(?<=[a-z])(?=[A-Z])", " ", t["venue"])))
     out.sort(key=lambda t: t["date"])
     return out
 
 
-def local_rows(rows, played, turnout=True):
-    out = []
-    for t in rows:
-        dd = dfmt(t["date"])
-        # CBVA sometimes runs a series label straight into the venue: "Cal Cup Tour StopMain"
-        venue = re.sub(r"(?<=[a-z])(?=[A-Z])", " ", t["venue"])
-        divs = " ".join(
-            f'<a class="ldiv" href="{CBVA_URL}/tournaments/{t["id"]}/{d["id"]}" target="_blank" '
-            f'rel="noopener">{esc(re.sub(r"^.*?Bid Event ", "", d["name"]))}</a>'
-            for d in t["divisions"])
-        n = played.get(t["id"])
-        out.append(f"""      <tr>
-        <td class="num dim nw">{dd.strftime('%-d %b %Y')} <span class="dow">{dd.strftime('%a')}</span></td>
-        <td class="evc"><a class="lnk" href="{CBVA_URL}/tournaments/{t['id']}" target="_blank"
-          rel="noopener">{esc(venue)}</a></td>
-        <td class="ldivs">{divs}</td>{
-        f'<td class="num">{n}</td>' if turnout and n else
-        '<td class="num dim">&#8212;</td>' if turnout else ''}
-      </tr>""")
-    return "".join(out)
+def as_event(t):
+    """Dress a CBVA listing up as a calendar event so it can sit in the main table.
+
+    It carries no turnout &#8212; nobody in the class went, which is the whole reason it
+    would otherwise be missing &#8212; so the tier cells stay blank rather than reading zero.
+    """
+    brackets = {}
+    for d in t["divisions"]:
+        b = "18U" if re.search(r"18u", d["name"], re.I) else "Women's"
+        g = brackets.setdefault(b, {"bracket": b, "t60": 0, "t30": 0, "t15": 0,
+                                    "divisions": [], "topFinishers": []})
+        g["divisions"].append({"name": re.sub(r"^.*?Bid Event ", "", d["name"]),
+                               "n": 0, "cbvaDivId": d["id"]})
+    return {"tid": None, "cbvaId": t["id"], "local": True, "name": t["venue"],
+            "date": t["date"], "endDate": t["date"], "sanction": "CBVA",
+            "location": t["venue"], "t60": 0, "t30": 0, "t15": 0,
+            "brackets": sorted(brackets.values(), key=lambda b: b["bracket"] != "18U")}
 
 
 def dfmt(iso):
@@ -107,6 +105,9 @@ def dfmt(iso):
 
 def body(e):
     """Sanctioning tag, plus a link out to CBVA's own page where CBVA lists the event."""
+    if e.get("local"):
+        return (f'<a class="sanc cbva" href="{CBVA_URL}/tournaments/{e["cbvaId"]}" '
+                f'target="_blank" rel="noopener" title="This event on CBVA">CBVA</a>')
     out = f'<span class="sanc">{esc(e["sanction"])}</span>'
     cb = CBVA.get(str(e["tid"]))
     if cb:
@@ -134,8 +135,18 @@ def build(group):
         keep = [b for b in e["brackets"] if b["t60"] >= MIN_TURNOUT]
         if keep:
             events.append(dict(e, brackets=keep))
+    dropped = sum(len(e["brackets"]) for e in D["events"]) - \
+        sum(len(e["brackets"]) for e in events)
+
+    # the home venue joins the calendar on its own terms: turnout would never carry it, so
+    # it is admitted by geography instead, minus any date the class already put in the table
+    ours = {CBVA[str(e["tid"])]["cbvaId"] for e in D["events"] if str(e["tid"]) in CBVA}
+    past_local = local_events("cbva.json")
+    next_local = local_events("cbva_upcoming.json")
+    local_added = [as_event(t) for t in past_local if t["id"] not in ours]
+    events += local_added
+    events.sort(key=lambda e: (e["date"], -max(b["t60"] for b in e["brackets"])))
     rowcount = sum(len(e["brackets"]) for e in events)
-    dropped = sum(len(e["brackets"]) for e in D["events"]) - rowcount
     wfrom, wto = D["window"]
 
     # the bracket a reader is planning for gets its own section, with no turnout bar: a
@@ -197,17 +208,22 @@ def build(group):
                     f'<td class="ht h{heat(b[k2], size)}" '
                     f'title="{b[k2]} of the {label.lower()} played {esc(b["bracket"])}">'
                     f'{b[k2] or "&#183;"}</td>' for k2, size, label in TIERS)
-                divs = ", ".join(f'{esc(d["name"])} <i>&#215;{d["n"]}</i>'
-                                 for d in b["divisions"][:2])
+                divs = ", ".join(
+                    esc(d["name"]) + ("" if e.get("local") else f' <i>&#215;{d["n"]}</i>')
+                    for d in b["divisions"][:2])
                 lead = "" if i else f"""
         <td class="dt num"{rs}>{dd.strftime("%-d")}{span} <span class="dow">{dd.strftime("%a")}</span></td>
-        <td class="evc"{rs}><a class="lnk" href="{VBL}/tournament/{e['tid']}" target="_blank"
-          rel="noopener">{esc(e['name'])}</a></td>"""
+        <td class="evc"{rs}><a class="lnk" href="{
+          CBVA_URL + '/tournaments/' + str(e['cbvaId']) if e.get('local')
+          else VBL + '/tournament/' + str(e['tid'])}" target="_blank"
+          rel="noopener">{esc(e['name'])}</a>{
+          '<span class="lt">local</span>' if e.get('local') else ''}</td>"""
                 tail = "" if i else f"""
         <td class="loc"{rs}>{esc(e['location']) if e['location'] else '&#8212;'}</td>
         <td class="bdy"{rs}>{body(e)}</td>
         <td class="nxc"{rs}>{nxt or '<span class="dim">&#8212;</span>'}</td>"""
-                rows.append(f"""      <tr class="{'evs' if not i else 'evc2'}">{lead}
+                cls = ('evs' if not i else 'evc2') + (' lcl' if e.get('local') else '')
+                rows.append(f"""      <tr class="{cls}">{lead}
         <td class="brk"><b>{esc(b['bracket'])}</b><span class="dv">{divs}</span></td>
 {cells}{tail}
       </tr>""")
@@ -246,16 +262,6 @@ def build(group):
             f'</td>' for g, lab, n in NTDP_GROUPS) + """
       </tr>""" for e in path)
 
-    # how many of the group turned up to each local date, keyed by CBVA's id
-    played = {}
-    for tid, cb in CBVA.items():
-        e = next((x for x in D["events"] if str(x["tid"]) == tid), None)
-        if e:
-            played[cb["cbvaId"]] = max(played.get(cb["cbvaId"], 0), e["t60"])
-    past_local = local_events("cbva.json")
-    next_local = local_events("cbva_upcoming.json")
-    local_played = sum(1 for t in past_local if played.get(t["id"]))
-
     def top_bracket(e):
         return max(e["brackets"], key=lambda b: b["t60"])
 
@@ -271,6 +277,19 @@ def build(group):
         <td class="num"><b>{top_bracket(e)['t60']}</b><span class="dim">
           / {top_bracket(e)['t30']} / {top_bracket(e)['t15']}</span></td>
       </tr>""" for e in returning)
+    ret += "".join(
+        f"""      <tr class="lcl">
+        <td class="num dim nw">{dfmt(t['date']).strftime('%-d %b %Y')}</td>
+        <td><a class="lnk" href="{CBVA_URL}/tournaments/{t['id']}" target="_blank"
+          rel="noopener">{esc(t['venue'])}</a></td>
+        <td class="loc">{esc(LOCAL_LABEL)}</td>
+        <td class="ldivs">""" + "".join(
+            f'<a class="ldiv" href="{CBVA_URL}/tournaments/{t["id"]}/{d["id"]}" '
+            f'target="_blank" rel="noopener">'
+            f'{esc(re.sub(r"^.*?Bid Event ", "", d["name"]))}</a>' for d in t["divisions"]) +
+        """</td>
+        <td class="num dim">&#8212;</td>
+      </tr>""" for t in next_local)
     return f"""<title>Class of {group} &#183; Tournament calendar</title>
 <style>
 :root {{
@@ -374,6 +393,10 @@ tbody tr:hover td {{ background:var(--raise); }}
 h3 {{ font-family:"Iowan Old Style",Georgia,serif; font-size:17px; color:var(--ink);
   font-weight:600; margin:0 0 10px; }}
 .ldivs {{ display:flex; flex-wrap:wrap; gap:5px; max-width:460px; }}
+.lcl td {{ background:color-mix(in srgb,var(--accent-soft) 24%,transparent); }}
+.lt {{ display:inline-block; margin-left:7px; font-size:9px; letter-spacing:.09em;
+  text-transform:uppercase; color:var(--accent); background:var(--accent-soft);
+  border-radius:2px; padding:1px 5px; font-weight:650; vertical-align:1px; }}
 .ldiv {{ font-size:11px; color:var(--accent); background:var(--accent-soft);
   border-radius:2px; padding:2px 7px; text-decoration:none; white-space:nowrap; }}
 .ldiv:hover {{ text-decoration:underline; text-underline-offset:2px; }}
@@ -468,45 +491,6 @@ a {{ color:var(--accent); }}
 </section>
 
 <section>
-  <h2>Local &#8212; {LOCAL_LABEL}</h2>
-  <p class="lede">The rest of this page ranks fields by how much of the class turns up, which
-  buries the home venue: of the {len(past_local)} {LOCAL_LABEL} dates last season with a
-  women's or girls' 18U draw, {local_played} drew anyone from the top 60. That is a fact about
-  travel, not about the volleyball &#8212; and it cuts the other way when the drive is an hour.
-  These come straight from CBVA's own listing rather than from the class's record, so a date
-  appears whether or not anyone in the class went. Men's and boys' draws are dropped; on the
-  juniors dates the same event also runs 12U, 14U and 16U.</p>
-  <h3>Already scheduled</h3>
-  <div class="panel">
-    <table>
-      <thead><tr>
-        <th scope="col">Date</th><th scope="col">Venue</th>
-        <th scope="col">Draws she can enter</th>
-      </tr></thead>
-      <tbody>
-{local_rows(next_local, played, turnout=False)}
-      </tbody>
-    </table>
-  </div>
-  <p class="lede" style="margin:12px 0 26px">CBVA posts roughly a season at a time, so this list
-  runs out in the autumn; the juniors Cal&#8202;Cup bid series ran June and July last year and
-  has not been posted yet.</p>
-  <h3>Last season, for the pattern</h3>
-  <div class="panel">
-    <table>
-      <thead><tr>
-        <th scope="col">Date</th><th scope="col">Venue</th>
-        <th scope="col">Draws offered</th>
-        <th scope="col">Class of {group}</th>
-      </tr></thead>
-      <tbody>
-{local_rows(past_local, played)}
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<section>
   <h2>Where the {FOCUS} draw actually exists</h2>
   <p class="lede">This class <em>was</em> last season's {FOCUS} age group, so these are the
   fields a {FOCUS} player meets. The striking thing is how few of them there are: of the
@@ -540,7 +524,11 @@ a {{ color:var(--accent); }}
   <p class="lede">One row per <i>bracket</i>, not per event: the 18U field and the 17U field
   running beside it are separate competitions, so each is counted and judged on its own. Every
   bracket that drew at least {MIN_TURNOUT} of the top 60 is here, oldest first; {dropped}
-  further brackets drew fewer and are left out. Shading runs on the share of
+  further brackets drew fewer and are left out &#8212; <b>except at {LOCAL_LABEL}</b>, where
+  {len(local_added)} dates are admitted by geography instead, marked <span class="lt">local</span>
+  and carrying no turnout because nobody in the class travelled to them. Those come from CBVA's
+  listing rather than the class's record, and show only the draws she would enter: the women's
+  open and A fields, and the girls' 18U. Shading runs on the share of
   each tier present, so the three columns are directly comparable: 12 of the top 15 shades
   darker than 21 of the top 30. Event names link to Volleyball Life; the last column is next
   season's edition where one is already scheduled.</p>

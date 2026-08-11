@@ -272,19 +272,22 @@ Olympic Games Trials** (18 June, Hermosa Beach Pier) held 11. Everything else on
 the ISF trials, USAV Beach Nationals, the U23 trials — drew one to three of them, so a national
 title is not the same thing as a selection room.
 
-### The local section
+### The local dates
 
-A turnout-ranked calendar is a ranking of *travel*, and it buries the home venue: of the 21
-Santa Cruz dates last season carrying a women's or girls' 18U draw, **two** drew anyone from
-the class-of-2027 top 60. That says nothing about whether they are worth entering when the
-drive is an hour rather than a flight.
+A turnout-ranked calendar is a ranking of *travel*, and it buries the home venue: of the Santa
+Cruz dates last season carrying a draw she would enter, one drew anyone from the class-of-2027
+top 60. So those dates are admitted to the calendar by geography rather than by turnout — they
+sit in date order with the rest, marked `local`, carrying no turnout figures because there is
+none to carry.
 
-So the local section is built from CBVA's listing directly rather than from the class's record
-— `LOCAL` in `calendar_page.py` names the venue, `LOCAL_DIV` the draws worth showing (the
-women's ladder and girls' 18U; men's and boys' are dropped, and the juniors dates also run 12U,
-14U and 16U). A date appears whether or not anyone in the class went. `scripts/cbva.py
---upcoming` crawls the not-yet-played listing the same way, giving next season's dates as CBVA
-posts them.
+They come from CBVA's listing (`LOCAL` names the venue) rather than from the class's record, so
+a date appears whether or not anyone in the class went, and `LOCAL_DIV` keeps only the draws
+worth entering. CBVA's ladder runs Open, AA, A, B, and the Santa Cruz Saturdays alternate
+between an Open+A card and an AA+B one, so keeping Open and A drops the weaker card entirely
+rather than trimming a column from every date. That leaves **14 local dates** added to the
+calendar: women's Saturdays through the autumn and spring, and a midweek girls' 18U Cal Cup bid
+series every Wednesday through June and July. `scripts/cbva.py --upcoming` crawls the
+not-yet-played listing the same way, and those dates join the next-season table.
 
 ## Partnerships
 
