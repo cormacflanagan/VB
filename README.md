@@ -12,6 +12,7 @@ Three groups are covered:
 | Girls U17 | 20 | Published NTDP roster | [`docs/bntdp-17u.html`](docs/bntdp-17u.html) |
 | Class of 2028 | 60 | Derived — see below | [`docs/bntdp-2028.html`](docs/bntdp-2028.html) |
 | Class of 2028 | 30 | Same cohort, tighter cut | [`docs/bntdp-2028_top30.html`](docs/bntdp-2028_top30.html) |
+| Class of 2028 | 20 | Same cohort, tightest cut | [`docs/bntdp-2028_top20.html`](docs/bntdp-2028_top20.html) |
 
 **Doubles only.** Club, 3v3 and 5v5 results are excluded: a placing there reflects a squad
 of five to twelve, not the individual. The test is roster size rather than the division
@@ -49,8 +50,9 @@ when a full round turns up nobody new above a 7.0 rating floor.
 
 Adding a class means adding a seed dictionary to `discover_class.py`; any
 `roster_<year>[_suffix].json` is auto-registered as a group by `rosters.py`, which also picks
-the shared-competition threshold from the roster size (8+ for fifty or more athletes, 5+
-below). The suffix lets one cohort carry several cuts side by side without their data files
+the shared-competition threshold from the roster size — 8+ at fifty athletes or more, 5+ from
+twenty-five, 4+ below — so the bar stays roughly proportional and the cuts remain comparable
+to one another. The suffix lets one cohort carry several cuts side by side without their data files
 colliding — `roster_2028_top30.json` produces the group `2028_top30`, writes
 `2028_top30_{clean,site,h2h}.json`, and still renders as "class of 2028" because the year is
 parsed off the front of the key.

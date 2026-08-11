@@ -56,6 +56,11 @@ GROUPS = {
 # partner-graph crawl run to closure. Any such file present is registered as a group.
 import glob as _glob, json as _json, os as _os, re as _re
 
+def _thresh(n):
+    """Shared-competition bar, kept roughly proportional across cut sizes."""
+    return 8 if n >= 50 else 5 if n >= 25 else 4
+
+
 for _p in sorted(_glob.glob(_os.path.join(_os.path.dirname(__file__) or ".", "roster_*.json"))):
     _m = _re.search(r"roster_(\d{4}[A-Za-z0-9_]*)\.json$", _p)
     if not _m:
@@ -66,6 +71,6 @@ for _p in sorted(_glob.glob(_os.path.join(_os.path.dirname(__file__) or ".", "ro
                            "meta": _d.get("meta", {}),
                            "cut": _d.get("cut"), "population": _d.get("population"),
                            "ratedPop": _d.get("rated"),
-                           "thresh": 8 if len(_d["roster"]) >= 50 else 5}
+                           "thresh": _thresh(len(_d["roster"]))}
 
 WINDOW = ("2025-08-11", "2026-08-11")

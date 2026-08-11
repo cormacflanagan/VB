@@ -1,0 +1,1465 @@
+<title>BNTDP 2028_top20 Girls &#183; Record by Competition</title>
+<style>
+:root {
+  --ground:#EFF1EE; --surface:#FAFBFA; --raise:#FFFFFF;
+  --ink:#111B19; --body:#2C3A37; --muted:#5F6E6A; --faint:#8B9995;
+  --line:#D5DCD9; --hair:#E4E9E7;
+  --accent:#0B6E68; --accent-soft:#D9E7E5;
+  --gold:#9A6B12; --gold-soft:#F3E4C4;
+  --wash:#EAEDEB;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:#0B1211; --surface:#121B19; --raise:#182322;
+    --ink:#E9EFEC; --body:#C6D2CE; --muted:#93A29E; --faint:#6E7D79;
+    --line:#243330; --hair:#1C2827;
+    --accent:#57C3B6; --accent-soft:#123733;
+    --gold:#DCA84A; --gold-soft:#382B12;
+    --wash:#161F1E;
+  }
+}
+:root[data-theme="dark"] {
+  --ground:#0B1211; --surface:#121B19; --raise:#182322;
+  --ink:#E9EFEC; --body:#C6D2CE; --muted:#93A29E; --faint:#6E7D79;
+  --line:#243330; --hair:#1C2827;
+  --accent:#57C3B6; --accent-soft:#123733;
+  --gold:#DCA84A; --gold-soft:#382B12;
+  --wash:#161F1E;
+}
+
+* { box-sizing:border-box; }
+body { margin:0; background:var(--ground); color:var(--body);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:15px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+.wrap { max-width:none; margin:0; padding:0 clamp(18px,2.4vw,44px); }
+/* The matrix earns the whole viewport; running text keeps a readable measure. */
+h1 { max-width:24ch; }
+.standfirst { max-width:66ch; }
+.facts { max-width:1460px; }
+.panel { max-width:1560px; }
+.figwrap { max-width:1180px; }
+footer { max-width:82ch; }
+
+header { padding:64px 0 34px; border-bottom:1px solid var(--line); }
+.eyebrow { font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--accent); font-weight:650; margin:0 0 18px; }
+h1 { font-family:"Iowan Old Style",Georgia,"Times New Roman",serif;
+  font-size:clamp(34px,5.2vw,54px); line-height:1.05; letter-spacing:-.02em;
+  color:var(--ink); margin:0 0 16px; font-weight:600; text-wrap:balance; }
+h1 em { font-style:italic; color:var(--accent); }
+.standfirst { font-size:17px; color:var(--muted); max-width:64ch; margin:0; }
+.facts { display:flex; flex-wrap:wrap; margin:32px 0 0;
+  border:1px solid var(--line); border-radius:3px; background:var(--surface); overflow:hidden; }
+.fact { flex:1 1 130px; padding:14px 18px; border-right:1px solid var(--hair); }
+.fact:last-child { border-right:0; }
+.fact b { display:block; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:23px; color:var(--ink); font-weight:600; font-variant-numeric:tabular-nums; line-height:1.2; }
+.fact span { font-size:11px; letter-spacing:.09em; text-transform:uppercase; color:var(--faint); }
+
+section { padding:48px 0 0; }
+h2 { font-family:"Iowan Old Style",Georgia,"Times New Roman",serif;
+  font-size:25px; color:var(--ink); font-weight:600; letter-spacing:-.01em; margin:0 0 6px; }
+.lede { color:var(--muted); margin:0 0 22px; max-width:72ch; font-size:14.5px; }
+
+.panel { border:1px solid var(--line); border-radius:3px; background:var(--surface); overflow-x:auto; }
+table { border-collapse:collapse; width:100%; }
+.roster th, .roster td, .pairs th, .pairs td {
+  padding:11px 14px; text-align:left; border-bottom:1px solid var(--hair); }
+.roster thead th, .pairs thead th {
+  font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint);
+  font-weight:650; background:var(--wash); border-bottom:1px solid var(--line); white-space:nowrap; }
+.roster tbody tr:last-child th, .roster tbody tr:last-child td,
+.pairs tbody tr:last-child td { border-bottom:0; }
+.roster tbody tr:hover, .pairs tbody tr:hover { background:var(--raise); }
+.roster th[scope="row"] { font-weight:500; }
+.pn { display:block; color:var(--ink); font-weight:600; white-space:nowrap; }
+.pc { display:block; font-size:11.5px; color:var(--faint); }
+.clubc { font-size:13px; color:var(--muted); }
+.num { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-variant-numeric:tabular-nums; font-size:13.5px; }
+.dim { color:var(--faint); }
+.nw { white-space:nowrap; }
+.rate { display:flex; align-items:center; gap:9px; }
+.rv { color:var(--ink); font-weight:600; font-size:14.5px; }
+.bar { display:block; width:74px; height:5px; background:var(--wash);
+  border:1px solid var(--hair); border-radius:2px; overflow:hidden; }
+.fill { display:block; height:100%; background:var(--accent); }
+
+.matrix-wrap { border:1px solid var(--line); border-radius:3px; background:var(--surface); overflow-x:auto; }
+.matrix { border-collapse:separate; border-spacing:0; }
+.matrix th, .matrix td { border-bottom:1px solid var(--hair); border-right:1px solid var(--hair); }
+.matrix .evh { width:112px; min-width:112px; vertical-align:bottom; padding:12px 10px 10px;
+  background:var(--wash); border-bottom:1px solid var(--line);
+  position:sticky; top:0; z-index:2; text-align:left; }
+.evn { display:block; font-size:11.5px; line-height:1.3; color:var(--ink); font-weight:600; }
+.evdiv { display:block; font-size:10.5px; line-height:1.3; color:var(--muted); margin-top:2px; }
+.field { display:inline-block; margin-top:6px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:11px; font-weight:650;
+  color:var(--accent); background:var(--accent-soft); border-radius:2px; padding:2px 6px;
+  font-variant-numeric:tabular-nums; white-space:nowrap; }
+.evd { display:block; margin-top:6px; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:10px; color:var(--faint); font-variant-numeric:tabular-nums; }
+.evc { display:block; margin-top:3px; font-size:9.5px; letter-spacing:.05em;
+  text-transform:uppercase; color:var(--muted); font-weight:650; }
+.matrix .rowh { position:sticky; left:0; z-index:3; background:var(--surface);
+  width:196px; min-width:196px; padding:10px 14px 10px 16px; text-align:left;
+  border-right:1px solid var(--line); font-weight:500; }
+.matrix thead .corner { position:sticky; left:0; top:0; z-index:4; background:var(--wash);
+  border-right:1px solid var(--line); border-bottom:1px solid var(--line);
+  width:196px; min-width:196px; padding:12px 16px; text-align:left; vertical-align:bottom;
+  font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); font-weight:650; }
+.rmeta { display:flex; align-items:center; gap:8px; margin-top:4px; }
+.tvchip { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:12px; font-weight:650; color:var(--accent); background:var(--accent-soft);
+  border-radius:2px; padding:1px 5px; font-variant-numeric:tabular-nums; }
+.rsum { font-size:10.5px; color:var(--faint); white-space:nowrap; }
+.matrix tbody tr:hover .cell { box-shadow:inset 0 0 0 99px rgba(127,127,127,.055); }
+.cell { width:112px; min-width:112px; padding:11px 8px; text-align:center;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-variant-numeric:tabular-nums; }
+.fin { font-size:17px; font-weight:700; letter-spacing:-.01em; }
+.cell.win { background:var(--gold-soft); color:var(--gold); box-shadow:inset 3px 0 0 var(--gold); }
+.cell.pod { background:var(--gold-soft); color:var(--gold); }
+.cell.t1 { background:var(--accent-soft); color:var(--accent); }
+.cell.t2 { background:color-mix(in srgb,var(--accent-soft) 58%,transparent); color:var(--accent); }
+.cell.t3 { background:color-mix(in srgb,var(--accent-soft) 28%,transparent); color:var(--body); }
+.cell.t4 { color:var(--muted); }
+.cell.t5, .cell.na { color:var(--faint); }
+.cell.empty { color:var(--hair);
+  background:repeating-linear-gradient(-45deg,transparent,transparent 5px,var(--hair) 5px,var(--hair) 6px); }
+.cell.empty span { opacity:.55; font-size:13px; }
+
+.legend { display:flex; flex-wrap:wrap; gap:8px 20px; align-items:center; margin:16px 0 0;
+  font-size:12px; color:var(--muted); }
+.key { display:inline-flex; align-items:center; gap:7px; }
+.sw { width:22px; height:14px; border:1px solid var(--line); border-radius:2px; display:inline-block; }
+.sw.win { background:var(--gold-soft); box-shadow:inset 3px 0 0 var(--gold); }
+.sw.pod { background:var(--gold-soft); }
+.sw.t1 { background:var(--accent-soft); }
+.sw.t2 { background:color-mix(in srgb,var(--accent-soft) 58%,transparent); }
+.sw.t3 { background:color-mix(in srgb,var(--accent-soft) 28%,transparent); }
+.sw.t5 { background:var(--surface); }
+.evn2 { display:block; color:var(--ink); font-weight:600; font-size:13.5px; }
+.dv { display:block; font-size:11.5px; color:var(--faint); }
+.pos { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  color:var(--ink); font-weight:700; font-variant-numeric:tabular-nums; }
+.pairs td { font-size:13.5px; }
+.pairs td:nth-child(2) { max-width:330px; }
+
+
+.figwrap { border:1px solid var(--line); border-radius:3px; background:var(--surface);
+  padding:18px 20px 10px; overflow-x:auto; }
+.fig { display:block; min-width:620px; --mark:#00A385; --fitink:var(--muted); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .fig { --mark:#00AB87; }
+}
+:root[data-theme="dark"] .fig { --mark:#00AB87; }
+.fig .grid { stroke:var(--hair); stroke-width:1; }
+.fig .axis { stroke:var(--line); stroke-width:1; }
+.fig .tick { fill:var(--faint); font-size:11px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-variant-numeric:tabular-nums; }
+.fig .ty { text-anchor:end; }
+.fig .tx { text-anchor:middle; }
+.fig .axlab { fill:var(--muted); font-size:11.5px; text-anchor:middle;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; letter-spacing:.02em; }
+.fig .fit { stroke:var(--fitink); stroke-width:2; stroke-dasharray:7 5; opacity:.75; }
+.fig .fitlab { fill:var(--muted); font-size:11px; text-anchor:end;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+.fig .dot { fill:var(--mark); stroke:var(--surface); stroke-width:2; }
+.fig .dot.hi { fill:var(--surface); stroke:var(--mark); stroke-width:3; }
+.fig .ptlab { fill:var(--ink); font-size:11.5px; font-weight:600;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  paint-order:stroke; stroke:var(--surface); stroke-width:3px; }
+.figcap { color:var(--faint); font-size:12px; margin:10px 0 0; max-width:76ch; }
+
+
+.ct-wrap { border:1px solid var(--line); border-radius:3px; background:var(--surface);
+  overflow:auto; max-height:78vh; }
+.ct { border-collapse:separate; border-spacing:0; }
+.ct th, .ct td { border-bottom:1px solid var(--hair); border-right:1px solid var(--hair); }
+.ct-corner { position:sticky; left:0; top:0; z-index:4; background:var(--wash);
+  width:210px; min-width:210px; padding:10px 14px; text-align:left; vertical-align:bottom;
+  font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint);
+  font-weight:650; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+.ct-h { position:sticky; top:0; z-index:2; background:var(--wash); width:40px; min-width:40px;
+  padding:8px 2px; border-bottom:1px solid var(--line);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:10.5px;
+  color:var(--muted); font-weight:650; font-variant-numeric:tabular-nums; }
+.ct-row { position:sticky; left:0; z-index:3; background:var(--surface); width:210px;
+  min-width:210px; padding:7px 12px 7px 10px; text-align:left; font-weight:500;
+  font-size:12.5px; color:var(--ink); white-space:nowrap;
+  border-right:1px solid var(--line); }
+.ct-rank { display:inline-block; min-width:22px; color:var(--faint);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:11px; }
+.ct-c { width:40px; min-width:40px; text-align:center; padding:6px 2px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:11.5px;
+  font-variant-numeric:tabular-nums; color:var(--body); }
+.ct-c.up { background:var(--accent-soft); color:var(--accent); font-weight:650; }
+.ct-c.dn { background:var(--gold-soft); color:var(--gold); font-weight:650; }
+.ct-c.lv { background:color-mix(in srgb,var(--wash) 70%,transparent); }
+.ct-c.none { background:transparent; }
+.ct-c.self { background:repeating-linear-gradient(-45deg,transparent,transparent 4px,
+  var(--hair) 4px,var(--hair) 5px); }
+.ct tbody tr:hover .ct-c { box-shadow:inset 0 0 0 99px rgba(127,127,127,.05); }
+.sc.up { color:var(--accent); font-weight:700; }
+.sc.dn { color:var(--gold); font-weight:700; }
+.sc.lv { color:var(--muted); font-weight:700; }
+.ct-last { font-size:12px; color:var(--muted); }
+
+.sw.ct-up { background:var(--accent-soft); }
+.sw.ct-dn { background:var(--gold-soft); }
+.sw.ct-lv { background:color-mix(in srgb,var(--wash) 70%,transparent); }
+.sw.ct-none { background:var(--surface); }
+.notes { margin:0 0 60px; }
+.notes ul { padding-left:19px; margin:10px 0 0; }
+.notes li { margin:7px 0; font-size:13.5px; color:var(--muted); max-width:76ch; }
+.notes b { color:var(--body); font-weight:600; }
+footer { border-top:1px solid var(--line); padding:22px 0 70px; font-size:12px; color:var(--faint); }
+a { color:var(--accent); }
+.lnk { color:inherit; text-decoration:none; }
+.lnk:hover, .lnk:focus-visible { color:var(--accent);
+  text-decoration:underline; text-underline-offset:2px; text-decoration-thickness:1px; }
+.evn .lnk:hover { color:var(--accent); }
+:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+@media (prefers-reduced-motion:reduce) { * { transition:none !important; animation:none !important; } }
+@media (max-width:720px) {
+  header { padding-top:40px; }
+  .matrix .rowh, .matrix thead .corner { width:150px; min-width:150px; }
+}
+</style>
+
+<div class="wrap">
+<header>
+  <p class="eyebrow">Girls beach volleyball &#183; Class of 2028 &#183; National top 20</p>
+  <h1>The class of 2028, and <em>where the top 20 keep meeting</em></h1>
+  <p class="standfirst">The 20 highest-rated girls in the graduating class of 2028, against their Volleyball Life record for the twelve months
+  ending 11 August 2026. <b>Doubles only</b> &#8212; club and five-a-side results are excluded,
+  because a squad finish says little about the individual. Each age division counts as its own
+  competition, so a 16U bracket and the 18U bracket running beside it are different columns. Every
+  cell is a finishing position; the size of that field is in the column head.</p>
+  <div class="facts">
+    <div class="fact"><b>20</b><span>Athletes</span></div>
+    <div class="fact"><b>101</b><span>Events attended</span></div>
+    <div class="fact"><b>116</b><span>Pairs competitions</span></div>
+    <div class="fact"><b>17</b><span>Shared by 4+</span></div>
+    <div class="fact"><b>50</b><span>Club results dropped</span></div>
+  </div>
+</header>
+
+<section>
+  <h2>The roster</h2>
+  <p class="lede">TruVolley is Volleyball Life's skill rating &#8212; one number derived from
+  match-by-match results against rated opposition. It is computed by Volleyball Life across all
+  formats, so unlike the matrix below it still reflects club play. Sorted strongest first.</p>
+  <div class="panel">
+    <table class="roster">
+      <thead><tr>
+        <th scope="col">Athlete</th><th scope="col">State</th><th scope="col">Club</th><th scope="col">Height</th>
+        <th scope="col">TruVolley</th><th scope="col">Peak</th>
+        <th scope="col">W&#8211;L</th><th scope="col">Pairs comps</th><th scope="col">Vs this group</th>
+      </tr></thead>
+      <tbody>
+      <tr>
+        <th scope="row"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/22544" target="_blank" rel="noopener">Lucy Matuszak</a></span><span class="pc">Los Angeles, CA</span></th>
+        <td>CA</td>
+        <td class="clubc">MBsand</td>
+        <td class="num nw">5&#x27; 7&quot;</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.822</span>
+            <span class="bar"><span class="fill" style="width:70.7%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.922</td>
+        <td class="num nw">254&#8202;&#8211;&#8202;61</td>
+        <td class="num">9</td>
+        <td class="num nw">7&#8202;&#8211;&#8202;1<span class="dv"> 88%</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/147394" target="_blank" rel="noopener">Sadie Stafford</a></span><span class="pc">Norfolk, VA</span></th>
+        <td>VA</td>
+        <td class="clubc">757 Beach</td>
+        <td class="num nw">6&#x27; 0&quot;</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.703</span>
+            <span class="bar"><span class="fill" style="width:66.8%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.723</td>
+        <td class="num nw">353&#8202;&#8211;&#8202;93</td>
+        <td class="num">22</td>
+        <td class="num nw">8&#8202;&#8211;&#8202;6<span class="dv"> 57%</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/95165" target="_blank" rel="noopener">Milaniakai Padilla</a></span><span class="pc">Wailuku, HI</span></th>
+        <td>HI</td>
+        <td class="clubc">Outrigger Canoe Club Girls Beach Volleyball</td>
+        <td class="num nw">5&#x27; 10&quot;</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.645</span>
+            <span class="bar"><span class="fill" style="width:64.8%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.645</td>
+        <td class="num nw">263&#8202;&#8211;&#8202;110</td>
+        <td class="num">11</td>
+        <td class="num nw">3&#8202;&#8211;&#8202;4<span class="dv"> 43%</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/91052" target="_blank" rel="noopener">Sage Illian</a></span><span class="pc">Wichita, KS</span></th>
+        <td>KS</td>
+        <td class="clubc">P4:13 Beach</td>
+        <td class="num nw">6&#x27; 1&quot;</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.643</span>
+            <span class="bar"><span class="fill" style="width:64.8%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.826</td>
+        <td class="num nw">248&#8202;&#8211;&#8202;76</td>
+        <td class="num">16</td>
+        <td class="num nw">7&#8202;&#8211;&#8202;3<span class="dv"> 70%</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/64896" target="_blank" rel="noopener">Haisley Flanagan</a></span><span class="pc">Santa Cruz, CA</span></th>
+        <td>CA</td>
+        <td class="clubc">Santa Cruz Beach Volleyball Club</td>
+        <td class="num nw">5&#x27; 9&quot;</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.614</span>
+            <span class="bar"><span class="fill" style="width:63.8%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.618</td>
+        <td class="num nw">265&#8202;&#8211;&#8202;73</td>
+        <td class="num">15</td>
+        <td class="num nw">2&#8202;&#8211;&#8202;3<span class="dv"> 40%</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/99596" target="_blank" rel="noopener">Madison Gillinger</a></span><span class="pc">Huntington Beach, CA</span></th>
+        <td>CA</td>
+        <td class="clubc">Spiker Beach Volleyball Club</td>
+        <td class="num nw">5&#x27; 11&quot;</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.553</span>
+            <span class="bar"><span class="fill" style="width:61.8%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.629</td>
+        <td class="num nw">249&#8202;&#8211;&#8202;127</td>
+        <td class="num">17</td>
+        <td class="num nw">2&#8202;&#8211;&#8202;9<span class="dv"> 18%</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/84725" target="_blank" rel="noopener">Sarah Cowan</a></span><span class="pc">Boca Raton, FL</span></th>
+        <td>FL</td>
+        <td class="clubc">MBsand</td>
+        <td class="num nw">6&#x27;</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.549</span>
+            <span class="bar"><span class="fill" style="width:61.6%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.649</td>
+        <td class="num nw">348&#8202;&#8211;&#8202;149</td>
+        <td class="num">15</td>
+        <td class="num nw">5&#8202;&#8211;&#8202;5<span class="dv"> 50%</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/91897" target="_blank" rel="noopener">Ashlynn Proctor</a></span><span class="pc">Coronado, CA</span></th>
+        <td>CA</td>
+        <td class="clubc">WAVE Beach</td>
+        <td class="num nw">5&#x27; 11&quot;</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.539</span>
+            <span class="bar"><span class="fill" style="width:61.3%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.566</td>
+        <td class="num nw">192&#8202;&#8211;&#8202;53</td>
+        <td class="num">8</td>
+        <td class="num nw">9&#8202;&#8211;&#8202;1<span class="dv"> 90%</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/84049" target="_blank" rel="noopener">Breeze Johnson</a></span><span class="pc">Winchester, VA</span></th>
+        <td>VA</td>
+        <td class="clubc">BRVA Beach</td>
+        <td class="num nw">6&#x27;</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.438</span>
+            <span class="bar"><span class="fill" style="width:57.9%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.851</td>
+        <td class="num nw">202&#8202;&#8211;&#8202;36</td>
+        <td class="num">6</td>
+        <td class="num nw">1&#8202;&#8211;&#8202;1<span class="dv"> 50%</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/53120" target="_blank" rel="noopener">Summer Tukua</a></span><span class="pc">Temecula, CA</span></th>
+        <td>CA</td>
+        <td class="clubc">WAVE Beach</td>
+        <td class="num nw">6&#x27; 0&quot;</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.357</span>
+            <span class="bar"><span class="fill" style="width:55.2%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.357</td>
+        <td class="num nw">136&#8202;&#8211;&#8202;39</td>
+        <td class="num">5</td>
+        <td class="num nw">4&#8202;&#8211;&#8202;0<span class="dv"> 100%</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/59411" target="_blank" rel="noopener">Brooklyn Rosales</a></span><span class="pc">Carolina Beach, NC</span></th>
+        <td>NC</td>
+        <td class="clubc">Club W</td>
+        <td class="num nw">5&#x27; 6&quot;</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.324</span>
+            <span class="bar"><span class="fill" style="width:54.1%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.892</td>
+        <td class="num nw">338&#8202;&#8211;&#8202;100</td>
+        <td class="num">18</td>
+        <td class="num nw">5&#8202;&#8211;&#8202;1<span class="dv"> 83%</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/98425" target="_blank" rel="noopener">Eden Cisneros</a></span><span class="pc">San Anselmo, CA</span></th>
+        <td>CA</td>
+        <td class="clubc">Golden Gate volleyball</td>
+        <td class="num nw">5&#x27; 10&quot;</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.307</span>
+            <span class="bar"><span class="fill" style="width:53.6%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.307</td>
+        <td class="num nw">316&#8202;&#8211;&#8202;110</td>
+        <td class="num">9</td>
+        <td class="num nw">4&#8202;&#8211;&#8202;6<span class="dv"> 40%</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/149113" target="_blank" rel="noopener">Skyler Smith</a></span><span class="pc">Virginia Beach, VA</span></th>
+        <td>VA</td>
+        <td class="clubc">757 Beach</td>
+        <td class="num nw">5&#x27; 6&quot;</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.301</span>
+            <span class="bar"><span class="fill" style="width:53.4%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.307</td>
+        <td class="num nw">267&#8202;&#8211;&#8202;74</td>
+        <td class="num">16</td>
+        <td class="num dim">&#8212;</td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/2048" target="_blank" rel="noopener">Dreya Scherfenberg</a></span><span class="pc">Harrisonville, MO</span></th>
+        <td>MO</td>
+        <td class="clubc">P4:13 Beach</td>
+        <td class="num nw">5&#x27; 6&quot;</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.283</span>
+            <span class="bar"><span class="fill" style="width:52.8%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.743</td>
+        <td class="num nw">348&#8202;&#8211;&#8202;107</td>
+        <td class="num">12</td>
+        <td class="num nw">4&#8202;&#8211;&#8202;2<span class="dv"> 67%</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/22857" target="_blank" rel="noopener">Milan Hendrickson</a></span><span class="pc">Kentfield, CA</span></th>
+        <td>CA</td>
+        <td class="clubc">Golden Gate volleyball</td>
+        <td class="num nw">5&#x27; 10&quot;</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.283</span>
+            <span class="bar"><span class="fill" style="width:52.8%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.283</td>
+        <td class="num nw">222&#8202;&#8211;&#8202;90</td>
+        <td class="num">4</td>
+        <td class="num nw">3&#8202;&#8211;&#8202;5<span class="dv"> 38%</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/128445" target="_blank" rel="noopener">Cayden Dorger</a></span><span class="pc">Spanish Fort, AL</span></th>
+        <td>AL</td>
+        <td class="clubc">MVP Beach </td>
+        <td class="num nw">5&#x27; 10&quot;</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.228</span>
+            <span class="bar"><span class="fill" style="width:50.9%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.360</td>
+        <td class="num nw">183&#8202;&#8211;&#8202;72</td>
+        <td class="num">18</td>
+        <td class="num nw">5&#8202;&#8211;&#8202;12<span class="dv"> 29%</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/98125" target="_blank" rel="noopener">Ella Buchanan</a></span><span class="pc">San Luis Obispo, CA</span></th>
+        <td>CA</td>
+        <td class="clubc">SLOVBC</td>
+        <td class="num nw">6&#x27;</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.184</span>
+            <span class="bar"><span class="fill" style="width:49.5%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.184</td>
+        <td class="num nw">158&#8202;&#8211;&#8202;62</td>
+        <td class="num">11</td>
+        <td class="num nw">0&#8202;&#8211;&#8202;6<span class="dv"> 0%</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/25298" target="_blank" rel="noopener">Lia Ray</a></span><span class="pc">Delray Beach, FL</span></th>
+        <td>FL</td>
+        <td class="clubc">Optimum Beach</td>
+        <td class="num nw">5&#x27; 10&quot;</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.173</span>
+            <span class="bar"><span class="fill" style="width:49.1%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.397</td>
+        <td class="num nw">171&#8202;&#8211;&#8202;30</td>
+        <td class="num">0</td>
+        <td class="num dim">&#8212;</td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/94563" target="_blank" rel="noopener">Danica  Waterman</a></span><span class="pc">Odessa, FL</span></th>
+        <td>FL</td>
+        <td class="clubc">—</td>
+        <td class="num nw">5&#x27; 11&quot;</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.125</span>
+            <span class="bar"><span class="fill" style="width:47.5%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.433</td>
+        <td class="num nw">316&#8202;&#8211;&#8202;96</td>
+        <td class="num">9</td>
+        <td class="num nw">3&#8202;&#8211;&#8202;6<span class="dv"> 33%</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/9258" target="_blank" rel="noopener">Abigail Moffett</a></span><span class="pc">Yorba Linda, CA</span></th>
+        <td>CA</td>
+        <td class="clubc">Spiker Beach Volleyball Club</td>
+        <td class="num nw">5&#x27; 9&quot;</td>
+        <td class="num">
+          <div class="rate"><span class="rv">8.105</span>
+            <span class="bar"><span class="fill" style="width:46.8%"></span></span>
+          </div>
+        </td>
+        <td class="num dim">8.179</td>
+        <td class="num nw">373&#8202;&#8211;&#8202;137</td>
+        <td class="num">22</td>
+        <td class="num nw">5&#8202;&#8211;&#8202;6<span class="dv"> 45%</span></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>Rating against workload</h2>
+  <p class="lede">Whether the athletes with the highest ratings are the ones playing the most.
+  TruVolley on the vertical, doubles competitions in the window on the horizontal.</p>
+  <div class="figwrap">
+<svg class="fig" viewBox="0 0 860 430" role="img" width="100%" aria-label="Scatter plot of TruVolley rating against number of doubles competitions played, with a linear fit."><line class="grid" x1="62" y1="372.3" x2="834" y2="372.3"/><text class="tick ty" x="52" y="376.3">8.0</text><line class="grid" x1="62" y1="296.7" x2="834" y2="296.7"/><text class="tick ty" x="52" y="300.7">8.2</text><line class="grid" x1="62" y1="221.0" x2="834" y2="221.0"/><text class="tick ty" x="52" y="225.0">8.4</text><line class="grid" x1="62" y1="145.4" x2="834" y2="145.4"/><text class="tick ty" x="52" y="149.4">8.6</text><line class="grid" x1="62" y1="69.7" x2="834" y2="69.7"/><text class="tick ty" x="52" y="73.7">8.8</text><line class="grid" x1="62.0" y1="16" x2="62.0" y2="378"/><text class="tick tx" x="62.0" y="400">0</text><line class="grid" x1="190.7" y1="16" x2="190.7" y2="378"/><text class="tick tx" x="190.7" y="400">4</text><line class="grid" x1="319.3" y1="16" x2="319.3" y2="378"/><text class="tick tx" x="319.3" y="400">8</text><line class="grid" x1="448.0" y1="16" x2="448.0" y2="378"/><text class="tick tx" x="448.0" y="400">12</text><line class="grid" x1="576.7" y1="16" x2="576.7" y2="378"/><text class="tick tx" x="576.7" y="400">16</text><line class="grid" x1="705.3" y1="16" x2="705.3" y2="378"/><text class="tick tx" x="705.3" y="400">20</text><line class="grid" x1="834.0" y1="16" x2="834.0" y2="378"/><text class="tick tx" x="834.0" y="400">24</text><line class="axis" x1="62" y1="378" x2="834" y2="378"/><line class="axis" x1="62" y1="16" x2="62" y2="378"/><text class="axlab" x="448" y="422">Doubles competitions played (12 months to 11 August 2026)</text><text class="axlab" transform="translate(15,197) rotate(-90)" x="0" y="0">TruVolley rating</text><line class="fit" x1="62.0" y1="244.4" x2="834.0" y2="191.6"/><text class="fitlab" x="186" y="227">linear fit</text><a href="https://volleyballlife.com/player/95165" target="_blank" rel="noopener"><circle class="dot" cx="415.8" cy="128.3" r="5.5"><title>Milaniakai Padilla — TruVolley 8.645, 11 competitions</title></circle></a><a href="https://volleyballlife.com/player/91052" target="_blank" rel="noopener"><circle class="dot" cx="576.7" cy="129.1" r="5.5"><title>Sage Illian — TruVolley 8.643, 16 competitions</title></circle></a><a href="https://volleyballlife.com/player/64896" target="_blank" rel="noopener"><circle class="dot" cx="544.5" cy="140.1" r="5.5"><title>Haisley Flanagan — TruVolley 8.614, 15 competitions</title></circle></a><a href="https://volleyballlife.com/player/99596" target="_blank" rel="noopener"><circle class="dot" cx="608.8" cy="163.1" r="5.5"><title>Madison Gillinger — TruVolley 8.553, 17 competitions</title></circle></a><a href="https://volleyballlife.com/player/84725" target="_blank" rel="noopener"><circle class="dot" cx="544.5" cy="164.7" r="5.5"><title>Sarah Cowan — TruVolley 8.549, 15 competitions</title></circle></a><a href="https://volleyballlife.com/player/91897" target="_blank" rel="noopener"><circle class="dot" cx="319.3" cy="168.4" r="5.5"><title>Ashlynn Proctor — TruVolley 8.539, 8 competitions</title></circle></a><a href="https://volleyballlife.com/player/84049" target="_blank" rel="noopener"><circle class="dot" cx="255.0" cy="206.6" r="5.5"><title>Breeze Johnson — TruVolley 8.438, 6 competitions</title></circle></a><a href="https://volleyballlife.com/player/53120" target="_blank" rel="noopener"><circle class="dot" cx="222.8" cy="237.3" r="5.5"><title>Summer Tukua — TruVolley 8.357, 5 competitions</title></circle></a><a href="https://volleyballlife.com/player/98425" target="_blank" rel="noopener"><circle class="dot" cx="351.5" cy="256.2" r="5.5"><title>Eden Cisneros — TruVolley 8.307, 9 competitions</title></circle></a><a href="https://volleyballlife.com/player/149113" target="_blank" rel="noopener"><circle class="dot" cx="576.7" cy="258.5" r="5.5"><title>Skyler Smith — TruVolley 8.301, 16 competitions</title></circle></a><a href="https://volleyballlife.com/player/2048" target="_blank" rel="noopener"><circle class="dot" cx="448.0" cy="265.3" r="5.5"><title>Dreya Scherfenberg — TruVolley 8.283, 12 competitions</title></circle></a><a href="https://volleyballlife.com/player/22857" target="_blank" rel="noopener"><circle class="dot" cx="190.7" cy="265.3" r="5.5"><title>Milan Hendrickson — TruVolley 8.283, 4 competitions</title></circle></a><a href="https://volleyballlife.com/player/128445" target="_blank" rel="noopener"><circle class="dot" cx="641.0" cy="286.1" r="5.5"><title>Cayden Dorger — TruVolley 8.228, 18 competitions</title></circle></a><a href="https://volleyballlife.com/player/98125" target="_blank" rel="noopener"><circle class="dot" cx="415.8" cy="302.7" r="5.5"><title>Ella Buchanan — TruVolley 8.184, 11 competitions</title></circle></a><a href="https://volleyballlife.com/player/94563" target="_blank" rel="noopener"><circle class="dot" cx="351.5" cy="325.0" r="5.5"><title>Danica  Waterman — TruVolley 8.125, 9 competitions</title></circle></a><a href="https://volleyballlife.com/player/22544" target="_blank" rel="noopener"><circle class="dot hi" cx="351.5" cy="61.4" r="5.5"><title>Lucy Matuszak — TruVolley 8.822, 9 competitions</title></circle></a><a href="https://volleyballlife.com/player/147394" target="_blank" rel="noopener"><circle class="dot hi" cx="769.7" cy="106.4" r="5.5"><title>Sadie Stafford — TruVolley 8.703, 22 competitions</title></circle></a><a href="https://volleyballlife.com/player/59411" target="_blank" rel="noopener"><circle class="dot hi" cx="641.0" cy="249.8" r="5.5"><title>Brooklyn Rosales — TruVolley 8.324, 18 competitions</title></circle></a><a href="https://volleyballlife.com/player/25298" target="_blank" rel="noopener"><circle class="dot hi" cx="62.0" cy="306.9" r="5.5"><title>Lia Ray — TruVolley 8.173, 0 competitions</title></circle></a><a href="https://volleyballlife.com/player/9258" target="_blank" rel="noopener"><circle class="dot hi" cx="769.7" cy="332.6" r="5.5"><title>Abigail Moffett — TruVolley 8.105, 22 competitions</title></circle></a><a href="https://volleyballlife.com/player/22544" target="_blank" rel="noopener"><text class="ptlab" text-anchor="start" x="361.5" y="65.4">Lucy Matuszak</text></a><a href="https://volleyballlife.com/player/147394" target="_blank" rel="noopener"><text class="ptlab" text-anchor="end" x="759.7" y="110.4">Sadie Stafford</text></a><a href="https://volleyballlife.com/player/59411" target="_blank" rel="noopener"><text class="ptlab" text-anchor="end" x="631.0" y="253.8">Brooklyn Rosales</text></a><a href="https://volleyballlife.com/player/25298" target="_blank" rel="noopener"><text class="ptlab" text-anchor="start" x="72.0" y="310.9">Lia Ray</text></a><a href="https://volleyballlife.com/player/9258" target="_blank" rel="noopener"><text class="ptlab" text-anchor="end" x="759.7" y="336.6">Abigail Moffett</text></a></svg>
+  </div>
+  <p class="figcap">Each dot is one athlete; 20 plotted. The fit slopes 0.06 of a rating point up per additional ten competitions, but the relationship is weak (r&nbsp;=&nbsp;+0.17, r&#178;&nbsp;=&nbsp;0.03) and explains little of the spread. Named points are the extremes and the athletes discussed in the notes; the roster table above is the full table view.</p>
+</section>
+
+<section>
+  <h2>Players against shared competitions</h2>
+  <p class="lede">The 17 competitions entered by at least 4 of the 20, biggest
+  turnout first. A cell is that athlete's finishing position in the field named above it;
+  hatched means she did not enter. Hover any cell for her partner.</p>
+</section>
+</div>
+
+<div class="wrap">
+  <div class="matrix-wrap">
+    <table class="matrix">
+      <thead><tr>
+        <th class="corner">Athlete &#183; TruVolley</th>
+      <th scope="col" class="evh" title="2026 Futures Tour Spring Championship &#183; Class of &#x27;26 &amp; Younger &#183; 59 teams &#183; 2026-03-29"><span class="evn"><a class="lnk" href="https://volleyballlife.com/tournament/31567/division/117695" target="_blank" rel="noopener">Futures Spring Champ</a></span><span class="evdiv">Class of &#x27;26 &amp; Younger</span><span class="field">59 teams</span><span class="evd">03/29 &#183; p1440</span><span class="evc">11&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="AVP Juniors National Championships 2026 &#183; Girls 16U &#183; 72 teams &#183; 2026-07-26"><span class="evn"><a class="lnk" href="https://volleyballlife.com/tournament/34243/division/126056" target="_blank" rel="noopener">AVP Jrs Nationals</a></span><span class="evdiv">Girls 16U</span><span class="field">72 teams</span><span class="evd">07/26 &#183; AVPA</span><span class="evc">9&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2026 USA Volleyball U18 Beach National Team Trials &#183; U18 Girls &#183; 12 teams &#183; 2026-01-31"><span class="evn"><a class="lnk" href="https://volleyballlife.com/tournament/34180/division/125823" target="_blank" rel="noopener">USAV U18 Trials</a></span><span class="evdiv">U18 Girls</span><span class="field">12 teams</span><span class="evd">01/31 &#183; USAV</span><span class="evc">8&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2026 USA Volleyball Youth Olympic Games Trials &#183; U18 Girls &#183; 9 teams &#183; 2026-06-18"><span class="evn"><a class="lnk" href="https://volleyballlife.com/tournament/36451/division/133267" target="_blank" rel="noopener">USAV YOG Trials</a></span><span class="evdiv">U18 Girls</span><span class="field">9 teams</span><span class="evd">06/18 &#183; USAV</span><span class="evc">8&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="AVP Juniors West Coast Championships 2025 &#183; Girls 16U &#183; 23 teams &#183; 2025-11-09"><span class="evn"><a class="lnk" href="https://volleyballlife.com/tournament/25578/division/97149" target="_blank" rel="noopener">AVP Jrs West Coast</a></span><span class="evdiv">Girls 16U</span><span class="field">23 teams</span><span class="evd">11/09 &#183; AVPA</span><span class="evc">7&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2026 Futures Tour: Alabama &#183; Class of &#x27;26 &amp; Younger &#183; 75 teams &#183; 2026-02-22"><span class="evn"><a class="lnk" href="https://volleyballlife.com/tournament/31569/division/117703" target="_blank" rel="noopener">Futures Tour: Alabama</a></span><span class="evdiv">Class of &#x27;26 &amp; Younger</span><span class="field">75 teams</span><span class="evd">02/22 &#183; p1440</span><span class="evc">7&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier &#183; Girls 18U Open &#183; 103 teams &#183; 2026-05-03"><span class="evn"><a class="lnk" href="https://volleyballlife.com/tournament/32578/division/120658" target="_blank" rel="noopener">USAV BeachFest Qualifier</a></span><span class="evdiv">Girls 18U Open</span><span class="field">103 teams</span><span class="evd">05/03 &#183; USAV</span><span class="evc">7&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2026 BVCA Individual Pairs National Championship &#183; Girls 16U &#183; 159 teams &#183; 2026-07-11"><span class="evn"><a class="lnk" href="https://volleyballlife.com/tournament/38087/division/139560" target="_blank" rel="noopener">BVCA Pairs Nationals</a></span><span class="evdiv">Girls 16U</span><span class="field">159 teams</span><span class="evd">07/11 &#183; BVCA</span><span class="evc">7&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2026 Futures Tour: Arizona &#183; Class of &#x27;26 &amp; Younger &#183; 48 teams &#183; 2026-01-18"><span class="evn"><a class="lnk" href="https://volleyballlife.com/tournament/31568/division/117699" target="_blank" rel="noopener">Futures Tour: Arizona</a></span><span class="evdiv">Class of &#x27;26 &amp; Younger</span><span class="field">48 teams</span><span class="evd">01/18 &#183; p1440</span><span class="evc">6&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2026 Futures Tour: Florida &#183; Class of &#x27;26 &amp; Younger &#183; 56 teams &#183; 2026-03-15"><span class="evn"><a class="lnk" href="https://volleyballlife.com/tournament/31622/division/117904" target="_blank" rel="noopener">Futures Tour: Florida</a></span><span class="evdiv">Class of &#x27;26 &amp; Younger</span><span class="field">56 teams</span><span class="evd">03/15 &#183; p1440</span><span class="evc">5&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="33rd AAU Hermosa Beach National Pairs Championships &#183; Girls 16 - 2028 &#183; 59 teams &#183; 2026-07-19"><span class="evn"><a class="lnk" href="https://volleyballlife.com/tournament/31483/division/117394" target="_blank" rel="noopener">AAU Hermosa Nat&#x27;l Pairs</a></span><span class="evdiv">Girls 16 - 2028</span><span class="field">59 teams</span><span class="evd">07/19 &#183; AAU</span><span class="evc">5&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="AVP Juniors National Championships 2026 &#183; Girls 18U &#183; 64 teams &#183; 2026-07-26"><span class="evn"><a class="lnk" href="https://volleyballlife.com/tournament/34243/division/126054" target="_blank" rel="noopener">AVP Jrs Nationals</a></span><span class="evdiv">Girls 18U</span><span class="field">64 teams</span><span class="evd">07/26 &#183; AVPA</span><span class="evc">5&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="AVP Juniors West Coast Championships 2025 &#183; Girls 18U &#183; 23 teams &#183; 2025-11-09"><span class="evn"><a class="lnk" href="https://volleyballlife.com/tournament/25578/division/97147" target="_blank" rel="noopener">AVP Jrs West Coast</a></span><span class="evdiv">Girls 18U</span><span class="field">23 teams</span><span class="evd">11/09 &#183; AVPA</span><span class="evc">4&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="AVP Juniors East Coast Championships 2025 &#183; Girls 18U &#183; 54 teams &#183; 2025-11-30"><span class="evn"><a class="lnk" href="https://volleyballlife.com/tournament/25638/division/97290" target="_blank" rel="noopener">AVP Jrs East Coast</a></span><span class="evdiv">Girls 18U</span><span class="field">54 teams</span><span class="evd">11/30 &#183; AVPA</span><span class="evc">4&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2025 Futures Tour Winter Championship &#183; Class of &#x27;26 &amp; Younger &#183; 36 teams &#183; 2025-12-29"><span class="evn"><a class="lnk" href="https://volleyballlife.com/tournament/31566/division/117686" target="_blank" rel="noopener">Futures Winter Champ</a></span><span class="evdiv">Class of &#x27;26 &amp; Younger</span><span class="field">36 teams</span><span class="evd">12/29 &#183; p1440</span><span class="evc">4&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2026 Futures Tour: Texas &#183; Class of &#x27;26 &amp; Younger &#183; 32 teams &#183; 2026-04-12"><span class="evn"><a class="lnk" href="https://volleyballlife.com/tournament/31625/division/117914" target="_blank" rel="noopener">Futures Tour: Texas</a></span><span class="evdiv">Class of &#x27;26 &amp; Younger</span><span class="field">32 teams</span><span class="evd">04/12 &#183; p1440</span><span class="evc">4&#8201;of&#8201;20</span></th>
+      <th scope="col" class="evh" title="2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier &#183; Girls 16 Open &#183; 104 teams &#183; 2026-05-03"><span class="evn"><a class="lnk" href="https://volleyballlife.com/tournament/32578/division/120659" target="_blank" rel="noopener">USAV BeachFest Qualifier</a></span><span class="evdiv">Girls 16 Open</span><span class="field">104 teams</span><span class="evd">05/03 &#183; USAV</span><span class="evc">4&#8201;of&#8201;20</span></th>
+      </tr></thead>
+      <tbody>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/22544" target="_blank" rel="noopener">Lucy Matuszak</a></span>
+          <span class="rmeta"><span class="tvchip">8.82</span>
+          <span class="rsum">5 shared &#183; 2 podiums</span></span></th>
+        <td class="cell t1" title="Lucy Matuszak — 5th of 59 · Futures Spring Champ · Class of &#x27;26 &amp; Younger · with Sage Illian"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Lucy Matuszak — 3rd of 9 · USAV YOG Trials · U18 Girls · with Olivia Herron"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Lucy Matuszak — 2nd of 159 · BVCA Pairs Nationals · Girls 16U · with Sarah Cowan"><span class="fin">2</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Lucy Matuszak — 9th of 64 · AVP Jrs Nationals · Girls 18U · with Olivia Herron"><span class="fin">9</span></td>
+        <td class="cell t4" title="Lucy Matuszak — 13th of 23 · AVP Jrs West Coast · Girls 18U · with Sage Illian"><span class="fin">13</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/147394" target="_blank" rel="noopener">Sadie Stafford</a></span>
+          <span class="rmeta"><span class="tvchip">8.70</span>
+          <span class="rsum">9 shared &#183; 4 podiums</span></span></th>
+        <td class="cell t2" title="Sadie Stafford — 13th of 59 · Futures Spring Champ · Class of &#x27;26 &amp; Younger · with Danica Waterman"><span class="fin">13</span></td>
+        <td class="cell t2" title="Sadie Stafford — 9th of 72 · AVP Jrs Nationals · Girls 16U · with Danica Waterman"><span class="fin">9</span></td>
+        <td class="cell pod" title="Sadie Stafford — 3rd of 12 · USAV U18 Trials · U18 Girls · with Georgeann Lee"><span class="fin">3</span></td>
+        <td class="cell t4" title="Sadie Stafford — 5th of 9 · USAV YOG Trials · U18 Girls · with Nariah Johnson"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t1" title="Sadie Stafford — 5th of 75 · Futures Tour: Alabama · Class of &#x27;26 &amp; Younger · with Skyler Smith"><span class="fin">5</span></td>
+        <td class="cell pod" title="Sadie Stafford — 3rd of 103 · USAV BeachFest Qualifier · Girls 18U Open · with Brooke Codey"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Sadie Stafford — 9th of 48 · Futures Tour: Arizona · Class of &#x27;26 &amp; Younger · with Milaniakai Padilla"><span class="fin">9</span></td>
+        <td class="cell win" title="Sadie Stafford — 1st of 56 · Futures Tour: Florida · Class of &#x27;26 &amp; Younger · with Brooklyn Rosales"><span class="fin">1</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Sadie Stafford — 3rd of 32 · Futures Tour: Texas · Class of &#x27;26 &amp; Younger · with Alayna Smeltzer"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/95165" target="_blank" rel="noopener">Milaniakai Padilla</a></span>
+          <span class="rmeta"><span class="tvchip">8.64</span>
+          <span class="rsum">6 shared &#183; 1 podium</span></span></th>
+        <td class="cell t2" title="Milaniakai Padilla — 13th of 59 · Futures Spring Champ · Class of &#x27;26 &amp; Younger · with Jada Souza"><span class="fin">13</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Milaniakai Padilla — 3rd of 12 · USAV U18 Trials · U18 Girls · with Sarah Cowan"><span class="fin">3</span></td>
+        <td class="cell t4" title="Milaniakai Padilla — 5th of 9 · USAV YOG Trials · U18 Girls · with Ashlynn Proctor"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Milaniakai Padilla — 9th of 48 · Futures Tour: Arizona · Class of &#x27;26 &amp; Younger · with Sadie Stafford"><span class="fin">9</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Milaniakai Padilla — 9th of 64 · AVP Jrs Nationals · Girls 18U · with Sarah Cowan"><span class="fin">9</span></td>
+        <td class="cell t4" title="Milaniakai Padilla — 14th of 23 · AVP Jrs West Coast · Girls 18U · with Sarah Cowan"><span class="fin">14</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/91052" target="_blank" rel="noopener">Sage Illian</a></span>
+          <span class="rmeta"><span class="tvchip">8.64</span>
+          <span class="rsum">8 shared &#183; 3 podiums</span></span></th>
+        <td class="cell t1" title="Sage Illian — 5th of 59 · Futures Spring Champ · Class of &#x27;26 &amp; Younger · with Lucy Matuszak"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t3" title="Sage Illian — 5th of 12 · USAV U18 Trials · U18 Girls · with Dreya Scherfenberg"><span class="fin">5</span></td>
+        <td class="cell pod" title="Sage Illian — 2nd of 9 · USAV YOG Trials · U18 Girls · with Sarah Cowan"><span class="fin">2</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell win" title="Sage Illian — 1st of 75 · Futures Tour: Alabama · Class of &#x27;26 &amp; Younger · with Dreya Scherfenberg"><span class="fin">1</span></td>
+        <td class="cell t1" title="Sage Illian — 9th of 103 · USAV BeachFest Qualifier · Girls 18U Open · with Dreya Scherfenberg"><span class="fin">9</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t3" title="Sage Illian — 17th of 64 · AVP Jrs Nationals · Girls 18U · with Dreya Scherfenberg"><span class="fin">17</span></td>
+        <td class="cell t4" title="Sage Illian — 13th of 23 · AVP Jrs West Coast · Girls 18U · with Lucy Matuszak"><span class="fin">13</span></td>
+        <td class="cell pod" title="Sage Illian — 3rd of 54 · AVP Jrs East Coast · Girls 18U · with Dreya Scherfenberg"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/64896" target="_blank" rel="noopener">Haisley Flanagan</a></span>
+          <span class="rmeta"><span class="tvchip">8.61</span>
+          <span class="rsum">3 shared &#183; 1 podium</span></span></th>
+        <td class="cell t2" title="Haisley Flanagan — 9th of 59 · Futures Spring Champ · Class of &#x27;26 &amp; Younger · with Ella Buchanan"><span class="fin">9</span></td>
+        <td class="cell pod" title="Haisley Flanagan — 2nd of 72 · AVP Jrs Nationals · Girls 16U · with Madison Gillinger"><span class="fin">2</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Haisley Flanagan — 5th of 23 · AVP Jrs West Coast · Girls 16U · with Charlotte Jansen"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/99596" target="_blank" rel="noopener">Madison Gillinger</a></span>
+          <span class="rmeta"><span class="tvchip">8.55</span>
+          <span class="rsum">5 shared &#183; 2 podiums</span></span></th>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Madison Gillinger — 2nd of 72 · AVP Jrs Nationals · Girls 16U · with Haisley Flanagan"><span class="fin">2</span></td>
+        <td class="cell t3" title="Madison Gillinger — 5th of 12 · USAV U18 Trials · U18 Girls · with Sadie Harris"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t3" title="Madison Gillinger — 9th of 23 · AVP Jrs West Coast · Girls 16U · with Aubree Marsden"><span class="fin">9</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Madison Gillinger — 3rd of 159 · BVCA Pairs Nationals · Girls 16U · with Sadie Harris"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t1" title="Madison Gillinger — 9th of 104 · USAV BeachFest Qualifier · Girls 16 Open · with Sadie Harris"><span class="fin">9</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/84725" target="_blank" rel="noopener">Sarah Cowan</a></span>
+          <span class="rmeta"><span class="tvchip">8.55</span>
+          <span class="rsum">10 shared &#183; 6 podiums</span></span></th>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Sarah Cowan — 3rd of 12 · USAV U18 Trials · U18 Girls · with Milaniakai Padilla"><span class="fin">3</span></td>
+        <td class="cell pod" title="Sarah Cowan — 2nd of 9 · USAV YOG Trials · U18 Girls · with Sage Illian"><span class="fin">2</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Sarah Cowan — 9th of 75 · Futures Tour: Alabama · Class of &#x27;26 &amp; Younger · with Meg Hearn"><span class="fin">9</span></td>
+        <td class="cell t1" title="Sarah Cowan — 9th of 103 · USAV BeachFest Qualifier · Girls 18U Open · with Clara Evans"><span class="fin">9</span></td>
+        <td class="cell pod" title="Sarah Cowan — 2nd of 159 · BVCA Pairs Nationals · Girls 16U · with Lucy Matuszak"><span class="fin">2</span></td>
+        <td class="cell pod" title="Sarah Cowan — 2nd of 48 · Futures Tour: Arizona · Class of &#x27;26 &amp; Younger · with Brynn Hughbanks"><span class="fin">2</span></td>
+        <td class="cell pod" title="Sarah Cowan — 3rd of 56 · Futures Tour: Florida · Class of &#x27;26 &amp; Younger · with Janie McCanna"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Sarah Cowan — 9th of 64 · AVP Jrs Nationals · Girls 18U · with Milaniakai Padilla"><span class="fin">9</span></td>
+        <td class="cell t4" title="Sarah Cowan — 14th of 23 · AVP Jrs West Coast · Girls 18U · with Milaniakai Padilla"><span class="fin">14</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Sarah Cowan — 3rd of 32 · Futures Tour: Texas · Class of &#x27;26 &amp; Younger · with Milana Rivera"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/91897" target="_blank" rel="noopener">Ashlynn Proctor</a></span>
+          <span class="rmeta"><span class="tvchip">8.54</span>
+          <span class="rsum">5 shared &#183; 3 podiums</span></span></th>
+        <td class="cell t2" title="Ashlynn Proctor — 9th of 59 · Futures Spring Champ · Class of &#x27;26 &amp; Younger · with Nariah Johnson"><span class="fin">9</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t4" title="Ashlynn Proctor — 5th of 9 · USAV YOG Trials · U18 Girls · with Milaniakai Padilla"><span class="fin">5</span></td>
+        <td class="cell win" title="Ashlynn Proctor — 1st of 23 · AVP Jrs West Coast · Girls 16U · with Summer Tukua"><span class="fin">1</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell win" title="Ashlynn Proctor — 1st of 159 · BVCA Pairs Nationals · Girls 16U · with Nariah Johnson"><span class="fin">1</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell win" title="Ashlynn Proctor — 1st of 59 · AAU Hermosa Nat&#x27;l Pairs · Girls 16 - 2028 · with Summer Tukua"><span class="fin">1</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/84049" target="_blank" rel="noopener">Breeze Johnson</a></span>
+          <span class="rmeta"><span class="tvchip">8.44</span>
+          <span class="rsum">2 shared &#183; 1 podium</span></span></th>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t1" title="Breeze Johnson — 4th of 103 · USAV BeachFest Qualifier · Girls 18U Open · with Elle Sossong"><span class="fin">4</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Breeze Johnson — 2nd of 36 · Futures Winter Champ · Class of &#x27;26 &amp; Younger · with Elle Sossong"><span class="fin">2</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/53120" target="_blank" rel="noopener">Summer Tukua</a></span>
+          <span class="rmeta"><span class="tvchip">8.36</span>
+          <span class="rsum">2 shared &#183; 2 podiums</span></span></th>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell win" title="Summer Tukua — 1st of 23 · AVP Jrs West Coast · Girls 16U · with Ashlynn Proctor"><span class="fin">1</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell win" title="Summer Tukua — 1st of 59 · AAU Hermosa Nat&#x27;l Pairs · Girls 16 - 2028 · with Ashlynn Proctor"><span class="fin">1</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/59411" target="_blank" rel="noopener">Brooklyn Rosales</a></span>
+          <span class="rmeta"><span class="tvchip">8.32</span>
+          <span class="rsum">4 shared &#183; 4 podiums</span></span></th>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell win" title="Brooklyn Rosales — 1st of 103 · USAV BeachFest Qualifier · Girls 18U Open · with Taylie Hansen"><span class="fin">1</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell win" title="Brooklyn Rosales — 1st of 56 · Futures Tour: Florida · Class of &#x27;26 &amp; Younger · with Sadie Stafford"><span class="fin">1</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Brooklyn Rosales — 3rd of 54 · AVP Jrs East Coast · Girls 18U · with Meadow Rosales"><span class="fin">3</span></td>
+        <td class="cell pod" title="Brooklyn Rosales — 3rd of 36 · Futures Winter Champ · Class of &#x27;26 &amp; Younger · with Meadow Rosales"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/98425" target="_blank" rel="noopener">Eden Cisneros</a></span>
+          <span class="rmeta"><span class="tvchip">8.31</span>
+          <span class="rsum">6 shared &#183; 2 podiums</span></span></th>
+        <td class="cell t3" title="Eden Cisneros — 21st of 59 · Futures Spring Champ · Class of &#x27;26 &amp; Younger · with Kara Boas"><span class="fin">21</span></td>
+        <td class="cell win" title="Eden Cisneros — 1st of 72 · AVP Jrs Nationals · Girls 16U · with Milan Hendrickson"><span class="fin">1</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Eden Cisneros — 2nd of 23 · AVP Jrs West Coast · Girls 16U · with Abigail Moffett"><span class="fin">2</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Eden Cisneros — 17th of 159 · BVCA Pairs Nationals · Girls 16U · with Milan Hendrickson"><span class="fin">17</span></td>
+        <td class="cell t3" title="Eden Cisneros — 17th of 48 · Futures Tour: Arizona · Class of &#x27;26 &amp; Younger · with Milan Hendrickson"><span class="fin">17</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t1" title="Eden Cisneros — 5th of 59 · AAU Hermosa Nat&#x27;l Pairs · Girls 16 - 2028 · with Regina Stella Broshear"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/149113" target="_blank" rel="noopener">Skyler Smith</a></span>
+          <span class="rmeta"><span class="tvchip">8.30</span>
+          <span class="rsum">3 shared &#183; 0 podiums</span></span></th>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t1" title="Skyler Smith — 5th of 75 · Futures Tour: Alabama · Class of &#x27;26 &amp; Younger · with Sadie Stafford"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t3" title="Skyler Smith — 15th of 36 · Futures Winter Champ · Class of &#x27;26 &amp; Younger · with Sienna Carr"><span class="fin">15</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t1" title="Skyler Smith — 5th of 104 · USAV BeachFest Qualifier · Girls 16 Open · with Lily Larrabee"><span class="fin">5</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/2048" target="_blank" rel="noopener">Dreya Scherfenberg</a></span>
+          <span class="rmeta"><span class="tvchip">8.28</span>
+          <span class="rsum">6 shared &#183; 2 podiums</span></span></th>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t3" title="Dreya Scherfenberg — 5th of 12 · USAV U18 Trials · U18 Girls · with Sage Illian"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell win" title="Dreya Scherfenberg — 1st of 75 · Futures Tour: Alabama · Class of &#x27;26 &amp; Younger · with Sage Illian"><span class="fin">1</span></td>
+        <td class="cell t1" title="Dreya Scherfenberg — 9th of 103 · USAV BeachFest Qualifier · Girls 18U Open · with Sage Illian"><span class="fin">9</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t3" title="Dreya Scherfenberg — 17th of 64 · AVP Jrs Nationals · Girls 18U · with Sage Illian"><span class="fin">17</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Dreya Scherfenberg — 3rd of 54 · AVP Jrs East Coast · Girls 18U · with Sage Illian"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Dreya Scherfenberg — 5th of 32 · Futures Tour: Texas · Class of &#x27;26 &amp; Younger · with Megan McLarty"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/22857" target="_blank" rel="noopener">Milan Hendrickson</a></span>
+          <span class="rmeta"><span class="tvchip">8.28</span>
+          <span class="rsum">4 shared &#183; 1 podium</span></span></th>
+        <td class="cell t3" title="Milan Hendrickson — 17th of 59 · Futures Spring Champ · Class of &#x27;26 &amp; Younger · with Brooke Codey"><span class="fin">17</span></td>
+        <td class="cell win" title="Milan Hendrickson — 1st of 72 · AVP Jrs Nationals · Girls 16U · with Eden Cisneros"><span class="fin">1</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Milan Hendrickson — 17th of 159 · BVCA Pairs Nationals · Girls 16U · with Eden Cisneros"><span class="fin">17</span></td>
+        <td class="cell t3" title="Milan Hendrickson — 17th of 48 · Futures Tour: Arizona · Class of &#x27;26 &amp; Younger · with Eden Cisneros"><span class="fin">17</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/128445" target="_blank" rel="noopener">Cayden Dorger</a></span>
+          <span class="rmeta"><span class="tvchip">8.23</span>
+          <span class="rsum">7 shared &#183; 4 podiums</span></span></th>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Cayden Dorger — 3rd of 72 · AVP Jrs Nationals · Girls 16U · with Stella Sheeran"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Cayden Dorger — 3rd of 9 · USAV YOG Trials · U18 Girls · with Ashley Ruschill"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t1" title="Cayden Dorger — 5th of 75 · Futures Tour: Alabama · Class of &#x27;26 &amp; Younger · with Skye Douglass"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Cayden Dorger — 11th of 56 · Futures Tour: Florida · Class of &#x27;26 &amp; Younger · with Skye Douglass"><span class="fin">11</span></td>
+        <td class="cell pod" title="Cayden Dorger — 3rd of 59 · AAU Hermosa Nat&#x27;l Pairs · Girls 16 - 2028 · with Ashley Ruschill"><span class="fin">3</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Cayden Dorger — 5th of 32 · Futures Tour: Texas · Class of &#x27;26 &amp; Younger · with Ashley Ruschill"><span class="fin">5</span></td>
+        <td class="cell pod" title="Cayden Dorger — 2nd of 104 · USAV BeachFest Qualifier · Girls 16 Open · with Stella Sheeran"><span class="fin">2</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/98125" target="_blank" rel="noopener">Ella Buchanan</a></span>
+          <span class="rmeta"><span class="tvchip">8.18</span>
+          <span class="rsum">6 shared &#183; 1 podium</span></span></th>
+        <td class="cell t2" title="Ella Buchanan — 9th of 59 · Futures Spring Champ · Class of &#x27;26 &amp; Younger · with Haisley Flanagan"><span class="fin">9</span></td>
+        <td class="cell t2" title="Ella Buchanan — 9th of 72 · AVP Jrs Nationals · Girls 16U · with Brooke Canaday"><span class="fin">9</span></td>
+        <td class="cell t4" title="Ella Buchanan — 9th of 12 · USAV U18 Trials · U18 Girls · with Brooke Canaday"><span class="fin">9</span></td>
+        <td class="cell t5" title="Ella Buchanan — 9th of 9 · USAV YOG Trials · U18 Girls · with Charlotte Jansen"><span class="fin">9</span></td>
+        <td class="cell t2" title="Ella Buchanan — 5th of 23 · AVP Jrs West Coast · Girls 16U · with Brooke Canaday"><span class="fin">5</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Ella Buchanan — 2nd of 59 · AAU Hermosa Nat&#x27;l Pairs · Girls 16 - 2028 · with Brooke Canaday"><span class="fin">2</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/25298" target="_blank" rel="noopener">Lia Ray</a></span>
+          <span class="rmeta"><span class="tvchip">8.17</span>
+          <span class="rsum">0 shared &#183; 0 podiums</span></span></th>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/94563" target="_blank" rel="noopener">Danica  Waterman</a></span>
+          <span class="rmeta"><span class="tvchip">8.12</span>
+          <span class="rsum">8 shared &#183; 0 podiums</span></span></th>
+        <td class="cell t2" title="Danica  Waterman — 13th of 59 · Futures Spring Champ · Class of &#x27;26 &amp; Younger · with Sadie Stafford"><span class="fin">13</span></td>
+        <td class="cell t2" title="Danica  Waterman — 9th of 72 · AVP Jrs Nationals · Girls 16U · with Sadie Stafford"><span class="fin">9</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Danica  Waterman — 9th of 75 · Futures Tour: Alabama · Class of &#x27;26 &amp; Younger · with Bristyn Burness"><span class="fin">9</span></td>
+        <td class="cell t2" title="Danica  Waterman — 17th of 103 · USAV BeachFest Qualifier · Girls 18U Open · with Anna Koehl"><span class="fin">17</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t2" title="Danica  Waterman — 5th of 48 · Futures Tour: Arizona · Class of &#x27;26 &amp; Younger · with Taylie Hansen"><span class="fin">5</span></td>
+        <td class="cell t2" title="Danica  Waterman — 9th of 56 · Futures Tour: Florida · Class of &#x27;26 &amp; Younger · with Sarah Albers"><span class="fin">9</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t1" title="Danica  Waterman — 5th of 54 · AVP Jrs East Coast · Girls 18U · with Taylie Hansen"><span class="fin">5</span></td>
+        <td class="cell t2" title="Danica  Waterman — 9th of 36 · Futures Winter Champ · Class of &#x27;26 &amp; Younger · with Isabelle Izzy Ramos"><span class="fin">9</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+      </tr>
+      <tr>
+        <th scope="row" class="rowh"><span class="pn"><a class="lnk" href="https://volleyballlife.com/player/9258" target="_blank" rel="noopener">Abigail Moffett</a></span>
+          <span class="rmeta"><span class="tvchip">8.11</span>
+          <span class="rsum">6 shared &#183; 2 podiums</span></span></th>
+        <td class="cell t3" title="Abigail Moffett — 19th of 59 · Futures Spring Champ · Class of &#x27;26 &amp; Younger · with Charlotte Jansen"><span class="fin">19</span></td>
+        <td class="cell t2" title="Abigail Moffett — 9th of 72 · AVP Jrs Nationals · Girls 16U · with Charlotte Jansen"><span class="fin">9</span></td>
+        <td class="cell t4" title="Abigail Moffett — 9th of 12 · USAV U18 Trials · U18 Girls · with Charlotte Jansen"><span class="fin">9</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Abigail Moffett — 2nd of 23 · AVP Jrs West Coast · Girls 16U · with Eden Cisneros"><span class="fin">2</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell t1" title="Abigail Moffett — 9th of 159 · BVCA Pairs Nationals · Girls 16U · with Julianna Godbey"><span class="fin">9</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell empty"><span>&#183;</span></td>
+        <td class="cell pod" title="Abigail Moffett — 3rd of 104 · USAV BeachFest Qualifier · Girls 16 Open · with Charlotte Jansen"><span class="fin">3</span></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="legend">
+    <span class="key"><span class="sw win"></span> Won it</span>
+    <span class="key"><span class="sw pod"></span> Podium (2nd&#8211;3rd)</span>
+    <span class="key"><span class="sw t1"></span> Top 10&#8202;% of field</span>
+    <span class="key"><span class="sw t2"></span> Top 25&#8202;%</span>
+    <span class="key"><span class="sw t3"></span> Top half</span>
+    <span class="key"><span class="sw t5"></span> Bottom half</span>
+  </div>
+</div>
+
+<div class="wrap">
+<section>
+  <h2>Where only two of them met</h2>
+  <p class="lede">A further 27 competitions drew exactly two of the roster &#8212; too thin
+  for the matrix, but still head-to-heads. Newest first.</p>
+  <div class="panel">
+    <table class="pairs">
+      <thead><tr>
+        <th scope="col">Date</th><th scope="col">Competition</th><th scope="col">Field</th>
+        <th scope="col" colspan="2">Finishes</th>
+      </tr></thead>
+      <tbody>
+      <tr>
+        <td class="num dim nw">2026-08-09</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/33876/division/124946" target="_blank" rel="noopener">AVP NEXT $10,000 SandBox Open 2026</a></span><span class="dv">Women&#x27;s Open</span></td>
+        <td class="num">18</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/147394" target="_blank" rel="noopener">Sadie Stafford</a> <b class="pos">3rd</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/91052" target="_blank" rel="noopener">Sage Illian</a> <b class="pos">3rd</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-08-08</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/40750/division/149117" target="_blank" rel="noopener">8/8/26, Main Beach, Santa Cruz</a></span><span class="dv">Womens Open</span></td>
+        <td class="num">20</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/64896" target="_blank" rel="noopener">Haisley Flanagan</a> <b class="pos">1st</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/98125" target="_blank" rel="noopener">Ella Buchanan</a> <b class="pos">1st</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-07-26</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/34243/division/126055" target="_blank" rel="noopener">AVP Juniors National Championships 2026</a></span><span class="dv">Girls 17U</span></td>
+        <td class="num">63</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/95165" target="_blank" rel="noopener">Milaniakai Padilla</a> <b class="pos">1st</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/147394" target="_blank" rel="noopener">Sadie Stafford</a> <b class="pos">2nd</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-07-19</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/31483/division/117393" target="_blank" rel="noopener">33rd AAU Hermosa Beach National Pairs Championships</a></span><span class="dv">Girls 18 - 2026</span></td>
+        <td class="num">37</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/95165" target="_blank" rel="noopener">Milaniakai Padilla</a> <b class="pos">2nd</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/91052" target="_blank" rel="noopener">Sage Illian</a> <b class="pos">5th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-07-18</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/32971/division/121738" target="_blank" rel="noopener">2026 USA Volleyball Beach National Championship</a></span><span class="dv">Girls 18U Open</span></td>
+        <td class="num">32</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/147394" target="_blank" rel="noopener">Sadie Stafford</a> <b class="pos">1st</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/149113" target="_blank" rel="noopener">Skyler Smith</a> <b class="pos">1st</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-07-11</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/38087/division/139559" target="_blank" rel="noopener">2026 BVCA Individual Pairs National Championship</a></span><span class="dv">Girls 18U</span></td>
+        <td class="num">160</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/95165" target="_blank" rel="noopener">Milaniakai Padilla</a> <b class="pos">33rd</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/64896" target="_blank" rel="noopener">Haisley Flanagan</a> <b class="pos">33rd</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-06-28</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/36018/division/131763" target="_blank" rel="noopener">North End Open</a></span><span class="dv">Girls 18U</span></td>
+        <td class="num">4</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/147394" target="_blank" rel="noopener">Sadie Stafford</a> <b class="pos">1st</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/149113" target="_blank" rel="noopener">Skyler Smith</a> <b class="pos">1st</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-06-27</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/39800/division/145771" target="_blank" rel="noopener">6/27/26, Main Beach, Santa Cruz</a></span><span class="dv">Womens AA</span></td>
+        <td class="num">25</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/64896" target="_blank" rel="noopener">Haisley Flanagan</a> <b class="pos">2nd</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/98425" target="_blank" rel="noopener">Eden Cisneros</a> <b class="pos">2nd</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-06-25</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/39760/division/145652" target="_blank" rel="noopener">Cal Cup Tour Stop, 6/25/26, North Beach, Santa Monica</a></span><span class="dv">Girls 16U</span></td>
+        <td class="num">6</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/22544" target="_blank" rel="noopener">Lucy Matuszak</a> <b class="pos">1st</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/99596" target="_blank" rel="noopener">Madison Gillinger</a> <b class="pos">1st</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-06-19</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/30985/division/115902" target="_blank" rel="noopener">2026 Futures Tour WESTERN NATIONAL CHAMPIONSHIPS</a></span><span class="dv">Class of 2026 &amp; Younger</span></td>
+        <td class="num">24</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/64896" target="_blank" rel="noopener">Haisley Flanagan</a> <b class="pos">7th</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/99596" target="_blank" rel="noopener">Madison Gillinger</a> <b class="pos">7th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-06-14</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/39487/division/144804" target="_blank" rel="noopener">6/14/26, North Beach, Santa Monica</a></span><span class="dv">Womens Open</span></td>
+        <td class="num">16</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/91052" target="_blank" rel="noopener">Sage Illian</a> <b class="pos">3rd</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/84725" target="_blank" rel="noopener">Sarah Cowan</a> <b class="pos">3rd</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-06-07</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/34327/division/126338" target="_blank" rel="noopener">Juniors: P1440 National Qualifier 🏆</a></span><span class="dv">Girls 18U</span></td>
+        <td class="num">8</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/149113" target="_blank" rel="noopener">Skyler Smith</a> <b class="pos">3rd</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/128445" target="_blank" rel="noopener">Cayden Dorger</a> <b class="pos">3rd</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-05-16</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/36166/division/132403" target="_blank" rel="noopener">WVS 2026 Adult May Maynia</a></span><span class="dv">Womens Open</span></td>
+        <td class="num">8</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/59411" target="_blank" rel="noopener">Brooklyn Rosales</a> <b class="pos">3rd</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/149113" target="_blank" rel="noopener">Skyler Smith</a> <b class="pos">7th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-05-10</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/38620/division/141512" target="_blank" rel="noopener">5/10/26, Ocean Park, Santa Monica</a></span><span class="dv">Womens AA</span></td>
+        <td class="num">13</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/91052" target="_blank" rel="noopener">Sage Illian</a> <b class="pos">1st</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/84725" target="_blank" rel="noopener">Sarah Cowan</a> <b class="pos">1st</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-04-25</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/38207/division/139909" target="_blank" rel="noopener">4/25/26, Main Beach, Santa Cruz</a></span><span class="dv">Womens Open</span></td>
+        <td class="num">15</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/64896" target="_blank" rel="noopener">Haisley Flanagan</a> <b class="pos">7th</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/98425" target="_blank" rel="noopener">Eden Cisneros</a> <b class="pos">7th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-03-15</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/32995/division/121820" target="_blank" rel="noopener">AAU Super Regional</a></span><span class="dv">Girls 18U</span></td>
+        <td class="num">10</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/9258" target="_blank" rel="noopener">Abigail Moffett</a> <b class="pos">5th</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/99596" target="_blank" rel="noopener">Madison Gillinger</a> <b class="pos">8th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-02-01</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/32392/division/121505" target="_blank" rel="noopener">Girls Beach High School Pre-Season Tournament</a></span><span class="dv">Girls Varsity</span></td>
+        <td class="num">24</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/9258" target="_blank" rel="noopener">Abigail Moffett</a> <b class="pos">3rd</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/147394" target="_blank" rel="noopener">Sadie Stafford</a> <b class="pos">5th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-01-25</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/33052/division/122007" target="_blank" rel="noopener">Snowball &#x27;26</a></span><span class="dv">Girls 18U</span></td>
+        <td class="num">8</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/147394" target="_blank" rel="noopener">Sadie Stafford</a> <b class="pos">1st</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/149113" target="_blank" rel="noopener">Skyler Smith</a> <b class="pos">1st</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2026-01-25</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/33052/division/122095" target="_blank" rel="noopener">Snowball &#x27;26</a></span><span class="dv">Girls 16U</span></td>
+        <td class="num">9</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/147394" target="_blank" rel="noopener">Sadie Stafford</a> <b class="pos">1st</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/149113" target="_blank" rel="noopener">Skyler Smith</a> <b class="pos">1st</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2025-11-16</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/31995/division/119079" target="_blank" rel="noopener">2025 p1440 Elite Dev Open Tournament</a></span><span class="dv">Girls 18U</span></td>
+        <td class="num">31</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/91052" target="_blank" rel="noopener">Sage Illian</a> <b class="pos">5th</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/2048" target="_blank" rel="noopener">Dreya Scherfenberg</a> <b class="pos">5th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2025-11-01</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/33620/division/124248" target="_blank" rel="noopener">Women&#x27;s Open at Newland, Huntington Beach</a></span><span class="dv">Womens Open</span></td>
+        <td class="num">10</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/91897" target="_blank" rel="noopener">Ashlynn Proctor</a> <b class="pos">5th</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/53120" target="_blank" rel="noopener">Summer Tukua</a> <b class="pos">5th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2025-10-05</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/23700/division/91228" target="_blank" rel="noopener">GNBV National Recruiting Showcase Oct 2025</a></span><span class="dv">16U OPEN</span></td>
+        <td class="num">26</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/99596" target="_blank" rel="noopener">Madison Gillinger</a> <b class="pos">1st</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/9258" target="_blank" rel="noopener">Abigail Moffett</a> <b class="pos">1st</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2025-09-21</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/32055/division/119282" target="_blank" rel="noopener">Super Girl Pro Invitational &#x27;25</a></span><span class="dv">Girls 18U</span></td>
+        <td class="num">12</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/99596" target="_blank" rel="noopener">Madison Gillinger</a> <b class="pos">3rd</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/9258" target="_blank" rel="noopener">Abigail Moffett</a> <b class="pos">3rd</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2025-08-31</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/32324/division/120009" target="_blank" rel="noopener">Women&#x27;s AA at Hermosa Pier, Hermosa Beach</a></span><span class="dv">Womens AA</span></td>
+        <td class="num">20</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/98425" target="_blank" rel="noopener">Eden Cisneros</a> <b class="pos">3rd</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/9258" target="_blank" rel="noopener">Abigail Moffett</a> <b class="pos">3rd</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2025-08-24</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/32115/division/119439" target="_blank" rel="noopener">CBVA Fall Championship Bid + AVP Bid Event Girl&#x27;s 18u at Central Beach, Coronado, San Diego</a></span><span class="dv">Girls 18U</span></td>
+        <td class="num">10</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/91897" target="_blank" rel="noopener">Ashlynn Proctor</a> <b class="pos">1st</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/53120" target="_blank" rel="noopener">Summer Tukua</a> <b class="pos">1st</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2025-08-23</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/32085/division/119378" target="_blank" rel="noopener">Mich Ultra Premier Tour: $2,000 Women&#x27;s Open at Ocean Beach, San Diego</a></span><span class="dv">Womens Open</span></td>
+        <td class="num">20</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/91897" target="_blank" rel="noopener">Ashlynn Proctor</a> <b class="pos">17th</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/53120" target="_blank" rel="noopener">Summer Tukua</a> <b class="pos">17th</b></td>
+      </tr>
+      <tr>
+        <td class="num dim nw">2025-08-16</td>
+        <td><span class="evn2"><a class="lnk" href="https://volleyballlife.com/tournament/26795/division/101346" target="_blank" rel="noopener">WVS 2025 Adults August Heat Wave</a></span><span class="dv">Womens Open</span></td>
+        <td class="num">17</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/59411" target="_blank" rel="noopener">Brooklyn Rosales</a> <b class="pos">3rd</b></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/149113" target="_blank" rel="noopener">Skyler Smith</a> <b class="pos">9th</b></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>Head to head</h2>
+  <p class="lede">Actual matches, not finishing positions. 64 of the 190 possible
+  pairings in this group have met across the net at least once, over 77 results drawn
+  from 934 doubles matches. Rows are athletes in rating order, columns are the
+  same athletes by rank number; a cell is the row player's record against that column player.
+  Hover for the last meeting.</p>
+  <div class="ct-wrap"><table class="ct"><thead><tr><th class="ct-corner">Athlete</th><th class="ct-h" title="Lucy Matuszak"><span>1</span></th><th class="ct-h" title="Sadie Stafford"><span>2</span></th><th class="ct-h" title="Milaniakai Padilla"><span>3</span></th><th class="ct-h" title="Sage Illian"><span>4</span></th><th class="ct-h" title="Haisley Flanagan"><span>5</span></th><th class="ct-h" title="Madison Gillinger"><span>6</span></th><th class="ct-h" title="Sarah Cowan"><span>7</span></th><th class="ct-h" title="Ashlynn Proctor"><span>8</span></th><th class="ct-h" title="Breeze Johnson"><span>9</span></th><th class="ct-h" title="Summer Tukua"><span>10</span></th><th class="ct-h" title="Brooklyn Rosales"><span>11</span></th><th class="ct-h" title="Eden Cisneros"><span>12</span></th><th class="ct-h" title="Skyler Smith"><span>13</span></th><th class="ct-h" title="Dreya Scherfenberg"><span>14</span></th><th class="ct-h" title="Milan Hendrickson"><span>15</span></th><th class="ct-h" title="Cayden Dorger"><span>16</span></th><th class="ct-h" title="Ella Buchanan"><span>17</span></th><th class="ct-h" title="Lia Ray"><span>18</span></th><th class="ct-h" title="Danica  Waterman"><span>19</span></th><th class="ct-h" title="Abigail Moffett"><span>20</span></th></tr></thead><tbody><tr><th class="ct-row"><span class="ct-rank">1</span><a class="lnk" href="https://volleyballlife.com/player/22544" target="_blank" rel="noopener">Lucy Matuszak</a></th><td class="ct-c self"></td><td class="ct-c none"></td><td class="ct-c up" title="Lucy Matuszak 2–0 Milaniakai Padilla · last met 2026-06-17 at 2026 USA Volleyball Youth Olympic Games Trials">2&#8211;0</td><td class="ct-c up" title="Lucy Matuszak 1–0 Sage Illian · last met 2026-06-16 at 2026 USA Volleyball Youth Olympic Games Trials">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c up" title="Lucy Matuszak 2–0 Sarah Cowan · last met 2026-06-16 at 2026 USA Volleyball Youth Olympic Games Trials">2&#8211;0</td><td class="ct-c lv" title="Lucy Matuszak 1–1 Ashlynn Proctor · last met 2026-07-09 at 2026 BVCA Individual Pairs National Championship ">1&#8211;1</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c up" title="Lucy Matuszak 1–0 Cayden Dorger · last met 2026-06-16 at 2026 USA Volleyball Youth Olympic Games Trials">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td></tr><tr><th class="ct-row"><span class="ct-rank">2</span><a class="lnk" href="https://volleyballlife.com/player/147394" target="_blank" rel="noopener">Sadie Stafford</a></th><td class="ct-c none"></td><td class="ct-c self"></td><td class="ct-c dn" title="Sadie Stafford 0–1 Milaniakai Padilla · last met 2026-07-26 at AVP Juniors National Championships 2026">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c up" title="Sadie Stafford 1–0 Breeze Johnson · last met 2026-05-03 at 2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c dn" title="Sadie Stafford 0–1 Brooklyn Rosales · last met 2026-05-03 at 2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier">0&#8211;1</td><td class="ct-c up" title="Sadie Stafford 1–0 Eden Cisneros · last met 2026-07-22 at AVP Juniors National Championships 2026">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c dn" title="Sadie Stafford 0–1 Dreya Scherfenberg · last met 2026-04-11 at 2026 Futures Tour: Texas">0&#8211;1</td><td class="ct-c up" title="Sadie Stafford 2–0 Milan Hendrickson · last met 2026-07-22 at AVP Juniors National Championships 2026">2&#8211;0</td><td class="ct-c up" title="Sadie Stafford 2–1 Cayden Dorger · last met 2026-06-17 at 2026 USA Volleyball Youth Olympic Games Trials">2&#8211;1</td><td class="ct-c up" title="Sadie Stafford 1–0 Ella Buchanan · last met 2026-06-16 at 2026 USA Volleyball Youth Olympic Games Trials">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c up" title="Sadie Stafford 1–0 Danica  Waterman · last met 2026-05-03 at 2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier">1&#8211;0</td><td class="ct-c dn" title="Sadie Stafford 0–2 Abigail Moffett · last met 2026-07-23 at AVP Juniors National Championships 2026">0&#8211;2</td></tr><tr><th class="ct-row"><span class="ct-rank">3</span><a class="lnk" href="https://volleyballlife.com/player/95165" target="_blank" rel="noopener">Milaniakai Padilla</a></th><td class="ct-c dn" title="Milaniakai Padilla 0–2 Lucy Matuszak · last met 2026-06-17 at 2026 USA Volleyball Youth Olympic Games Trials">0&#8211;2</td><td class="ct-c up" title="Milaniakai Padilla 1–0 Sadie Stafford · last met 2026-07-26 at AVP Juniors National Championships 2026">1&#8211;0</td><td class="ct-c self"></td><td class="ct-c dn" title="Milaniakai Padilla 0–1 Sage Illian · last met 2025-11-09 at AVP Juniors West Coast Championships 2025">0&#8211;1</td><td class="ct-c dn" title="Milaniakai Padilla 0–1 Haisley Flanagan · last met 2026-07-07 at 2026 BVCA Individual Pairs National Championship ">0&#8211;1</td><td class="ct-c up" title="Milaniakai Padilla 1–0 Madison Gillinger · last met 2026-01-31 at 2026 USA Volleyball U18 Beach National Team Trials">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c up" title="Milaniakai Padilla 1–0 Eden Cisneros · last met 2026-03-28 at 2026 Futures Tour Spring Championship">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td></tr><tr><th class="ct-row"><span class="ct-rank">4</span><a class="lnk" href="https://volleyballlife.com/player/91052" target="_blank" rel="noopener">Sage Illian</a></th><td class="ct-c dn" title="Sage Illian 0–1 Lucy Matuszak · last met 2026-06-16 at 2026 USA Volleyball Youth Olympic Games Trials">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c up" title="Sage Illian 1–0 Milaniakai Padilla · last met 2025-11-09 at AVP Juniors West Coast Championships 2025">1&#8211;0</td><td class="ct-c self"></td><td class="ct-c none"></td><td class="ct-c up" title="Sage Illian 1–0 Madison Gillinger · last met 2026-01-30 at 2026 USA Volleyball U18 Beach National Team Trials">1&#8211;0</td><td class="ct-c up" title="Sage Illian 1–0 Sarah Cowan · last met 2025-11-09 at AVP Juniors West Coast Championships 2025">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c dn" title="Sage Illian 0–1 Brooklyn Rosales · last met 2026-05-03 at 2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c lv" title="Sage Illian 1–1 Cayden Dorger · last met 2026-06-17 at 2026 USA Volleyball Youth Olympic Games Trials">1&#8211;1</td><td class="ct-c up" title="Sage Illian 1–0 Ella Buchanan · last met 2026-06-16 at 2026 USA Volleyball Youth Olympic Games Trials">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c up" title="Sage Illian 1–0 Danica  Waterman · last met 2025-11-29 at AVP Juniors East Coast Championships 2025">1&#8211;0</td><td class="ct-c up" title="Sage Illian 1–0 Abigail Moffett · last met 2026-01-30 at 2026 USA Volleyball U18 Beach National Team Trials">1&#8211;0</td></tr><tr><th class="ct-row"><span class="ct-rank">5</span><a class="lnk" href="https://volleyballlife.com/player/64896" target="_blank" rel="noopener">Haisley Flanagan</a></th><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c up" title="Haisley Flanagan 1–0 Milaniakai Padilla · last met 2026-07-07 at 2026 BVCA Individual Pairs National Championship ">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c self"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c dn" title="Haisley Flanagan 0–1 Eden Cisneros · last met 2026-07-24 at AVP Juniors National Championships 2026">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c dn" title="Haisley Flanagan 0–1 Milan Hendrickson · last met 2026-07-24 at AVP Juniors National Championships 2026">0&#8211;1</td><td class="ct-c up" title="Haisley Flanagan 1–0 Cayden Dorger · last met 2026-07-23 at AVP Juniors National Championships 2026">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c dn" title="Haisley Flanagan 0–1 Abigail Moffett · last met 2026-01-17 at 2026 Futures Tour: Arizona">0&#8211;1</td></tr><tr><th class="ct-row"><span class="ct-rank">6</span><a class="lnk" href="https://volleyballlife.com/player/99596" target="_blank" rel="noopener">Madison Gillinger</a></th><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c dn" title="Madison Gillinger 0–1 Milaniakai Padilla · last met 2026-01-31 at 2026 USA Volleyball U18 Beach National Team Trials">0&#8211;1</td><td class="ct-c dn" title="Madison Gillinger 0–1 Sage Illian · last met 2026-01-30 at 2026 USA Volleyball U18 Beach National Team Trials">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c self"></td><td class="ct-c dn" title="Madison Gillinger 0–1 Sarah Cowan · last met 2026-01-31 at 2026 USA Volleyball U18 Beach National Team Trials">0&#8211;1</td><td class="ct-c dn" title="Madison Gillinger 0–1 Ashlynn Proctor · last met 2026-07-09 at 2026 BVCA Individual Pairs National Championship ">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c dn" title="Madison Gillinger 0–2 Eden Cisneros · last met 2026-07-24 at AVP Juniors National Championships 2026">0&#8211;2</td><td class="ct-c none"></td><td class="ct-c dn" title="Madison Gillinger 0–1 Dreya Scherfenberg · last met 2026-01-30 at 2026 USA Volleyball U18 Beach National Team Trials">0&#8211;1</td><td class="ct-c dn" title="Madison Gillinger 0–1 Milan Hendrickson · last met 2026-07-24 at AVP Juniors National Championships 2026">0&#8211;1</td><td class="ct-c up" title="Madison Gillinger 1–0 Cayden Dorger · last met 2026-07-23 at AVP Juniors National Championships 2026">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c lv" title="Madison Gillinger 1–1 Abigail Moffett · last met 2026-01-30 at 2026 USA Volleyball U18 Beach National Team Trials">1&#8211;1</td></tr><tr><th class="ct-row"><span class="ct-rank">7</span><a class="lnk" href="https://volleyballlife.com/player/84725" target="_blank" rel="noopener">Sarah Cowan</a></th><td class="ct-c dn" title="Sarah Cowan 0–2 Lucy Matuszak · last met 2026-06-16 at 2026 USA Volleyball Youth Olympic Games Trials">0&#8211;2</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c dn" title="Sarah Cowan 0–1 Sage Illian · last met 2025-11-09 at AVP Juniors West Coast Championships 2025">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c up" title="Sarah Cowan 1–0 Madison Gillinger · last met 2026-01-31 at 2026 USA Volleyball U18 Beach National Team Trials">1&#8211;0</td><td class="ct-c self"></td><td class="ct-c dn" title="Sarah Cowan 0–1 Ashlynn Proctor · last met 2026-07-09 at 2026 BVCA Individual Pairs National Championship ">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c up" title="Sarah Cowan 1–0 Dreya Scherfenberg · last met 2026-04-12 at 2026 Futures Tour: Texas">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c lv" title="Sarah Cowan 1–1 Cayden Dorger · last met 2026-06-17 at 2026 USA Volleyball Youth Olympic Games Trials">1&#8211;1</td><td class="ct-c up" title="Sarah Cowan 1–0 Ella Buchanan · last met 2026-06-16 at 2026 USA Volleyball Youth Olympic Games Trials">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c up" title="Sarah Cowan 1–0 Danica  Waterman · last met 2026-01-18 at 2026 Futures Tour: Arizona">1&#8211;0</td><td class="ct-c none"></td></tr><tr><th class="ct-row"><span class="ct-rank">8</span><a class="lnk" href="https://volleyballlife.com/player/91897" target="_blank" rel="noopener">Ashlynn Proctor</a></th><td class="ct-c lv" title="Ashlynn Proctor 1–1 Lucy Matuszak · last met 2026-07-09 at 2026 BVCA Individual Pairs National Championship ">1&#8211;1</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c up" title="Ashlynn Proctor 1–0 Madison Gillinger · last met 2026-07-09 at 2026 BVCA Individual Pairs National Championship ">1&#8211;0</td><td class="ct-c up" title="Ashlynn Proctor 1–0 Sarah Cowan · last met 2026-07-09 at 2026 BVCA Individual Pairs National Championship ">1&#8211;0</td><td class="ct-c self"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c up" title="Ashlynn Proctor 2–0 Eden Cisneros · last met 2026-07-08 at 2026 BVCA Individual Pairs National Championship ">2&#8211;0</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c up" title="Ashlynn Proctor 1–0 Milan Hendrickson · last met 2026-07-08 at 2026 BVCA Individual Pairs National Championship ">1&#8211;0</td><td class="ct-c up" title="Ashlynn Proctor 1–0 Cayden Dorger · last met 2026-07-18 at 33rd AAU Hermosa Beach National Pairs Championships ">1&#8211;0</td><td class="ct-c up" title="Ashlynn Proctor 1–0 Ella Buchanan · last met 2026-07-18 at 33rd AAU Hermosa Beach National Pairs Championships ">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c up" title="Ashlynn Proctor 1–0 Abigail Moffett · last met 2025-11-09 at AVP Juniors West Coast Championships 2025">1&#8211;0</td></tr><tr><th class="ct-row"><span class="ct-rank">9</span><a class="lnk" href="https://volleyballlife.com/player/84049" target="_blank" rel="noopener">Breeze Johnson</a></th><td class="ct-c none"></td><td class="ct-c dn" title="Breeze Johnson 0–1 Sadie Stafford · last met 2026-05-03 at 2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c self"></td><td class="ct-c none"></td><td class="ct-c up" title="Breeze Johnson 1–0 Brooklyn Rosales · last met 2025-12-29 at 2025 Futures Tour Winter Championship">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td></tr><tr><th class="ct-row"><span class="ct-rank">10</span><a class="lnk" href="https://volleyballlife.com/player/53120" target="_blank" rel="noopener">Summer Tukua</a></th><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c self"></td><td class="ct-c none"></td><td class="ct-c up" title="Summer Tukua 1–0 Eden Cisneros · last met 2025-11-09 at AVP Juniors West Coast Championships 2025">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c up" title="Summer Tukua 1–0 Cayden Dorger · last met 2026-07-18 at 33rd AAU Hermosa Beach National Pairs Championships ">1&#8211;0</td><td class="ct-c up" title="Summer Tukua 1–0 Ella Buchanan · last met 2026-07-18 at 33rd AAU Hermosa Beach National Pairs Championships ">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c up" title="Summer Tukua 1–0 Abigail Moffett · last met 2025-11-09 at AVP Juniors West Coast Championships 2025">1&#8211;0</td></tr><tr><th class="ct-row"><span class="ct-rank">11</span><a class="lnk" href="https://volleyballlife.com/player/59411" target="_blank" rel="noopener">Brooklyn Rosales</a></th><td class="ct-c none"></td><td class="ct-c up" title="Brooklyn Rosales 1–0 Sadie Stafford · last met 2026-05-03 at 2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c up" title="Brooklyn Rosales 1–0 Sage Illian · last met 2026-05-03 at 2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c dn" title="Brooklyn Rosales 0–1 Breeze Johnson · last met 2025-12-29 at 2025 Futures Tour Winter Championship">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c self"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c up" title="Brooklyn Rosales 1–0 Dreya Scherfenberg · last met 2026-05-03 at 2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c up" title="Brooklyn Rosales 1–0 Cayden Dorger · last met 2026-03-14 at 2026 Futures Tour: Florida">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c up" title="Brooklyn Rosales 1–0 Danica  Waterman · last met 2025-12-29 at 2025 Futures Tour Winter Championship">1&#8211;0</td><td class="ct-c none"></td></tr><tr><th class="ct-row"><span class="ct-rank">12</span><a class="lnk" href="https://volleyballlife.com/player/98425" target="_blank" rel="noopener">Eden Cisneros</a></th><td class="ct-c none"></td><td class="ct-c dn" title="Eden Cisneros 0–1 Sadie Stafford · last met 2026-07-22 at AVP Juniors National Championships 2026">0&#8211;1</td><td class="ct-c dn" title="Eden Cisneros 0–1 Milaniakai Padilla · last met 2026-03-28 at 2026 Futures Tour Spring Championship">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c up" title="Eden Cisneros 1–0 Haisley Flanagan · last met 2026-07-24 at AVP Juniors National Championships 2026">1&#8211;0</td><td class="ct-c up" title="Eden Cisneros 2–0 Madison Gillinger · last met 2026-07-24 at AVP Juniors National Championships 2026">2&#8211;0</td><td class="ct-c none"></td><td class="ct-c dn" title="Eden Cisneros 0–2 Ashlynn Proctor · last met 2026-07-08 at 2026 BVCA Individual Pairs National Championship ">0&#8211;2</td><td class="ct-c none"></td><td class="ct-c dn" title="Eden Cisneros 0–1 Summer Tukua · last met 2025-11-09 at AVP Juniors West Coast Championships 2025">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c self"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c up" title="Eden Cisneros 1–0 Cayden Dorger · last met 2026-07-24 at AVP Juniors National Championships 2026">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c dn" title="Eden Cisneros 0–1 Danica  Waterman · last met 2026-07-22 at AVP Juniors National Championships 2026">0&#8211;1</td><td class="ct-c none"></td></tr><tr><th class="ct-row"><span class="ct-rank">13</span><a class="lnk" href="https://volleyballlife.com/player/149113" target="_blank" rel="noopener">Skyler Smith</a></th><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c self"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td></tr><tr><th class="ct-row"><span class="ct-rank">14</span><a class="lnk" href="https://volleyballlife.com/player/2048" target="_blank" rel="noopener">Dreya Scherfenberg</a></th><td class="ct-c none"></td><td class="ct-c up" title="Dreya Scherfenberg 1–0 Sadie Stafford · last met 2026-04-11 at 2026 Futures Tour: Texas">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c up" title="Dreya Scherfenberg 1–0 Madison Gillinger · last met 2026-01-30 at 2026 USA Volleyball U18 Beach National Team Trials">1&#8211;0</td><td class="ct-c dn" title="Dreya Scherfenberg 0–1 Sarah Cowan · last met 2026-04-12 at 2026 Futures Tour: Texas">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c dn" title="Dreya Scherfenberg 0–1 Brooklyn Rosales · last met 2026-05-03 at 2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c self"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c up" title="Dreya Scherfenberg 1–0 Danica  Waterman · last met 2025-11-29 at AVP Juniors East Coast Championships 2025">1&#8211;0</td><td class="ct-c up" title="Dreya Scherfenberg 1–0 Abigail Moffett · last met 2026-01-30 at 2026 USA Volleyball U18 Beach National Team Trials">1&#8211;0</td></tr><tr><th class="ct-row"><span class="ct-rank">15</span><a class="lnk" href="https://volleyballlife.com/player/22857" target="_blank" rel="noopener">Milan Hendrickson</a></th><td class="ct-c none"></td><td class="ct-c dn" title="Milan Hendrickson 0–2 Sadie Stafford · last met 2026-07-22 at AVP Juniors National Championships 2026">0&#8211;2</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c up" title="Milan Hendrickson 1–0 Haisley Flanagan · last met 2026-07-24 at AVP Juniors National Championships 2026">1&#8211;0</td><td class="ct-c up" title="Milan Hendrickson 1–0 Madison Gillinger · last met 2026-07-24 at AVP Juniors National Championships 2026">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c dn" title="Milan Hendrickson 0–1 Ashlynn Proctor · last met 2026-07-08 at 2026 BVCA Individual Pairs National Championship ">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c self"></td><td class="ct-c up" title="Milan Hendrickson 1–0 Cayden Dorger · last met 2026-07-24 at AVP Juniors National Championships 2026">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c dn" title="Milan Hendrickson 0–2 Danica  Waterman · last met 2026-07-22 at AVP Juniors National Championships 2026">0&#8211;2</td><td class="ct-c none"></td></tr><tr><th class="ct-row"><span class="ct-rank">16</span><a class="lnk" href="https://volleyballlife.com/player/128445" target="_blank" rel="noopener">Cayden Dorger</a></th><td class="ct-c dn" title="Cayden Dorger 0–1 Lucy Matuszak · last met 2026-06-16 at 2026 USA Volleyball Youth Olympic Games Trials">0&#8211;1</td><td class="ct-c dn" title="Cayden Dorger 1–2 Sadie Stafford · last met 2026-06-17 at 2026 USA Volleyball Youth Olympic Games Trials">1&#8211;2</td><td class="ct-c none"></td><td class="ct-c lv" title="Cayden Dorger 1–1 Sage Illian · last met 2026-06-17 at 2026 USA Volleyball Youth Olympic Games Trials">1&#8211;1</td><td class="ct-c dn" title="Cayden Dorger 0–1 Haisley Flanagan · last met 2026-07-23 at AVP Juniors National Championships 2026">0&#8211;1</td><td class="ct-c dn" title="Cayden Dorger 0–1 Madison Gillinger · last met 2026-07-23 at AVP Juniors National Championships 2026">0&#8211;1</td><td class="ct-c lv" title="Cayden Dorger 1–1 Sarah Cowan · last met 2026-06-17 at 2026 USA Volleyball Youth Olympic Games Trials">1&#8211;1</td><td class="ct-c dn" title="Cayden Dorger 0–1 Ashlynn Proctor · last met 2026-07-18 at 33rd AAU Hermosa Beach National Pairs Championships ">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c dn" title="Cayden Dorger 0–1 Summer Tukua · last met 2026-07-18 at 33rd AAU Hermosa Beach National Pairs Championships ">0&#8211;1</td><td class="ct-c dn" title="Cayden Dorger 0–1 Brooklyn Rosales · last met 2026-03-14 at 2026 Futures Tour: Florida">0&#8211;1</td><td class="ct-c dn" title="Cayden Dorger 0–1 Eden Cisneros · last met 2026-07-24 at AVP Juniors National Championships 2026">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c dn" title="Cayden Dorger 0–1 Milan Hendrickson · last met 2026-07-24 at AVP Juniors National Championships 2026">0&#8211;1</td><td class="ct-c self"></td><td class="ct-c up" title="Cayden Dorger 1–0 Ella Buchanan · last met 2026-07-17 at 33rd AAU Hermosa Beach National Pairs Championships ">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c up" title="Cayden Dorger 1–0 Abigail Moffett · last met 2026-05-03 at 2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier">1&#8211;0</td></tr><tr><th class="ct-row"><span class="ct-rank">17</span><a class="lnk" href="https://volleyballlife.com/player/98125" target="_blank" rel="noopener">Ella Buchanan</a></th><td class="ct-c none"></td><td class="ct-c dn" title="Ella Buchanan 0–1 Sadie Stafford · last met 2026-06-16 at 2026 USA Volleyball Youth Olympic Games Trials">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c dn" title="Ella Buchanan 0–1 Sage Illian · last met 2026-06-16 at 2026 USA Volleyball Youth Olympic Games Trials">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c dn" title="Ella Buchanan 0–1 Sarah Cowan · last met 2026-06-16 at 2026 USA Volleyball Youth Olympic Games Trials">0&#8211;1</td><td class="ct-c dn" title="Ella Buchanan 0–1 Ashlynn Proctor · last met 2026-07-18 at 33rd AAU Hermosa Beach National Pairs Championships ">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c dn" title="Ella Buchanan 0–1 Summer Tukua · last met 2026-07-18 at 33rd AAU Hermosa Beach National Pairs Championships ">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c dn" title="Ella Buchanan 0–1 Cayden Dorger · last met 2026-07-17 at 33rd AAU Hermosa Beach National Pairs Championships ">0&#8211;1</td><td class="ct-c self"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td></tr><tr><th class="ct-row"><span class="ct-rank">18</span><a class="lnk" href="https://volleyballlife.com/player/25298" target="_blank" rel="noopener">Lia Ray</a></th><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c self"></td><td class="ct-c none"></td><td class="ct-c none"></td></tr><tr><th class="ct-row"><span class="ct-rank">19</span><a class="lnk" href="https://volleyballlife.com/player/94563" target="_blank" rel="noopener">Danica  Waterman</a></th><td class="ct-c none"></td><td class="ct-c dn" title="Danica  Waterman 0–1 Sadie Stafford · last met 2026-05-03 at 2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c dn" title="Danica  Waterman 0–1 Sage Illian · last met 2025-11-29 at AVP Juniors East Coast Championships 2025">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c dn" title="Danica  Waterman 0–1 Sarah Cowan · last met 2026-01-18 at 2026 Futures Tour: Arizona">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c dn" title="Danica  Waterman 0–1 Brooklyn Rosales · last met 2025-12-29 at 2025 Futures Tour Winter Championship">0&#8211;1</td><td class="ct-c up" title="Danica  Waterman 1–0 Eden Cisneros · last met 2026-07-22 at AVP Juniors National Championships 2026">1&#8211;0</td><td class="ct-c none"></td><td class="ct-c dn" title="Danica  Waterman 0–1 Dreya Scherfenberg · last met 2025-11-29 at AVP Juniors East Coast Championships 2025">0&#8211;1</td><td class="ct-c up" title="Danica  Waterman 2–0 Milan Hendrickson · last met 2026-07-22 at AVP Juniors National Championships 2026">2&#8211;0</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c self"></td><td class="ct-c dn" title="Danica  Waterman 0–1 Abigail Moffett · last met 2026-07-23 at AVP Juniors National Championships 2026">0&#8211;1</td></tr><tr><th class="ct-row"><span class="ct-rank">20</span><a class="lnk" href="https://volleyballlife.com/player/9258" target="_blank" rel="noopener">Abigail Moffett</a></th><td class="ct-c none"></td><td class="ct-c up" title="Abigail Moffett 2–0 Sadie Stafford · last met 2026-07-23 at AVP Juniors National Championships 2026">2&#8211;0</td><td class="ct-c none"></td><td class="ct-c dn" title="Abigail Moffett 0–1 Sage Illian · last met 2026-01-30 at 2026 USA Volleyball U18 Beach National Team Trials">0&#8211;1</td><td class="ct-c up" title="Abigail Moffett 1–0 Haisley Flanagan · last met 2026-01-17 at 2026 Futures Tour: Arizona">1&#8211;0</td><td class="ct-c lv" title="Abigail Moffett 1–1 Madison Gillinger · last met 2026-01-30 at 2026 USA Volleyball U18 Beach National Team Trials">1&#8211;1</td><td class="ct-c none"></td><td class="ct-c dn" title="Abigail Moffett 0–1 Ashlynn Proctor · last met 2025-11-09 at AVP Juniors West Coast Championships 2025">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c dn" title="Abigail Moffett 0–1 Summer Tukua · last met 2025-11-09 at AVP Juniors West Coast Championships 2025">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c dn" title="Abigail Moffett 0–1 Dreya Scherfenberg · last met 2026-01-30 at 2026 USA Volleyball U18 Beach National Team Trials">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c dn" title="Abigail Moffett 0–1 Cayden Dorger · last met 2026-05-03 at 2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier">0&#8211;1</td><td class="ct-c none"></td><td class="ct-c none"></td><td class="ct-c up" title="Abigail Moffett 1–0 Danica  Waterman · last met 2026-07-23 at AVP Juniors National Championships 2026">1&#8211;0</td><td class="ct-c self"></td></tr></tbody></table></div>
+  <div class="legend">
+    <span class="key"><span class="sw ct-up"></span> Row player ahead</span>
+    <span class="key"><span class="sw ct-dn"></span> Row player behind</span>
+    <span class="key"><span class="sw ct-lv"></span> Level</span>
+    <span class="key"><span class="sw ct-none"></span> Never met</span>
+  </div>
+</section>
+
+<section>
+  <h2>The rivalries</h2>
+  <p class="lede">The pairings contested most often, with the result of their latest meeting.</p>
+  <div class="panel">
+    <table class="pairs">
+      <thead><tr>
+        <th scope="col">Mtchs</th><th scope="col">Athlete</th><th scope="col">Record</th>
+        <th scope="col">Athlete</th><th scope="col">Last meeting</th>
+      </tr></thead>
+      <tbody>
+      <tr>
+        <td class="num dim">3</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/128445" target="_blank" rel="noopener">Cayden Dorger</a> <span class="dv">#16</span></td>
+        <td class="num sc dn">1&#8211;2</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/147394" target="_blank" rel="noopener">Sadie Stafford</a> <span class="dv">#2</span></td>
+        <td><span class="ct-last">2026-06-17 &#183; 2026 USA Volleyball Youth Olympic Game<br><span class="dv">Cayden Dorger won 21&#8211;19, 21&#8211;17</span></span></td>
+      </tr>
+      <tr>
+        <td class="num dim">2</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/22544" target="_blank" rel="noopener">Lucy Matuszak</a> <span class="dv">#1</span></td>
+        <td class="num sc up">2&#8211;0</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/95165" target="_blank" rel="noopener">Milaniakai Padilla</a> <span class="dv">#3</span></td>
+        <td><span class="ct-last">2026-06-17 &#183; 2026 USA Volleyball Youth Olympic Game<br><span class="dv">Lucy Matuszak won 14&#8211;21, 21&#8211;16, 15&#8211;10</span></span></td>
+      </tr>
+      <tr>
+        <td class="num dim">2</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/22544" target="_blank" rel="noopener">Lucy Matuszak</a> <span class="dv">#1</span></td>
+        <td class="num sc up">2&#8211;0</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/84725" target="_blank" rel="noopener">Sarah Cowan</a> <span class="dv">#7</span></td>
+        <td><span class="ct-last">2026-06-16 &#183; 2026 USA Volleyball Youth Olympic Game<br><span class="dv">Lucy Matuszak won 21&#8211;17, 21&#8211;18</span></span></td>
+      </tr>
+      <tr>
+        <td class="num dim">2</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/22544" target="_blank" rel="noopener">Lucy Matuszak</a> <span class="dv">#1</span></td>
+        <td class="num sc lv">1&#8211;1</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/91897" target="_blank" rel="noopener">Ashlynn Proctor</a> <span class="dv">#8</span></td>
+        <td><span class="ct-last">2026-07-09 &#183; 2026 BVCA Individual Pairs National Ch<br><span class="dv">Ashlynn Proctor won 21&#8211;18, 17&#8211;21, 15&#8211;10</span></span></td>
+      </tr>
+      <tr>
+        <td class="num dim">2</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/22857" target="_blank" rel="noopener">Milan Hendrickson</a> <span class="dv">#15</span></td>
+        <td class="num sc dn">0&#8211;2</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/147394" target="_blank" rel="noopener">Sadie Stafford</a> <span class="dv">#2</span></td>
+        <td><span class="ct-last">2026-07-22 &#183; AVP Juniors National Championships 202<br><span class="dv">Sadie Stafford won 21&#8211;19, 9&#8211;21, 15&#8211;13</span></span></td>
+      </tr>
+      <tr>
+        <td class="num dim">2</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/98425" target="_blank" rel="noopener">Eden Cisneros</a> <span class="dv">#12</span></td>
+        <td class="num sc up">2&#8211;0</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/99596" target="_blank" rel="noopener">Madison Gillinger</a> <span class="dv">#6</span></td>
+        <td><span class="ct-last">2026-07-24 &#183; AVP Juniors National Championships 202<br><span class="dv">Eden Cisneros won 17&#8211;21, 21&#8211;14, 15&#8211;10</span></span></td>
+      </tr>
+      <tr>
+        <td class="num dim">2</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/91052" target="_blank" rel="noopener">Sage Illian</a> <span class="dv">#4</span></td>
+        <td class="num sc lv">1&#8211;1</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/128445" target="_blank" rel="noopener">Cayden Dorger</a> <span class="dv">#16</span></td>
+        <td><span class="ct-last">2026-06-17 &#183; 2026 USA Volleyball Youth Olympic Game<br><span class="dv">Sage Illian won 21&#8211;18, 21&#8211;19</span></span></td>
+      </tr>
+      <tr>
+        <td class="num dim">2</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/91897" target="_blank" rel="noopener">Ashlynn Proctor</a> <span class="dv">#8</span></td>
+        <td class="num sc up">2&#8211;0</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/98425" target="_blank" rel="noopener">Eden Cisneros</a> <span class="dv">#12</span></td>
+        <td><span class="ct-last">2026-07-08 &#183; 2026 BVCA Individual Pairs National Ch<br><span class="dv">Ashlynn Proctor won 21&#8211;18, 21&#8211;19</span></span></td>
+      </tr>
+      <tr>
+        <td class="num dim">2</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/9258" target="_blank" rel="noopener">Abigail Moffett</a> <span class="dv">#20</span></td>
+        <td class="num sc up">2&#8211;0</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/147394" target="_blank" rel="noopener">Sadie Stafford</a> <span class="dv">#2</span></td>
+        <td><span class="ct-last">2026-07-23 &#183; AVP Juniors National Championships 202<br><span class="dv">Abigail Moffett won 22&#8211;24, 21&#8211;19, 17&#8211;15</span></span></td>
+      </tr>
+      <tr>
+        <td class="num dim">2</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/84725" target="_blank" rel="noopener">Sarah Cowan</a> <span class="dv">#7</span></td>
+        <td class="num sc lv">1&#8211;1</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/128445" target="_blank" rel="noopener">Cayden Dorger</a> <span class="dv">#16</span></td>
+        <td><span class="ct-last">2026-06-17 &#183; 2026 USA Volleyball Youth Olympic Game<br><span class="dv">Sarah Cowan won 21&#8211;18, 21&#8211;19</span></span></td>
+      </tr>
+      <tr>
+        <td class="num dim">2</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/9258" target="_blank" rel="noopener">Abigail Moffett</a> <span class="dv">#20</span></td>
+        <td class="num sc lv">1&#8211;1</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/99596" target="_blank" rel="noopener">Madison Gillinger</a> <span class="dv">#6</span></td>
+        <td><span class="ct-last">2026-01-30 &#183; 2026 USA Volleyball U18 Beach National<br><span class="dv">Madison Gillinger won 25&#8211;23, 19&#8211;21, 15&#8211;12</span></span></td>
+      </tr>
+      <tr>
+        <td class="num dim">2</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/22857" target="_blank" rel="noopener">Milan Hendrickson</a> <span class="dv">#15</span></td>
+        <td class="num sc dn">0&#8211;2</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/94563" target="_blank" rel="noopener">Danica  Waterman</a> <span class="dv">#19</span></td>
+        <td><span class="ct-last">2026-07-22 &#183; AVP Juniors National Championships 202<br><span class="dv">Danica  Waterman won 21&#8211;19, 9&#8211;21, 15&#8211;13</span></span></td>
+      </tr>
+      <tr>
+        <td class="num dim">1</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/22544" target="_blank" rel="noopener">Lucy Matuszak</a> <span class="dv">#1</span></td>
+        <td class="num sc up">1&#8211;0</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/91052" target="_blank" rel="noopener">Sage Illian</a> <span class="dv">#4</span></td>
+        <td><span class="ct-last">2026-06-16 &#183; 2026 USA Volleyball Youth Olympic Game<br><span class="dv">Lucy Matuszak won 21&#8211;17, 21&#8211;18</span></span></td>
+      </tr>
+      <tr>
+        <td class="num dim">1</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/95165" target="_blank" rel="noopener">Milaniakai Padilla</a> <span class="dv">#3</span></td>
+        <td class="num sc up">1&#8211;0</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/147394" target="_blank" rel="noopener">Sadie Stafford</a> <span class="dv">#2</span></td>
+        <td><span class="ct-last">2026-07-26 &#183; AVP Juniors National Championships 202<br><span class="dv">Milaniakai Padilla won 21&#8211;12, 21&#8211;14</span></span></td>
+      </tr>
+      <tr>
+        <td class="num dim">1</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/91052" target="_blank" rel="noopener">Sage Illian</a> <span class="dv">#4</span></td>
+        <td class="num sc up">1&#8211;0</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/95165" target="_blank" rel="noopener">Milaniakai Padilla</a> <span class="dv">#3</span></td>
+        <td><span class="ct-last">2025-11-09 &#183; AVP Juniors West Coast Championships 2<br><span class="dv">Sage Illian won 21&#8211;13, 21&#8211;15</span></span></td>
+      </tr>
+      <tr>
+        <td class="num dim">1</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/64896" target="_blank" rel="noopener">Haisley Flanagan</a> <span class="dv">#5</span></td>
+        <td class="num sc up">1&#8211;0</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/95165" target="_blank" rel="noopener">Milaniakai Padilla</a> <span class="dv">#3</span></td>
+        <td><span class="ct-last">2026-07-07 &#183; 2026 BVCA Individual Pairs National Ch<br><span class="dv">Haisley Flanagan won 21&#8211;18, 21&#8211;16</span></span></td>
+      </tr>
+      <tr>
+        <td class="num dim">1</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/95165" target="_blank" rel="noopener">Milaniakai Padilla</a> <span class="dv">#3</span></td>
+        <td class="num sc up">1&#8211;0</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/99596" target="_blank" rel="noopener">Madison Gillinger</a> <span class="dv">#6</span></td>
+        <td><span class="ct-last">2026-01-31 &#183; 2026 USA Volleyball U18 Beach National<br><span class="dv">Milaniakai Padilla won 21&#8211;18, 21&#8211;14</span></span></td>
+      </tr>
+      <tr>
+        <td class="num dim">1</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/91052" target="_blank" rel="noopener">Sage Illian</a> <span class="dv">#4</span></td>
+        <td class="num sc up">1&#8211;0</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/99596" target="_blank" rel="noopener">Madison Gillinger</a> <span class="dv">#6</span></td>
+        <td><span class="ct-last">2026-01-30 &#183; 2026 USA Volleyball U18 Beach National<br><span class="dv">Sage Illian won 17&#8211;21, 21&#8211;19, 15&#8211;8</span></span></td>
+      </tr>
+      <tr>
+        <td class="num dim">1</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/84725" target="_blank" rel="noopener">Sarah Cowan</a> <span class="dv">#7</span></td>
+        <td class="num sc dn">0&#8211;1</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/91052" target="_blank" rel="noopener">Sage Illian</a> <span class="dv">#4</span></td>
+        <td><span class="ct-last">2025-11-09 &#183; AVP Juniors West Coast Championships 2<br><span class="dv">Sage Illian won 21&#8211;13, 21&#8211;15</span></span></td>
+      </tr>
+      <tr>
+        <td class="num dim">1</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/84049" target="_blank" rel="noopener">Breeze Johnson</a> <span class="dv">#9</span></td>
+        <td class="num sc dn">0&#8211;1</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/147394" target="_blank" rel="noopener">Sadie Stafford</a> <span class="dv">#2</span></td>
+        <td><span class="ct-last">2026-05-03 &#183; 2025-26 USA Volleyball Beach Tour - Gu<br><span class="dv">Sadie Stafford won &#8212;</span></span></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="notes">
+  <h2>How to read it</h2>
+  <ul>
+    <li><b>Each division is its own competition.</b> At the AVP Juniors National Championships the
+    18U, 17U, 16U and 15U brackets ran as separate fields; they appear as separate columns, and a
+    5th in one says nothing about a 5th in another.</li>
+    <li><b>Doubles only &#8212; club formats are excluded.</b> The BVCA Orange County dates,
+    Club&#8202;v&#8202;Club, the AAU club championships and every 3v3 or 5v5 division are team
+    events where a placing reflects a squad of five to twelve, not the athlete. 50
+    such results were dropped. The test is roster size rather than the division name, which is
+    unreliable: &#8220;Open (5v5)&#8221;, &#8220;OPEN&#8221;, &#8220;Club Division&#8221; and
+    &#8220;Girls Open (5 Pairs)&#8221; are all team formats. Every entry kept has exactly one
+    partner.</li>
+    <li><b>Ties are shared.</b> Beach draws award equal finishes to every team knocked out in the
+    same round, which is why blocks of 5th, 9th and 17th recur down a column.</li>
+    <li><b>Field size is the number of teams registered in that division</b>, as recorded by
+    Volleyball Life &#8212; not the number that ultimately played, so a withdrawal leaves the
+    denominator unchanged.</li>
+    <li><b>Sanctioning bodies</b> are tagged in each column head: AVPA (AVP and AVP Juniors),
+    USAV, AAU, BVCA, CBVA and p1440.</li>
+    <li><b>How these 20 were chosen.</b> Volleyball Life publishes no class ranking, so the field was built by crawling the partner graph outward from known athletes in the class and keeping every profile that reports a 2028 graduation year. The crawl was then run to closure &#8212; repeatedly expanding the partners of every player already found until a full round turned up nobody new above a 7.0 rating floor. That took the cohort to <b>1,574 girls in the class, 1,380 of them rated</b>; the 20 highest TruVolley scores are the roster here. The cut is tight: #21 is Taylie Hansen at 8.072, 0.033 behind #20. This is a ranking by rating, not a scouting opinion, and TruVolley rewards win rate, so a light schedule in small fields can flatter a player.</li>
+  </ul>
+</section>
+<footer>
+  Class of 2028 — top 20. Results, field sizes and TruVolley ratings from Volleyball Life,
+  retrieved 11 August 2026. Companion reports cover the NTDP 18U and 17U groups.
+</footer>
+</div>
