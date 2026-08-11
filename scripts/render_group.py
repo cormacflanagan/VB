@@ -296,7 +296,9 @@ def build(group):
     others = {"18U": "17U group and the class of 2028",
               "17U": "18U group and the class of 2028"}.get(
                   group, "NTDP 18U and 17U groups")
-    return f"""<title>BNTDP {group} Girls &#183; Record by Competition</title>
+    pagetitle = (f"{fmt['Y']} and younger" if group.endswith("_younger")
+                 else f"BNTDP {group} Girls")
+    return f"""<title>{pagetitle} &#183; Record by Competition</title>
 <style>
 :root {{
   --ground:#EFF1EE; --surface:#FAFBFA; --raise:#FFFFFF;

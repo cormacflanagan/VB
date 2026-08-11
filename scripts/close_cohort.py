@@ -77,11 +77,24 @@ def main(year):
     checked = set(pop)
     print(f"seed: {len(pop)} girls from classes {sorted(y for y in classes if y >= year)}")
 
+    # a crawl this long will not always survive the machine it runs on, so pick up any
+    # partial cohort left behind rather than paying for the early rounds twice
+    resumed = False
+    try:
+        prior = {int(k): v for k, v in
+                 json.load(open(f"{DATA}/cohort{year}.json")).items()}
+        if len(prior) > len(pop):
+            pop, resumed = prior, True
+            checked = set(pop) | set(json.load(open(f"{DATA}/cohortchecked{year}.json")))
+            print(f"resuming: {len(pop)} already admitted, {len(checked)} ids checked")
+    except FileNotFoundError:
+        pass
+
     # round 0 is a re-check of what the class crawls threw away, not a fresh expansion
-    cand = rejected_pool()
-    expanded = set(pop)
+    cand = rejected_pool() - checked
+    expanded = set(pop) if not resumed else set()
     for rnd in range(MAX_ROUNDS):
-        if rnd:
+        if rnd or resumed:
             frontier = [p for p in pop if p not in expanded]
             if not frontier:
                 print("converged: nobody left to expand")
