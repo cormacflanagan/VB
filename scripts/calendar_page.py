@@ -4,12 +4,21 @@ Turnout is a magnitude, so the heat is a single-hue sequential ramp (light to da
 monotonic in lightness), and the three tier columns share one scale — each cell is
 shaded by the share of that tier present, so 12 of 15 reads darker than 21 of 30.
 """
-import datetime, html, json, sys
+import datetime, html, json, re, sys
 
 VBL = "https://volleyballlife.com"
+CBVA_URL = "https://cbva.com"
 MIN_TURNOUT = 4
 FOCUS = "17U"
 TIERS = (("t60", 60, "Top 60"), ("t30", 30, "Top 30"), ("t15", 15, "Top 15"))
+
+# a home venue is worth listing whatever the turnout, because the cost of entering is
+# an hour in the car rather than a flight; these are matched against CBVA's venue string
+LOCAL = ("santa cruz",)
+LOCAL_LABEL = "Santa Cruz"
+# the divisions a 17U girl can enter there: the women's ladder, and the girls' 18U draw
+LOCAL_DIV = re.compile(r"women|girl'?s\s*18u", re.I)
+NOT_LOCAL_DIV = re.compile(r"\bmen'?s|boy'?s", re.I)
 
 
 # CBVA runs much of the Southern California circuit but Volleyball Life sanctions it
@@ -22,6 +31,51 @@ except FileNotFoundError:
 
 def esc(s):
     return html.escape(str(s), quote=True)
+
+
+def local_events(fname):
+    """Every CBVA tournament at the home venue, with only the divisions she could enter.
+
+    Read straight from CBVA rather than from our own data, so a local date shows up even
+    when nobody in the class travelled to it &#8212; which is most of them, and is exactly
+    why the turnout-ranked calendar hides them.
+    """
+    try:
+        cb = json.load(open(fname))["tournaments"]
+    except FileNotFoundError:
+        return []
+    out = []
+    for t in cb.values():
+        if not any(v in t["venue"].lower() for v in LOCAL):
+            continue
+        divs = [d for d in t["divisions"]
+                if LOCAL_DIV.search(d["name"]) and not NOT_LOCAL_DIV.search(d["name"])]
+        if divs:
+            out.append(dict(t, divisions=divs))
+    out.sort(key=lambda t: t["date"])
+    return out
+
+
+def local_rows(rows, played, turnout=True):
+    out = []
+    for t in rows:
+        dd = dfmt(t["date"])
+        # CBVA sometimes runs a series label straight into the venue: "Cal Cup Tour StopMain"
+        venue = re.sub(r"(?<=[a-z])(?=[A-Z])", " ", t["venue"])
+        divs = " ".join(
+            f'<a class="ldiv" href="{CBVA_URL}/tournaments/{t["id"]}/{d["id"]}" target="_blank" '
+            f'rel="noopener">{esc(re.sub(r"^.*?Bid Event ", "", d["name"]))}</a>'
+            for d in t["divisions"])
+        n = played.get(t["id"])
+        out.append(f"""      <tr>
+        <td class="num dim nw">{dd.strftime('%-d %b %Y')} <span class="dow">{dd.strftime('%a')}</span></td>
+        <td class="evc"><a class="lnk" href="{CBVA_URL}/tournaments/{t['id']}" target="_blank"
+          rel="noopener">{esc(venue)}</a></td>
+        <td class="ldivs">{divs}</td>{
+        f'<td class="num">{n}</td>' if turnout and n else
+        '<td class="num dim">&#8212;</td>' if turnout else ''}
+      </tr>""")
+    return "".join(out)
 
 
 def dfmt(iso):
@@ -153,6 +207,16 @@ def build(group):
           if e.get('next') else '<span class="dim">&#8212;</span>'}</td>
       </tr>""" for e, b in focus)
 
+    # how many of the group turned up to each local date, keyed by CBVA's id
+    played = {}
+    for tid, cb in CBVA.items():
+        e = next((x for x in D["events"] if str(x["tid"]) == tid), None)
+        if e:
+            played[cb["cbvaId"]] = max(played.get(cb["cbvaId"], 0), e["t60"])
+    past_local = local_events("cbva.json")
+    next_local = local_events("cbva_upcoming.json")
+    local_played = sum(1 for t in past_local if played.get(t["id"]))
+
     def top_bracket(e):
         return max(e["brackets"], key=lambda b: b["t60"])
 
@@ -268,6 +332,12 @@ tbody tr:hover td {{ background:var(--raise); }}
   border:1px solid var(--line); border-radius:2px; padding:2px 5px; white-space:nowrap;
   display:inline-block; }}
 .bdy {{ white-space:nowrap; }}
+h3 {{ font-family:"Iowan Old Style",Georgia,serif; font-size:17px; color:var(--ink);
+  font-weight:600; margin:0 0 10px; }}
+.ldivs {{ display:flex; flex-wrap:wrap; gap:5px; max-width:460px; }}
+.ldiv {{ font-size:11px; color:var(--accent); background:var(--accent-soft);
+  border-radius:2px; padding:2px 7px; text-decoration:none; white-space:nowrap; }}
+.ldiv:hover {{ text-decoration:underline; text-underline-offset:2px; }}
 .cbva {{ color:var(--accent); border-color:var(--accent-soft); text-decoration:none;
   font-weight:650; margin-left:5px; }}
 .cbva:hover {{ background:var(--accent-soft); }}
@@ -327,6 +397,45 @@ a {{ color:var(--accent); }}
   one bracket at the busiest event of that month. The season builds to a July peak and goes
   quiet in autumn.</p>
   <div class="months">{"".join(bars)}</div>
+</section>
+
+<section>
+  <h2>Local &#8212; {LOCAL_LABEL}</h2>
+  <p class="lede">The rest of this page ranks fields by how much of the class turns up, which
+  buries the home venue: of the {len(past_local)} {LOCAL_LABEL} dates last season with a
+  women's or girls' 18U draw, {local_played} drew anyone from the top 60. That is a fact about
+  travel, not about the volleyball &#8212; and it cuts the other way when the drive is an hour.
+  These come straight from CBVA's own listing rather than from the class's record, so a date
+  appears whether or not anyone in the class went. Men's and boys' draws are dropped; on the
+  juniors dates the same event also runs 12U, 14U and 16U.</p>
+  <h3>Already scheduled</h3>
+  <div class="panel">
+    <table>
+      <thead><tr>
+        <th scope="col">Date</th><th scope="col">Venue</th>
+        <th scope="col">Draws she can enter</th>
+      </tr></thead>
+      <tbody>
+{local_rows(next_local, played, turnout=False)}
+      </tbody>
+    </table>
+  </div>
+  <p class="lede" style="margin:12px 0 26px">CBVA posts roughly a season at a time, so this list
+  runs out in the autumn; the juniors Cal&#8202;Cup bid series ran June and July last year and
+  has not been posted yet.</p>
+  <h3>Last season, for the pattern</h3>
+  <div class="panel">
+    <table>
+      <thead><tr>
+        <th scope="col">Date</th><th scope="col">Venue</th>
+        <th scope="col">Draws offered</th>
+        <th scope="col">Class of {group}</th>
+      </tr></thead>
+      <tbody>
+{local_rows(past_local, played)}
+      </tbody>
+    </table>
+  </div>
 </section>
 
 <section>

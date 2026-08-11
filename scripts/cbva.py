@@ -13,7 +13,7 @@ import datetime, html as _html, json, os, re, ssl, sys, urllib.request
 
 BASE = "https://cbva.com"
 LIST = BASE + "/tournaments?page=1&pageSize=100&name=null&divisions=%5B%5D&venues=%5B%5D" \
-              "&genders=%5B%5D&past=true&startDate={a}&endDate={b}"
+              "&genders=%5B%5D&past={p}&startDate={a}&endDate={b}"
 DATA = os.path.join(os.path.dirname(__file__) or ".", "..", "data")
 
 # a tournament block: the header anchor (venue + date), then its division anchors
@@ -35,8 +35,8 @@ def _ctx():
     return ssl.create_default_context()
 
 
-def fetch(a, b):
-    url = LIST.format(a=a, b=b)
+def fetch(a, b, past=True):
+    url = LIST.format(a=a, b=b, p="true" if past else "false")
     with urllib.request.urlopen(urllib.request.Request(
             url, headers={"User-Agent": "Mozilla/5.0"}), timeout=60, context=_ctx()) as r:
         return r.read().decode("utf-8", "replace")
@@ -59,14 +59,14 @@ def parse(page):
     return out
 
 
-def crawl(start, end):
+def crawl(start, end, past=True):
     """One request per month; CBVA returns well under a page of 100 per month."""
     all_t, a = {}, datetime.date.fromisoformat(start)
     stop = datetime.date.fromisoformat(end)
     while a <= stop:
         nxt = (a.replace(day=28) + datetime.timedelta(days=4)).replace(day=1)
         b = min(nxt - datetime.timedelta(days=1), stop)
-        got = parse(fetch(a.isoformat(), b.isoformat()))
+        got = parse(fetch(a.isoformat(), b.isoformat(), past))
         print(f"  {a:%Y-%m}  {len(got):>3} tournaments")
         all_t.update(got)
         a = nxt
@@ -137,8 +137,15 @@ def link(window):
 
 if __name__ == "__main__":
     win = ("2025-08-11", "2026-08-11")
+    ahead = ("2026-08-12", "2027-08-11")
     if "--link" in sys.argv:
         link(win)
+    elif "--upcoming" in sys.argv:
+        print(f"crawling CBVA {ahead[0]} to {ahead[1]} (not yet played)")
+        t = crawl(*ahead, past=False)
+        json.dump({"window": ahead, "tournaments": t},
+                  open(f"{DATA}/cbva_upcoming.json", "w"), indent=1)
+        print(f"{len(t)} CBVA tournaments scheduled")
     else:
         print(f"crawling CBVA {win[0]} to {win[1]}")
         t = crawl(*win)

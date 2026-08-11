@@ -258,6 +258,20 @@ years and ordinals (`norm()` in `calendar.py`). **4 of the 55** matched; the res
 not yet posted or genuinely one-off. Raising the bar to 4 mattered here: at 2, 29 events matched,
 but almost all were weekly 2v2 mini-tournaments that post a year of dates in advance.
 
+### The local section
+
+A turnout-ranked calendar is a ranking of *travel*, and it buries the home venue: of the 21
+Santa Cruz dates last season carrying a women's or girls' 18U draw, **two** drew anyone from
+the class-of-2027 top 60. That says nothing about whether they are worth entering when the
+drive is an hour rather than a flight.
+
+So the local section is built from CBVA's listing directly rather than from the class's record
+— `LOCAL` in `calendar_page.py` names the venue, `LOCAL_DIV` the draws worth showing (the
+women's ladder and girls' 18U; men's and boys' are dropped, and the juniors dates also run 12U,
+14U and 16U). A date appears whether or not anyone in the class went. `scripts/cbva.py
+--upcoming` crawls the not-yet-played listing the same way, giving next season's dates as CBVA
+posts them.
+
 ## Partnerships
 
 `scripts/partners_page.py <group>` builds the who-played-with-whom matrix. A partnership is
