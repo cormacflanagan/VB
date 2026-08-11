@@ -1,0 +1,3086 @@
+{
+ "group": "18U",
+ "players": {
+  "8426": "Lauren Leach",
+  "24515": "Janie McCanna",
+  "28688": "Olivia Herron",
+  "29854": "Sienna Castillo",
+  "25289": "Simrin Adams",
+  "147394": "Sadie Stafford",
+  "95165": "Milaniakai Padilla",
+  "91052": "Sage Illian",
+  "84725": "Sarah Cowan",
+  "61785": "Georgeann Lee",
+  "23868": "Jordyn Wilson",
+  "84161": "Sarah Albers",
+  "94909": "Sadie Harris"
+ },
+ "matches": 815,
+ "pairs": [
+  {
+   "a": "Lauren Leach",
+   "b": "Jordyn Wilson",
+   "aId": 8426,
+   "bId": 23868,
+   "aWins": 5,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-11-08",
+     "event": "AVP Juniors West Coast Championships 2025",
+     "division": "Girls 18U",
+     "tid": 25578,
+     "tdId": 97147,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       10
+      ],
+      [
+       21,
+       7
+      ]
+     ],
+     "with": [
+      24330
+     ],
+     "against": [
+      2771
+     ]
+    },
+    {
+     "date": "2026-01-17",
+     "event": "2026 Futures Tour: Arizona",
+     "division": "Class of '26 & Younger",
+     "tid": 31568,
+     "tdId": 117699,
+     "phase": "Pool",
+     "round": "Day 1: RD2 1sts",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       21,
+       15
+      ]
+     ],
+     "with": [
+      "Janie McCanna"
+     ],
+     "against": [
+      4022
+     ]
+    },
+    {
+     "date": "2026-01-31",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       16
+      ],
+      [
+       21,
+       12
+      ]
+     ],
+     "with": [
+      "Janie McCanna"
+     ],
+     "against": [
+      92193
+     ]
+    },
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       19
+      ],
+      [
+       21,
+       18
+      ]
+     ],
+     "with": [
+      "Janie McCanna"
+     ],
+     "against": [
+      "Georgeann Lee"
+     ]
+    },
+    {
+     "date": "2026-06-17",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       22,
+       20
+      ],
+      [
+       21,
+       9
+      ]
+     ],
+     "with": [
+      "Janie McCanna"
+     ],
+     "against": [
+      "Georgeann Lee"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Jordyn Wilson",
+   "b": "Janie McCanna",
+   "aId": 23868,
+   "bId": 24515,
+   "aWins": 0,
+   "bWins": 4,
+   "games": [
+    {
+     "date": "2026-01-17",
+     "event": "2026 Futures Tour: Arizona",
+     "division": "Class of '26 & Younger",
+     "tid": 31568,
+     "tdId": 117699,
+     "phase": "Pool",
+     "round": "Day 1: RD2 1sts",
+     "won": false,
+     "sets": [
+      [
+       17,
+       21
+      ],
+      [
+       15,
+       21
+      ]
+     ],
+     "with": [
+      "Lauren Leach"
+     ],
+     "against": [
+      4022
+     ]
+    },
+    {
+     "date": "2026-01-31",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": false,
+     "sets": [
+      [
+       16,
+       21
+      ],
+      [
+       12,
+       21
+      ]
+     ],
+     "with": [
+      "Lauren Leach"
+     ],
+     "against": [
+      92193
+     ]
+    },
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": false,
+     "sets": [
+      [
+       19,
+       21
+      ],
+      [
+       18,
+       21
+      ]
+     ],
+     "with": [
+      "Lauren Leach"
+     ],
+     "against": [
+      "Georgeann Lee"
+     ]
+    },
+    {
+     "date": "2026-06-17",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": false,
+     "sets": [
+      [
+       20,
+       22
+      ],
+      [
+       9,
+       21
+      ]
+     ],
+     "with": [
+      "Lauren Leach"
+     ],
+     "against": [
+      "Georgeann Lee"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Janie McCanna",
+   "b": "Sienna Castillo",
+   "aId": 24515,
+   "bId": 29854,
+   "aWins": 3,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       13
+      ],
+      [
+       21,
+       14
+      ]
+     ],
+     "with": [
+      "Lauren Leach"
+     ],
+     "against": [
+      "Simrin Adams"
+     ]
+    },
+    {
+     "date": "2026-01-31",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": false,
+     "sets": [
+      [
+       17,
+       21
+      ],
+      [
+       14,
+       21
+      ]
+     ],
+     "with": [
+      "Lauren Leach"
+     ],
+     "against": [
+      "Simrin Adams"
+     ]
+    },
+    {
+     "date": "2026-04-19",
+     "event": "West Coast Championships (p1440) & Boys 17U ISF Trials ",
+     "division": "Girls 18:U (Grad Year 2026-2027)",
+     "tid": 32941,
+     "tdId": 121655,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       28,
+       25
+      ]
+     ],
+     "with": [
+      "Lauren Leach"
+     ],
+     "against": [
+      56789
+     ]
+    },
+    {
+     "date": "2026-07-24",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 18U",
+     "tid": 34243,
+     "tdId": 126054,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": true,
+     "sets": [
+      [
+       21,
+       19
+      ],
+      [
+       23,
+       25
+      ],
+      [
+       15,
+       13
+      ]
+     ],
+     "with": [
+      18671
+     ],
+     "against": [
+      3113
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lauren Leach",
+   "b": "Sarah Cowan",
+   "aId": 8426,
+   "bId": 84725,
+   "aWins": 3,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-18",
+     "event": "2026 Futures Tour: Arizona",
+     "division": "Class of '26 & Younger",
+     "tid": 31568,
+     "tdId": 117699,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       21,
+       13
+      ]
+     ],
+     "with": [
+      "Janie McCanna"
+     ],
+     "against": [
+      14555
+     ]
+    },
+    {
+     "date": "2026-01-31",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       21,
+       13
+      ]
+     ],
+     "with": [
+      "Janie McCanna"
+     ],
+     "against": [
+      "Milaniakai Padilla"
+     ]
+    },
+    {
+     "date": "2026-06-17",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       17,
+       21
+      ],
+      [
+       24,
+       22
+      ],
+      [
+       15,
+       9
+      ]
+     ],
+     "with": [
+      "Janie McCanna"
+     ],
+     "against": [
+      "Sage Illian"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Janie McCanna",
+   "b": "Sarah Cowan",
+   "aId": 24515,
+   "bId": 84725,
+   "aWins": 3,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-18",
+     "event": "2026 Futures Tour: Arizona",
+     "division": "Class of '26 & Younger",
+     "tid": 31568,
+     "tdId": 117699,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       21,
+       13
+      ]
+     ],
+     "with": [
+      "Lauren Leach"
+     ],
+     "against": [
+      14555
+     ]
+    },
+    {
+     "date": "2026-01-31",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       21,
+       13
+      ]
+     ],
+     "with": [
+      "Lauren Leach"
+     ],
+     "against": [
+      "Milaniakai Padilla"
+     ]
+    },
+    {
+     "date": "2026-06-17",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       17,
+       21
+      ],
+      [
+       24,
+       22
+      ],
+      [
+       15,
+       9
+      ]
+     ],
+     "with": [
+      "Lauren Leach"
+     ],
+     "against": [
+      "Sage Illian"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lauren Leach",
+   "b": "Simrin Adams",
+   "aId": 8426,
+   "bId": 25289,
+   "aWins": 2,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       13
+      ],
+      [
+       21,
+       14
+      ]
+     ],
+     "with": [
+      "Janie McCanna"
+     ],
+     "against": [
+      "Sienna Castillo"
+     ]
+    },
+    {
+     "date": "2026-01-31",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": false,
+     "sets": [
+      [
+       17,
+       21
+      ],
+      [
+       14,
+       21
+      ]
+     ],
+     "with": [
+      "Janie McCanna"
+     ],
+     "against": [
+      "Sienna Castillo"
+     ]
+    },
+    {
+     "date": "2026-07-24",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 18U",
+     "tid": 34243,
+     "tdId": 126054,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": true,
+     "sets": [
+      [
+       21,
+       18
+      ],
+      [
+       21,
+       17
+      ]
+     ],
+     "with": [
+      24330
+     ],
+     "against": [
+      2771
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lauren Leach",
+   "b": "Sienna Castillo",
+   "aId": 8426,
+   "bId": 29854,
+   "aWins": 2,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       13
+      ],
+      [
+       21,
+       14
+      ]
+     ],
+     "with": [
+      "Janie McCanna"
+     ],
+     "against": [
+      "Simrin Adams"
+     ]
+    },
+    {
+     "date": "2026-01-31",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": false,
+     "sets": [
+      [
+       17,
+       21
+      ],
+      [
+       14,
+       21
+      ]
+     ],
+     "with": [
+      "Janie McCanna"
+     ],
+     "against": [
+      "Simrin Adams"
+     ]
+    },
+    {
+     "date": "2026-04-19",
+     "event": "West Coast Championships (p1440) & Boys 17U ISF Trials ",
+     "division": "Girls 18:U (Grad Year 2026-2027)",
+     "tid": 32941,
+     "tdId": 121655,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       28,
+       25
+      ]
+     ],
+     "with": [
+      "Janie McCanna"
+     ],
+     "against": [
+      56789
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lauren Leach",
+   "b": "Milaniakai Padilla",
+   "aId": 8426,
+   "bId": 95165,
+   "aWins": 2,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-01-31",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       21,
+       13
+      ]
+     ],
+     "with": [
+      "Janie McCanna"
+     ],
+     "against": [
+      "Sarah Cowan"
+     ]
+    },
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       13
+      ],
+      [
+       21,
+       14
+      ]
+     ],
+     "with": [
+      "Janie McCanna"
+     ],
+     "against": [
+      91897
+     ]
+    },
+    {
+     "date": "2026-07-18",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 18 - 2026",
+     "tid": 31483,
+     "tdId": 117393,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": false,
+     "sets": [
+      [
+       18,
+       21
+      ],
+      [
+       16,
+       21
+      ]
+     ],
+     "with": [
+      "Olivia Herron"
+     ],
+     "against": [
+      2771
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lauren Leach",
+   "b": "Georgeann Lee",
+   "aId": 8426,
+   "bId": 61785,
+   "aWins": 3,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       19
+      ],
+      [
+       21,
+       18
+      ]
+     ],
+     "with": [
+      "Janie McCanna"
+     ],
+     "against": [
+      "Jordyn Wilson"
+     ]
+    },
+    {
+     "date": "2026-06-17",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       22,
+       20
+      ],
+      [
+       21,
+       9
+      ]
+     ],
+     "with": [
+      "Janie McCanna"
+     ],
+     "against": [
+      "Jordyn Wilson"
+     ]
+    },
+    {
+     "date": "2026-07-24",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 18U",
+     "tid": 34243,
+     "tdId": 126054,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       21,
+       17
+      ]
+     ],
+     "with": [
+      24330
+     ],
+     "against": [
+      44267
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Olivia Herron",
+   "b": "Milaniakai Padilla",
+   "aId": 28688,
+   "bId": 95165,
+   "aWins": 2,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2025-11-08",
+     "event": "AVP Juniors West Coast Championships 2025",
+     "division": "Girls 18U",
+     "tid": 25578,
+     "tdId": 97147,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       14
+      ],
+      [
+       25,
+       23
+      ]
+     ],
+     "with": [
+      5127
+     ],
+     "against": [
+      "Sarah Cowan"
+     ]
+    },
+    {
+     "date": "2026-06-17",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       14,
+       21
+      ],
+      [
+       21,
+       16
+      ],
+      [
+       15,
+       10
+      ]
+     ],
+     "with": [
+      22544
+     ],
+     "against": [
+      91897
+     ]
+    },
+    {
+     "date": "2026-07-18",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 18 - 2026",
+     "tid": 31483,
+     "tdId": 117393,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": false,
+     "sets": [
+      [
+       18,
+       21
+      ],
+      [
+       16,
+       21
+      ]
+     ],
+     "with": [
+      "Lauren Leach"
+     ],
+     "against": [
+      2771
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Olivia Herron",
+   "b": "Sage Illian",
+   "aId": 28688,
+   "bId": 91052,
+   "aWins": 2,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-02-22",
+     "event": "2026 Futures Tour: Alabama",
+     "division": "Class of '26 & Younger",
+     "tid": 31569,
+     "tdId": 117703,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       19,
+       21
+      ],
+      [
+       14,
+       21
+      ]
+     ],
+     "with": [
+      15556
+     ],
+     "against": [
+      2048
+     ]
+    },
+    {
+     "date": "2026-03-29",
+     "event": "2026 Futures Tour Spring Championship",
+     "division": "Class of '26 & Younger",
+     "tid": 31567,
+     "tdId": 117695,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoff",
+     "won": true,
+     "sets": [
+      [
+       21,
+       11
+      ],
+      [
+       12,
+       21
+      ],
+      [
+       15,
+       13
+      ]
+     ],
+     "with": [
+      2334
+     ],
+     "against": [
+      22544
+     ]
+    },
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       21,
+       18
+      ]
+     ],
+     "with": [
+      22544
+     ],
+     "against": [
+      "Sarah Cowan"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Jordyn Wilson",
+   "b": "Simrin Adams",
+   "aId": 23868,
+   "bId": 25289,
+   "aWins": 1,
+   "bWins": 2,
+   "games": [
+    {
+     "date": "2025-12-14",
+     "event": "AAU Herrmosa Beach Winter Series Championships",
+     "division": "Girls 18U",
+     "tid": 31527,
+     "tdId": 117546,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": false,
+     "sets": [
+      [
+       9,
+       21
+      ],
+      [
+       16,
+       21
+      ]
+     ],
+     "with": [
+      59914
+     ],
+     "against": [
+      63770
+     ]
+    },
+    {
+     "date": "2026-02-14",
+     "event": "Beach Elite SoCal Series Winter #5 (AVP 3 STAR)-  2026 ",
+     "division": "Girls 18U",
+     "tid": 34696,
+     "tdId": 127562,
+     "phase": "Pool",
+     "round": null,
+     "won": false,
+     "sets": [
+      [
+       11,
+       21
+      ]
+     ],
+     "with": [
+      15556
+     ],
+     "against": [
+      6429
+     ]
+    },
+    {
+     "date": "2026-03-29",
+     "event": "2026 Futures Tour Spring Championship",
+     "division": "Class of '26 & Younger",
+     "tid": 31567,
+     "tdId": 117695,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoff",
+     "won": true,
+     "sets": [
+      [
+       21,
+       15
+      ],
+      [
+       17,
+       21
+      ],
+      [
+       15,
+       6
+      ]
+     ],
+     "with": [
+      26871
+     ],
+     "against": [
+      26984
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Georgeann Lee",
+   "b": "Milaniakai Padilla",
+   "aId": 61785,
+   "bId": 95165,
+   "aWins": 0,
+   "bWins": 3,
+   "games": [
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": false,
+     "sets": [
+      [
+       18,
+       21
+      ],
+      [
+       17,
+       21
+      ]
+     ],
+     "with": [
+      91897
+     ],
+     "against": [
+      "Jordyn Wilson"
+     ]
+    },
+    {
+     "date": "2026-07-17",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 18 - 2026",
+     "tid": 31483,
+     "tdId": 117393,
+     "phase": "Pool",
+     "round": "Contender Pools",
+     "won": false,
+     "sets": [
+      [
+       15,
+       21
+      ],
+      [
+       21,
+       13
+      ],
+      [
+       6,
+       15
+      ]
+     ],
+     "with": [
+      2771
+     ],
+     "against": [
+      60420
+     ]
+    },
+    {
+     "date": "2026-07-26",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 17U",
+     "tid": 34243,
+     "tdId": 126055,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": false,
+     "sets": [
+      [
+       12,
+       21
+      ],
+      [
+       14,
+       21
+      ]
+     ],
+     "with": [
+      "Sadie Stafford"
+     ],
+     "against": [
+      92193
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lauren Leach",
+   "b": "Sage Illian",
+   "aId": 8426,
+   "bId": 91052,
+   "aWins": 2,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-02-21",
+     "event": "2026 Futures Tour: Alabama",
+     "division": "Class of '26 & Younger",
+     "tid": 31569,
+     "tdId": 117703,
+     "phase": "Pool",
+     "round": "Day 1: RD2 (1sts)",
+     "won": true,
+     "sets": [
+      [
+       22,
+       20
+      ],
+      [
+       24,
+       22
+      ]
+     ],
+     "with": [
+      24330
+     ],
+     "against": [
+      2048
+     ]
+    },
+    {
+     "date": "2026-06-17",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       17,
+       21
+      ],
+      [
+       24,
+       22
+      ],
+      [
+       15,
+       9
+      ]
+     ],
+     "with": [
+      "Janie McCanna"
+     ],
+     "against": [
+      "Sarah Cowan"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lauren Leach",
+   "b": "Olivia Herron",
+   "aId": 8426,
+   "bId": 28688,
+   "aWins": 2,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-03-29",
+     "event": "2026 Futures Tour Spring Championship",
+     "division": "Class of '26 & Younger",
+     "tid": 31567,
+     "tdId": 117695,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoff",
+     "won": true,
+     "sets": [
+      [
+       23,
+       21
+      ],
+      [
+       21,
+       10
+      ]
+     ],
+     "with": [
+      24330
+     ],
+     "against": [
+      2334
+     ]
+    },
+    {
+     "date": "2026-06-17",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       16,
+       21
+      ],
+      [
+       21,
+       19
+      ],
+      [
+       15,
+       11
+      ]
+     ],
+     "with": [
+      "Janie McCanna"
+     ],
+     "against": [
+      22544
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Janie McCanna",
+   "b": "Simrin Adams",
+   "aId": 24515,
+   "bId": 25289,
+   "aWins": 1,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       13
+      ],
+      [
+       21,
+       14
+      ]
+     ],
+     "with": [
+      "Lauren Leach"
+     ],
+     "against": [
+      "Sienna Castillo"
+     ]
+    },
+    {
+     "date": "2026-01-31",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": false,
+     "sets": [
+      [
+       17,
+       21
+      ],
+      [
+       14,
+       21
+      ]
+     ],
+     "with": [
+      "Lauren Leach"
+     ],
+     "against": [
+      "Sienna Castillo"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Janie McCanna",
+   "b": "Milaniakai Padilla",
+   "aId": 24515,
+   "bId": 95165,
+   "aWins": 2,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-31",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       21,
+       13
+      ]
+     ],
+     "with": [
+      "Lauren Leach"
+     ],
+     "against": [
+      "Sarah Cowan"
+     ]
+    },
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       13
+      ],
+      [
+       21,
+       14
+      ]
+     ],
+     "with": [
+      "Lauren Leach"
+     ],
+     "against": [
+      91897
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Janie McCanna",
+   "b": "Georgeann Lee",
+   "aId": 24515,
+   "bId": 61785,
+   "aWins": 2,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       19
+      ],
+      [
+       21,
+       18
+      ]
+     ],
+     "with": [
+      "Lauren Leach"
+     ],
+     "against": [
+      "Jordyn Wilson"
+     ]
+    },
+    {
+     "date": "2026-06-17",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       22,
+       20
+      ],
+      [
+       21,
+       9
+      ]
+     ],
+     "with": [
+      "Lauren Leach"
+     ],
+     "against": [
+      "Jordyn Wilson"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Olivia Herron",
+   "b": "Sarah Cowan",
+   "aId": 28688,
+   "bId": 84725,
+   "aWins": 2,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-11-08",
+     "event": "AVP Juniors West Coast Championships 2025",
+     "division": "Girls 18U",
+     "tid": 25578,
+     "tdId": 97147,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       14
+      ],
+      [
+       25,
+       23
+      ]
+     ],
+     "with": [
+      5127
+     ],
+     "against": [
+      "Milaniakai Padilla"
+     ]
+    },
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       21,
+       18
+      ]
+     ],
+     "with": [
+      22544
+     ],
+     "against": [
+      "Sage Illian"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Olivia Herron",
+   "b": "Sienna Castillo",
+   "aId": 28688,
+   "bId": 29854,
+   "aWins": 1,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-01-11",
+     "event": "California IBVL Winter Classic - p1440",
+     "division": "Girls 18:U (Grad Year 2026-2027)",
+     "tid": 25718,
+     "tdId": 97612,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       7
+      ],
+      [
+       21,
+       9
+      ]
+     ],
+     "with": [
+      22544
+     ],
+     "against": [
+      40933
+     ]
+    },
+    {
+     "date": "2026-01-25",
+     "event": "IBVL Winter Nationals & U18 ISF Trials",
+     "division": "Girls U18 (Year Born: 2008-2009-2010)",
+     "tid": 25008,
+     "tdId": 124255,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": false,
+     "sets": [
+      [
+       12,
+       21
+      ],
+      [
+       21,
+       19
+      ],
+      [
+       11,
+       15
+      ]
+     ],
+     "with": [
+      92193
+     ],
+     "against": [
+      25288
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Simrin Adams",
+   "b": "Sage Illian",
+   "aId": 25289,
+   "bId": 91052,
+   "aWins": 1,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-01-31",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       21,
+       16
+      ]
+     ],
+     "with": [
+      "Sienna Castillo"
+     ],
+     "against": [
+      2048
+     ]
+    },
+    {
+     "date": "2026-06-17",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": false,
+     "sets": [
+      [
+       16,
+       21
+      ],
+      [
+       13,
+       21
+      ]
+     ],
+     "with": [
+      "Sienna Castillo"
+     ],
+     "against": [
+      "Sarah Cowan"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sienna Castillo",
+   "b": "Sage Illian",
+   "aId": 29854,
+   "bId": 91052,
+   "aWins": 1,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-01-31",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       21,
+       16
+      ]
+     ],
+     "with": [
+      "Simrin Adams"
+     ],
+     "against": [
+      2048
+     ]
+    },
+    {
+     "date": "2026-06-17",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": false,
+     "sets": [
+      [
+       16,
+       21
+      ],
+      [
+       13,
+       21
+      ]
+     ],
+     "with": [
+      "Simrin Adams"
+     ],
+     "against": [
+      "Sarah Cowan"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Simrin Adams",
+   "b": "Sadie Stafford",
+   "aId": 25289,
+   "bId": 147394,
+   "aWins": 2,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-31",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       15
+      ],
+      [
+       21,
+       15
+      ]
+     ],
+     "with": [
+      "Sienna Castillo"
+     ],
+     "against": [
+      "Georgeann Lee"
+     ]
+    },
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       22,
+       20
+      ],
+      [
+       21,
+       12
+      ]
+     ],
+     "with": [
+      "Sienna Castillo"
+     ],
+     "against": [
+      92193
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sienna Castillo",
+   "b": "Sadie Stafford",
+   "aId": 29854,
+   "bId": 147394,
+   "aWins": 2,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-31",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       15
+      ],
+      [
+       21,
+       15
+      ]
+     ],
+     "with": [
+      "Simrin Adams"
+     ],
+     "against": [
+      "Georgeann Lee"
+     ]
+    },
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       22,
+       20
+      ],
+      [
+       21,
+       12
+      ]
+     ],
+     "with": [
+      "Simrin Adams"
+     ],
+     "against": [
+      92193
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Jordyn Wilson",
+   "b": "Milaniakai Padilla",
+   "aId": 23868,
+   "bId": 95165,
+   "aWins": 0,
+   "bWins": 2,
+   "games": [
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": false,
+     "sets": [
+      [
+       14,
+       21
+      ],
+      [
+       15,
+       21
+      ]
+     ],
+     "with": [
+      "Sarah Cowan"
+     ],
+     "against": [
+      92193
+     ]
+    },
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": false,
+     "sets": [
+      [
+       18,
+       21
+      ],
+      [
+       17,
+       21
+      ]
+     ],
+     "with": [
+      91897
+     ],
+     "against": [
+      "Georgeann Lee"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lauren Leach",
+   "b": "Sadie Harris",
+   "aId": 8426,
+   "bId": 94909,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-03-15",
+     "event": "AAU Super Regional ",
+     "division": "Girls 18U",
+     "tid": 32995,
+     "tdId": 121820,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       14
+      ],
+      [
+       21,
+       11
+      ]
+     ],
+     "with": [
+      "Olivia Herron"
+     ],
+     "against": [
+      9258
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Olivia Herron",
+   "b": "Sadie Harris",
+   "aId": 28688,
+   "bId": 94909,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-03-15",
+     "event": "AAU Super Regional ",
+     "division": "Girls 18U",
+     "tid": 32995,
+     "tdId": 121820,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       14
+      ],
+      [
+       21,
+       11
+      ]
+     ],
+     "with": [
+      "Lauren Leach"
+     ],
+     "against": [
+      9258
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Janie McCanna",
+   "b": "Olivia Herron",
+   "aId": 24515,
+   "bId": 28688,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-06-17",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       16,
+       21
+      ],
+      [
+       21,
+       19
+      ],
+      [
+       15,
+       11
+      ]
+     ],
+     "with": [
+      "Lauren Leach"
+     ],
+     "against": [
+      22544
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Janie McCanna",
+   "b": "Sage Illian",
+   "aId": 24515,
+   "bId": 91052,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-06-17",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       17,
+       21
+      ],
+      [
+       24,
+       22
+      ],
+      [
+       15,
+       9
+      ]
+     ],
+     "with": [
+      "Lauren Leach"
+     ],
+     "against": [
+      "Sarah Cowan"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lauren Leach",
+   "b": "Janie McCanna",
+   "aId": 8426,
+   "bId": 24515,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-24",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 18U",
+     "tid": 34243,
+     "tdId": 126054,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       17,
+       21
+      ],
+      [
+       15,
+       13
+      ]
+     ],
+     "with": [
+      24330
+     ],
+     "against": [
+      18671
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Janie McCanna",
+   "b": "Sarah Albers",
+   "aId": 24515,
+   "bId": 84161,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-22",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 18U",
+     "tid": 34243,
+     "tdId": 126054,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       12
+      ],
+      [
+       21,
+       16
+      ]
+     ],
+     "with": [
+      18671
+     ],
+     "against": [
+      77570
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Olivia Herron",
+   "b": "Sadie Stafford",
+   "aId": 28688,
+   "bId": 147394,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-02-22",
+     "event": "2026 Futures Tour: Alabama",
+     "division": "Class of '26 & Younger",
+     "tid": 31569,
+     "tdId": 117703,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       11
+      ],
+      [
+       21,
+       11
+      ]
+     ],
+     "with": [
+      15556
+     ],
+     "against": [
+      149113
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Jordyn Wilson",
+   "b": "Olivia Herron",
+   "aId": 23868,
+   "bId": 28688,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-23",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 18U",
+     "tid": 34243,
+     "tdId": 126054,
+     "phase": "Pool",
+     "round": "Power Pools 1st",
+     "won": true,
+     "sets": [
+      [
+       21,
+       14
+      ],
+      [
+       18,
+       21
+      ],
+      [
+       15,
+       12
+      ]
+     ],
+     "with": [
+      22544
+     ],
+     "against": [
+      17417
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Olivia Herron",
+   "b": "Georgeann Lee",
+   "aId": 28688,
+   "bId": 61785,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-08",
+     "event": "2026 BVCA Individual Pairs National Championship ",
+     "division": "Girls 18U",
+     "tid": 38087,
+     "tdId": 139559,
+     "phase": "Playoffs",
+     "round": "Championship Bracket",
+     "won": true,
+     "sets": [
+      [
+       21,
+       15
+      ],
+      [
+       21,
+       17
+      ]
+     ],
+     "with": [
+      2771
+     ],
+     "against": [
+      60420
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Simrin Adams",
+   "b": "Georgeann Lee",
+   "aId": 25289,
+   "bId": 61785,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-31",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       15
+      ],
+      [
+       21,
+       15
+      ]
+     ],
+     "with": [
+      "Sienna Castillo"
+     ],
+     "against": [
+      "Sadie Stafford"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sienna Castillo",
+   "b": "Georgeann Lee",
+   "aId": 29854,
+   "bId": 61785,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-31",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       15
+      ],
+      [
+       21,
+       15
+      ]
+     ],
+     "with": [
+      "Simrin Adams"
+     ],
+     "against": [
+      "Sadie Stafford"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sienna Castillo",
+   "b": "Sadie Harris",
+   "aId": 29854,
+   "bId": 94909,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-03-15",
+     "event": "AAU Super Regional ",
+     "division": "Girls 18U",
+     "tid": 32995,
+     "tdId": 121820,
+     "phase": "Playoffs",
+     "round": "Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       28,
+       11
+      ]
+     ],
+     "with": [
+      5973
+     ],
+     "against": [
+      9258
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Simrin Adams",
+   "b": "Sarah Cowan",
+   "aId": 25289,
+   "bId": 84725,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-06-17",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": false,
+     "sets": [
+      [
+       16,
+       21
+      ],
+      [
+       13,
+       21
+      ]
+     ],
+     "with": [
+      "Sienna Castillo"
+     ],
+     "against": [
+      "Sage Illian"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sienna Castillo",
+   "b": "Sarah Cowan",
+   "aId": 29854,
+   "bId": 84725,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-06-17",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": false,
+     "sets": [
+      [
+       16,
+       21
+      ],
+      [
+       13,
+       21
+      ]
+     ],
+     "with": [
+      "Simrin Adams"
+     ],
+     "against": [
+      "Sage Illian"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Simrin Adams",
+   "b": "Sienna Castillo",
+   "aId": 25289,
+   "bId": 29854,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-05-07",
+     "event": "CIFSS Pairs Championship 2026",
+     "division": "Varsity Pairs",
+     "tid": 38462,
+     "tdId": 140958,
+     "phase": "Playoffs",
+     "round": "Division 1 Playoffs",
+     "won": false,
+     "sets": [
+      [
+       13,
+       21
+      ],
+      [
+       18,
+       21
+      ]
+     ],
+     "with": [
+      92803
+     ],
+     "against": [
+      25856
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Simrin Adams",
+   "b": "Sarah Albers",
+   "aId": 25289,
+   "bId": 84161,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-18",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 17 - 2027",
+     "tid": 31483,
+     "tdId": 126666,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": true,
+     "sets": [
+      [
+       21,
+       15
+      ],
+      [
+       21,
+       15
+      ]
+     ],
+     "with": [
+      4517
+     ],
+     "against": [
+      24727
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Jordyn Wilson",
+   "b": "Sadie Stafford",
+   "aId": 23868,
+   "bId": 147394,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-03-29",
+     "event": "2026 Futures Tour Spring Championship",
+     "division": "Class of '26 & Younger",
+     "tid": 31567,
+     "tdId": 117695,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoff",
+     "won": true,
+     "sets": [
+      [
+       21,
+       16
+      ],
+      [
+       21,
+       14
+      ]
+     ],
+     "with": [
+      94563
+     ],
+     "against": [
+      26984
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Georgeann Lee",
+   "b": "Sarah Albers",
+   "aId": 61785,
+   "bId": 84161,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       12
+      ],
+      [
+       21,
+       18
+      ]
+     ],
+     "with": [
+      "Sadie Stafford"
+     ],
+     "against": [
+      33084
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sarah Albers",
+   "b": "Sadie Stafford",
+   "aId": 84161,
+   "bId": 147394,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": false,
+     "sets": [
+      [
+       12,
+       21
+      ],
+      [
+       18,
+       21
+      ]
+     ],
+     "with": [
+      "Georgeann Lee"
+     ],
+     "against": [
+      33084
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Milaniakai Padilla",
+   "b": "Sadie Stafford",
+   "aId": 95165,
+   "bId": 147394,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-26",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 17U",
+     "tid": 34243,
+     "tdId": 126055,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": true,
+     "sets": [
+      [
+       21,
+       12
+      ],
+      [
+       21,
+       14
+      ]
+     ],
+     "with": [
+      "Georgeann Lee"
+     ],
+     "against": [
+      92193
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sarah Cowan",
+   "b": "Sage Illian",
+   "aId": 84725,
+   "bId": 91052,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2025-11-09",
+     "event": "AVP Juniors West Coast Championships 2025",
+     "division": "Girls 18U",
+     "tid": 25578,
+     "tdId": 97147,
+     "phase": "Playoffs",
+     "round": "Silver Playoffs",
+     "won": false,
+     "sets": [
+      [
+       13,
+       21
+      ],
+      [
+       15,
+       21
+      ]
+     ],
+     "with": [
+      "Milaniakai Padilla"
+     ],
+     "against": [
+      22544
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sage Illian",
+   "b": "Milaniakai Padilla",
+   "aId": 91052,
+   "bId": 95165,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-11-09",
+     "event": "AVP Juniors West Coast Championships 2025",
+     "division": "Girls 18U",
+     "tid": 25578,
+     "tdId": 97147,
+     "phase": "Playoffs",
+     "round": "Silver Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       13
+      ],
+      [
+       21,
+       15
+      ]
+     ],
+     "with": [
+      "Sarah Cowan"
+     ],
+     "against": [
+      22544
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Jordyn Wilson",
+   "b": "Sarah Cowan",
+   "aId": 23868,
+   "bId": 84725,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": false,
+     "sets": [
+      [
+       14,
+       21
+      ],
+      [
+       15,
+       21
+      ]
+     ],
+     "with": [
+      "Milaniakai Padilla"
+     ],
+     "against": [
+      92193
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sarah Cowan",
+   "b": "Sadie Harris",
+   "aId": 84725,
+   "bId": 94909,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-31",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       18
+      ],
+      [
+       21,
+       14
+      ]
+     ],
+     "with": [
+      "Milaniakai Padilla"
+     ],
+     "against": [
+      99596
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sadie Harris",
+   "b": "Milaniakai Padilla",
+   "aId": 94909,
+   "bId": 95165,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-01-31",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": false,
+     "sets": [
+      [
+       18,
+       21
+      ],
+      [
+       14,
+       21
+      ]
+     ],
+     "with": [
+      "Sarah Cowan"
+     ],
+     "against": [
+      99596
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sarah Albers",
+   "b": "Sage Illian",
+   "aId": 84161,
+   "bId": 91052,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2025-11-09",
+     "event": "AVP Juniors West Coast Championships 2025",
+     "division": "Girls 18U",
+     "tid": 25578,
+     "tdId": 97147,
+     "phase": "Playoffs",
+     "round": "Silver Playoffs",
+     "won": false,
+     "sets": [
+      [
+       22,
+       24
+      ],
+      [
+       18,
+       21
+      ]
+     ],
+     "with": [
+      22544
+     ],
+     "against": [
+      77570
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sage Illian",
+   "b": "Sadie Harris",
+   "aId": 91052,
+   "bId": 94909,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       17,
+       21
+      ],
+      [
+       21,
+       19
+      ],
+      [
+       15,
+       8
+      ]
+     ],
+     "with": [
+      2048
+     ],
+     "against": [
+      99596
+     ]
+    }
+   ]
+  }
+ ],
+ "partnered": [
+  {
+   "a": "Lauren Leach",
+   "b": "Janie McCanna",
+   "matches": 26
+  },
+  {
+   "a": "Georgeann Lee",
+   "b": "Sadie Stafford",
+   "matches": 21
+  },
+  {
+   "a": "Sarah Cowan",
+   "b": "Milaniakai Padilla",
+   "matches": 17
+  },
+  {
+   "a": "Lauren Leach",
+   "b": "Olivia Herron",
+   "matches": 15
+  },
+  {
+   "a": "Simrin Adams",
+   "b": "Sienna Castillo",
+   "matches": 9
+  },
+  {
+   "a": "Janie McCanna",
+   "b": "Sarah Cowan",
+   "matches": 7
+  },
+  {
+   "a": "Sarah Cowan",
+   "b": "Sage Illian",
+   "matches": 6
+  },
+  {
+   "a": "Milaniakai Padilla",
+   "b": "Sadie Stafford",
+   "matches": 6
+  },
+  {
+   "a": "Sage Illian",
+   "b": "Sadie Stafford",
+   "matches": 6
+  },
+  {
+   "a": "Jordyn Wilson",
+   "b": "Georgeann Lee",
+   "matches": 3
+  },
+  {
+   "a": "Jordyn Wilson",
+   "b": "Olivia Herron",
+   "matches": 1
+  }
+ ]
+}

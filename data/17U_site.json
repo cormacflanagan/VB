@@ -2,8 +2,8 @@
  "group": "17U",
  "label": "Girls U17",
  "window": [
-  "2025-08-09",
-  "2026-08-09"
+  "2025-08-11",
+  "2026-08-11"
  ],
  "players": [
   {
@@ -13,8 +13,8 @@
    "club": "MBsand",
    "height": "5' 7\"",
    "city": "Los Angeles, CA",
-   "tv": 8.821,
-   "peak": 8.921,
+   "tv": 8.822,
+   "peak": 8.922,
    "w": 254,
    "l": 61,
    "comps": 9,
@@ -41,6 +41,57 @@
      "f": 9,
      "partners": [
       "Olivia Herron"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Haisley Flanagan",
+   "id": 64896,
+   "region": "Northern California",
+   "club": "Santa Cruz Beach Volleyball Club",
+   "height": "5' 9\"",
+   "city": "Santa Cruz, CA",
+   "tv": 8.614,
+   "peak": 8.618,
+   "w": 265,
+   "l": 73,
+   "comps": 15,
+   "cells": {
+    "34243:126056": {
+     "f": 2,
+     "partners": [
+      "Madison Gillinger"
+     ]
+    },
+    "31567:117695": {
+     "f": 9,
+     "partners": [
+      "Ella Buchanan"
+     ]
+    },
+    "25578:97149": {
+     "f": 5,
+     "partners": [
+      "Charlotte Jansen"
+     ]
+    },
+    "31568:117700": {
+     "f": 3,
+     "partners": [
+      "Haven Gindoff"
+     ]
+    },
+    "33446:123435": {
+     "f": 17,
+     "partners": [
+      "Charlotte Jansen"
+     ]
+    },
+    "38087:139559": {
+     "f": 33,
+     "partners": [
+      "Hayden Smith"
      ]
     }
    }
@@ -127,9 +178,9 @@
    "club": "Spiker Beach Volleyball Club",
    "height": "5' 11\"",
    "city": "Huntington Beach, CA",
-   "tv": 8.552,
-   "peak": 8.628,
-   "w": 247,
+   "tv": 8.553,
+   "peak": 8.629,
+   "w": 249,
    "l": 127,
    "comps": 17,
    "cells": {
@@ -184,8 +235,8 @@
    "club": "WAVE Beach",
    "height": "6'",
    "city": "Coronado, CA",
-   "tv": 8.428,
-   "peak": 8.428,
+   "tv": 8.429,
+   "peak": 8.429,
    "w": 189,
    "l": 32,
    "comps": 8,
@@ -229,8 +280,8 @@
    "club": "WAVE Beach",
    "height": "5' 10\"",
    "city": "Encinitas, CA",
-   "tv": 8.385,
-   "peak": 8.385,
+   "tv": 8.386,
+   "peak": 8.386,
    "w": 273,
    "l": 47,
    "comps": 13,
@@ -275,57 +326,6 @@
      "f": 1,
      "partners": [
       "Brooke Proctor"
-     ]
-    }
-   }
-  },
-  {
-   "name": "Haisley Flanagan",
-   "id": 64896,
-   "region": "Northern California",
-   "club": "Santa Cruz Beach Volleyball Club",
-   "height": "5' 9\"",
-   "city": "Santa Cruz, CA",
-   "tv": 8.377,
-   "peak": 8.434,
-   "w": 258,
-   "l": 73,
-   "comps": 15,
-   "cells": {
-    "34243:126056": {
-     "f": 2,
-     "partners": [
-      "Madison Gillinger"
-     ]
-    },
-    "31567:117695": {
-     "f": 9,
-     "partners": [
-      "Ella Buchanan"
-     ]
-    },
-    "25578:97149": {
-     "f": 5,
-     "partners": [
-      "Charlotte Jansen"
-     ]
-    },
-    "31568:117700": {
-     "f": 3,
-     "partners": [
-      "Haven Gindoff"
-     ]
-    },
-    "33446:123435": {
-     "f": 17,
-     "partners": [
-      "Charlotte Jansen"
-     ]
-    },
-    "38087:139559": {
-     "f": 33,
-     "partners": [
-      "Hayden Smith"
      ]
     }
    }
@@ -517,6 +517,63 @@
    }
   },
   {
+   "name": "Ella Buchanan",
+   "id": 98125,
+   "region": "So. Cal / So. Nevada",
+   "club": "SLOVBC",
+   "height": "6'",
+   "city": "San Luis Obispo, CA",
+   "tv": 8.184,
+   "peak": 8.184,
+   "w": 158,
+   "l": 62,
+   "comps": 11,
+   "cells": {
+    "34243:126056": {
+     "f": 9,
+     "partners": [
+      "Brooke Canaday"
+     ]
+    },
+    "31567:117695": {
+     "f": 9,
+     "partners": [
+      "Haisley Flanagan"
+     ]
+    },
+    "31483:117394": {
+     "f": 2,
+     "partners": [
+      "Brooke Canaday"
+     ]
+    },
+    "25578:97149": {
+     "f": 5,
+     "partners": [
+      "Brooke Canaday"
+     ]
+    },
+    "34180:125823": {
+     "f": 9,
+     "partners": [
+      "Brooke Canaday"
+     ]
+    },
+    "36451:133267": {
+     "f": 9,
+     "partners": [
+      "Charlotte Jansen"
+     ]
+    },
+    "40540:148435": {
+     "f": 2,
+     "partners": [
+      "Brooke Canaday"
+     ]
+    }
+   }
+  },
+  {
    "name": "Julianna Godbey",
    "id": 58303,
    "region": "North Texas",
@@ -667,8 +724,8 @@
    "club": "WAVE Beach",
    "height": "5' 10\"",
    "city": "Del Mar, CA",
-   "tv": 8.019,
-   "peak": 8.159,
+   "tv": 8.026,
+   "peak": 8.157,
    "w": 270,
    "l": 118,
    "comps": 22,
@@ -754,8 +811,8 @@
    "club": "Spiker Beach Volleyball Club",
    "height": "5' 7\"",
    "city": "Villa Park , CA",
-   "tv": 7.92,
-   "peak": 8.002,
+   "tv": 7.921,
+   "peak": 8.003,
    "w": 219,
    "l": 73,
    "comps": 8,
@@ -833,7 +890,7 @@
    "height": "5' 10\"",
    "city": "Saratoga , CA",
    "tv": 7.843,
-   "peak": 8.087,
+   "peak": 8.091,
    "w": 393,
    "l": 107,
    "comps": 11,
@@ -892,74 +949,17 @@
    }
   },
   {
-   "name": "Ella Buchanan",
-   "id": 98125,
-   "region": "So. Cal / So. Nevada",
-   "club": "SLOVBC",
-   "height": "6'",
-   "city": "San Luis Obispo, CA",
-   "tv": 7.763,
-   "peak": 7.966,
-   "w": 151,
-   "l": 62,
-   "comps": 11,
-   "cells": {
-    "34243:126056": {
-     "f": 9,
-     "partners": [
-      "Brooke Canaday"
-     ]
-    },
-    "31567:117695": {
-     "f": 9,
-     "partners": [
-      "Haisley Flanagan"
-     ]
-    },
-    "31483:117394": {
-     "f": 2,
-     "partners": [
-      "Brooke Canaday"
-     ]
-    },
-    "25578:97149": {
-     "f": 5,
-     "partners": [
-      "Brooke Canaday"
-     ]
-    },
-    "34180:125823": {
-     "f": 9,
-     "partners": [
-      "Brooke Canaday"
-     ]
-    },
-    "36451:133267": {
-     "f": 9,
-     "partners": [
-      "Charlotte Jansen"
-     ]
-    },
-    "40540:148435": {
-     "f": 2,
-     "partners": [
-      "Brooke Canaday"
-     ]
-    }
-   }
-  },
-  {
    "name": "Milana Rivera",
    "id": 60877,
    "region": "Lone Star",
    "club": "Third Coast",
    "height": "5' 7\"",
    "city": "Spring , TX",
-   "tv": 7.669,
+   "tv": 7.67,
    "peak": 8.232,
    "w": 220,
    "l": 139,
-   "comps": 11,
+   "comps": 10,
    "cells": {
     "34243:126056": {
      "f": 3,
@@ -994,8 +994,8 @@
    "club": "Southbay Sand",
    "height": "5' 8\"",
    "city": "Viera, FL",
-   "tv": 7.494,
-   "peak": 7.867,
+   "tv": 7.495,
+   "peak": 7.864,
    "w": 820,
    "l": 269,
    "comps": 36,
@@ -1027,8 +1027,8 @@
    "club": "South Bay Sand",
    "height": "5' 6\"",
    "city": "Los Angeles , CA",
-   "tv": 7.435,
-   "peak": 7.521,
+   "tv": 7.436,
+   "peak": 7.523,
    "w": 298,
    "l": 53,
    "comps": 6,
@@ -1041,8 +1041,8 @@
    "club": "Southbay Sand",
    "height": "5' 11\"",
    "city": "Millsap, TX",
-   "tv": 6.862,
-   "peak": 7.875,
+   "tv": 6.863,
+   "peak": 7.874,
    "w": 314,
    "l": 135,
    "comps": 11,
@@ -2062,9 +2062,12 @@
    ]
   }
  ],
- "totalComps": 142,
- "totalEvents": 111,
- "totalEntries": 274,
+ "totalComps": 141,
+ "totalEvents": 110,
+ "totalEntries": 273,
  "droppedTeam": 73,
- "thresh": 3
+ "thresh": 3,
+ "population": null,
+ "ratedPop": null,
+ "cutNote": ""
 }

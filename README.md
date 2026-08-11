@@ -10,6 +10,7 @@ Three groups are covered:
 | --- | --- | --- | --- |
 | Girls U18 | 13 | Published NTDP roster | [`docs/bntdp-18u.html`](docs/bntdp-18u.html) |
 | Girls U17 | 20 | Published NTDP roster | [`docs/bntdp-17u.html`](docs/bntdp-17u.html) |
+| Class of 2027 | 60 | Derived — see below | [`docs/bntdp-2027.html`](docs/bntdp-2027.html) |
 | Class of 2028 | 60 | Derived — see below | [`docs/bntdp-2028.html`](docs/bntdp-2028.html) |
 | Class of 2028 | 30 | Same cohort, tighter cut | [`docs/bntdp-2028_top30.html`](docs/bntdp-2028_top30.html) |
 | Class of 2028 | 20 | Same cohort, tightest cut | [`docs/bntdp-2028_top20.html`](docs/bntdp-2028_top20.html) |
@@ -122,16 +123,23 @@ be regenerated without re-querying the API.
 
 ## What the two groups look like
 
-| | Girls U18 | Girls U17 | Class of 2028 |
-| --- | --- | --- | --- |
-| Athletes | 13 | 20 | 60 |
-| Events attended (doubles) | 89 | 111 | 282 |
-| Pairs competitions (event × division) | 105 | 142 | 353 |
-| Matrix threshold | 3+ | 3+ | 8+ |
-| Matrix columns | 20 | 25 | 21 |
-| Shared by exactly 2 | 25 | 30 | 87 |
-| Club results dropped | 40 | 73 | 171 |
-| Largest single turnout | 12 of 13 (U18 Trials) | 9 of 20 | 26 of 60 |
+All five reports run on the same twelve-month window ending 11 August 2026 and the same
+rating epoch, so they are directly comparable.
+
+| | Girls U18 | Girls U17 | Class of 2027 | Class of 2028 |
+| --- | --- | --- | --- | --- |
+| Athletes | 13 | 20 | 60 | 60 |
+| Events attended (doubles) | 87 | 110 | 294 | 283 |
+| Pairs competitions | 103 | 141 | 305 | 353 |
+| Matrix threshold | 3+ | 3+ | 8+ | 8+ |
+| Matrix columns | 20 | 25 | 23 | 21 |
+| Club results dropped | 40 | 73 | 226 | 158 |
+| Distinct doubles matches | 815 | 1,088 | 2,635 | 3,429 |
+| Head-to-head pairings | 52 | 62 | 357 | 434 |
+
+The class of 2027 is the stronger cohort at the top — Thais Treumann alone is rated 10.170,
+above anything in 2028 — but its members meet each other less often: 357 pairings from 2,635
+matches, against 434 from 3,429 for 2028.
 
 The U18 group is far more concentrated: the U18 Beach National Team Trials put 12 of its
 13 into one 12-team field, and two more competitions drew 11. Nothing in the U17 year

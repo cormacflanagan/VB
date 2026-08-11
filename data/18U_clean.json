@@ -903,17 +903,6 @@
     "field": 35
    },
    {
-    "tid": 28045,
-    "tdId": 105767,
-    "division": "Womens Open",
-    "finish": 3,
-    "date": "2025-08-09",
-    "partners": [
-     "Milana Rivera"
-    ],
-    "field": 16
-   },
-   {
     "tid": 25578,
     "tdId": 97147,
     "division": "Girls 18U",
@@ -1758,17 +1747,6 @@
   ],
   "Janie McCanna": [
    {
-    "tid": 28590,
-    "tdId": 107997,
-    "division": "Women's Doubles OPEN",
-    "finish": 13,
-    "date": "2025-08-09",
-    "partners": [
-     "Piper Monk-heidrich"
-    ],
-    "field": 29
-   },
-   {
     "tid": 31622,
     "tdId": 117904,
     "division": "Class of '26 & Younger",
@@ -2237,17 +2215,6 @@
   ],
   "Jordyn Wilson": [
    {
-    "tid": 31769,
-    "tdId": 118419,
-    "division": "Womens Open",
-    "finish": 13,
-    "date": "2025-08-10",
-    "partners": [
-     "Sarah Uebelhoer"
-    ],
-    "field": 26
-   },
-   {
     "tid": 32636,
     "tdId": 120809,
     "division": "Womens Open",
@@ -2484,6 +2451,17 @@
     "division": "Girls 18U",
     "finish": 1,
     "date": "2026-04-04",
+    "partners": [
+     "Sandie Souza"
+    ],
+    "field": 9
+   },
+   {
+    "tid": 40756,
+    "tdId": 149153,
+    "division": "Girls 18U",
+    "finish": 2,
+    "date": "2026-08-09",
     "partners": [
      "Sandie Souza"
     ],
@@ -2752,11 +2730,6 @@
    "date": "2025-09-28",
    "sanction": "AVPA"
   },
-  "28045": {
-   "name": "SAT 8/9 ~ Beach Baller Series 25' (#4)",
-   "date": "2025-08-09",
-   "sanction": "AVPA"
-  },
   "28899": {
    "name": "The Santa Barbara Open- AVP Next",
    "date": "2025-10-05",
@@ -2872,11 +2845,6 @@
    "date": "2026-07-19",
    "sanction": "AVPA"
   },
-  "28590": {
-   "name": "Adult OPEN (8/8/25 - 8/9/25)",
-   "date": "2025-08-09",
-   "sanction": null
-  },
   "35935": {
    "name": "Adult OPEN",
    "date": "2026-08-08",
@@ -2912,11 +2880,6 @@
    "date": "2026-06-28",
    "sanction": "AVPA"
   },
-  "31769": {
-   "name": "Women's Open at Ocean Park, Santa Monica",
-   "date": "2025-08-10",
-   "sanction": "AVPA"
-  },
   "32636": {
    "name": "Women's Open at Ocean Park, Santa Monica",
    "date": "2025-09-14",
@@ -2936,6 +2899,11 @@
    "name": "Shank City VB: Chowder Fest, Vol. 4 + Coed Doubles (Shorty & Standard)",
    "date": "2026-07-19",
    "sanction": "AVPA"
+  },
+  "40756": {
+   "name": "2026 Cal Cup Championships, 8/9/26, Hermosa Pier, Hermosa Beach",
+   "date": "2026-08-09",
+   "sanction": "AVPA"
   }
  },
  "tv": {
@@ -2946,10 +2914,10 @@
    "height": "5' 9\"",
    "cityState": "Long Beach, CA",
    "truvolley": 8.722,
-   "peak": 8.929,
+   "peak": 8.93,
    "conf": 100,
-   "w": 362,
-   "matches": 479
+   "w": 364,
+   "matches": 481
   },
   "Sarah Albers": {
    "region": "Gateway",
@@ -2993,11 +2961,11 @@
    "club": "Spiker Beach Volleyball Club",
    "height": "5' 11\"",
    "cityState": "San Juan Capistrano, CA",
-   "truvolley": 7.955,
-   "peak": 8.263,
+   "truvolley": 7.952,
+   "peak": 8.254,
    "conf": 100,
    "w": 224,
-   "matches": 345
+   "matches": 347
   },
   "Olivia Herron": {
    "region": "North Texas",
@@ -3006,10 +2974,10 @@
    "height": "6' 2\"",
    "cityState": "Celina, TX",
    "truvolley": 8.892,
-   "peak": 9.53,
+   "peak": 9.529,
    "conf": 100,
-   "w": 530,
-   "matches": 721
+   "w": 532,
+   "matches": 723
   },
   "Sage Illian": {
    "region": "Heart of America",
@@ -3017,11 +2985,11 @@
    "club": "P4:13 Beach",
    "height": "6' 1\"",
    "cityState": "Wichita , KS",
-   "truvolley": 8.512,
-   "peak": 8.827,
+   "truvolley": 8.643,
+   "peak": 8.826,
    "conf": 100,
-   "w": 244,
-   "matches": 318
+   "w": 248,
+   "matches": 324
   },
   "Lauren Leach": {
    "region": "So. Cal / So. Nevada",
@@ -3053,11 +3021,11 @@
    "club": "Spiker Beach Volleyball Club",
    "height": "6' 0\"",
    "cityState": "Seattle, WA",
-   "truvolley": 9.288,
+   "truvolley": 9.146,
    "peak": 9.326,
    "conf": 100,
-   "w": 335,
-   "matches": 442
+   "w": 339,
+   "matches": 448
   },
   "Milaniakai Padilla": {
    "region": "Aloha",
@@ -3065,8 +3033,8 @@
    "club": "Outrigger Canoe Club Girls Beach Volleyball",
    "height": "5' 10\"",
    "cityState": "Wailuku, HI",
-   "truvolley": 8.644,
-   "peak": 8.644,
+   "truvolley": 8.645,
+   "peak": 8.645,
    "conf": 100,
    "w": 263,
    "matches": 373
@@ -3077,11 +3045,11 @@
    "club": "757 Beach",
    "height": "6' 0\"",
    "cityState": "NORFOLK, VA",
-   "truvolley": 8.599,
-   "peak": 8.709,
+   "truvolley": 8.703,
+   "peak": 8.723,
    "conf": 100,
-   "w": 349,
-   "matches": 440
+   "w": 353,
+   "matches": 446
   },
   "Jordyn Wilson": {
    "region": "So. Cal / So. Nevada",

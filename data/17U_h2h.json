@@ -1,0 +1,2898 @@
+{
+ "group": "17U",
+ "players": {
+  "22544": "Lucy Matuszak",
+  "64896": "Haisley Flanagan",
+  "92193": "Nariah Johnson",
+  "99596": "Madison Gillinger",
+  "91896": "Brooke Proctor",
+  "92974": "Reagan Carlin",
+  "105245": "Ashley Ruschill",
+  "128445": "Cayden Dorger",
+  "98125": "Ella Buchanan",
+  "58303": "Julianna Godbey",
+  "99506": "Taylie Hansen",
+  "161398": "Charlotte Jansen",
+  "124871": "Sienna Cicero",
+  "33084": "Elle Sossong",
+  "64782": "Regina Stella Broshear",
+  "77570": "Elyse Smelcer",
+  "60877": "Milana Rivera",
+  "30929": "Olivia LeDoyen",
+  "80837": "Emerson Harper",
+  "70421": "Ella Whiteside"
+ },
+ "matches": 1088,
+ "pairs": [
+  {
+   "a": "Nariah Johnson",
+   "b": "Ashley Ruschill",
+   "aId": 92193,
+   "bId": 105245,
+   "aWins": 1,
+   "bWins": 2,
+   "games": [
+    {
+     "date": "2026-06-17",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": false,
+     "sets": [
+      [
+       19,
+       21
+      ],
+      [
+       17,
+       21
+      ]
+     ],
+     "with": [
+      147394
+     ],
+     "against": [
+      "Cayden Dorger"
+     ]
+    },
+    {
+     "date": "2026-06-19",
+     "event": "2026 Futures Tour WESTERN NATIONAL CHAMPIONSHIPS",
+     "division": "Class of 2028 & Younger",
+     "tid": 30985,
+     "tdId": 115903,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       16
+      ],
+      [
+       21,
+       14
+      ]
+     ],
+     "with": [
+      "Charlotte Jansen"
+     ],
+     "against": [
+      "Cayden Dorger"
+     ]
+    },
+    {
+     "date": "2026-07-16",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 15 - 2029",
+     "tid": 31483,
+     "tdId": 117395,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": false,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       19,
+       21
+      ],
+      [
+       12,
+       15
+      ]
+     ],
+     "with": [
+      "Julianna Godbey"
+     ],
+     "against": [
+      105637
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Ashley Ruschill",
+   "b": "Charlotte Jansen",
+   "aId": 105245,
+   "bId": 161398,
+   "aWins": 0,
+   "bWins": 3,
+   "games": [
+    {
+     "date": "2026-01-18",
+     "event": "2026 Futures Tour: Arizona",
+     "division": "Class of '28 & Younger",
+     "tid": 31568,
+     "tdId": 117700,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       9,
+       21
+      ],
+      [
+       19,
+       21
+      ]
+     ],
+     "with": [
+      102482
+     ],
+     "against": [
+      9258
+     ]
+    },
+    {
+     "date": "2026-05-03",
+     "event": "2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier",
+     "division": "Girls 16 Open",
+     "tid": 32578,
+     "tdId": 120659,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": false,
+     "sets": [
+      [
+       21,
+       18
+      ],
+      [
+       15,
+       21
+      ],
+      [
+       11,
+       15
+      ]
+     ],
+     "with": [
+      "Julianna Godbey"
+     ],
+     "against": [
+      9258
+     ]
+    },
+    {
+     "date": "2026-06-19",
+     "event": "2026 Futures Tour WESTERN NATIONAL CHAMPIONSHIPS",
+     "division": "Class of 2028 & Younger",
+     "tid": 30985,
+     "tdId": 115903,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       16,
+       21
+      ],
+      [
+       14,
+       21
+      ]
+     ],
+     "with": [
+      "Nariah Johnson"
+     ],
+     "against": [
+      "Cayden Dorger"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Reagan Carlin",
+   "b": "Ashley Ruschill",
+   "aId": 92974,
+   "bId": 105245,
+   "aWins": 2,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-01-17",
+     "event": "2026 Futures Tour: Arizona",
+     "division": "Class of '28 & Younger",
+     "tid": 31568,
+     "tdId": 117700,
+     "phase": "Pool",
+     "round": "Day 1: RD2 1sts",
+     "won": true,
+     "sets": [
+      [
+       23,
+       21
+      ],
+      [
+       23,
+       21
+      ]
+     ],
+     "with": [
+      167128
+     ],
+     "against": [
+      102482
+     ]
+    },
+    {
+     "date": "2026-07-16",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 15 - 2029",
+     "tid": 31483,
+     "tdId": 117395,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": false,
+     "sets": [
+      [
+       14,
+       21
+      ],
+      [
+       22,
+       20
+      ],
+      [
+       7,
+       15
+      ]
+     ],
+     "with": [
+      "Brooke Proctor"
+     ],
+     "against": [
+      105637
+     ]
+    },
+    {
+     "date": "2026-07-26",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 15U",
+     "tid": 34243,
+     "tdId": 126057,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": true,
+     "sets": [
+      [
+       21,
+       15
+      ],
+      [
+       21,
+       13
+      ]
+     ],
+     "with": [
+      "Brooke Proctor"
+     ],
+     "against": [
+      "Julianna Godbey"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Nariah Johnson",
+   "b": "Madison Gillinger",
+   "aId": 92193,
+   "bId": 99596,
+   "aWins": 2,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-17",
+     "event": "2026 Futures Tour: Arizona",
+     "division": "Class of '28 & Younger",
+     "tid": 31568,
+     "tdId": 117700,
+     "phase": "Pool",
+     "round": "Day 1: RD2 1sts",
+     "won": true,
+     "sets": [
+      [
+       21,
+       19
+      ],
+      [
+       21,
+       17
+      ]
+     ],
+     "with": [
+      129730
+     ],
+     "against": [
+      94909
+     ]
+    },
+    {
+     "date": "2026-07-09",
+     "event": "2026 BVCA Individual Pairs National Championship ",
+     "division": "Girls 16U",
+     "tid": 38087,
+     "tdId": 139560,
+     "phase": "Playoffs",
+     "round": "Championship Bracket",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       21,
+       16
+      ]
+     ],
+     "with": [
+      91897
+     ],
+     "against": [
+      94909
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Nariah Johnson",
+   "b": "Ella Buchanan",
+   "aId": 92193,
+   "bId": 98125,
+   "aWins": 2,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       16,
+       21
+      ],
+      [
+       21,
+       15
+      ],
+      [
+       15,
+       7
+      ]
+     ],
+     "with": [
+      23868
+     ],
+     "against": [
+      98124
+     ]
+    },
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       15
+      ],
+      [
+       21,
+       19
+      ]
+     ],
+     "with": [
+      147394
+     ],
+     "against": [
+      "Charlotte Jansen"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Taylie Hansen",
+   "b": "Charlotte Jansen",
+   "aId": 99506,
+   "bId": 161398,
+   "aWins": 0,
+   "bWins": 2,
+   "games": [
+    {
+     "date": "2026-03-15",
+     "event": "2026 Futures Tour: Florida",
+     "division": "Class of '26 & Younger",
+     "tid": 31622,
+     "tdId": 117904,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       22,
+       24
+      ],
+      [
+       18,
+       21
+      ]
+     ],
+     "with": [
+      "Nariah Johnson"
+     ],
+     "against": [
+      "Elle Sossong"
+     ]
+    },
+    {
+     "date": "2026-03-29",
+     "event": "2026 Futures Tour Spring Championship",
+     "division": "Class of '26 & Younger",
+     "tid": 31567,
+     "tdId": 117695,
+     "phase": "Playoffs",
+     "round": "Day 2: Silver Playoff",
+     "won": false,
+     "sets": [
+      [
+       13,
+       21
+      ],
+      [
+       21,
+       15
+      ],
+      [
+       13,
+       15
+      ]
+     ],
+     "with": [
+      23641
+     ],
+     "against": [
+      9258
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Nariah Johnson",
+   "b": "Cayden Dorger",
+   "aId": 92193,
+   "bId": 128445,
+   "aWins": 1,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-06-17",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": false,
+     "sets": [
+      [
+       19,
+       21
+      ],
+      [
+       17,
+       21
+      ]
+     ],
+     "with": [
+      147394
+     ],
+     "against": [
+      "Ashley Ruschill"
+     ]
+    },
+    {
+     "date": "2026-06-19",
+     "event": "2026 Futures Tour WESTERN NATIONAL CHAMPIONSHIPS",
+     "division": "Class of 2028 & Younger",
+     "tid": 30985,
+     "tdId": 115903,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       16
+      ],
+      [
+       21,
+       14
+      ]
+     ],
+     "with": [
+      "Charlotte Jansen"
+     ],
+     "against": [
+      "Ashley Ruschill"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Cayden Dorger",
+   "b": "Charlotte Jansen",
+   "aId": 128445,
+   "bId": 161398,
+   "aWins": 1,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-05-03",
+     "event": "2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier",
+     "division": "Girls 16 Open",
+     "tid": 32578,
+     "tdId": 120659,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": true,
+     "sets": [
+      [
+       21,
+       11
+      ],
+      [
+       21,
+       15
+      ]
+     ],
+     "with": [
+      42463
+     ],
+     "against": [
+      9258
+     ]
+    },
+    {
+     "date": "2026-06-19",
+     "event": "2026 Futures Tour WESTERN NATIONAL CHAMPIONSHIPS",
+     "division": "Class of 2028 & Younger",
+     "tid": 30985,
+     "tdId": 115903,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       16,
+       21
+      ],
+      [
+       14,
+       21
+      ]
+     ],
+     "with": [
+      "Nariah Johnson"
+     ],
+     "against": [
+      "Ashley Ruschill"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Reagan Carlin",
+   "b": "Madison Gillinger",
+   "aId": 92974,
+   "bId": 99596,
+   "aWins": 0,
+   "bWins": 2,
+   "games": [
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": false,
+     "sets": [
+      [
+       0,
+       21
+      ],
+      [
+       0,
+       21
+      ]
+     ],
+     "with": [
+      94909
+     ],
+     "against": [
+      83237
+     ]
+    },
+    {
+     "date": "2026-07-09",
+     "event": "2026 BVCA Individual Pairs National Championship ",
+     "division": "Girls 16U",
+     "tid": 38087,
+     "tdId": 139560,
+     "phase": "Playoffs",
+     "round": "Championship Bracket",
+     "won": false,
+     "sets": [
+      [
+       18,
+       21
+      ],
+      [
+       13,
+       21
+      ]
+     ],
+     "with": [
+      94909
+     ],
+     "against": [
+      "Brooke Proctor"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Brooke Proctor",
+   "b": "Sienna Cicero",
+   "aId": 91896,
+   "bId": 124871,
+   "aWins": 2,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-11-09",
+     "event": "AVP Juniors West Coast Championships 2025",
+     "division": "Girls 15U",
+     "tid": 25578,
+     "tdId": 97150,
+     "phase": "Playoffs",
+     "round": "Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       6
+      ],
+      [
+       21,
+       18
+      ]
+     ],
+     "with": [
+      "Reagan Carlin"
+     ],
+     "against": [
+      92284
+     ]
+    },
+    {
+     "date": "2026-07-25",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 15U",
+     "tid": 34243,
+     "tdId": 126057,
+     "phase": "Pool",
+     "round": "Power Pools 1st",
+     "won": true,
+     "sets": [
+      [
+       21,
+       18
+      ],
+      [
+       21,
+       13
+      ]
+     ],
+     "with": [
+      "Reagan Carlin"
+     ],
+     "against": [
+      92284
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Reagan Carlin",
+   "b": "Sienna Cicero",
+   "aId": 92974,
+   "bId": 124871,
+   "aWins": 2,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-11-09",
+     "event": "AVP Juniors West Coast Championships 2025",
+     "division": "Girls 15U",
+     "tid": 25578,
+     "tdId": 97150,
+     "phase": "Playoffs",
+     "round": "Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       6
+      ],
+      [
+       21,
+       18
+      ]
+     ],
+     "with": [
+      "Brooke Proctor"
+     ],
+     "against": [
+      92284
+     ]
+    },
+    {
+     "date": "2026-07-25",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 15U",
+     "tid": 34243,
+     "tdId": 126057,
+     "phase": "Pool",
+     "round": "Power Pools 1st",
+     "won": true,
+     "sets": [
+      [
+       21,
+       18
+      ],
+      [
+       21,
+       13
+      ]
+     ],
+     "with": [
+      "Brooke Proctor"
+     ],
+     "against": [
+      92284
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Brooke Proctor",
+   "b": "Ashley Ruschill",
+   "aId": 91896,
+   "bId": 105245,
+   "aWins": 1,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-16",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 15 - 2029",
+     "tid": 31483,
+     "tdId": 117395,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": false,
+     "sets": [
+      [
+       14,
+       21
+      ],
+      [
+       22,
+       20
+      ],
+      [
+       7,
+       15
+      ]
+     ],
+     "with": [
+      "Reagan Carlin"
+     ],
+     "against": [
+      105637
+     ]
+    },
+    {
+     "date": "2026-07-26",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 15U",
+     "tid": 34243,
+     "tdId": 126057,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": true,
+     "sets": [
+      [
+       21,
+       15
+      ],
+      [
+       21,
+       13
+      ]
+     ],
+     "with": [
+      "Reagan Carlin"
+     ],
+     "against": [
+      "Julianna Godbey"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Taylie Hansen",
+   "b": "Ashley Ruschill",
+   "aId": 99506,
+   "bId": 105245,
+   "aWins": 2,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-11-16",
+     "event": "2025 p1440 Elite Dev Open Tournament",
+     "division": "Girls 18U",
+     "tid": 31995,
+     "tdId": 119079,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       20,
+       22
+      ],
+      [
+       22,
+       20
+      ],
+      [
+       15,
+       11
+      ]
+     ],
+     "with": [
+      "Julianna Godbey"
+     ],
+     "against": [
+      24330
+     ]
+    },
+    {
+     "date": "2026-03-14",
+     "event": "2026 Futures Tour: Florida",
+     "division": "Class of '26 & Younger",
+     "tid": 31622,
+     "tdId": 117904,
+     "phase": "Pool",
+     "round": "Day 1: RD2 (1sts)",
+     "won": true,
+     "sets": [
+      [
+       21,
+       15
+      ],
+      [
+       21,
+       15
+      ]
+     ],
+     "with": [
+      150387
+     ],
+     "against": [
+      "Elle Sossong"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Elle Sossong",
+   "b": "Ashley Ruschill",
+   "aId": 33084,
+   "bId": 105245,
+   "aWins": 2,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-12-28",
+     "event": "2025 Futures Tour Winter Championship",
+     "division": "Class of '26 & Younger",
+     "tid": 31566,
+     "tdId": 117686,
+     "phase": "Pool",
+     "round": "Day 1: RD2 (1sts)",
+     "won": true,
+     "sets": [
+      [
+       11,
+       21
+      ],
+      [
+       21,
+       17
+      ],
+      [
+       15,
+       11
+      ]
+     ],
+     "with": [
+      79627
+     ],
+     "against": [
+      84049
+     ]
+    },
+    {
+     "date": "2026-03-14",
+     "event": "2026 Futures Tour: Florida",
+     "division": "Class of '26 & Younger",
+     "tid": 31622,
+     "tdId": 117904,
+     "phase": "Pool",
+     "round": "Day 1: RD2 (1sts)",
+     "won": true,
+     "sets": [
+      [
+       21,
+       15
+      ],
+      [
+       21,
+       15
+      ]
+     ],
+     "with": [
+      150387
+     ],
+     "against": [
+      "Taylie Hansen"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Julianna Godbey",
+   "b": "Charlotte Jansen",
+   "aId": 58303,
+   "bId": 161398,
+   "aWins": 0,
+   "bWins": 2,
+   "games": [
+    {
+     "date": "2026-05-03",
+     "event": "2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier",
+     "division": "Girls 16 Open",
+     "tid": 32578,
+     "tdId": 120659,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": false,
+     "sets": [
+      [
+       21,
+       18
+      ],
+      [
+       15,
+       21
+      ],
+      [
+       11,
+       15
+      ]
+     ],
+     "with": [
+      "Ashley Ruschill"
+     ],
+     "against": [
+      9258
+     ]
+    },
+    {
+     "date": "2026-07-17",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 16 - 2028",
+     "tid": 31483,
+     "tdId": 117394,
+     "phase": "Pool",
+     "round": "Power Pools",
+     "won": false,
+     "sets": [
+      [
+       21,
+       18
+      ],
+      [
+       14,
+       21
+      ],
+      [
+       12,
+       15
+      ]
+     ],
+     "with": [
+      105637
+     ],
+     "against": [
+      66728
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lucy Matuszak",
+   "b": "Elyse Smelcer",
+   "aId": 22544,
+   "bId": 77570,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-11-09",
+     "event": "AVP Juniors West Coast Championships 2025",
+     "division": "Girls 18U",
+     "tid": 25578,
+     "tdId": 97147,
+     "phase": "Playoffs",
+     "round": "Silver Playoffs",
+     "won": true,
+     "sets": [
+      [
+       24,
+       22
+      ],
+      [
+       21,
+       18
+      ]
+     ],
+     "with": [
+      91052
+     ],
+     "against": [
+      84161
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lucy Matuszak",
+   "b": "Ashley Ruschill",
+   "aId": 22544,
+   "bId": 105245,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       14
+      ],
+      [
+       21,
+       17
+      ]
+     ],
+     "with": [
+      28688
+     ],
+     "against": [
+      "Cayden Dorger"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lucy Matuszak",
+   "b": "Cayden Dorger",
+   "aId": 22544,
+   "bId": 128445,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       14
+      ],
+      [
+       21,
+       17
+      ]
+     ],
+     "with": [
+      28688
+     ],
+     "against": [
+      "Ashley Ruschill"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lucy Matuszak",
+   "b": "Ella Whiteside",
+   "aId": 22544,
+   "bId": 70421,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-08",
+     "event": "2026 BVCA Individual Pairs National Championship ",
+     "division": "Girls 16U",
+     "tid": 38087,
+     "tdId": 139560,
+     "phase": "Pool",
+     "round": "Gold Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       5
+      ]
+     ],
+     "with": [
+      84725
+     ],
+     "against": [
+      48462
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lucy Matuszak",
+   "b": "Sienna Cicero",
+   "aId": 22544,
+   "bId": 124871,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-09",
+     "event": "2026 BVCA Individual Pairs National Championship ",
+     "division": "Girls 16U",
+     "tid": 38087,
+     "tdId": 139560,
+     "phase": "Playoffs",
+     "round": "Championship Bracket",
+     "won": true,
+     "sets": [
+      [
+       22,
+       20
+      ],
+      [
+       21,
+       10
+      ]
+     ],
+     "with": [
+      84725
+     ],
+     "against": [
+      92284
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lucy Matuszak",
+   "b": "Nariah Johnson",
+   "aId": 22544,
+   "bId": 92193,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-09",
+     "event": "2026 BVCA Individual Pairs National Championship ",
+     "division": "Girls 16U",
+     "tid": 38087,
+     "tdId": 139560,
+     "phase": "Playoffs",
+     "round": "Championship Bracket",
+     "won": false,
+     "sets": [
+      [
+       18,
+       21
+      ],
+      [
+       21,
+       17
+      ],
+      [
+       10,
+       15
+      ]
+     ],
+     "with": [
+      84725
+     ],
+     "against": [
+      91897
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Haisley Flanagan",
+   "b": "Charlotte Jansen",
+   "aId": 64896,
+   "bId": 161398,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-01-17",
+     "event": "2026 Futures Tour: Arizona",
+     "division": "Class of '28 & Younger",
+     "tid": 31568,
+     "tdId": 117700,
+     "phase": "Pool",
+     "round": "Day 1: RD2 1sts",
+     "won": false,
+     "sets": [
+      [
+       16,
+       21
+      ],
+      [
+       21,
+       18
+      ],
+      [
+       13,
+       15
+      ]
+     ],
+     "with": [
+      150387
+     ],
+     "against": [
+      9258
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Haisley Flanagan",
+   "b": "Nariah Johnson",
+   "aId": 64896,
+   "bId": 92193,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-18",
+     "event": "2026 Futures Tour: Arizona",
+     "division": "Class of '28 & Younger",
+     "tid": 31568,
+     "tdId": 117700,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       19,
+       21
+      ],
+      [
+       21,
+       14
+      ],
+      [
+       15,
+       10
+      ]
+     ],
+     "with": [
+      150387
+     ],
+     "against": [
+      129730
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Haisley Flanagan",
+   "b": "Reagan Carlin",
+   "aId": 64896,
+   "bId": 92974,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-01-18",
+     "event": "2026 Futures Tour: Arizona",
+     "division": "Class of '28 & Younger",
+     "tid": 31568,
+     "tdId": 117700,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       17,
+       21
+      ],
+      [
+       13,
+       21
+      ]
+     ],
+     "with": [
+      150387
+     ],
+     "against": [
+      167128
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Haisley Flanagan",
+   "b": "Cayden Dorger",
+   "aId": 64896,
+   "bId": 128445,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-23",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 16U",
+     "tid": 34243,
+     "tdId": 126056,
+     "phase": "Pool",
+     "round": "Power Pools 1st",
+     "won": true,
+     "sets": [
+      [
+       21,
+       19
+      ],
+      [
+       22,
+       20
+      ]
+     ],
+     "with": [
+      "Madison Gillinger"
+     ],
+     "against": [
+      42463
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Madison Gillinger",
+   "b": "Cayden Dorger",
+   "aId": 99596,
+   "bId": 128445,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-23",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 16U",
+     "tid": 34243,
+     "tdId": 126056,
+     "phase": "Pool",
+     "round": "Power Pools 1st",
+     "won": true,
+     "sets": [
+      [
+       21,
+       19
+      ],
+      [
+       22,
+       20
+      ]
+     ],
+     "with": [
+      "Haisley Flanagan"
+     ],
+     "against": [
+      42463
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Julianna Godbey",
+   "b": "Haisley Flanagan",
+   "aId": 58303,
+   "bId": 64896,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-24",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 16U",
+     "tid": 34243,
+     "tdId": 126056,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": false,
+     "sets": [
+      [
+       12,
+       21
+      ],
+      [
+       14,
+       21
+      ]
+     ],
+     "with": [
+      "Madison Gillinger"
+     ],
+     "against": [
+      105341
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Julianna Godbey",
+   "b": "Madison Gillinger",
+   "aId": 58303,
+   "bId": 99596,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-24",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 16U",
+     "tid": 34243,
+     "tdId": 126056,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": false,
+     "sets": [
+      [
+       12,
+       21
+      ],
+      [
+       14,
+       21
+      ]
+     ],
+     "with": [
+      "Haisley Flanagan"
+     ],
+     "against": [
+      105341
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Milana Rivera",
+   "b": "Haisley Flanagan",
+   "aId": 60877,
+   "bId": 64896,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-24",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 16U",
+     "tid": 34243,
+     "tdId": 126056,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": false,
+     "sets": [
+      [
+       23,
+       21
+      ],
+      [
+       15,
+       21
+      ],
+      [
+       10,
+       15
+      ]
+     ],
+     "with": [
+      "Madison Gillinger"
+     ],
+     "against": [
+      29887
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Milana Rivera",
+   "b": "Madison Gillinger",
+   "aId": 60877,
+   "bId": 99596,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-24",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 16U",
+     "tid": 34243,
+     "tdId": 126056,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": false,
+     "sets": [
+      [
+       23,
+       21
+      ],
+      [
+       15,
+       21
+      ],
+      [
+       10,
+       15
+      ]
+     ],
+     "with": [
+      "Haisley Flanagan"
+     ],
+     "against": [
+      29887
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Elle Sossong",
+   "b": "Nariah Johnson",
+   "aId": 33084,
+   "bId": 92193,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-03-15",
+     "event": "2026 Futures Tour: Florida",
+     "division": "Class of '26 & Younger",
+     "tid": 31622,
+     "tdId": 117904,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       22,
+       24
+      ],
+      [
+       18,
+       21
+      ]
+     ],
+     "with": [
+      "Charlotte Jansen"
+     ],
+     "against": [
+      "Taylie Hansen"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Nariah Johnson",
+   "b": "Taylie Hansen",
+   "aId": 92193,
+   "bId": 99506,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-03-15",
+     "event": "2026 Futures Tour: Florida",
+     "division": "Class of '26 & Younger",
+     "tid": 31622,
+     "tdId": 117904,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       24,
+       22
+      ],
+      [
+       21,
+       18
+      ]
+     ],
+     "with": [
+      "Charlotte Jansen"
+     ],
+     "against": [
+      "Elle Sossong"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Elle Sossong",
+   "b": "Charlotte Jansen",
+   "aId": 33084,
+   "bId": 161398,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-03-15",
+     "event": "2026 Futures Tour: Florida",
+     "division": "Class of '26 & Younger",
+     "tid": 31622,
+     "tdId": 117904,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       22,
+       24
+      ],
+      [
+       18,
+       21
+      ]
+     ],
+     "with": [
+      "Nariah Johnson"
+     ],
+     "against": [
+      "Taylie Hansen"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Julianna Godbey",
+   "b": "Ashley Ruschill",
+   "aId": 58303,
+   "bId": 105245,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-16",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 15 - 2029",
+     "tid": 31483,
+     "tdId": 117395,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": false,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       19,
+       21
+      ],
+      [
+       12,
+       15
+      ]
+     ],
+     "with": [
+      "Nariah Johnson"
+     ],
+     "against": [
+      105637
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Regina Stella Broshear",
+   "b": "Nariah Johnson",
+   "aId": 64782,
+   "bId": 92193,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-06-19",
+     "event": "2026 Futures Tour WESTERN NATIONAL CHAMPIONSHIPS",
+     "division": "Class of 2028 & Younger",
+     "tid": 30985,
+     "tdId": 115903,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       18,
+       21
+      ],
+      [
+       21,
+       19
+      ],
+      [
+       8,
+       15
+      ]
+     ],
+     "with": [
+      "Charlotte Jansen"
+     ],
+     "against": [
+      27878
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Regina Stella Broshear",
+   "b": "Charlotte Jansen",
+   "aId": 64782,
+   "bId": 161398,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-06-19",
+     "event": "2026 Futures Tour WESTERN NATIONAL CHAMPIONSHIPS",
+     "division": "Class of 2028 & Younger",
+     "tid": 30985,
+     "tdId": 115903,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       18,
+       21
+      ],
+      [
+       21,
+       19
+      ],
+      [
+       8,
+       15
+      ]
+     ],
+     "with": [
+      "Nariah Johnson"
+     ],
+     "against": [
+      27878
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Nariah Johnson",
+   "b": "Charlotte Jansen",
+   "aId": 92193,
+   "bId": 161398,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "U18 Girls",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       15
+      ],
+      [
+       21,
+       19
+      ]
+     ],
+     "with": [
+      147394
+     ],
+     "against": [
+      "Ella Buchanan"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Taylie Hansen",
+   "b": "Madison Gillinger",
+   "aId": 99506,
+   "bId": 99596,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-11-08",
+     "event": "AVP Juniors West Coast Championships 2025",
+     "division": "Girls 16U",
+     "tid": 25578,
+     "tdId": 97149,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       13
+      ],
+      [
+       20,
+       22
+      ],
+      [
+       15,
+       8
+      ]
+     ],
+     "with": [
+      124610
+     ],
+     "against": [
+      105341
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Madison Gillinger",
+   "b": "Ashley Ruschill",
+   "aId": 99596,
+   "bId": 105245,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-01-18",
+     "event": "2026 Futures Tour: Arizona",
+     "division": "Class of '28 & Younger",
+     "tid": 31568,
+     "tdId": 117700,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       24,
+       22
+      ],
+      [
+       16,
+       21
+      ],
+      [
+       15,
+       17
+      ]
+     ],
+     "with": [
+      94909
+     ],
+     "against": [
+      102482
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Madison Gillinger",
+   "b": "Charlotte Jansen",
+   "aId": 99596,
+   "bId": 161398,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       25,
+       23
+      ],
+      [
+       19,
+       21
+      ],
+      [
+       15,
+       12
+      ]
+     ],
+     "with": [
+      94909
+     ],
+     "against": [
+      9258
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Madison Gillinger",
+   "b": "Sienna Cicero",
+   "aId": 99596,
+   "bId": 124871,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-06-30",
+     "event": "BVCA Pairs West Coast Championships 2026",
+     "division": "17U (2027 Grad Year)",
+     "tid": 35588,
+     "tdId": 130319,
+     "phase": "Playoffs",
+     "round": "17U Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       11
+      ],
+      [
+       20,
+       22
+      ],
+      [
+       15,
+       10
+      ]
+     ],
+     "with": [
+      94909
+     ],
+     "against": [
+      92284
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Brooke Proctor",
+   "b": "Madison Gillinger",
+   "aId": 91896,
+   "bId": 99596,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-09",
+     "event": "2026 BVCA Individual Pairs National Championship ",
+     "division": "Girls 16U",
+     "tid": 38087,
+     "tdId": 139560,
+     "phase": "Playoffs",
+     "round": "Championship Bracket",
+     "won": false,
+     "sets": [
+      [
+       18,
+       21
+      ],
+      [
+       13,
+       21
+      ]
+     ],
+     "with": [
+      94909
+     ],
+     "against": [
+      "Reagan Carlin"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Julianna Godbey",
+   "b": "Brooke Proctor",
+   "aId": 58303,
+   "bId": 91896,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-26",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 15U",
+     "tid": 34243,
+     "tdId": 126057,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": false,
+     "sets": [
+      [
+       15,
+       21
+      ],
+      [
+       13,
+       21
+      ]
+     ],
+     "with": [
+      "Reagan Carlin"
+     ],
+     "against": [
+      "Ashley Ruschill"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Julianna Godbey",
+   "b": "Reagan Carlin",
+   "aId": 58303,
+   "bId": 92974,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-26",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 15U",
+     "tid": 34243,
+     "tdId": 126057,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": false,
+     "sets": [
+      [
+       15,
+       21
+      ],
+      [
+       13,
+       21
+      ]
+     ],
+     "with": [
+      "Brooke Proctor"
+     ],
+     "against": [
+      "Ashley Ruschill"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Olivia LeDoyen",
+   "b": "Reagan Carlin",
+   "aId": 30929,
+   "bId": 92974,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-01-18",
+     "event": "2026 Futures Tour: Arizona",
+     "division": "Class of '28 & Younger",
+     "tid": 31568,
+     "tdId": 117700,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       21,
+       18
+      ],
+      [
+       15,
+       21
+      ],
+      [
+       5,
+       15
+      ]
+     ],
+     "with": [
+      167128
+     ],
+     "against": [
+      172429
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Reagan Carlin",
+   "b": "Charlotte Jansen",
+   "aId": 92974,
+   "bId": 161398,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-01-18",
+     "event": "2026 Futures Tour: Arizona",
+     "division": "Class of '28 & Younger",
+     "tid": 31568,
+     "tdId": 117700,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       21,
+       15
+      ],
+      [
+       19,
+       21
+      ],
+      [
+       14,
+       16
+      ]
+     ],
+     "with": [
+      167128
+     ],
+     "against": [
+      9258
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Elle Sossong",
+   "b": "Reagan Carlin",
+   "aId": 33084,
+   "bId": 92974,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "U18 Girls",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       0
+      ],
+      [
+       21,
+       0
+      ]
+     ],
+     "with": [
+      83237
+     ],
+     "against": [
+      84161
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Julianna Godbey",
+   "b": "Taylie Hansen",
+   "aId": 58303,
+   "bId": 99506,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2025-11-16",
+     "event": "2025 p1440 Elite Dev Open Tournament",
+     "division": "Girls 18U",
+     "tid": 31995,
+     "tdId": 119079,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       22,
+       20
+      ],
+      [
+       20,
+       22
+      ],
+      [
+       11,
+       15
+      ]
+     ],
+     "with": [
+      "Ashley Ruschill"
+     ],
+     "against": [
+      24330
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Ella Buchanan",
+   "b": "Ashley Ruschill",
+   "aId": 98125,
+   "bId": 105245,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-17",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 16 - 2028",
+     "tid": 31483,
+     "tdId": 117394,
+     "phase": "Pool",
+     "round": "Power Pools",
+     "won": false,
+     "sets": [
+      [
+       17,
+       21
+      ],
+      [
+       17,
+       21
+      ]
+     ],
+     "with": [
+      "Cayden Dorger"
+     ],
+     "against": [
+      98124
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Ella Buchanan",
+   "b": "Cayden Dorger",
+   "aId": 98125,
+   "bId": 128445,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-17",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 16 - 2028",
+     "tid": 31483,
+     "tdId": 117394,
+     "phase": "Pool",
+     "round": "Power Pools",
+     "won": false,
+     "sets": [
+      [
+       17,
+       21
+      ],
+      [
+       17,
+       21
+      ]
+     ],
+     "with": [
+      "Ashley Ruschill"
+     ],
+     "against": [
+      98124
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Milana Rivera",
+   "b": "Ashley Ruschill",
+   "aId": 60877,
+   "bId": 105245,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-23",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 16U",
+     "tid": 34243,
+     "tdId": 126056,
+     "phase": "Pool",
+     "round": "Power Pools 1st",
+     "won": false,
+     "sets": [
+      [
+       14,
+       21
+      ],
+      [
+       11,
+       21
+      ]
+     ],
+     "with": [
+      91155
+     ],
+     "against": [
+      29887
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Ashley Ruschill",
+   "b": "Cayden Dorger",
+   "aId": 105245,
+   "bId": 128445,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-24",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 16U",
+     "tid": 34243,
+     "tdId": 126056,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": false,
+     "sets": [
+      [
+       13,
+       21
+      ],
+      [
+       16,
+       21
+      ]
+     ],
+     "with": [
+      91155
+     ],
+     "against": [
+      42463
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Olivia LeDoyen",
+   "b": "Cayden Dorger",
+   "aId": 30929,
+   "bId": 128445,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-05-03",
+     "event": "2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier",
+     "division": "Girls 16 Open",
+     "tid": 32578,
+     "tdId": 120659,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": false,
+     "sets": [
+      [
+       18,
+       21
+      ],
+      [
+       21,
+       17
+      ],
+      [
+       10,
+       15
+      ]
+     ],
+     "with": [
+      42463
+     ],
+     "against": [
+      "Ella Whiteside"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Ella Whiteside",
+   "b": "Cayden Dorger",
+   "aId": 70421,
+   "bId": 128445,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-05-03",
+     "event": "2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier",
+     "division": "Girls 16 Open",
+     "tid": 32578,
+     "tdId": 120659,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": false,
+     "sets": [
+      [
+       18,
+       21
+      ],
+      [
+       21,
+       17
+      ],
+      [
+       10,
+       15
+      ]
+     ],
+     "with": [
+      42463
+     ],
+     "against": [
+      "Olivia LeDoyen"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Ella Buchanan",
+   "b": "Taylie Hansen",
+   "aId": 98125,
+   "bId": 99506,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2025-11-09",
+     "event": "AVP Juniors West Coast Championships 2025",
+     "division": "Girls 16U",
+     "tid": 25578,
+     "tdId": 97149,
+     "phase": "Playoffs",
+     "round": "Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       21,
+       14
+      ],
+      [
+       16,
+       21
+      ],
+      [
+       11,
+       15
+      ]
+     ],
+     "with": [
+      98124
+     ],
+     "against": [
+      105341
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Milana Rivera",
+   "b": "Ella Buchanan",
+   "aId": 60877,
+   "bId": 98125,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-24",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 16U",
+     "tid": 34243,
+     "tdId": 126056,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": true,
+     "sets": [
+      [
+       21,
+       18
+      ],
+      [
+       21,
+       15
+      ]
+     ],
+     "with": [
+      98124
+     ],
+     "against": [
+      29887
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Julianna Godbey",
+   "b": "Ella Buchanan",
+   "aId": 58303,
+   "bId": 98125,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-18",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 16 - 2028",
+     "tid": 31483,
+     "tdId": 117394,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": false,
+     "sets": [
+      [
+       14,
+       21
+      ],
+      [
+       14,
+       21
+      ]
+     ],
+     "with": [
+      98124
+     ],
+     "against": [
+      105637
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Julianna Godbey",
+   "b": "Milana Rivera",
+   "aId": 58303,
+   "bId": 60877,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-04-11",
+     "event": "2026 Futures Tour: Texas",
+     "division": "Class of '26 & Younger",
+     "tid": 31625,
+     "tdId": 117914,
+     "phase": "Pool",
+     "round": "Day 1: RD1",
+     "won": false,
+     "sets": [
+      [
+       16,
+       21
+      ],
+      [
+       19,
+       21
+      ]
+     ],
+     "with": [
+      150387
+     ],
+     "against": [
+      84725
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Julianna Godbey",
+   "b": "Regina Stella Broshear",
+   "aId": 58303,
+   "bId": 64782,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-23",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 16U",
+     "tid": 34243,
+     "tdId": 126056,
+     "phase": "Pool",
+     "round": "Power Pools 1st",
+     "won": false,
+     "sets": [
+      [
+       19,
+       21
+      ],
+      [
+       18,
+       21
+      ]
+     ],
+     "with": [
+      105341
+     ],
+     "against": [
+      94909
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Julianna Godbey",
+   "b": "Ella Whiteside",
+   "aId": 58303,
+   "bId": 70421,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-08",
+     "event": "2026 BVCA Individual Pairs National Championship ",
+     "division": "Girls 16U",
+     "tid": 38087,
+     "tdId": 139560,
+     "phase": "Playoffs",
+     "round": "Championship Bracket",
+     "won": true,
+     "sets": [
+      [
+       21,
+       12
+      ],
+      [
+       21,
+       10
+      ]
+     ],
+     "with": [
+      9258
+     ],
+     "against": [
+      48462
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Elle Sossong",
+   "b": "Regina Stella Broshear",
+   "aId": 33084,
+   "bId": 64782,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-11-30",
+     "event": "AVP Juniors East Coast Championships 2025",
+     "division": "Girls 17U",
+     "tid": 25638,
+     "tdId": 97291,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": true,
+     "sets": [
+      [
+       21,
+       14
+      ],
+      [
+       21,
+       10
+      ]
+     ],
+     "with": [
+      84049
+     ],
+     "against": [
+      56655
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Milana Rivera",
+   "b": "Regina Stella Broshear",
+   "aId": 60877,
+   "bId": 64782,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-24",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 16U",
+     "tid": 34243,
+     "tdId": 126056,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": true,
+     "sets": [
+      [
+       21,
+       18
+      ],
+      [
+       21,
+       16
+      ]
+     ],
+     "with": [
+      94909
+     ],
+     "against": [
+      29887
+     ]
+    }
+   ]
+  }
+ ],
+ "partnered": [
+  {
+   "a": "Olivia LeDoyen",
+   "b": "Ella Whiteside",
+   "matches": 61
+  },
+  {
+   "a": "Julianna Godbey",
+   "b": "Ashley Ruschill",
+   "matches": 45
+  },
+  {
+   "a": "Brooke Proctor",
+   "b": "Reagan Carlin",
+   "matches": 31
+  },
+  {
+   "a": "Ashley Ruschill",
+   "b": "Cayden Dorger",
+   "matches": 30
+  },
+  {
+   "a": "Haisley Flanagan",
+   "b": "Madison Gillinger",
+   "matches": 16
+  },
+  {
+   "a": "Elle Sossong",
+   "b": "Taylie Hansen",
+   "matches": 13
+  },
+  {
+   "a": "Haisley Flanagan",
+   "b": "Charlotte Jansen",
+   "matches": 12
+  },
+  {
+   "a": "Nariah Johnson",
+   "b": "Charlotte Jansen",
+   "matches": 12
+  },
+  {
+   "a": "Olivia LeDoyen",
+   "b": "Emerson Harper",
+   "matches": 9
+  },
+  {
+   "a": "Julianna Godbey",
+   "b": "Nariah Johnson",
+   "matches": 8
+  },
+  {
+   "a": "Haisley Flanagan",
+   "b": "Ella Buchanan",
+   "matches": 7
+  },
+  {
+   "a": "Ella Buchanan",
+   "b": "Charlotte Jansen",
+   "matches": 3
+  }
+ ]
+}

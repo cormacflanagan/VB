@@ -125,17 +125,6 @@
   ],
   "Ella Buchanan": [
    {
-    "tid": 31736,
-    "tdId": 118324,
-    "division": "Womens A",
-    "finish": 3,
-    "date": "2025-08-09",
-    "partners": [
-     "Brooke Canaday"
-    ],
-    "field": 10
-   },
-   {
     "tid": 25578,
     "tdId": 97149,
     "division": "Girls 16U",
@@ -242,6 +231,17 @@
     "date": "2026-08-08",
     "partners": [
      "Haisley Flanagan"
+    ],
+    "field": 20
+   },
+   {
+    "tid": 40756,
+    "tdId": 149147,
+    "division": "Girls 16U",
+    "finish": 2,
+    "date": "2026-08-09",
+    "partners": [
+     "Lily Larrabee"
     ],
     "field": 20
    }
@@ -2408,17 +2408,6 @@
   ],
   "Milana Rivera": [
    {
-    "tid": 28045,
-    "tdId": 105767,
-    "division": "Womens Open",
-    "finish": 3,
-    "date": "2025-08-09",
-    "partners": [
-     "Olivia Herron"
-    ],
-    "field": 16
-   },
-   {
     "tid": 30437,
     "tdId": 114423,
     "division": "Women's Open",
@@ -3111,11 +3100,6 @@
    "date": "2026-06-27",
    "sanction": "AVPA"
   },
-  "31736": {
-   "name": "Women's A at Pismo Beach, Pismo Beach",
-   "date": "2025-08-09",
-   "sanction": "AVPA"
-  },
   "25578": {
    "name": "AVP Juniors West Coast Championships 2025",
    "date": "2025-11-09",
@@ -3149,6 +3133,11 @@
   "40750": {
    "name": "8/8/26, Main Beach, Santa Cruz",
    "date": "2026-08-08",
+   "sanction": "AVPA"
+  },
+  "40756": {
+   "name": "2026 Cal Cup Championships, 8/9/26, Hermosa Pier, Hermosa Beach",
+   "date": "2026-08-09",
    "sanction": "AVPA"
   },
   "32116": {
@@ -3551,11 +3540,6 @@
    "date": "2026-01-11",
    "sanction": "p1440"
   },
-  "28045": {
-   "name": "SAT 8/9 ~ Beach Baller Series 25' (#4)",
-   "date": "2025-08-09",
-   "sanction": "AVPA"
-  },
   "30438": {
    "name": "AVP Next Men\u2019s & Women\u2019s Fall Triple Crown Series #3 $12,000 Purse",
    "date": "2025-11-23",
@@ -3620,7 +3604,7 @@
    "height": "5' 10\"",
    "cityState": "Saratoga , CA",
    "truvolley": 7.843,
-   "peak": 8.087,
+   "peak": 8.091,
    "conf": 100,
    "w": 393,
    "matches": 500
@@ -3631,11 +3615,11 @@
    "club": "SLOVBC",
    "height": "6'",
    "cityState": "San Luis Obispo, CA",
-   "truvolley": 7.763,
-   "peak": 7.966,
+   "truvolley": 8.184,
+   "peak": 8.184,
    "conf": 100,
-   "w": 151,
-   "matches": 213
+   "w": 158,
+   "matches": 220
   },
   "Reagan Carlin": {
    "region": "So. Cal / So. Nevada",
@@ -3643,8 +3627,8 @@
    "club": "WAVE Beach",
    "height": "5' 10\"",
    "cityState": "Encinitas, CA",
-   "truvolley": 8.385,
-   "peak": 8.385,
+   "truvolley": 8.386,
+   "peak": 8.386,
    "conf": 100,
    "w": 273,
    "matches": 320
@@ -3655,8 +3639,8 @@
    "club": "Spiker Beach Volleyball Club",
    "height": "5' 7\"",
    "cityState": "Villa Park , CA",
-   "truvolley": 7.92,
-   "peak": 8.002,
+   "truvolley": 7.921,
+   "peak": 8.003,
    "conf": 100,
    "w": 219,
    "matches": 292
@@ -3679,11 +3663,11 @@
    "club": "Santa Cruz Beach Volleyball Club",
    "height": "5' 9\"",
    "cityState": "Santa Cruz, CA",
-   "truvolley": 8.377,
-   "peak": 8.434,
+   "truvolley": 8.614,
+   "peak": 8.618,
    "conf": 100,
-   "w": 258,
-   "matches": 331
+   "w": 265,
+   "matches": 338
   },
   "Madison Gillinger": {
    "region": "So. Cal / So. Nevada",
@@ -3691,11 +3675,11 @@
    "club": "Spiker Beach Volleyball Club",
    "height": "5' 11\"",
    "cityState": "Huntington Beach, CA",
-   "truvolley": 8.552,
-   "peak": 8.628,
+   "truvolley": 8.553,
+   "peak": 8.629,
    "conf": 100,
-   "w": 247,
-   "matches": 374
+   "w": 249,
+   "matches": 376
   },
   "Julianna Godbey": {
    "region": "North Texas",
@@ -3727,8 +3711,8 @@
    "club": "South Bay Sand",
    "height": "5' 6\"",
    "cityState": "Los Angeles , CA",
-   "truvolley": 7.435,
-   "peak": 7.521,
+   "truvolley": 7.436,
+   "peak": 7.523,
    "conf": 100,
    "w": 298,
    "matches": 351
@@ -3739,8 +3723,8 @@
    "club": "WAVE Beach",
    "height": "5' 10\"",
    "cityState": "Del Mar, CA",
-   "truvolley": 8.019,
-   "peak": 8.159,
+   "truvolley": 8.026,
+   "peak": 8.157,
    "conf": 100,
    "w": 270,
    "matches": 388
@@ -3763,8 +3747,8 @@
    "club": "Southbay Sand",
    "height": "5' 8\"",
    "cityState": "Viera, FL",
-   "truvolley": 7.494,
-   "peak": 7.867,
+   "truvolley": 7.495,
+   "peak": 7.864,
    "conf": 100,
    "w": 820,
    "matches": 1089
@@ -3775,8 +3759,8 @@
    "club": "MBsand",
    "height": "5' 7\"",
    "cityState": "Los Angeles, CA",
-   "truvolley": 8.821,
-   "peak": 8.921,
+   "truvolley": 8.822,
+   "peak": 8.922,
    "conf": 100,
    "w": 254,
    "matches": 315
@@ -3787,8 +3771,8 @@
    "club": "WAVE Beach",
    "height": "6'",
    "cityState": "Coronado, CA",
-   "truvolley": 8.428,
-   "peak": 8.428,
+   "truvolley": 8.429,
+   "peak": 8.429,
    "conf": 100,
    "w": 189,
    "matches": 221
@@ -3799,7 +3783,7 @@
    "club": "Third Coast",
    "height": "5' 7\"",
    "cityState": "Spring , TX",
-   "truvolley": 7.669,
+   "truvolley": 7.67,
    "peak": 8.232,
    "conf": 100,
    "w": 220,
@@ -3847,8 +3831,8 @@
    "club": "Southbay Sand",
    "height": "5' 11\"",
    "cityState": "Millsap, TX",
-   "truvolley": 6.862,
-   "peak": 7.875,
+   "truvolley": 6.863,
+   "peak": 7.874,
    "conf": 100,
    "w": 314,
    "matches": 449
