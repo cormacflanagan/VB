@@ -30,42 +30,34 @@ PATHWAY = re.compile(r"national team trials|isf trials|youth olympic games trial
 NTDP_GROUPS = (("18U", "Girls U18", 13), ("17U", "Girls U17", 20))
 
 # The programme itself runs four residential training series a year. They are invitational
-# and produce no results, so Volleyball Life has no record of them and they cannot be
-# derived from anything in this repo - dates are read off USA Volleyball's own schedule.
-USAV = "https://usavolleyball.org"
-NTDP_TRAINING = [
-    {"date": "2025-09-27", "endDate": "2025-09-28", "season": "Fall",
-     "location": "Virginia Beach, Virginia", "note": "alongside the 51st Neptune Festival",
-     "url": USAV + "/story/2025-beach-ntdp-fall-training-series-rosters-announced/"},
-    {"date": "2025-12-27", "endDate": "2025-12-29", "season": "Winter",
-     "location": "Manhattan Beach, California", "note": "",
-     "url": USAV + "/story/usa-volleyball-announces-2025-beach-ntdp-winter-training-series-rosters/"},
-    {"date": "2026-05-15", "endDate": "2026-05-17", "season": "Spring",
-     "location": "Manhattan Beach, California",
-     "note": "athletes convened from the 14th",
-     "url": USAV + "/story/usa-volleyball-announces-2026-beach-ntdp-spring-training-series-rosters/"},
-    {"date": "2026-07-26", "endDate": "2026-07-30", "season": "Summer",
-     "location": "Chula Vista Elite Athlete Training Center, California",
-     "note": "the girls&#8217; block; the boys followed 30 July&#8211;3 August", "rosters": True,
-     "url": USAV + "/story/usa-volleyball-announces-2026-beach-ntdp-summer-training-series-rosters/"},
-]
-NTDP_TRAINING_NEXT = [
-    {"date": "2026-09-25", "endDate": "2026-09-27", "season": "Fall",
-     "location": "Dania Beach, Florida", "note": "",
-     "url": USAV + "/play/national-team-development-program/beach-ntdp/beach-ntdp-training-series/"},
-]
+# and produce no results, so Volleyball Life has no record of them: rosters and dates come
+# from USA Volleyball via scripts/ntdp_series.py.
+try:
+    SERIES = json.load(open("ntdp_series.json"))
+except FileNotFoundError:
+    SERIES = {"series": [], "appearances": {}}
+# announced but not yet rostered, so it cannot come from the scrape
+NTDP_NEXT = [{"date": "2026-09-25", "endDate": "2026-09-27", "season": "Fall",
+              "location": "Dania Beach, Florida",
+              "url": "https://usavolleyball.org/play/national-team-development-program"
+                     "/beach-ntdp/beach-ntdp-training-series/"}]
 
 
 def as_training(t):
-    """A training series dressed up as a calendar event: a date to hold, not a field to win."""
-    divs = [{"name": lab, "n": n} for _, lab, n in NTDP_GROUPS] if t.get("rosters") else []
-    return {"tid": None, "training": True, "url": t["url"],
+    """A training series dressed up as a calendar event: a date to hold, not a field to win.
+
+    Each girls' age group becomes a bracket, so a camp reads in the same shape as a
+    tournament that ran several draws, with the roster size where the field size goes.
+    """
+    return {"tid": None, "training": True, "url": t["story"],
             "name": f"Beach NTDP {t['season']} Training Series",
             "date": t["date"], "endDate": t["endDate"], "sanction": "USAV",
             "location": t["location"], "note": t.get("note", ""),
             "t60": 0, "t30": 0, "t15": 0,
-            "brackets": [{"bracket": "NTDP", "t60": 0, "t30": 0, "t15": 0,
-                          "divisions": divs, "topFinishers": []}]}
+            "brackets": [{"bracket": g.replace("Girls ", "").replace("Women's ", ""),
+                          "t60": 0, "t30": 0, "t15": 0, "roster": v,
+                          "divisions": [{"name": g, "n": len(v)}], "topFinishers": []}
+                         for g, v in t["groups"].items()]}
 
 
 def ntdp_attendance():
@@ -181,21 +173,34 @@ def build(group):
     by_cbva = {CBVA[str(e["tid"])]["cbvaId"]: e for e in D["events"] if str(e["tid"]) in CBVA}
     past_local = local_events("cbva.json")
     next_local = local_events("cbva_upcoming.json")
+    def trim(e):
+        """A local 18U date nobody in the class entered is a bracket, not a fixture.
+
+        The Cal Cup bid series runs the same Wednesday draw eight times; the ones with an
+        empty turnout column carry nothing the week before or after does not. Women's dates
+        are left alone &#8212; there are few of them and they are the open field.
+        """
+        keep = [b for b in e["brackets"] if b["bracket"] != "18U" or b["t60"]]
+        return dict(e, brackets=keep) if keep else None
+
     shown = {e["tid"] for e in events}
     local_added = []
     for t in past_local:
         e = by_cbva.get(t["id"])
         if e is None:
             # nothing of ours to show: stand the CBVA listing up as an event of its own
-            local_added.append(as_event(t))
+            e = trim(as_event(t))
         elif e["tid"] in shown:
             # already in the table on its own turnout; tag it rather than repeat it
             next(x for x in events if x["tid"] == e["tid"])["local"] = True
+            continue
         else:
             # below the turnout bar, but it is the same event and it has real numbers
-            local_added.append(dict(e, local=True))
+            e = trim(dict(e, local=True))
+        if e:
+            local_added.append(e)
     events += local_added
-    events += [as_training(t) for t in NTDP_TRAINING
+    events += [as_training(t) for t in SERIES["series"]
                if D["window"][0] <= t["date"] <= D["window"][1]]
     events.sort(key=lambda e: (e["date"], -max(b["t60"] for b in e["brackets"])))
     rowcount = sum(len(e["brackets"]) for e in events)
@@ -263,6 +268,9 @@ def build(group):
                 divs = ", ".join(
                     esc(d["name"]) + (f' <i>&#215;{d["n"]}</i>' if d["n"] else "")
                     for d in b["divisions"][:2])
+                if b.get("roster"):
+                    who = esc(", ".join(f"{a['first']} {a['last']}" for a in b["roster"]))
+                    divs = f'<span title="{who}">{divs}</span>' 
                 lead = "" if i else f"""
         <td class="dt num"{rs}>{dd.strftime("%-d")}{span} <span class="dow">{dd.strftime("%a")}</span></td>
         <td class="evc"{rs}><a class="lnk" href="{
@@ -355,7 +363,7 @@ def build(group):
         <td class="loc">{esc(t['location'])}</td>
         <td class="brk"><b>NTDP</b></td>
         <td class="num dim">&#8212;</td>
-      </tr>""" for t in NTDP_TRAINING_NEXT)
+      </tr>""" for t in NTDP_NEXT)
     return f"""<title>Class of {group} &#183; Tournament calendar</title>
 <style>
 :root {{
@@ -683,11 +691,20 @@ a {{ color:var(--accent); }}
     lists it; the link goes to that event's CBVA page, and to the specific division where the
     two agree on its name.</li>
     <li><b>The training series are not tournaments.</b> They are invitational residential
-    camps with no draw and no result, so Volleyball Life has no record of them; the dates come
-    from USA Volleyball's own schedule and each row links to the announcement it was read from.
-    Only the summer series shows a roster count, because that is the roster this repo tracks
-    &#8212; the other three had their own, and their published rosters are not collected here.
-    The winter series for {int(wto[:4])}&#8211;{int(wto[:4])+1} has not been dated yet.</li>
+    camps with no draw and no result, so Volleyball Life has no record of them; dates and
+    rosters come from USA Volleyball, and each row links to the announcement they were read
+    from. The age groups vary by series &#8212; the spring series ran no U18 group at all,
+    because the Girls U18 National Team trained alongside it instead. The winter series for
+    {int(wto[:4])}&#8211;{int(wto[:4])+1} has not been dated yet.</li>
+    <li><b>An invitation is not a result, but it repeats.</b> Across the four series
+    {len(SERIES['appearances'])} girls were invited at least once and
+    {sum(1 for v in SERIES['appearances'].values() if len(v) == len(SERIES['series']))} to all
+    four. Of the {len(set(SERIES['appearances']) & {a['first'] + ' ' + a['last']
+    for s in SERIES['series'] if s['key'] == 'summer2026'
+    for g, v in s['groups'].items() if g in ('Girls U18', 'Girls U17') for a in v})} girls on
+    the two summer rosters this repo tracks, most had been to two or three of the earlier
+    camps &#8212; so the summer roster reads as the end of a year's selection rather than a
+    single decision.</li>
     <li><b>Locations come from the tournament record</b> and are blank where the organiser left
     them unset, which is common for one-day local events.</li>
   </ul>

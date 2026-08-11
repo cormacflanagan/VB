@@ -292,9 +292,16 @@ linking to the announcement its dates came from:
 | Summer 2026 | 26–30 July (girls) | Chula Vista Elite Athlete Training Center, CA |
 | Fall 2026 | 25–27 September | Dania Beach, FL |
 
-They sit in date order in the calendar, marked `training`, with no turnout figures. Only the
-summer series shows a roster count, because that is the roster this repo tracks; the other three
-had their own, which are not collected here. The 2026–27 winter series has not been dated yet.
+`scripts/ntdp_series.py` scrapes the rosters as well as the dates: each age group is one
+`tableizer-table` of FIRST / LAST / REGION under a heading that names it, and `--match` resolves
+the girls to Volleyball Life ids (89 of 101). Each series becomes a calendar row per girls' age
+group, with the roster size where a field size goes and the names on hover. The age groups vary
+— the spring series ran no U18 at all, because the Girls U18 National Team trained alongside it.
+
+**101 girls were invited across the four series, six to all of them.** Of the 33 on the two
+summer rosters this repo tracks, one had been to all four (Jordyn Wilson), sixteen to three and
+seven only to the summer — so the summer roster reads as the end of a year's selection rather
+than a single decision. The 2026–27 winter series has not been dated yet.
 
 ### The local dates
 
@@ -310,7 +317,9 @@ worth entering. Where the class *did* enter — nine of the fifteen, below the t
 row is our own event with its real figures rather than a stand-in, and one that already cleared
 the bar is tagged in place instead of repeated. CBVA's ladder runs Open, AA, A, B, and the Santa Cruz Saturdays alternate
 between an Open+A card and an AA+B one, so keeping Open and A drops the weaker card entirely
-rather than trimming a column from every date. That leaves **15 local dates** on the
+rather than trimming a column from every date. A local 18U date nobody in the class entered is
+dropped too — the Cal Cup bid series runs the same Wednesday draw eight times, and an empty one
+carries nothing the week either side does not. That leaves **11 local dates** on the
 calendar: women's Saturdays through the autumn and spring, and a midweek girls' 18U Cal Cup bid
 series every Wednesday through June and July. `scripts/cbva.py --upcoming` crawls the
 not-yet-played listing the same way, and those dates join the next-season table.
