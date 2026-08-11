@@ -225,6 +225,15 @@ that number flatters: 30 in the 18U, 15 in the 17U. The single biggest field of 
 that but **BVCA Individual Pairs, 34 of the 60 in one 18U draw**. AAU Hermosa splits almost
 evenly, 13 and 14, so neither of its fields is as deep as its 27 suggests.
 
+`FOCUS` names the bracket the reader is planning for — 17U — and gets its own section above
+the calendar, with no turnout bar, because a 17U draw *existing* is the fact worth knowing.
+That section is the page's most useful finding: of the 294 events the class of 2027 entered,
+**six ran a 17U bracket at all**, 50 of their 822 entries. AVP Juniors (West Coast, East Coast,
+Nationals), the AAU Hermosa pairs, BVCA Pairs West Coast and one recruiting showcase are the
+whole list. Everywhere else the choice was 18U or the adult women's open, with nothing between
+— so a thin 17U record reflects an absent draw, not an avoided one. The class-of-2028 cohort
+shows the same six-event pattern independently.
+
 Because the page exists to pick next year's schedule, each row is matched to its 2026-27
 edition where one is already on Volleyball Life's upcoming feed, by a name normalised to strip
 years and ordinals (`norm()` in `calendar.py`). **4 of the 55** matched; the rest are either

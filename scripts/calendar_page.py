@@ -8,6 +8,7 @@ import datetime, html, json, sys
 
 VBL = "https://volleyballlife.com"
 MIN_TURNOUT = 4
+FOCUS = "17U"
 TIERS = (("t60", 60, "Top 60"), ("t30", 30, "Top 30"), ("t15", 15, "Top 15"))
 
 
@@ -42,6 +43,14 @@ def build(group):
     rowcount = sum(len(e["brackets"]) for e in events)
     dropped = sum(len(e["brackets"]) for e in D["events"]) - rowcount
     wfrom, wto = D["window"]
+
+    # the bracket a reader is planning for gets its own section, with no turnout bar: a
+    # 17U draw existing at all is the fact worth knowing, whoever turned up to it
+    focus = [(e, b) for e in D["events"] for b in e["brackets"] if b["bracket"] == FOCUS]
+    focus.sort(key=lambda x: x[0]["date"])
+    focus_ent = sum(sum(d["n"] for d in b["divisions"]) for _, b in focus)
+    all_ent = sum(sum(d["n"] for d in b["divisions"])
+                  for e in D["events"] for b in e["brackets"])
 
     # month groups, in calendar order
     months, cur = [], None
@@ -108,6 +117,23 @@ def build(group):
         <td class="brk"><b>{esc(b['bracket'])}</b><span class="dv">{divs}</span></td>
 {cells}{tail}
       </tr>""")
+
+    foc = "".join(
+        f"""      <tr>
+        <td class="num dim nw">{dfmt(e['date']).strftime('%-d %b %Y')}</td>
+        <td class="evc"><a class="lnk" href="{VBL}/tournament/{e['tid']}" target="_blank"
+          rel="noopener">{esc(e['name'])}</a><span class="dv">{
+          ", ".join(esc(d['name']) for d in b['divisions'])}</span></td>
+        <td class="loc">{esc(e['location']) if e['location'] else '&#8212;'}</td>
+        <td><span class="sanc">{esc(e['sanction'])}</span></td>""" + "".join(
+            f'<td class="ht h{heat(b[k2], size)}" title="{b[k2]} of the {label.lower()}">'
+            f'{b[k2] or "&#183;"}</td>' for k2, size, label in TIERS) + f"""
+        <td class="nxc">{
+          f'<a class="lnk nx" href="{VBL}/tournament/' + str(e['next']['id']) + '" '
+          f'target="_blank" rel="noopener">'
+          + dfmt(e['next']['date']).strftime('%-d %b %Y') + '</a>'
+          if e.get('next') else '<span class="dim">&#8212;</span>'}</td>
+      </tr>""" for e, b in focus)
 
     def top_bracket(e):
         return max(e["brackets"], key=lambda b: b["t60"])
@@ -278,6 +304,35 @@ a {{ color:var(--accent); }}
   one bracket at the busiest event of that month. The season builds to a July peak and goes
   quiet in autumn.</p>
   <div class="months">{"".join(bars)}</div>
+</section>
+
+<section>
+  <h2>Where the {FOCUS} draw actually exists</h2>
+  <p class="lede">This class <em>was</em> last season's {FOCUS} age group, so these are the
+  fields a {FOCUS} player meets. The striking thing is how few of them there are: of the
+  {len(D['events'])} events the class entered, <b>{len(focus)} ran a {FOCUS} bracket at all</b>
+  &#8212; {focus_ent} of their {all_ent} entries. Everywhere else the choice was to play up into
+  18U. No turnout bar is applied here; a {FOCUS} draw existing is the fact worth knowing.</p>
+  <div class="panel">
+    <table>
+      <thead><tr>
+        <th scope="col">Date</th><th scope="col">Tournament</th><th scope="col">Location</th>
+        <th scope="col">Body</th>
+        <th scope="col" style="text-align:center">Top 60</th>
+        <th scope="col" style="text-align:center">Top 30</th>
+        <th scope="col" style="text-align:center">Top 15</th>
+        <th scope="col">Next edition</th>
+      </tr></thead>
+      <tbody>
+{foc}
+      </tbody>
+    </table>
+  </div>
+  <p class="lede" style="margin-top:14px">Three series carry it: AVP Juniors (all three
+  championships), the AAU Hermosa pairs, and BVCA's West Coast pairs &#8212; plus one recruiting
+  showcase that drew the bracket by graduating class. Everything else on the calendar below
+  offers 18U or the adult women's open and nothing in between, which is why the class's {FOCUS}
+  record is thin: the draw was not there to enter, not avoided.</p>
 </section>
 
 <section>
