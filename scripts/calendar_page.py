@@ -32,8 +32,15 @@ def heat(n, size):
 
 def build(group):
     D = json.load(open(f"calendar_{group}.json"))
-    events = [e for e in D["events"] if e["t60"] >= MIN_TURNOUT]
-    dropped = len(D["events"]) - len(events)
+    # the unit is a competition, not an event: an 18U bracket and the 17U beside it are
+    # separate fields, so each clears the turnout bar on its own or is dropped
+    events = []
+    for e in D["events"]:
+        keep = [b for b in e["brackets"] if b["t60"] >= MIN_TURNOUT]
+        if keep:
+            events.append(dict(e, brackets=keep))
+    rowcount = sum(len(e["brackets"]) for e in events)
+    dropped = sum(len(e["brackets"]) for e in D["events"]) - rowcount
     wfrom, wto = D["window"]
 
     # month groups, in calendar order
@@ -45,23 +52,29 @@ def build(group):
             months.append((key, []))
         months[-1][1].append(e)
 
-    peak = {k: max(x["t60"] for x in v) for k, v in months}
+    def best(e):
+        """Turnout of the event's strongest single bracket &#8212; one field, one number."""
+        return max(b["t60"] for b in e["brackets"])
+
+    peak = {k: max(best(x) for x in v) for k, v in months}
     mx = max(peak.values())
 
     bars = []
     for k, v in months:
         h = peak[k] / mx * 100
         lab = datetime.date(int(k[:4]), int(k[5:7]), 1).strftime("%b")
-        top = max(v, key=lambda x: x["t60"])
+        top = max(v, key=best)
+        tb = max(top["brackets"], key=lambda b: b["t60"])
         bars.append(
             f'<div class="mb" title="{esc(lab)} {k[:4]} &#183; busiest: {esc(top["name"])} '
-            f'({top["t60"]} of 60)"><span class="mbar" style="height:{h:.0f}%"></span>'
+            f'&#183; {esc(tb["bracket"])} ({tb["t60"]} of 60)">'
+            f'<span class="mbar" style="height:{h:.0f}%"></span>'
             f'<span class="mbn">{peak[k]}</span><span class="mbl">{lab}</span></div>')
 
     rows = []
     for k, v in months:
         d0 = datetime.date(int(k[:4]), int(k[5:7]), 1)
-        rows.append(f'<tr class="mrow"><th colspan="7" scope="rowgroup">'
+        rows.append(f'<tr class="mrow"><th colspan="9" scope="rowgroup">'
                     f'{d0.strftime("%B %Y")}<span class="mcount">{len(v)} event'
                     f'{"s" if len(v) != 1 else ""}</span></th></tr>')
         for e in v:
@@ -69,25 +82,35 @@ def build(group):
             span = ""
             if e.get("endDate") and e["endDate"] != e["date"]:
                 span = f'&#8211;{dfmt(e["endDate"]).day}'
-            cells = "".join(
-                f'<td class="ht h{heat(e[k2], size)}" title="{e[k2]} of the {label.lower()}">'
-                f'{e[k2] or "&#183;"}</td>' for k2, size, label in TIERS)
-            divs = ", ".join(f'{esc(d["name"])} <i>&#215;{d["n"]}</i>'
-                             for d in e["divisions"][:3])
             nxt = ""
             if e.get("next"):
                 nd = dfmt(e["next"]["date"])
                 nxt = (f'<a class="lnk nx" href="{VBL}/tournament/{e["next"]["id"]}" '
                        f'target="_blank" rel="noopener">{nd.strftime("%-d %b %Y")}</a>')
-            rows.append(f"""      <tr>
-        <td class="dt num">{dd.strftime("%-d")}{span} <span class="dow">{dd.strftime("%a")}</span></td>
-        <td class="evc"><a class="lnk" href="{VBL}/tournament/{e['tid']}" target="_blank"
-          rel="noopener">{esc(e['name'])}</a><span class="dv">{divs}</span></td>
-        <td class="loc">{esc(e['location']) if e['location'] else '&#8212;'}</td>
-        <td><span class="sanc">{esc(e['sanction'])}</span></td>
-{cells}
-        <td class="nxc">{nxt or '<span class="dim">&#8212;</span>'}</td>
+            n = len(e["brackets"])
+            rs = f' rowspan="{n}"' if n > 1 else ""
+            for i, b in enumerate(e["brackets"]):
+                cells = "".join(
+                    f'<td class="ht h{heat(b[k2], size)}" '
+                    f'title="{b[k2]} of the {label.lower()} played {esc(b["bracket"])}">'
+                    f'{b[k2] or "&#183;"}</td>' for k2, size, label in TIERS)
+                divs = ", ".join(f'{esc(d["name"])} <i>&#215;{d["n"]}</i>'
+                                 for d in b["divisions"][:2])
+                lead = "" if i else f"""
+        <td class="dt num"{rs}>{dd.strftime("%-d")}{span} <span class="dow">{dd.strftime("%a")}</span></td>
+        <td class="evc"{rs}><a class="lnk" href="{VBL}/tournament/{e['tid']}" target="_blank"
+          rel="noopener">{esc(e['name'])}</a></td>"""
+                tail = "" if i else f"""
+        <td class="loc"{rs}>{esc(e['location']) if e['location'] else '&#8212;'}</td>
+        <td{rs}><span class="sanc">{esc(e['sanction'])}</span></td>
+        <td class="nxc"{rs}>{nxt or '<span class="dim">&#8212;</span>'}</td>"""
+                rows.append(f"""      <tr class="{'evs' if not i else 'evc2'}">{lead}
+        <td class="brk"><b>{esc(b['bracket'])}</b><span class="dv">{divs}</span></td>
+{cells}{tail}
       </tr>""")
+
+    def top_bracket(e):
+        return max(e["brackets"], key=lambda b: b["t60"])
 
     returning = sorted((e for e in events if e.get("next")),
                        key=lambda e: e["next"]["date"])
@@ -97,10 +120,10 @@ def build(group):
         <td><a class="lnk" href="{VBL}/tournament/{e['next']['id']}" target="_blank"
           rel="noopener">{esc(e['next']['name'])}</a></td>
         <td class="loc">{esc(e['location']) if e['location'] else '&#8212;'}</td>
-        <td class="num"><b>{e['t60']}</b><span class="dim"> / {e['t30']} / {e['t15']}</span></td>
+        <td class="brk"><b>{esc(top_bracket(e)['bracket'])}</b></td>
+        <td class="num"><b>{top_bracket(e)['t60']}</b><span class="dim">
+          / {top_bracket(e)['t30']} / {top_bracket(e)['t15']}</span></td>
       </tr>""" for e in returning)
-
-    top_events = sorted(events, key=lambda e: -e["t60"])[:3]
     return f"""<title>Class of {group} &#183; Tournament calendar</title>
 <style>
 :root {{
@@ -183,6 +206,12 @@ tbody tr:hover td {{ background:var(--raise); }}
 .num {{ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   font-variant-numeric:tabular-nums; font-size:13px; }}
 .dt {{ white-space:nowrap; color:var(--ink); font-weight:600; width:74px; }}
+.brk {{ white-space:nowrap; width:170px; }}
+.brk .dv {{ white-space:normal; }}
+.brk b {{ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:12px;
+  color:var(--ink); font-weight:650; letter-spacing:.02em; }}
+.evs td {{ border-top:1px solid var(--line); }}
+.evc2 .brk {{ padding-left:12px; }}
 .dow {{ color:var(--faint); font-weight:400; font-size:11px; }}
 .evc {{ min-width:250px; max-width:420px; }}
 .evc .lnk {{ color:var(--ink); font-weight:600; font-size:13.5px; text-decoration:none; }}
@@ -229,12 +258,14 @@ a {{ color:var(--accent); }}
   <p class="eyebrow">Girls beach volleyball &#183; Class of {group} &#183; Season calendar</p>
   <h1>Where the class of {group} <em>actually turns up</em></h1>
   <p class="standfirst">Every tournament the 60 highest-rated girls in the class of {group}
-  contested in the twelve months to {dfmt(wto).strftime('%-d %B %Y')}, in calendar order, with
-  how many of the top 60, top 30 and top 15 entered each one. Built for picking next season's
-  schedule: the darker the row, the more of the class you would have been playing against.</p>
+  contested in the twelve months to {dfmt(wto).strftime('%-d %B %Y')}, in calendar order, split
+  by age bracket, with how many of the top 60, top 30 and top 15 entered each field. Built for
+  picking next season's schedule: the darker the row, the more of the class you would have been
+  playing against.</p>
   <div class="facts">
-    <div class="fact"><b>{len(events)}</b><span>Events shown</span></div>
-    <div class="fact"><b>{max(e['t60'] for e in events)}</b><span>Biggest turnout</span></div>
+    <div class="fact"><b>{rowcount}</b><span>Brackets shown</span></div>
+    <div class="fact"><b>{len(events)}</b><span>Across events</span></div>
+    <div class="fact"><b>{max(best(e) for e in events)}</b><span>Biggest single field</span></div>
     <div class="fact"><b>{len(returning)}</b><span>Already re-scheduled</span></div>
     <div class="fact"><b>{len(D['events'])}</b><span>Events entered in all</span></div>
     <div class="fact"><b>12&#8202;mo</b><span>to {dfmt(wto).strftime('%-d %b %Y')}</span></div>
@@ -243,27 +274,29 @@ a {{ color:var(--accent); }}
 
 <section>
   <h2>The shape of the season</h2>
-  <p class="lede">The biggest single turnout in each month &#8212; how many of the top 60 met at
-  the busiest event of that month. The season builds to a July peak and goes quiet in autumn.</p>
+  <p class="lede">The biggest single field in each month &#8212; how many of the top 60 met in
+  one bracket at the busiest event of that month. The season builds to a July peak and goes
+  quiet in autumn.</p>
   <div class="months">{"".join(bars)}</div>
 </section>
 
 <section>
   <h2>The calendar</h2>
-  <p class="lede">Every event that drew at least {MIN_TURNOUT} of the top 60, oldest first.
-  {dropped} further events drew fewer than that and are left out &#8212; a pair or two entering
-  a local event says little about the field. Shading runs on the share of
+  <p class="lede">One row per <i>bracket</i>, not per event: the 18U field and the 17U field
+  running beside it are separate competitions, so each is counted and judged on its own. Every
+  bracket that drew at least {MIN_TURNOUT} of the top 60 is here, oldest first; {dropped}
+  further brackets drew fewer and are left out. Shading runs on the share of
   each tier present, so the three columns are directly comparable: 12 of the top 15 shades
   darker than 21 of the top 30. Event names link to Volleyball Life; the last column is next
   season's edition where one is already scheduled.</p>
   <div class="panel">
     <table>
       <thead><tr>
-        <th scope="col">Date</th><th scope="col">Tournament</th><th scope="col">Location</th>
-        <th scope="col">Body</th>
+        <th scope="col">Date</th><th scope="col">Tournament</th><th scope="col">Bracket</th>
         <th scope="col" style="text-align:center">Top 60</th>
         <th scope="col" style="text-align:center">Top 30</th>
         <th scope="col" style="text-align:center">Top 15</th>
+        <th scope="col">Location</th><th scope="col">Body</th>
         <th scope="col">Next edition</th>
       </tr></thead>
       <tbody>
@@ -287,11 +320,14 @@ a {{ color:var(--accent); }}
   {int(wto[:4])}&#8211;{int(wto[:4])+1} edition on Volleyball Life yet &#8212; most of the
   calendar simply has not been posted this far out, so a blank here means unscheduled, not
   discontinued. These are the ones you can enter today, with last season's turnout as a guide
-  to the field you would be walking into.</p>
+  to the field you would be walking into. The bracket named is the one this class filled last
+  season; they move up a year for the next edition, so read it as where the depth was, not
+  where they will be drawn.</p>
   <div class="panel">
     <table>
       <thead><tr>
         <th scope="col">Date</th><th scope="col">Tournament</th><th scope="col">Location</th>
+        <th scope="col">Bracket</th>
         <th scope="col">Last season 60&#8202;/&#8202;30&#8202;/&#8202;15</th>
       </tr></thead>
       <tbody>
@@ -304,9 +340,16 @@ a {{ color:var(--accent); }}
 <section class="notes">
   <h2>How to read it, and what it is not</h2>
   <ul>
-    <li><b>Turnout counts athletes, not teams.</b> A number is how many of that tier entered the
-    event at all, across every division it ran. The division breakdown under each name shows
-    where they actually played, with the count beside it.</li>
+    <li><b>Turnout counts athletes, not teams.</b> A number is how many of that tier entered
+    that bracket; a girl who played both the 18U and the 17U is counted in both rows, which is
+    the point of splitting them.</li>
+    <li><b>Brackets are folded onto the age they are actually played at.</b> Organisers label
+    one field a dozen ways &#8212; "Girls 18U", "U18 Girls", "Girls 18:U (Grad Year 2026-2027)"
+    and "Class of '26 &amp; Younger" are the same competition. An explicit age wins; failing
+    that the youngest graduating year admitted sets the ceiling. The raw division names sit
+    under each bracket label, with the count beside them. <b>Women's</b> is the adult open
+    draw, which several of this class enter and which is a materially harder field than the
+    juniors bracket at the same event.</li>
     <li><b>Doubles only.</b> Club, 3v3 and 5v5 entries are excluded throughout, on the same rule
     the class reports use &#8212; a placing in those says little about an individual.</li>
     <li><b>This is a map of the class of {group}, who are a year ahead of the class of 2028.</b>

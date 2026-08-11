@@ -16,6 +16,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Biggs",
+       "f": 2,
+       "field": 9,
+       "div": "Coed AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed AA",
@@ -46,6 +68,34 @@
    "t15": 0,
    "t30": 1,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Meadow Rosales",
+       "f": 3,
+       "field": 17,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Claire Hanson",
+       "f": 9,
+       "field": 17,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -77,6 +127,40 @@
    "t15": 0,
    "t30": 1,
    "t60": 3,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 3,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 3
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Isabelle Izzy Ramos",
+       "f": 1,
+       "field": 7,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Adaleah Bassler",
+       "f": 3,
+       "field": 7,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Izzy Fischer",
+       "f": 3,
+       "field": 7,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -114,6 +198,28 @@
    "t15": 1,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Thais Treumann",
+       "f": 17,
+       "field": 86,
+       "div": "Womens"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens",
@@ -139,6 +245,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Isabelle Izzy Ramos",
+       "f": 3,
+       "field": 16,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -164,6 +292,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lekhana Donnies",
+       "f": 21,
+       "field": 25,
+       "div": "Womens AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens AA",
@@ -189,6 +339,34 @@
    "t15": 0,
    "t30": 1,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Girls 18U/16U",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Paloma Smith",
+       "f": 1,
+       "field": 8,
+       "div": "Girls 18U/16U"
+      },
+      {
+       "name": "Izzy Fischer",
+       "f": 1,
+       "field": 8,
+       "div": "Girls 18U/16U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U/16U",
@@ -220,6 +398,34 @@
    "t15": 2,
    "t30": 2,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 2,
+     "t30": 2,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Simrin Adams",
+       "f": 33,
+       "field": 39,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Thalia Lindahl",
+       "f": 33,
+       "field": 39,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -251,6 +457,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "16U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 16U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Linnaea Nielsen",
+       "f": 5,
+       "field": 15,
+       "div": "Girls 16U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 16U",
@@ -276,6 +504,40 @@
    "t15": 0,
    "t30": 1,
    "t60": 3,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 1,
+     "t60": 3,
+     "divisions": [
+      {
+       "name": "Womens A",
+       "n": 3
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Allyn Hilt",
+       "f": 3,
+       "field": 23,
+       "div": "Womens A"
+      },
+      {
+       "name": "Leah Blair",
+       "f": 3,
+       "field": 23,
+       "div": "Womens A"
+      },
+      {
+       "name": "Ashley Chuba",
+       "f": 13,
+       "field": 23,
+       "div": "Womens A"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens A",
@@ -313,6 +575,28 @@
    "t15": 1,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 1,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed AAA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Addison Choi",
+       "f": 5,
+       "field": 8,
+       "div": "Coed AAA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed AAA",
@@ -338,6 +622,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Bristyn Burness",
+       "f": 17,
+       "field": 20,
+       "div": "Womens AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens AA",
@@ -363,6 +669,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "RCO OPEN",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Giani Boerner",
+       "f": 3,
+       "field": 5,
+       "div": "RCO OPEN"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "RCO OPEN",
@@ -388,6 +716,46 @@
    "t15": 0,
    "t30": 1,
    "t60": 4,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 4,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 4
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Claire Hanson",
+       "f": 3,
+       "field": 30,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Meadow Rosales",
+       "f": 3,
+       "field": 30,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Giani Boerner",
+       "f": 5,
+       "field": 30,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Lila Waite",
+       "f": 5,
+       "field": 30,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -431,6 +799,34 @@
    "t15": 0,
    "t30": 1,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Paloma Smith",
+       "f": 1,
+       "field": 4,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Emma Burnside",
+       "f": 2,
+       "field": 4,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -462,6 +858,46 @@
    "t15": 0,
    "t30": 1,
    "t60": 4,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 4,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 4
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Giani Boerner",
+       "f": 1,
+       "field": 44,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Claire Hanson",
+       "f": 2,
+       "field": 44,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Meadow Rosales",
+       "f": 2,
+       "field": 44,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Lila Waite",
+       "f": 5,
+       "field": 44,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -510,6 +946,34 @@
    "t15": 2,
    "t30": 2,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 2,
+     "t30": 2,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Simrin Adams",
+       "f": 19,
+       "field": 30,
+       "div": "Womens Open"
+      },
+      {
+       "name": "JoJo Wilson",
+       "f": 19,
+       "field": 30,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -541,6 +1005,34 @@
    "t15": 1,
    "t30": 2,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 2,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Christy Boulware",
+       "f": 1,
+       "field": 6,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Meg Hearn",
+       "f": 1,
+       "field": 6,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -572,6 +1064,28 @@
    "t15": 1,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lauren Leach",
+       "f": 41,
+       "field": 58,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -597,6 +1111,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Class of 2026 - Girls 18U - Sunday AM Wave",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Megan McLarty",
+       "f": 3,
+       "field": 16,
+       "div": "Class of 2026 - Girls 18U - Sunday AM Wave"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Class of 2026 - Girls 18U - Sunday AM Wave",
@@ -622,6 +1158,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Class of '26 & Younger",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Bristyn Burness",
+       "f": 3,
+       "field": 11,
+       "div": "Class of '26 & Younger"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Class of '26 & Younger",
@@ -647,6 +1205,34 @@
    "t15": 2,
    "t30": 2,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 2,
+     "t30": 2,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lauren Leach",
+       "f": 45,
+       "field": 55,
+       "div": "Womens"
+      },
+      {
+       "name": "Ella Olson",
+       "f": 45,
+       "field": 55,
+       "div": "Womens"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens",
@@ -678,6 +1264,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Jordyn Wilson",
+       "f": 17,
+       "field": 19,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -703,6 +1311,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Giani Boerner",
+       "f": 7,
+       "field": 15,
+       "div": "Coed Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed Open",
@@ -728,6 +1358,40 @@
    "t15": 2,
    "t30": 2,
    "t60": 3,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 2,
+     "t30": 2,
+     "t60": 3,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 3
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Sandie Souza",
+       "f": 1,
+       "field": 12,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Thalia Lindahl",
+       "f": 1,
+       "field": 12,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Ashley Chuba",
+       "f": 9,
+       "field": 12,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -770,6 +1434,66 @@
    "t15": 1,
    "t30": 1,
    "t60": 3,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Izzy Fischer",
+       "f": 1,
+       "field": 4,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Meadow Rosales",
+       "f": 2,
+       "field": 4,
+       "div": "Girls 18U"
+      }
+     ]
+    },
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 3,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 3
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Christy Boulware",
+       "f": 2,
+       "field": 14,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Meadow Rosales",
+       "f": 9,
+       "field": 14,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Izzy Fischer",
+       "f": 9,
+       "field": 14,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -811,6 +1535,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Isabelle Izzy Ramos",
+       "f": 9,
+       "field": 20,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -836,6 +1582,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Tesa Solis",
+       "f": 1,
+       "field": 9,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -861,6 +1629,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "GIRLS GY 2026-2029",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Anna Popovic",
+       "f": 1,
+       "field": 13,
+       "div": "GIRLS GY 2026-2029"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "GIRLS GY 2026-2029",
@@ -886,6 +1676,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Biggs",
+       "f": 1,
+       "field": 4,
+       "div": "Coed AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed AA",
@@ -916,6 +1728,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens A",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Ashley Chuba",
+       "f": 13,
+       "field": 18,
+       "div": "Womens A"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens A",
@@ -941,6 +1775,46 @@
    "t15": 4,
    "t30": 4,
    "t60": 5,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 4,
+     "t30": 4,
+     "t60": 5,
+     "divisions": [
+      {
+       "name": "Women's Open",
+       "n": 5
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lauren Leach",
+       "f": 7,
+       "field": 35,
+       "div": "Women's Open"
+      },
+      {
+       "name": "Janie McCanna",
+       "f": 7,
+       "field": 35,
+       "div": "Women's Open"
+      },
+      {
+       "name": "Leann Wise",
+       "f": 13,
+       "field": 35,
+       "div": "Women's Open"
+      },
+      {
+       "name": "Olivia Herron",
+       "f": 17,
+       "field": 35,
+       "div": "Women's Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Women's Open",
@@ -984,6 +1858,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "RCO OPEN",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Giani Boerner",
+       "f": 15,
+       "field": 20,
+       "div": "RCO OPEN"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "RCO OPEN",
@@ -1009,6 +1905,40 @@
    "t15": 0,
    "t30": 2,
    "t60": 3,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 2,
+     "t60": 3,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 3
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Karsyn Rogers",
+       "f": 1,
+       "field": 9,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Paloma Smith",
+       "f": 1,
+       "field": 9,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Emma Burnside",
+       "f": 2,
+       "field": 9,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -1046,6 +1976,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Giani Boerner",
+       "f": 3,
+       "field": 10,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -1071,6 +2023,46 @@
    "t15": 6,
    "t30": 6,
    "t60": 6,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 6,
+     "t30": 6,
+     "t60": 6,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 6
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Herron",
+       "f": 2,
+       "field": 14,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Sandie Souza",
+       "f": 3,
+       "field": 14,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Simrin Adams",
+       "f": 3,
+       "field": 14,
+       "div": "Womens Open"
+      },
+      {
+       "name": "JoJo Wilson",
+       "f": 3,
+       "field": 14,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -1114,6 +2106,28 @@
    "t15": 1,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Herron",
+       "f": 9,
+       "field": 28,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -1139,6 +2153,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "18U OPEN",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Giani Boerner",
+       "f": 3,
+       "field": 19,
+       "div": "18U OPEN"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "18U OPEN",
@@ -1169,6 +2205,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lila Waite",
+       "f": 1,
+       "field": 11,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -1194,6 +2252,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Biggs",
+       "f": 3,
+       "field": 11,
+       "div": "Coed AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed AA",
@@ -1224,6 +2304,34 @@
    "t15": 1,
    "t30": 2,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 1,
+     "t30": 2,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Addison Choi",
+       "f": 1,
+       "field": 5,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Sammy Nammack",
+       "f": 1,
+       "field": 5,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -1255,6 +2363,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Biggs",
+       "f": 9,
+       "field": 22,
+       "div": "Coed Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed Open",
@@ -1285,6 +2415,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Biggs",
+       "f": 13,
+       "field": 21,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -1315,6 +2467,34 @@
    "t15": 1,
    "t30": 2,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 2,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Sandie Souza",
+       "f": 5,
+       "field": 16,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Sammy Nammack",
+       "f": 5,
+       "field": 16,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -1346,6 +2526,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Meadow Rosales",
+       "f": 3,
+       "field": 8,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -1371,6 +2573,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Megan McLarty",
+       "f": 1,
+       "field": 10,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -1396,6 +2620,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "RevCo Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Claire Hanson",
+       "f": 2,
+       "field": 6,
+       "div": "RevCo Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "RevCo Open",
@@ -1421,6 +2667,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Meadow Rosales",
+       "f": 1,
+       "field": 9,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -1446,6 +2714,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Ashley Chuba",
+       "f": 19,
+       "field": 28,
+       "div": "Womens AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens AA",
@@ -1471,6 +2761,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Biggs",
+       "f": 3,
+       "field": 11,
+       "div": "Coed AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed AA",
@@ -1501,6 +2813,40 @@
    "t15": 1,
    "t30": 1,
    "t60": 3,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 3,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 3
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Addison Choi",
+       "f": 2,
+       "field": 13,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Leah Blair",
+       "f": 2,
+       "field": 13,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Ashley Chuba",
+       "f": 9,
+       "field": 13,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -1538,6 +2884,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U/16U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Emma Burnside",
+       "f": 2,
+       "field": 11,
+       "div": "Girls 18U/16U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U/16U",
@@ -1563,6 +2931,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lekhana Donnies",
+       "f": 13,
+       "field": 18,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -1588,6 +2978,34 @@
    "t15": 2,
    "t30": 2,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 2,
+     "t30": 2,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Women's Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Leann Wise",
+       "f": 9,
+       "field": 21,
+       "div": "Women's Open"
+      },
+      {
+       "name": "Olivia Herron",
+       "f": 9,
+       "field": 21,
+       "div": "Women's Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Women's Open",
@@ -1619,6 +3037,34 @@
    "t15": 1,
    "t30": 2,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 2,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Thalia Lindahl",
+       "f": 1,
+       "field": 15,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Zoe Znider",
+       "f": 3,
+       "field": 15,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -1650,6 +3096,40 @@
    "t15": 3,
    "t30": 3,
    "t60": 3,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 3,
+     "t30": 3,
+     "t60": 3,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 3
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Herron",
+       "f": 2,
+       "field": 10,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Sienna Castillo",
+       "f": 3,
+       "field": 10,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Simrin Adams",
+       "f": 3,
+       "field": 10,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -1687,6 +3167,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U/16U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Emma Burnside",
+       "f": 2,
+       "field": 9,
+       "div": "Girls 18U/16U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U/16U",
@@ -1712,6 +3214,54 @@
    "t15": 1,
    "t30": 1,
    "t60": 3,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Izzy Fischer",
+       "f": 2,
+       "field": 8,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Christy Boulware",
+       "f": 3,
+       "field": 8,
+       "div": "Womens Open"
+      }
+     ]
+    },
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed A",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lila Waite",
+       "f": 2,
+       "field": 18,
+       "div": "Coed A"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -1753,6 +3303,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Biggs",
+       "f": 1,
+       "field": 9,
+       "div": "Coed AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed AA",
@@ -1783,6 +3355,34 @@
    "t15": 0,
    "t30": 1,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Class of '26 & Younger",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Bristyn Burness",
+       "f": 2,
+       "field": 12,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Laney Evers",
+       "f": 2,
+       "field": 12,
+       "div": "Class of '26 & Younger"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Class of '26 & Younger",
@@ -1814,6 +3414,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U/16U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Paloma Smith",
+       "f": 1,
+       "field": 6,
+       "div": "Girls 18U/16U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U/16U",
@@ -1839,6 +3461,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 16/18U (GY2026-2029)",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Anna Popovic",
+       "f": 1,
+       "field": 12,
+       "div": "Girls 16/18U (GY2026-2029)"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 16/18U (GY2026-2029)",
@@ -1864,6 +3508,84 @@
    "t15": 8,
    "t30": 12,
    "t60": 17,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 4,
+     "t30": 4,
+     "t60": 5,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 5
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Herron",
+       "f": 2,
+       "field": 23,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Lauren Leach",
+       "f": 3,
+       "field": 23,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Ella Olson",
+       "f": 3,
+       "field": 23,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Sandie Souza",
+       "f": 9,
+       "field": 23,
+       "div": "Girls 18U"
+      }
+     ]
+    },
+    {
+     "bracket": "17U",
+     "t15": 4,
+     "t30": 8,
+     "t60": 12,
+     "divisions": [
+      {
+       "name": "Girls 17U",
+       "n": 12
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Simrin Adams",
+       "f": 1,
+       "field": 23,
+       "div": "Girls 17U"
+      },
+      {
+       "name": "Thalia Lindahl",
+       "f": 1,
+       "field": 23,
+       "div": "Girls 17U"
+      },
+      {
+       "name": "Addison Choi",
+       "f": 2,
+       "field": 23,
+       "div": "Girls 17U"
+      },
+      {
+       "name": "Leah Blair",
+       "f": 2,
+       "field": 23,
+       "div": "Girls 17U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 17U",
@@ -1916,6 +3638,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Adaleah Bassler",
+       "f": 3,
+       "field": 12,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -1941,6 +3685,48 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lila Waite",
+       "f": 2,
+       "field": 7,
+       "div": "Girls 18U"
+      }
+     ]
+    },
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lila Waite",
+       "f": 3,
+       "field": 8,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -1975,6 +3761,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "CoEd AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Biggs",
+       "f": 2,
+       "field": 8,
+       "div": "CoEd AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "CoEd AA",
@@ -2000,6 +3808,46 @@
    "t15": 2,
    "t30": 5,
    "t60": 5,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 2,
+     "t30": 5,
+     "t60": 5,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 5
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lauren Leach",
+       "f": 1,
+       "field": 31,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Christy Boulware",
+       "f": 1,
+       "field": 31,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Meg Hearn",
+       "f": 2,
+       "field": 31,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "London Merchant",
+       "f": 3,
+       "field": 31,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -2043,6 +3891,46 @@
    "t15": 3,
    "t30": 4,
    "t60": 4,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 3,
+     "t30": 4,
+     "t60": 4,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 4
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Sandie Souza",
+       "f": 1,
+       "field": 9,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Thalia Lindahl",
+       "f": 1,
+       "field": 9,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Addison Choi",
+       "f": 3,
+       "field": 9,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Lerin Rosenthal",
+       "f": 3,
+       "field": 9,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -2086,6 +3974,34 @@
    "t15": 0,
    "t30": 0,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lila Waite",
+       "f": 1,
+       "field": 21,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Amelia Berent",
+       "f": 3,
+       "field": 21,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -2122,6 +4038,34 @@
    "t15": 0,
    "t30": 0,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Tesa Solis",
+       "f": 3,
+       "field": 13,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Izzy Fischer",
+       "f": 5,
+       "field": 13,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -2153,6 +4097,46 @@
    "t15": 3,
    "t30": 4,
    "t60": 6,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 3,
+     "t30": 4,
+     "t60": 6,
+     "divisions": [
+      {
+       "name": "Women's Open",
+       "n": 6
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Leann Wise",
+       "f": 3,
+       "field": 29,
+       "div": "Women's Open"
+      },
+      {
+       "name": "Janie McCanna",
+       "f": 5,
+       "field": 29,
+       "div": "Women's Open"
+      },
+      {
+       "name": "Olivia Herron",
+       "f": 7,
+       "field": 29,
+       "div": "Women's Open"
+      },
+      {
+       "name": "London Merchant",
+       "f": 17,
+       "field": 29,
+       "div": "Women's Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Women's Open",
@@ -2196,6 +4180,34 @@
    "t15": 2,
    "t30": 2,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 2,
+     "t30": 2,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lauren Leach",
+       "f": 1,
+       "field": 15,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Thalia Lindahl",
+       "f": 1,
+       "field": 15,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -2227,6 +4239,28 @@
    "t15": 1,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Thais Treumann",
+       "f": 2,
+       "field": 5,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -2252,6 +4286,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Biggs",
+       "f": 5,
+       "field": 15,
+       "div": "Coed AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed AA",
@@ -2282,6 +4338,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Tesa Solis",
+       "f": 1,
+       "field": 19,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -2307,6 +4385,84 @@
    "t15": 0,
    "t30": 3,
    "t60": 9,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 3,
+     "t60": 5,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 5
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Meadow Rosales",
+       "f": 3,
+       "field": 54,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Lila Waite",
+       "f": 5,
+       "field": 54,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Megan McLarty",
+       "f": 9,
+       "field": 54,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Isabelle Izzy Ramos",
+       "f": 9,
+       "field": 54,
+       "div": "Girls 18U"
+      }
+     ]
+    },
+    {
+     "bracket": "17U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 4,
+     "divisions": [
+      {
+       "name": "Girls 17U",
+       "n": 4
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Sienna Carr",
+       "f": 2,
+       "field": 46,
+       "div": "Girls 17U"
+      },
+      {
+       "name": "Emma Burnside",
+       "f": 2,
+       "field": 46,
+       "div": "Girls 17U"
+      },
+      {
+       "name": "Anna Popovic",
+       "f": 5,
+       "field": 46,
+       "div": "Girls 17U"
+      },
+      {
+       "name": "Amelia Berent",
+       "f": 9,
+       "field": 46,
+       "div": "Girls 17U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -2359,6 +4515,34 @@
    "t15": 2,
    "t30": 2,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 2,
+     "t30": 2,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "18/16",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "JoJo Wilson",
+       "f": 1,
+       "field": 6,
+       "div": "18/16"
+      },
+      {
+       "name": "Thalia Lindahl",
+       "f": 1,
+       "field": 6,
+       "div": "18/16"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "18/16",
@@ -2390,6 +4574,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Kiah McCoy",
+       "f": 3,
+       "field": 9,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -2415,6 +4621,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lila Waite",
+       "f": 3,
+       "field": 11,
+       "div": "Girls 18U Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U Open",
@@ -2440,6 +4668,28 @@
    "t15": 1,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Women's Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Thais Treumann",
+       "f": 3,
+       "field": 12,
+       "div": "Women's Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Women's Open",
@@ -2465,6 +4715,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Karsyn Rogers",
+       "f": 1,
+       "field": 13,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -2490,6 +4762,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Paloma Smith",
+       "f": 1,
+       "field": 12,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -2515,6 +4809,46 @@
    "t15": 4,
    "t30": 5,
    "t60": 9,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 4,
+     "t30": 5,
+     "t60": 9,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 9
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lauren Leach",
+       "f": 1,
+       "field": 13,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Olivia Herron",
+       "f": 1,
+       "field": 13,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Simrin Adams",
+       "f": 5,
+       "field": 13,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "JoJo Wilson",
+       "f": 5,
+       "field": 13,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -2558,6 +4892,34 @@
    "t15": 0,
    "t30": 1,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Claire Hanson",
+       "f": 1,
+       "field": 0,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Lila Waite",
+       "f": 3,
+       "field": 0,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -2589,6 +4951,34 @@
    "t15": 0,
    "t30": 2,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 2,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "COLLEGE/18U",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Karsyn Rogers",
+       "f": 1,
+       "field": 9,
+       "div": "COLLEGE/18U"
+      },
+      {
+       "name": "Paloma Smith",
+       "f": 3,
+       "field": 9,
+       "div": "COLLEGE/18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "COLLEGE/18U",
@@ -2620,6 +5010,40 @@
    "t15": 0,
    "t30": 3,
    "t60": 3,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 3,
+     "t60": 3,
+     "divisions": [
+      {
+       "name": "Women\u2019s Open",
+       "n": 3
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Ryan Anderson",
+       "f": 1,
+       "field": 9,
+       "div": "Women\u2019s Open"
+      },
+      {
+       "name": "Karsyn Rogers",
+       "f": 2,
+       "field": 9,
+       "div": "Women\u2019s Open"
+      },
+      {
+       "name": "Paloma Smith",
+       "f": 3,
+       "field": 9,
+       "div": "Women\u2019s Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Women\u2019s Open",
@@ -2657,6 +5081,46 @@
    "t15": 0,
    "t30": 3,
    "t60": 11,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 3,
+     "t60": 11,
+     "divisions": [
+      {
+       "name": "Class of '26 & Younger",
+       "n": 11
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Meg Hearn",
+       "f": 1,
+       "field": 36,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Meadow Rosales",
+       "f": 3,
+       "field": 36,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Megan McLarty",
+       "f": 5,
+       "field": 36,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Giani Boerner",
+       "f": 5,
+       "field": 36,
+       "div": "Class of '26 & Younger"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Class of '26 & Younger",
@@ -2700,6 +5164,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Women\u2019s Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Emma Burnside",
+       "f": 2,
+       "field": 8,
+       "div": "Women\u2019s Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Women\u2019s Open",
@@ -2725,6 +5211,40 @@
    "t15": 0,
    "t30": 0,
    "t60": 3,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 3,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 3
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lila Waite",
+       "f": 3,
+       "field": 36,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Amelia Berent",
+       "f": 5,
+       "field": 36,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Adaleah Bassler",
+       "f": 5,
+       "field": 36,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -2767,6 +5287,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Class of 2026-2027 - Girls",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Bristyn Burness",
+       "f": 1,
+       "field": 9,
+       "div": "Class of 2026-2027 - Girls"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Class of 2026-2027 - Girls",
@@ -2792,6 +5334,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lyla Paulsen",
+       "f": 1,
+       "field": 13,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -2817,6 +5381,34 @@
    "t15": 0,
    "t30": 1,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Class of '26 & Younger",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Bristyn Burness",
+       "f": 3,
+       "field": 16,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Kendyl Maxwell",
+       "f": 3,
+       "field": 16,
+       "div": "Class of '26 & Younger"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Class of '26 & Younger",
@@ -2848,6 +5440,46 @@
    "t15": 4,
    "t30": 5,
    "t60": 7,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 4,
+     "t30": 5,
+     "t60": 7,
+     "divisions": [
+      {
+       "name": "Girls 18:U (Grad Year 2026-2027)",
+       "n": 7
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Thalia Lindahl",
+       "f": 2,
+       "field": 13,
+       "div": "Girls 18:U (Grad Year 2026-2027)"
+      },
+      {
+       "name": "Olivia Herron",
+       "f": 3,
+       "field": 13,
+       "div": "Girls 18:U (Grad Year 2026-2027)"
+      },
+      {
+       "name": "Sienna Castillo",
+       "f": 5,
+       "field": 13,
+       "div": "Girls 18:U (Grad Year 2026-2027)"
+      },
+      {
+       "name": "Addison Choi",
+       "f": 5,
+       "field": 13,
+       "div": "Girls 18:U (Grad Year 2026-2027)"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18:U (Grad Year 2026-2027)",
@@ -2891,6 +5523,34 @@
    "t15": 1,
    "t30": 2,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 2,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Christy Boulware",
+       "f": 9,
+       "field": 22,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Meg Hearn",
+       "f": 9,
+       "field": 22,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -2922,6 +5582,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Izzy Fischer",
+       "f": 1,
+       "field": 9,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -2947,6 +5629,72 @@
    "t15": 2,
    "t30": 2,
    "t60": 6,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 1,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Class of 2026",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Sienna Castillo",
+       "f": 2,
+       "field": 17,
+       "div": "Class of 2026"
+      },
+      {
+       "name": "Lila Waite",
+       "f": 5,
+       "field": 17,
+       "div": "Class of 2026"
+      }
+     ]
+    },
+    {
+     "bracket": "17U",
+     "t15": 1,
+     "t30": 1,
+     "t60": 4,
+     "divisions": [
+      {
+       "name": "Class of 2027",
+       "n": 4
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Leah Blair",
+       "f": 1,
+       "field": 20,
+       "div": "Class of 2027"
+      },
+      {
+       "name": "Linnaea Nielsen",
+       "f": 1,
+       "field": 20,
+       "div": "Class of 2027"
+      },
+      {
+       "name": "Addison Choi",
+       "f": 5,
+       "field": 20,
+       "div": "Class of 2027"
+      },
+      {
+       "name": "Anna Popovic",
+       "f": 9,
+       "field": 20,
+       "div": "Class of 2027"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Class of 2027",
@@ -2994,6 +5742,34 @@
    "t15": 1,
    "t30": 1,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 1,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Class of 2026",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Thais Treumann",
+       "f": 1,
+       "field": 12,
+       "div": "Class of 2026"
+      },
+      {
+       "name": "Adaleah Bassler",
+       "f": 1,
+       "field": 12,
+       "div": "Class of 2026"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Class of 2026",
@@ -3025,6 +5801,46 @@
    "t15": 4,
    "t30": 6,
    "t60": 10,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 4,
+     "t30": 6,
+     "t60": 10,
+     "divisions": [
+      {
+       "name": "Class of '26 & Younger",
+       "n": 10
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lauren Leach",
+       "f": 1,
+       "field": 48,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Janie McCanna",
+       "f": 1,
+       "field": 48,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Christy Boulware",
+       "f": 5,
+       "field": 48,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Bristyn Burness",
+       "f": 9,
+       "field": 48,
+       "div": "Class of '26 & Younger"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Class of '26 & Younger",
@@ -3068,6 +5884,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Amelia Berent",
+       "f": 9,
+       "field": 18,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -3093,6 +5931,46 @@
    "t15": 2,
    "t30": 4,
    "t60": 7,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 2,
+     "t30": 4,
+     "t60": 7,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 7
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Simrin Adams",
+       "f": 1,
+       "field": 9,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Ella Dueck",
+       "f": 1,
+       "field": 9,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Thalia Lindahl",
+       "f": 3,
+       "field": 9,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Sammy Nammack",
+       "f": 3,
+       "field": 9,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -3136,6 +6014,28 @@
    "t15": 1,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 1,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Varsity Pairs",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Simrin Adams",
+       "f": 1,
+       "field": 14,
+       "div": "Varsity Pairs"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Varsity Pairs",
@@ -3161,6 +6061,46 @@
    "t15": 4,
    "t30": 6,
    "t60": 8,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 4,
+     "t30": 6,
+     "t60": 8,
+     "divisions": [
+      {
+       "name": "Girls U18 (Year Born: 2008-2009-2010)",
+       "n": 8
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Sienna Castillo",
+       "f": 1,
+       "field": 8,
+       "div": "Girls U18 (Year Born: 2008-2009-2010)"
+      },
+      {
+       "name": "Zoe Znider",
+       "f": 1,
+       "field": 8,
+       "div": "Girls U18 (Year Born: 2008-2009-2010)"
+      },
+      {
+       "name": "JoJo Wilson",
+       "f": 4,
+       "field": 8,
+       "div": "Girls U18 (Year Born: 2008-2009-2010)"
+      },
+      {
+       "name": "Thalia Lindahl",
+       "f": 4,
+       "field": 8,
+       "div": "Girls U18 (Year Born: 2008-2009-2010)"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls U18 (Year Born: 2008-2009-2010)",
@@ -3204,6 +6144,40 @@
    "t15": 0,
    "t30": 1,
    "t60": 3,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 1,
+     "t60": 3,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 3
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Adaleah Bassler",
+       "f": 5,
+       "field": 10,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Claire Hanson",
+       "f": 7,
+       "field": 10,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Izzy Fischer",
+       "f": 7,
+       "field": 10,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -3241,6 +6215,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Claire Hanson",
+       "f": 1,
+       "field": 11,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -3266,6 +6262,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Class of 2026-2027 (18U) - Girls",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Bristyn Burness",
+       "f": 2,
+       "field": 0,
+       "div": "Class of 2026-2027 (18U) - Girls"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Class of 2026-2027 (18U) - Girls",
@@ -3291,6 +6309,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "18u",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Ashley Chuba",
+       "f": 9,
+       "field": 16,
+       "div": "18u"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "18u",
@@ -3316,6 +6356,46 @@
    "t15": 6,
    "t30": 7,
    "t60": 8,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 6,
+     "t30": 7,
+     "t60": 8,
+     "divisions": [
+      {
+       "name": "U18 Girls",
+       "n": 8
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Sienna Castillo",
+       "f": 1,
+       "field": 12,
+       "div": "U18 Girls"
+      },
+      {
+       "name": "Simrin Adams",
+       "f": 1,
+       "field": 12,
+       "div": "U18 Girls"
+      },
+      {
+       "name": "Lauren Leach",
+       "f": 2,
+       "field": 12,
+       "div": "U18 Girls"
+      },
+      {
+       "name": "Janie McCanna",
+       "f": 2,
+       "field": 12,
+       "div": "U18 Girls"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "U18 Girls",
@@ -3359,6 +6439,46 @@
    "t15": 2,
    "t30": 5,
    "t60": 9,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 2,
+     "t30": 5,
+     "t60": 9,
+     "divisions": [
+      {
+       "name": "Girls Varsity",
+       "n": 9
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Linnaea Nielsen",
+       "f": 2,
+       "field": 24,
+       "div": "Girls Varsity"
+      },
+      {
+       "name": "Addison Choi",
+       "f": 3,
+       "field": 24,
+       "div": "Girls Varsity"
+      },
+      {
+       "name": "Leah Blair",
+       "f": 3,
+       "field": 24,
+       "div": "Girls Varsity"
+      },
+      {
+       "name": "Georgeann Lee",
+       "f": 5,
+       "field": 24,
+       "div": "Girls Varsity"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls Varsity",
@@ -3402,6 +6522,46 @@
    "t15": 0,
    "t30": 3,
    "t60": 5,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 3,
+     "t60": 5,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 5
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Karsyn Rogers",
+       "f": 1,
+       "field": 40,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Paloma Smith",
+       "f": 1,
+       "field": 40,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Ryan Anderson",
+       "f": 5,
+       "field": 40,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Kiah McCoy",
+       "f": 5,
+       "field": 40,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -3445,6 +6605,34 @@
    "t15": 0,
    "t30": 0,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Giani Boerner",
+       "f": 3,
+       "field": 12,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Sienna Carr",
+       "f": 5,
+       "field": 12,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -3476,6 +6664,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Zoe Znider",
+       "f": 1,
+       "field": 6,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -3501,6 +6711,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Kendyl Maxwell",
+       "f": 5,
+       "field": 16,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -3526,6 +6758,34 @@
    "t15": 0,
    "t30": 0,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lola Heckman",
+       "f": 1,
+       "field": 17,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Kiley Bowman",
+       "f": 1,
+       "field": 17,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -3557,6 +6817,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Amelia Berent",
+       "f": 1,
+       "field": 17,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -3582,6 +6864,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Tesa Solis",
+       "f": 7,
+       "field": 10,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -3607,6 +6911,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Biggs",
+       "f": 1,
+       "field": 4,
+       "div": "Coed AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed AA",
@@ -3637,6 +6963,34 @@
    "t15": 1,
    "t30": 1,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 1,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Simrin Adams",
+       "f": 1,
+       "field": 5,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Jordyn Wilson",
+       "f": 3,
+       "field": 5,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -3668,6 +7022,34 @@
    "t15": 1,
    "t30": 1,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Women's Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Herron",
+       "f": 1,
+       "field": 16,
+       "div": "Women's Open"
+      },
+      {
+       "name": "Olivia Biggs",
+       "f": 13,
+       "field": 16,
+       "div": "Women's Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Women's Open",
@@ -3699,6 +7081,34 @@
    "t15": 0,
    "t30": 2,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 2,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Karsyn Rogers",
+       "f": 2,
+       "field": 14,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Paloma Smith",
+       "f": 2,
+       "field": 14,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -3730,6 +7140,28 @@
    "t15": 1,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Thalia Lindahl",
+       "f": 7,
+       "field": 11,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -3755,6 +7187,46 @@
    "t15": 3,
    "t30": 8,
    "t60": 13,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 3,
+     "t30": 8,
+     "t60": 13,
+     "divisions": [
+      {
+       "name": "Class of '26 & Younger",
+       "n": 13
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Christy Boulware",
+       "f": 2,
+       "field": 75,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Lauren Leach",
+       "f": 3,
+       "field": 75,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Olivia Herron",
+       "f": 3,
+       "field": 75,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Megan McLarty",
+       "f": 5,
+       "field": 75,
+       "div": "Class of '26 & Younger"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Class of '26 & Younger",
@@ -3798,6 +7270,46 @@
    "t15": 2,
    "t30": 4,
    "t60": 7,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 2,
+     "t30": 4,
+     "t60": 7,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 7
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Sammy Nammack",
+       "f": 2,
+       "field": 12,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Leah Blair",
+       "f": 2,
+       "field": 12,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Thalia Lindahl",
+       "f": 3,
+       "field": 12,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Simrin Adams",
+       "f": 5,
+       "field": 12,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -3841,6 +7353,28 @@
    "t15": 1,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Thais Treumann",
+       "f": 1,
+       "field": 10,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -3866,6 +7400,40 @@
    "t15": 1,
    "t30": 1,
    "t60": 3,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 3,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 3
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Herron",
+       "f": 1,
+       "field": 8,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Tesa Solis",
+       "f": 5,
+       "field": 8,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Izzy Fischer",
+       "f": 5,
+       "field": 8,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -3903,6 +7471,28 @@
    "t15": 1,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Thalia Lindahl",
+       "f": 9,
+       "field": 14,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -3928,6 +7518,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Class of 2026 - Girls 18U - Saturday AM Wave",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Johanna Snyder",
+       "f": 1,
+       "field": 8,
+       "div": "Class of 2026 - Girls 18U - Saturday AM Wave"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Class of 2026 - Girls 18U - Saturday AM Wave",
@@ -3953,6 +7565,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Biggs",
+       "f": 1,
+       "field": 8,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -3978,6 +7612,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Claire Demirjian",
+       "f": 1,
+       "field": 8,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -4003,6 +7659,46 @@
    "t15": 2,
    "t30": 6,
    "t60": 8,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 2,
+     "t30": 6,
+     "t60": 8,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 8
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Simrin Adams",
+       "f": 1,
+       "field": 9,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Ella Dueck",
+       "f": 1,
+       "field": 9,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Addison Choi",
+       "f": 2,
+       "field": 9,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Allyn Hilt",
+       "f": 3,
+       "field": 9,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -4046,6 +7742,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Juniors 18u/16u Combined - Separated for playoffs",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Tesa Solis",
+       "f": 1,
+       "field": 13,
+       "div": "Juniors 18u/16u Combined - Separated for playoffs"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Juniors 18u/16u Combined - Separated for playoffs",
@@ -4071,6 +7789,46 @@
    "t15": 3,
    "t30": 4,
    "t60": 4,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 3,
+     "t30": 4,
+     "t60": 4,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 4
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Sienna Castillo",
+       "f": 2,
+       "field": 9,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Simrin Adams",
+       "f": 2,
+       "field": 9,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Thalia Lindahl",
+       "f": 5,
+       "field": 9,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Zoe Znider",
+       "f": 7,
+       "field": 9,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -4114,6 +7872,40 @@
    "t15": 0,
    "t30": 1,
    "t60": 3,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 3,
+     "divisions": [
+      {
+       "name": "Class of '26 & Younger",
+       "n": 3
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Kendyl Maxwell",
+       "f": 3,
+       "field": 16,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Bristyn Burness",
+       "f": 5,
+       "field": 16,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Laney Evers",
+       "f": 5,
+       "field": 16,
+       "div": "Class of '26 & Younger"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Class of '26 & Younger",
@@ -4151,6 +7943,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls GY2026-2029",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Anna Popovic",
+       "f": 1,
+       "field": 10,
+       "div": "Girls GY2026-2029"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls GY2026-2029",
@@ -4176,6 +7990,34 @@
    "t15": 1,
    "t30": 1,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens AA",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Addison Choi",
+       "f": 3,
+       "field": 19,
+       "div": "Womens AA"
+      },
+      {
+       "name": "Leah Blair",
+       "f": 3,
+       "field": 19,
+       "div": "Womens AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens AA",
@@ -4207,6 +8049,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Izzy Fischer",
+       "f": 1,
+       "field": 33,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -4232,6 +8096,46 @@
    "t15": 1,
    "t30": 2,
    "t60": 5,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 2,
+     "t60": 5,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 5
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lola Heckman",
+       "f": 5,
+       "field": 16,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Addison Choi",
+       "f": 9,
+       "field": 16,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Leah Blair",
+       "f": 9,
+       "field": 16,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Linnaea Nielsen",
+       "f": 9,
+       "field": 16,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -4275,6 +8179,46 @@
    "t15": 3,
    "t30": 5,
    "t60": 8,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 3,
+     "t30": 5,
+     "t60": 8,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 8
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lauren Leach",
+       "f": 2,
+       "field": 10,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Olivia Herron",
+       "f": 2,
+       "field": 10,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Sienna Castillo",
+       "f": 3,
+       "field": 10,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Lerin Rosenthal",
+       "f": 3,
+       "field": 10,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -4318,6 +8262,46 @@
    "t15": 2,
    "t30": 4,
    "t60": 8,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 2,
+     "t30": 4,
+     "t60": 8,
+     "divisions": [
+      {
+       "name": "Class of '26 & Younger",
+       "n": 8
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Christy Boulware",
+       "f": 2,
+       "field": 56,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Janie McCanna",
+       "f": 3,
+       "field": 56,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Isabelle Izzy Ramos",
+       "f": 5,
+       "field": 56,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Meadow Rosales",
+       "f": 5,
+       "field": 56,
+       "div": "Class of '26 & Younger"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Class of '26 & Younger",
@@ -4361,6 +8345,28 @@
    "t15": 1,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Leann Wise",
+       "f": 5,
+       "field": 26,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -4386,6 +8392,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Tesa Solis",
+       "f": 1,
+       "field": 7,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -4411,6 +8439,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens A",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Ashley Chuba",
+       "f": 9,
+       "field": 19,
+       "div": "Womens A"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens A",
@@ -4436,6 +8486,46 @@
    "t15": 4,
    "t30": 5,
    "t60": 5,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 4,
+     "t30": 5,
+     "t60": 5,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 5
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lauren Leach",
+       "f": 3,
+       "field": 22,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Simrin Adams",
+       "f": 5,
+       "field": 22,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Thalia Lindahl",
+       "f": 5,
+       "field": 22,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Sandie Souza",
+       "f": 9,
+       "field": 22,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -4479,6 +8569,34 @@
    "t15": 0,
    "t30": 1,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Allyn Hilt",
+       "f": 1,
+       "field": 11,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Ashley Chuba",
+       "f": 2,
+       "field": 11,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -4510,6 +8628,34 @@
    "t15": 1,
    "t30": 1,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens AA",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Addison Choi",
+       "f": 1,
+       "field": 11,
+       "div": "Womens AA"
+      },
+      {
+       "name": "Ashley Chuba",
+       "f": 1,
+       "field": 11,
+       "div": "Womens AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens AA",
@@ -4541,6 +8687,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Adaleah Bassler",
+       "f": 1,
+       "field": 17,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -4566,6 +8734,28 @@
    "t15": 1,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Leann Wise",
+       "f": 5,
+       "field": 12,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -4591,6 +8781,28 @@
    "t15": 1,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Georgeann Lee",
+       "f": 1,
+       "field": 13,
+       "div": "Womens AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens AA",
@@ -4616,6 +8828,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Claire Hanson",
+       "f": 2,
+       "field": 5,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -4641,6 +8875,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "COED A",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Johanna Snyder",
+       "f": 1,
+       "field": 13,
+       "div": "COED A"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "COED A",
@@ -4666,6 +8922,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Anna Popovic",
+       "f": 2,
+       "field": 8,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -4691,6 +8969,46 @@
    "t15": 8,
    "t30": 14,
    "t60": 23,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 8,
+     "t30": 14,
+     "t60": 23,
+     "divisions": [
+      {
+       "name": "Class of '26 & Younger",
+       "n": 23
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lauren Leach",
+       "f": 1,
+       "field": 59,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Olivia Herron",
+       "f": 3,
+       "field": 59,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Maddy  Wagner",
+       "f": 3,
+       "field": 59,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Jordyn Wilson",
+       "f": 3,
+       "field": 59,
+       "div": "Class of '26 & Younger"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Class of '26 & Younger",
@@ -4734,6 +9052,28 @@
    "t15": 1,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Georgeann Lee",
+       "f": 5,
+       "field": 12,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -4759,6 +9099,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "RevCo Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Claire Hanson",
+       "f": 7,
+       "field": 8,
+       "div": "RevCo Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "RevCo Open",
@@ -4784,6 +9146,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lila Waite",
+       "f": 3,
+       "field": 13,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -4809,6 +9193,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Biggs",
+       "f": 3,
+       "field": 12,
+       "div": "Coed AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed AA",
@@ -4839,6 +9245,34 @@
    "t15": 2,
    "t30": 2,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 2,
+     "t30": 2,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Herron",
+       "f": 3,
+       "field": 11,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Thalia Lindahl",
+       "f": 5,
+       "field": 11,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -4870,6 +9304,34 @@
    "t15": 1,
    "t30": 1,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 1,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Sandie Souza",
+       "f": 1,
+       "field": 9,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Jordyn Wilson",
+       "f": 1,
+       "field": 9,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -4901,6 +9363,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Anna Popovic",
+       "f": 1,
+       "field": 8,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -4926,6 +9410,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lola Heckman",
+       "f": 5,
+       "field": 12,
+       "div": "Womens AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens AA",
@@ -4951,6 +9457,34 @@
    "t15": 1,
    "t30": 1,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Thais Treumann",
+       "f": 1,
+       "field": 7,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Adaleah Bassler",
+       "f": 1,
+       "field": 7,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -4982,6 +9516,28 @@
    "t15": 1,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 1,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Leann Wise",
+       "f": 1,
+       "field": 8,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -5007,6 +9563,46 @@
    "t15": 0,
    "t30": 5,
    "t60": 6,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 5,
+     "t60": 6,
+     "divisions": [
+      {
+       "name": "Class of '26 & Younger",
+       "n": 6
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Megan McLarty",
+       "f": 5,
+       "field": 32,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Karsyn Rogers",
+       "f": 5,
+       "field": 32,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Ryan Anderson",
+       "f": 5,
+       "field": 32,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Paloma Smith",
+       "f": 5,
+       "field": 32,
+       "div": "Class of '26 & Younger"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Class of '26 & Younger",
@@ -5050,6 +9646,46 @@
    "t15": 3,
    "t30": 5,
    "t60": 5,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 3,
+     "t30": 5,
+     "t60": 5,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 5
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Sienna Castillo",
+       "f": 2,
+       "field": 12,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Simrin Adams",
+       "f": 2,
+       "field": 12,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Allyn Hilt",
+       "f": 3,
+       "field": 12,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Addison Choi",
+       "f": 5,
+       "field": 12,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -5093,6 +9729,46 @@
    "t15": 0,
    "t30": 1,
    "t60": 4,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 1,
+     "t60": 4,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 4
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Isabelle Izzy Ramos",
+       "f": 7,
+       "field": 30,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Ashley Markle",
+       "f": 13,
+       "field": 30,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Meadow Rosales",
+       "f": 13,
+       "field": 30,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Lila Waite",
+       "f": 13,
+       "field": 30,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -5136,6 +9812,34 @@
    "t15": 0,
    "t30": 0,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Amelia Berent",
+       "f": 3,
+       "field": 18,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Anna Popovic",
+       "f": 5,
+       "field": 18,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -5167,6 +9871,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Biggs",
+       "f": 1,
+       "field": 11,
+       "div": "Coed AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed AA",
@@ -5192,6 +9918,40 @@
    "t15": 2,
    "t30": 2,
    "t60": 3,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 2,
+     "t30": 2,
+     "t60": 3,
+     "divisions": [
+      {
+       "name": "Women's Open",
+       "n": 3
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Herron",
+       "f": 7,
+       "field": 41,
+       "div": "Women's Open"
+      },
+      {
+       "name": "Leann Wise",
+       "f": 33,
+       "field": 41,
+       "div": "Women's Open"
+      },
+      {
+       "name": "Ashley Markle",
+       "f": 33,
+       "field": 41,
+       "div": "Women's Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Women's Open",
@@ -5229,6 +9989,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Meadow Rosales",
+       "f": 2,
+       "field": 4,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -5254,6 +10036,46 @@
    "t15": 4,
    "t30": 4,
    "t60": 7,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 4,
+     "t30": 4,
+     "t60": 7,
+     "divisions": [
+      {
+       "name": "Girls 18:U (Grad Year 2026-2027)",
+       "n": 7
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lauren Leach",
+       "f": 3,
+       "field": 8,
+       "div": "Girls 18:U (Grad Year 2026-2027)"
+      },
+      {
+       "name": "Janie McCanna",
+       "f": 3,
+       "field": 8,
+       "div": "Girls 18:U (Grad Year 2026-2027)"
+      },
+      {
+       "name": "Thalia Lindahl",
+       "f": 3,
+       "field": 8,
+       "div": "Girls 18:U (Grad Year 2026-2027)"
+      },
+      {
+       "name": "Sienna Castillo",
+       "f": 5,
+       "field": 8,
+       "div": "Girls 18:U (Grad Year 2026-2027)"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18:U (Grad Year 2026-2027)",
@@ -5297,6 +10119,34 @@
    "t15": 1,
    "t30": 2,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 1,
+     "t30": 2,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Simrin Adams",
+       "f": 1,
+       "field": 5,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Lerin Rosenthal",
+       "f": 1,
+       "field": 5,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -5328,6 +10178,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Biggs",
+       "f": 15,
+       "field": 30,
+       "div": "Coed Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed Open",
@@ -5353,6 +10225,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Biggs",
+       "f": 19,
+       "field": 25,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -5378,6 +10272,46 @@
    "t15": 1,
    "t30": 1,
    "t60": 4,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 4,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 4
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Sienna Castillo",
+       "f": 1,
+       "field": 17,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Linnaea Nielsen",
+       "f": 9,
+       "field": 17,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Lola Heckman",
+       "f": 13,
+       "field": 17,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Kiley Bowman",
+       "f": 13,
+       "field": 17,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -5421,6 +10355,34 @@
    "t15": 0,
    "t30": 2,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 2,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Maddy  Wagner",
+       "f": 2,
+       "field": 15,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Ella Dueck",
+       "f": 2,
+       "field": 15,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -5452,6 +10414,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Claire Hanson",
+       "f": 1,
+       "field": 12,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -5477,6 +10461,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Ashley Chuba",
+       "f": 2,
+       "field": 4,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -5502,6 +10508,46 @@
    "t15": 1,
    "t30": 1,
    "t60": 4,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 4,
+     "divisions": [
+      {
+       "name": "Womens AA",
+       "n": 4
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Addison Choi",
+       "f": 1,
+       "field": 13,
+       "div": "Womens AA"
+      },
+      {
+       "name": "Linnaea Nielsen",
+       "f": 1,
+       "field": 13,
+       "div": "Womens AA"
+      },
+      {
+       "name": "Kiley Bowman",
+       "f": 2,
+       "field": 13,
+       "div": "Womens AA"
+      },
+      {
+       "name": "Lola Heckman",
+       "f": 3,
+       "field": 13,
+       "div": "Womens AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens AA",
@@ -5545,6 +10591,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Megan McLarty",
+       "f": 1,
+       "field": 19,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -5570,6 +10638,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Claire Hanson",
+       "f": 5,
+       "field": 6,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -5595,6 +10685,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Amelia Berent",
+       "f": 5,
+       "field": 17,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -5620,6 +10732,28 @@
    "t15": 1,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Thalia Lindahl",
+       "f": 5,
+       "field": 12,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -5645,6 +10779,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Giani Boerner",
+       "f": 2,
+       "field": 14,
+       "div": "Coed Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed Open",
@@ -5675,6 +10831,46 @@
    "t15": 0,
    "t30": 6,
    "t60": 21,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 6,
+     "t60": 21,
+     "divisions": [
+      {
+       "name": "Girls 18U Open",
+       "n": 21
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Zoe Znider",
+       "f": 2,
+       "field": 103,
+       "div": "Girls 18U Open"
+      },
+      {
+       "name": "Karsyn Rogers",
+       "f": 5,
+       "field": 103,
+       "div": "Girls 18U Open"
+      },
+      {
+       "name": "Paloma Smith",
+       "f": 5,
+       "field": 103,
+       "div": "Girls 18U Open"
+      },
+      {
+       "name": "Megan McLarty",
+       "f": 9,
+       "field": 103,
+       "div": "Girls 18U Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U Open",
@@ -5718,6 +10914,28 @@
    "t15": 1,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Thais Treumann",
+       "f": 1,
+       "field": 24,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -5743,6 +10961,46 @@
    "t15": 2,
    "t30": 4,
    "t60": 6,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 2,
+     "t30": 4,
+     "t60": 6,
+     "divisions": [
+      {
+       "name": "Varsity Pairs",
+       "n": 6
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Sienna Castillo",
+       "f": 3,
+       "field": 64,
+       "div": "Varsity Pairs"
+      },
+      {
+       "name": "Allyn Hilt",
+       "f": 3,
+       "field": 64,
+       "div": "Varsity Pairs"
+      },
+      {
+       "name": "Linnaea Nielsen",
+       "f": 3,
+       "field": 64,
+       "div": "Varsity Pairs"
+      },
+      {
+       "name": "Simrin Adams",
+       "f": 5,
+       "field": 64,
+       "div": "Varsity Pairs"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Varsity Pairs",
@@ -5786,6 +11044,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Women's 2s Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Amelia Berent",
+       "f": 3,
+       "field": 10,
+       "div": "Women's 2s Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Women's 2s Open",
@@ -5811,6 +11091,34 @@
    "t15": 0,
    "t30": 1,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Isabelle Izzy Ramos",
+       "f": 17,
+       "field": 28,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Ashley Markle",
+       "f": 17,
+       "field": 28,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -5842,6 +11150,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Biggs",
+       "f": 5,
+       "field": 9,
+       "div": "Coed AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed AA",
@@ -5867,6 +11197,34 @@
    "t15": 0,
    "t30": 1,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Claire Hanson",
+       "f": 5,
+       "field": 8,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Meadow Rosales",
+       "f": 5,
+       "field": 8,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -5898,6 +11256,46 @@
    "t15": 2,
    "t30": 3,
    "t60": 4,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 2,
+     "t30": 3,
+     "t60": 4,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 4
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Addison Choi",
+       "f": 2,
+       "field": 5,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Ashley Chuba",
+       "f": 2,
+       "field": 5,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Sandie Souza",
+       "f": 3,
+       "field": 5,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Sammy Nammack",
+       "f": 3,
+       "field": 5,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -5941,6 +11339,40 @@
    "t15": 0,
    "t30": 2,
    "t60": 3,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 2,
+     "t60": 3,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 3
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "London Merchant",
+       "f": 1,
+       "field": 28,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Zailey High",
+       "f": 1,
+       "field": 28,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Karsyn Rogers",
+       "f": 5,
+       "field": 28,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -5983,6 +11415,34 @@
    "t15": 1,
    "t30": 1,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Herron",
+       "f": 29,
+       "field": 45,
+       "div": "Womens"
+      },
+      {
+       "name": "Jordyn Wilson",
+       "f": 29,
+       "field": 45,
+       "div": "Womens"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens",
@@ -6014,6 +11474,34 @@
    "t15": 0,
    "t30": 1,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Women's AVP Next",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Meg Hearn",
+       "f": 7,
+       "field": 15,
+       "div": "Women's AVP Next"
+      },
+      {
+       "name": "Ashley Markle",
+       "f": 7,
+       "field": 15,
+       "div": "Women's AVP Next"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Women's AVP Next",
@@ -6045,6 +11533,34 @@
    "t15": 0,
    "t30": 0,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Sienna Carr",
+       "f": 2,
+       "field": 11,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Anna Popovic",
+       "f": 3,
+       "field": 11,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -6076,6 +11592,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Izzy Fischer",
+       "f": 3,
+       "field": 10,
+       "div": "Coed AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed AA",
@@ -6101,6 +11639,46 @@
    "t15": 4,
    "t30": 4,
    "t60": 4,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 4,
+     "t30": 4,
+     "t60": 4,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 4
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lauren Leach",
+       "f": 1,
+       "field": 16,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Olivia Herron",
+       "f": 1,
+       "field": 16,
+       "div": "Womens Open"
+      },
+      {
+       "name": "JoJo Wilson",
+       "f": 5,
+       "field": 16,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Thalia Lindahl",
+       "f": 5,
+       "field": 16,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -6144,6 +11722,50 @@
    "t15": 0,
    "t30": 1,
    "t60": 4,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 1,
+     "t60": 4,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 3
+      },
+      {
+       "name": "Womens A",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lekhana Donnies",
+       "f": 1,
+       "field": 25,
+       "div": "Womens A"
+      },
+      {
+       "name": "Ella Dueck",
+       "f": 2,
+       "field": 15,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Lola Heckman",
+       "f": 5,
+       "field": 15,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Kiley Bowman",
+       "f": 5,
+       "field": 15,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -6191,6 +11813,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Giani Boerner",
+       "f": 2,
+       "field": 5,
+       "div": "Coed Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed Open",
@@ -6221,6 +11865,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Laney Evers",
+       "f": 1,
+       "field": 5,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -6246,6 +11912,28 @@
    "t15": 1,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Thais Treumann",
+       "f": 2,
+       "field": 36,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -6271,6 +11959,46 @@
    "t15": 0,
    "t30": 2,
    "t60": 4,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 2,
+     "t60": 4,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 4
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Jordyn Wilson",
+       "f": 1,
+       "field": 8,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Zoe Znider",
+       "f": 2,
+       "field": 8,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Sammy Nammack",
+       "f": 2,
+       "field": 8,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Ashley Chuba",
+       "f": 5,
+       "field": 8,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -6314,6 +12042,46 @@
    "t15": 0,
    "t30": 0,
    "t60": 4,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 4,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 4
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Meadow Rosales",
+       "f": 2,
+       "field": 44,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Adaleah Bassler",
+       "f": 2,
+       "field": 44,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Amelia Berent",
+       "f": 9,
+       "field": 44,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Lila Waite",
+       "f": 9,
+       "field": 44,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -6357,6 +12125,34 @@
    "t15": 0,
    "t30": 0,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Class of '26 & Younger",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Claire Demirjian",
+       "f": 1,
+       "field": 18,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Izzy Fischer",
+       "f": 5,
+       "field": 18,
+       "div": "Class of '26 & Younger"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Class of '26 & Younger",
@@ -6388,6 +12184,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "GIRLS GY 2026-2028",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Anna Popovic",
+       "f": 1,
+       "field": 11,
+       "div": "GIRLS GY 2026-2028"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "GIRLS GY 2026-2028",
@@ -6413,6 +12231,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Johanna Snyder",
+       "f": 1,
+       "field": 11,
+       "div": "Womens AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens AA",
@@ -6443,6 +12283,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "COLLEGE/18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Emma Burnside",
+       "f": 1,
+       "field": 4,
+       "div": "COLLEGE/18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "COLLEGE/18U",
@@ -6468,6 +12330,34 @@
    "t15": 1,
    "t30": 2,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 1,
+     "t30": 2,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Abby King",
+       "f": 1,
+       "field": 5,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Maddy  Wagner",
+       "f": 1,
+       "field": 5,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -6499,6 +12389,28 @@
    "t15": 1,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Thalia Lindahl",
+       "f": 2,
+       "field": 8,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -6524,6 +12436,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Ashley Markle",
+       "f": 1,
+       "field": 12,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -6549,6 +12483,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lola Heckman",
+       "f": 9,
+       "field": 13,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -6574,6 +12530,34 @@
    "t15": 0,
    "t30": 0,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Women's Upper (AA/A+)",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Emma Burnside",
+       "f": 2,
+       "field": 7,
+       "div": "Women's Upper (AA/A+)"
+      },
+      {
+       "name": "Olivia Biggs",
+       "f": 3,
+       "field": 7,
+       "div": "Women's Upper (AA/A+)"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Women's Upper (AA/A+)",
@@ -6610,6 +12594,46 @@
    "t15": 1,
    "t30": 4,
    "t60": 5,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 1,
+     "t30": 4,
+     "t60": 5,
+     "divisions": [
+      {
+       "name": "Class of 2026 & Younger",
+       "n": 5
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Megan McLarty",
+       "f": 1,
+       "field": 12,
+       "div": "Class of 2026 & Younger"
+      },
+      {
+       "name": "Isabelle Izzy Ramos",
+       "f": 1,
+       "field": 12,
+       "div": "Class of 2026 & Younger"
+      },
+      {
+       "name": "Christy Boulware",
+       "f": 2,
+       "field": 12,
+       "div": "Class of 2026 & Younger"
+      },
+      {
+       "name": "Meg Hearn",
+       "f": 2,
+       "field": 12,
+       "div": "Class of 2026 & Younger"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Class of 2026 & Younger",
@@ -6653,6 +12677,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Johanna Snyder",
+       "f": 1,
+       "field": 10,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -6678,6 +12724,40 @@
    "t15": 1,
    "t30": 2,
    "t60": 3,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 2,
+     "t60": 3,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 3
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Christy Boulware",
+       "f": 5,
+       "field": 16,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Meg Hearn",
+       "f": 5,
+       "field": 16,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Meadow Rosales",
+       "f": 5,
+       "field": 16,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -6715,6 +12795,34 @@
    "t15": 0,
    "t30": 1,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Zoe Znider",
+       "f": 5,
+       "field": 16,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Jordyn Wilson",
+       "f": 5,
+       "field": 16,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -6746,6 +12854,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Claire Hanson",
+       "f": 1,
+       "field": 10,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -6771,6 +12901,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lyla Paulsen",
+       "f": 3,
+       "field": 8,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -6796,6 +12948,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Women's Upper (AA/A+)",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Biggs",
+       "f": 1,
+       "field": 7,
+       "div": "Women's Upper (AA/A+)"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Women's Upper (AA/A+)",
@@ -6826,6 +13000,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Biggs",
+       "f": 1,
+       "field": 12,
+       "div": "Coed AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed AA",
@@ -6856,6 +13052,40 @@
    "t15": 1,
    "t30": 2,
    "t60": 3,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 1,
+     "t30": 2,
+     "t60": 3,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 3
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Abby King",
+       "f": 3,
+       "field": 15,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Ella Dueck",
+       "f": 3,
+       "field": 15,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Lekhana Donnies",
+       "f": 3,
+       "field": 15,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -6893,6 +13123,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Megan McLarty",
+       "f": 3,
+       "field": 6,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -6918,6 +13170,46 @@
    "t15": 4,
    "t30": 5,
    "t60": 8,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 4,
+     "t30": 5,
+     "t60": 8,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 8
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Sienna Castillo",
+       "f": 5,
+       "field": 19,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Simrin Adams",
+       "f": 5,
+       "field": 19,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Sammy Nammack",
+       "f": 5,
+       "field": 19,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Ashley Chuba",
+       "f": 5,
+       "field": 19,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -6961,6 +13253,40 @@
    "t15": 1,
    "t30": 1,
    "t60": 3,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 3,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 3
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Herron",
+       "f": 2,
+       "field": 24,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Sienna Carr",
+       "f": 9,
+       "field": 24,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Emma Burnside",
+       "f": 9,
+       "field": 24,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -6998,6 +13324,34 @@
    "t15": 2,
    "t30": 2,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 2,
+     "t30": 2,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "JoJo Wilson",
+       "f": 1,
+       "field": 22,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Thalia Lindahl",
+       "f": 1,
+       "field": 22,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -7029,6 +13383,34 @@
    "t15": 1,
    "t30": 2,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 2,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Abby King",
+       "f": 2,
+       "field": 25,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Maddy  Wagner",
+       "f": 2,
+       "field": 25,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -7060,6 +13442,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "GIRLS GY 2026-2029",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Anna Popovic",
+       "f": 1,
+       "field": 11,
+       "div": "GIRLS GY 2026-2029"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "GIRLS GY 2026-2029",
@@ -7085,6 +13489,46 @@
    "t15": 2,
    "t30": 4,
    "t60": 6,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 2,
+     "t30": 4,
+     "t60": 6,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 6
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Addison Choi",
+       "f": 2,
+       "field": 16,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Allyn Hilt",
+       "f": 2,
+       "field": 16,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Georgeann Lee",
+       "f": 3,
+       "field": 16,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Jordyn Wilson",
+       "f": 3,
+       "field": 16,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -7128,6 +13572,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Women's Open Doubles",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Claire Hanson",
+       "f": 1,
+       "field": 13,
+       "div": "Women's Open Doubles"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Women's Open Doubles",
@@ -7153,6 +13619,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Amelia Berent",
+       "f": 5,
+       "field": 26,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -7178,6 +13666,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lila Waite",
+       "f": 3,
+       "field": 9,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -7203,6 +13713,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Women's Upper (AA/A+)",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Biggs",
+       "f": 1,
+       "field": 8,
+       "div": "Women's Upper (AA/A+)"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Women's Upper (AA/A+)",
@@ -7233,6 +13765,46 @@
    "t15": 1,
    "t30": 3,
    "t60": 5,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 1,
+     "t30": 3,
+     "t60": 5,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 5
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lola Heckman",
+       "f": 1,
+       "field": 6,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Kiley Bowman",
+       "f": 1,
+       "field": 6,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "JoJo Wilson",
+       "f": 2,
+       "field": 6,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Lerin Rosenthal",
+       "f": 2,
+       "field": 6,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -7276,6 +13848,34 @@
    "t15": 1,
    "t30": 2,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 2,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Women's Division",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Abby King",
+       "f": 9,
+       "field": 12,
+       "div": "Women's Division"
+      },
+      {
+       "name": "Maddy  Wagner",
+       "f": 9,
+       "field": 12,
+       "div": "Women's Division"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Women's Division",
@@ -7307,6 +13907,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Biggs",
+       "f": 1,
+       "field": 12,
+       "div": "Coed AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed AA",
@@ -7332,6 +13954,34 @@
    "t15": 0,
    "t30": 0,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lekhana Donnies",
+       "f": 1,
+       "field": 8,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Logan Leverte",
+       "f": 1,
+       "field": 8,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -7363,6 +14013,46 @@
    "t15": 6,
    "t30": 6,
    "t60": 7,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 6,
+     "t30": 6,
+     "t60": 7,
+     "divisions": [
+      {
+       "name": "U18 Girls",
+       "n": 7
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lauren Leach",
+       "f": 1,
+       "field": 9,
+       "div": "U18 Girls"
+      },
+      {
+       "name": "Janie McCanna",
+       "f": 1,
+       "field": 9,
+       "div": "U18 Girls"
+      },
+      {
+       "name": "Olivia Herron",
+       "f": 3,
+       "field": 9,
+       "div": "U18 Girls"
+      },
+      {
+       "name": "Sienna Castillo",
+       "f": 5,
+       "field": 9,
+       "div": "U18 Girls"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "U18 Girls",
@@ -7406,6 +14096,46 @@
    "t15": 4,
    "t30": 7,
    "t60": 11,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 4,
+     "t30": 7,
+     "t60": 11,
+     "divisions": [
+      {
+       "name": "Class of 2026 & Younger",
+       "n": 11
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Herron",
+       "f": 1,
+       "field": 24,
+       "div": "Class of 2026 & Younger"
+      },
+      {
+       "name": "Addison Choi",
+       "f": 2,
+       "field": 24,
+       "div": "Class of 2026 & Younger"
+      },
+      {
+       "name": "Bristyn Burness",
+       "f": 3,
+       "field": 24,
+       "div": "Class of 2026 & Younger"
+      },
+      {
+       "name": "Thalia Lindahl",
+       "f": 5,
+       "field": 24,
+       "div": "Class of 2026 & Younger"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Class of 2026 & Younger",
@@ -7449,6 +14179,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Megan McLarty",
+       "f": 3,
+       "field": 8,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -7474,6 +14226,28 @@
    "t15": 1,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Georgeann Lee",
+       "f": 5,
+       "field": 16,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -7499,6 +14273,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open/AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Tesa Solis",
+       "f": 2,
+       "field": 10,
+       "div": "Womens Open/AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open/AA",
@@ -7524,6 +14320,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "WOMEN'S 2s Open/A",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Anna Popovic",
+       "f": 2,
+       "field": 10,
+       "div": "WOMEN'S 2s Open/A"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "WOMEN'S 2s Open/A",
@@ -7549,6 +14367,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Ashley Chuba",
+       "f": 2,
+       "field": 10,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -7574,6 +14414,46 @@
    "t15": 1,
    "t30": 3,
    "t60": 5,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 3,
+     "t60": 5,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 5
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Leann Wise",
+       "f": 3,
+       "field": 32,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Karsyn Rogers",
+       "f": 9,
+       "field": 32,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Paloma Smith",
+       "f": 9,
+       "field": 32,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Lyla Paulsen",
+       "f": 13,
+       "field": 32,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -7617,6 +14497,34 @@
    "t15": 0,
    "t30": 1,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Sammy Nammack",
+       "f": 3,
+       "field": 25,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Leah Blair",
+       "f": 3,
+       "field": 25,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -7648,6 +14556,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Amelia Berent",
+       "f": 1,
+       "field": 20,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -7673,6 +14603,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Class of 2026 & 2027",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Claire Demirjian",
+       "f": 3,
+       "field": 20,
+       "div": "Class of 2026 & 2027"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Class of 2026 & 2027",
@@ -7698,6 +14650,34 @@
    "t15": 1,
    "t30": 2,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 1,
+     "t30": 2,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Sandie Souza",
+       "f": 1,
+       "field": 9,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Zoe Znider",
+       "f": 1,
+       "field": 9,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -7729,6 +14709,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Biggs",
+       "f": 5,
+       "field": 12,
+       "div": "Coed AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed AA",
@@ -7754,6 +14756,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lekhana Donnies",
+       "f": 2,
+       "field": 14,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -7779,6 +14803,34 @@
    "t15": 0,
    "t30": 1,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Sammy Nammack",
+       "f": 2,
+       "field": 6,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Leah Blair",
+       "f": 2,
+       "field": 6,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -7810,6 +14862,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Kendyl Maxwell",
+       "f": 1,
+       "field": 4,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -7835,6 +14909,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Claire Hanson",
+       "f": 1,
+       "field": 12,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -7860,6 +14956,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Women's Advanced",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Kiley Bowman",
+       "f": 1,
+       "field": 5,
+       "div": "Women's Advanced"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Women's Advanced",
@@ -7885,6 +15003,46 @@
    "t15": 3,
    "t30": 6,
    "t60": 9,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 3,
+     "t30": 6,
+     "t60": 9,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 9
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Herron",
+       "f": 3,
+       "field": 30,
+       "div": "Womens Open"
+      },
+      {
+       "name": "JoJo Wilson",
+       "f": 5,
+       "field": 30,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Lerin Rosenthal",
+       "f": 5,
+       "field": 30,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Allyn Hilt",
+       "f": 5,
+       "field": 30,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -7928,6 +15086,40 @@
    "t15": 0,
    "t30": 0,
    "t60": 3,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 3,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 3
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Tesa Solis",
+       "f": 3,
+       "field": 16,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Izzy Fischer",
+       "f": 3,
+       "field": 16,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Meadow Rosales",
+       "f": 9,
+       "field": 16,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -7965,6 +15157,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Sunday REVCO Open Doubles",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Megan McLarty",
+       "f": 9,
+       "field": 12,
+       "div": "Sunday REVCO Open Doubles"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Sunday REVCO Open Doubles",
@@ -7990,6 +15204,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Ashley Markle",
+       "f": 2,
+       "field": 5,
+       "div": "Coed AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed AA",
@@ -8015,6 +15251,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Adaleah Bassler",
+       "f": 1,
+       "field": 10,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -8040,6 +15298,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Women's Upper (AA/A+)",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Biggs",
+       "f": 2,
+       "field": 7,
+       "div": "Women's Upper (AA/A+)"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Women's Upper (AA/A+)",
@@ -8070,6 +15350,66 @@
    "t15": 3,
    "t30": 5,
    "t60": 9,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 3,
+     "t30": 5,
+     "t60": 8,
+     "divisions": [
+      {
+       "name": "18U (2026 Grad Year)",
+       "n": 8
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Abby King",
+       "f": 1,
+       "field": 20,
+       "div": "18U (2026 Grad Year)"
+      },
+      {
+       "name": "Maddy  Wagner",
+       "f": 1,
+       "field": 20,
+       "div": "18U (2026 Grad Year)"
+      },
+      {
+       "name": "Olivia Herron",
+       "f": 3,
+       "field": 20,
+       "div": "18U (2026 Grad Year)"
+      },
+      {
+       "name": "Zoe Znider",
+       "f": 3,
+       "field": 20,
+       "div": "18U (2026 Grad Year)"
+      }
+     ]
+    },
+    {
+     "bracket": "17U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "17U (2027 Grad Year)",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Ashley Chuba",
+       "f": 9,
+       "field": 24,
+       "div": "17U (2027 Grad Year)"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "18U (2026 Grad Year)",
@@ -8117,6 +15457,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Biggs",
+       "f": 2,
+       "field": 12,
+       "div": "Coed AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed AA",
@@ -8142,6 +15504,28 @@
    "t15": 1,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Thais Treumann",
+       "f": 1,
+       "field": 43,
+       "div": "Womens"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens",
@@ -8167,6 +15551,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Giani Boerner",
+       "f": 2,
+       "field": 20,
+       "div": "Coed Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed Open",
@@ -8197,6 +15603,28 @@
    "t15": 1,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Thais Treumann",
+       "f": 3,
+       "field": 34,
+       "div": "Womens"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens",
@@ -8222,6 +15650,46 @@
    "t15": 6,
    "t30": 16,
    "t60": 34,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 6,
+     "t30": 16,
+     "t60": 34,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 34
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Herron",
+       "f": 5,
+       "field": 160,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Sandie Souza",
+       "f": 5,
+       "field": 160,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Jordyn Wilson",
+       "f": 5,
+       "field": 160,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Marley Robinson",
+       "f": 5,
+       "field": 160,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -8265,6 +15733,34 @@
    "t15": 0,
    "t30": 0,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens AA",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Johanna Snyder",
+       "f": 2,
+       "field": 27,
+       "div": "Womens AA"
+      },
+      {
+       "name": "Izzy Fischer",
+       "f": 2,
+       "field": 27,
+       "div": "Womens AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens AA",
@@ -8296,6 +15792,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Ella Dueck",
+       "f": 13,
+       "field": 20,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -8321,6 +15839,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "GIRLS GY 2026-2028",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Anna Popovic",
+       "f": 1,
+       "field": 10,
+       "div": "GIRLS GY 2026-2028"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "GIRLS GY 2026-2028",
@@ -8346,6 +15886,34 @@
    "t15": 0,
    "t30": 0,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lola Heckman",
+       "f": 9,
+       "field": 20,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Kiley Bowman",
+       "f": 9,
+       "field": 20,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -8377,6 +15945,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Claire Hanson",
+       "f": 7,
+       "field": 13,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -8402,6 +15992,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Giani Boerner",
+       "f": 5,
+       "field": 8,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -8427,6 +16039,46 @@
    "t15": 0,
    "t30": 1,
    "t60": 6,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 6,
+     "divisions": [
+      {
+       "name": "Girls 18U Open",
+       "n": 6
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Sienna Carr",
+       "f": 2,
+       "field": 32,
+       "div": "Girls 18U Open"
+      },
+      {
+       "name": "Emma Burnside",
+       "f": 2,
+       "field": 32,
+       "div": "Girls 18U Open"
+      },
+      {
+       "name": "Claire Hanson",
+       "f": 3,
+       "field": 32,
+       "div": "Girls 18U Open"
+      },
+      {
+       "name": "Giani Boerner",
+       "f": 3,
+       "field": 32,
+       "div": "Girls 18U Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U Open",
@@ -8470,6 +16122,84 @@
    "t15": 12,
    "t30": 18,
    "t60": 27,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 8,
+     "t30": 9,
+     "t60": 13,
+     "divisions": [
+      {
+       "name": "Girls 18 - 2026",
+       "n": 13
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Leann Wise",
+       "f": 1,
+       "field": 37,
+       "div": "Girls 18 - 2026"
+      },
+      {
+       "name": "Ella Olson",
+       "f": 1,
+       "field": 37,
+       "div": "Girls 18 - 2026"
+      },
+      {
+       "name": "Sandie Souza",
+       "f": 2,
+       "field": 37,
+       "div": "Girls 18 - 2026"
+      },
+      {
+       "name": "Lauren Leach",
+       "f": 5,
+       "field": 37,
+       "div": "Girls 18 - 2026"
+      }
+     ]
+    },
+    {
+     "bracket": "17U",
+     "t15": 4,
+     "t30": 9,
+     "t60": 14,
+     "divisions": [
+      {
+       "name": "Girls 17 - 2027",
+       "n": 14
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "JoJo Wilson",
+       "f": 1,
+       "field": 54,
+       "div": "Girls 17 - 2027"
+      },
+      {
+       "name": "Thalia Lindahl",
+       "f": 1,
+       "field": 54,
+       "div": "Girls 17 - 2027"
+      },
+      {
+       "name": "Simrin Adams",
+       "f": 2,
+       "field": 54,
+       "div": "Girls 17 - 2027"
+      },
+      {
+       "name": "Ella Dueck",
+       "f": 2,
+       "field": 54,
+       "div": "Girls 17 - 2027"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 17 - 2027",
@@ -8522,6 +16252,34 @@
    "t15": 2,
    "t30": 2,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 2,
+     "t30": 2,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Georgeann Lee",
+       "f": 3,
+       "field": 20,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Abby King",
+       "f": 5,
+       "field": 20,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -8553,6 +16311,34 @@
    "t15": 1,
    "t30": 1,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 1,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Coed 18 - Grad Year 2026",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Christy Boulware",
+       "f": 7,
+       "field": 10,
+       "div": "Coed 18 - Grad Year 2026"
+      },
+      {
+       "name": "Kiah McCoy",
+       "f": 8,
+       "field": 10,
+       "div": "Coed 18 - Grad Year 2026"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed 18 - Grad Year 2026",
@@ -8584,6 +16370,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed 2s AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Jordyn Wilson",
+       "f": 5,
+       "field": 6,
+       "div": "Coed 2s AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed 2s AA",
@@ -8609,6 +16417,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Kiley Bowman",
+       "f": 7,
+       "field": 15,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -8634,6 +16464,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lekhana Donnies",
+       "f": 1,
+       "field": 10,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -8659,6 +16511,34 @@
    "t15": 0,
    "t30": 1,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Bristyn Burness",
+       "f": 9,
+       "field": 22,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Kiley Bowman",
+       "f": 15,
+       "field": 22,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -8690,6 +16570,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Giani Boerner",
+       "f": 5,
+       "field": 26,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -8715,6 +16617,84 @@
    "t15": 12,
    "t30": 21,
    "t60": 40,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 12,
+     "t30": 19,
+     "t60": 30,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 30
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lauren Leach",
+       "f": 1,
+       "field": 64,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Janie McCanna",
+       "f": 3,
+       "field": 64,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Leann Wise",
+       "f": 3,
+       "field": 64,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Ella Olson",
+       "f": 5,
+       "field": 64,
+       "div": "Girls 18U"
+      }
+     ]
+    },
+    {
+     "bracket": "17U",
+     "t15": 2,
+     "t30": 6,
+     "t60": 15,
+     "divisions": [
+      {
+       "name": "Girls 17U",
+       "n": 15
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Georgeann Lee",
+       "f": 2,
+       "field": 63,
+       "div": "Girls 17U"
+      },
+      {
+       "name": "London Merchant",
+       "f": 3,
+       "field": 63,
+       "div": "Girls 17U"
+      },
+      {
+       "name": "Sammy Nammack",
+       "f": 3,
+       "field": 63,
+       "div": "Girls 17U"
+      },
+      {
+       "name": "Lyla Paulsen",
+       "f": 3,
+       "field": 63,
+       "div": "Girls 17U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -8762,6 +16742,54 @@
    "t15": 0,
    "t30": 0,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lila Waite",
+       "f": 3,
+       "field": 19,
+       "div": "Girls 18U"
+      }
+     ]
+    },
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Meadow Rosales",
+       "f": 5,
+       "field": 15,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Lila Waite",
+       "f": 9,
+       "field": 15,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -8797,6 +16825,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Giani Boerner",
+       "f": 9,
+       "field": 53,
+       "div": "Coed Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed Open",
@@ -8822,6 +16872,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "GIRLS GY 2026-2028",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Anna Popovic",
+       "f": 1,
+       "field": 14,
+       "div": "GIRLS GY 2026-2028"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "GIRLS GY 2026-2028",
@@ -8847,6 +16919,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Kiley Bowman",
+       "f": 3,
+       "field": 13,
+       "div": "Womens AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens AA",
@@ -8872,6 +16966,28 @@
    "t15": 0,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Megan McLarty",
+       "f": 1,
+       "field": 5,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -8897,6 +17013,34 @@
    "t15": 1,
    "t30": 2,
    "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 2,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Olivia Herron",
+       "f": 2,
+       "field": 28,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Bristyn Burness",
+       "f": 5,
+       "field": 28,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -8928,6 +17072,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Amelia Berent",
+       "f": 3,
+       "field": 15,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -8953,6 +17119,28 @@
    "t15": 1,
    "t30": 1,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Women's Doubles OPEN",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Janie McCanna",
+       "f": 7,
+       "field": 19,
+       "div": "Women's Doubles OPEN"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Women's Doubles OPEN",
@@ -8978,6 +17166,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Ali Lubach",
+       "f": 2,
+       "field": 6,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens Open",
@@ -9003,6 +17213,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Kiley Bowman",
+       "f": 1,
+       "field": 19,
+       "div": "Womens AA"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Womens AA",
@@ -9028,6 +17260,46 @@
    "t15": 2,
    "t30": 4,
    "t60": 8,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 2,
+     "t30": 4,
+     "t60": 8,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 8
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lerin Rosenthal",
+       "f": 1,
+       "field": 9,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Sammy Nammack",
+       "f": 1,
+       "field": 9,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Sandie Souza",
+       "f": 2,
+       "field": 9,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Jordyn Wilson",
+       "f": 2,
+       "field": 9,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Girls 18U",
@@ -9071,6 +17343,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Giani Boerner",
+       "f": 3,
+       "field": 17,
+       "div": "Coed Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Coed Open",
@@ -9096,6 +17390,28 @@
    "t15": 0,
    "t30": 0,
    "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Women's Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Anna Popovic",
+       "f": 13,
+       "field": 18,
+       "div": "Women's Open"
+      }
+     ]
+    }
+   ],
    "divisions": [
     {
      "name": "Women's Open",

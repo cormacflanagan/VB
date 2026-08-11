@@ -206,22 +206,30 @@ passes all six checks against both the light and dark chart surfaces.
 
 ## The season calendar
 
-`scripts/calendar.py <group>` rolls the group's doubles entries up to the *event* — one row
-per tournament rather than per division — and counts how many of the top 60, top 30 and top 15
-turned up. `scripts/calendar_page.py` renders it in calendar order with a sequential heat ramp
+`scripts/calendar.py <group>` counts how many of the top 60, top 30 and top 15 turned up,
+**per age bracket** — the same rule as the matrices, where the 18U field and the 17U field
+running beside it are separate competitions. Division names are folded onto the bracket they
+are actually played at: an explicit age wins, and failing that the youngest graduating year
+admitted sets the ceiling, so "Girls 18U", "U18 Girls", "Girls 18:U (Grad Year 2026-2027)" and
+"Class of '26 & Younger" all resolve to 18U. Adult open draws land under Women's. `scripts/calendar_page.py` renders it in calendar order with a sequential heat ramp
 on the three turnout columns, so the events the cohort converges on stand out from the ones a
-single pair happened to enter. `MIN_TURNOUT` sets the bar; at 4 of the top 60 the list stays
+single pair happened to enter. `MIN_TURNOUT` sets the bar, applied to each bracket on its own;
+at 4 of the top 60 the list stays
 short enough to plan from, and it also clears out the weekly 2v2 mini-tournaments that
 dominated the next-edition matches at a lower bar.
 
-For the class of 2027 that is **294 events, of which 55 clear the bar**. The season has one
-clear peak: AVP Juniors National Championships drew 40 of the 60, BVCA Individual Pairs 34, and
-AAU Hermosa Beach 27 — all three inside three weeks in July, all three at Hermosa Beach.
+For the class of 2027 that is **59 brackets across 55 events**, from 294 events entered in all.
+The season has one clear peak, three weeks in July at Hermosa Beach — but the split changes what
+it says. AVP Juniors Nationals drew 40 of the 60 across both brackets, and the split shows why
+that number flatters: 30 in the 18U, 15 in the 17U. The single biggest field of the year is not
+that but **BVCA Individual Pairs, 34 of the 60 in one 18U draw**. AAU Hermosa splits almost
+evenly, 13 and 14, so neither of its fields is as deep as its 27 suggests.
 
 Because the page exists to pick next year's schedule, each row is matched to its 2026-27
 edition where one is already on Volleyball Life's upcoming feed, by a name normalised to strip
 years and ordinals (`norm()` in `calendar.py`). **4 of the 55** matched; the rest are either
-not yet posted or genuinely one-off.
+not yet posted or genuinely one-off. Raising the bar to 4 mattered here: at 2, 29 events matched,
+but almost all were weekly 2v2 mini-tournaments that post a year of dates in advance.
 
 ## Partnerships
 
