@@ -262,19 +262,20 @@ years and ordinals (`norm()` in `calendar.py`). **4 of the 55** matched; the res
 not yet posted or genuinely one-off. Raising the bar to 4 mattered here: at 2, 29 events matched,
 but almost all were weekly 2v2 mini-tournaments that post a year of dates in advance.
 
-### The national-team pathway
+### NTDP attendance
 
-Selection dates are not ordinary tournaments — turnout there is who was picked or qualified,
-not who chose to enter — so they get their own section, matched by name (`PATHWAY`) and counted
-against the **published NTDP rosters** as well as against the class. That is the one place in
-this repo where the two data sets meet: the U18 and U17 groups are read for attendance and
-scored out of 13 and 20.
+Every calendar row carries two more columns: how many of the published **NTDP U18 and U17
+rosters** were in that bracket, out of 13 and 20. They are bucketed by the same `bracket()` rule
+as the turnout columns, so an NTDP count sits beside the field it was actually in. This is the
+one place the roster groups and the class groups meet — attendance is read from
+`{17U,18U}_clean.json`.
 
-It isolates the two dates that carry the selection. The **U18 Beach National Team Trials**
-(31 January, Manhattan Beach Pier) held 12 of the eventual 13-girl U18 roster, and the **Youth
-Olympic Games Trials** (18 June, Hermosa Beach Pier) held 11. Everything else on the pathway —
-the ISF trials, USAV Beach Nationals, the U23 trials — drew one to three of them, so a national
-title is not the same thing as a selection room.
+Selection dates are tagged `trials` (`PATHWAY` matches them by name). They are not ordinary
+tournaments: turnout there is who was picked or qualified, not who chose to enter. The **U18
+Beach National Team Trials** on 31 January held 12 of the eventual 13-girl U18 roster and the
+**Youth Olympic Games Trials** on 18 June held 11 — but the biggest NTDP gathering of the year
+is neither, it is **AVP Juniors Nationals**, with 11 of the U18s in the 18U draw and 4 of the
+U17s in the 17U beside it.
 
 ### The local dates
 
