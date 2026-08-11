@@ -29,6 +29,44 @@ PATHWAY = re.compile(r"national team trials|isf trials|youth olympic games trial
                      r"|beach national championship|ntdp", re.I)
 NTDP_GROUPS = (("18U", "Girls U18", 13), ("17U", "Girls U17", 20))
 
+# The programme itself runs four residential training series a year. They are invitational
+# and produce no results, so Volleyball Life has no record of them and they cannot be
+# derived from anything in this repo - dates are read off USA Volleyball's own schedule.
+USAV = "https://usavolleyball.org"
+NTDP_TRAINING = [
+    {"date": "2025-09-27", "endDate": "2025-09-28", "season": "Fall",
+     "location": "Virginia Beach, Virginia", "note": "alongside the 51st Neptune Festival",
+     "url": USAV + "/story/2025-beach-ntdp-fall-training-series-rosters-announced/"},
+    {"date": "2025-12-27", "endDate": "2025-12-29", "season": "Winter",
+     "location": "Manhattan Beach, California", "note": "",
+     "url": USAV + "/story/usa-volleyball-announces-2025-beach-ntdp-winter-training-series-rosters/"},
+    {"date": "2026-05-15", "endDate": "2026-05-17", "season": "Spring",
+     "location": "Manhattan Beach, California",
+     "note": "athletes convened from the 14th",
+     "url": USAV + "/story/usa-volleyball-announces-2026-beach-ntdp-spring-training-series-rosters/"},
+    {"date": "2026-07-26", "endDate": "2026-07-30", "season": "Summer",
+     "location": "Chula Vista Elite Athlete Training Center, California",
+     "note": "the girls&#8217; block; the boys followed 30 July&#8211;3 August", "rosters": True,
+     "url": USAV + "/story/usa-volleyball-announces-2026-beach-ntdp-summer-training-series-rosters/"},
+]
+NTDP_TRAINING_NEXT = [
+    {"date": "2026-09-25", "endDate": "2026-09-27", "season": "Fall",
+     "location": "Dania Beach, Florida", "note": "",
+     "url": USAV + "/play/national-team-development-program/beach-ntdp/beach-ntdp-training-series/"},
+]
+
+
+def as_training(t):
+    """A training series dressed up as a calendar event: a date to hold, not a field to win."""
+    divs = [{"name": lab, "n": n} for _, lab, n in NTDP_GROUPS] if t.get("rosters") else []
+    return {"tid": None, "training": True, "url": t["url"],
+            "name": f"Beach NTDP {t['season']} Training Series",
+            "date": t["date"], "endDate": t["endDate"], "sanction": "USAV",
+            "location": t["location"], "note": t.get("note", ""),
+            "t60": 0, "t30": 0, "t15": 0,
+            "brackets": [{"bracket": "NTDP", "t60": 0, "t30": 0, "t15": 0,
+                          "divisions": divs, "topFinishers": []}]}
+
 
 def ntdp_attendance():
     """How many of each published NTDP roster played each event, keyed by tournament id."""
@@ -157,6 +195,8 @@ def build(group):
             # below the turnout bar, but it is the same event and it has real numbers
             local_added.append(dict(e, local=True))
     events += local_added
+    events += [as_training(t) for t in NTDP_TRAINING
+               if D["window"][0] <= t["date"] <= D["window"][1]]
     events.sort(key=lambda e: (e["date"], -max(b["t60"] for b in e["brackets"])))
     rowcount = sum(len(e["brackets"]) for e in events)
     wfrom, wto = D["window"]
@@ -226,15 +266,19 @@ def build(group):
                 lead = "" if i else f"""
         <td class="dt num"{rs}>{dd.strftime("%-d")}{span} <span class="dow">{dd.strftime("%a")}</span></td>
         <td class="evc"{rs}><a class="lnk" href="{
+          e['url'] if e.get('training') else
           CBVA_URL + '/tournaments/' + str(e['cbvaId']) if e.get('local') and not e.get('tid')
           else VBL + '/tournament/' + str(e['tid'])}" target="_blank"
           rel="noopener">{esc(e['name'])}</a>{
-          '<span class="lt">local</span>' if e.get('local') else ''}</td>"""
+          '<span class="lt">local</span>' if e.get('local') else ''}{
+          '<span class="lt tr">training</span>' if e.get('training') else ''}{
+          f'<span class="dv">{esc(e["note"])}</span>' if e.get('note') else ''}</td>"""
                 tail = "" if i else f"""
         <td class="loc"{rs}>{esc(e['location']) if e['location'] else '&#8212;'}</td>
         <td class="bdy"{rs}>{body(e)}</td>
         <td class="nxc"{rs}>{nxt or '<span class="dim">&#8212;</span>'}</td>"""
-                cls = ('evs' if not i else 'evc2') + (' lcl' if e.get('local') else '')
+                cls = ('evs' if not i else 'evc2') + (' lcl' if e.get('local') else '') \
+                    + (' trn' if e.get('training') else '')
                 rows.append(f"""      <tr class="{cls}">{lead}
         <td class="brk"><b>{esc(b['bracket'])}</b><span class="dv">{divs}</span></td>
 {cells}{tail}
@@ -302,6 +346,16 @@ def build(group):
         """</td>
         <td class="num dim">&#8212;</td>
       </tr>""" for t in next_local)
+    ret += "".join(
+        f"""      <tr class="trn">
+        <td class="num dim nw">{dfmt(t['date']).strftime('%-d')}&#8211;{
+          dfmt(t['endDate']).strftime('%-d %b %Y')}</td>
+        <td><a class="lnk" href="{t['url']}" target="_blank" rel="noopener">Beach NTDP {
+          t['season']} Training Series</a><span class="lt tr">training</span></td>
+        <td class="loc">{esc(t['location'])}</td>
+        <td class="brk"><b>NTDP</b></td>
+        <td class="num dim">&#8212;</td>
+      </tr>""" for t in NTDP_TRAINING_NEXT)
     return f"""<title>Class of {group} &#183; Tournament calendar</title>
 <style>
 :root {{
@@ -406,6 +460,8 @@ h3 {{ font-family:"Iowan Old Style",Georgia,serif; font-size:17px; color:var(--i
   font-weight:600; margin:0 0 10px; }}
 .ldivs {{ display:flex; flex-wrap:wrap; gap:5px; max-width:460px; }}
 .lcl td {{ background:color-mix(in srgb,var(--accent-soft) 24%,transparent); }}
+.tr {{ color:var(--gold); background:var(--gold-soft); }}
+.trn td {{ background:color-mix(in srgb,var(--gold-soft) 32%,transparent); }}
 .lt {{ display:inline-block; margin-left:7px; font-size:9px; letter-spacing:.09em;
   text-transform:uppercase; color:var(--accent); background:var(--accent-soft);
   border-radius:2px; padding:1px 5px; font-weight:650; vertical-align:1px; }}
@@ -540,7 +596,10 @@ a {{ color:var(--accent); }}
   {len(local_added)} dates are admitted by geography instead, marked <span class="lt">local</span>
   and carrying no turnout because nobody in the class travelled to them. Those come from CBVA's
   listing rather than the class's record, and show only the draws she would enter: the women's
-  open and A fields, and the girls' 18U. Shading runs on the share of
+  open and A fields, and the girls' 18U. The NTDP's own four residential training series are in
+  too, marked <span class="lt tr">training</span>: they are invitational and produce no results,
+  so no turnout figure applies, but they are the dates the programme is actually built around.
+  Shading runs on the share of
   each tier present, so the three columns are directly comparable: 12 of the top 15 shades
   darker than 21 of the top 30. Event names link to Volleyball Life; the last column is next
   season's edition where one is already scheduled.</p>
@@ -623,6 +682,12 @@ a {{ color:var(--accent); }}
     CBVA's own tournament listing on date and venue, so an event carries it only when CBVA
     lists it; the link goes to that event's CBVA page, and to the specific division where the
     two agree on its name.</li>
+    <li><b>The training series are not tournaments.</b> They are invitational residential
+    camps with no draw and no result, so Volleyball Life has no record of them; the dates come
+    from USA Volleyball's own schedule and each row links to the announcement it was read from.
+    Only the summer series shows a roster count, because that is the roster this repo tracks
+    &#8212; the other three had their own, and their published rosters are not collected here.
+    The winter series for {int(wto[:4])}&#8211;{int(wto[:4])+1} has not been dated yet.</li>
     <li><b>Locations come from the tournament record</b> and are blank where the organiser left
     them unset, which is common for one-day local events.</li>
   </ul>

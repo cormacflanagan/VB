@@ -276,6 +276,26 @@ Olympic Games Trials** (18 June, Hermosa Beach Pier) held 11. Everything else on
 the ISF trials, USAV Beach Nationals, the U23 trials — drew one to three of them, so a national
 title is not the same thing as a selection room.
 
+### The training series
+
+The programme runs four residential training series a year, and they are the dates it is
+actually built around — but they are invitational, have no draw and produce no result, so
+Volleyball Life has no record of them and nothing in this repo can derive them. `NTDP_TRAINING`
+in `calendar_page.py` carries them as literals read off USA Volleyball's own schedule, each row
+linking to the announcement its dates came from:
+
+| Series | Dates | Where |
+| --- | --- | --- |
+| Fall 2025 | 27–28 September | Virginia Beach, VA (51st Neptune Festival) |
+| Winter 2025 | 27–29 December | Manhattan Beach, CA |
+| Spring 2026 | 15–17 May | Manhattan Beach, CA |
+| Summer 2026 | 26–30 July (girls) | Chula Vista Elite Athlete Training Center, CA |
+| Fall 2026 | 25–27 September | Dania Beach, FL |
+
+They sit in date order in the calendar, marked `training`, with no turnout figures. Only the
+summer series shows a roster count, because that is the roster this repo tracks; the other three
+had their own, which are not collected here. The 2026–27 winter series has not been dated yet.
+
 ### The local dates
 
 A turnout-ranked calendar is a ranking of *travel*, and it buries the home venue: of the Santa
