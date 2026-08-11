@@ -68,4 +68,4 @@ for _p in sorted(_glob.glob(_os.path.join(_os.path.dirname(__file__) or ".", "ro
                            "ratedPop": _d.get("rated"),
                            "thresh": 8 if len(_d["roster"]) >= 50 else 5}
 
-WINDOW = ("2025-08-09", "2026-08-09")
+WINDOW = ("2025-08-11", "2026-08-11")

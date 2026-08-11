@@ -50,6 +50,12 @@ Adding a class means adding a seed dictionary to `discover_class.py`; any `roste
 it produces is auto-registered as a group by `rosters.py`, which also picks the
 shared-competition threshold from the roster size.
 
+Ratings move as results process, so a cut drawn days ago is drawn on stale numbers.
+`scripts/refresh_class.py <year>` re-rates an already-closed cohort — reusing the cached
+population rather than re-crawling — re-draws the cut and prints the churn. Re-rating the
+2028 cohort on 11 August moved 578 ratings and changed three of the sixty, which is why a
+redo re-draws the cut rather than only re-rendering.
+
 **Closure is not optional.** A discovery run that stops on its round cap has *not* proved
 anything about the cut-off, and the 2027 run did exactly that on its first attempt — six
 rounds, 1,780 girls found, and 737 candidates still unchecked. `discover_class.py` now tracks

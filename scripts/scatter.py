@@ -25,7 +25,7 @@ def _fit(xs, ys):
 VBL = "https://volleyballlife.com"
 
 
-def scatter(players, label_names=(), w=860, h=430):
+def scatter(players, label_names=(), w=860, h=430, window_label='the past 12 months'):
     pts = [(p["comps"], p["tv"], p["name"], p.get("id"))
            for p in players if p.get("tv") is not None]
     if len(pts) < 3:
@@ -66,7 +66,7 @@ def scatter(players, label_names=(), w=860, h=430):
     out.append(f'<line class="axis" x1="{ml}" y1="{mt+ph}" x2="{ml+pw}" y2="{mt+ph}"/>')
     out.append(f'<line class="axis" x1="{ml}" y1="{mt}" x2="{ml}" y2="{mt+ph}"/>')
     out.append(f'<text class="axlab" x="{ml+pw/2:.0f}" y="{h-8}">Doubles competitions played '
-               f'(12 months to 9 Aug 2026)</text>')
+               f'({window_label})</text>')
     out.append(f'<text class="axlab" transform="translate(15,{mt+ph/2:.0f}) rotate(-90)" '
                f'x="0" y="0">TruVolley rating</text>')
 

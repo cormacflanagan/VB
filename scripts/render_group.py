@@ -2,6 +2,7 @@
 
   python3 render_group.py 17U      ->  bntdp-17u.html
 """
+import datetime
 import json, sys, html
 from scatter import scatter
 from h2hview import crosstable, rivalries, summarise
@@ -102,6 +103,14 @@ def build(group):
            "POP": f'{D.get("population") or 0:,}', "RATED": f'{D.get("ratedPop") or 0:,}',
            "CUT": D.get("cutNote", "")}
 
+    def _d(iso):
+        y, m, d = (int(x) for x in iso.split("-"))
+        return f"{d} {datetime.date(y, m, d).strftime('%B')} {y}"
+
+    wfrom, wto = D.get("window") or ["", ""]
+    wlong = _d(wto) if wto else ""
+    wshort = f"{wfrom[:4][2:]}" if wfrom else ""
+
     lo, hi = 6.7, 9.7
     showht = any(p.get("height") for p in players)
     HREC = summarise(H2H) if H2H else {}
@@ -191,7 +200,7 @@ def build(group):
         byc = sorted(players, key=lambda p: p["comps"])
         HILITE = tuple({players[0]["name"], byc[-1]["name"], byc[-2]["name"],
                         byc[0]["name"], players[len(players) // 2]["name"]})
-    fig, slope, rr = scatter(players, HILITE)
+    fig, slope, rr = scatter(players, HILITE, window_label=f"12 months to {wlong}")
     per10 = slope * 10
     stat = f"r&nbsp;=&nbsp;{rr:+.2f}, r&#178;&nbsp;=&nbsp;{rr * rr:.2f}"
     if abs(rr) < 0.15:
@@ -484,7 +493,7 @@ a {{ color:var(--accent); }}
   <p class="eyebrow">{T['eyebrow'].format(**fmt)}</p>
   <h1>{T['title'].format(**fmt)}</h1>
   <p class="standfirst">{T['lede'].format(**fmt)} for the twelve months
-  ending 9 August 2026. <b>Doubles only</b> &#8212; club and five-a-side results are excluded,
+  ending {wlong}. <b>Doubles only</b> &#8212; club and five-a-side results are excluded,
   because a squad finish says little about the individual. Each age division counts as its own
   competition, so a 16U bracket and the 18U bracket running beside it are different columns. Every
   cell is a finishing position; the size of that field is in the column head.</p>
@@ -600,7 +609,7 @@ a {{ color:var(--accent); }}
 </section>
 <footer>
   {esc(D['label'])}. Results, field sizes and TruVolley ratings from Volleyball Life,
-  retrieved 9 August 2026. Companion reports cover the {others}.
+  retrieved {wlong}. Companion reports cover the {others}.
 </footer>
 </div>
 """
