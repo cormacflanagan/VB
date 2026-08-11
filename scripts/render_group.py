@@ -38,6 +38,20 @@ TEXT = {
                 "not a scouting opinion, and TruVolley rewards win rate, so a light schedule "
                 "in small fields can flatter a player.</li>",
     },
+    "COHORT": {
+        "eyebrow": "Girls beach volleyball &#183; {Y} and younger &#183; National top {N}",
+        "title": "{Y} and younger, and <em>where the top {N} keep meeting</em>",
+        "lede": "The {N} highest-rated girls graduating in {Y} <b>or later</b>, against their "
+                "Volleyball Life record",
+        "note": "<li><b>Why this is not a graduating class.</b> A bracket is age-eligible, not "
+                "single-year: an 18U field is grad {Y} <i>and younger</i>, so the girls a {Y} "
+                "player actually meets include every strong {NEXT} or {NEXT2} playing up. This "
+                "group is built on that rule &#8212; the partner graph crawled to closure on "
+                "<code>gradYear &gt;= {Y}</code> &#8212; giving <b>{POP} girls, {RATED} of them "
+                "rated</b>, of whom the {N} highest TruVolley scores are the roster here. {CUT} "
+                "It is a ranking by rating, not a scouting opinion, and TruVolley rewards win "
+                "rate, so a light schedule in small fields can flatter a player.</li>",
+    },
 }
 
 
@@ -115,10 +129,12 @@ def build(group):
         H2H = None
     players, comps, pairs = D["players"], D["comps"], D["pairs"]
     N = len(players)
-    T = TEXT.get(group) or TEXT["CLASS"]
+    T = TEXT.get(group) or (TEXT["COHORT"] if group.endswith("_younger") else TEXT["CLASS"])
     meta = D.get("meta") or {}
     year = re.match(r"(\d{4})", group)
     fmt = {"N": len(D["players"]), "Y": year.group(1) if year else group,
+           "NEXT": str(int(year.group(1)) + 1) if year else "",
+           "NEXT2": str(int(year.group(1)) + 2) if year else "",
            "POP": f'{D.get("population") or 0:,}', "RATED": f'{D.get("ratedPop") or 0:,}',
            "CUT": D.get("cutNote", "")}
 
