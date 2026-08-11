@@ -179,8 +179,12 @@ CBVA runs much of the Southern California circuit, but Volleyball Life records t
 **194 tournaments** across the window — then `--link` matches ours to theirs on date plus venue,
 after normalising away the words the two sites disagree about ("pier", "beach", "courts").
 
-**48 of our 467 events matched**, 46 of them to a specific division, and only 8 carry "CBVA" in
-the Volleyball Life name — so a name test would have missed five in six. Matched events carry a
+The venue match is made against the whole Volleyball Life name, not just the part after "at".
+Half of CBVA's own events are recorded there as "6/13/26, Main Beach, Santa Cruz" with the
+location field empty, so a stricter read matched 48 events and silently missed the entire
+Santa Cruz series. Offering the whole name costs nothing, because only CBVA's venue tokens are
+scored: **89 of our 467 events match**, and only 8 carry "CBVA" in the name — so a name test
+would have missed ten in eleven. Matched events carry a
 CBVA tag beside the sanction: in the reports on the matrix column head and the appendix row, in
 the calendar in the Body column.
 
@@ -282,9 +286,11 @@ none to carry.
 
 They come from CBVA's listing (`LOCAL` names the venue) rather than from the class's record, so
 a date appears whether or not anyone in the class went, and `LOCAL_DIV` keeps only the draws
-worth entering. CBVA's ladder runs Open, AA, A, B, and the Santa Cruz Saturdays alternate
+worth entering. Where the class *did* enter — nine of the fifteen, below the turnout bar — the
+row is our own event with its real figures rather than a stand-in, and one that already cleared
+the bar is tagged in place instead of repeated. CBVA's ladder runs Open, AA, A, B, and the Santa Cruz Saturdays alternate
 between an Open+A card and an AA+B one, so keeping Open and A drops the weaker card entirely
-rather than trimming a column from every date. That leaves **14 local dates** added to the
+rather than trimming a column from every date. That leaves **15 local dates** on the
 calendar: women's Saturdays through the autumn and spring, and a midweek girls' 18U Cal Cup bid
 series every Wednesday through June and July. `scripts/cbva.py --upcoming` crawls the
 not-yet-played listing the same way, and those dates join the next-season table.

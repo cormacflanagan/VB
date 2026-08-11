@@ -107,9 +107,11 @@ def link(window):
             if tid in seen:
                 continue
             seen.add(tid)
-            # Volleyball Life names CBVA events "<division> <gender+age> at <venue>"
-            tail = t["name"].rsplit(" at ", 1)[-1] if " at " in t["name"] else ""
-            ours = norm_venue(loc.get(int(tid), "") + " " + tail)
+            # Volleyball Life names CBVA events "<division> <gender+age> at <venue>", but
+            # just as often "6/13/26, Main Beach, Santa Cruz" with no location recorded at
+            # all, so the whole name is offered to the venue match. Only CBVA's own venue
+            # tokens are scored, so the extra words in the name cost nothing.
+            ours = norm_venue(loc.get(int(tid), "") + " " + t["name"])
             best = None
             for c in by_date.get(t["date"], []):
                 theirs = norm_venue(c["venue"])

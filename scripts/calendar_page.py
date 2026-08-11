@@ -105,7 +105,7 @@ def dfmt(iso):
 
 def body(e):
     """Sanctioning tag, plus a link out to CBVA's own page where CBVA lists the event."""
-    if e.get("local"):
+    if e.get("local") and not e.get("tid"):
         return (f'<a class="sanc cbva" href="{CBVA_URL}/tournaments/{e["cbvaId"]}" '
                 f'target="_blank" rel="noopener" title="This event on CBVA">CBVA</a>')
     out = f'<span class="sanc">{esc(e["sanction"])}</span>'
@@ -140,10 +140,22 @@ def build(group):
 
     # the home venue joins the calendar on its own terms: turnout would never carry it, so
     # it is admitted by geography instead, minus any date the class already put in the table
-    ours = {CBVA[str(e["tid"])]["cbvaId"] for e in D["events"] if str(e["tid"]) in CBVA}
+    by_cbva = {CBVA[str(e["tid"])]["cbvaId"]: e for e in D["events"] if str(e["tid"]) in CBVA}
     past_local = local_events("cbva.json")
     next_local = local_events("cbva_upcoming.json")
-    local_added = [as_event(t) for t in past_local if t["id"] not in ours]
+    shown = {e["tid"] for e in events}
+    local_added = []
+    for t in past_local:
+        e = by_cbva.get(t["id"])
+        if e is None:
+            # nothing of ours to show: stand the CBVA listing up as an event of its own
+            local_added.append(as_event(t))
+        elif e["tid"] in shown:
+            # already in the table on its own turnout; tag it rather than repeat it
+            next(x for x in events if x["tid"] == e["tid"])["local"] = True
+        else:
+            # below the turnout bar, but it is the same event and it has real numbers
+            local_added.append(dict(e, local=True))
     events += local_added
     events.sort(key=lambda e: (e["date"], -max(b["t60"] for b in e["brackets"])))
     rowcount = sum(len(e["brackets"]) for e in events)
@@ -209,12 +221,12 @@ def build(group):
                     f'title="{b[k2]} of the {label.lower()} played {esc(b["bracket"])}">'
                     f'{b[k2] or "&#183;"}</td>' for k2, size, label in TIERS)
                 divs = ", ".join(
-                    esc(d["name"]) + ("" if e.get("local") else f' <i>&#215;{d["n"]}</i>')
+                    esc(d["name"]) + (f' <i>&#215;{d["n"]}</i>' if d["n"] else "")
                     for d in b["divisions"][:2])
                 lead = "" if i else f"""
         <td class="dt num"{rs}>{dd.strftime("%-d")}{span} <span class="dow">{dd.strftime("%a")}</span></td>
         <td class="evc"{rs}><a class="lnk" href="{
-          CBVA_URL + '/tournaments/' + str(e['cbvaId']) if e.get('local')
+          CBVA_URL + '/tournaments/' + str(e['cbvaId']) if e.get('local') and not e.get('tid')
           else VBL + '/tournament/' + str(e['tid'])}" target="_blank"
           rel="noopener">{esc(e['name'])}</a>{
           '<span class="lt">local</span>' if e.get('local') else ''}</td>"""
