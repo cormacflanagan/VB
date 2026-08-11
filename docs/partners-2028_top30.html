@@ -1,0 +1,571 @@
+<title>Class of 2028 — top 30 &#183; Partnerships</title>
+<style>
+:root {
+  --ground:#EFF1EE; --surface:#FAFBFA; --raise:#FFFFFF;
+  --ink:#111B19; --body:#2C3A37; --muted:#5F6E6A; --faint:#8B9995;
+  --line:#D5DCD9; --hair:#E4E9E7; --wash:#EAEDEB; --accent:#0B6E68; --accent-soft:#D9E7E5;
+  --s1:#EDF5F3; --s2:#CDE8E2; --s3:#A2D6CC; --s4:#6FC0B3; --s5:#2FA694; --s6:#00806F;
+  --sink:var(--body); --sink5:#FFFFFF; --sink6:#FFFFFF;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:#0B1211; --surface:#121B19; --raise:#182322;
+    --ink:#E9EFEC; --body:#C6D2CE; --muted:#93A29E; --faint:#6E7D79;
+    --line:#243330; --hair:#1C2827; --wash:#161F1E; --accent:#57C3B6; --accent-soft:#123733;
+    --s1:#152220; --s2:#183A34; --s3:#1B5248; --s4:#1D6B5D; --s5:#1E8574; --s6:#2AA08C;
+    --sink:var(--body); --sink5:#F2FBF8; --sink6:#06201B;
+  }
+}
+:root[data-theme="dark"] {
+  --ground:#0B1211; --surface:#121B19; --raise:#182322;
+  --ink:#E9EFEC; --body:#C6D2CE; --muted:#93A29E; --faint:#6E7D79;
+  --line:#243330; --hair:#1C2827; --wash:#161F1E; --accent:#57C3B6; --accent-soft:#123733;
+  --s1:#152220; --s2:#183A34; --s3:#1B5248; --s4:#1D6B5D; --s5:#1E8574; --s6:#2AA08C;
+  --sink:var(--body); --sink5:#F2FBF8; --sink6:#06201B;
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--ground); color:var(--body);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; font-size:15px;
+  line-height:1.6; -webkit-font-smoothing:antialiased; }
+.wrap { max-width:none; margin:0; padding:0 clamp(18px,2.4vw,44px); }
+header { padding:60px 0 30px; border-bottom:1px solid var(--line); }
+.eyebrow { font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent);
+  font-weight:650; margin:0 0 18px; }
+h1 { font-family:"Iowan Old Style",Georgia,"Times New Roman",serif;
+  font-size:clamp(32px,5vw,50px); line-height:1.06; letter-spacing:-.02em; color:var(--ink);
+  margin:0 0 16px; font-weight:600; text-wrap:balance; max-width:20ch; }
+h1 em { font-style:italic; color:var(--accent); }
+.standfirst { font-size:17px; color:var(--muted); max-width:66ch; margin:0; }
+h2 { font-family:"Iowan Old Style",Georgia,"Times New Roman",serif; font-size:24px;
+  color:var(--ink); font-weight:600; margin:0 0 6px; }
+.lede { color:var(--muted); margin:0 0 20px; max-width:72ch; font-size:14.5px; }
+section { padding:44px 0 0; }
+.facts { display:flex; flex-wrap:wrap; margin:28px 0 0; max-width:1300px;
+  border:1px solid var(--line); border-radius:3px; background:var(--surface); overflow:hidden; }
+.fact { flex:1 1 150px; padding:14px 18px; border-right:1px solid var(--hair); }
+.fact:last-child { border-right:0; }
+.fact b { display:block; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:23px; color:var(--ink); font-weight:600; font-variant-numeric:tabular-nums; }
+.fact span { font-size:11px; letter-spacing:.09em; text-transform:uppercase; color:var(--faint); }
+.panel { border:1px solid var(--line); border-radius:3px; background:var(--surface); overflow:auto; }
+table { border-collapse:separate; border-spacing:0; width:100%; }
+thead th { font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint);
+  font-weight:650; background:var(--wash); border-bottom:1px solid var(--line);
+  padding:10px 12px; text-align:left; white-space:nowrap; }
+td, tbody th { padding:8px 12px; border-bottom:1px solid var(--hair); text-align:left; }
+tbody tr:hover td { background:var(--raise); }
+.num { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-variant-numeric:tabular-nums; font-size:13px; }
+.big { font-size:15px; font-weight:700; color:var(--ink); }
+.dim { color:var(--faint); }
+.nw { white-space:nowrap; }
+.rk { display:inline-block; min-width:24px; color:var(--faint);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:11px; }
+.lnk { color:var(--ink); text-decoration:none; font-weight:600; font-size:13.5px; }
+.lnk:hover { color:var(--accent); text-decoration:underline; text-underline-offset:2px; }
+.out { font-style:normal; color:var(--accent); font-size:8px; vertical-align:super;
+  margin-left:3px; }
+.bar { display:inline-block; width:70px; height:5px; background:var(--wash);
+  border:1px solid var(--hair); border-radius:2px; overflow:hidden; margin-left:8px;
+  vertical-align:middle; }
+.bar span { display:block; height:100%; background:var(--accent); }
+/* matrix */
+.mx-wrap { border:1px solid var(--line); border-radius:3px; background:var(--surface);
+  overflow:auto; max-height:80vh; }
+.mx th, .mx td { border-bottom:1px solid var(--hair); border-right:1px solid var(--hair); }
+.mx .corner { position:sticky; left:0; top:0; z-index:4; background:var(--wash); width:216px;
+  min-width:216px; padding:10px 14px; vertical-align:bottom; font-size:10.5px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--faint); font-weight:650;
+  border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+.ph { position:sticky; top:0; z-index:2; background:var(--wash); width:42px; min-width:42px;
+  padding:8px 2px; text-align:center; border-bottom:1px solid var(--line);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:10.5px;
+  color:var(--muted); font-weight:650; }
+.pr { position:sticky; left:0; z-index:3; background:var(--surface); width:216px;
+  min-width:216px; padding:7px 12px; white-space:nowrap; font-weight:500;
+  border-right:1px solid var(--line); }
+.pc { width:42px; min-width:42px; text-align:center; padding:6px 2px; color:var(--sink);
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:12.5px;
+  font-weight:650; font-variant-numeric:tabular-nums; }
+.pc.s1 { background:var(--s1); } .pc.s2 { background:var(--s2); }
+.pc.s3 { background:var(--s3); } .pc.s4 { background:var(--s4); }
+.pc.s5 { background:var(--s5); color:var(--sink5); }
+.pc.s6 { background:var(--s6); color:var(--sink6); }
+.pc.none { background:transparent; }
+.pc.self { background:repeating-linear-gradient(-45deg,transparent,transparent 4px,
+  var(--hair) 4px,var(--hair) 5px); }
+.mx tbody tr:hover .pc { box-shadow:inset 0 0 0 99px rgba(127,127,127,.05); }
+.legend { display:flex; flex-wrap:wrap; gap:8px 18px; align-items:center; margin:14px 0 0;
+  font-size:12px; color:var(--muted); }
+.ramp { display:inline-flex; }
+.ramp span { width:22px; height:14px; border:1px solid var(--line); border-left:0; }
+.ramp span:first-child { border-left:1px solid var(--line); }
+.cols { display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:26px;
+  max-width:1200px; }
+.notes ul { padding-left:19px; margin:10px 0 0; }
+.notes li { margin:7px 0; font-size:13.5px; color:var(--muted); max-width:78ch; }
+.notes b { color:var(--body); font-weight:600; }
+footer { border-top:1px solid var(--line); padding:20px 0 64px; margin-top:44px;
+  font-size:12px; color:var(--faint); max-width:82ch; }
+a { color:var(--accent); }
+:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+</style>
+
+<div class="wrap">
+<header>
+  <p class="eyebrow">Class of 2028 — top 30 &#183; Partnerships</p>
+  <h1>Who plays <em>with</em> whom</h1>
+  <p class="standfirst">Partnerships among the 30 highest-rated girls in the class of 2028, over
+  the twelve months to 11 August 2026. The matrix counts competitions two of them entered as a
+  pair; the table counts how many different partners each has had, inside this group or out.</p>
+  <div class="facts">
+    <div class="fact"><b>36</b><span>Pairings inside the 30</span></div>
+    <div class="fact"><b>435</b><span>Possible pairings</span></div>
+    <div class="fact"><b>8</b><span>Most events together</span></div>
+    <div class="fact"><b>126</b><span>Distinct partners in all</span></div>
+    <div class="fact"><b>392</b><span>Doubles entries</span></div>
+  </div>
+</header>
+
+<section>
+  <h2>Partner counts</h2>
+  <p class="lede">Sorted by rating. <b>Partners</b> is how many different girls she has played
+  a competition with; <b>in group</b> is how many of those are among these 30. The last column
+  is the share of her competitions spent with her single most-used partner &#8212; a rough
+  measure of how settled she is. A &#9679; marks a most-used partner from outside the group.</p>
+  <div class="panel">
+    <table>
+      <thead><tr>
+        <th scope="col">Athlete</th><th scope="col">Comps</th><th scope="col">Partners</th>
+        <th scope="col">In group</th><th scope="col">Most-used partner</th>
+        <th scope="col">Share with her</th>
+      </tr></thead>
+      <tbody>
+      <tr>
+        <th scope="row"><span class="rk">1</span><a class="lnk" href="https://volleyballlife.com/player/22544" target="_blank" rel="noopener">Lucy Matuszak</a></th>
+        <td class="num">9</td>
+        <td class="num big">6</td>
+        <td class="num dim">3</td>
+        <td>Olivia Herron<i class="out" title="not in this group">&#9679;</i>
+          <span class="dim">&#215;3</span></td>
+        <td class="num nw">33%
+          <span class="bar"><span style="width:33%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">2</span><a class="lnk" href="https://volleyballlife.com/player/147394" target="_blank" rel="noopener">Sadie Stafford</a></th>
+        <td class="num">22</td>
+        <td class="num big">11</td>
+        <td class="num dim">6</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/149113" target="_blank" rel="noopener">Skyler Smith</a>
+          <span class="dim">&#215;6</span></td>
+        <td class="num nw">27%
+          <span class="bar"><span style="width:27%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">3</span><a class="lnk" href="https://volleyballlife.com/player/95165" target="_blank" rel="noopener">Milaniakai Padilla</a></th>
+        <td class="num">11</td>
+        <td class="num big">8</td>
+        <td class="num dim">3</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/84725" target="_blank" rel="noopener">Sarah Cowan</a>
+          <span class="dim">&#215;3</span></td>
+        <td class="num nw">27%
+          <span class="bar"><span style="width:27%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">4</span><a class="lnk" href="https://volleyballlife.com/player/91052" target="_blank" rel="noopener">Sage Illian</a></th>
+        <td class="num">16</td>
+        <td class="num big">6</td>
+        <td class="num dim">4</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/2048" target="_blank" rel="noopener">Dreya Scherfenberg</a>
+          <span class="dim">&#215;7</span></td>
+        <td class="num nw">44%
+          <span class="bar"><span style="width:44%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">5</span><a class="lnk" href="https://volleyballlife.com/player/64896" target="_blank" rel="noopener">Haisley Flanagan</a></th>
+        <td class="num">15</td>
+        <td class="num big">8</td>
+        <td class="num dim">4</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/161398" target="_blank" rel="noopener">Charlotte Jansen</a>
+          <span class="dim">&#215;3</span></td>
+        <td class="num nw">20%
+          <span class="bar"><span style="width:20%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">6</span><a class="lnk" href="https://volleyballlife.com/player/99596" target="_blank" rel="noopener">Madison Gillinger</a></th>
+        <td class="num">17</td>
+        <td class="num big">7</td>
+        <td class="num dim">5</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/94909" target="_blank" rel="noopener">Sadie Harris</a>
+          <span class="dim">&#215;8</span></td>
+        <td class="num nw">47%
+          <span class="bar"><span style="width:47%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">7</span><a class="lnk" href="https://volleyballlife.com/player/84725" target="_blank" rel="noopener">Sarah Cowan</a></th>
+        <td class="num">15</td>
+        <td class="num big">10</td>
+        <td class="num dim">3</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/91052" target="_blank" rel="noopener">Sage Illian</a>
+          <span class="dim">&#215;4</span></td>
+        <td class="num nw">27%
+          <span class="bar"><span style="width:27%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">8</span><a class="lnk" href="https://volleyballlife.com/player/91897" target="_blank" rel="noopener">Ashlynn Proctor</a></th>
+        <td class="num">8</td>
+        <td class="num big">3</td>
+        <td class="num dim">2</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/53120" target="_blank" rel="noopener">Summer Tukua</a>
+          <span class="dim">&#215;5</span></td>
+        <td class="num nw">62%
+          <span class="bar"><span style="width:62%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">9</span><a class="lnk" href="https://volleyballlife.com/player/84049" target="_blank" rel="noopener">Breeze Johnson</a></th>
+        <td class="num">6</td>
+        <td class="num big">3</td>
+        <td class="num dim">1</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/33084" target="_blank" rel="noopener">Elle Sossong</a>
+          <span class="dim">&#215;4</span></td>
+        <td class="num nw">67%
+          <span class="bar"><span style="width:67%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">10</span><a class="lnk" href="https://volleyballlife.com/player/53120" target="_blank" rel="noopener">Summer Tukua</a></th>
+        <td class="num">5</td>
+        <td class="num big">1</td>
+        <td class="num dim">1</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/91897" target="_blank" rel="noopener">Ashlynn Proctor</a>
+          <span class="dim">&#215;5</span></td>
+        <td class="num nw">100%
+          <span class="bar"><span style="width:100%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">11</span><a class="lnk" href="https://volleyballlife.com/player/59411" target="_blank" rel="noopener">Brooklyn Rosales</a></th>
+        <td class="num">18</td>
+        <td class="num big">8</td>
+        <td class="num dim">2</td>
+        <td>Meadow Rosales<i class="out" title="not in this group">&#9679;</i>
+          <span class="dim">&#215;8</span></td>
+        <td class="num nw">44%
+          <span class="bar"><span style="width:44%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">12</span><a class="lnk" href="https://volleyballlife.com/player/98425" target="_blank" rel="noopener">Eden Cisneros</a></th>
+        <td class="num">9</td>
+        <td class="num big">5</td>
+        <td class="num dim">3</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/22857" target="_blank" rel="noopener">Milan Hendrickson</a>
+          <span class="dim">&#215;3</span></td>
+        <td class="num nw">33%
+          <span class="bar"><span style="width:33%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">13</span><a class="lnk" href="https://volleyballlife.com/player/149113" target="_blank" rel="noopener">Skyler Smith</a></th>
+        <td class="num">16</td>
+        <td class="num big">10</td>
+        <td class="num dim">1</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/147394" target="_blank" rel="noopener">Sadie Stafford</a>
+          <span class="dim">&#215;6</span></td>
+        <td class="num nw">38%
+          <span class="bar"><span style="width:38%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">14</span><a class="lnk" href="https://volleyballlife.com/player/2048" target="_blank" rel="noopener">Dreya Scherfenberg</a></th>
+        <td class="num">12</td>
+        <td class="num big">5</td>
+        <td class="num dim">1</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/91052" target="_blank" rel="noopener">Sage Illian</a>
+          <span class="dim">&#215;7</span></td>
+        <td class="num nw">58%
+          <span class="bar"><span style="width:58%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">15</span><a class="lnk" href="https://volleyballlife.com/player/22857" target="_blank" rel="noopener">Milan Hendrickson</a></th>
+        <td class="num">4</td>
+        <td class="num big">2</td>
+        <td class="num dim">2</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/98425" target="_blank" rel="noopener">Eden Cisneros</a>
+          <span class="dim">&#215;3</span></td>
+        <td class="num nw">75%
+          <span class="bar"><span style="width:75%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">16</span><a class="lnk" href="https://volleyballlife.com/player/128445" target="_blank" rel="noopener">Cayden Dorger</a></th>
+        <td class="num">18</td>
+        <td class="num big">8</td>
+        <td class="num dim">2</td>
+        <td>Ashley Ruschill<i class="out" title="not in this group">&#9679;</i>
+          <span class="dim">&#215;5</span></td>
+        <td class="num nw">28%
+          <span class="bar"><span style="width:28%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">17</span><a class="lnk" href="https://volleyballlife.com/player/98125" target="_blank" rel="noopener">Ella Buchanan</a></th>
+        <td class="num">11</td>
+        <td class="num big">4</td>
+        <td class="num dim">2</td>
+        <td>Brooke Canaday<i class="out" title="not in this group">&#9679;</i>
+          <span class="dim">&#215;7</span></td>
+        <td class="num nw">64%
+          <span class="bar"><span style="width:64%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">18</span><a class="lnk" href="https://volleyballlife.com/player/25298" target="_blank" rel="noopener">Lia Ray</a></th>
+        <td class="num">0</td>
+        <td class="num big">&#8212;</td>
+        <td class="num dim">0</td>
+        <td>—<i class="out" title="not in this group">&#9679;</i>
+          <span class="dim">&#215;0</span></td>
+        <td class="num nw">0%
+          <span class="bar"><span style="width:0%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">19</span><a class="lnk" href="https://volleyballlife.com/player/94563" target="_blank" rel="noopener">Danica  Waterman</a></th>
+        <td class="num">9</td>
+        <td class="num big">6</td>
+        <td class="num dim">3</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/147394" target="_blank" rel="noopener">Sadie Stafford</a>
+          <span class="dim">&#215;3</span></td>
+        <td class="num nw">33%
+          <span class="bar"><span style="width:33%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">20</span><a class="lnk" href="https://volleyballlife.com/player/9258" target="_blank" rel="noopener">Abigail Moffett</a></th>
+        <td class="num">22</td>
+        <td class="num big">10</td>
+        <td class="num dim">4</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/161398" target="_blank" rel="noopener">Charlotte Jansen</a>
+          <span class="dim">&#215;8</span></td>
+        <td class="num nw">36%
+          <span class="bar"><span style="width:36%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">21</span><a class="lnk" href="https://volleyballlife.com/player/99506" target="_blank" rel="noopener">Taylie Hansen</a></th>
+        <td class="num">13</td>
+        <td class="num big">10</td>
+        <td class="num dim">3</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/33084" target="_blank" rel="noopener">Elle Sossong</a>
+          <span class="dim">&#215;2</span></td>
+        <td class="num nw">15%
+          <span class="bar"><span style="width:15%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">22</span><a class="lnk" href="https://volleyballlife.com/player/105341" target="_blank" rel="noopener">Emma Abernathy</a></th>
+        <td class="num">13</td>
+        <td class="num big">7</td>
+        <td class="num dim">1</td>
+        <td>Edie Joseph<i class="out" title="not in this group">&#9679;</i>
+          <span class="dim">&#215;5</span></td>
+        <td class="num nw">38%
+          <span class="bar"><span style="width:38%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">23</span><a class="lnk" href="https://volleyballlife.com/player/84161" target="_blank" rel="noopener">Sarah Albers</a></th>
+        <td class="num">11</td>
+        <td class="num big">8</td>
+        <td class="num dim">1</td>
+        <td>Isabelle Izzy Ramos<i class="out" title="not in this group">&#9679;</i>
+          <span class="dim">&#215;3</span></td>
+        <td class="num nw">27%
+          <span class="bar"><span style="width:27%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">24</span><a class="lnk" href="https://volleyballlife.com/player/161398" target="_blank" rel="noopener">Charlotte Jansen</a></th>
+        <td class="num">22</td>
+        <td class="num big">9</td>
+        <td class="num dim">4</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/9258" target="_blank" rel="noopener">Abigail Moffett</a>
+          <span class="dim">&#215;8</span></td>
+        <td class="num nw">36%
+          <span class="bar"><span style="width:36%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">25</span><a class="lnk" href="https://volleyballlife.com/player/25347" target="_blank" rel="noopener">Brooke Codey</a></th>
+        <td class="num">5</td>
+        <td class="num big">5</td>
+        <td class="num dim">2</td>
+        <td>Katrina Oswald<i class="out" title="not in this group">&#9679;</i>
+          <span class="dim">&#215;1</span></td>
+        <td class="num nw">20%
+          <span class="bar"><span style="width:20%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">26</span><a class="lnk" href="https://volleyballlife.com/player/42463" target="_blank" rel="noopener">Stella Sheeran</a></th>
+        <td class="num">17</td>
+        <td class="num big">10</td>
+        <td class="num dim">1</td>
+        <td>Haven Gindoff<i class="out" title="not in this group">&#9679;</i>
+          <span class="dim">&#215;6</span></td>
+        <td class="num nw">35%
+          <span class="bar"><span style="width:35%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">27</span><a class="lnk" href="https://volleyballlife.com/player/146170" target="_blank" rel="noopener">Kendal Walker</a></th>
+        <td class="num">25</td>
+        <td class="num big">7</td>
+        <td class="num dim">0</td>
+        <td>Emerson Thomas<i class="out" title="not in this group">&#9679;</i>
+          <span class="dim">&#215;14</span></td>
+        <td class="num nw">56%
+          <span class="bar"><span style="width:56%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">28</span><a class="lnk" href="https://volleyballlife.com/player/94909" target="_blank" rel="noopener">Sadie Harris</a></th>
+        <td class="num">17</td>
+        <td class="num big">8</td>
+        <td class="num dim">2</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/99596" target="_blank" rel="noopener">Madison Gillinger</a>
+          <span class="dim">&#215;8</span></td>
+        <td class="num nw">47%
+          <span class="bar"><span style="width:47%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">29</span><a class="lnk" href="https://volleyballlife.com/player/33084" target="_blank" rel="noopener">Elle Sossong</a></th>
+        <td class="num">9</td>
+        <td class="num big">5</td>
+        <td class="num dim">3</td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/84049" target="_blank" rel="noopener">Breeze Johnson</a>
+          <span class="dim">&#215;4</span></td>
+        <td class="num nw">44%
+          <span class="bar"><span style="width:44%"></span></span></td>
+      </tr>
+      <tr>
+        <th scope="row"><span class="rk">30</span><a class="lnk" href="https://volleyballlife.com/player/29887" target="_blank" rel="noopener">Hannah Perez</a></th>
+        <td class="num">17</td>
+        <td class="num big">5</td>
+        <td class="num dim">0</td>
+        <td>Averie Ackel<i class="out" title="not in this group">&#9679;</i>
+          <span class="dim">&#215;13</span></td>
+        <td class="num nw">76%
+          <span class="bar"><span style="width:76%"></span></span></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>The partnership matrix</h2>
+  <p class="lede">Competitions entered together, for the 36 pairings that have happened
+  at all out of 435 possible. Rows are athletes in rating order, columns the same
+  athletes by rank number. Blank means they have never partnered.</p>
+  <div class="mx-wrap">
+    <table class="mx">
+      <thead><tr><th class="corner">Athlete</th><th class="ph" title="Lucy Matuszak">1</th><th class="ph" title="Sadie Stafford">2</th><th class="ph" title="Milaniakai Padilla">3</th><th class="ph" title="Sage Illian">4</th><th class="ph" title="Haisley Flanagan">5</th><th class="ph" title="Madison Gillinger">6</th><th class="ph" title="Sarah Cowan">7</th><th class="ph" title="Ashlynn Proctor">8</th><th class="ph" title="Breeze Johnson">9</th><th class="ph" title="Summer Tukua">10</th><th class="ph" title="Brooklyn Rosales">11</th><th class="ph" title="Eden Cisneros">12</th><th class="ph" title="Skyler Smith">13</th><th class="ph" title="Dreya Scherfenberg">14</th><th class="ph" title="Milan Hendrickson">15</th><th class="ph" title="Cayden Dorger">16</th><th class="ph" title="Ella Buchanan">17</th><th class="ph" title="Lia Ray">18</th><th class="ph" title="Danica  Waterman">19</th><th class="ph" title="Abigail Moffett">20</th><th class="ph" title="Taylie Hansen">21</th><th class="ph" title="Emma Abernathy">22</th><th class="ph" title="Sarah Albers">23</th><th class="ph" title="Charlotte Jansen">24</th><th class="ph" title="Brooke Codey">25</th><th class="ph" title="Stella Sheeran">26</th><th class="ph" title="Kendal Walker">27</th><th class="ph" title="Sadie Harris">28</th><th class="ph" title="Elle Sossong">29</th><th class="ph" title="Hannah Perez">30</th></tr></thead>
+      <tbody>
+<tr><th class="pr"><span class="rk">1</span><a class="lnk" href="https://volleyballlife.com/player/22544" target="_blank" rel="noopener">Lucy Matuszak</a></th><td class="pc self"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s2" title="Lucy Matuszak and Sage Illian played 2 competitions together">2</td><td class="pc none"></td><td class="pc s1" title="Lucy Matuszak and Madison Gillinger played 1 competition together">1</td><td class="pc s1" title="Lucy Matuszak and Sarah Cowan played 1 competition together">1</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">2</span><a class="lnk" href="https://volleyballlife.com/player/147394" target="_blank" rel="noopener">Sadie Stafford</a></th><td class="pc none"></td><td class="pc self"></td><td class="pc s1" title="Sadie Stafford and Milaniakai Padilla played 1 competition together">1</td><td class="pc s1" title="Sadie Stafford and Sage Illian played 1 competition together">1</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s1" title="Sadie Stafford and Brooklyn Rosales played 1 competition together">1</td><td class="pc none"></td><td class="pc s5" title="Sadie Stafford and Skyler Smith played 6 competitions together">6</td><td class="pc none"></td><td class="pc none"></td><td class="pc s1" title="Sadie Stafford and Cayden Dorger played 1 competition together">1</td><td class="pc none"></td><td class="pc none"></td><td class="pc s3" title="Sadie Stafford and Danica  Waterman played 3 competitions together">3</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s1" title="Sadie Stafford and Brooke Codey played 1 competition together">1</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">3</span><a class="lnk" href="https://volleyballlife.com/player/95165" target="_blank" rel="noopener">Milaniakai Padilla</a></th><td class="pc none"></td><td class="pc s1" title="Milaniakai Padilla and Sadie Stafford played 1 competition together">1</td><td class="pc self"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s3" title="Milaniakai Padilla and Sarah Cowan played 3 competitions together">3</td><td class="pc s1" title="Milaniakai Padilla and Ashlynn Proctor played 1 competition together">1</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">4</span><a class="lnk" href="https://volleyballlife.com/player/91052" target="_blank" rel="noopener">Sage Illian</a></th><td class="pc s2" title="Sage Illian and Lucy Matuszak played 2 competitions together">2</td><td class="pc s1" title="Sage Illian and Sadie Stafford played 1 competition together">1</td><td class="pc none"></td><td class="pc self"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s4" title="Sage Illian and Sarah Cowan played 4 competitions together">4</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s5" title="Sage Illian and Dreya Scherfenberg played 7 competitions together">7</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">5</span><a class="lnk" href="https://volleyballlife.com/player/64896" target="_blank" rel="noopener">Haisley Flanagan</a></th><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc self"></td><td class="pc s2" title="Haisley Flanagan and Madison Gillinger played 2 competitions together">2</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s2" title="Haisley Flanagan and Eden Cisneros played 2 competitions together">2</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s2" title="Haisley Flanagan and Ella Buchanan played 2 competitions together">2</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s3" title="Haisley Flanagan and Charlotte Jansen played 3 competitions together">3</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">6</span><a class="lnk" href="https://volleyballlife.com/player/99596" target="_blank" rel="noopener">Madison Gillinger</a></th><td class="pc s1" title="Madison Gillinger and Lucy Matuszak played 1 competition together">1</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s2" title="Madison Gillinger and Haisley Flanagan played 2 competitions together">2</td><td class="pc self"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s2" title="Madison Gillinger and Abigail Moffett played 2 competitions together">2</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s1" title="Madison Gillinger and Charlotte Jansen played 1 competition together">1</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s6" title="Madison Gillinger and Sadie Harris played 8 competitions together">8</td><td class="pc none"></td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">7</span><a class="lnk" href="https://volleyballlife.com/player/84725" target="_blank" rel="noopener">Sarah Cowan</a></th><td class="pc s1" title="Sarah Cowan and Lucy Matuszak played 1 competition together">1</td><td class="pc none"></td><td class="pc s3" title="Sarah Cowan and Milaniakai Padilla played 3 competitions together">3</td><td class="pc s4" title="Sarah Cowan and Sage Illian played 4 competitions together">4</td><td class="pc none"></td><td class="pc none"></td><td class="pc self"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">8</span><a class="lnk" href="https://volleyballlife.com/player/91897" target="_blank" rel="noopener">Ashlynn Proctor</a></th><td class="pc none"></td><td class="pc none"></td><td class="pc s1" title="Ashlynn Proctor and Milaniakai Padilla played 1 competition together">1</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc self"></td><td class="pc none"></td><td class="pc s4" title="Ashlynn Proctor and Summer Tukua played 5 competitions together">5</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">9</span><a class="lnk" href="https://volleyballlife.com/player/84049" target="_blank" rel="noopener">Breeze Johnson</a></th><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc self"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s4" title="Breeze Johnson and Elle Sossong played 4 competitions together">4</td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">10</span><a class="lnk" href="https://volleyballlife.com/player/53120" target="_blank" rel="noopener">Summer Tukua</a></th><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s4" title="Summer Tukua and Ashlynn Proctor played 5 competitions together">5</td><td class="pc none"></td><td class="pc self"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">11</span><a class="lnk" href="https://volleyballlife.com/player/59411" target="_blank" rel="noopener">Brooklyn Rosales</a></th><td class="pc none"></td><td class="pc s1" title="Brooklyn Rosales and Sadie Stafford played 1 competition together">1</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc self"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s1" title="Brooklyn Rosales and Taylie Hansen played 1 competition together">1</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">12</span><a class="lnk" href="https://volleyballlife.com/player/98425" target="_blank" rel="noopener">Eden Cisneros</a></th><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s2" title="Eden Cisneros and Haisley Flanagan played 2 competitions together">2</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc self"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s3" title="Eden Cisneros and Milan Hendrickson played 3 competitions together">3</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s2" title="Eden Cisneros and Abigail Moffett played 2 competitions together">2</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">13</span><a class="lnk" href="https://volleyballlife.com/player/149113" target="_blank" rel="noopener">Skyler Smith</a></th><td class="pc none"></td><td class="pc s5" title="Skyler Smith and Sadie Stafford played 6 competitions together">6</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc self"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">14</span><a class="lnk" href="https://volleyballlife.com/player/2048" target="_blank" rel="noopener">Dreya Scherfenberg</a></th><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s5" title="Dreya Scherfenberg and Sage Illian played 7 competitions together">7</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc self"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">15</span><a class="lnk" href="https://volleyballlife.com/player/22857" target="_blank" rel="noopener">Milan Hendrickson</a></th><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s3" title="Milan Hendrickson and Eden Cisneros played 3 competitions together">3</td><td class="pc none"></td><td class="pc none"></td><td class="pc self"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s1" title="Milan Hendrickson and Brooke Codey played 1 competition together">1</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">16</span><a class="lnk" href="https://volleyballlife.com/player/128445" target="_blank" rel="noopener">Cayden Dorger</a></th><td class="pc none"></td><td class="pc s1" title="Cayden Dorger and Sadie Stafford played 1 competition together">1</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc self"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s2" title="Cayden Dorger and Stella Sheeran played 2 competitions together">2</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">17</span><a class="lnk" href="https://volleyballlife.com/player/98125" target="_blank" rel="noopener">Ella Buchanan</a></th><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s2" title="Ella Buchanan and Haisley Flanagan played 2 competitions together">2</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc self"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s1" title="Ella Buchanan and Charlotte Jansen played 1 competition together">1</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">18</span><a class="lnk" href="https://volleyballlife.com/player/25298" target="_blank" rel="noopener">Lia Ray</a></th><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc self"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">19</span><a class="lnk" href="https://volleyballlife.com/player/94563" target="_blank" rel="noopener">Danica  Waterman</a></th><td class="pc none"></td><td class="pc s3" title="Danica  Waterman and Sadie Stafford played 3 competitions together">3</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc self"></td><td class="pc none"></td><td class="pc s2" title="Danica  Waterman and Taylie Hansen played 2 competitions together">2</td><td class="pc none"></td><td class="pc s1" title="Danica  Waterman and Sarah Albers played 1 competition together">1</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">20</span><a class="lnk" href="https://volleyballlife.com/player/9258" target="_blank" rel="noopener">Abigail Moffett</a></th><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s2" title="Abigail Moffett and Madison Gillinger played 2 competitions together">2</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s2" title="Abigail Moffett and Eden Cisneros played 2 competitions together">2</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc self"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s6" title="Abigail Moffett and Charlotte Jansen played 8 competitions together">8</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s2" title="Abigail Moffett and Sadie Harris played 2 competitions together">2</td><td class="pc none"></td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">21</span><a class="lnk" href="https://volleyballlife.com/player/99506" target="_blank" rel="noopener">Taylie Hansen</a></th><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s1" title="Taylie Hansen and Brooklyn Rosales played 1 competition together">1</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s2" title="Taylie Hansen and Danica  Waterman played 2 competitions together">2</td><td class="pc none"></td><td class="pc self"></td><td class="pc s1" title="Taylie Hansen and Emma Abernathy played 1 competition together">1</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s2" title="Taylie Hansen and Elle Sossong played 2 competitions together">2</td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">22</span><a class="lnk" href="https://volleyballlife.com/player/105341" target="_blank" rel="noopener">Emma Abernathy</a></th><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s1" title="Emma Abernathy and Taylie Hansen played 1 competition together">1</td><td class="pc self"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">23</span><a class="lnk" href="https://volleyballlife.com/player/84161" target="_blank" rel="noopener">Sarah Albers</a></th><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s1" title="Sarah Albers and Danica  Waterman played 1 competition together">1</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc self"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s1" title="Sarah Albers and Elle Sossong played 1 competition together">1</td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">24</span><a class="lnk" href="https://volleyballlife.com/player/161398" target="_blank" rel="noopener">Charlotte Jansen</a></th><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s3" title="Charlotte Jansen and Haisley Flanagan played 3 competitions together">3</td><td class="pc s1" title="Charlotte Jansen and Madison Gillinger played 1 competition together">1</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s1" title="Charlotte Jansen and Ella Buchanan played 1 competition together">1</td><td class="pc none"></td><td class="pc none"></td><td class="pc s6" title="Charlotte Jansen and Abigail Moffett played 8 competitions together">8</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc self"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">25</span><a class="lnk" href="https://volleyballlife.com/player/25347" target="_blank" rel="noopener">Brooke Codey</a></th><td class="pc none"></td><td class="pc s1" title="Brooke Codey and Sadie Stafford played 1 competition together">1</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s1" title="Brooke Codey and Milan Hendrickson played 1 competition together">1</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc self"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">26</span><a class="lnk" href="https://volleyballlife.com/player/42463" target="_blank" rel="noopener">Stella Sheeran</a></th><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s2" title="Stella Sheeran and Cayden Dorger played 2 competitions together">2</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc self"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">27</span><a class="lnk" href="https://volleyballlife.com/player/146170" target="_blank" rel="noopener">Kendal Walker</a></th><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc self"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">28</span><a class="lnk" href="https://volleyballlife.com/player/94909" target="_blank" rel="noopener">Sadie Harris</a></th><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s6" title="Sadie Harris and Madison Gillinger played 8 competitions together">8</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s2" title="Sadie Harris and Abigail Moffett played 2 competitions together">2</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc self"></td><td class="pc none"></td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">29</span><a class="lnk" href="https://volleyballlife.com/player/33084" target="_blank" rel="noopener">Elle Sossong</a></th><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s4" title="Elle Sossong and Breeze Johnson played 4 competitions together">4</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc s2" title="Elle Sossong and Taylie Hansen played 2 competitions together">2</td><td class="pc none"></td><td class="pc s1" title="Elle Sossong and Sarah Albers played 1 competition together">1</td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc self"></td><td class="pc none"></td></tr>
+<tr><th class="pr"><span class="rk">30</span><a class="lnk" href="https://volleyballlife.com/player/29887" target="_blank" rel="noopener">Hannah Perez</a></th><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc none"></td><td class="pc self"></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="legend">
+    <span class="key">Competitions together:</span>
+    <span class="key"><span class="ramp"><span style="background:var(--s1)"></span>
+      <span style="background:var(--s2)"></span><span style="background:var(--s3)"></span>
+      <span style="background:var(--s4)"></span><span style="background:var(--s5)"></span>
+      <span style="background:var(--s6)"></span></span> 1 &#8594; 8</span>
+    <span class="key">blank &#8212; never partnered</span>
+  </div>
+</section>
+
+<section>
+  <h2>The most-used pairings</h2>
+  <div class="cols">
+    <div>
+      <p class="lede">Inside the group.</p>
+      <div class="panel"><table>
+        <thead><tr><th scope="col">Comps</th><th scope="col">Athlete</th>
+          <th scope="col">Partner</th></tr></thead>
+        <tbody>
+      <tr><td class="num big">8</td><td><a class="lnk" href="https://volleyballlife.com/player/99596" target="_blank" rel="noopener">Madison Gillinger</a> <span class="dim">#6</span></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/94909" target="_blank" rel="noopener">Sadie Harris</a> <span class="dim">#28</span></td></tr>      <tr><td class="num big">8</td><td><a class="lnk" href="https://volleyballlife.com/player/9258" target="_blank" rel="noopener">Abigail Moffett</a> <span class="dim">#20</span></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/161398" target="_blank" rel="noopener">Charlotte Jansen</a> <span class="dim">#24</span></td></tr>      <tr><td class="num big">7</td><td><a class="lnk" href="https://volleyballlife.com/player/2048" target="_blank" rel="noopener">Dreya Scherfenberg</a> <span class="dim">#14</span></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/91052" target="_blank" rel="noopener">Sage Illian</a> <span class="dim">#4</span></td></tr>      <tr><td class="num big">6</td><td><a class="lnk" href="https://volleyballlife.com/player/147394" target="_blank" rel="noopener">Sadie Stafford</a> <span class="dim">#2</span></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/149113" target="_blank" rel="noopener">Skyler Smith</a> <span class="dim">#13</span></td></tr>      <tr><td class="num big">5</td><td><a class="lnk" href="https://volleyballlife.com/player/91897" target="_blank" rel="noopener">Ashlynn Proctor</a> <span class="dim">#8</span></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/53120" target="_blank" rel="noopener">Summer Tukua</a> <span class="dim">#10</span></td></tr>      <tr><td class="num big">4</td><td><a class="lnk" href="https://volleyballlife.com/player/91052" target="_blank" rel="noopener">Sage Illian</a> <span class="dim">#4</span></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/84725" target="_blank" rel="noopener">Sarah Cowan</a> <span class="dim">#7</span></td></tr>      <tr><td class="num big">4</td><td><a class="lnk" href="https://volleyballlife.com/player/84049" target="_blank" rel="noopener">Breeze Johnson</a> <span class="dim">#9</span></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/33084" target="_blank" rel="noopener">Elle Sossong</a> <span class="dim">#29</span></td></tr>      <tr><td class="num big">3</td><td><a class="lnk" href="https://volleyballlife.com/player/95165" target="_blank" rel="noopener">Milaniakai Padilla</a> <span class="dim">#3</span></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/84725" target="_blank" rel="noopener">Sarah Cowan</a> <span class="dim">#7</span></td></tr>      <tr><td class="num big">3</td><td><a class="lnk" href="https://volleyballlife.com/player/161398" target="_blank" rel="noopener">Charlotte Jansen</a> <span class="dim">#24</span></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/64896" target="_blank" rel="noopener">Haisley Flanagan</a> <span class="dim">#5</span></td></tr>      <tr><td class="num big">3</td><td><a class="lnk" href="https://volleyballlife.com/player/98425" target="_blank" rel="noopener">Eden Cisneros</a> <span class="dim">#12</span></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/22857" target="_blank" rel="noopener">Milan Hendrickson</a> <span class="dim">#15</span></td></tr>      <tr><td class="num big">3</td><td><a class="lnk" href="https://volleyballlife.com/player/94563" target="_blank" rel="noopener">Danica  Waterman</a> <span class="dim">#19</span></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/147394" target="_blank" rel="noopener">Sadie Stafford</a> <span class="dim">#2</span></td></tr>      <tr><td class="num big">2</td><td><a class="lnk" href="https://volleyballlife.com/player/22544" target="_blank" rel="noopener">Lucy Matuszak</a> <span class="dim">#1</span></td>
+        <td><a class="lnk" href="https://volleyballlife.com/player/91052" target="_blank" rel="noopener">Sage Illian</a> <span class="dim">#4</span></td></tr>
+        </tbody></table></div>
+    </div>
+    <div>
+      <p class="lede">With partners from outside the group &#8212; the pairings the matrix
+      cannot show.</p>
+      <div class="panel"><table>
+        <thead><tr><th scope="col">Comps</th><th scope="col">Athlete</th>
+          <th scope="col">Partner (outside)</th></tr></thead>
+        <tbody>
+      <tr><td class="num big">14</td><td><a class="lnk" href="https://volleyballlife.com/player/146170" target="_blank" rel="noopener">Kendal Walker</a> <span class="dim">#27</span></td>
+        <td>Emerson Thomas</td></tr>      <tr><td class="num big">13</td><td><a class="lnk" href="https://volleyballlife.com/player/29887" target="_blank" rel="noopener">Hannah Perez</a> <span class="dim">#30</span></td>
+        <td>Averie Ackel</td></tr>      <tr><td class="num big">8</td><td><a class="lnk" href="https://volleyballlife.com/player/59411" target="_blank" rel="noopener">Brooklyn Rosales</a> <span class="dim">#11</span></td>
+        <td>Meadow Rosales</td></tr>      <tr><td class="num big">7</td><td><a class="lnk" href="https://volleyballlife.com/player/98125" target="_blank" rel="noopener">Ella Buchanan</a> <span class="dim">#17</span></td>
+        <td>Brooke Canaday</td></tr>      <tr><td class="num big">6</td><td><a class="lnk" href="https://volleyballlife.com/player/42463" target="_blank" rel="noopener">Stella Sheeran</a> <span class="dim">#26</span></td>
+        <td>Haven Gindoff</td></tr>      <tr><td class="num big">5</td><td><a class="lnk" href="https://volleyballlife.com/player/128445" target="_blank" rel="noopener">Cayden Dorger</a> <span class="dim">#16</span></td>
+        <td>Ashley Ruschill</td></tr>      <tr><td class="num big">5</td><td><a class="lnk" href="https://volleyballlife.com/player/105341" target="_blank" rel="noopener">Emma Abernathy</a> <span class="dim">#22</span></td>
+        <td>Edie Joseph</td></tr>      <tr><td class="num big">4</td><td><a class="lnk" href="https://volleyballlife.com/player/147394" target="_blank" rel="noopener">Sadie Stafford</a> <span class="dim">#2</span></td>
+        <td>Georgeann Lee</td></tr>      <tr><td class="num big">4</td><td><a class="lnk" href="https://volleyballlife.com/player/128445" target="_blank" rel="noopener">Cayden Dorger</a> <span class="dim">#16</span></td>
+        <td>Callie Hopkins</td></tr>      <tr><td class="num big">4</td><td><a class="lnk" href="https://volleyballlife.com/player/146170" target="_blank" rel="noopener">Kendal Walker</a> <span class="dim">#27</span></td>
+        <td>Karisma Eich</td></tr>      <tr><td class="num big">3</td><td><a class="lnk" href="https://volleyballlife.com/player/22544" target="_blank" rel="noopener">Lucy Matuszak</a> <span class="dim">#1</span></td>
+        <td>Olivia Herron</td></tr>      <tr><td class="num big">3</td><td><a class="lnk" href="https://volleyballlife.com/player/147394" target="_blank" rel="noopener">Sadie Stafford</a> <span class="dim">#2</span></td>
+        <td>Danica Waterman</td></tr>
+        </tbody></table></div>
+    </div>
+  </div>
+</section>
+
+<section class="notes">
+  <h2>How to read it</h2>
+  <ul>
+    <li><b>A blank row is not a loner.</b> Only 36 of the 435 possible
+    pairings inside this group have ever happened, because most of these girls partner with
+    someone outside the top 30. Kendal Walker has no in-group partnership at all, yet has
+    played 14 competitions with one partner &#8212; the second table is where those live.</li>
+    <li><b>A competition, not a match.</b> Each count is one event-division entered together,
+    the same unit the class reports use, so a weekend played as a pair counts once however
+    many matches it ran to.</li>
+    <li><b>Doubles only.</b> Club, 3v3 and 5v5 entries are excluded throughout, so these are
+    genuine two-player partnerships.</li>
+    <li><b>Partner counts include everyone</b>, rated or not, inside this group or outside it.
+    That is the honest denominator for "how settled is she" &#8212;
+    Summer Tukua played the whole year with a single partner.</li>
+  </ul>
+</section>
+<footer>
+  Class of 2028 — top 30, cut on TruVolley as of 11 August 2026. Partnerships and results from
+  Volleyball Life, doubles only, twelve months to 11 August 2026.
+</footer>
+</div>

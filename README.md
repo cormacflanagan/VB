@@ -15,6 +15,13 @@ Three groups are covered:
 | Class of 2028 | 30 | Same cohort, tighter cut | [`docs/bntdp-2028_top30.html`](docs/bntdp-2028_top30.html) |
 | Class of 2028 | 20 | Same cohort, tightest cut | [`docs/bntdp-2028_top20.html`](docs/bntdp-2028_top20.html) |
 
+Two companion pages answer planning questions the matrix cannot:
+
+| Page | Question |
+| --- | --- |
+| [`docs/calendar-2027.html`](docs/calendar-2027.html) | Which events does the class of 2027 actually turn up to, month by month? |
+| [`docs/partners-2028_top30.html`](docs/partners-2028_top30.html) | Who partners with whom inside the class-of-2028 top 30? |
+
 **Doubles only.** Club, 3v3 and 5v5 results are excluded: a placing there reflects a squad
 of five to twelve, not the individual. The test is roster size rather than the division
 name, which is unreliable — "Open (5v5)", "OPEN", "Club Division" and "Girls Open (5 Pairs)"
@@ -196,6 +203,40 @@ strong fields spends it. Read the rating alongside the workload axis, not on its
 notable points carried by direct labels rather than colour, and hover text in an SVG `<title>`
 so the page still needs no JavaScript. The palette was checked with the dataviz validator and
 passes all six checks against both the light and dark chart surfaces.
+
+## The season calendar
+
+`scripts/calendar.py <group>` rolls the group's doubles entries up to the *event* — one row
+per tournament rather than per division — and counts how many of the top 60, top 30 and top 15
+turned up. `scripts/calendar_page.py` renders it in calendar order with a sequential heat ramp
+on the three turnout columns, so the events the cohort converges on stand out from the ones a
+single pair happened to enter. Events drawing fewer than two of the top 60 are dropped.
+
+For the class of 2027 that is **294 events**, of which 132 clear the bar. The season has one
+clear peak: AVP Juniors National Championships drew 40 of the 60, BVCA Individual Pairs 34, and
+AAU Hermosa Beach 27 — all three inside three weeks in July, all three at Hermosa Beach.
+
+Because the page exists to pick next year's schedule, each row is matched to its 2026-27
+edition where one is already on Volleyball Life's upcoming feed, by a name normalised to strip
+years and ordinals (`norm()` in `calendar.py`). **29 of the 132** matched; the rest are either
+not yet posted or genuinely one-off.
+
+## Partnerships
+
+`scripts/partners_page.py <group>` builds the who-played-with-whom matrix. A partnership is
+counted once per *competition* — the same (event, division) key the rest of the analysis uses —
+so a pair that goes deep in a bracket counts the same as one that goes out in the first round.
+
+Among the class-of-2028 top 30, **36 of the 435 possible pairings** have happened at all, across
+392 doubles entries and 126 distinct partners in total. The matrix is therefore sparse, and the
+more informative column is the count of *different* partners per player: the cohort mostly plays
+outside itself, and only Summer Tukua has a single partner all year.
+
+The densest pairings are Madison Gillinger–Sadie Harris and Abigail Moffett–Charlotte Jansen
+(8 competitions each), then Sage Illian–Dreya Scherfenberg (7). Because a player's most-used
+partner is often *not* in the group — Kendal Walker has 14 competitions with Emerson Thomas and
+no in-group partnership at all — the summary table marks out-of-group partners rather than
+hiding them.
 
 ## Caveats
 
