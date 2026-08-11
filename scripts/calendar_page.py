@@ -21,6 +21,28 @@ LOCAL_DIV = re.compile(r"women|girl'?s\s*18u", re.I)
 NOT_LOCAL_DIV = re.compile(r"\bmen'?s|boy'?s", re.I)
 
 
+# the national-team pathway: selection events, not ordinary tournaments. Turnout here is
+# not "who chose to come" but "who was picked or qualified", so it is counted against the
+# published NTDP rosters as well as against the class.
+PATHWAY = re.compile(r"national team trials|isf trials|youth olympic games trials"
+                     r"|beach national championship|ntdp", re.I)
+NTDP_GROUPS = (("18U", "Girls U18", 13), ("17U", "Girls U17", 20))
+
+
+def ntdp_attendance():
+    """How many of each published NTDP roster played each event, keyed by tournament id."""
+    out = {}
+    for g, _, _ in NTDP_GROUPS:
+        try:
+            d = json.load(open(f"{g}_clean.json"))
+        except FileNotFoundError:
+            continue
+        for name, rows in d["entries"].items():
+            for e in rows:
+                out.setdefault(str(e["tid"]), {}).setdefault(g, set()).add(name)
+    return out
+
+
 # CBVA runs much of the Southern California circuit but Volleyball Life sanctions it
 # "AVPA", so membership comes from CBVA's own listing (scripts/cbva.py), not the name.
 try:
@@ -206,6 +228,23 @@ def build(group):
           + dfmt(e['next']['date']).strftime('%-d %b %Y') + '</a>'
           if e.get('next') else '<span class="dim">&#8212;</span>'}</td>
       </tr>""" for e, b in focus)
+
+    att = ntdp_attendance()
+    path = sorted((e for e in D["events"] if PATHWAY.search(e["name"])),
+                  key=lambda e: e["date"])
+    pathrows = "".join(
+        f"""      <tr>
+        <td class="num dim nw">{dfmt(e['date']).strftime('%-d %b %Y')}</td>
+        <td class="evc"><a class="lnk" href="{VBL}/tournament/{e['tid']}" target="_blank"
+          rel="noopener">{esc(e['name'])}</a><span class="dv">{esc(e['location'])
+          if e['location'] else ''}</span></td>""" + "".join(
+            f'<td class="ht h{heat(e[k2], size)}" title="{e[k2]} of the {label.lower()}">'
+            f'{e[k2] or "&#183;"}</td>' for k2, size, label in TIERS) + "".join(
+            f'<td class="ht h{heat(len(att.get(str(e["tid"]), {}).get(g, ())), n)}" '
+            f'title="{len(att.get(str(e["tid"]), {}).get(g, ()))} of the {n} on the '
+            f'{esc(lab)} roster">{len(att.get(str(e["tid"]), {}).get(g, ())) or "&#183;"}'
+            f'</td>' for g, lab, n in NTDP_GROUPS) + """
+      </tr>""" for e in path)
 
     # how many of the group turned up to each local date, keyed by CBVA's id
     played = {}
@@ -397,6 +436,35 @@ a {{ color:var(--accent); }}
   one bracket at the busiest event of that month. The season builds to a July peak and goes
   quiet in autumn.</p>
   <div class="months">{"".join(bars)}</div>
+</section>
+
+<section>
+  <h2>The national-team pathway</h2>
+  <p class="lede">The dates that decide selection, and who was actually in them. The last two
+  columns count the athletes later named to the {NTDP_GROUPS[0][1]} and {NTDP_GROUPS[1][1]}
+  NTDP rosters &#8212; {NTDP_GROUPS[0][2]} and {NTDP_GROUPS[1][2]} girls &#8212; so they read as
+  the share of the selected group that was in the room, not as ordinary turnout. Shading is on
+  the same share-of-tier scale as the calendar below.</p>
+  <div class="panel">
+    <table>
+      <thead><tr>
+        <th scope="col">Date</th><th scope="col">Event</th>
+        <th scope="col" style="text-align:center">Top 60</th>
+        <th scope="col" style="text-align:center">Top 30</th>
+        <th scope="col" style="text-align:center">Top 15</th>
+        <th scope="col" style="text-align:center">NTDP U18</th>
+        <th scope="col" style="text-align:center">NTDP U17</th>
+      </tr></thead>
+      <tbody>
+{pathrows}
+      </tbody>
+    </table>
+  </div>
+  <p class="lede" style="margin-top:14px">Two dates carry the selection: the <b>U18 Beach
+  National Team Trials</b> at the end of January and the <b>Youth Olympic Games Trials</b> in
+  June, which between them held 12 and 11 of the eventual U18 roster of
+  {NTDP_GROUPS[0][2]}. Everything else on this list is a national title or a qualifier rather
+  than a selection event, and the NTDP columns show it &#8212; one or two names apiece.</p>
 </section>
 
 <section>

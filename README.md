@@ -258,6 +258,20 @@ years and ordinals (`norm()` in `calendar.py`). **4 of the 55** matched; the res
 not yet posted or genuinely one-off. Raising the bar to 4 mattered here: at 2, 29 events matched,
 but almost all were weekly 2v2 mini-tournaments that post a year of dates in advance.
 
+### The national-team pathway
+
+Selection dates are not ordinary tournaments — turnout there is who was picked or qualified,
+not who chose to enter — so they get their own section, matched by name (`PATHWAY`) and counted
+against the **published NTDP rosters** as well as against the class. That is the one place in
+this repo where the two data sets meet: the U18 and U17 groups are read for attendance and
+scored out of 13 and 20.
+
+It isolates the two dates that carry the selection. The **U18 Beach National Team Trials**
+(31 January, Manhattan Beach Pier) held 12 of the eventual 13-girl U18 roster, and the **Youth
+Olympic Games Trials** (18 June, Hermosa Beach Pier) held 11. Everything else on the pathway —
+the ISF trials, USAV Beach Nationals, the U23 trials — drew one to three of them, so a national
+title is not the same thing as a selection room.
+
 ### The local section
 
 A turnout-ranked calendar is a ranking of *travel*, and it buries the home venue: of the 21
