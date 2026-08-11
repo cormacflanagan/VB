@@ -14,6 +14,7 @@ Three groups are covered:
 | Class of 2028 | 60 | Derived — see below | [`docs/bntdp-2028.html`](docs/bntdp-2028.html) |
 | Class of 2028 | 30 | Same cohort, tighter cut | [`docs/bntdp-2028_top30.html`](docs/bntdp-2028_top30.html) |
 | Class of 2028 | 20 | Same cohort, tightest cut | [`docs/bntdp-2028_top20.html`](docs/bntdp-2028_top20.html) |
+| **2028 and younger** | 60 | Age-eligible — see below | [`docs/bntdp-2028_younger.html`](docs/bntdp-2028_younger.html) |
 
 Two companion pages answer planning questions the matrix cannot:
 
@@ -46,6 +47,37 @@ Two needed manual resolution, both in the U17 group:
   entirely in Southern California, matching her SCSN listing.
 - **Ashley Ruschill** has two profiles; 105245 is the active one (118 events), 247847 is a
   near-empty duplicate with nothing inside the window.
+
+## Age-eligible cohorts
+
+A graduating class answers "who else is in her year". A bracket does not work that way: an
+18U field is grad 2027 **and younger**, so the girls a 2027 player actually meets include every
+strong 2028, 2029 and 2030 playing up. USA Volleyball says the same thing in its own rosters —
+the NTDP **U17** group spans grad 2028, 2029 and 2030.
+
+`scripts/close_cohort.py <year>` crawls the partner graph to closure on `gradYear >= year`
+instead of `== year`. It seeds from the class populations already closed and from the ids those
+crawls *rejected* — a rejected id is one that partnered with a girl in the class and failed the
+equality test, which is exactly the pool the inequality admits — so round 0 is a re-check rather
+than a re-expansion, saving several thousand fetches. `scripts/cohort_roster.py <year> <n>`
+then draws the cut into a roster file the rest of the pipeline registers like any other group.
+
+**The 2028-and-younger cohort closed at 13,126 girls, 11,309 of them rated**, over six rounds
+whose above-floor admissions decayed 70, 17, 8, 4, 2, 0. The top 60 stopped moving after round 2
+— three further rounds and 4,600 more girls changed it by one place.
+
+**Twenty of that top 60 are younger than 2028** — seventeen from 2029, three from 2030 — so a
+third of the real field was invisible to the class grouping. They cluster at the two ends: five
+inside the top 15 (Nariah Johnson at #6, Tristan Ana Del Riego #10, Brooke Proctor #12, Reagan
+Carlin #13 as a 2030, Ashley Ruschill #14), and eight in the last sixteen places. The cut is
+tight: #60 is Isabella Cordaway-Dreier at 7.625, a thousandth ahead of #61.
+
+Because a cohort spans several classes, the roster table carries a **Class** column and each
+matrix row a year badge — shown only when the group actually spans more than one year.
+
+Crawls this long do not always outlive the machine they run on, so the expansion phase runs in
+chunks of 400 and records who has been expanded after each one. Without that, a resumed run
+restarts its whole round and can never converge.
 
 ## Graduating-class groups
 
