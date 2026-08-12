@@ -5,7 +5,7 @@ ramp. The per-player table counts *every* partner, inside the group or not, beca
 most-used partner is frequently someone outside the cut — which is exactly why a row can
 be blank across the matrix and still belong to a settled pair.
 """
-import html, json, sys
+import html, json, re, sys
 from collections import Counter, defaultdict
 
 VBL = "https://volleyballlife.com"
@@ -47,6 +47,9 @@ def build(group):
 
     # ---- matrix ----
     tvof = {p["name"]: p["tv"] for p in players}
+    spans = len({p.get("grad") for p in players if p.get("grad")}) > 1
+    gyof = {p["name"]: (f'<span class="gyc">{p["grad"]}</span>' if spans and p.get("grad")
+                        else "") for p in players}
     mrows = []
     for a in order:
         cells = []
@@ -61,11 +64,19 @@ def build(group):
             cells.append(f'<td class="pc s{step(n)}" title="{esc(a)} and {esc(b)} played '
                          f'{n} competition{"s" if n != 1 else ""} together">{n}</td>')
         mrows.append(f'<tr><th class="pr"><span class="rk">{rank[a]}</span>{lnk(a)}'
-                     f'<span class="tvc">{tvof[a]:.2f}</span></th>'
+                     f'{gyof.get(a, "")}<span class="tvc">{tvof[a]:.2f}</span></th>'
                      + "".join(cells) + "</tr>")
     heads = "".join(f'<th class="ph" title="{esc(n)}">{rank[n]}</th>' for n in order)
 
     # ---- per-player ----
+    # a group drawn on age eligibility spans several classes, so say which; a single-class
+    # group takes its year from the key rather than showing a column of one repeated number
+    keyyear = re.match(r"(\d{4})", group)
+    for pl in players:
+        if not pl.get("grad") and keyyear:
+            pl["grad"] = int(keyyear.group(1))
+    showgrad = len({pl.get("grad") for pl in players if pl.get("grad")}) > 1
+    showht = any(pl.get("height") for pl in players)
     prows = []
     for p in players:
         n = p["name"]
@@ -78,6 +89,8 @@ def build(group):
         outside = "" if top in grp else '<i class="out" title="not in this group">&#9679;</i>'
         prows.append(f"""      <tr>
         <th scope="row"><span class="rk">{rank[n]}</span>{lnk(n)}</th>
+        {f'<td class="num gy">{p.get("grad") or "&#8212;"}</td>' if showgrad else ''}
+        {f'<td class="num nw ht">{esc(p.get("height") or "&#8212;")}</td>' if showht else ''}
         <td class="num tv">{p['tv']:.3f}</td>
         <td class="num">{comps}</td>
         <td class="num big">{distinct or '&#8212;'}</td>
@@ -175,6 +188,11 @@ tbody tr:hover td {{ background:var(--raise); }}
   font-variant-numeric:tabular-nums; font-size:13px; }}
 .big {{ font-size:15px; font-weight:700; color:var(--ink); }}
 .tv {{ color:var(--ink); font-weight:600; }}
+.gy {{ color:var(--muted); }}
+.ht {{ color:var(--muted); font-size:12.5px; }}
+.gyc {{ font-size:10.5px; color:var(--muted); background:var(--wash); border-radius:2px;
+  padding:0 4px; margin-left:6px; font-weight:650;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }}
 .tvc {{ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:11px;
   font-weight:650; color:var(--accent); background:var(--accent-soft); border-radius:2px;
   padding:1px 5px; margin-left:7px; font-variant-numeric:tabular-nums; }}
@@ -257,7 +275,8 @@ a {{ color:var(--accent); }}
   <div class="panel">
     <table>
       <thead><tr>
-        <th scope="col">Athlete</th><th scope="col">TruVolley</th>
+        <th scope="col">Athlete</th>{'<th scope="col">Class</th>' if showgrad else ''}{
+        '<th scope="col">Height</th>' if showht else ''}<th scope="col">TruVolley</th>
         <th scope="col">Comps</th><th scope="col">Partners</th>
         <th scope="col">In group</th><th scope="col">Most-used partner</th>
         <th scope="col">Share with her</th>
