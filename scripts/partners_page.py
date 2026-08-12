@@ -88,6 +88,13 @@ def build(group):
           <span class="bar"><span style="width:{share:.0f}%"></span></span></td>
       </tr>""")
 
+    # the clearest illustration of an empty row: whoever plays most with someone outside
+    blank = [(max(c.values()), n, c.most_common(1)[0][0]) for n, c in allp.items()
+             if n in grp and c and not any(q in grp for q in c)]
+    loner = (f"{esc(max(blank)[1])} has no in-group partnership at all, yet has played "
+             f"{max(blank)[0]} competitions with {esc(max(blank)[2])}." if blank else
+             "Every girl here has at least one in-group partnership, so no row is empty.")
+
     # ---- most frequent pairings, in and out of group ----
     top_in = sorted(cnt.items(), key=lambda kv: -kv[1])[:12]
     ir = "".join(
@@ -280,7 +287,7 @@ a {{ color:var(--accent); }}
     <span class="key"><span class="ramp"><span style="background:var(--s1)"></span>
       <span style="background:var(--s2)"></span><span style="background:var(--s3)"></span>
       <span style="background:var(--s4)"></span><span style="background:var(--s5)"></span>
-      <span style="background:var(--s6)"></span></span> 1 &#8594; 8</span>
+      <span style="background:var(--s6)"></span></span> 1 &#8594; {max(cnt.values()) if cnt else 1}</span>
     <span class="key">blank &#8212; never partnered</span>
   </div>
 </section>
@@ -315,8 +322,7 @@ a {{ color:var(--accent); }}
   <ul>
     <li><b>A blank row is not a loner.</b> Only {len(cnt)} of the {N * (N - 1) // 2} possible
     pairings inside this group have ever happened, because most of these girls partner with
-    someone outside the top 30. Kendal Walker has no in-group partnership at all, yet has
-    played 14 competitions with one partner &#8212; the second table is where those live.</li>
+    someone outside these {N}. {loner} The second table is where those live.</li>
     <li><b>A competition, not a match.</b> Each count is one event-division entered together,
     the same unit the class reports use, so a weekend played as a pair counts once however
     many matches it ran to.</li>

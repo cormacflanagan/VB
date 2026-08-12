@@ -23,6 +23,7 @@ Two companion pages answer planning questions the matrix cannot:
 | --- | --- |
 | [`docs/calendar-2027.html`](docs/calendar-2027.html) | Which events does the class of 2027 actually turn up to, month by month? |
 | [`docs/partners-2028_top30.html`](docs/partners-2028_top30.html) | Who partners with whom inside the class-of-2028 top 30? |
+| [`docs/partners-2027_younger.html`](docs/partners-2027_younger.html) | The same, across the 18U-eligible top 60. |
 
 **Doubles only.** Club, 3v3 and 5v5 results are excluded: a placing there reflects a squad
 of five to twelve, not the individual. The test is roster size rather than the division
@@ -373,6 +374,10 @@ Among the class-of-2028 top 30, **36 of the 435 possible pairings** have happene
 392 doubles entries and 126 distinct partners in total. The matrix is therefore sparse, and the
 more informative column is the count of *different* partners per player: the cohort mostly plays
 outside itself, and only Summer Tukua has a single partner all year.
+
+Run over the 18U-eligible top 60 the picture is the same shape at twice the size: **96 of 1,770
+possible pairings**, 818 doubles entries, 222 distinct partners. The densest are Sienna
+Mattoon–Tristan Ana Del Riego (9), Brooke Proctor–Reagan Carlin (8), then three pairs at 7.
 
 The densest pairings are Madison Gillinger–Sadie Harris and Abigail Moffett–Charlotte Jansen
 (8 competitions each), then Sage Illian–Dreya Scherfenberg (7). Because a player's most-used
