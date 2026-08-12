@@ -46,6 +46,16 @@ def build(group):
                 f'{esc(nm)}</a>') if pid else esc(nm)
 
     # ---- matrix ----
+    # groups collected before the year was kept per player still have it on the roster
+    try:
+        from rosters import GROUPS
+        rmeta = (GROUPS.get(group) or {}).get("meta") or {}
+        for pl in players:
+            if not pl.get("grad"):
+                pl["grad"] = (rmeta.get(str(pl.get("id"))) or {}).get("grad")
+    except Exception:
+        pass
+
     tvof = {p["name"]: p["tv"] for p in players}
     spans = len({p.get("grad") for p in players if p.get("grad")}) > 1
     gyof = {p["name"]: (f'<span class="gyc">{p["grad"]}</span>' if spans and p.get("grad")

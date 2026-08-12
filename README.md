@@ -24,6 +24,7 @@ Two companion pages answer planning questions the matrix cannot:
 | [`docs/calendar-2027.html`](docs/calendar-2027.html) | Which events does the class of 2027 actually turn up to, month by month? |
 | [`docs/partners-2028_top30.html`](docs/partners-2028_top30.html) | Who partners with whom inside the class-of-2028 top 30? |
 | [`docs/partners-2027_younger.html`](docs/partners-2027_younger.html) | The same, across the 18U-eligible top 60. |
+| [`docs/partners-2028_younger.html`](docs/partners-2028_younger.html) | The same, across the 17U-eligible top 60. |
 
 **Doubles only.** Club, 3v3 and 5v5 results are excluded: a placing there reflects a squad
 of five to twelve, not the individual. The test is roster size rather than the division
