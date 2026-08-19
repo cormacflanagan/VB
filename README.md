@@ -429,10 +429,24 @@ The algorithm raises this station's *early* Augusts (+1.6 °F on 1894–1917, +1
 correction that is trying to flatten it. The last 30 Augusts average
 **4.8 °F warmer at night** than the first 30, and every decade average from the 1980s on is
 warmer than every decade average before it. The nighttime gap against Watsonville wanders
-too, but without direction. What the record cannot separate is the town from the climate —
-homogenisation catches a thermometer moving, not a city growing around one, and warmer
-nights with unchanged afternoons is the textbook shape of an urban heat island as well as of
-a warming ocean.
+too, but without direction. **Is it the town?** Flat days and warmer nights is the shape an urban heat island makes — and
+also what a warming ocean makes at a coastal site, and what the planet has done, since the
+gap between daily highs and lows has narrowed over rural land and open ocean alike. The shape
+alone cannot tell you. What can is whether the trend sorts by how built-up a station is, so
+the pipeline measures August nights at every station within 160 km whose record covers
+1950–2021. **It does not sort.** Mt Hamilton, a mountain observatory with nothing built around
+it, warmed +0.91 °F per decade against Santa Cruz's +0.95; San Jose, whose metro went from
+~300k to ~2M over the same years, warmed *less*, at +0.82. Across the stations where nothing
+was built the mean is still +0.51 °F per decade.
+
+There is a local excess, and it is the minority share: the year-by-year difference against
+each reference trends up by a median of **+0.21 °F per decade**, roughly a fifth of Santa
+Cruz's own figure. Treat it as an order of magnitude — the references disagree from +0.12 to
++1.22, a spread wider than the number. Two things push the local share up rather than down:
+urban warming scales with the *logarithm* of population, so 20k→60k can add more than
+300k→2M, and this gauge sits in a backyard with a house 8–35 ft away and a fence at five,
+which cuts how much sky it can radiate to at night. Homogenisation catches a thermometer
+moving, not a hedge growing.
 
 Either way the day–night gap has closed: across the 112 Augusts with both readings, the mean
 spread between the day's high and its low fell from 24.4 °F over the first 30 to 19.7 °F over

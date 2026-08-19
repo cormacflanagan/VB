@@ -234,14 +234,115 @@ a { color:var(--accent); }
   after the previous observer gave up, and at least three times before that. It is a
   backyard gauge &#8212; the site description records a house 8 to 35&#8202;feet away and a
   fence at five. Watsonville has not moved since 1941 and has read at 8am since 1931.</p>
-  <p class="lede"><b>What none of this can separate is the town from the climate.</b>
-  Homogenisation catches the thermometer moving; it does not catch a city growing around a
-  thermometer that stayed put. Santa Cruz went from a town of a few thousand when this
-  record opened to a city of sixty thousand, and built surfaces release at night what they
-  absorbed by day &#8212; the textbook shape of an urban heat island is warmer nights with
-  unchanged afternoons, which is exactly the shape here. A warming ocean pushes the same
-  way. The record tells you August nights in this town are 4.8&#176;F warmer
-  than they were; it does not tell you how much of that is the town.</p>
+  <p class="lede"><b>Which leaves the question the shape of this invites: is it the
+  town?</b> Flat days and warmer nights is what a city growing around a thermometer
+  produces &#8212; built surfaces release at night what they absorbed by day. It is also
+  what a warming ocean produces at a coastal site, where the marine layer caps the
+  afternoon and the night floor follows the sea, and it is what the whole planet has done:
+  the gap between daily highs and lows has narrowed over rural land and open ocean alike.
+  The shape on its own does not tell you which.</p>
+  <p class="lede">What would tell you is whether the trend sorts by how built-up a station
+  is. Every station within 160&#8202;km whose record covers 1950&#8211;2021,
+  ordered by what August nights did:</p>
+  <div class="panel" style="max-height:none">
+    <table>
+      <thead><tr>
+        <th scope="col">Station</th>
+        <th scope="col" style="text-align:right">km</th>
+        <th scope="col">What is around it</th>
+        <th scope="col" style="text-align:right">Aug nights, &#176;F&#8202;/&#8202;decade</th>
+        <th scope="col" style="text-align:right">Excess at Santa Cruz</th>
+      </tr></thead>
+      <tbody>
+      <tr>
+        <td class="yr">Santa Cruz</td>
+        <td class="num dim">&#8212;</td>
+        <td>City, ~21k to ~62k over this window</td>
+        <td class="num hot">+0.95</td>
+        <td class="num dim">&#8212;</td>
+      </tr>
+      <tr>
+        <td class="yr">Mt Hamilton</td>
+        <td class="num dim">51</td>
+        <td>Mountain observatory, nothing built</td>
+        <td class="num">+0.91</td>
+        <td class="num dim">+0.14</td>
+      </tr>
+      <tr>
+        <td class="yr">San Jose</td>
+        <td class="num dim">42</td>
+        <td>Metro, ~300k to ~2M since 1950</td>
+        <td class="num">+0.82</td>
+        <td class="num dim">+0.12</td>
+      </tr>
+      <tr>
+        <td class="yr">Watsonville</td>
+        <td class="num dim">21</td>
+        <td>Town, ~11k to ~52k</td>
+        <td class="num">+0.77</td>
+        <td class="num dim">+0.20</td>
+      </tr>
+      <tr>
+        <td class="yr">King City</td>
+        <td class="num dim">116</td>
+        <td>Small farm town, ~13k</td>
+        <td class="num">+0.75</td>
+        <td class="num dim">+0.21</td>
+      </tr>
+      <tr>
+        <td class="yr">Salinas airport</td>
+        <td class="num dim">50</td>
+        <td>Airfield beside an irrigated valley</td>
+        <td class="num">+0.61</td>
+        <td class="num dim">+0.41</td>
+      </tr>
+      <tr>
+        <td class="yr">Half Moon Bay</td>
+        <td class="num dim">67</td>
+        <td>Small coastal town, ~12k</td>
+        <td class="num">+0.44</td>
+        <td class="num dim">+0.48</td>
+      </tr>
+      <tr>
+        <td class="yr">Pinnacles</td>
+        <td class="num dim">92</td>
+        <td>National park, nothing built</td>
+        <td class="num">&#8722;0.15</td>
+        <td class="num dim">+1.22</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="figcap" style="margin-bottom:22px">August daily minima, 1950&#8211;2021,
+  ordinary least squares on each station&#8217;s own annual means. <b>Excess</b> is the trend
+  of the year-by-year difference against Santa Cruz over the years both recorded, which
+  cancels the weather they share.</p>
+  <p class="lede"><b>It does not sort.</b> The mountain observatory at Mt&#8202;Hamilton,
+  with nothing built around it, warmed
+  +0.91&#176;F
+  per decade against Santa Cruz&#8217;s +0.95 &#8212;
+  the same answer. San Jose, whose metro went from about 300,000 people to two million over
+  the same years, warmed <i>less</i>. Across the stations where nothing much was built the
+  mean is still +0.51&#176;F per decade. Warmer August nights
+  are what this region did, town or no town.</p>
+  <p class="lede">There is a local excess on top of it, and it is smaller than the thing
+  itself. The year-by-year difference against each reference trends up by a median of
+  <b>+0.21&#176;F per decade</b> &#8212; roughly a fifth of
+  Santa Cruz&#8217;s own figure, or about a degree and a half of the
+  6.7&#176;F
+  this station shows since 1950. Treat that as an order of magnitude, not a
+  measurement: the individual references disagree from
+  +0.12 to +1.22, a spread
+  wider than the number, and the two stations with nothing built around them are the two
+  that disagree most.</p>
+  <p class="lede">Two things push the local share up rather than down. Urban warming scales
+  with the <i>logarithm</i> of population, so a town going from twenty thousand to sixty
+  thousand can add more than a city going from 300,000 to two million &#8212; San Jose is a
+  weaker control than it looks. And this particular gauge sits in a backyard with a house 8
+  to 35&#8202;feet away and a fence at five: walls that close cut how much sky the
+  thermometer can radiate to, which warms nights specifically. That is microsite rather than
+  city, but it pushes the same way, and homogenisation only catches it if it arrived as a
+  step rather than as a hedge growing.</p>
   <p class="lede">Either way the day&#8211;night gap has closed. Across the
   112 Augusts with both readings, the mean spread between the day&#8217;s high and
   its low fell from 24.4&#176;F over the first 30 to

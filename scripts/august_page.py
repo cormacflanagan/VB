@@ -397,9 +397,46 @@ def offsets(d):
         f'</div>' for o in n["decades"])
 
 
+def urban_table(d):
+    u = d["urban"]
+    rows = [f"""      <tr>
+        <td class="yr">Santa Cruz</td>
+        <td class="num dim">&#8212;</td>
+        <td>City, ~21k to ~62k over this window</td>
+        <td class="num hot">{sgn(u["santa_cruz_trend"])}</td>
+        <td class="num dim">&#8212;</td>
+      </tr>"""]
+    for r in u["references"]:
+        rows.append(f"""      <tr>
+        <td class="yr">{esc(r["name"])}</td>
+        <td class="num dim">{r["km"]}</td>
+        <td>{esc(r["setting"])}</td>
+        <td class="num">{sgn(r["trend"])}</td>
+        <td class="num dim">{sgn(r["excess"])}</td>
+      </tr>""")
+    return f"""  <div class="panel" style="max-height:none">
+    <table>
+      <thead><tr>
+        <th scope="col">Station</th>
+        <th scope="col" style="text-align:right">km</th>
+        <th scope="col">What is around it</th>
+        <th scope="col" style="text-align:right">Aug nights, &#176;F&#8202;/&#8202;decade</th>
+        <th scope="col" style="text-align:right">Excess at Santa Cruz</th>
+      </tr></thead>
+      <tbody>
+{chr(10).join(rows)}
+      </tbody>
+    </table>
+  </div>
+  <p class="figcap" style="margin-bottom:22px">August daily minima, {u["from"]}&#8211;{u["to"]},
+  ordinary least squares on each station&#8217;s own annual means. <b>Excess</b> is the trend
+  of the year-by-year difference against Santa Cruz over the years both recorded, which
+  cancels the weather they share.</p>"""
+
+
 def evidence(d, obs, adj, hot):
     """The middle section: why a second line is drawn, and what it changes here."""
-    c, n, L = COPY[d["element"]], d["neighbour"], d["ladder"]
+    c, n, L, u = COPY[d["element"]], d["neighbour"], d["ladder"], d["urban"]
     to, ta = d["observed_trend_f_per_decade"], d["adjusted_trend_f_per_decade"]
     shift = d["last30_f"] - d["first30_f"]
     per = {int(y): v for y, v in L["per_year"].items()}
@@ -464,6 +501,14 @@ def evidence(d, obs, adj, hot):
   record even after adjustment, at {adj[hot]:.1f}&#176;F. What changes is how exceptional it
   looks: the 2000s come up by {sgn(c_tot, 1)}&#176;F and {hot} comes down, closing about
   three degrees of the gap between them.</p>
+  <p class="lede">One more thing the neighbours say: Santa Cruz is alone in reading flat.
+  Over {d["urban"]["from"]}&#8211;{d["urban"]["to"]} every station within 160&#8202;km has
+  August afternoons rising, from {min(r["trend"] for r in d["urban"]["references"]):+.2f} to
+  {max(r["trend"] for r in d["urban"]["references"]):+.2f}&#176;F per decade, while this one
+  reads {d["urban"]["santa_cruz_trend"]:+.2f}. That is not proof the station is wrong &#8212;
+  a sea-cliff town can genuinely differ from an inland valley &#8212; but combined with a
+  correction larger than the trend, it is why the flat line is the one claim on this page
+  not worth leaning on.</p>
   <p class="lede">The nights are the other half of the question, and unlike the afternoons
   they give a clear answer: <a href="{c["other"][0]}">{c["other"][1]}</a> warmed
   {d["diurnal"]["first30_f"] - d["diurnal"]["last30_f"]:.1f}&#176;F relative to the days,
@@ -501,14 +546,43 @@ def evidence(d, obs, adj, hot):
   takes after 2009, which is what you would expect if that jump is about sun on a gauge.</p>
 {strip}
 {hist}
-  <p class="lede"><b>What none of this can separate is the town from the climate.</b>
-  Homogenisation catches the thermometer moving; it does not catch a city growing around a
-  thermometer that stayed put. Santa Cruz went from a town of a few thousand when this
-  record opened to a city of sixty thousand, and built surfaces release at night what they
-  absorbed by day &#8212; the textbook shape of an urban heat island is warmer nights with
-  unchanged afternoons, which is exactly the shape here. A warming ocean pushes the same
-  way. The record tells you August nights in this town are {abs(shift):.1f}&#176;F warmer
-  than they were; it does not tell you how much of that is the town.</p>
+  <p class="lede"><b>Which leaves the question the shape of this invites: is it the
+  town?</b> Flat days and warmer nights is what a city growing around a thermometer
+  produces &#8212; built surfaces release at night what they absorbed by day. It is also
+  what a warming ocean produces at a coastal site, where the marine layer caps the
+  afternoon and the night floor follows the sea, and it is what the whole planet has done:
+  the gap between daily highs and lows has narrowed over rural land and open ocean alike.
+  The shape on its own does not tell you which.</p>
+  <p class="lede">What would tell you is whether the trend sorts by how built-up a station
+  is. Every station within 160&#8202;km whose record covers {u["from"]}&#8211;{u["to"]},
+  ordered by what August nights did:</p>
+{urban_table(d)}
+  <p class="lede"><b>It does not sort.</b> The mountain observatory at Mt&#8202;Hamilton,
+  with nothing built around it, warmed
+  {[r for r in d["urban"]["references"] if r["name"] == "Mt Hamilton"][0]["trend"]:+.2f}&#176;F
+  per decade against Santa Cruz&#8217;s {d["urban"]["santa_cruz_trend"]:+.2f} &#8212;
+  the same answer. San Jose, whose metro went from about 300,000 people to two million over
+  the same years, warmed <i>less</i>. Across the stations where nothing much was built the
+  mean is still {sgn(d["urban"]["low_growth_mean"])}&#176;F per decade. Warmer August nights
+  are what this region did, town or no town.</p>
+  <p class="lede">There is a local excess on top of it, and it is smaller than the thing
+  itself. The year-by-year difference against each reference trends up by a median of
+  <b>{sgn(d["urban"]["median_excess"])}&#176;F per decade</b> &#8212; roughly a fifth of
+  Santa Cruz&#8217;s own figure, or about a degree and a half of the
+  {(d["urban"]["santa_cruz_trend"] * (d["urban"]["to"] - d["urban"]["from"]) / 10):.1f}&#176;F
+  this station shows since {d["urban"]["from"]}. Treat that as an order of magnitude, not a
+  measurement: the individual references disagree from
+  {sgn(d["urban"]["excess_range"][0])} to {sgn(d["urban"]["excess_range"][1])}, a spread
+  wider than the number, and the two stations with nothing built around them are the two
+  that disagree most.</p>
+  <p class="lede">Two things push the local share up rather than down. Urban warming scales
+  with the <i>logarithm</i> of population, so a town going from twenty thousand to sixty
+  thousand can add more than a city going from 300,000 to two million &#8212; San Jose is a
+  weaker control than it looks. And this particular gauge sits in a backyard with a house 8
+  to 35&#8202;feet away and a fence at five: walls that close cut how much sky the
+  thermometer can radiate to, which warms nights specifically. That is microsite rather than
+  city, but it pushes the same way, and homogenisation only catches it if it arrived as a
+  step rather than as a hedge growing.</p>
   <p class="lede">Either way the day&#8211;night gap has closed. Across the
   {dr["years"]} Augusts with both readings, the mean spread between the day&#8217;s high and
   its low fell from {dr["first30_f"]:.1f}&#176;F over the first 30 to

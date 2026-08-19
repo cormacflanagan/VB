@@ -52,6 +52,21 @@ NEIGHBOUR = "USC00049473"
 NEIGHBOUR_NAME = "Watsonville"
 NEIGHBOUR_KM = 21
 
+# The urban-heat test needs stations that differ in how much was built around them, not
+# just in where they are. These are every station within 160 km whose daily record starts
+# by 1950 and still runs, sorted from most built-up to least: if warmer nights are the
+# town, the trend should sort the same way.
+REFERENCES = [
+    ("USC00047821", "San Jose", 42, "Metro, ~300k to ~2M since 1950"),
+    ("USC00049473", "Watsonville", 21, "Town, ~11k to ~52k"),
+    ("USW00023233", "Salinas airport", 50, "Airfield beside an irrigated valley"),
+    ("USC00043714", "Half Moon Bay", 67, "Small coastal town, ~12k"),
+    ("USC00044555", "King City", 116, "Small farm town, ~13k"),
+    ("USC00045933", "Mt Hamilton", 51, "Mountain observatory, nothing built"),
+    ("USC00046926", "Pinnacles", 92, "National park, nothing built"),
+]
+TEST_FROM, TEST_TO = 1950, 2021   # the window every reference above covers
+
 DAILY = ("https://www.ncei.noaa.gov/data/global-historical-climatology-network-daily"
          "/access/{}.csv")
 USHCN = "https://www.ncei.noaa.gov/pub/data/ushcn/v2.5/ushcn.{1}.latest.{0}.tar.gz"
@@ -92,7 +107,7 @@ def refresh():
     """Pull the source files into data/ghcn/. They are the inputs, not the output."""
     import io, tarfile
     os.makedirs(CACHE, exist_ok=True)
-    for sid in (STATION, NEIGHBOUR):
+    for sid in [STATION, NEIGHBOUR] + [r[0] for r in REFERENCES]:
         with urllib.request.urlopen(DAILY.format(sid), context=_ctx(), timeout=300) as r:
             open(os.path.join(CACHE, sid + ".csv"), "wb").write(r.read())
     for el in ELEMENTS:
@@ -209,6 +224,48 @@ def against_neighbour(key):
     return out
 
 
+def urban_test(key):
+    """Does the trend sort by how built-up the station is?
+
+    The signature the question turns on -- flat days, warmer nights -- is what a town
+    growing round a thermometer produces. It is also what a warming ocean and a falling
+    diurnal range produce, and those leave every station in the region alike. The two are
+    told apart by whether the nighttime trend tracks development, so this measures the
+    trend at each reference over one common window, and the trend of the difference
+    against Santa Cruz year by year, which cancels the weather they share.
+    """
+    here, _ = observed(STATION, key)
+    mine = {y: v[0] for y, v in here.items()
+            if v[1] >= MIN_DAYS and TEST_FROM <= y <= TEST_TO}
+    out = []
+    for sid, name, km, setting in REFERENCES:
+        got, _ = observed(sid, key)
+        theirs = {y: v[0] for y, v in got.items()
+                  if v[1] >= MIN_DAYS and TEST_FROM <= y <= TEST_TO}
+        if len(theirs) < 40:
+            continue
+        diff = {y: mine[y] - theirs[y] for y in mine if y in theirs}
+        t, _ = fit(sorted(theirs), [theirs[y] for y in sorted(theirs)])
+        dt, _ = fit(sorted(diff), [diff[y] for y in sorted(diff)])
+        out.append({"id": sid, "name": name, "km": km, "setting": setting,
+                    "trend": round(t * 10, 3), "excess": round(dt * 10, 3),
+                    "years": len(theirs), "paired": len(diff)})
+    mt, _ = fit(sorted(mine), [mine[y] for y in sorted(mine)])
+    ex = sorted(o["excess"] for o in out)
+    return {
+        "from": TEST_FROM, "to": TEST_TO,
+        "santa_cruz_trend": round(mt * 10, 3),
+        "references": sorted(out, key=lambda o: -o["trend"]),
+        "median_excess": round(ex[len(ex) // 2], 3),
+        # the same trend measured where nobody built anything: what the region did
+        "low_growth_mean": round(sum(o["trend"] for o in out
+                                     if o["name"] not in ("San Jose", "Watsonville"))
+                                 / len([o for o in out
+                                        if o["name"] not in ("San Jose", "Watsonville")]), 3),
+        "excess_range": [ex[0], ex[-1]],
+    }
+
+
 def running(series, window=SMOOTH):
     """Centred mean over `window` years. Two absences inside the window are tolerated --
     the record has a handful of gaps, and demanding a full window would erase eleven years
@@ -289,6 +346,7 @@ def build(element):
             "spread_f": round(max(o["diff"] for o in off) - min(o["diff"] for o in off), 2),
         },
         "ladder": ladder(element),
+        "urban": urban_test(spec["ghcn"]),
         "diurnal": {
             "span": [ry[0], ry[-1]], "years": len(ry),
             "mean_f": round(sum(rng.values()) / len(rng), 2),

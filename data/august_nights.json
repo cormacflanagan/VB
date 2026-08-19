@@ -622,6 +622,89 @@
    }
   ]
  },
+ "urban": {
+  "from": 1950,
+  "to": 2021,
+  "santa_cruz_trend": 0.949,
+  "references": [
+   {
+    "id": "USC00045933",
+    "name": "Mt Hamilton",
+    "km": 51,
+    "setting": "Mountain observatory, nothing built",
+    "trend": 0.905,
+    "excess": 0.139,
+    "years": 63,
+    "paired": 61
+   },
+   {
+    "id": "USC00047821",
+    "name": "San Jose",
+    "km": 42,
+    "setting": "Metro, ~300k to ~2M since 1950",
+    "trend": 0.818,
+    "excess": 0.123,
+    "years": 56,
+    "paired": 55
+   },
+   {
+    "id": "USC00049473",
+    "name": "Watsonville",
+    "km": 21,
+    "setting": "Town, ~11k to ~52k",
+    "trend": 0.771,
+    "excess": 0.198,
+    "years": 70,
+    "paired": 67
+   },
+   {
+    "id": "USC00044555",
+    "name": "King City",
+    "km": 116,
+    "setting": "Small farm town, ~13k",
+    "trend": 0.75,
+    "excess": 0.21,
+    "years": 66,
+    "paired": 63
+   },
+   {
+    "id": "USW00023233",
+    "name": "Salinas airport",
+    "km": 50,
+    "setting": "Airfield beside an irrigated valley",
+    "trend": 0.611,
+    "excess": 0.412,
+    "years": 69,
+    "paired": 66
+   },
+   {
+    "id": "USC00043714",
+    "name": "Half Moon Bay",
+    "km": 67,
+    "setting": "Small coastal town, ~12k",
+    "trend": 0.438,
+    "excess": 0.485,
+    "years": 65,
+    "paired": 62
+   },
+   {
+    "id": "USC00046926",
+    "name": "Pinnacles",
+    "km": 92,
+    "setting": "National park, nothing built",
+    "trend": -0.154,
+    "excess": 1.223,
+    "years": 62,
+    "paired": 59
+   }
+  ],
+  "median_excess": 0.21,
+  "low_growth_mean": 0.51,
+  "excess_range": [
+   0.123,
+   1.223
+  ]
+ },
  "diurnal": {
   "span": [
    1893,
