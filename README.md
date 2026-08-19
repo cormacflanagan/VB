@@ -386,6 +386,29 @@ partner is often *not* in the group — Kendal Walker has 14 competitions with E
 no in-group partnership at all — the summary table marks out-of-group partners rather than
 hiding them.
 
+## Olympic height and weight
+
+`scripts/olympedia.py` scrapes [Olympedia](https://www.olympedia.org) for the anthropometry of
+every Olympic beach volleyball player, and `scripts/anthro_page.py` renders it. The route is
+edition → result page → athlete biography, because Olympedia has no bulk export: eight Summer
+Games (1996–2024) plus the Youth Olympic tournaments of 2014 and 2018, giving **714 athletes**,
+351 of them women, **230 with both a height and a weight** on file.
+
+The two populations are deliberately kept apart. Senior Olympians are the adult reference;
+the Youth Olympic field is 16- to 18-year-olds, which is the only Olympic-grade sample that is
+actually a junior's age. Comparing a 16-year-old against senior means is the wrong comparison,
+and holding both lets the page make that point with data instead of a caveat.
+
+Weight tracks height closely — the senior fit is 0.68 kg/cm with r = 0.73. Inside the
+172–178 cm band (5′9″ ± an inch) there are **60 senior Olympians**, median **67 kg / 148 lb**,
+middle half 64–70 kg, full range 56–77 kg. The 21 Youth Olympians in the same band have a
+median of 64 kg / 141 lb.
+
+Measurements are self-reported by the athlete's federation at entry and never revised, so a
+four-Games player carries one number for all four. They are consistent enough for a
+distribution and too soft for any single comparison. Missing data is not random either — the
+121 women without measurements skew toward smaller federations and the earlier Games.
+
 ## Caveats
 
 - **Athletes who enter two divisions at one event** appear once in each division's column,

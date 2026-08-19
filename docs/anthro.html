@@ -1,0 +1,596 @@
+<title>Weight at Her Height</title>
+<style>
+:root {
+  --ground:#EFF1EE; --surface:#FAFBFA; --raise:#FFFFFF;
+  --ink:#111B19; --body:#2C3A37; --muted:#5F6E6A; --faint:#8B9995;
+  --line:#D5DCD9; --hair:#E4E9E7; --wash:#EAEDEB;
+  --accent:#0B6E68; --accent-soft:#D9E7E5; --gold:#9A6B12; --gold-soft:#F3E4C4;
+  --her:#B02A4A; --her-soft:#F6DEE3; --bandfill:#E3E9E6;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:#0B1211; --surface:#121B19; --raise:#182322;
+    --ink:#E9EFEC; --body:#C6D2CE; --muted:#93A29E; --faint:#6E7D79;
+    --line:#243330; --hair:#1C2827; --wash:#161F1E;
+    --accent:#57C3B6; --accent-soft:#123733; --gold:#DCA84A; --gold-soft:#382B12;
+    --her:#F2708C; --her-soft:#3A1420; --bandfill:#16211F;
+  }
+}
+:root[data-theme="dark"] {
+  --ground:#0B1211; --surface:#121B19; --raise:#182322;
+  --ink:#E9EFEC; --body:#C6D2CE; --muted:#93A29E; --faint:#6E7D79;
+  --line:#243330; --hair:#1C2827; --wash:#161F1E;
+  --accent:#57C3B6; --accent-soft:#123733; --gold:#DCA84A; --gold-soft:#382B12;
+  --her:#F2708C; --her-soft:#3A1420; --bandfill:#16211F;
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--ground); color:var(--body);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; font-size:15px;
+  line-height:1.6; -webkit-font-smoothing:antialiased; }
+.wrap { max-width:1180px; margin:0 auto; padding:0 clamp(18px,2.4vw,44px) 70px; }
+header { padding:60px 0 32px; border-bottom:1px solid var(--line); }
+.eyebrow { font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--accent); font-weight:650; margin:0 0 18px; }
+h1 { font-family:"Iowan Old Style",Georgia,"Times New Roman",serif;
+  font-size:clamp(32px,5vw,50px); line-height:1.06; letter-spacing:-.02em; color:var(--ink);
+  margin:0 0 16px; font-weight:600; text-wrap:balance; max-width:26ch; }
+h1 em { font-style:italic; color:var(--accent); }
+.standfirst { font-size:17px; color:var(--muted); max-width:66ch; margin:0; }
+h2 { font-family:"Iowan Old Style",Georgia,"Times New Roman",serif; font-size:24px;
+  color:var(--ink); font-weight:600; margin:0 0 6px; text-wrap:balance; }
+h3 { font-family:"Iowan Old Style",Georgia,serif; font-size:17px; color:var(--ink);
+  font-weight:600; margin:26px 0 6px; }
+.lede { color:var(--muted); margin:0 0 22px; max-width:70ch; font-size:14.5px; }
+section { padding:46px 0 0; }
+p { max-width:70ch; }
+a { color:var(--accent); }
+
+.facts { display:flex; flex-wrap:wrap; margin:30px 0 0;
+  border:1px solid var(--line); border-radius:3px; background:var(--surface); overflow:hidden; }
+.fact { flex:1 1 150px; padding:14px 18px; border-right:1px solid var(--hair); }
+.fact:last-child { border-right:0; }
+.fact b { display:block; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:23px; color:var(--ink); font-weight:600; font-variant-numeric:tabular-nums; }
+.fact b small { font-size:13px; font-weight:500; color:var(--muted); }
+.fact span { font-size:11px; letter-spacing:.09em; text-transform:uppercase; color:var(--faint); }
+
+.figbox { border:1px solid var(--line); border-radius:3px; background:var(--surface);
+  padding:14px 12px 8px; margin:0 0 12px; overflow-x:auto; }
+.fig { width:100%; min-width:660px; height:auto; display:block; }
+.grid { stroke:var(--hair); stroke-width:1; }
+.axis { stroke:var(--line); stroke-width:1.4; }
+.band { fill:var(--bandfill); }
+.bandlab { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:10px;
+  letter-spacing:.1em; fill:var(--faint); }
+.tick { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:11px;
+  fill:var(--muted); font-variant-numeric:tabular-nums; }
+.tick2 { fill:var(--faint); font-size:10px; }
+.axlab { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:10px;
+  letter-spacing:.11em; fill:var(--faint); }
+.sen { fill:var(--accent); fill-opacity:.5; stroke:var(--accent); stroke-opacity:.75;
+  stroke-width:.8; }
+.yth { fill:none; stroke:var(--gold); stroke-width:1.6; }
+.fitline { stroke:var(--ink); stroke-width:1.3; stroke-dasharray:5 4; opacity:.55; }
+.fitlab { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:10.5px;
+  fill:var(--muted); }
+.her, .herline { stroke:var(--her); stroke-width:2; }
+.leader { fill:none; stroke:var(--her); stroke-width:1; opacity:.55; }
+.herline { stroke-dasharray:3 3; }
+.herdot { fill:var(--her); }
+.herlab { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:12px;
+  fill:var(--her); font-weight:650; paint-order:stroke fill; stroke:var(--surface);
+  stroke-width:3.5px; stroke-linejoin:round; }
+.herlab2 { font-size:10.5px; font-weight:500; opacity:.85; }
+.bsen { fill:var(--accent); fill-opacity:.72; }
+.byth { fill:var(--gold); fill-opacity:.6; }
+.box { stroke-width:3; }
+.bxs { stroke:var(--accent); fill:var(--accent); }
+.bxy { stroke:var(--gold); fill:var(--gold); }
+.boxlab { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:10.5px;
+  fill:var(--muted); }
+.key { display:flex; flex-wrap:wrap; gap:20px; font-size:12px; color:var(--muted);
+  margin:0 0 30px; padding:0 4px; }
+.key i { display:inline-block; width:11px; height:11px; border-radius:50%;
+  vertical-align:-1px; margin-right:6px; }
+.k1 i { background:var(--accent); opacity:.72; }
+.k2 i { border:2px solid var(--gold); box-sizing:border-box; }
+.k3 i { background:var(--her); }
+.cap { font-size:12px; color:var(--faint); max-width:78ch; margin:0 0 4px; }
+
+table { border-collapse:collapse; width:100%; font-size:13.5px; background:var(--surface); }
+th, td { padding:6px 10px; border-bottom:1px solid var(--hair); text-align:left;
+  vertical-align:top; }
+th { font-size:10.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--faint);
+  font-weight:650; border-bottom:1px solid var(--line); position:sticky; top:0;
+  background:var(--surface); }
+td.n, th.n { text-align:right; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-variant-numeric:tabular-nums; }
+tr.hers td { background:var(--her-soft); color:var(--ink); font-weight:600; }
+.tbox { border:1px solid var(--line); border-radius:3px; overflow:auto; max-height:560px; }
+.tbox.narrow { max-width:740px; max-height:none; }
+.tbox.mid { max-width:920px; }
+td.yr, th.yr { text-align:left; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:12px; color:var(--muted); white-space:nowrap; }
+th.grp, td.grp { width:74px; }
+.grp { font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); }
+.nm { color:var(--ink); font-weight:550; }
+
+ul { max-width:70ch; padding-left:20px; }
+li { margin:0 0 10px; }
+.warn { border-left:3px solid var(--her); background:var(--her-soft); padding:14px 18px;
+  border-radius:0 3px 3px 0; margin:22px 0 0; max-width:74ch; }
+.warn b { color:var(--ink); }
+footer { margin-top:56px; padding-top:20px; border-top:1px solid var(--line);
+  font-size:12px; color:var(--faint); max-width:80ch; }
+</style>
+<div class="wrap">
+<header>
+  <p class="eyebrow">Olympedia &#183; beach volleyball &#183; 1996&#8211;2024</p>
+  <h1>What do Olympic women who are <em>5&#8242;9&#8243;</em> weigh?</h1>
+  <p class="standfirst">Every woman in the Olympic beach volleyball record with a published
+  height and weight &#8212; 230 of them &#8212; plotted, then narrowed to the
+  60 senior Olympians standing within three centimetres of Haisley's height.
+  At 146 lb she is at their median.</p>
+</header>
+
+<div class="facts">
+  <div class="fact"><b>60</b><span>Senior women, 172&#8211;178 cm</span></div>
+  <div class="fact"><b>148 <small>lb</small></b><span>Their median weight</span></div>
+  <div class="fact"><b>141&#8211;154</b><span>Middle half, lb</span></div>
+  <div class="fact"><b>47<small>th</small></b>
+    <span>Haisley's percentile</span></div>
+  <div class="fact"><b>123&#8211;170</b><span>Full range, lb</span></div>
+  <div class="fact"><b>21.6</b><span>Her BMI &#183; band median 21.7</span></div>
+</div>
+
+<section>
+  <h2>The whole field</h2>
+  <p class="lede">Height against weight for every woman who has played Olympic beach
+  volleyball and has both numbers published. The shaded column is the
+  172&#8211;178 cm band &#8212; Haisley's height, give or take an inch.</p>
+  <div class="figbox"><svg viewBox="0 0 1000 560" class="fig" role="img" aria-label="Height against weight for Olympic beach volleyball women">
+<rect x="340.3" y="30" width="135.2" height="452" class="band"/>
+<text x="407.9" y="44" class="bandlab" text-anchor="middle">HER BAND &#183; 172&#8211;178 CM</text>
+<line x1="70" y1="444.3" x2="926" y2="444.3" class="grid"/>
+<text x="60" y="448.3" class="tick" text-anchor="end">55</text>
+<text x="936" y="448.3" class="tick tick2">121</text>
+<line x1="70" y1="381.6" x2="926" y2="381.6" class="grid"/>
+<text x="60" y="385.6" class="tick" text-anchor="end">60</text>
+<text x="936" y="385.6" class="tick tick2">132</text>
+<line x1="70" y1="318.8" x2="926" y2="318.8" class="grid"/>
+<text x="60" y="322.8" class="tick" text-anchor="end">65</text>
+<text x="936" y="322.8" class="tick tick2">143</text>
+<line x1="70" y1="256.0" x2="926" y2="256.0" class="grid"/>
+<text x="60" y="260.0" class="tick" text-anchor="end">70</text>
+<text x="936" y="260.0" class="tick tick2">154</text>
+<line x1="70" y1="193.2" x2="926" y2="193.2" class="grid"/>
+<text x="60" y="197.2" class="tick" text-anchor="end">75</text>
+<text x="936" y="197.2" class="tick tick2">165</text>
+<line x1="70" y1="130.4" x2="926" y2="130.4" class="grid"/>
+<text x="60" y="134.4" class="tick" text-anchor="end">80</text>
+<text x="936" y="134.4" class="tick tick2">176</text>
+<line x1="70" y1="67.7" x2="926" y2="67.7" class="grid"/>
+<text x="60" y="71.7" class="tick" text-anchor="end">85</text>
+<text x="936" y="71.7" class="tick tick2">187</text>
+<line x1="182.6" y1="30" x2="182.6" y2="482" class="grid"/>
+<text x="182.6" y="502" class="tick" text-anchor="middle">165</text>
+<text x="182.6" y="518" class="tick tick2" text-anchor="middle">5&#8242;5&#8243;</text>
+<line x1="295.3" y1="30" x2="295.3" y2="482" class="grid"/>
+<text x="295.3" y="502" class="tick" text-anchor="middle">170</text>
+<text x="295.3" y="518" class="tick tick2" text-anchor="middle">5&#8242;7&#8243;</text>
+<line x1="407.9" y1="30" x2="407.9" y2="482" class="grid"/>
+<text x="407.9" y="502" class="tick" text-anchor="middle">175</text>
+<text x="407.9" y="518" class="tick tick2" text-anchor="middle">5&#8242;9&#8243;</text>
+<line x1="520.5" y1="30" x2="520.5" y2="482" class="grid"/>
+<text x="520.5" y="502" class="tick" text-anchor="middle">180</text>
+<text x="520.5" y="518" class="tick tick2" text-anchor="middle">5&#8242;11&#8243;</text>
+<line x1="633.2" y1="30" x2="633.2" y2="482" class="grid"/>
+<text x="633.2" y="502" class="tick" text-anchor="middle">185</text>
+<text x="633.2" y="518" class="tick tick2" text-anchor="middle">6&#8242;1&#8243;</text>
+<line x1="745.8" y1="30" x2="745.8" y2="482" class="grid"/>
+<text x="745.8" y="502" class="tick" text-anchor="middle">190</text>
+<text x="745.8" y="518" class="tick tick2" text-anchor="middle">6&#8242;3&#8243;</text>
+<line x1="858.4" y1="30" x2="858.4" y2="482" class="grid"/>
+<text x="858.4" y="502" class="tick" text-anchor="middle">195</text>
+<text x="858.4" y="518" class="tick tick2" text-anchor="middle">6&#8242;5&#8243;</text>
+<text x="60" y="20" class="axlab" text-anchor="end">KG</text>
+<text x="936" y="20" class="axlab">LB</text>
+<text x="498" y="540" class="axlab" text-anchor="middle">HEIGHT</text>
+<line x1="137.6" y1="411.8" x2="880.9" y2="131.6" class="fitline"/>
+<text x="876.9" y="121.6" class="fitlab" text-anchor="end">senior fit &#183; r = 0.73</text>
+<circle cx="433.5" cy="329.5" r="4" class="yth"><title>Darya Rudykh &#183; Russian Federation &#183; 176 cm, 64 kg (141 lb) &#183; Youth Olympics 2014</title></circle>
+<circle cx="298.7" cy="320.3" r="4" class="yth"><title>Kayla Arends &#183; Aruba &#183; 170 cm, 65 kg (143 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="298.6" cy="320.9" r="4" class="yth"><title>Mali Rafini &#183; Aruba &#183; 170 cm, 65 kg (143 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="500.4" cy="321.1" r="4" class="yth"><title>Tiaan Smith &#183; Australia &#183; 179 cm, 65 kg (143 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="477.8" cy="309.1" r="4" class="yth"><title>Lauren Taylor &#183; Australia &#183; 178 cm, 66 kg (146 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="405.6" cy="252.5" r="4" class="yth"><title>María Fernanda Canedo &#183; Bolivia &#183; 175 cm, 70 kg (154 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="383.1" cy="253.1" r="4" class="yth"><title>Nicole Nogales &#183; Bolivia &#183; 174 cm, 70 kg (154 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="291.9" cy="479.3" r="4" class="yth"><title>Ana Carolina dos Santos &#183; Brazil &#183; 170 cm, 52 kg (115 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="629.8" cy="216.2" r="4" class="yth"><title>Thamela Galil &#183; Brazil &#183; 185 cm, 73 kg (161 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="492.8" cy="221.7" r="4" class="yth"><title>Dana Roskic &#183; Canada &#183; 179 cm, 73 kg (161 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="515.3" cy="252.5" r="4" class="yth"><title>Erika Vermette &#183; Canada &#183; 180 cm, 70 kg (154 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="773.8" cy="256.3" r="4" class="yth"><title>Cao Shuting &#183; People&#39;s Republic of China &#183; 191 cm, 70 kg (154 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="683.7" cy="294.6" r="4" class="yth"><title>Zeng Jinjin &#183; People&#39;s Republic of China &#183; 187 cm, 67 kg (148 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="411.2" cy="284.2" r="4" class="yth"><title>Nathalie Kutekemen Bijimine &#183; Democratic Republic of the Congo &#183; 175 cm, 68 kg (150 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="501.3" cy="259.7" r="4" class="yth"><title>Dorcas Mianda Ania &#183; Democratic Republic of the Congo &#183; 179 cm, 70 kg (154 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="361.6" cy="372.6" r="4" class="yth"><title>Adicia Burton &#183; Dominica &#183; 173 cm, 61 kg (134 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="474.2" cy="328.1" r="4" class="yth"><title>Ethlyne Lockhart &#183; Dominica &#183; 178 cm, 64 kg (141 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="383.2" cy="271.8" r="4" class="yth"><title>Ariana Castro &#183; Ecuador &#183; 174 cm, 69 kg (152 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="293.0" cy="290.0" r="4" class="yth"><title>Karelys Simisterra &#183; Ecuador &#183; 170 cm, 67 kg (148 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="630.3" cy="240.8" r="4" class="yth"><title>Nada Hamdy Samir &#183; Egypt &#183; 185 cm, 71 kg (157 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="630.3" cy="279.0" r="4" class="yth"><title>Nariman Yasser &#183; Egypt &#183; 185 cm, 68 kg (150 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="475.6" cy="379.9" r="4" class="yth"><title>Paola Alvarado &#183; Guatemala &#183; 178 cm, 60 kg (132 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="385.4" cy="317.8" r="4" class="yth"><title>María Fernanda Juárez &#183; Guatemala &#183; 174 cm, 65 kg (143 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="292.2" cy="269.7" r="4" class="yth"><title>Mércia Mucheza &#183; Mozambique &#183; 170 cm, 69 kg (152 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="292.1" cy="245.2" r="4" class="yth"><title>Ana Paula Sinaportar &#183; Mozambique &#183; 170 cm, 71 kg (157 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="493.4" cy="206.9" r="4" class="yth"><title>Emi van Driel &#183; Netherlands &#183; 179 cm, 74 kg (163 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="446.4" cy="282.0" r="4" class="yth"><title>Maya Dickson &#183; New Zealand &#183; 177 cm, 68 kg (150 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="581.5" cy="157.1" r="4" class="yth"><title>Tamara Otene &#183; New Zealand &#183; 183 cm, 78 kg (172 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="255.7" cy="318.5" r="4" class="yth"><title>Romina Ediger &#183; Paraguay &#183; 168 cm, 65 kg (143 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="210.1" cy="332.6" r="4" class="yth"><title>Medalyn Mendoza &#183; Peru &#183; 166 cm, 64 kg (141 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="344.3" cy="381.2" r="4" class="yth"><title>Julia Gierczyńska &#183; Poland &#183; 172 cm, 60 kg (132 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="411.9" cy="394.4" r="4" class="yth"><title>Patrycja Jundziłł &#183; Poland &#183; 175 cm, 59 kg (130 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="297.2" cy="470.7" r="4" class="yth"><title>María González &#183; Puerto Rico &#183; 170 cm, 53 kg (117 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="590.0" cy="94.6" r="4" class="yth"><title>Allanis Navas &#183; Puerto Rico &#183; 183 cm, 83 kg (183 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="632.4" cy="189.5" r="4" class="yth"><title>Mariya Bocharova &#183; Russian Federation &#183; 185 cm, 75 kg (165 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="226.9" cy="378.5" r="4" class="yth"><title>Mariya Voronina &#183; Russian Federation &#183; 167 cm, 60 kg (132 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="450.5" cy="380.3" r="4" class="yth"><title>Valentine Munezero &#183; Rwanda &#183; 177 cm, 60 kg (132 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="360.4" cy="443.7" r="4" class="yth"><title>Penelope Musabyimana &#183; Rwanda &#183; 173 cm, 55 kg (121 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="427.3" cy="383.7" r="4" class="yth"><title>Isatu Bah &#183; Sierra Leone &#183; 176 cm, 60 kg (132 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="337.1" cy="321.6" r="4" class="yth"><title>Kaday Kairah &#183; Sierra Leone &#183; 172 cm, 65 kg (143 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="279.1" cy="446.7" r="4" class="yth"><title>Pawarun Chanthawichai &#183; Thailand &#183; 169 cm, 55 kg (121 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="301.6" cy="384.5" r="4" class="yth"><title>Thatsarida Singchuea &#183; Thailand &#183; 170 cm, 60 kg (132 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="407.6" cy="316.3" r="4" class="yth"><title>Victoria Corbacho &#183; Uruguay &#183; 175 cm, 65 kg (143 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="339.9" cy="279.3" r="4" class="yth"><title>Josefina Vargas &#183; Uruguay &#183; 172 cm, 68 kg (150 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="474.2" cy="341.0" r="4" class="yth"><title>Devon Newberry &#183; United States &#183; 178 cm, 63 kg (139 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="361.5" cy="329.1" r="4" class="yth"><title>Lindsey Sparks &#183; United States &#183; 173 cm, 64 kg (141 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="179.5" cy="459.5" r="4" class="yth"><title>Maybel Ravo &#183; Vanuatu &#183; 165 cm, 54 kg (119 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="517.3" cy="384.8" r="4" class="yth"><title>Luduine Tebeim &#183; Vanuatu &#183; 180 cm, 60 kg (132 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="268.8" cy="317.3" r="4" class="yth"><title>Urimar Narváez &#183; Venezuela &#183; 169 cm, 65 kg (143 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="516.6" cy="380.7" r="4" class="yth"><title>Diana Ramírez &#183; Venezuela &#183; 180 cm, 60 kg (132 lb) &#183; Youth Olympics 2018</title></circle>
+<circle cx="545.6" cy="217.4" r="4" class="sen"><title>Natalie Cook &#183; Australia &#183; 181 cm, 73 kg (161 lb) &#183; 1996, 2000, 2004, 2008, 2012, 2020</title></circle>
+<circle cx="725.8" cy="155.2" r="4" class="sen"><title>Liane Fenwick &#183; Australia &#183; 189 cm, 78 kg (172 lb) &#183; 1996</title></circle>
+<circle cx="342.8" cy="243.7" r="4" class="sen"><title>Anita Spring &#183; Australia &#183; 172 cm, 71 kg (157 lb) &#183; 1996</title></circle>
+<circle cx="613.1" cy="231.7" r="4" class="sen"><title>Kerri-Ann Pottharst &#183; Australia &#183; 184 cm, 72 kg (159 lb) &#183; 1996, 2000, 2004, 2020</title></circle>
+<circle cx="387.7" cy="334.0" r="4" class="sen"><title>Sandra Pires &#183; Brazil &#183; 174 cm, 64 kg (141 lb) &#183; 1996, 2000, 2004, 2016</title></circle>
+<circle cx="472.7" cy="315.5" r="4" class="sen"><title>Adriana Samuel &#183; Brazil &#183; 178 cm, 65 kg (143 lb) &#183; 1996, 2000</title></circle>
+<circle cx="292.4" cy="366.3" r="4" class="sen"><title>Jackie Silva &#183; Brazil &#183; 170 cm, 61 kg (134 lb) &#183; 1996, 2016</title></circle>
+<circle cx="427.4" cy="331.7" r="4" class="sen"><title>Barb Broen-Ouelette &#183; Canada &#183; 176 cm, 64 kg (141 lb) &#183; 1996</title></circle>
+<circle cx="359.8" cy="370.0" r="4" class="sen"><title>Margo Malowney &#183; Canada &#183; 173 cm, 61 kg (134 lb) &#183; 1996</title></circle>
+<circle cx="787.2" cy="158.1" r="4" class="sen"><title>Brigitte Lesage &#183; France &#183; 192 cm, 78 kg (172 lb) &#183; 1996</title></circle>
+<circle cx="449.2" cy="334.5" r="4" class="sen"><title>Anabelle Prawerman &#183; France &#183; 177 cm, 64 kg (141 lb) &#183; 1996, 2000</title></circle>
+<circle cx="246.4" cy="441.8" r="4" class="sen"><title>Audrey Cooper &#183; Great Britain &#183; 168 cm, 55 kg (121 lb) &#183; 1996</title></circle>
+<circle cx="516.6" cy="254.1" r="4" class="sen"><title>Amanda Glover &#183; Great Britain &#183; 180 cm, 70 kg (154 lb) &#183; 1996</title></circle>
+<circle cx="494.1" cy="292.4" r="4" class="sen"><title>Danja Müsch &#183; Germany &#183; 179 cm, 67 kg (148 lb) &#183; 1996, 2000, 2004</title></circle>
+<circle cx="403.7" cy="384.5" r="4" class="sen"><title>Annamaria Solazzi &#183; Italy &#183; 175 cm, 60 kg (132 lb) &#183; 1996, 2000</title></circle>
+<circle cx="448.7" cy="435.4" r="4" class="sen"><title>Consuelo Turetta &#183; Italy &#183; 177 cm, 56 kg (123 lb) &#183; 1996</title></circle>
+<circle cx="178.3" cy="429.7" r="4" class="sen"><title>Yuki Ishizaka &#183; Japan &#183; 165 cm, 56 kg (123 lb) &#183; 1996, 2000</title></circle>
+<circle cx="381.0" cy="380.1" r="4" class="sen"><title>Peko Nakano &#183; Japan &#183; 174 cm, 60 kg (132 lb) &#183; 1996</title></circle>
+<circle cx="178.1" cy="444.7" r="4" class="sen"><title>Velia Eguiluz &#183; Mexico &#183; 165 cm, 55 kg (121 lb) &#183; 1996</title></circle>
+<circle cx="493.4" cy="320.3" r="4" class="sen"><title>Debora Schoon-Kadijk &#183; Netherlands &#183; 179 cm, 65 kg (143 lb) &#183; 1996, 2000</title></circle>
+<circle cx="470.7" cy="327.8" r="4" class="sen"><title>Merita Berntsen &#183; Norway &#183; 178 cm, 64 kg (141 lb) &#183; 1996</title></circle>
+<circle cx="605.8" cy="240.5" r="4" class="sen"><title>Ragni Hestad &#183; Norway &#183; 184 cm, 71 kg (157 lb) &#183; 1996</title></circle>
+<circle cx="470.3" cy="208.3" r="4" class="sen"><title>Gail Castro &#183; United States &#183; 178 cm, 74 kg (163 lb) &#183; 1996</title></circle>
+<circle cx="515.2" cy="253.5" r="4" class="sen"><title>Nancy Reno &#183; United States &#183; 180 cm, 70 kg (154 lb) &#183; 1996</title></circle>
+<circle cx="593.7" cy="280.0" r="4" class="sen"><title>Ana Paula &#183; Brazil &#183; 183 cm, 68 kg (150 lb) &#183; 2004, 2008</title></circle>
+<circle cx="414.2" cy="297.0" r="4" class="sen"><title>Beate Bühler &#183; Germany West Germany &#183; 175 cm, 67 kg (148 lb) &#183; 1996</title></circle>
+<circle cx="661.6" cy="169.4" r="4" class="sen"><title>Susanne Lahme &#183; East Germany Germany &#183; 186 cm, 77 kg (170 lb) &#183; 2004</title></circle>
+<circle cx="364.1" cy="397.8" r="4" class="sen"><title>Sachiko Fujita &#183; Japan &#183; 173 cm, 59 kg (130 lb) &#183; 1996</title></circle>
+<circle cx="339.9" cy="317.3" r="4" class="sen"><title>Mika Saiki &#183; Japan &#183; 172 cm, 65 kg (143 lb) &#183; 2000, 2008</title></circle>
+<circle cx="249.3" cy="443.3" r="4" class="sen"><title>Yukiko Takahashi &#183; Japan &#183; 168 cm, 55 kg (121 lb) &#183; 1996, 2000</title></circle>
+<circle cx="500.6" cy="305.2" r="4" class="sen"><title>Marrit Leenstra &#183; Netherlands &#183; 179 cm, 66 kg (146 lb) &#183; 2004</title></circle>
+<circle cx="583.8" cy="303.3" r="4" class="sen"><title>Elaine Youngs &#183; United States &#183; 183 cm, 66 kg (146 lb) &#183; 2004, 2008</title></circle>
+<circle cx="459.3" cy="295.8" r="4" class="sen"><title>Tania Gooley &#183; Australia &#183; 177 cm, 67 kg (148 lb) &#183; 2000</title></circle>
+<circle cx="279.1" cy="296.4" r="4" class="sen"><title>Annette Huygens Tholen &#183; Australia &#183; 169 cm, 67 kg (148 lb) &#183; 2000</title></circle>
+<circle cx="549.3" cy="297.0" r="4" class="sen"><title>Pauline Manser &#183; Australia &#183; 181 cm, 67 kg (148 lb) &#183; 2000</title></circle>
+<circle cx="526.5" cy="331.4" r="4" class="sen"><title>Adriana Behar &#183; Brazil &#183; 180 cm, 64 kg (141 lb) &#183; 2000, 2004</title></circle>
+<circle cx="526.4" cy="320.1" r="4" class="sen"><title>Lina Yanchulova &#183; Bulgaria &#183; 180 cm, 65 kg (143 lb) &#183; 2000, 2004</title></circle>
+<circle cx="526.3" cy="196.4" r="4" class="sen"><title>Chi Rong &#183; People&#39;s Republic of China &#183; 180 cm, 75 kg (165 lb) &#183; 2000</title></circle>
+<circle cx="458.7" cy="284.9" r="4" class="sen"><title>Tian Jia &#183; People&#39;s Republic of China &#183; 177 cm, 68 kg (150 lb) &#183; 2000, 2004, 2008</title></circle>
+<circle cx="571.3" cy="152.4" r="4" class="sen"><title>Xiong Zi &#183; People&#39;s Republic of China &#183; 182 cm, 78 kg (172 lb) &#183; 2000</title></circle>
+<circle cx="593.7" cy="254.7" r="4" class="sen"><title>Tamara Larrea &#183; Cuba &#183; 183 cm, 70 kg (154 lb) &#183; 2000, 2004, 2008</title></circle>
+<circle cx="661.2" cy="181.2" r="4" class="sen"><title>Soňa Dosoudilová-Nováková &#183; Czechia &#183; 186 cm, 76 kg (168 lb) &#183; 2000, 2004</title></circle>
+<circle cx="435.8" cy="395.8" r="4" class="sen"><title>Tereza Tobiášová &#183; Czechia &#183; 176 cm, 59 kg (130 lb) &#183; 2000</title></circle>
+<circle cx="525.7" cy="290.9" r="4" class="sen"><title>Maike Friedrichsen &#183; Germany &#183; 180 cm, 67 kg (148 lb) &#183; 2000</title></circle>
+<circle cx="503.1" cy="266.4" r="4" class="sen"><title>Ulrike Schmidt &#183; Germany &#183; 179 cm, 69 kg (152 lb) &#183; 2000</title></circle>
+<circle cx="615.7" cy="179.1" r="4" class="sen"><title>Gudi Staub &#183; Germany &#183; 184 cm, 76 kg (168 lb) &#183; 2000</title></circle>
+<circle cx="570.6" cy="217.4" r="4" class="sen"><title>Vaso Karantasiou &#183; Greece &#183; 182 cm, 73 kg (161 lb) &#183; 2000, 2004, 2008</title></circle>
+<circle cx="525.6" cy="293.3" r="4" class="sen"><title>Efi Sfyri &#183; Greece &#183; 180 cm, 67 kg (148 lb) &#183; 2000, 2004</title></circle>
+<circle cx="367.7" cy="357.9" r="4" class="sen"><title>Laura Bruschini &#183; Italy &#183; 173 cm, 62 kg (137 lb) &#183; 2000</title></circle>
+<circle cx="525.4" cy="295.8" r="4" class="sen"><title>Daniela Gattelli &#183; Italy &#183; 180 cm, 67 kg (148 lb) &#183; 2000, 2004</title></circle>
+<circle cx="480.3" cy="359.2" r="4" class="sen"><title>Lucilla Perrotta &#183; Italy &#183; 178 cm, 62 kg (137 lb) &#183; 2000, 2004</title></circle>
+<circle cx="412.7" cy="284.4" r="4" class="sen"><title>Rii Seike &#183; Japan &#183; 175 cm, 68 kg (150 lb) &#183; 2000</title></circle>
+<circle cx="299.9" cy="404.3" r="4" class="sen"><title>Teresa Galindo &#183; Mexico &#183; 170 cm, 58 kg (128 lb) &#183; 2000</title></circle>
+<circle cx="547.7" cy="229.1" r="4" class="sen"><title>Hilda Gaxiola &#183; Mexico &#183; 181 cm, 72 kg (159 lb) &#183; 2000, 2004</title></circle>
+<circle cx="412.5" cy="267.4" r="4" class="sen"><title>Rebekka Kadijk &#183; Netherlands &#183; 175 cm, 69 kg (152 lb) &#183; 2000, 2004, 2008</title></circle>
+<circle cx="277.2" cy="382.8" r="4" class="sen"><title>Cristina Pereira &#183; Portugal &#183; 169 cm, 60 kg (132 lb) &#183; 2000</title></circle>
+<circle cx="524.9" cy="283.0" r="4" class="sen"><title>Maria José Schuller &#183; Portugal &#183; 180 cm, 68 kg (150 lb) &#183; 2000</title></circle>
+<circle cx="456.9" cy="257.1" r="4" class="sen"><title>Nettie Davis &#183; United States &#183; 177 cm, 70 kg (154 lb) &#183; 2000, 2004</title></circle>
+<circle cx="456.8" cy="282.8" r="4" class="sen"><title>Jenny Johnson-Jordan &#183; United States &#183; 177 cm, 68 kg (150 lb) &#183; 2000, 2004</title></circle>
+<circle cx="411.7" cy="233.2" r="4" class="sen"><title>Misty May-Treanor &#183; United States &#183; 175 cm, 72 kg (159 lb) &#183; 2000, 2004, 2008, 2012, 2016</title></circle>
+<circle cx="764.6" cy="221.7" r="4" class="sen"><title>Kerri Walsh Jennings &#183; United States &#183; 191 cm, 73 kg (161 lb) &#183; 2004, 2008, 2012, 2016, 2020</title></circle>
+<circle cx="813.7" cy="195.7" r="4" class="sen"><title>Tamsin Barnett-Hinchley &#183; Australia &#183; 193 cm, 75 kg (165 lb) &#183; 2008, 2012</title></circle>
+<circle cx="588.4" cy="233.9" r="4" class="sen"><title>Louise Bawden &#183; Australia &#183; 183 cm, 72 kg (159 lb) &#183; 2012, 2016</title></circle>
+<circle cx="588.9" cy="283.8" r="4" class="sen"><title>Wang Fei &#183; People&#39;s Republic of China &#183; 183 cm, 68 kg (150 lb) &#183; 2004</title></circle>
+<circle cx="453.7" cy="284.4" r="4" class="sen"><title>Viky Arvaniti &#183; Greece &#183; 177 cm, 68 kg (150 lb) &#183; 2004, 2008, 2012</title></circle>
+<circle cx="386.0" cy="278.7" r="4" class="sen"><title>Ingrid Tørlen &#183; Norway &#183; 174 cm, 68 kg (150 lb) &#183; 2004, 2008</title></circle>
+<circle cx="453.5" cy="217.1" r="4" class="sen"><title>Susanne Glesnes &#183; Norway &#183; 177 cm, 73 kg (161 lb) &#183; 2004, 2008</title></circle>
+<circle cx="431.0" cy="242.8" r="4" class="sen"><title>Guylaine Dumont &#183; Canada &#183; 176 cm, 71 kg (157 lb) &#183; 2004</title></circle>
+<circle cx="408.4" cy="281.1" r="4" class="sen"><title>Chiaki Kusuhara &#183; Japan &#183; 175 cm, 68 kg (150 lb) &#183; 2004, 2008</title></circle>
+<circle cx="543.5" cy="256.6" r="4" class="sen"><title>Leigh-Ann Naidoo &#183; South Africa &#183; 181 cm, 70 kg (154 lb) &#183; 2004</title></circle>
+<circle cx="656.1" cy="169.9" r="4" class="sen"><title>Stephanie Pohl &#183; Germany &#183; 186 cm, 77 kg (170 lb) &#183; 2004, 2008</title></circle>
+<circle cx="520.9" cy="258.4" r="4" class="sen"><title>Okka Rau &#183; Germany &#183; 180 cm, 70 kg (154 lb) &#183; 2004, 2008</title></circle>
+<circle cx="610.9" cy="233.9" r="4" class="sen"><title>Simone Kuhn &#183; Switzerland &#183; 184 cm, 72 kg (159 lb) &#183; 2004, 2008, 2012</title></circle>
+<circle cx="453.2" cy="277.9" r="4" class="sen"><title>Thaleia Koutroumanidou &#183; Greece &#183; 177 cm, 68 kg (150 lb) &#183; 2004, 2008</title></circle>
+<circle cx="543.2" cy="127.8" r="4" class="sen"><title>Summer Lochowicz &#183; Australia &#183; 181 cm, 80 kg (176 lb) &#183; 2004</title></circle>
+<circle cx="678.3" cy="153.5" r="4" class="sen"><title>Wang Lu &#183; People&#39;s Republic of China &#183; 187 cm, 78 kg (172 lb) &#183; 2004</title></circle>
+<circle cx="250.3" cy="380.1" r="4" class="sen"><title>Ryo Tokuno &#183; Japan &#183; 168 cm, 60 kg (132 lb) &#183; 2004</title></circle>
+<circle cx="453.0" cy="230.1" r="4" class="sen"><title>Nila Håkedal &#183; Norway &#183; 177 cm, 72 kg (159 lb) &#183; 2004, 2008</title></circle>
+<circle cx="475.5" cy="280.9" r="4" class="sen"><title>You Wenhui &#183; People&#39;s Republic of China &#183; 178 cm, 68 kg (150 lb) &#183; 2004</title></circle>
+<circle cx="452.9" cy="256.4" r="4" class="sen"><title>Nicole Schnyder &#183; Switzerland &#183; 177 cm, 70 kg (154 lb) &#183; 2004</title></circle>
+<circle cx="565.5" cy="319.8" r="4" class="sen"><title>Nicole Sanderson &#183; Australia &#183; 182 cm, 65 kg (143 lb) &#183; 2004</title></circle>
+<circle cx="475.4" cy="270.2" r="4" class="sen"><title>Julia Willand &#183; South Africa &#183; 178 cm, 69 kg (152 lb) &#183; 2004</title></circle>
+<circle cx="588.0" cy="220.6" r="4" class="sen"><title>Kathrine Maaseide &#183; Norway &#183; 183 cm, 73 kg (161 lb) &#183; 2004, 2008</title></circle>
+<circle cx="295.0" cy="422.7" r="4" class="sen"><title>Annie Martin &#183; Canada &#183; 170 cm, 57 kg (126 lb) &#183; 2004, 2012</title></circle>
+<circle cx="295.0" cy="315.3" r="4" class="sen"><title>Mayra Aide García &#183; Mexico &#183; 170 cm, 65 kg (143 lb) &#183; 2004, 2008</title></circle>
+<circle cx="746.0" cy="139.3" r="4" class="sen"><title>Xue Chen &#183; People&#39;s Republic of China &#183; 190 cm, 79 kg (174 lb) &#183; 2008, 2012, 2020, 2024</title></circle>
+<circle cx="318.0" cy="441.3" r="4" class="sen"><title>Doris Schwaiger &#183; Austria &#183; 171 cm, 55 kg (121 lb) &#183; 2008, 2012</title></circle>
+<circle cx="520.7" cy="266.1" r="4" class="sen"><title>Sara Goller &#183; Germany &#183; 180 cm, 69 kg (152 lb) &#183; 2008, 2012</title></circle>
+<circle cx="678.3" cy="229.1" r="4" class="sen"><title>Wang Jie &#183; People&#39;s Republic of China &#183; 187 cm, 72 kg (159 lb) &#183; 2008</title></circle>
+<circle cx="881.0" cy="154.3" r="4" class="sen"><title>Bibiana Candelas &#183; Mexico &#183; 196 cm, 78 kg (172 lb) &#183; 2008</title></circle>
+<circle cx="565.6" cy="242.8" r="4" class="sen"><title>Stefanie Schwaiger &#183; Austria &#183; 182 cm, 71 kg (157 lb) &#183; 2008, 2012</title></circle>
+<circle cx="543.1" cy="256.0" r="4" class="sen"><title>Laura Ludwig &#183; Germany &#183; 181 cm, 70 kg (154 lb) &#183; 2008, 2012, 2016, 2020, 2024</title></circle>
+<circle cx="588.1" cy="231.5" r="4" class="sen"><title>Zhang Xi &#183; People&#39;s Republic of China &#183; 183 cm, 72 kg (159 lb) &#183; 2008, 2012</title></circle>
+<circle cx="700.7" cy="194.4" r="4" class="sen"><title>Aleksandra Shiryayeva &#183; Russian Federation &#183; 188 cm, 75 kg (165 lb) &#183; 2008</title></circle>
+<circle cx="452.8" cy="333.2" r="4" class="sen"><title>Renata Ribeiro &#183; Brazil &#183; 177 cm, 64 kg (141 lb) &#183; 2008</title></circle>
+<circle cx="723.1" cy="120.3" r="4" class="sen"><title>Liesbeth Mouha &#183; Belgium &#183; 189 cm, 81 kg (179 lb) &#183; 2008</title></circle>
+<circle cx="700.5" cy="221.4" r="4" class="sen"><title>Nicole Branagh &#183; United States &#183; 188 cm, 73 kg (161 lb) &#183; 2008</title></circle>
+<circle cx="475.2" cy="171.8" r="4" class="sen"><title>Liesbet Van Breedam &#183; Belgium &#183; 178 cm, 77 kg (170 lb) &#183; 2008</title></circle>
+<circle cx="520.2" cy="277.8" r="4" class="sen"><title>Maria Tsiartsiani &#183; Greece &#183; 180 cm, 68 kg (150 lb) &#183; 2008, 2012</title></circle>
+<circle cx="565.3" cy="253.3" r="4" class="sen"><title>Lea Schwer &#183; Switzerland &#183; 182 cm, 70 kg (154 lb) &#183; 2008</title></circle>
+<circle cx="542.7" cy="329.3" r="4" class="sen"><title>Talita &#183; Brazil &#183; 181 cm, 64 kg (141 lb) &#183; 2008, 2012, 2016</title></circle>
+<circle cx="610.2" cy="254.6" r="4" class="sen"><title>Nataliya Uryadova &#183; Russian Federation &#183; 184 cm, 70 kg (154 lb) &#183; 2008</title></circle>
+<circle cx="384.9" cy="280.3" r="4" class="sen"><title>Larissa &#183; Brazil &#183; 174 cm, 68 kg (150 lb) &#183; 2008, 2012, 2016</title></circle>
+<circle cx="542.6" cy="243.2" r="4" class="sen"><title>Saka &#183; Georgia &#183; 181 cm, 71 kg (157 lb) &#183; 2008</title></circle>
+<circle cx="520.0" cy="306.6" r="4" class="sen"><title>Vita Nel &#183; South Africa &#183; 180 cm, 66 kg (146 lb) &#183; 2008</title></circle>
+<circle cx="655.1" cy="257.0" r="4" class="sen"><title>Merel Mooren &#183; Netherlands &#183; 186 cm, 70 kg (154 lb) &#183; 2008</title></circle>
+<circle cx="204.5" cy="333.0" r="4" class="sen"><title>Milagros Crespo &#183; Cuba &#183; 166 cm, 64 kg (141 lb) &#183; 2008</title></circle>
+<circle cx="317.1" cy="295.9" r="4" class="sen"><title>Imara Estévez &#183; Cuba &#183; 171 cm, 67 kg (148 lb) &#183; 2008</title></circle>
+<circle cx="272.0" cy="384.4" r="4" class="sen"><title>Rtvelo &#183; Georgia &#183; 169 cm, 60 kg (132 lb) &#183; 2008</title></circle>
+<circle cx="677.5" cy="209.2" r="4" class="sen"><title>Judith Augoustides &#183; South Africa &#183; 187 cm, 74 kg (163 lb) &#183; 2008</title></circle>
+<circle cx="549.5" cy="306.5" r="4" class="sen"><title>Yevgeniya Ukolova &#183; Russian Federation &#183; 181 cm, 66 kg (146 lb) &#183; 2012, 2016</title></circle>
+<circle cx="527.0" cy="357.4" r="4" class="sen"><title>Yekaterina Khomyakova-Birlova &#183; Russian Federation &#183; 180 cm, 62 kg (137 lb) &#183; 2012, 2016</title></circle>
+<circle cx="684.6" cy="370.5" r="4" class="sen"><title>Anastasiya Vasina &#183; Russian Federation &#183; 187 cm, 61 kg (134 lb) &#183; 2012</title></circle>
+<circle cx="436.8" cy="233.0" r="4" class="sen"><title>Anna Vozakova &#183; Russian Federation &#183; 176 cm, 72 kg (159 lb) &#183; 2012</title></circle>
+<circle cx="515.6" cy="317.5" r="4" class="sen"><title>Sophie van Gestel &#183; Netherlands &#183; 180 cm, 65 kg (143 lb) &#183; 2012, 2016</title></circle>
+<circle cx="368.7" cy="207.7" r="4" class="sen"><title>Elodie Li Yuk Lo &#183; Mauritius &#183; 173 cm, 74 kg (163 lb) &#183; 2012</title></circle>
+<circle cx="526.4" cy="195.8" r="4" class="sen"><title>Natacha Rigobert &#183; Mauritius &#183; 180 cm, 75 kg (165 lb) &#183; 2012</title></circle>
+<circle cx="479.5" cy="281.0" r="4" class="sen"><title>Marleen van Iersel &#183; Netherlands &#183; 178 cm, 68 kg (150 lb) &#183; 2012, 2016</title></circle>
+<circle cx="524.5" cy="244.5" r="4" class="sen"><title>Sanne Keizer &#183; Netherlands &#183; 180 cm, 71 kg (157 lb) &#183; 2012, 2020</title></circle>
+<circle cx="587.0" cy="195.2" r="4" class="sen"><title>Madelein Meppelink &#183; Netherlands &#183; 183 cm, 75 kg (165 lb) &#183; 2012, 2016, 2020</title></circle>
+<circle cx="482.0" cy="318.3" r="4" class="sen"><title>Zara Dampney &#183; Great Britain &#183; 178 cm, 65 kg (143 lb) &#183; 2012</title></circle>
+<circle cx="481.9" cy="207.1" r="4" class="sen"><title>Shauna Mullin &#183; Great Britain &#183; 178 cm, 74 kg (163 lb) &#183; 2012</title></circle>
+<circle cx="254.7" cy="368.9" r="4" class="sen"><title>Marie-Andrée Lessard &#183; Canada &#183; 168 cm, 61 kg (134 lb) &#183; 2012</title></circle>
+<circle cx="428.2" cy="277.4" r="4" class="sen"><title>Maria Elisa &#183; Brazil &#183; 176 cm, 68 kg (150 lb) &#183; 2012</title></circle>
+<circle cx="522.6" cy="255.0" r="4" class="sen"><title>Greta Cicolari &#183; Italy &#183; 180 cm, 70 kg (154 lb) &#183; 2012</title></circle>
+<circle cx="522.5" cy="256.8" r="4" class="sen"><title>Marta Menegatti &#183; Italy &#183; 180 cm, 70 kg (154 lb) &#183; 2012, 2016, 2020, 2024</title></circle>
+<circle cx="569.0" cy="294.3" r="4" class="sen"><title>Becchara Palmer &#183; Australia &#183; 182 cm, 67 kg (148 lb) &#183; 2012</title></circle>
+<circle cx="295.5" cy="303.4" r="4" class="sen"><title>Virginia Zonta &#183; Argentina &#183; 170 cm, 66 kg (146 lb) &#183; 2012</title></circle>
+<circle cx="385.5" cy="304.0" r="4" class="sen"><title>Ana Gallay &#183; Argentina &#183; 174 cm, 66 kg (146 lb) &#183; 2012, 2016, 2020</title></circle>
+<circle cx="448.2" cy="347.5" r="4" class="sen"><title>Juliana &#183; Brazil &#183; 177 cm, 63 kg (139 lb) &#183; 2012</title></circle>
+<circle cx="324.0" cy="315.2" r="4" class="sen"><title>Lenka Háječková &#183; Czechia &#183; 171 cm, 65 kg (143 lb) &#183; 2012</title></circle>
+<circle cx="594.3" cy="177.7" r="4" class="sen"><title>Hana Klapalová &#183; Czechia &#183; 183 cm, 76 kg (168 lb) &#183; 2012</title></circle>
+<circle cx="301.4" cy="354.1" r="4" class="sen"><title>Kristýna Kolocová &#183; Czechia &#183; 170 cm, 62 kg (137 lb) &#183; 2012</title></circle>
+<circle cx="549.1" cy="267.4" r="4" class="sen"><title>Markéta Sluková-Nausch &#183; Czechia &#183; 181 cm, 69 kg (152 lb) &#183; 2012, 2016, 2020</title></circle>
+<circle cx="411.0" cy="354.7" r="4" class="sen"><title>Katrin Holtwick &#183; Germany &#183; 175 cm, 62 kg (137 lb) &#183; 2012</title></circle>
+<circle cx="591.0" cy="257.3" r="4" class="sen"><title>Ilka Semmler &#183; Germany &#183; 183 cm, 70 kg (154 lb) &#183; 2012</title></circle>
+<circle cx="545.2" cy="278.9" r="4" class="sen"><title>Elsa Baquerizo &#183; Spain &#183; 181 cm, 68 kg (150 lb) &#183; 2012, 2016, 2020</title></circle>
+<circle cx="477.6" cy="191.6" r="4" class="sen"><title>Liliana Fernández &#183; Spain &#183; 178 cm, 75 kg (165 lb) &#183; 2012, 2016, 2020, 2024</title></circle>
+<circle cx="345.0" cy="328.4" r="4" class="sen"><title>Nadine Zumkehr &#183; Switzerland &#183; 172 cm, 64 kg (141 lb) &#183; 2012, 2016</title></circle>
+<circle cx="583.3" cy="240.1" r="4" class="sen"><title>Jen Kessy &#183; United States &#183; 183 cm, 71 kg (157 lb) &#183; 2012</title></circle>
+<circle cx="338.5" cy="340.4" r="4" class="sen"><title>Georgina Klug &#183; Argentina &#183; 172 cm, 63 kg (139 lb) &#183; 2016</title></circle>
+<circle cx="402.4" cy="306.7" r="4" class="sen"><title>Mariafe Artacho &#183; Australia &#183; 175 cm, 66 kg (146 lb) &#183; 2016, 2020, 2024</title></circle>
+<circle cx="762.7" cy="194.4" r="4" class="sen"><title>Nicole Laird &#183; Australia &#183; 191 cm, 75 kg (165 lb) &#183; 2016</title></circle>
+<circle cx="605.0" cy="282.9" r="4" class="sen"><title>Taliqua Clancy &#183; Australia &#183; 184 cm, 68 kg (150 lb) &#183; 2016, 2020, 2024</title></circle>
+<circle cx="562.3" cy="252.3" r="4" class="sen"><title>Ágatha Rippel &#183; Brazil &#183; 182 cm, 70 kg (154 lb) &#183; 2016, 2020, 2024</title></circle>
+<circle cx="472.2" cy="290.6" r="4" class="sen"><title>Bárbara Seixas &#183; Brazil &#183; 178 cm, 67 kg (148 lb) &#183; 2016, 2024</title></circle>
+<circle cx="298.0" cy="309.9" r="4" class="sen"><title>Heather Bansley &#183; Canada &#183; 170 cm, 66 kg (146 lb) &#183; 2016, 2020, 2024</title></circle>
+<circle cx="343.0" cy="315.6" r="4" class="sen"><title>Jamie Broder &#183; Canada &#183; 172 cm, 65 kg (143 lb) &#183; 2016</title></circle>
+<circle cx="658.4" cy="215.7" r="4" class="sen"><title>Kristina Valjas &#183; Canada &#183; 186 cm, 73 kg (161 lb) &#183; 2016</title></circle>
+<circle cx="883.6" cy="216.3" r="4" class="sen"><title>Sarah Pavan &#183; Canada &#183; 196 cm, 73 kg (161 lb) &#183; 2016, 2020, 2024</title></circle>
+<circle cx="697.7" cy="218.3" r="4" class="sen"><title>Wang Fan &#183; People&#39;s Republic of China &#183; 188 cm, 73 kg (161 lb) &#183; 2016, 2020</title></circle>
+<circle cx="607.6" cy="256.6" r="4" class="sen"><title>Yue Yuan &#183; People&#39;s Republic of China &#183; 184 cm, 70 kg (154 lb) &#183; 2016</title></circle>
+<circle cx="364.3" cy="382.6" r="4" class="sen"><title>Karen Cope &#183; Costa Rica &#183; 173 cm, 60 kg (132 lb) &#183; 2016</title></circle>
+<circle cx="184.0" cy="395.8" r="4" class="sen"><title>Natalia Alfaro &#183; Costa Rica &#183; 165 cm, 59 kg (130 lb) &#183; 2016</title></circle>
+<circle cx="520.0" cy="143.2" r="4" class="sen"><title>Barbora Hermannová &#183; Czechia &#183; 180 cm, 79 kg (174 lb) &#183; 2016, 2020, 2024</title></circle>
+<circle cx="517.7" cy="202.5" r="4" class="sen"><title>Doaa El-Ghobashy &#183; Egypt &#183; 180 cm, 74 kg (163 lb) &#183; 2016, 2024</title></circle>
+<circle cx="517.7" cy="240.8" r="4" class="sen"><title>Nada Meawad &#183; Egypt &#183; 180 cm, 71 kg (157 lb) &#183; 2016</title></circle>
+<circle cx="639.8" cy="154.0" r="4" class="sen"><title>Britta Büthe &#183; Germany &#183; 185 cm, 78 kg (172 lb) &#183; 2016</title></circle>
+<circle cx="527.1" cy="280.2" r="4" class="sen"><title>Karla Borger &#183; Germany &#183; 180 cm, 68 kg (150 lb) &#183; 2016, 2020</title></circle>
+<circle cx="617.2" cy="192.9" r="4" class="sen"><title>Kira Walkenhorst &#183; Germany &#183; 184 cm, 75 kg (165 lb) &#183; 2016</title></circle>
+<circle cx="627.2" cy="191.9" r="4" class="sen"><title>Laura Giombini &#183; Italy &#183; 185 cm, 75 kg (165 lb) &#183; 2016</title></circle>
+<circle cx="589.3" cy="215.3" r="4" class="sen"><title>Jantine van der Vlist &#183; Netherlands &#183; 183 cm, 73 kg (161 lb) &#183; 2016</title></circle>
+<circle cx="502.8" cy="297.0" r="4" class="sen"><title>Kinga Kołosińska &#183; Poland &#183; 179 cm, 67 kg (148 lb) &#183; 2016</title></circle>
+<circle cx="367.6" cy="352.9" r="4" class="sen"><title>Monika Brzostek &#183; Poland &#183; 173 cm, 62 kg (137 lb) &#183; 2016</title></circle>
+<circle cx="637.3" cy="266.4" r="4" class="sen"><title>Anouk Vergé-Dépré &#183; Switzerland &#183; 185 cm, 69 kg (152 lb) &#183; 2016, 2020</title></circle>
+<circle cx="479.6" cy="329.8" r="4" class="sen"><title>Isabelle Forrer &#183; Switzerland &#183; 178 cm, 64 kg (141 lb) &#183; 2016</title></circle>
+<circle cx="749.9" cy="229.9" r="4" class="sen"><title>Joana Heidrich &#183; Switzerland &#183; 190 cm, 72 kg (159 lb) &#183; 2016, 2020</title></circle>
+<circle cx="367.1" cy="252.4" r="4" class="sen"><title>Brooke Sweat &#183; United States &#183; 173 cm, 70 kg (154 lb) &#183; 2016</title></circle>
+<circle cx="637.4" cy="190.2" r="4" class="sen"><title>Lauren Fendrick &#183; United States &#183; 185 cm, 75 kg (165 lb) &#183; 2016</title></circle>
+<circle cx="135.6" cy="443.7" r="4" class="sen"><title>Norisbeth Agudo &#183; Venezuela &#183; 163 cm, 55 kg (121 lb) &#183; 2016</title></circle>
+<circle cx="518.5" cy="306.2" r="4" class="sen"><title>Olaya Pérez &#183; Venezuela &#183; 180 cm, 66 kg (146 lb) &#183; 2016</title></circle>
+<circle cx="409.6" cy="240.6" r="4" class="sen"><title>Rebecca Silva &#183; Brazil &#183; 175 cm, 71 kg (157 lb) &#183; 2020</title></circle>
+<circle cx="858.9" cy="143.4" r="4" class="sen"><title>Alix Klineman &#183; United States &#183; 195 cm, 79 kg (174 lb) &#183; 2020, 2024</title></circle>
+<circle cx="474.4" cy="294.1" r="4" class="sen"><title>Carol Solberg &#183; Brazil &#183; 178 cm, 67 kg (148 lb) &#183; 2024</title></circle>
+<circle cx="536.3" cy="259.0" r="4" class="sen"><title>Duda Lisboa &#183; Brazil &#183; 181 cm, 70 kg (154 lb) &#183; 2014, 2020, 2024</title></circle>
+<circle cx="829.2" cy="83.8" r="4" class="sen"><title>Ana Patrícia Ramos &#183; Brazil &#183; 194 cm, 84 kg (185 lb) &#183; 2014, 2020, 2024</title></circle>
+<circle cx="673.6" cy="295.2" r="4" class="sen"><title>Daniela Álvarez &#183; Spain &#183; 187 cm, 67 kg (148 lb) &#183; 2018, 2024</title></circle>
+<circle cx="380.7" cy="383.7" r="4" class="sen"><title>Tania Moreno &#183; Spain &#183; 174 cm, 60 kg (132 lb) &#183; 2018, 2024</title></circle>
+<circle cx="380.8" cy="319.3" r="4" class="sen"><title>Raïsa Schoon &#183; Netherlands &#183; 174 cm, 65 kg (143 lb) &#183; 2018, 2020, 2024</title></circle>
+<circle cx="526.0" cy="193.5" r="4" class="sen"><title>Giuliana Poletti &#183; Paraguay &#183; 180 cm, 75 kg (165 lb) &#183; 2018, 2024</title></circle>
+<line x1="413.8" y1="286.4" x2="413.8" y2="320.4" class="her"/>
+<line x1="396.8" y1="303.4" x2="430.8" y2="303.4" class="her"/>
+<circle cx="413.8" cy="303.4" r="5.5" class="herdot"/>
+<polyline points="134.6,158.5 134.6,168.5 391.8,291.4" class="leader"/>
+<text x="128.6" y="150.5" class="herlab">Haisley</text>
+<text x="128.6" y="164.5" class="herlab herlab2">5&#8242;9&#8243; &#183; 146 lb</text>
+</svg></div>
+  <div class="key">
+    <span class="k1"><i></i>Senior Olympics, 180 women</span>
+    <span class="k2"><i></i>Youth Olympics (ages 16&#8211;18), 50 women</span>
+    <span class="k3"><i></i>Haisley, 5&#8242;9&#8243; and 146 lb</span>
+  </div>
+  <p>Weight tracks height closely in this population &#8212; the senior fit is
+  <b>0.68 kg per centimetre</b> with a correlation of 0.73, so a player one inch
+  taller is expected about 3.8 lb heavier. Read straight off that line, the
+  expected weight at 5&#8242;9&#8243; is <b>145 lb</b>. Haisley is at
+  146.</p>
+  <p>What the chart also shows is how far below the middle of the field her height sits.
+  The senior women average 179 cm (5&#8242;10&#8243;) and run up to
+  196 cm &#8212; Bibiana Candelas of Mexico. Every point to the right of her band is
+  a player she would have to hit over.</p>
+</section>
+
+<section>
+  <h2>Inside the band</h2>
+  <p class="lede">The 60 senior women and 21 Youth Olympians who stand
+  172&#8211;178 cm, by weight. Bars are share of their own group, because the
+  two samples are different sizes; the bar under each axis is the middle half, with the
+  median marked.</p>
+  <div class="figbox"><svg viewBox="0 0 1000 420" class="fig" role="img" aria-label="Weight distribution inside the 172 to 178 cm band">
+<line x1="82.0" y1="54" x2="82.0" y2="366" class="grid"/>
+<line x1="213.1" y1="54" x2="213.1" y2="366" class="grid"/>
+<line x1="344.2" y1="54" x2="344.2" y2="366" class="grid"/>
+<line x1="475.2" y1="54" x2="475.2" y2="366" class="grid"/>
+<line x1="606.3" y1="54" x2="606.3" y2="366" class="grid"/>
+<line x1="737.4" y1="54" x2="737.4" y2="366" class="grid"/>
+<line x1="868.5" y1="54" x2="868.5" y2="366" class="grid"/>
+<rect x="83.5" y="228.7" width="62.5" height="17.9" class="byth"><title>54&#8211;56 kg (119&#8211;123 lb): 1 of 21 youth</title></rect>
+<rect x="149.0" y="220.3" width="62.5" height="8.4" class="bsen"><title>56&#8211;58 kg (123&#8211;128 lb): 1 of 60 senior</title></rect>
+<rect x="214.6" y="211.8" width="62.5" height="16.9" class="bsen"><title>58&#8211;60 kg (128&#8211;132 lb): 2 of 60 senior</title></rect>
+<rect x="214.6" y="228.7" width="62.5" height="17.9" class="byth"><title>58&#8211;60 kg (128&#8211;132 lb): 1 of 21 youth</title></rect>
+<rect x="280.1" y="186.5" width="62.5" height="42.2" class="bsen"><title>60&#8211;62 kg (132&#8211;137 lb): 5 of 60 senior</title></rect>
+<rect x="280.1" y="228.7" width="62.5" height="89.4" class="byth"><title>60&#8211;62 kg (132&#8211;137 lb): 5 of 21 youth</title></rect>
+<rect x="345.7" y="178.1" width="62.5" height="50.7" class="bsen"><title>62&#8211;64 kg (137&#8211;141 lb): 6 of 60 senior</title></rect>
+<rect x="345.7" y="228.7" width="62.5" height="17.9" class="byth"><title>62&#8211;64 kg (137&#8211;141 lb): 1 of 21 youth</title></rect>
+<rect x="411.2" y="127.4" width="62.5" height="101.3" class="bsen"><title>64&#8211;66 kg (141&#8211;146 lb): 12 of 60 senior</title></rect>
+<rect x="411.2" y="228.7" width="62.5" height="107.3" class="byth"><title>64&#8211;66 kg (141&#8211;146 lb): 6 of 21 youth</title></rect>
+<rect x="476.7" y="178.1" width="62.5" height="50.7" class="bsen"><title>66&#8211;68 kg (146&#8211;150 lb): 6 of 60 senior</title></rect>
+<rect x="476.7" y="228.7" width="62.5" height="17.9" class="byth"><title>66&#8211;68 kg (146&#8211;150 lb): 1 of 21 youth</title></rect>
+<rect x="542.3" y="119.0" width="62.5" height="109.7" class="bsen"><title>68&#8211;70 kg (150&#8211;154 lb): 13 of 60 senior</title></rect>
+<rect x="542.3" y="228.7" width="62.5" height="71.5" class="byth"><title>68&#8211;70 kg (150&#8211;154 lb): 4 of 21 youth</title></rect>
+<rect x="607.8" y="178.1" width="62.5" height="50.7" class="bsen"><title>70&#8211;72 kg (154&#8211;159 lb): 6 of 60 senior</title></rect>
+<rect x="607.8" y="228.7" width="62.5" height="35.8" class="byth"><title>70&#8211;72 kg (154&#8211;159 lb): 2 of 21 youth</title></rect>
+<rect x="673.3" y="195.0" width="62.5" height="33.8" class="bsen"><title>72&#8211;74 kg (159&#8211;163 lb): 4 of 60 senior</title></rect>
+<rect x="738.9" y="195.0" width="62.5" height="33.8" class="bsen"><title>74&#8211;76 kg (163&#8211;168 lb): 4 of 60 senior</title></rect>
+<rect x="804.4" y="220.3" width="62.5" height="8.4" class="bsen"><title>76&#8211;78 kg (168&#8211;172 lb): 1 of 60 senior</title></rect>
+<line x1="82" y1="228.7" x2="934" y2="228.7" class="axis"/>
+<line x1="409.7" y1="67.0" x2="598.1" y2="67.0" class="box bxs"/>
+<circle cx="508.0" cy="67.0" r="4" class="bxs med"/>
+<text x="610.1" y="71.0" class="boxlab">SENIOR &#183; median 67 kg (148 lb) &#183; middle half 64&#8211;70 kg</text>
+<line x1="278.6" y1="353.0" x2="540.8" y2="353.0" class="box bxy"/>
+<circle cx="409.7" cy="353.0" r="4" class="bxy med"/>
+<text x="552.8" y="357.0" class="boxlab">YOUTH &#183; median 64 kg (141 lb) &#183; middle half 60&#8211;68 kg</text>
+<line x1="482.6" y1="28" x2="482.6" y2="366" class="herline"/>
+<text x="482.6" y="22" class="herlab" text-anchor="middle">Haisley &#183; 146 lb</text>
+<text x="82.0" y="386" class="tick" text-anchor="middle">54</text>
+<text x="82.0" y="402" class="tick tick2" text-anchor="middle">119</text>
+<text x="213.1" y="386" class="tick" text-anchor="middle">58</text>
+<text x="213.1" y="402" class="tick tick2" text-anchor="middle">128</text>
+<text x="344.2" y="386" class="tick" text-anchor="middle">62</text>
+<text x="344.2" y="402" class="tick tick2" text-anchor="middle">137</text>
+<text x="475.2" y="386" class="tick" text-anchor="middle">66</text>
+<text x="475.2" y="402" class="tick tick2" text-anchor="middle">146</text>
+<text x="606.3" y="386" class="tick" text-anchor="middle">70</text>
+<text x="606.3" y="402" class="tick tick2" text-anchor="middle">154</text>
+<text x="737.4" y="386" class="tick" text-anchor="middle">74</text>
+<text x="737.4" y="402" class="tick tick2" text-anchor="middle">163</text>
+<text x="868.5" y="386" class="tick" text-anchor="middle">78</text>
+<text x="868.5" y="402" class="tick tick2" text-anchor="middle">172</text>
+<text x="66" y="386" class="axlab" text-anchor="end">KG</text>
+<text x="66" y="402" class="axlab tick2" text-anchor="end">LB</text>
+</svg></div>
+  <p class="cap">Bins are 2 kg wide. Every athlete is counted once, at the weight
+  published for her.</p>
+  <p>Among senior Olympians her height the median is <b>148 lb</b>
+  (67 kg) and the middle half runs 141 to 154 lb. Haisley at
+  146 lb sits at the <b>47th percentile</b> &#8212; the centre of the
+  distribution, not the edge of it. On BMI the same thing holds: her 21.6 against
+  a band median of 21.7 and a middle half of 20.5 to 22.5.</p>
+  <p>Against the age-matched group the reading changes. Youth Olympic women her height
+  &#8212; 16 to 18 years old, the same age as she is &#8212; have a median of
+  <b>141 lb</b> (64 kg), and she is at the
+  <b>71st percentile</b> of them. She is already carrying a senior athlete's
+  weight at a junior athlete's age.</p>
+</section>
+
+<section>
+  <h2>Where half a pound a week goes</h2>
+  <p class="lede">Haisley's percentile in each group if the current rate of gain
+  continues unchanged.</p>
+  <div class="tbox narrow"><table>
+    <tr><th>From today</th><th class="n">Lb</th><th class="n">Kg</th><th class="n">BMI</th>
+    <th class="n">Senior %ile</th><th class="n">Youth %ile</th></tr>
+    <tr class="hers"><td>today</td><td class="n">146</td><td class="n">66.2</td><td class="n">21.6</td><td class="n">47</td><td class="n">71</td></tr><tr><td>+6 weeks</td><td class="n">149</td><td class="n">67.6</td><td class="n">22.0</td><td class="n">53</td><td class="n">71</td></tr><tr><td>+13 weeks</td><td class="n">152</td><td class="n">68.9</td><td class="n">22.4</td><td class="n">72</td><td class="n">86</td></tr><tr><td>+26 weeks</td><td class="n">159</td><td class="n">72.1</td><td class="n">23.5</td><td class="n">90</td><td class="n">100</td></tr><tr><td>+52 weeks</td><td class="n">172</td><td class="n">78.0</td><td class="n">25.4</td><td class="n">100</td><td class="n">100</td></tr>
+  </table></div>
+  <p style="margin-top:18px">The heaviest senior Olympian in the band weighed
+  77 kg (170 lb). A year of gain at half a pound a week reaches
+  172 lb, which is past her &#8212; there is no woman in the Olympic record at this
+  height carrying that weight. Three months gets to roughly the top of the middle half;
+  six months is past it.</p>
+  <div class="warn"><b>This is a distribution, not a target.</b> Elite adults are where
+  these players ended up after years of adult training, not a weight a 16-year-old should
+  be steered toward. What the chart supports is a narrow claim: the gap that a
+  weight-gain phase exists to close is closed. It says nothing about how to taper, and
+  nothing about body composition &#8212; a scale cannot separate muscle from the rest, and
+  that distinction is the whole question. That belongs with a sports dietitian who works
+  with adolescent athletes.</div>
+</section>
+
+<section>
+  <h2>The 81 women in the band</h2>
+  <p class="lede">Everyone 172&#8211;178 cm with a published weight, lightest
+  first, with Haisley in her place among them.</p>
+  <div class="tbox mid"><table>
+    <tr><th>Athlete</th><th>NOC</th><th class="grp">Field</th><th class="yr">Games</th>
+    <th class="n">Cm</th><th class="n">Ht</th><th class="n">Kg</th><th class="n">Lb</th>
+    <th class="n">BMI</th></tr>
+    <tr><td class="nm">Penelope Musabyimana</td><td>Rwanda</td><td class="grp">Youth</td><td class="yr">2018</td><td class="n">173</td><td class="n">5&#8242;8&#8243;</td><td class="n">55</td><td class="n">121</td><td class="n">18.4</td></tr><tr><td class="nm">Consuelo Turetta</td><td>Italy</td><td class="grp">Senior</td><td class="yr">1996</td><td class="n">177</td><td class="n">5&#8242;10&#8243;</td><td class="n">56</td><td class="n">123</td><td class="n">17.9</td></tr><tr><td class="nm">Sachiko Fujita</td><td>Japan</td><td class="grp">Senior</td><td class="yr">1996</td><td class="n">173</td><td class="n">5&#8242;8&#8243;</td><td class="n">59</td><td class="n">130</td><td class="n">19.7</td></tr><tr><td class="nm">Tereza Tobiášová</td><td>Czechia</td><td class="grp">Senior</td><td class="yr">2000</td><td class="n">176</td><td class="n">5&#8242;9&#8243;</td><td class="n">59</td><td class="n">130</td><td class="n">19.0</td></tr><tr><td class="nm">Patrycja Jundziłł</td><td>Poland</td><td class="grp">Youth</td><td class="yr">2018</td><td class="n">175</td><td class="n">5&#8242;9&#8243;</td><td class="n">59</td><td class="n">130</td><td class="n">19.3</td></tr><tr><td class="nm">Annamaria Solazzi</td><td>Italy</td><td class="grp">Senior</td><td class="yr">1996, 2000</td><td class="n">175</td><td class="n">5&#8242;9&#8243;</td><td class="n">60</td><td class="n">132</td><td class="n">19.6</td></tr><tr><td class="nm">Peko Nakano</td><td>Japan</td><td class="grp">Senior</td><td class="yr">1996</td><td class="n">174</td><td class="n">5&#8242;9&#8243;</td><td class="n">60</td><td class="n">132</td><td class="n">19.8</td></tr><tr><td class="nm">Karen Cope</td><td>Costa Rica</td><td class="grp">Senior</td><td class="yr">2016</td><td class="n">173</td><td class="n">5&#8242;8&#8243;</td><td class="n">60</td><td class="n">132</td><td class="n">20.0</td></tr><tr><td class="nm">Tania Moreno</td><td>Spain</td><td class="grp">Senior</td><td class="yr">2018, 2024</td><td class="n">174</td><td class="n">5&#8242;9&#8243;</td><td class="n">60</td><td class="n">132</td><td class="n">19.8</td></tr><tr><td class="nm">Paola Alvarado</td><td>Guatemala</td><td class="grp">Youth</td><td class="yr">2018</td><td class="n">178</td><td class="n">5&#8242;10&#8243;</td><td class="n">60</td><td class="n">132</td><td class="n">18.9</td></tr><tr><td class="nm">Julia Gierczyńska</td><td>Poland</td><td class="grp">Youth</td><td class="yr">2018</td><td class="n">172</td><td class="n">5&#8242;8&#8243;</td><td class="n">60</td><td class="n">132</td><td class="n">20.3</td></tr><tr><td class="nm">Valentine Munezero</td><td>Rwanda</td><td class="grp">Youth</td><td class="yr">2018</td><td class="n">177</td><td class="n">5&#8242;10&#8243;</td><td class="n">60</td><td class="n">132</td><td class="n">19.2</td></tr><tr><td class="nm">Isatu Bah</td><td>Sierra Leone</td><td class="grp">Youth</td><td class="yr">2018</td><td class="n">176</td><td class="n">5&#8242;9&#8243;</td><td class="n">60</td><td class="n">132</td><td class="n">19.4</td></tr><tr><td class="nm">Margo Malowney</td><td>Canada</td><td class="grp">Senior</td><td class="yr">1996</td><td class="n">173</td><td class="n">5&#8242;8&#8243;</td><td class="n">61</td><td class="n">134</td><td class="n">20.4</td></tr><tr><td class="nm">Adicia Burton</td><td>Dominica</td><td class="grp">Youth</td><td class="yr">2018</td><td class="n">173</td><td class="n">5&#8242;8&#8243;</td><td class="n">61</td><td class="n">134</td><td class="n">20.4</td></tr><tr><td class="nm">Laura Bruschini</td><td>Italy</td><td class="grp">Senior</td><td class="yr">2000</td><td class="n">173</td><td class="n">5&#8242;8&#8243;</td><td class="n">62</td><td class="n">137</td><td class="n">20.7</td></tr><tr><td class="nm">Lucilla Perrotta</td><td>Italy</td><td class="grp">Senior</td><td class="yr">2000, 2004</td><td class="n">178</td><td class="n">5&#8242;10&#8243;</td><td class="n">62</td><td class="n">137</td><td class="n">19.6</td></tr><tr><td class="nm">Katrin Holtwick</td><td>Germany</td><td class="grp">Senior</td><td class="yr">2012</td><td class="n">175</td><td class="n">5&#8242;9&#8243;</td><td class="n">62</td><td class="n">137</td><td class="n">20.2</td></tr><tr><td class="nm">Monika Brzostek</td><td>Poland</td><td class="grp">Senior</td><td class="yr">2016</td><td class="n">173</td><td class="n">5&#8242;8&#8243;</td><td class="n">62</td><td class="n">137</td><td class="n">20.7</td></tr><tr><td class="nm">Juliana</td><td>Brazil</td><td class="grp">Senior</td><td class="yr">2012</td><td class="n">177</td><td class="n">5&#8242;10&#8243;</td><td class="n">63</td><td class="n">139</td><td class="n">20.1</td></tr><tr><td class="nm">Georgina Klug</td><td>Argentina</td><td class="grp">Senior</td><td class="yr">2016</td><td class="n">172</td><td class="n">5&#8242;8&#8243;</td><td class="n">63</td><td class="n">139</td><td class="n">21.3</td></tr><tr><td class="nm">Devon Newberry</td><td>United States</td><td class="grp">Youth</td><td class="yr">2018</td><td class="n">178</td><td class="n">5&#8242;10&#8243;</td><td class="n">63</td><td class="n">139</td><td class="n">19.9</td></tr><tr><td class="nm">Sandra Pires</td><td>Brazil</td><td class="grp">Senior</td><td class="yr">1996, 2000, 2004, 2016</td><td class="n">174</td><td class="n">5&#8242;9&#8243;</td><td class="n">64</td><td class="n">141</td><td class="n">21.1</td></tr><tr><td class="nm">Barb Broen-Ouelette</td><td>Canada</td><td class="grp">Senior</td><td class="yr">1996</td><td class="n">176</td><td class="n">5&#8242;9&#8243;</td><td class="n">64</td><td class="n">141</td><td class="n">20.7</td></tr><tr><td class="nm">Anabelle Prawerman</td><td>France</td><td class="grp">Senior</td><td class="yr">1996, 2000</td><td class="n">177</td><td class="n">5&#8242;10&#8243;</td><td class="n">64</td><td class="n">141</td><td class="n">20.4</td></tr><tr><td class="nm">Merita Berntsen</td><td>Norway</td><td class="grp">Senior</td><td class="yr">1996</td><td class="n">178</td><td class="n">5&#8242;10&#8243;</td><td class="n">64</td><td class="n">141</td><td class="n">20.2</td></tr><tr><td class="nm">Renata Ribeiro</td><td>Brazil</td><td class="grp">Senior</td><td class="yr">2008</td><td class="n">177</td><td class="n">5&#8242;10&#8243;</td><td class="n">64</td><td class="n">141</td><td class="n">20.4</td></tr><tr><td class="nm">Nadine Zumkehr</td><td>Switzerland</td><td class="grp">Senior</td><td class="yr">2012, 2016</td><td class="n">172</td><td class="n">5&#8242;8&#8243;</td><td class="n">64</td><td class="n">141</td><td class="n">21.6</td></tr><tr><td class="nm">Isabelle Forrer</td><td>Switzerland</td><td class="grp">Senior</td><td class="yr">2016</td><td class="n">178</td><td class="n">5&#8242;10&#8243;</td><td class="n">64</td><td class="n">141</td><td class="n">20.2</td></tr><tr><td class="nm">Darya Rudykh</td><td>Russian Federation</td><td class="grp">Youth</td><td class="yr">2014</td><td class="n">176</td><td class="n">5&#8242;9&#8243;</td><td class="n">64</td><td class="n">141</td><td class="n">20.7</td></tr><tr><td class="nm">Ethlyne Lockhart</td><td>Dominica</td><td class="grp">Youth</td><td class="yr">2018</td><td class="n">178</td><td class="n">5&#8242;10&#8243;</td><td class="n">64</td><td class="n">141</td><td class="n">20.2</td></tr><tr><td class="nm">Lindsey Sparks</td><td>United States</td><td class="grp">Youth</td><td class="yr">2018</td><td class="n">173</td><td class="n">5&#8242;8&#8243;</td><td class="n">64</td><td class="n">141</td><td class="n">21.4</td></tr><tr><td class="nm">Adriana Samuel</td><td>Brazil</td><td class="grp">Senior</td><td class="yr">1996, 2000</td><td class="n">178</td><td class="n">5&#8242;10&#8243;</td><td class="n">65</td><td class="n">143</td><td class="n">20.5</td></tr><tr><td class="nm">Mika Saiki</td><td>Japan</td><td class="grp">Senior</td><td class="yr">2000, 2008</td><td class="n">172</td><td class="n">5&#8242;8&#8243;</td><td class="n">65</td><td class="n">143</td><td class="n">22.0</td></tr><tr><td class="nm">Zara Dampney</td><td>Great Britain</td><td class="grp">Senior</td><td class="yr">2012</td><td class="n">178</td><td class="n">5&#8242;10&#8243;</td><td class="n">65</td><td class="n">143</td><td class="n">20.5</td></tr><tr><td class="nm">Jamie Broder</td><td>Canada</td><td class="grp">Senior</td><td class="yr">2016</td><td class="n">172</td><td class="n">5&#8242;8&#8243;</td><td class="n">65</td><td class="n">143</td><td class="n">22.0</td></tr><tr><td class="nm">Raïsa Schoon</td><td>Netherlands</td><td class="grp">Senior</td><td class="yr">2018, 2020, 2024</td><td class="n">174</td><td class="n">5&#8242;9&#8243;</td><td class="n">65</td><td class="n">143</td><td class="n">21.5</td></tr><tr><td class="nm">María Fernanda Juárez</td><td>Guatemala</td><td class="grp">Youth</td><td class="yr">2018</td><td class="n">174</td><td class="n">5&#8242;9&#8243;</td><td class="n">65</td><td class="n">143</td><td class="n">21.5</td></tr><tr><td class="nm">Kaday Kairah</td><td>Sierra Leone</td><td class="grp">Youth</td><td class="yr">2018</td><td class="n">172</td><td class="n">5&#8242;8&#8243;</td><td class="n">65</td><td class="n">143</td><td class="n">22.0</td></tr><tr><td class="nm">Victoria Corbacho</td><td>Uruguay</td><td class="grp">Youth</td><td class="yr">2018</td><td class="n">175</td><td class="n">5&#8242;9&#8243;</td><td class="n">65</td><td class="n">143</td><td class="n">21.2</td></tr><tr><td class="nm">Ana Gallay</td><td>Argentina</td><td class="grp">Senior</td><td class="yr">2012, 2016, 2020</td><td class="n">174</td><td class="n">5&#8242;9&#8243;</td><td class="n">66</td><td class="n">146</td><td class="n">21.8</td></tr><tr><td class="nm">Mariafe Artacho</td><td>Australia</td><td class="grp">Senior</td><td class="yr">2016, 2020, 2024</td><td class="n">175</td><td class="n">5&#8242;9&#8243;</td><td class="n">66</td><td class="n">146</td><td class="n">21.6</td></tr><tr><td class="nm">Lauren Taylor</td><td>Australia</td><td class="grp">Youth</td><td class="yr">2018</td><td class="n">178</td><td class="n">5&#8242;10&#8243;</td><td class="n">66</td><td class="n">146</td><td class="n">20.8</td></tr><tr class="hers"><td class="nm">Haisley Flanagan</td><td>&#8212;</td><td class="grp">&#8212;</td><td class="yr">&#8212;</td><td class="n">175</td><td class="n">5&#8242;9&#8243;</td><td class="n">66.2</td><td class="n">146</td><td class="n">21.6</td></tr><tr><td class="nm">Beate Bühler</td><td>Germany West Germany</td><td class="grp">Senior</td><td class="yr">1996</td><td class="n">175</td><td class="n">5&#8242;9&#8243;</td><td class="n">67</td><td class="n">148</td><td class="n">21.9</td></tr><tr><td class="nm">Tania Gooley</td><td>Australia</td><td class="grp">Senior</td><td class="yr">2000</td><td class="n">177</td><td class="n">5&#8242;10&#8243;</td><td class="n">67</td><td class="n">148</td><td class="n">21.4</td></tr><tr><td class="nm">Bárbara Seixas</td><td>Brazil</td><td class="grp">Senior</td><td class="yr">2016, 2024</td><td class="n">178</td><td class="n">5&#8242;10&#8243;</td><td class="n">67</td><td class="n">148</td><td class="n">21.1</td></tr><tr><td class="nm">Carol Solberg</td><td>Brazil</td><td class="grp">Senior</td><td class="yr">2024</td><td class="n">178</td><td class="n">5&#8242;10&#8243;</td><td class="n">67</td><td class="n">148</td><td class="n">21.1</td></tr><tr><td class="nm">Tian Jia</td><td>People&#39;s Republic of China</td><td class="grp">Senior</td><td class="yr">2000, 2004, 2008</td><td class="n">177</td><td class="n">5&#8242;10&#8243;</td><td class="n">68</td><td class="n">150</td><td class="n">21.7</td></tr><tr><td class="nm">Rii Seike</td><td>Japan</td><td class="grp">Senior</td><td class="yr">2000</td><td class="n">175</td><td class="n">5&#8242;9&#8243;</td><td class="n">68</td><td class="n">150</td><td class="n">22.2</td></tr><tr><td class="nm">Jenny Johnson-Jordan</td><td>United States</td><td class="grp">Senior</td><td class="yr">2000, 2004</td><td class="n">177</td><td class="n">5&#8242;10&#8243;</td><td class="n">68</td><td class="n">150</td><td class="n">21.7</td></tr><tr><td class="nm">Viky Arvaniti</td><td>Greece</td><td class="grp">Senior</td><td class="yr">2004, 2008, 2012</td><td class="n">177</td><td class="n">5&#8242;10&#8243;</td><td class="n">68</td><td class="n">150</td><td class="n">21.7</td></tr><tr><td class="nm">Ingrid Tørlen</td><td>Norway</td><td class="grp">Senior</td><td class="yr">2004, 2008</td><td class="n">174</td><td class="n">5&#8242;9&#8243;</td><td class="n">68</td><td class="n">150</td><td class="n">22.5</td></tr><tr><td class="nm">Chiaki Kusuhara</td><td>Japan</td><td class="grp">Senior</td><td class="yr">2004, 2008</td><td class="n">175</td><td class="n">5&#8242;9&#8243;</td><td class="n">68</td><td class="n">150</td><td class="n">22.2</td></tr><tr><td class="nm">Thaleia Koutroumanidou</td><td>Greece</td><td class="grp">Senior</td><td class="yr">2004, 2008</td><td class="n">177</td><td class="n">5&#8242;10&#8243;</td><td class="n">68</td><td class="n">150</td><td class="n">21.7</td></tr><tr><td class="nm">You Wenhui</td><td>People&#39;s Republic of China</td><td class="grp">Senior</td><td class="yr">2004</td><td class="n">178</td><td class="n">5&#8242;10&#8243;</td><td class="n">68</td><td class="n">150</td><td class="n">21.5</td></tr><tr><td class="nm">Larissa</td><td>Brazil</td><td class="grp">Senior</td><td class="yr">2008, 2012, 2016</td><td class="n">174</td><td class="n">5&#8242;9&#8243;</td><td class="n">68</td><td class="n">150</td><td class="n">22.5</td></tr><tr><td class="nm">Marleen van Iersel</td><td>Netherlands</td><td class="grp">Senior</td><td class="yr">2012, 2016</td><td class="n">178</td><td class="n">5&#8242;10&#8243;</td><td class="n">68</td><td class="n">150</td><td class="n">21.5</td></tr><tr><td class="nm">Maria Elisa</td><td>Brazil</td><td class="grp">Senior</td><td class="yr">2012</td><td class="n">176</td><td class="n">5&#8242;9&#8243;</td><td class="n">68</td><td class="n">150</td><td class="n">22.0</td></tr><tr><td class="nm">Nathalie Kutekemen Bijimine</td><td>Democratic Republic of the Congo</td><td class="grp">Youth</td><td class="yr">2018</td><td class="n">175</td><td class="n">5&#8242;9&#8243;</td><td class="n">68</td><td class="n">150</td><td class="n">22.2</td></tr><tr><td class="nm">Maya Dickson</td><td>New Zealand</td><td class="grp">Youth</td><td class="yr">2018</td><td class="n">177</td><td class="n">5&#8242;10&#8243;</td><td class="n">68</td><td class="n">150</td><td class="n">21.7</td></tr><tr><td class="nm">Josefina Vargas</td><td>Uruguay</td><td class="grp">Youth</td><td class="yr">2018</td><td class="n">172</td><td class="n">5&#8242;8&#8243;</td><td class="n">68</td><td class="n">150</td><td class="n">23.0</td></tr><tr><td class="nm">Rebekka Kadijk</td><td>Netherlands</td><td class="grp">Senior</td><td class="yr">2000, 2004, 2008</td><td class="n">175</td><td class="n">5&#8242;9&#8243;</td><td class="n">69</td><td class="n">152</td><td class="n">22.5</td></tr><tr><td class="nm">Julia Willand</td><td>South Africa</td><td class="grp">Senior</td><td class="yr">2004</td><td class="n">178</td><td class="n">5&#8242;10&#8243;</td><td class="n">69</td><td class="n">152</td><td class="n">21.8</td></tr><tr><td class="nm">Ariana Castro</td><td>Ecuador</td><td class="grp">Youth</td><td class="yr">2018</td><td class="n">174</td><td class="n">5&#8242;9&#8243;</td><td class="n">69</td><td class="n">152</td><td class="n">22.8</td></tr><tr><td class="nm">Nettie Davis</td><td>United States</td><td class="grp">Senior</td><td class="yr">2000, 2004</td><td class="n">177</td><td class="n">5&#8242;10&#8243;</td><td class="n">70</td><td class="n">154</td><td class="n">22.3</td></tr><tr><td class="nm">Nicole Schnyder</td><td>Switzerland</td><td class="grp">Senior</td><td class="yr">2004</td><td class="n">177</td><td class="n">5&#8242;10&#8243;</td><td class="n">70</td><td class="n">154</td><td class="n">22.3</td></tr><tr><td class="nm">Brooke Sweat</td><td>United States</td><td class="grp">Senior</td><td class="yr">2016</td><td class="n">173</td><td class="n">5&#8242;8&#8243;</td><td class="n">70</td><td class="n">154</td><td class="n">23.4</td></tr><tr><td class="nm">María Fernanda Canedo</td><td>Bolivia</td><td class="grp">Youth</td><td class="yr">2018</td><td class="n">175</td><td class="n">5&#8242;9&#8243;</td><td class="n">70</td><td class="n">154</td><td class="n">22.9</td></tr><tr><td class="nm">Nicole Nogales</td><td>Bolivia</td><td class="grp">Youth</td><td class="yr">2018</td><td class="n">174</td><td class="n">5&#8242;9&#8243;</td><td class="n">70</td><td class="n">154</td><td class="n">23.1</td></tr><tr><td class="nm">Anita Spring</td><td>Australia</td><td class="grp">Senior</td><td class="yr">1996</td><td class="n">172</td><td class="n">5&#8242;8&#8243;</td><td class="n">71</td><td class="n">157</td><td class="n">24.0</td></tr><tr><td class="nm">Guylaine Dumont</td><td>Canada</td><td class="grp">Senior</td><td class="yr">2004</td><td class="n">176</td><td class="n">5&#8242;9&#8243;</td><td class="n">71</td><td class="n">157</td><td class="n">22.9</td></tr><tr><td class="nm">Rebecca Silva</td><td>Brazil</td><td class="grp">Senior</td><td class="yr">2020</td><td class="n">175</td><td class="n">5&#8242;9&#8243;</td><td class="n">71</td><td class="n">157</td><td class="n">23.2</td></tr><tr><td class="nm">Misty May-Treanor</td><td>United States</td><td class="grp">Senior</td><td class="yr">2000, 2004, 2008, 2012, 2016</td><td class="n">175</td><td class="n">5&#8242;9&#8243;</td><td class="n">72</td><td class="n">159</td><td class="n">23.5</td></tr><tr><td class="nm">Nila Håkedal</td><td>Norway</td><td class="grp">Senior</td><td class="yr">2004, 2008</td><td class="n">177</td><td class="n">5&#8242;10&#8243;</td><td class="n">72</td><td class="n">159</td><td class="n">23.0</td></tr><tr><td class="nm">Anna Vozakova</td><td>Russian Federation</td><td class="grp">Senior</td><td class="yr">2012</td><td class="n">176</td><td class="n">5&#8242;9&#8243;</td><td class="n">72</td><td class="n">159</td><td class="n">23.2</td></tr><tr><td class="nm">Susanne Glesnes</td><td>Norway</td><td class="grp">Senior</td><td class="yr">2004, 2008</td><td class="n">177</td><td class="n">5&#8242;10&#8243;</td><td class="n">73</td><td class="n">161</td><td class="n">23.3</td></tr><tr><td class="nm">Gail Castro</td><td>United States</td><td class="grp">Senior</td><td class="yr">1996</td><td class="n">178</td><td class="n">5&#8242;10&#8243;</td><td class="n">74</td><td class="n">163</td><td class="n">23.4</td></tr><tr><td class="nm">Elodie Li Yuk Lo</td><td>Mauritius</td><td class="grp">Senior</td><td class="yr">2012</td><td class="n">173</td><td class="n">5&#8242;8&#8243;</td><td class="n">74</td><td class="n">163</td><td class="n">24.7</td></tr><tr><td class="nm">Shauna Mullin</td><td>Great Britain</td><td class="grp">Senior</td><td class="yr">2012</td><td class="n">178</td><td class="n">5&#8242;10&#8243;</td><td class="n">74</td><td class="n">163</td><td class="n">23.4</td></tr><tr><td class="nm">Liliana Fernández</td><td>Spain</td><td class="grp">Senior</td><td class="yr">2012, 2016, 2020, 2024</td><td class="n">178</td><td class="n">5&#8242;10&#8243;</td><td class="n">75</td><td class="n">165</td><td class="n">23.7</td></tr><tr><td class="nm">Liesbet Van Breedam</td><td>Belgium</td><td class="grp">Senior</td><td class="yr">2008</td><td class="n">178</td><td class="n">5&#8242;10&#8243;</td><td class="n">77</td><td class="n">170</td><td class="n">24.3</td></tr>
+  </table></div>
+</section>
+
+<section>
+  <h2>How this was built, and what it cannot tell you</h2>
+  <ul>
+    <li><b>Source.</b> <a href="https://www.olympedia.org">Olympedia</a>, scraped edition by edition: the
+    beach volleyball tournament at every Summer Games from 1996 to 2024 and at the
+    Youth Olympic Games of 2014 and 2018, then each competitor's biography page. That is
+    714 athletes in all, 351 of them women, of whom 230 have both a
+    height and a weight on file.</li>
+    <li><b>The measurements are self-reported and undated.</b> They come from the entry
+    form an athlete's federation filed for a given Games and are not revised afterwards,
+    so a player who competed in four Olympics carries one number for all four. Expect them
+    to be flattering and a little stale. They are consistent enough for a distribution and
+    too soft for any single comparison.</li>
+    <li><b>Missing data is not random.</b> 121 women in the record have no
+    measurements published, weighted toward smaller federations and the earlier Games.
+    Nothing here corrects for that.</li>
+    <li><b>Olympians are the extreme tail.</b> This is the top of the professional game,
+    not the population Haisley competes against now or will at college. It answers "what
+    does this body type look like at the very top", not "what should a junior weigh".</li>
+    <li><b>The Youth Olympic sample is small.</b> 21 women in the band. It is the
+    only age-matched Olympic-grade comparison available, and it should be read as an
+    indication rather than a measurement.</li>
+    <li><b>Points are jittered.</b> Heights and weights are published as whole numbers, so
+    many athletes share a coordinate. Each point is nudged by up to 0.3 units, derived from
+    the athlete's own id so it never moves between runs, purely so overlapping players stay
+    countable. Every number quoted in the text uses the unjittered values.</li>
+  </ul>
+</section>
+
+<footer>
+  230 women with published height and weight, from 714 Olympic beach
+  volleyball athletes scraped from Olympedia. Haisley's figures &#8212; 5&#8242;9&#8243;
+  and 146 lb &#8212; as supplied. Nothing on this page is medical advice.
+</footer>
+</div>
