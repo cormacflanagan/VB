@@ -1,34 +1,40 @@
-"""August daytime warmth at Santa Cruz: one datapoint per year, back to 1893.
+"""August temperature at Santa Cruz: one datapoint per year, back to 1893.
 
-The tournament calendar is a beach calendar, so the question behind this is how hot an
-August day on the Santa Cruz sand actually gets, and whether that has moved. The answer
-is the mean of the daily maximum temperature over the 31 days of August, one number per
-year, from the longest reliable record the town has.
+The tournament calendar is a beach calendar, so the question behind this is what an August
+day on the Santa Cruz sand is actually like. Two answers, because they are two different
+questions and they do not agree:
+
+  tmax   the mean of the daily maximum over the 31 days of August -- the afternoon peak
+  tmin   the mean of the daily minimum -- the pre-dawn low, which is what an evening on
+         the sand and a 7am first serve are played in
 
   Station USC00047916, SANTA CRUZ, CA -- a US Historical Climatology Network site with
   daily observations from 1893. It is the only long record inside the town: every other
   Santa Cruz station in GHCN is a modern CoCoRaHS rain gauge with no thermometer. The
   station stopped reporting in April 2022, which is where the observed series ends.
 
-Two series are built, because the raw one cannot be read on its own:
+For each element two series are built, because the raw one cannot be read on its own:
 
-  observed   the mean of the daily TMAX values as the observer wrote them down, which is
+  observed   the mean of the daily values as the observer wrote them down, which is
              literally what was asked for. Days carrying a GHCN quality-control flag are
              dropped, and a year needs 28 of its 31 days to count.
-  adjusted   NOAA's homogenised monthly TMAX for the same station (USHCN v2.5, the
+  adjusted   NOAA's homogenised monthly value for the same station (USHCN v2.5, the
              "FLs.52j" product), which corrects the record for the things that move a
              thermometer's reading without the weather moving: a change in the hour of
              observation, a shift of the instrument, a new screen. It also carries
              2022-2025, infilled from neighbouring stations after the station closed.
 
-They disagree, and the disagreement is the point. Against Watsonville -- 21 km away and
-still reporting -- Santa Cruz reads about 1.3 degF warmer through the 1990s and 2000s,
-then 4 to 6 degF warmer from 2009 to 2015, then falls back. A gap that opens and closes
-against a neighbour is the station moving, not the climate, so the observed line is
-shown as observed and the homogenised line beside it.
+How far apart those two run is not a matter of opinion, so the pipeline measures it: every
+August is also differenced against Watsonville, 21 km down the coast, and the difference is
+reported decade by decade. A pair of stations 21 km apart should hold a roughly constant
+offset. For the daily minima they do, within about 1.5 degF for a century. For the maxima
+they do not -- the offset wanders across a 6 degF range -- which is the whole reason the
+homogenised line is drawn beside the observed one, and the reason the daytime series
+carries a caveat the nighttime series does not.
 
-  python3 scripts/august_temps.py             ->  data/august_temps.json, docs/august-temps.html
-  python3 scripts/august_temps.py --refresh   ->  re-download both sources from NCEI first
+  python3 scripts/august_temps.py                    ->  both elements, JSON + page each
+  python3 scripts/august_temps.py tmin               ->  just the nights
+  python3 scripts/august_temps.py --refresh          ->  re-download the sources first
 """
 import csv, json, os, ssl, sys, urllib.request
 
@@ -40,13 +46,33 @@ CACHE = os.path.join(DATA, "ghcn")
 STATION = "USC00047916"
 USHCN_ID = "USH00047916"
 NAME = "Santa Cruz, California"
+# the yardstick: the nearest station with a record long enough to difference against, and
+# still reporting. Watsonville Water Works, 21 km down the coast, daily since 1908.
+NEIGHBOUR = "USC00049473"
+NEIGHBOUR_NAME = "Watsonville"
+NEIGHBOUR_KM = 21
+
 DAILY = ("https://www.ncei.noaa.gov/data/global-historical-climatology-network-daily"
          "/access/{}.csv")
-USHCN = "https://www.ncei.noaa.gov/pub/data/ushcn/v2.5/ushcn.tmax.latest.FLs.52j.tar.gz"
+USHCN = "https://www.ncei.noaa.gov/pub/data/ushcn/v2.5/ushcn.{}.latest.FLs.52j.tar.gz"
 
 MIN_DAYS = 28      # of 31; below this the month's mean is a different question
 SMOOTH = 11        # centred running mean, the usual window for a climate series
 AUG = 8
+
+ELEMENTS = {
+    "tmax": {
+        "ghcn": "TMAX", "slug": "august-temps", "data": "august_temps",
+        # where this station reads warm against Watsonville and the difference has to be
+        # treated as the instrument. Shaded on the daytime chart; there is no nighttime
+        # equivalent, because the nighttime offset never opens up like this.
+        "drift": (2009, 2015),
+    },
+    "tmin": {
+        "ghcn": "TMIN", "slug": "august-nights", "data": "august_nights",
+        "drift": None,
+    },
+}
 
 
 def _ctx():
@@ -59,51 +85,56 @@ def _ctx():
 
 
 def refresh():
-    """Pull both source files into data/ghcn/. They are the inputs, not the output."""
+    """Pull the source files into data/ghcn/. They are the inputs, not the output."""
     import io, tarfile
     os.makedirs(CACHE, exist_ok=True)
-    url = DAILY.format(STATION)
-    with urllib.request.urlopen(url, context=_ctx(), timeout=300) as r:
-        open(os.path.join(CACHE, STATION + ".csv"), "wb").write(r.read())
-    with urllib.request.urlopen(USHCN, context=_ctx(), timeout=600) as r:
-        blob = r.read()
-    with tarfile.open(fileobj=io.BytesIO(blob), mode="r:gz") as t:
-        member = next(m for m in t.getmembers() if USHCN_ID in m.name)
-        open(os.path.join(CACHE, USHCN_ID + ".FLs.52j.tmax"), "wb").write(
-            t.extractfile(member).read())
+    for sid in (STATION, NEIGHBOUR):
+        with urllib.request.urlopen(DAILY.format(sid), context=_ctx(), timeout=300) as r:
+            open(os.path.join(CACHE, sid + ".csv"), "wb").write(r.read())
+    for el in ELEMENTS:
+        with urllib.request.urlopen(USHCN.format(el), context=_ctx(), timeout=600) as r:
+            blob = r.read()
+        with tarfile.open(fileobj=io.BytesIO(blob), mode="r:gz") as t:
+            member = next(m for m in t.getmembers() if USHCN_ID in m.name)
+            open(os.path.join(CACHE, f"{USHCN_ID}.FLs.52j.{el}"), "wb").write(
+                t.extractfile(member).read())
 
 
 def f(tenths_c):
     return tenths_c / 10.0 * 9 / 5 + 32
 
 
-def observed():
-    """{year: (mean degF, days used)} from the daily record, August only."""
-    days = {}
-    rejected = 0
-    with open(os.path.join(CACHE, STATION + ".csv")) as fh:
+def daily(station, key):
+    """{year: [degF, ...]} for August, quality-flagged days dropped."""
+    out, rejected = {}, 0
+    with open(os.path.join(CACHE, station + ".csv")) as fh:
         for row in csv.DictReader(fh):
             date = row["DATE"]
             if int(date[5:7]) != AUG:
                 continue
-            v = row["TMAX"].strip()
+            v = row[key].strip()
             if not v:
                 continue
             # attributes are measurement,quality,source,time -- a non-blank quality flag
             # means NCEI's own checks caught the value, so it is not ours to average
-            flags = row["TMAX_ATTRIBUTES"].split(",")
+            flags = row[key + "_ATTRIBUTES"].split(",")
             if len(flags) > 1 and flags[1].strip():
                 rejected += 1
                 continue
-            days.setdefault(int(date[:4]), []).append(f(int(v)))
+            out.setdefault(int(date[:4]), []).append(f(int(v)))
+    return out, rejected
+
+
+def observed(station, key):
+    """{year: (mean degF, days used)} from the daily record, August only."""
+    days, rejected = daily(station, key)
     return {y: (sum(v) / len(v), len(v)) for y, v in days.items()}, rejected
 
 
-def adjusted():
+def adjusted(element):
     """{year: (mean degF, estimated?)} from USHCN. Fixed-width: value 6, then 3 flags."""
     out = {}
-    path = os.path.join(CACHE, USHCN_ID + ".FLs.52j.tmax")
-    for line in open(path):
+    for line in open(os.path.join(CACHE, f"{USHCN_ID}.FLs.52j.{element}")):
         year, off = int(line[12:16]), 16 + (AUG - 1) * 9
         v = line[off:off + 6].strip()
         if v == "-9999":
@@ -114,10 +145,29 @@ def adjusted():
     return out
 
 
+def against_neighbour(key):
+    """Santa Cruz minus Watsonville, decade by decade.
+
+    Two stations 21 km apart share their weather, so the difference between them should be
+    a constant. Where it is not, the station moved and the record says so.
+    """
+    here, _ = observed(STATION, key)
+    there, _ = observed(NEIGHBOUR, key)
+    both = {y: here[y][0] - there[y][0] for y in here
+            if y in there and here[y][1] >= MIN_DAYS and there[y][1] >= MIN_DAYS}
+    out = []
+    for dec in sorted({y // 10 * 10 for y in both}):
+        d = [v for y, v in both.items() if dec <= y < dec + 10]
+        # a decade holding one or two Augusts is noise, not an offset
+        if len(d) >= 3:
+            out.append({"decade": dec, "diff": round(sum(d) / len(d), 2), "years": len(d)})
+    return out
+
+
 def running(series, window=SMOOTH):
     """Centred mean over `window` years. Two absences inside the window are tolerated --
-    the record has five gaps, and demanding a full window would erase eleven years of
-    trend line around each of them -- but a third leaves the line broken, which is what
+    the record has a handful of gaps, and demanding a full window would erase eleven years
+    of trend line around each of them -- but a third leaves the line broken, which is what
     a hole in the record should look like."""
     half, out = window // 2, {}
     for y in series:
@@ -135,12 +185,25 @@ def fit(xs, ys):
     return (sxy / sxx if sxx else 0.0), my
 
 
-def build():
-    obs, rejected = observed()
-    adj = adjusted()
-    years = sorted(set(obs) | set(adj))
+def diurnal():
+    """{year: mean degF between the day's high and its low}, on days that have both."""
+    hi, _ = daily(STATION, "TMAX")
+    lo, _ = daily(STATION, "TMIN")
+    out = {}
+    for y in hi:
+        # only Augusts where both elements survived quality control on the same count of
+        # days; a high from one day and a low from another is not a daily range
+        if y in lo and len(hi[y]) == len(lo[y]) >= MIN_DAYS:
+            out[y] = sum(a - b for a, b in zip(hi[y], lo[y])) / len(hi[y])
+    return out
+
+
+def build(element):
+    spec = ELEMENTS[element]
+    obs, rejected = observed(STATION, spec["ghcn"])
+    adj = adjusted(element)
     rows = []
-    for y in years:
+    for y in sorted(set(obs) | set(adj)):
         mean, days = obs.get(y, (None, 0))
         a, est = adj.get(y, (None, False))
         rows.append({
@@ -155,7 +218,14 @@ def build():
     adjs = {r["year"]: r["adj_f"] for r in rows if r["adj_f"] is not None}
     ob, _ = fit(sorted(kept), [kept[y] for y in sorted(kept)])
     ab, _ = fit(sorted(adjs), [adjs[y] for y in sorted(adjs)])
+    off = against_neighbour(spec["ghcn"])
+    rng = diurnal()
+    ry = sorted(rng)
+    rb, _ = fit(ry, [rng[y] for y in ry])
     return {
+        "element": element,
+        "ghcn_element": spec["ghcn"],
+        "drift": list(spec["drift"]) if spec["drift"] else None,
         "station": {"id": STATION, "ushcn": USHCN_ID, "name": NAME,
                     "lat": 36.9878, "lon": -121.9994, "elevation_m": 21.3},
         "min_days": MIN_DAYS, "smooth": SMOOTH,
@@ -164,23 +234,41 @@ def build():
         "observed_span": [min(kept), max(kept)],
         "observed_mean_f": round(sum(kept.values()) / len(kept), 2),
         "observed_trend_f_per_decade": round(ob * 10, 3),
+        "first30_f": round(sum(kept[y] for y in sorted(kept)[:30]) / 30, 2),
+        "last30_f": round(sum(kept[y] for y in sorted(kept)[-30:]) / 30, 2),
         "adjusted_span": [min(adjs), max(adjs)],
         "adjusted_trend_f_per_decade": round(ab * 10, 3),
+        "neighbour": {
+            "id": NEIGHBOUR, "name": NEIGHBOUR_NAME, "km": NEIGHBOUR_KM,
+            "decades": off,
+            "spread_f": round(max(o["diff"] for o in off) - min(o["diff"] for o in off), 2),
+        },
+        "diurnal": {
+            "span": [ry[0], ry[-1]], "years": len(ry),
+            "mean_f": round(sum(rng.values()) / len(rng), 2),
+            "trend_f_per_decade": round(rb * 10, 3),
+            "first30_f": round(sum(rng[y] for y in ry[:30]) / 30, 2),
+            "last30_f": round(sum(rng[y] for y in ry[-30:]) / 30, 2),
+        },
         "years": rows,
     }
 
 
 if __name__ == "__main__":
+    args = [a for a in sys.argv[1:] if not a.startswith("-")]
     if "--refresh" in sys.argv:
         refresh()
-    series = build()
-    os.makedirs(DATA, exist_ok=True)
-    with open(os.path.join(DATA, "august_temps.json"), "w") as fh:
-        json.dump(series, fh, indent=1)
     sys.path.insert(0, HERE)
     from august_page import page
+    os.makedirs(DATA, exist_ok=True)
     os.makedirs(DOCS, exist_ok=True)
-    open(os.path.join(DOCS, "august-temps.html"), "w").write(page(series))
-    print(f"{series['observed_years']} Augusts, "
-          f"{series['observed_span'][0]}-{series['observed_span'][1]}; "
-          f"mean {series['observed_mean_f']} degF")
+    for element in (args or list(ELEMENTS)):
+        series = build(element)
+        spec = ELEMENTS[element]
+        with open(os.path.join(DATA, spec["data"] + ".json"), "w") as fh:
+            json.dump(series, fh, indent=1)
+        open(os.path.join(DOCS, spec["slug"] + ".html"), "w").write(page(series))
+        print(f"{element}: {series['observed_years']} Augusts, "
+              f"{series['observed_span'][0]}-{series['observed_span'][1]}; "
+              f"mean {series['observed_mean_f']} degF, "
+              f"trend {series['observed_trend_f_per_decade']:+} degF/decade")

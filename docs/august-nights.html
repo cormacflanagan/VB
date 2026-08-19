@@ -1,0 +1,1401 @@
+<title>Santa Cruz &#183; August nightly lows, 1893&#8211;2025</title>
+<style>
+:root {
+  --ground:#EFF1EE; --surface:#FAFBFA; --raise:#FFFFFF;
+  --ink:#111B19; --body:#2C3A37; --muted:#5F6E6A; --faint:#8B9995;
+  --line:#D5DCD9; --hair:#E4E9E7; --wash:#EAEDEB;
+  --accent:#0B6E68; --accent-soft:#D9E7E5; --gold:#9A6B12; --gold-soft:#F3E4C4;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:#0B1211; --surface:#121B19; --raise:#182322;
+    --ink:#E9EFEC; --body:#C6D2CE; --muted:#93A29E; --faint:#6E7D79;
+    --line:#243330; --hair:#1C2827; --wash:#161F1E;
+    --accent:#57C3B6; --accent-soft:#123733; --gold:#DCA84A; --gold-soft:#382B12;
+  }
+}
+:root[data-theme="dark"] {
+  --ground:#0B1211; --surface:#121B19; --raise:#182322;
+  --ink:#E9EFEC; --body:#C6D2CE; --muted:#93A29E; --faint:#6E7D79;
+  --line:#243330; --hair:#1C2827; --wash:#161F1E;
+  --accent:#57C3B6; --accent-soft:#123733; --gold:#DCA84A; --gold-soft:#382B12;
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--ground); color:var(--body);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; font-size:15px;
+  line-height:1.6; -webkit-font-smoothing:antialiased; }
+.wrap { max-width:none; margin:0; padding:0 clamp(18px,2.4vw,44px); }
+header { padding:60px 0 32px; border-bottom:1px solid var(--line); }
+.eyebrow { font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--accent); font-weight:650; margin:0 0 18px; }
+h1 { font-family:"Iowan Old Style",Georgia,"Times New Roman",serif;
+  font-size:clamp(32px,5vw,50px); line-height:1.06; letter-spacing:-.02em; color:var(--ink);
+  margin:0 0 16px; font-weight:600; text-wrap:balance; max-width:22ch; }
+h1 em { font-style:italic; color:var(--accent); }
+.standfirst { font-size:17px; color:var(--muted); max-width:68ch; margin:0; }
+h2 { font-family:"Iowan Old Style",Georgia,"Times New Roman",serif; font-size:24px;
+  color:var(--ink); font-weight:600; margin:0 0 6px; }
+.lede { color:var(--muted); margin:0 0 20px; max-width:72ch; font-size:14.5px; }
+.lede b { color:var(--body); font-weight:600; }
+section { padding:44px 0 0; }
+.facts { display:flex; flex-wrap:wrap; margin:30px 0 0; max-width:1300px;
+  border:1px solid var(--line); border-radius:3px; background:var(--surface); overflow:hidden; }
+.fact { flex:1 1 150px; padding:14px 18px; border-right:1px solid var(--hair); }
+.fact:last-child { border-right:0; }
+.fact b { display:block; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:23px; color:var(--ink); font-weight:600; font-variant-numeric:tabular-nums; }
+.fact span { font-size:11px; letter-spacing:.09em; text-transform:uppercase; color:var(--faint); }
+.fact i { font-style:normal; font-size:12px; color:var(--muted); display:block; margin-top:2px; }
+.panel { border:1px solid var(--line); border-radius:3px; background:var(--surface);
+  overflow-x:auto; max-height:620px; overflow-y:auto; }
+table { border-collapse:collapse; width:100%; }
+thead th { font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint);
+  font-weight:650; background:var(--wash); border-bottom:1px solid var(--line);
+  padding:10px 12px; text-align:left; white-space:nowrap; position:sticky; top:0; z-index:2; }
+td { padding:8px 12px; border-bottom:1px solid var(--hair); vertical-align:top; }
+tbody tr:hover td { background:var(--raise); }
+.mrow th { background:var(--wash); border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line); padding:9px 12px; text-align:left;
+  font-family:"Iowan Old Style",Georgia,serif; font-size:15px; color:var(--ink);
+  font-weight:600; letter-spacing:.01em; position:sticky; top:37px; z-index:1; }
+.mcount { font-family:system-ui,sans-serif; font-size:11px; font-weight:500;
+  color:var(--faint); letter-spacing:.06em; text-transform:uppercase; margin-left:10px; }
+.num { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-variant-numeric:tabular-nums; font-size:13px; text-align:right; }
+.yr { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:13px;
+  color:var(--ink); font-weight:650; }
+.dim { color:var(--faint); }
+.note { font-size:11.5px; color:var(--faint); }
+.hot { color:var(--ink); font-weight:650; }
+.notes ul { padding-left:19px; margin:10px 0 0; }
+.notes li { margin:7px 0; font-size:13.5px; color:var(--muted); max-width:78ch; }
+.notes b { color:var(--body); font-weight:600; }
+footer { border-top:1px solid var(--line); padding:20px 0 64px; margin-top:44px;
+  font-size:12px; color:var(--faint); max-width:82ch; }
+a { color:var(--accent); }
+:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+
+.figwrap { border:1px solid var(--line); border-radius:3px; background:var(--surface);
+  padding:18px 20px 10px; overflow-x:auto; }
+.fig { display:block; min-width:820px; --obs:#00927E; --adj:#9A6B12; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .fig { --obs:#10A89A; --adj:#AD8412; }
+}
+:root[data-theme="dark"] .fig { --obs:#10A89A; --adj:#AD8412; }
+.fig .grid { stroke:var(--hair); stroke-width:1; }
+.fig .axis { stroke:var(--line); stroke-width:1; }
+.fig .band { fill:var(--wash); stroke:var(--line); stroke-width:1;
+  stroke-dasharray:3 4; }
+.fig .bandlab { fill:var(--faint); font-size:10.5px; text-anchor:middle;
+  letter-spacing:.09em; text-transform:uppercase;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+.fig .tick { fill:var(--faint); font-size:11px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-variant-numeric:tabular-nums; }
+.fig .ty { text-anchor:end; }
+.fig .tx { text-anchor:middle; }
+.fig .axlab { fill:var(--muted); font-size:11.5px; text-anchor:middle;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; letter-spacing:.02em; }
+.fig .ln { fill:none; stroke-linejoin:round; stroke-linecap:round; }
+.fig .obs { stroke:var(--obs); }
+.fig .adj { stroke:var(--adj); }
+.fig .ln.obs { stroke-width:1.5; opacity:.5; }
+.fig .ln.adj { stroke-width:1.5; opacity:.42; stroke-dasharray:3 3; }
+.fig .ln.obs.sm { stroke-width:2.6; opacity:1; }
+.fig .ln.adj.sm { stroke-width:2.4; opacity:1; stroke-dasharray:8 4; }
+.fig .gap { stroke:var(--faint); stroke-width:2; opacity:.6; }
+.fig .mk { fill:var(--obs); stroke:var(--surface); stroke-width:2; }
+.fig .ptlab { fill:var(--ink); font-size:11.5px; font-weight:600;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-variant-numeric:tabular-nums; paint-order:stroke; stroke:var(--surface); stroke-width:3px; }
+.fig .endlab { font-size:11.5px; font-weight:650; paint-order:stroke; stroke:var(--surface);
+  stroke-width:3px; font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+.fig .endlab.obs { fill:var(--obs); }
+.fig .endlab.adj { fill:var(--adj); }
+.fig .hit { fill:transparent; }
+.fig .hit:hover { fill:var(--accent-soft); opacity:.5; }
+.figcap { color:var(--faint); font-size:12px; margin:10px 0 0; max-width:82ch; }
+.keys { display:flex; flex-wrap:wrap; gap:18px; margin:14px 0 0; align-items:center; }
+.keys .k { display:flex; align-items:center; gap:8px; font-size:12px; color:var(--muted); }
+.keys .sw { width:26px; height:0; border-top-width:2.6px; border-top-style:solid; }
+.keys .sw.obs { border-color:#00927E; }
+.keys .sw.adj { border-color:#9A6B12; border-top-style:dashed; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .keys .sw.obs { border-color:#10A89A; }
+  :root:not([data-theme="light"]) .keys .sw.adj { border-color:#AD8412; }
+}
+:root[data-theme="dark"] .keys .sw.obs { border-color:#10A89A; }
+:root[data-theme="dark"] .keys .sw.adj { border-color:#AD8412; }
+.offs { display:flex; flex-wrap:wrap; gap:0; margin:6px 0 20px; max-width:1000px;
+  border:1px solid var(--line); border-radius:3px; background:var(--surface);
+  overflow:hidden; }
+.off { flex:1 1 76px; padding:10px 12px; border-right:1px solid var(--hair); }
+.off:last-child { border-right:0; }
+.off b { display:block; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:15px; font-weight:600; color:var(--ink); font-variant-numeric:tabular-nums; }
+.off span { font-size:10.5px; letter-spacing:.08em; color:var(--faint); }
+.off.wide b { color:var(--gold); }
+</style>
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">NOAA GHCN&#8209;Daily &#183; station USC00047916 &#183; 1893&#8211;2025</p>
+  <h1>August <em>nights</em> in Santa Cruz</h1>
+  <p class="standfirst">The average of every daily low temperature in August, one number
+  per year, back to 1893. 123 Augusts have a daily record complete enough
+  to average; NOAA&#8217;s homogenised version of the same station carries the series to
+  2025. The long-run mean is 51.7&#176;F &#8212; and unlike the afternoons, it has moved. The last 30 Augusts in the record average 4.8&#176;F warmer at night than the first 30, a trend that survives every correction NOAA applies to the same station.</p>
+</header>
+
+<div class="facts">
+  <div class="fact"><b>123</b><span>Augusts averaged</span>
+    <i>1893&#8211;2021, 28+ days each</i></div>
+  <div class="fact"><b>51.7&#176;F</b>
+    <span>Long-run mean daily low</span>
+    <i>11.0&#176;C across the whole record</i></div>
+  <div class="fact"><b>58.9&#176;F</b><span>Warmest nights</span>
+    <i>2014</i></div>
+  <div class="fact"><b>47.4&#176;F</b><span>Coolest nights</span>
+    <i>1969</i></div>
+  <div class="fact"><b>+0.46&#176;F</b><span>Trend per decade, observed</span><i>+4.8&#176;F, last 30 Augusts against the first 30</i></div><div class="fact"><b>&#8722;0.50&#176;F</b><span>Day&#8211;night gap, per decade</span><i>24.4&#176;F then, 19.7&#176;F now</i></div>
+  <div class="fact"><b>+0.35&#176;F</b><span>Trend per decade, adjusted</span>
+    <i>NOAA homogenised, 1893&#8211;2025</i></div>
+</div>
+
+<section>
+  <h2>One August, one number</h2>
+  <p class="lede">Each thin line is the year&#8217;s own average: add up the daily low
+  for every day the observer recorded in August, divide by the number of days. The heavy
+  line over it is an 11-year centred mean, which is what a climate signal would
+  have to move. <b>Teal is the station record as written down.</b> <b>Gold is NOAA&#8217;s
+  homogenised version</b> of the same station &#8212; the record corrected for the things
+  that shift a thermometer&#8217;s reading without the weather shifting: a change in the
+  hour of observation, a move across the yard, a new screen. It runs to 2025 because it
+  fills the years after the station closed from neighbouring sites.</p>
+  <div class="figwrap">
+<svg class="fig" viewBox="0 0 1060 470" role="img" width="100%" aria-label="Mean August daily low temperature at Santa Cruz, one point per year from 1893 to 2025, as observed and as homogenised by NOAA."><line class="grid" x1="58" y1="416.0" x2="928" y2="416.0"/><text class="tick ty" x="48" y="420.0">46</text><line class="grid" x1="58" y1="366.2" x2="928" y2="366.2"/><text class="tick ty" x="48" y="370.2">48</text><line class="grid" x1="58" y1="316.5" x2="928" y2="316.5"/><text class="tick ty" x="48" y="320.5">50</text><line class="grid" x1="58" y1="266.8" x2="928" y2="266.8"/><text class="tick ty" x="48" y="270.8">52</text><line class="grid" x1="58" y1="217.0" x2="928" y2="217.0"/><text class="tick ty" x="48" y="221.0">54</text><line class="grid" x1="58" y1="167.2" x2="928" y2="167.2"/><text class="tick ty" x="48" y="171.2">56</text><line class="grid" x1="58" y1="117.5" x2="928" y2="117.5"/><text class="tick ty" x="48" y="121.5">58</text><line class="grid" x1="58" y1="67.8" x2="928" y2="67.8"/><text class="tick ty" x="48" y="71.8">60</text><line class="grid" x1="58" y1="18.0" x2="928" y2="18.0"/><text class="tick ty" x="48" y="22.0">62</text><line class="grid" x1="109.9" y1="18" x2="109.9" y2="416"/><text class="tick tx" x="109.9" y="438">1900</text><line class="grid" x1="174.9" y1="18" x2="174.9" y2="416"/><text class="tick tx" x="174.9" y="438">1910</text><line class="grid" x1="239.8" y1="18" x2="239.8" y2="416"/><text class="tick tx" x="239.8" y="438">1920</text><line class="grid" x1="304.7" y1="18" x2="304.7" y2="416"/><text class="tick tx" x="304.7" y="438">1930</text><line class="grid" x1="369.6" y1="18" x2="369.6" y2="416"/><text class="tick tx" x="369.6" y="438">1940</text><line class="grid" x1="434.6" y1="18" x2="434.6" y2="416"/><text class="tick tx" x="434.6" y="438">1950</text><line class="grid" x1="499.5" y1="18" x2="499.5" y2="416"/><text class="tick tx" x="499.5" y="438">1960</text><line class="grid" x1="564.4" y1="18" x2="564.4" y2="416"/><text class="tick tx" x="564.4" y="438">1970</text><line class="grid" x1="629.3" y1="18" x2="629.3" y2="416"/><text class="tick tx" x="629.3" y="438">1980</text><line class="grid" x1="694.3" y1="18" x2="694.3" y2="416"/><text class="tick tx" x="694.3" y="438">1990</text><line class="grid" x1="759.2" y1="18" x2="759.2" y2="416"/><text class="tick tx" x="759.2" y="438">2000</text><line class="grid" x1="824.1" y1="18" x2="824.1" y2="416"/><text class="tick tx" x="824.1" y="438">2010</text><line class="grid" x1="889.0" y1="18" x2="889.0" y2="416"/><text class="tick tx" x="889.0" y="438">2020</text><line class="axis" x1="58" y1="416" x2="928" y2="416"/><line class="axis" x1="58" y1="18" x2="58" y2="416"/><text class="axlab" transform="translate(14,217) rotate(-90)" x="0" y="0">Mean nightly low in August (&#176;F)</text><polyline class="ln adj" points="64.5,326.7 71.0,182.7 77.5,211.8 84.0,264.0 90.5,265.5 97.0,301.3 103.4,324.2 109.9,294.6 116.4,327.7 122.9,263.3 129.4,350.1 135.9,315.3 142.4,333.4 148.9,244.9 155.4,250.3 161.9,302.1 168.4,350.1 174.9,355.1 181.4,299.8 187.9,335.4 194.3,254.3 200.8,274.5 207.3,303.1 213.8,330.4 220.3,278.4 226.8,261.0 233.3,292.9 239.8,245.9 246.3,304.1 252.8,330.4 259.3,264.0 265.8,269.5 272.3,291.9 278.7,255.6 285.2,292.4 291.7,312.5 298.2,278.4 304.7,265.0 311.2,249.8 317.7,332.7 324.2,271.2 330.7,244.9 337.2,301.8 343.7,182.7 350.2,323.7 356.7,261.0 363.1,276.2 369.6,357.8 376.1,256.6 382.6,298.6 389.1,346.1 395.6,327.2 402.1,292.4 408.6,304.3 415.1,284.7 421.6,299.8 428.1,332.7 434.6,267.2 441.1,246.6 447.6,295.4 454.0,297.6 460.5,253.8 467.0,318.7 473.5,291.9 480.0,322.2 486.5,186.2 493.0,225.2 499.5,286.2 506.0,235.4 512.5,293.1 519.0,304.3 525.5,295.1 532.0,227.4 538.4,277.9 544.9,234.2 551.4,285.2 557.9,351.8 564.4,282.9 570.9,253.8 577.4,261.5 583.9,295.9 590.4,245.4 596.9,278.4 603.4,218.0 609.9,234.9 616.4,290.9 622.9,275.7 629.3,228.7 635.8,367.0 642.3,263.8 648.8,192.9 655.3,231.4 661.8,285.7 668.3,218.0 674.8,208.0 681.3,228.2 687.8,242.1 694.3,176.0 700.8,205.8 707.3,216.3 713.7,202.8 720.2,281.2 726.7,256.1 733.2,257.0 739.7,185.7 746.2,219.2 752.7,226.0 759.2,260.0 765.7,259.5 772.2,239.1 778.7,172.0 785.2,188.9 791.7,219.0 798.1,238.6 804.6,233.2 811.1,231.4 817.6,218.0 824.1,258.3 830.6,234.2 837.1,243.6 843.6,178.7 850.1,103.8 856.6,131.9 863.1,181.7 869.6,154.1 876.1,199.6 882.6,162.0 889.0,122.7 895.5,154.1 902.0,172.0 908.5,149.8 915.0,205.8 921.5,179.4"/><polyline class="ln obs" points="64.5,281.4 71.0,223.7 77.5,252.8 84.0,305.3 90.5,306.6 97.0,342.6 103.4,365.3 109.9,335.7 116.4,369.0 122.9,304.6"/><polyline class="ln obs" points="135.9,356.5 142.4,375.0 148.9,285.9 155.4,274.0 161.9,326.0 168.4,374.0 174.9,378.7 181.4,323.5 187.9,359.0 194.3,277.9 200.8,298.1 207.3,326.7 213.8,353.8 220.3,302.3 226.8,271.0 233.3,302.6 239.8,255.8 246.3,313.8 252.8,340.1 259.3,274.2 265.8,279.4"/><polyline class="ln obs" points="278.7,265.3 285.2,302.3 291.7,322.5 298.2,288.1"/><polyline class="ln obs" points="311.2,259.5 317.7,342.4 324.2,281.2 330.7,254.6 337.2,311.8 343.7,192.4 350.2,333.4 356.7,270.7 363.1,285.9 369.6,367.7 376.1,266.5 382.6,308.5 389.1,356.1 395.6,337.4 402.1,302.3 408.6,314.0 415.1,313.5 421.6,328.7 428.1,361.0 434.6,295.6 441.1,275.5 447.6,324.2 454.0,326.4 460.5,282.7 467.0,347.3 473.5,320.7 480.0,351.1 486.5,214.8 493.0,253.6 499.5,315.0"/><polyline class="ln obs" points="512.5,321.7 519.0,333.2 525.5,323.5 532.0,256.1 538.4,306.8 544.9,263.0 551.4,313.8 557.9,380.7 564.4,311.5 570.9,282.4 577.4,290.1 583.9,324.7 590.4,274.0 596.9,307.0 603.4,237.9 609.9,243.4 616.4,289.1 622.9,274.0 629.3,226.7 635.8,365.5 642.3,261.8 648.8,191.1 655.3,229.4 661.8,283.9 668.3,216.0 674.8,206.3 681.3,226.0 687.8,240.1 694.3,173.5 700.8,184.7 707.3,195.4 713.7,181.7 720.2,260.3 726.7,235.2 733.2,236.2 739.7,164.8 746.2,198.3 752.7,205.1 759.2,239.1 765.7,238.6 772.2,217.7 778.7,151.1 785.2,168.0 791.7,197.8 798.1,217.5 804.6,212.0 811.1,210.5 817.6,197.1 824.1,250.6 830.6,226.7 837.1,235.9 843.6,170.7 850.1,96.4 856.6,124.5 863.1,174.2"/><polyline class="ln obs" points="876.1,192.1 882.6,154.6"/><polyline class="ln adj sm" points="84.0,277.6 90.5,276.2 97.0,282.9 103.4,281.9 109.9,295.6 116.4,298.6 122.9,297.3 129.4,300.6 135.9,305.1 142.4,307.9 148.9,308.4 155.4,309.1 161.9,308.2 168.4,301.4 174.9,300.3 181.4,300.0 187.9,303.0 194.3,304.0 200.8,303.2 207.3,293.7 213.8,289.1 220.3,291.9 226.8,285.4 233.3,286.7 239.8,288.3 246.3,284.0 252.8,280.5 259.3,283.6 265.8,285.2 272.3,282.7 278.7,283.1 285.2,285.7 291.7,280.3 298.2,278.5 304.7,281.5 311.2,271.5 317.7,277.7 324.2,274.9 330.7,271.6 337.2,278.8 343.7,278.0 350.2,282.5 356.7,283.7 363.1,288.8 369.6,293.1 376.1,293.3 382.6,302.6 389.1,300.4 395.6,306.9 402.1,306.1 408.6,296.0 415.1,299.5 421.6,299.4 428.1,291.1 434.6,290.3 441.1,290.2 447.6,291.9 454.0,282.9 460.5,276.1 467.0,271.9 473.5,269.0 480.0,273.2 486.5,274.1 493.0,273.8 499.5,271.4 506.0,267.7 512.5,262.5 519.0,259.1 525.5,274.2 532.0,279.4 538.4,276.5 544.9,278.8 551.4,279.1 557.9,273.7 564.4,272.2 570.9,271.4 577.4,267.5 583.9,272.6 590.4,271.7 596.9,260.6 603.4,268.2 609.9,269.1 616.4,262.9 622.9,257.0 629.3,260.7 635.8,255.2 642.3,254.3 648.8,253.7 655.3,249.2 661.8,240.2 668.3,238.1 674.8,224.4 681.3,218.8 687.8,226.9 694.3,229.1 700.8,226.5 707.3,223.6 713.7,224.6 720.2,224.4 726.7,226.0 733.2,233.6 739.7,236.6 746.2,232.6 752.7,231.3 759.2,225.7 765.7,224.1 772.2,221.9 778.7,226.1 785.2,226.0 791.7,228.9 798.1,226.6 804.6,225.1 811.1,219.6 817.6,213.4 824.1,208.2 830.6,204.9 837.1,197.2 843.6,194.1 850.1,187.8 856.6,179.1 863.1,169.7 869.6,164.0 876.1,155.5 882.6,158.0 889.0,164.8 895.5,168.1 902.0,166.6"/><polyline class="ln obs sm" points="84.0,309.1 90.5,308.7 97.0,308.7 103.4,316.2 109.9,331.3 116.4,334.6 122.9,331.5"/><polyline class="ln obs sm" points="135.9,336.6 142.4,337.9 148.9,336.7 155.4,335.7 161.9,333.0 168.4,329.9 174.9,327.2 181.4,325.2 187.9,326.7 194.3,326.4 200.8,324.3 207.3,313.6 213.8,307.7 220.3,309.2 226.8,301.5 233.3,301.6 239.8,302.0 246.3,295.8 252.8,290.7 259.3,292.7 265.8,294.4"/><polyline class="ln obs sm" points="278.7,293.9 285.2,297.1 291.7,290.5 298.2,288.4"/><polyline class="ln obs sm" points="311.2,282.0 317.7,288.8 324.2,285.7 330.7,282.0 337.2,290.0 343.7,287.8 350.2,292.3 356.7,293.5 363.1,298.6 369.6,303.0 376.1,303.2 382.6,314.2 389.1,313.8 395.6,322.0 402.1,322.9 408.6,314.5 415.1,319.7 421.6,321.3 428.1,314.7 434.6,315.6 441.1,317.2 447.6,320.6 454.0,311.6 460.5,304.8 467.0,300.6 473.5,301.1 480.0,305.8 486.5,306.6 493.0,306.4 499.5,303.7"/><polyline class="ln obs sm" points="512.5,293.9 519.0,290.1 525.5,306.7 532.0,312.5 538.4,309.3 544.9,307.5 551.4,307.8 557.9,302.4 564.4,300.9 570.9,299.3 577.4,293.5 583.9,295.9 590.4,292.3 596.9,278.3 603.4,283.2 609.9,281.3 616.4,272.3 622.9,263.6 629.3,264.5 635.8,256.3 642.3,253.4 648.8,251.8 655.3,247.3 661.8,238.2 668.3,234.4 674.8,218.9 681.3,211.6 687.8,217.9 694.3,218.4 700.8,214.1 707.3,209.4 713.7,208.7 720.2,206.8 726.7,206.7 733.2,212.7 739.7,215.7 746.2,211.6 752.7,210.4 759.2,204.7 765.7,203.1 772.2,200.9 778.7,205.1 785.2,205.0 791.7,209.1 798.1,208.0 804.6,207.7 811.1,203.5 817.6,198.5 824.1,194.5 830.6,192.4 837.1,189.9 843.6,187.9 850.1,182.3 856.6,180.6 863.1,169.1"/><line class="gap" x1="129.4" y1="416" x2="129.4" y2="409"><title>1903: only 19 of 31 days observed, so no monthly mean is drawn</title></line><line class="gap" x1="272.3" y1="416" x2="272.3" y2="409"><title>1925: only 16 of 31 days observed, so no monthly mean is drawn</title></line><line class="gap" x1="506.0" y1="416" x2="506.0" y2="409"><title>1961: only 25 of 31 days observed, so no monthly mean is drawn</title></line><line class="gap" x1="869.6" y1="416" x2="869.6" y2="409"><title>2017: only 24 of 31 days observed, so no monthly mean is drawn</title></line><line class="gap" x1="889.0" y1="416" x2="889.0" y2="409"><title>2020: only 26 of 31 days observed, so no monthly mean is drawn</title></line><circle class="mk" cx="850.1" cy="96.4" r="4"/><text class="ptlab" text-anchor="middle" x="850.1" y="83.4">2014 &#183; 58.9&#176;</text><circle class="mk" cx="557.9" cy="380.7" r="4"/><text class="ptlab" text-anchor="middle" x="557.9" y="400.7">1969 &#183; 47.4&#176;</text><text class="endlab obs" x="904" y="151">as observed</text><text class="endlab adj" x="930" y="183">NOAA adjusted</text><rect class="hit" x="61.2" y="18" width="6.49" height="398"><title>August 1893 &#8212; 51.4&#176;F (10.8&#176;C) observed, 31 days; 49.6&#176;F adjusted, infilled from neighbours</title></rect><rect class="hit" x="67.7" y="18" width="6.49" height="398"><title>August 1894 &#8212; 53.7&#176;F (12.1&#176;C) observed, 31 days; 55.4&#176;F adjusted</title></rect><rect class="hit" x="74.2" y="18" width="6.49" height="398"><title>August 1895 &#8212; 52.6&#176;F (11.4&#176;C) observed, 31 days; 54.2&#176;F adjusted</title></rect><rect class="hit" x="80.7" y="18" width="6.49" height="398"><title>August 1896 &#8212; 50.5&#176;F (10.3&#176;C) observed, 31 days; 52.1&#176;F adjusted</title></rect><rect class="hit" x="87.2" y="18" width="6.49" height="398"><title>August 1897 &#8212; 50.4&#176;F (10.2&#176;C) observed, 30 days; 52.0&#176;F adjusted</title></rect><rect class="hit" x="93.7" y="18" width="6.49" height="398"><title>August 1898 &#8212; 49.0&#176;F (9.4&#176;C) observed, 31 days; 50.6&#176;F adjusted</title></rect><rect class="hit" x="100.2" y="18" width="6.49" height="398"><title>August 1899 &#8212; 48.0&#176;F (8.9&#176;C) observed, 31 days; 49.7&#176;F adjusted</title></rect><rect class="hit" x="106.7" y="18" width="6.49" height="398"><title>August 1900 &#8212; 49.2&#176;F (9.6&#176;C) observed, 31 days; 50.9&#176;F adjusted</title></rect><rect class="hit" x="113.2" y="18" width="6.49" height="398"><title>August 1901 &#8212; 47.9&#176;F (8.8&#176;C) observed, 30 days; 49.5&#176;F adjusted</title></rect><rect class="hit" x="119.7" y="18" width="6.49" height="398"><title>August 1902 &#8212; 50.5&#176;F (10.3&#176;C) observed, 31 days; 52.1&#176;F adjusted</title></rect><rect class="hit" x="126.2" y="18" width="6.49" height="398"><title>August 1903 &#8212; only 19 of 31 days observed; 48.6&#176;F adjusted</title></rect><rect class="hit" x="132.7" y="18" width="6.49" height="398"><title>August 1904 &#8212; 48.4&#176;F (9.1&#176;C) observed, 31 days; 50.0&#176;F adjusted</title></rect><rect class="hit" x="139.2" y="18" width="6.49" height="398"><title>August 1905 &#8212; 47.6&#176;F (8.7&#176;C) observed, 31 days; 49.3&#176;F adjusted</title></rect><rect class="hit" x="145.6" y="18" width="6.49" height="398"><title>August 1906 &#8212; 51.2&#176;F (10.7&#176;C) observed, 31 days; 52.9&#176;F adjusted</title></rect><rect class="hit" x="152.1" y="18" width="6.49" height="398"><title>August 1907 &#8212; 51.7&#176;F (11.0&#176;C) observed, 31 days; 52.7&#176;F adjusted</title></rect><rect class="hit" x="158.6" y="18" width="6.49" height="398"><title>August 1908 &#8212; 49.6&#176;F (9.8&#176;C) observed, 31 days; 50.6&#176;F adjusted</title></rect><rect class="hit" x="165.1" y="18" width="6.49" height="398"><title>August 1909 &#8212; 47.7&#176;F (8.7&#176;C) observed, 31 days; 48.6&#176;F adjusted</title></rect><rect class="hit" x="171.6" y="18" width="6.49" height="398"><title>August 1910 &#8212; 47.5&#176;F (8.6&#176;C) observed, 31 days; 48.5&#176;F adjusted</title></rect><rect class="hit" x="178.1" y="18" width="6.49" height="398"><title>August 1911 &#8212; 49.7&#176;F (9.8&#176;C) observed, 31 days; 50.7&#176;F adjusted</title></rect><rect class="hit" x="184.6" y="18" width="6.49" height="398"><title>August 1912 &#8212; 48.3&#176;F (9.0&#176;C) observed, 31 days; 49.2&#176;F adjusted</title></rect><rect class="hit" x="191.1" y="18" width="6.49" height="398"><title>August 1913 &#8212; 51.5&#176;F (10.9&#176;C) observed, 31 days; 52.5&#176;F adjusted</title></rect><rect class="hit" x="197.6" y="18" width="6.49" height="398"><title>August 1914 &#8212; 50.7&#176;F (10.4&#176;C) observed, 31 days; 51.7&#176;F adjusted</title></rect><rect class="hit" x="204.1" y="18" width="6.49" height="398"><title>August 1915 &#8212; 49.6&#176;F (9.8&#176;C) observed, 31 days; 50.5&#176;F adjusted</title></rect><rect class="hit" x="210.6" y="18" width="6.49" height="398"><title>August 1916 &#8212; 48.5&#176;F (9.2&#176;C) observed, 31 days; 49.4&#176;F adjusted</title></rect><rect class="hit" x="217.1" y="18" width="6.49" height="398"><title>August 1917 &#8212; 50.6&#176;F (10.3&#176;C) observed, 31 days; 51.5&#176;F adjusted</title></rect><rect class="hit" x="223.6" y="18" width="6.49" height="398"><title>August 1918 &#8212; 51.8&#176;F (11.0&#176;C) observed, 31 days; 52.2&#176;F adjusted</title></rect><rect class="hit" x="230.1" y="18" width="6.49" height="398"><title>August 1919 &#8212; 50.6&#176;F (10.3&#176;C) observed, 30 days; 51.0&#176;F adjusted</title></rect><rect class="hit" x="236.5" y="18" width="6.49" height="398"><title>August 1920 &#8212; 52.4&#176;F (11.4&#176;C) observed, 31 days; 52.8&#176;F adjusted</title></rect><rect class="hit" x="243.0" y="18" width="6.49" height="398"><title>August 1921 &#8212; 50.1&#176;F (10.1&#176;C) observed, 31 days; 50.5&#176;F adjusted</title></rect><rect class="hit" x="249.5" y="18" width="6.49" height="398"><title>August 1922 &#8212; 49.0&#176;F (9.5&#176;C) observed, 31 days; 49.4&#176;F adjusted</title></rect><rect class="hit" x="256.0" y="18" width="6.49" height="398"><title>August 1923 &#8212; 51.7&#176;F (10.9&#176;C) observed, 31 days; 52.1&#176;F adjusted</title></rect><rect class="hit" x="262.5" y="18" width="6.49" height="398"><title>August 1924 &#8212; 51.5&#176;F (10.8&#176;C) observed, 31 days; 51.9&#176;F adjusted</title></rect><rect class="hit" x="269.0" y="18" width="6.49" height="398"><title>August 1925 &#8212; only 16 of 31 days observed; 51.0&#176;F adjusted</title></rect><rect class="hit" x="275.5" y="18" width="6.49" height="398"><title>August 1926 &#8212; 52.1&#176;F (11.1&#176;C) observed, 31 days; 52.5&#176;F adjusted</title></rect><rect class="hit" x="282.0" y="18" width="6.49" height="398"><title>August 1927 &#8212; 50.6&#176;F (10.3&#176;C) observed, 31 days; 51.0&#176;F adjusted</title></rect><rect class="hit" x="288.5" y="18" width="6.49" height="398"><title>August 1928 &#8212; 49.8&#176;F (9.9&#176;C) observed, 31 days; 50.2&#176;F adjusted</title></rect><rect class="hit" x="295.0" y="18" width="6.49" height="398"><title>August 1929 &#8212; 51.1&#176;F (10.6&#176;C) observed, 29 days; 51.5&#176;F adjusted</title></rect><rect class="hit" x="301.5" y="18" width="6.49" height="398"><title>August 1930 &#8212; no daily record; 52.1&#176;F adjusted, infilled from neighbours</title></rect><rect class="hit" x="308.0" y="18" width="6.49" height="398"><title>August 1931 &#8212; 52.3&#176;F (11.3&#176;C) observed, 31 days; 52.7&#176;F adjusted</title></rect><rect class="hit" x="314.5" y="18" width="6.49" height="398"><title>August 1932 &#8212; 49.0&#176;F (9.4&#176;C) observed, 31 days; 49.4&#176;F adjusted</title></rect><rect class="hit" x="320.9" y="18" width="6.49" height="398"><title>August 1933 &#8212; 51.4&#176;F (10.8&#176;C) observed, 31 days; 51.8&#176;F adjusted</title></rect><rect class="hit" x="327.4" y="18" width="6.49" height="398"><title>August 1934 &#8212; 52.5&#176;F (11.4&#176;C) observed, 30 days; 52.9&#176;F adjusted</title></rect><rect class="hit" x="333.9" y="18" width="6.49" height="398"><title>August 1935 &#8212; 50.2&#176;F (10.1&#176;C) observed, 31 days; 50.6&#176;F adjusted</title></rect><rect class="hit" x="340.4" y="18" width="6.49" height="398"><title>August 1936 &#8212; 55.0&#176;F (12.8&#176;C) observed, 31 days; 55.4&#176;F adjusted</title></rect><rect class="hit" x="346.9" y="18" width="6.49" height="398"><title>August 1937 &#8212; 49.3&#176;F (9.6&#176;C) observed, 31 days; 49.7&#176;F adjusted</title></rect><rect class="hit" x="353.4" y="18" width="6.49" height="398"><title>August 1938 &#8212; 51.8&#176;F (11.0&#176;C) observed, 31 days; 52.2&#176;F adjusted</title></rect><rect class="hit" x="359.9" y="18" width="6.49" height="398"><title>August 1939 &#8212; 51.2&#176;F (10.7&#176;C) observed, 31 days; 51.6&#176;F adjusted</title></rect><rect class="hit" x="366.4" y="18" width="6.49" height="398"><title>August 1940 &#8212; 47.9&#176;F (8.9&#176;C) observed, 31 days; 48.3&#176;F adjusted</title></rect><rect class="hit" x="372.9" y="18" width="6.49" height="398"><title>August 1941 &#8212; 52.0&#176;F (11.1&#176;C) observed, 31 days; 52.4&#176;F adjusted</title></rect><rect class="hit" x="379.4" y="18" width="6.49" height="398"><title>August 1942 &#8212; 50.3&#176;F (10.2&#176;C) observed, 31 days; 50.7&#176;F adjusted</title></rect><rect class="hit" x="385.9" y="18" width="6.49" height="398"><title>August 1943 &#8212; 48.4&#176;F (9.1&#176;C) observed, 31 days; 48.8&#176;F adjusted</title></rect><rect class="hit" x="392.4" y="18" width="6.49" height="398"><title>August 1944 &#8212; 49.2&#176;F (9.5&#176;C) observed, 31 days; 49.6&#176;F adjusted</title></rect><rect class="hit" x="398.9" y="18" width="6.49" height="398"><title>August 1945 &#8212; 50.6&#176;F (10.3&#176;C) observed, 31 days; 51.0&#176;F adjusted</title></rect><rect class="hit" x="405.4" y="18" width="6.49" height="398"><title>August 1946 &#8212; 50.1&#176;F (10.1&#176;C) observed, 31 days; 50.5&#176;F adjusted</title></rect><rect class="hit" x="411.8" y="18" width="6.49" height="398"><title>August 1947 &#8212; 50.1&#176;F (10.1&#176;C) observed, 31 days; 51.3&#176;F adjusted</title></rect><rect class="hit" x="418.3" y="18" width="6.49" height="398"><title>August 1948 &#8212; 49.5&#176;F (9.7&#176;C) observed, 31 days; 50.7&#176;F adjusted</title></rect><rect class="hit" x="424.8" y="18" width="6.49" height="398"><title>August 1949 &#8212; 48.2&#176;F (9.0&#176;C) observed, 31 days; 49.4&#176;F adjusted</title></rect><rect class="hit" x="431.3" y="18" width="6.49" height="398"><title>August 1950 &#8212; 50.8&#176;F (10.5&#176;C) observed, 31 days; 52.0&#176;F adjusted</title></rect><rect class="hit" x="437.8" y="18" width="6.49" height="398"><title>August 1951 &#8212; 51.6&#176;F (10.9&#176;C) observed, 31 days; 52.8&#176;F adjusted</title></rect><rect class="hit" x="444.3" y="18" width="6.49" height="398"><title>August 1952 &#8212; 49.7&#176;F (9.8&#176;C) observed, 31 days; 50.9&#176;F adjusted</title></rect><rect class="hit" x="450.8" y="18" width="6.49" height="398"><title>August 1953 &#8212; 49.6&#176;F (9.8&#176;C) observed, 31 days; 50.8&#176;F adjusted</title></rect><rect class="hit" x="457.3" y="18" width="6.49" height="398"><title>August 1954 &#8212; 51.4&#176;F (10.8&#176;C) observed, 31 days; 52.5&#176;F adjusted</title></rect><rect class="hit" x="463.8" y="18" width="6.49" height="398"><title>August 1955 &#8212; 48.8&#176;F (9.3&#176;C) observed, 31 days; 49.9&#176;F adjusted</title></rect><rect class="hit" x="470.3" y="18" width="6.49" height="398"><title>August 1956 &#8212; 49.8&#176;F (9.9&#176;C) observed, 31 days; 51.0&#176;F adjusted</title></rect><rect class="hit" x="476.8" y="18" width="6.49" height="398"><title>August 1957 &#8212; 48.6&#176;F (9.2&#176;C) observed, 31 days; 49.8&#176;F adjusted</title></rect><rect class="hit" x="483.3" y="18" width="6.49" height="398"><title>August 1958 &#8212; 54.1&#176;F (12.3&#176;C) observed, 31 days; 55.2&#176;F adjusted</title></rect><rect class="hit" x="489.8" y="18" width="6.49" height="398"><title>August 1959 &#8212; 52.5&#176;F (11.4&#176;C) observed, 31 days; 53.7&#176;F adjusted</title></rect><rect class="hit" x="496.2" y="18" width="6.49" height="398"><title>August 1960 &#8212; 50.1&#176;F (10.0&#176;C) observed, 31 days; 51.2&#176;F adjusted</title></rect><rect class="hit" x="502.7" y="18" width="6.49" height="398"><title>August 1961 &#8212; only 25 of 31 days observed; 53.3&#176;F adjusted</title></rect><rect class="hit" x="509.2" y="18" width="6.49" height="398"><title>August 1962 &#8212; 49.8&#176;F (9.9&#176;C) observed, 31 days; 50.9&#176;F adjusted</title></rect><rect class="hit" x="515.7" y="18" width="6.49" height="398"><title>August 1963 &#8212; 49.3&#176;F (9.6&#176;C) observed, 31 days; 50.5&#176;F adjusted</title></rect><rect class="hit" x="522.2" y="18" width="6.49" height="398"><title>August 1964 &#8212; 49.7&#176;F (9.8&#176;C) observed, 31 days; 50.9&#176;F adjusted</title></rect><rect class="hit" x="528.7" y="18" width="6.49" height="398"><title>August 1965 &#8212; 52.4&#176;F (11.4&#176;C) observed, 30 days; 53.6&#176;F adjusted</title></rect><rect class="hit" x="535.2" y="18" width="6.49" height="398"><title>August 1966 &#8212; 50.4&#176;F (10.2&#176;C) observed, 31 days; 51.5&#176;F adjusted</title></rect><rect class="hit" x="541.7" y="18" width="6.49" height="398"><title>August 1967 &#8212; 52.1&#176;F (11.2&#176;C) observed, 31 days; 53.3&#176;F adjusted</title></rect><rect class="hit" x="548.2" y="18" width="6.49" height="398"><title>August 1968 &#8212; 50.1&#176;F (10.1&#176;C) observed, 31 days; 51.3&#176;F adjusted</title></rect><rect class="hit" x="554.7" y="18" width="6.49" height="398"><title>August 1969 &#8212; 47.4&#176;F (8.6&#176;C) observed, 31 days; 48.6&#176;F adjusted</title></rect><rect class="hit" x="561.2" y="18" width="6.49" height="398"><title>August 1970 &#8212; 50.2&#176;F (10.1&#176;C) observed, 31 days; 51.4&#176;F adjusted</title></rect><rect class="hit" x="567.7" y="18" width="6.49" height="398"><title>August 1971 &#8212; 51.4&#176;F (10.8&#176;C) observed, 31 days; 52.5&#176;F adjusted</title></rect><rect class="hit" x="574.2" y="18" width="6.49" height="398"><title>August 1972 &#8212; 51.1&#176;F (10.6&#176;C) observed, 31 days; 52.2&#176;F adjusted</title></rect><rect class="hit" x="580.6" y="18" width="6.49" height="398"><title>August 1973 &#8212; 49.7&#176;F (9.8&#176;C) observed, 31 days; 50.8&#176;F adjusted</title></rect><rect class="hit" x="587.1" y="18" width="6.49" height="398"><title>August 1974 &#8212; 51.7&#176;F (11.0&#176;C) observed, 31 days; 52.9&#176;F adjusted</title></rect><rect class="hit" x="593.6" y="18" width="6.49" height="398"><title>August 1975 &#8212; 50.4&#176;F (10.2&#176;C) observed, 31 days; 51.5&#176;F adjusted</title></rect><rect class="hit" x="600.1" y="18" width="6.49" height="398"><title>August 1976 &#8212; 53.2&#176;F (11.8&#176;C) observed, 31 days; 54.0&#176;F adjusted, infilled from neighbours</title></rect><rect class="hit" x="606.6" y="18" width="6.49" height="398"><title>August 1977 &#8212; 52.9&#176;F (11.6&#176;C) observed, 31 days; 53.3&#176;F adjusted, infilled from neighbours</title></rect><rect class="hit" x="613.1" y="18" width="6.49" height="398"><title>August 1978 &#8212; 51.1&#176;F (10.6&#176;C) observed, 31 days; 51.0&#176;F adjusted</title></rect><rect class="hit" x="619.6" y="18" width="6.49" height="398"><title>August 1979 &#8212; 51.7&#176;F (11.0&#176;C) observed, 31 days; 51.6&#176;F adjusted</title></rect><rect class="hit" x="626.1" y="18" width="6.49" height="398"><title>August 1980 &#8212; 53.6&#176;F (12.0&#176;C) observed, 31 days; 53.5&#176;F adjusted</title></rect><rect class="hit" x="632.6" y="18" width="6.49" height="398"><title>August 1981 &#8212; 48.0&#176;F (8.9&#176;C) observed, 31 days; 48.0&#176;F adjusted</title></rect><rect class="hit" x="639.1" y="18" width="6.49" height="398"><title>August 1982 &#8212; 52.2&#176;F (11.2&#176;C) observed, 31 days; 52.1&#176;F adjusted</title></rect><rect class="hit" x="645.6" y="18" width="6.49" height="398"><title>August 1983 &#8212; 55.0&#176;F (12.8&#176;C) observed, 31 days; 55.0&#176;F adjusted</title></rect><rect class="hit" x="652.1" y="18" width="6.49" height="398"><title>August 1984 &#8212; 53.5&#176;F (11.9&#176;C) observed, 31 days; 53.4&#176;F adjusted</title></rect><rect class="hit" x="658.6" y="18" width="6.49" height="398"><title>August 1985 &#8212; 51.3&#176;F (10.7&#176;C) observed, 31 days; 51.2&#176;F adjusted</title></rect><rect class="hit" x="665.1" y="18" width="6.49" height="398"><title>August 1986 &#8212; 54.0&#176;F (12.2&#176;C) observed, 31 days; 54.0&#176;F adjusted</title></rect><rect class="hit" x="671.5" y="18" width="6.49" height="398"><title>August 1987 &#8212; 54.4&#176;F (12.5&#176;C) observed, 31 days; 54.4&#176;F adjusted</title></rect><rect class="hit" x="678.0" y="18" width="6.49" height="398"><title>August 1988 &#8212; 53.6&#176;F (12.0&#176;C) observed, 31 days; 53.5&#176;F adjusted</title></rect><rect class="hit" x="684.5" y="18" width="6.49" height="398"><title>August 1989 &#8212; 53.1&#176;F (11.7&#176;C) observed, 31 days; 53.0&#176;F adjusted</title></rect><rect class="hit" x="691.0" y="18" width="6.49" height="398"><title>August 1990 &#8212; 55.8&#176;F (13.2&#176;C) observed, 31 days; 55.6&#176;F adjusted</title></rect><rect class="hit" x="697.5" y="18" width="6.49" height="398"><title>August 1991 &#8212; 55.3&#176;F (12.9&#176;C) observed, 31 days; 54.5&#176;F adjusted</title></rect><rect class="hit" x="704.0" y="18" width="6.49" height="398"><title>August 1992 &#8212; 54.9&#176;F (12.7&#176;C) observed, 31 days; 54.0&#176;F adjusted</title></rect><rect class="hit" x="710.5" y="18" width="6.49" height="398"><title>August 1993 &#8212; 55.4&#176;F (13.0&#176;C) observed, 31 days; 54.6&#176;F adjusted</title></rect><rect class="hit" x="717.0" y="18" width="6.49" height="398"><title>August 1994 &#8212; 52.3&#176;F (11.3&#176;C) observed, 31 days; 51.4&#176;F adjusted</title></rect><rect class="hit" x="723.5" y="18" width="6.49" height="398"><title>August 1995 &#8212; 53.3&#176;F (11.8&#176;C) observed, 31 days; 52.4&#176;F adjusted</title></rect><rect class="hit" x="730.0" y="18" width="6.49" height="398"><title>August 1996 &#8212; 53.2&#176;F (11.8&#176;C) observed, 31 days; 52.4&#176;F adjusted</title></rect><rect class="hit" x="736.5" y="18" width="6.49" height="398"><title>August 1997 &#8212; 56.1&#176;F (13.4&#176;C) observed, 31 days; 55.3&#176;F adjusted</title></rect><rect class="hit" x="743.0" y="18" width="6.49" height="398"><title>August 1998 &#8212; 54.8&#176;F (12.6&#176;C) observed, 31 days; 53.9&#176;F adjusted</title></rect><rect class="hit" x="749.5" y="18" width="6.49" height="398"><title>August 1999 &#8212; 54.5&#176;F (12.5&#176;C) observed, 31 days; 53.6&#176;F adjusted</title></rect><rect class="hit" x="755.9" y="18" width="6.49" height="398"><title>August 2000 &#8212; 53.1&#176;F (11.7&#176;C) observed, 31 days; 52.3&#176;F adjusted</title></rect><rect class="hit" x="762.4" y="18" width="6.49" height="398"><title>August 2001 &#8212; 53.1&#176;F (11.7&#176;C) observed, 31 days; 52.3&#176;F adjusted</title></rect><rect class="hit" x="768.9" y="18" width="6.49" height="398"><title>August 2002 &#8212; 54.0&#176;F (12.2&#176;C) observed, 31 days; 53.1&#176;F adjusted</title></rect><rect class="hit" x="775.4" y="18" width="6.49" height="398"><title>August 2003 &#8212; 56.6&#176;F (13.7&#176;C) observed, 29 days; 55.8&#176;F adjusted</title></rect><rect class="hit" x="781.9" y="18" width="6.49" height="398"><title>August 2004 &#8212; 56.0&#176;F (13.3&#176;C) observed, 31 days; 55.1&#176;F adjusted</title></rect><rect class="hit" x="788.4" y="18" width="6.49" height="398"><title>August 2005 &#8212; 54.8&#176;F (12.7&#176;C) observed, 31 days; 53.9&#176;F adjusted</title></rect><rect class="hit" x="794.9" y="18" width="6.49" height="398"><title>August 2006 &#8212; 54.0&#176;F (12.2&#176;C) observed, 31 days; 53.1&#176;F adjusted</title></rect><rect class="hit" x="801.4" y="18" width="6.49" height="398"><title>August 2007 &#8212; 54.2&#176;F (12.3&#176;C) observed, 31 days; 53.4&#176;F adjusted</title></rect><rect class="hit" x="807.9" y="18" width="6.49" height="398"><title>August 2008 &#8212; 54.3&#176;F (12.4&#176;C) observed, 31 days; 53.4&#176;F adjusted</title></rect><rect class="hit" x="814.4" y="18" width="6.49" height="398"><title>August 2009 &#8212; 54.8&#176;F (12.7&#176;C) observed, 31 days; 54.0&#176;F adjusted</title></rect><rect class="hit" x="820.9" y="18" width="6.49" height="398"><title>August 2010 &#8212; 52.6&#176;F (11.5&#176;C) observed, 31 days; 52.3&#176;F adjusted</title></rect><rect class="hit" x="827.4" y="18" width="6.49" height="398"><title>August 2011 &#8212; 53.6&#176;F (12.0&#176;C) observed, 31 days; 53.3&#176;F adjusted</title></rect><rect class="hit" x="833.9" y="18" width="6.49" height="398"><title>August 2012 &#8212; 53.2&#176;F (11.8&#176;C) observed, 31 days; 52.9&#176;F adjusted</title></rect><rect class="hit" x="840.4" y="18" width="6.49" height="398"><title>August 2013 &#8212; 55.9&#176;F (13.3&#176;C) observed, 31 days; 55.5&#176;F adjusted</title></rect><rect class="hit" x="846.8" y="18" width="6.49" height="398"><title>August 2014 &#8212; 58.9&#176;F (14.9&#176;C) observed, 31 days; 58.5&#176;F adjusted</title></rect><rect class="hit" x="853.3" y="18" width="6.49" height="398"><title>August 2015 &#8212; 57.7&#176;F (14.3&#176;C) observed, 31 days; 57.4&#176;F adjusted</title></rect><rect class="hit" x="859.8" y="18" width="6.49" height="398"><title>August 2016 &#8212; 55.7&#176;F (13.2&#176;C) observed, 31 days; 55.4&#176;F adjusted</title></rect><rect class="hit" x="866.3" y="18" width="6.49" height="398"><title>August 2017 &#8212; only 24 of 31 days observed; 56.5&#176;F adjusted</title></rect><rect class="hit" x="872.8" y="18" width="6.49" height="398"><title>August 2018 &#8212; 55.0&#176;F (12.8&#176;C) observed, 28 days; 54.7&#176;F adjusted</title></rect><rect class="hit" x="879.3" y="18" width="6.49" height="398"><title>August 2019 &#8212; 56.5&#176;F (13.6&#176;C) observed, 31 days; 56.2&#176;F adjusted</title></rect><rect class="hit" x="885.8" y="18" width="6.49" height="398"><title>August 2020 &#8212; only 26 of 31 days observed; 57.8&#176;F adjusted</title></rect><rect class="hit" x="892.3" y="18" width="6.49" height="398"><title>August 2021 &#8212; 56.8&#176;F (13.8&#176;C) observed, 31 days; 56.5&#176;F adjusted</title></rect><rect class="hit" x="898.8" y="18" width="6.49" height="398"><title>August 2022 &#8212; 55.8&#176;F adjusted, infilled from neighbours</title></rect><rect class="hit" x="905.3" y="18" width="6.49" height="398"><title>August 2023 &#8212; 56.7&#176;F adjusted, infilled from neighbours</title></rect><rect class="hit" x="911.8" y="18" width="6.49" height="398"><title>August 2024 &#8212; 54.5&#176;F adjusted, infilled from neighbours</title></rect><rect class="hit" x="918.3" y="18" width="6.49" height="398"><title>August 2025 &#8212; 55.5&#176;F adjusted, infilled from neighbours</title></rect></svg>
+  </div>
+  <div class="keys">
+    <span class="k"><span class="sw obs"></span> As observed &#8212; daily record,
+      1893&#8211;2021</span>
+    <span class="k"><span class="sw adj"></span> NOAA homogenised &#8212; monthly,
+      1893&#8211;2025</span>
+    <span class="k">Thin: single year. Heavy: 11-year centred mean.</span>
+  </div>
+  <p class="figcap">Hover any year for its numbers. Gaps in a line are gaps in the record,
+  not zero: 1930 has no August daily data at all,
+  and 5 further Augusts &#8212;
+  1903, 1925, 1961, 2017, 2020 &#8212; were observed on fewer than
+  28 of their 31 days, marked by a tick on the axis and left out of the mean.</p>
+</section>
+
+<section>
+  <h2>The trend that survives the correction</h2>
+  <p class="lede">Nights are where the signal is. Over 123 Augusts the
+  observed trend is <b>+0.46&#176;F per decade</b>, and the last 30 Augusts average
+  <b>+4.8&#176;F warmer at night</b> than the first 30 &#8212;
+  50.0&#176;F against 54.9&#176;F. That is not a subtle
+  effect: on the chart it is the one thing you do not need the heavy line to see.</p>
+  <p class="lede">And it holds up. Homogenising the series &#8212; correcting for changes
+  of observation hour, instrument and siting &#8212; moves +0.46 to +0.35&#176;F
+  per decade. <b>The correction changes the size of the answer, not the answer.</b> That is
+  the difference from the daytime series, where the same correction is larger than the
+  trend and flips its sign.</p>
+  <p class="lede">The neighbour test does not dent it either. Differenced against
+  <b>Watsonville</b>, 21&#8202;km down the coast, the August nighttime gap wanders
+  across 4.0&#176;F over a century &#8212; both of these are real stations,
+  tended by hand, and neither is a reference standard &#8212; but it wanders without
+  direction, and the warming does not. Every decade average from the 1980s on is warmer than every decade average before it: 52.9&#176;F at the coolest, against 51.4&#176;F at the warmest of the 1890s&#8211;1970s. A drift that jitters cannot make a step like that.</p>
+  <div class="offs"><div class="off"><b>+1.9</b><span>1910s &#183; 10&#8202;yr</span></div><div class="off"><b>&#8722;0.4</b><span>1920s &#183; 8&#8202;yr</span></div><div class="off"><b>+0.1</b><span>1930s &#183; 6&#8202;yr</span></div><div class="off"><b>&#8722;1.4</b><span>1940s &#183; 9&#8202;yr</span></div><div class="off"><b>&#8722;0.7</b><span>1950s &#183; 9&#8202;yr</span></div><div class="off"><b>&#8722;1.4</b><span>1960s &#183; 9&#8202;yr</span></div><div class="off wide"><b>&#8722;2.1</b><span>1970s &#183; 10&#8202;yr</span></div><div class="off"><b>&#8722;0.9</b><span>1980s &#183; 10&#8202;yr</span></div><div class="off"><b>+1.0</b><span>1990s &#183; 9&#8202;yr</span></div><div class="off"><b>&#8722;0.1</b><span>2000s &#183; 10&#8202;yr</span></div><div class="off"><b>&#8722;0.9</b><span>2010s &#183; 9&#8202;yr</span></div></div>
+  <p class="figcap" style="margin-bottom:22px">Santa Cruz minus Watsonville
+  (USC00049473, 21&#8202;km down the coast), mean August daily low, by decade.
+  Decades with fewer than three comparable Augusts are left out. Two stations this close
+  share their weather, so this difference should be flat; the widest decade is marked.</p>
+  <p class="lede"><b>What this cannot separate is the town from the climate.</b>
+  Homogenisation catches the thermometer moving; it does not catch a city growing around a
+  thermometer that stayed put. Santa Cruz went from a town of a few thousand when this
+  record opened to a city of sixty thousand, and
+  built surfaces release at night what they absorbed by day &#8212; the textbook shape of an
+  urban heat island is warmer nights with unchanged afternoons, which is exactly the shape
+  here. A warming ocean pushes the same way. The record tells you August nights in this town
+  are 4.8&#176;F warmer than they were; it does not tell you how much of that
+  is the town.</p>
+  <p class="lede">Either way the day&#8211;night gap has closed. Across the
+  112 Augusts with both readings, the mean spread between the day's high and its
+  low fell from 24.4&#176;F over the first 30 to
+  19.7&#176;F over the last 30, &#8722;0.50&#176;F per
+  decade &#8212; about a fifth of it gone. Read that with the caveat from
+  <a href="august-temps.html">August days</a>: part of the daytime half of that gap is
+  the station rather than the sky.</p>
+</section>
+
+<section>
+  <h2>Every August</h2>
+  <p class="lede">The chart&#8217;s data, decade by decade, with each decade&#8217;s own
+  average in its header. <b>Days</b> is how many of the 31 the observer recorded and quality
+  control accepted; a year in brackets fell short of 28 and is excluded from
+  every average on this page. <b>Adjusted</b> is NOAA&#8217;s homogenised value,
+  <span class="note">est</span> where it was infilled from neighbouring stations.</p>
+  <div class="panel">
+    <table>
+      <thead><tr>
+        <th scope="col">Year</th>
+        <th scope="col" style="text-align:right">Days</th>
+        <th scope="col" style="text-align:right">Mean daily low &#176;F</th>
+        <th scope="col" style="text-align:right">&#176;C</th>
+        <th scope="col" style="text-align:right">Adjusted &#176;F</th>
+        <th scope="col"></th>
+      </tr></thead>
+      <tbody>
+      <tr class="mrow"><th colspan="6" scope="colgroup">1890s
+        <span class="mcount">7 Augusts averaged
+        &#183; 50.8&#176;F</span></th></tr>
+      <tr>
+        <td class="yr">1893</td>
+        <td class="num dim">31</td>
+        <td class="num">51.4</td>
+        <td class="num dim">10.8</td>
+        <td class="num">49.6 <span class="note">est</span></td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1894</td>
+        <td class="num dim">31</td>
+        <td class="num">53.7</td>
+        <td class="num dim">12.1</td>
+        <td class="num">55.4</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1895</td>
+        <td class="num dim">31</td>
+        <td class="num">52.6</td>
+        <td class="num dim">11.4</td>
+        <td class="num">54.2</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1896</td>
+        <td class="num dim">31</td>
+        <td class="num">50.5</td>
+        <td class="num dim">10.3</td>
+        <td class="num">52.1</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1897</td>
+        <td class="num dim">30</td>
+        <td class="num">50.4</td>
+        <td class="num dim">10.2</td>
+        <td class="num">52.0</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1898</td>
+        <td class="num dim">31</td>
+        <td class="num">49.0</td>
+        <td class="num dim">9.4</td>
+        <td class="num">50.6</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1899</td>
+        <td class="num dim">31</td>
+        <td class="num">48.0</td>
+        <td class="num dim">8.9</td>
+        <td class="num">49.7</td>
+        <td class="note"></td>
+      </tr>
+      <tr class="mrow"><th colspan="6" scope="colgroup">1900s
+        <span class="mcount">9 Augusts averaged
+        &#183; 49.3&#176;F</span></th></tr>
+      <tr>
+        <td class="yr">1900</td>
+        <td class="num dim">31</td>
+        <td class="num">49.2</td>
+        <td class="num dim">9.6</td>
+        <td class="num">50.9</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1901</td>
+        <td class="num dim">30</td>
+        <td class="num">47.9</td>
+        <td class="num dim">8.8</td>
+        <td class="num">49.5</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1902</td>
+        <td class="num dim">31</td>
+        <td class="num">50.5</td>
+        <td class="num dim">10.3</td>
+        <td class="num">52.1</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1903</td>
+        <td class="num dim">19</td>
+        <td class="num dim">(47.0)</td>
+        <td class="num dim">(8.4)</td>
+        <td class="num">48.6</td>
+        <td class="note">19 of 31 days &#8212; not averaged</td>
+      </tr>
+      <tr>
+        <td class="yr">1904</td>
+        <td class="num dim">31</td>
+        <td class="num">48.4</td>
+        <td class="num dim">9.1</td>
+        <td class="num">50.0</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1905</td>
+        <td class="num dim">31</td>
+        <td class="num">47.6</td>
+        <td class="num dim">8.7</td>
+        <td class="num">49.3</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1906</td>
+        <td class="num dim">31</td>
+        <td class="num">51.2</td>
+        <td class="num dim">10.7</td>
+        <td class="num">52.9</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1907</td>
+        <td class="num dim">31</td>
+        <td class="num">51.7</td>
+        <td class="num dim">11.0</td>
+        <td class="num">52.7</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1908</td>
+        <td class="num dim">31</td>
+        <td class="num">49.6</td>
+        <td class="num dim">9.8</td>
+        <td class="num">50.6</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1909</td>
+        <td class="num dim">31</td>
+        <td class="num">47.7</td>
+        <td class="num dim">8.7</td>
+        <td class="num">48.6</td>
+        <td class="note"></td>
+      </tr>
+      <tr class="mrow"><th colspan="6" scope="colgroup">1910s
+        <span class="mcount">10 Augusts averaged
+        &#183; 49.9&#176;F</span></th></tr>
+      <tr>
+        <td class="yr">1910</td>
+        <td class="num dim">31</td>
+        <td class="num">47.5</td>
+        <td class="num dim">8.6</td>
+        <td class="num">48.5</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1911</td>
+        <td class="num dim">31</td>
+        <td class="num">49.7</td>
+        <td class="num dim">9.8</td>
+        <td class="num">50.7</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1912</td>
+        <td class="num dim">31</td>
+        <td class="num">48.3</td>
+        <td class="num dim">9.0</td>
+        <td class="num">49.2</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1913</td>
+        <td class="num dim">31</td>
+        <td class="num">51.5</td>
+        <td class="num dim">10.9</td>
+        <td class="num">52.5</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1914</td>
+        <td class="num dim">31</td>
+        <td class="num">50.7</td>
+        <td class="num dim">10.4</td>
+        <td class="num">51.7</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1915</td>
+        <td class="num dim">31</td>
+        <td class="num">49.6</td>
+        <td class="num dim">9.8</td>
+        <td class="num">50.5</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1916</td>
+        <td class="num dim">31</td>
+        <td class="num">48.5</td>
+        <td class="num dim">9.2</td>
+        <td class="num">49.4</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1917</td>
+        <td class="num dim">31</td>
+        <td class="num">50.6</td>
+        <td class="num dim">10.3</td>
+        <td class="num">51.5</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1918</td>
+        <td class="num dim">31</td>
+        <td class="num">51.8</td>
+        <td class="num dim">11.0</td>
+        <td class="num">52.2</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1919</td>
+        <td class="num dim">30</td>
+        <td class="num">50.6</td>
+        <td class="num dim">10.3</td>
+        <td class="num">51.0</td>
+        <td class="note"></td>
+      </tr>
+      <tr class="mrow"><th colspan="6" scope="colgroup">1920s
+        <span class="mcount">9 Augusts averaged
+        &#183; 50.9&#176;F</span></th></tr>
+      <tr>
+        <td class="yr">1920</td>
+        <td class="num dim">31</td>
+        <td class="num">52.4</td>
+        <td class="num dim">11.4</td>
+        <td class="num">52.8</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1921</td>
+        <td class="num dim">31</td>
+        <td class="num">50.1</td>
+        <td class="num dim">10.1</td>
+        <td class="num">50.5</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1922</td>
+        <td class="num dim">31</td>
+        <td class="num">49.0</td>
+        <td class="num dim">9.5</td>
+        <td class="num">49.4</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1923</td>
+        <td class="num dim">31</td>
+        <td class="num">51.7</td>
+        <td class="num dim">10.9</td>
+        <td class="num">52.1</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1924</td>
+        <td class="num dim">31</td>
+        <td class="num">51.5</td>
+        <td class="num dim">10.8</td>
+        <td class="num">51.9</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1925</td>
+        <td class="num dim">16</td>
+        <td class="num dim">(50.3)</td>
+        <td class="num dim">(10.2)</td>
+        <td class="num">51.0</td>
+        <td class="note">16 of 31 days &#8212; not averaged</td>
+      </tr>
+      <tr>
+        <td class="yr">1926</td>
+        <td class="num dim">31</td>
+        <td class="num">52.1</td>
+        <td class="num dim">11.1</td>
+        <td class="num">52.5</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1927</td>
+        <td class="num dim">31</td>
+        <td class="num">50.6</td>
+        <td class="num dim">10.3</td>
+        <td class="num">51.0</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1928</td>
+        <td class="num dim">31</td>
+        <td class="num">49.8</td>
+        <td class="num dim">9.9</td>
+        <td class="num">50.2</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1929</td>
+        <td class="num dim">29</td>
+        <td class="num">51.1</td>
+        <td class="num dim">10.6</td>
+        <td class="num">51.5</td>
+        <td class="note"></td>
+      </tr>
+      <tr class="mrow"><th colspan="6" scope="colgroup">1930s
+        <span class="mcount">9 Augusts averaged
+        &#183; 51.4&#176;F</span></th></tr>
+      <tr>
+        <td class="yr">1930</td>
+        <td class="num dim">&#8212;</td>
+        <td class="num dim">&#8212;</td>
+        <td class="num dim">&#8212;</td>
+        <td class="num">52.1 <span class="note">est</span></td>
+        <td class="note">no daily record</td>
+      </tr>
+      <tr>
+        <td class="yr">1931</td>
+        <td class="num dim">31</td>
+        <td class="num">52.3</td>
+        <td class="num dim">11.3</td>
+        <td class="num">52.7</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1932</td>
+        <td class="num dim">31</td>
+        <td class="num">49.0</td>
+        <td class="num dim">9.4</td>
+        <td class="num">49.4</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1933</td>
+        <td class="num dim">31</td>
+        <td class="num">51.4</td>
+        <td class="num dim">10.8</td>
+        <td class="num">51.8</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1934</td>
+        <td class="num dim">30</td>
+        <td class="num">52.5</td>
+        <td class="num dim">11.4</td>
+        <td class="num">52.9</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1935</td>
+        <td class="num dim">31</td>
+        <td class="num">50.2</td>
+        <td class="num dim">10.1</td>
+        <td class="num">50.6</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1936</td>
+        <td class="num dim">31</td>
+        <td class="num">55.0</td>
+        <td class="num dim">12.8</td>
+        <td class="num">55.4</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1937</td>
+        <td class="num dim">31</td>
+        <td class="num">49.3</td>
+        <td class="num dim">9.6</td>
+        <td class="num">49.7</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1938</td>
+        <td class="num dim">31</td>
+        <td class="num">51.8</td>
+        <td class="num dim">11.0</td>
+        <td class="num">52.2</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1939</td>
+        <td class="num dim">31</td>
+        <td class="num">51.2</td>
+        <td class="num dim">10.7</td>
+        <td class="num">51.6</td>
+        <td class="note"></td>
+      </tr>
+      <tr class="mrow"><th colspan="6" scope="colgroup">1940s
+        <span class="mcount">10 Augusts averaged
+        &#183; 49.6&#176;F</span></th></tr>
+      <tr>
+        <td class="yr">1940</td>
+        <td class="num dim">31</td>
+        <td class="num">47.9</td>
+        <td class="num dim">8.9</td>
+        <td class="num">48.3</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1941</td>
+        <td class="num dim">31</td>
+        <td class="num">52.0</td>
+        <td class="num dim">11.1</td>
+        <td class="num">52.4</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1942</td>
+        <td class="num dim">31</td>
+        <td class="num">50.3</td>
+        <td class="num dim">10.2</td>
+        <td class="num">50.7</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1943</td>
+        <td class="num dim">31</td>
+        <td class="num">48.4</td>
+        <td class="num dim">9.1</td>
+        <td class="num">48.8</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1944</td>
+        <td class="num dim">31</td>
+        <td class="num">49.2</td>
+        <td class="num dim">9.5</td>
+        <td class="num">49.6</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1945</td>
+        <td class="num dim">31</td>
+        <td class="num">50.6</td>
+        <td class="num dim">10.3</td>
+        <td class="num">51.0</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1946</td>
+        <td class="num dim">31</td>
+        <td class="num">50.1</td>
+        <td class="num dim">10.1</td>
+        <td class="num">50.5</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1947</td>
+        <td class="num dim">31</td>
+        <td class="num">50.1</td>
+        <td class="num dim">10.1</td>
+        <td class="num">51.3</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1948</td>
+        <td class="num dim">31</td>
+        <td class="num">49.5</td>
+        <td class="num dim">9.7</td>
+        <td class="num">50.7</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1949</td>
+        <td class="num dim">31</td>
+        <td class="num">48.2</td>
+        <td class="num dim">9.0</td>
+        <td class="num">49.4</td>
+        <td class="note"></td>
+      </tr>
+      <tr class="mrow"><th colspan="6" scope="colgroup">1950s
+        <span class="mcount">10 Augusts averaged
+        &#183; 50.7&#176;F</span></th></tr>
+      <tr>
+        <td class="yr">1950</td>
+        <td class="num dim">31</td>
+        <td class="num">50.8</td>
+        <td class="num dim">10.5</td>
+        <td class="num">52.0</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1951</td>
+        <td class="num dim">31</td>
+        <td class="num">51.6</td>
+        <td class="num dim">10.9</td>
+        <td class="num">52.8</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1952</td>
+        <td class="num dim">31</td>
+        <td class="num">49.7</td>
+        <td class="num dim">9.8</td>
+        <td class="num">50.9</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1953</td>
+        <td class="num dim">31</td>
+        <td class="num">49.6</td>
+        <td class="num dim">9.8</td>
+        <td class="num">50.8</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1954</td>
+        <td class="num dim">31</td>
+        <td class="num">51.4</td>
+        <td class="num dim">10.8</td>
+        <td class="num">52.5</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1955</td>
+        <td class="num dim">31</td>
+        <td class="num">48.8</td>
+        <td class="num dim">9.3</td>
+        <td class="num">49.9</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1956</td>
+        <td class="num dim">31</td>
+        <td class="num">49.8</td>
+        <td class="num dim">9.9</td>
+        <td class="num">51.0</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1957</td>
+        <td class="num dim">31</td>
+        <td class="num">48.6</td>
+        <td class="num dim">9.2</td>
+        <td class="num">49.8</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1958</td>
+        <td class="num dim">31</td>
+        <td class="num">54.1</td>
+        <td class="num dim">12.3</td>
+        <td class="num">55.2</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1959</td>
+        <td class="num dim">31</td>
+        <td class="num">52.5</td>
+        <td class="num dim">11.4</td>
+        <td class="num">53.7</td>
+        <td class="note"></td>
+      </tr>
+      <tr class="mrow"><th colspan="6" scope="colgroup">1960s
+        <span class="mcount">9 Augusts averaged
+        &#183; 50.2&#176;F</span></th></tr>
+      <tr>
+        <td class="yr">1960</td>
+        <td class="num dim">31</td>
+        <td class="num">50.1</td>
+        <td class="num dim">10.0</td>
+        <td class="num">51.2</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1961</td>
+        <td class="num dim">25</td>
+        <td class="num dim">(52.1)</td>
+        <td class="num dim">(11.2)</td>
+        <td class="num">53.3</td>
+        <td class="note">25 of 31 days &#8212; not averaged</td>
+      </tr>
+      <tr>
+        <td class="yr">1962</td>
+        <td class="num dim">31</td>
+        <td class="num">49.8</td>
+        <td class="num dim">9.9</td>
+        <td class="num">50.9</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1963</td>
+        <td class="num dim">31</td>
+        <td class="num">49.3</td>
+        <td class="num dim">9.6</td>
+        <td class="num">50.5</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1964</td>
+        <td class="num dim">31</td>
+        <td class="num">49.7</td>
+        <td class="num dim">9.8</td>
+        <td class="num">50.9</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1965</td>
+        <td class="num dim">30</td>
+        <td class="num">52.4</td>
+        <td class="num dim">11.4</td>
+        <td class="num">53.6</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1966</td>
+        <td class="num dim">31</td>
+        <td class="num">50.4</td>
+        <td class="num dim">10.2</td>
+        <td class="num">51.5</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1967</td>
+        <td class="num dim">31</td>
+        <td class="num">52.1</td>
+        <td class="num dim">11.2</td>
+        <td class="num">53.3</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1968</td>
+        <td class="num dim">31</td>
+        <td class="num">50.1</td>
+        <td class="num dim">10.1</td>
+        <td class="num">51.3</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1969</td>
+        <td class="num dim">31</td>
+        <td class="num hot">47.4</td>
+        <td class="num dim">8.6</td>
+        <td class="num">48.6</td>
+        <td class="note">coolest August nights in the record</td>
+      </tr>
+      <tr class="mrow"><th colspan="6" scope="colgroup">1970s
+        <span class="mcount">10 Augusts averaged
+        &#183; 51.3&#176;F</span></th></tr>
+      <tr>
+        <td class="yr">1970</td>
+        <td class="num dim">31</td>
+        <td class="num">50.2</td>
+        <td class="num dim">10.1</td>
+        <td class="num">51.4</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1971</td>
+        <td class="num dim">31</td>
+        <td class="num">51.4</td>
+        <td class="num dim">10.8</td>
+        <td class="num">52.5</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1972</td>
+        <td class="num dim">31</td>
+        <td class="num">51.1</td>
+        <td class="num dim">10.6</td>
+        <td class="num">52.2</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1973</td>
+        <td class="num dim">31</td>
+        <td class="num">49.7</td>
+        <td class="num dim">9.8</td>
+        <td class="num">50.8</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1974</td>
+        <td class="num dim">31</td>
+        <td class="num">51.7</td>
+        <td class="num dim">11.0</td>
+        <td class="num">52.9</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1975</td>
+        <td class="num dim">31</td>
+        <td class="num">50.4</td>
+        <td class="num dim">10.2</td>
+        <td class="num">51.5</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1976</td>
+        <td class="num dim">31</td>
+        <td class="num">53.2</td>
+        <td class="num dim">11.8</td>
+        <td class="num">54.0 <span class="note">est</span></td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1977</td>
+        <td class="num dim">31</td>
+        <td class="num">52.9</td>
+        <td class="num dim">11.6</td>
+        <td class="num">53.3 <span class="note">est</span></td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1978</td>
+        <td class="num dim">31</td>
+        <td class="num">51.1</td>
+        <td class="num dim">10.6</td>
+        <td class="num">51.0</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1979</td>
+        <td class="num dim">31</td>
+        <td class="num">51.7</td>
+        <td class="num dim">11.0</td>
+        <td class="num">51.6</td>
+        <td class="note"></td>
+      </tr>
+      <tr class="mrow"><th colspan="6" scope="colgroup">1980s
+        <span class="mcount">10 Augusts averaged
+        &#183; 52.9&#176;F</span></th></tr>
+      <tr>
+        <td class="yr">1980</td>
+        <td class="num dim">31</td>
+        <td class="num">53.6</td>
+        <td class="num dim">12.0</td>
+        <td class="num">53.5</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1981</td>
+        <td class="num dim">31</td>
+        <td class="num">48.0</td>
+        <td class="num dim">8.9</td>
+        <td class="num">48.0</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1982</td>
+        <td class="num dim">31</td>
+        <td class="num">52.2</td>
+        <td class="num dim">11.2</td>
+        <td class="num">52.1</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1983</td>
+        <td class="num dim">31</td>
+        <td class="num">55.0</td>
+        <td class="num dim">12.8</td>
+        <td class="num">55.0</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1984</td>
+        <td class="num dim">31</td>
+        <td class="num">53.5</td>
+        <td class="num dim">11.9</td>
+        <td class="num">53.4</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1985</td>
+        <td class="num dim">31</td>
+        <td class="num">51.3</td>
+        <td class="num dim">10.7</td>
+        <td class="num">51.2</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1986</td>
+        <td class="num dim">31</td>
+        <td class="num">54.0</td>
+        <td class="num dim">12.2</td>
+        <td class="num">54.0</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1987</td>
+        <td class="num dim">31</td>
+        <td class="num">54.4</td>
+        <td class="num dim">12.5</td>
+        <td class="num">54.4</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1988</td>
+        <td class="num dim">31</td>
+        <td class="num">53.6</td>
+        <td class="num dim">12.0</td>
+        <td class="num">53.5</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1989</td>
+        <td class="num dim">31</td>
+        <td class="num">53.1</td>
+        <td class="num dim">11.7</td>
+        <td class="num">53.0</td>
+        <td class="note"></td>
+      </tr>
+      <tr class="mrow"><th colspan="6" scope="colgroup">1990s
+        <span class="mcount">10 Augusts averaged
+        &#183; 54.5&#176;F</span></th></tr>
+      <tr>
+        <td class="yr">1990</td>
+        <td class="num dim">31</td>
+        <td class="num">55.8</td>
+        <td class="num dim">13.2</td>
+        <td class="num">55.6</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1991</td>
+        <td class="num dim">31</td>
+        <td class="num">55.3</td>
+        <td class="num dim">12.9</td>
+        <td class="num">54.5</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1992</td>
+        <td class="num dim">31</td>
+        <td class="num">54.9</td>
+        <td class="num dim">12.7</td>
+        <td class="num">54.0</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1993</td>
+        <td class="num dim">31</td>
+        <td class="num">55.4</td>
+        <td class="num dim">13.0</td>
+        <td class="num">54.6</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1994</td>
+        <td class="num dim">31</td>
+        <td class="num">52.3</td>
+        <td class="num dim">11.3</td>
+        <td class="num">51.4</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1995</td>
+        <td class="num dim">31</td>
+        <td class="num">53.3</td>
+        <td class="num dim">11.8</td>
+        <td class="num">52.4</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1996</td>
+        <td class="num dim">31</td>
+        <td class="num">53.2</td>
+        <td class="num dim">11.8</td>
+        <td class="num">52.4</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1997</td>
+        <td class="num dim">31</td>
+        <td class="num">56.1</td>
+        <td class="num dim">13.4</td>
+        <td class="num">55.3</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1998</td>
+        <td class="num dim">31</td>
+        <td class="num">54.8</td>
+        <td class="num dim">12.6</td>
+        <td class="num">53.9</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">1999</td>
+        <td class="num dim">31</td>
+        <td class="num">54.5</td>
+        <td class="num dim">12.5</td>
+        <td class="num">53.6</td>
+        <td class="note"></td>
+      </tr>
+      <tr class="mrow"><th colspan="6" scope="colgroup">2000s
+        <span class="mcount">10 Augusts averaged
+        &#183; 54.5&#176;F</span></th></tr>
+      <tr>
+        <td class="yr">2000</td>
+        <td class="num dim">31</td>
+        <td class="num">53.1</td>
+        <td class="num dim">11.7</td>
+        <td class="num">52.3</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">2001</td>
+        <td class="num dim">31</td>
+        <td class="num">53.1</td>
+        <td class="num dim">11.7</td>
+        <td class="num">52.3</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">2002</td>
+        <td class="num dim">31</td>
+        <td class="num">54.0</td>
+        <td class="num dim">12.2</td>
+        <td class="num">53.1</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">2003</td>
+        <td class="num dim">29</td>
+        <td class="num">56.6</td>
+        <td class="num dim">13.7</td>
+        <td class="num">55.8</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">2004</td>
+        <td class="num dim">31</td>
+        <td class="num">56.0</td>
+        <td class="num dim">13.3</td>
+        <td class="num">55.1</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">2005</td>
+        <td class="num dim">31</td>
+        <td class="num">54.8</td>
+        <td class="num dim">12.7</td>
+        <td class="num">53.9</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">2006</td>
+        <td class="num dim">31</td>
+        <td class="num">54.0</td>
+        <td class="num dim">12.2</td>
+        <td class="num">53.1</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">2007</td>
+        <td class="num dim">31</td>
+        <td class="num">54.2</td>
+        <td class="num dim">12.3</td>
+        <td class="num">53.4</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">2008</td>
+        <td class="num dim">31</td>
+        <td class="num">54.3</td>
+        <td class="num dim">12.4</td>
+        <td class="num">53.4</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">2009</td>
+        <td class="num dim">31</td>
+        <td class="num">54.8</td>
+        <td class="num dim">12.7</td>
+        <td class="num">54.0</td>
+        <td class="note"></td>
+      </tr>
+      <tr class="mrow"><th colspan="6" scope="colgroup">2010s
+        <span class="mcount">9 Augusts averaged
+        &#183; 55.5&#176;F</span></th></tr>
+      <tr>
+        <td class="yr">2010</td>
+        <td class="num dim">31</td>
+        <td class="num">52.6</td>
+        <td class="num dim">11.5</td>
+        <td class="num">52.3</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">2011</td>
+        <td class="num dim">31</td>
+        <td class="num">53.6</td>
+        <td class="num dim">12.0</td>
+        <td class="num">53.3</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">2012</td>
+        <td class="num dim">31</td>
+        <td class="num">53.2</td>
+        <td class="num dim">11.8</td>
+        <td class="num">52.9</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">2013</td>
+        <td class="num dim">31</td>
+        <td class="num">55.9</td>
+        <td class="num dim">13.3</td>
+        <td class="num">55.5</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">2014</td>
+        <td class="num dim">31</td>
+        <td class="num hot">58.9</td>
+        <td class="num dim">14.9</td>
+        <td class="num">58.5</td>
+        <td class="note">warmest August nights in the record</td>
+      </tr>
+      <tr>
+        <td class="yr">2015</td>
+        <td class="num dim">31</td>
+        <td class="num">57.7</td>
+        <td class="num dim">14.3</td>
+        <td class="num">57.4</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">2016</td>
+        <td class="num dim">31</td>
+        <td class="num">55.7</td>
+        <td class="num dim">13.2</td>
+        <td class="num">55.4</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">2017</td>
+        <td class="num dim">24</td>
+        <td class="num dim">(56.9)</td>
+        <td class="num dim">(13.8)</td>
+        <td class="num">56.5</td>
+        <td class="note">24 of 31 days &#8212; not averaged</td>
+      </tr>
+      <tr>
+        <td class="yr">2018</td>
+        <td class="num dim">28</td>
+        <td class="num">55.0</td>
+        <td class="num dim">12.8</td>
+        <td class="num">54.7</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">2019</td>
+        <td class="num dim">31</td>
+        <td class="num">56.5</td>
+        <td class="num dim">13.6</td>
+        <td class="num">56.2</td>
+        <td class="note"></td>
+      </tr>
+      <tr class="mrow"><th colspan="6" scope="colgroup">2020s
+        <span class="mcount">1 August averaged
+        &#183; 56.8&#176;F</span></th></tr>
+      <tr>
+        <td class="yr">2020</td>
+        <td class="num dim">26</td>
+        <td class="num dim">(58.1)</td>
+        <td class="num dim">(14.5)</td>
+        <td class="num">57.8</td>
+        <td class="note">26 of 31 days &#8212; not averaged</td>
+      </tr>
+      <tr>
+        <td class="yr">2021</td>
+        <td class="num dim">31</td>
+        <td class="num">56.8</td>
+        <td class="num dim">13.8</td>
+        <td class="num">56.5</td>
+        <td class="note"></td>
+      </tr>
+      <tr>
+        <td class="yr">2022</td>
+        <td class="num dim">&#8212;</td>
+        <td class="num dim">&#8212;</td>
+        <td class="num dim">&#8212;</td>
+        <td class="num">55.8 <span class="note">est</span></td>
+        <td class="note">station closed &#8212; adjusted only</td>
+      </tr>
+      <tr>
+        <td class="yr">2023</td>
+        <td class="num dim">&#8212;</td>
+        <td class="num dim">&#8212;</td>
+        <td class="num dim">&#8212;</td>
+        <td class="num">56.7 <span class="note">est</span></td>
+        <td class="note">station closed &#8212; adjusted only</td>
+      </tr>
+      <tr>
+        <td class="yr">2024</td>
+        <td class="num dim">&#8212;</td>
+        <td class="num dim">&#8212;</td>
+        <td class="num dim">&#8212;</td>
+        <td class="num">54.5 <span class="note">est</span></td>
+        <td class="note">station closed &#8212; adjusted only</td>
+      </tr>
+      <tr>
+        <td class="yr">2025</td>
+        <td class="num dim">&#8212;</td>
+        <td class="num dim">&#8212;</td>
+        <td class="num dim">&#8212;</td>
+        <td class="num">55.5 <span class="note">est</span></td>
+        <td class="note">station closed &#8212; adjusted only</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="notes">
+  <h2>How it is computed, and what it is not</h2>
+  <ul>
+    <li><b>The average is of daily lows, not of daily temperature.</b> Each year&#8217;s
+    number is the mean of TMIN over the days of August &#8212; the
+    pre-dawn low. The other element, and the daily average, are different series and move
+    differently: that is the point of having
+    <a href="august-temps.html">both pages</a>.</li>
+    <li><b>One station, because there is only one.</b> Santa Cruz, California, USC00047916, at
+    36.9878&#176;N 121.9994&#176;W and 21.3&#8202;m, a US
+    Historical Climatology Network site reporting daily since 1893. Every other Santa Cruz
+    entry in GHCN is a modern volunteer rain gauge with no thermometer. Its own microclimate
+    is the town&#8217;s, not the beach&#8217;s: a sea-cliff site a mile from the wharf,
+    cooler than inland Scotts Valley and warmer than the water&#8217;s edge.</li>
+    <li><b>Days that failed NOAA&#8217;s quality control are dropped</b> &#8212;
+    25 of them across the whole August record for this element &#8212;
+    and a year needs 28 of 31 days to be averaged at all. Averaging a
+    half-observed month against a full one compares two different things.</li>
+    <li><b>Reliability runs out at both ends, differently.</b> Before about 1900 the
+    observing hour was less standardised, which is exactly what homogenisation exists to
+    correct: read the gold line there. After April 2022 the station simply stopped, so
+    2021 is the last year with an observed value, and the 4
+    years past it &#8212; 8 August values in total &#8212; are inference from
+    neighbours rather than measurement here.</li>
+    <li><b>The trend figures are ordinary least squares</b> on the annual means, in
+    &#176;F per decade: +0.464 observed over 123 Augusts,
+    +0.355 homogenised over
+    133. Neither is a forecast, and
+    August alone says nothing about the rest of the year.</li>
+  </ul>
+</section>
+
+<footer>
+  Source: NOAA NCEI &#8212; <a href="https://www.ncei.noaa.gov/access/search/data-search/daily-summaries?stations=USC00047916">GHCN&#8209;Daily station
+  USC00047916</a> for the daily daily lows, USC00049473
+  (Watsonville) for the comparison, and <a href="https://www.ncei.noaa.gov/products/land-based-station/us-historical-climatology-network">USHCN v2.5</a>
+  (USH00047916, the FLs.52j homogenised product) for the adjusted series. Rebuild with
+  <code>python3 scripts/august_temps.py --refresh</code>; the derived series are in
+  <code>data/august_temps.json</code> and <code>data/august_nights.json</code>.
+</footer>
+
+</div>

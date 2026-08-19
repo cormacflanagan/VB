@@ -1,10 +1,7 @@
 {
- "element": "tmax",
- "ghcn_element": "TMAX",
- "drift": [
-  2009,
-  2015
- ],
+ "element": "tmin",
+ "ghcn_element": "TMIN",
+ "drift": null,
  "station": {
   "id": "USC00047916",
   "ushcn": "USH00047916",
@@ -15,21 +12,21 @@
  },
  "min_days": 28,
  "smooth": 11,
- "qc_rejected_days": 4,
- "observed_years": 124,
+ "qc_rejected_days": 25,
+ "observed_years": 123,
  "observed_span": [
   1893,
   2021
  ],
- "observed_mean_f": 75.17,
- "observed_trend_f_per_decade": -0.031,
- "first30_f": 75.06,
- "last30_f": 74.57,
+ "observed_mean_f": 51.73,
+ "observed_trend_f_per_decade": 0.464,
+ "first30_f": 50.05,
+ "last30_f": 54.88,
  "adjusted_span": [
   1893,
   2025
  ],
- "adjusted_trend_f_per_decade": 0.078,
+ "adjusted_trend_f_per_decade": 0.355,
  "neighbour": {
   "id": "USC00049473",
   "name": "Watsonville",
@@ -37,61 +34,61 @@
   "decades": [
    {
     "decade": 1910,
-    "diff": 0.64,
+    "diff": 1.95,
     "years": 10
    },
    {
     "decade": 1920,
-    "diff": 2.29,
+    "diff": -0.42,
     "years": 8
    },
    {
     "decade": 1930,
-    "diff": 3.6,
+    "diff": 0.12,
     "years": 6
    },
    {
     "decade": 1940,
-    "diff": 5.99,
-    "years": 7
+    "diff": -1.38,
+    "years": 9
    },
    {
     "decade": 1950,
-    "diff": 4.98,
+    "diff": -0.74,
     "years": 9
    },
    {
     "decade": 1960,
-    "diff": 5.41,
+    "diff": -1.43,
     "years": 9
    },
    {
     "decade": 1970,
-    "diff": 5.13,
+    "diff": -2.09,
     "years": 10
    },
    {
     "decade": 1980,
-    "diff": 2.26,
+    "diff": -0.95,
     "years": 10
    },
    {
     "decade": 1990,
-    "diff": 1.43,
+    "diff": 1.02,
     "years": 9
    },
    {
     "decade": 2000,
-    "diff": 1.66,
+    "diff": -0.12,
     "years": 10
    },
    {
     "decade": 2010,
-    "diff": 4.06,
+    "diff": -0.9,
     "years": 9
    }
   ],
-  "spread_f": 5.35
+  "spread_f": 4.04
  },
  "diurnal": {
   "span": [
@@ -107,298 +104,298 @@
  "years": [
   {
    "year": 1893,
-   "mean_f": 74.77,
+   "mean_f": 51.41,
    "days": 31,
    "short": false,
-   "adj_f": 73.26,
+   "adj_f": 49.59,
    "adj_estimated": true
   },
   {
    "year": 1894,
-   "mean_f": 77.06,
+   "mean_f": 53.73,
    "days": 31,
    "short": false,
-   "adj_f": 76.53,
+   "adj_f": 55.38,
    "adj_estimated": false
   },
   {
    "year": 1895,
-   "mean_f": 73.11,
+   "mean_f": 52.56,
    "days": 31,
    "short": false,
-   "adj_f": 72.57,
+   "adj_f": 54.21,
    "adj_estimated": false
   },
   {
    "year": 1896,
-   "mean_f": 79.03,
+   "mean_f": 50.45,
    "days": 31,
    "short": false,
-   "adj_f": 78.49,
+   "adj_f": 52.11,
    "adj_estimated": false
   },
   {
    "year": 1897,
-   "mean_f": 75.46,
-   "days": 31,
+   "mean_f": 50.4,
+   "days": 30,
    "short": false,
-   "adj_f": 74.93,
+   "adj_f": 52.05,
    "adj_estimated": false
   },
   {
    "year": 1898,
-   "mean_f": 78.04,
+   "mean_f": 48.95,
    "days": 31,
    "short": false,
-   "adj_f": 77.5,
+   "adj_f": 50.61,
    "adj_estimated": false
   },
   {
    "year": 1899,
-   "mean_f": 76.2,
-   "days": 30,
+   "mean_f": 48.04,
+   "days": 31,
    "short": false,
-   "adj_f": 75.67,
+   "adj_f": 49.69,
    "adj_estimated": false
   },
   {
    "year": 1900,
-   "mean_f": 75.79,
-   "days": 29,
+   "mean_f": 49.23,
+   "days": 31,
    "short": false,
-   "adj_f": 75.25,
+   "adj_f": 50.88,
    "adj_estimated": false
   },
   {
    "year": 1901,
-   "mean_f": 74.74,
-   "days": 31,
+   "mean_f": 47.89,
+   "days": 30,
    "short": false,
-   "adj_f": 74.21,
+   "adj_f": 49.55,
    "adj_estimated": false
   },
   {
    "year": 1902,
-   "mean_f": 75.07,
+   "mean_f": 50.48,
    "days": 31,
    "short": false,
-   "adj_f": 74.53,
+   "adj_f": 52.14,
    "adj_estimated": false
   },
   {
    "year": 1903,
-   "mean_f": 77.0,
-   "days": 31,
-   "short": false,
-   "adj_f": 76.46,
+   "mean_f": 47.05,
+   "days": 19,
+   "short": true,
+   "adj_f": 48.65,
    "adj_estimated": false
   },
   {
    "year": 1904,
-   "mean_f": 75.22,
+   "mean_f": 48.39,
    "days": 31,
    "short": false,
-   "adj_f": 74.68,
+   "adj_f": 50.05,
    "adj_estimated": false
   },
   {
    "year": 1905,
-   "mean_f": 76.11,
+   "mean_f": 47.65,
    "days": 31,
    "short": false,
-   "adj_f": 75.58,
+   "adj_f": 49.32,
    "adj_estimated": false
   },
   {
    "year": 1906,
-   "mean_f": 74.01,
+   "mean_f": 51.23,
    "days": 31,
    "short": false,
-   "adj_f": 73.47,
+   "adj_f": 52.88,
    "adj_estimated": false
   },
   {
    "year": 1907,
-   "mean_f": 71.93,
+   "mean_f": 51.71,
    "days": 31,
    "short": false,
-   "adj_f": 71.38,
+   "adj_f": 52.66,
    "adj_estimated": false
   },
   {
    "year": 1908,
-   "mean_f": 71.34,
+   "mean_f": 49.62,
    "days": 31,
    "short": false,
-   "adj_f": 70.79,
+   "adj_f": 50.58,
    "adj_estimated": false
   },
   {
    "year": 1909,
-   "mean_f": 73.28,
+   "mean_f": 47.69,
    "days": 31,
    "short": false,
-   "adj_f": 72.73,
+   "adj_f": 48.65,
    "adj_estimated": false
   },
   {
    "year": 1910,
-   "mean_f": 70.08,
+   "mean_f": 47.5,
    "days": 31,
    "short": false,
-   "adj_f": 69.55,
+   "adj_f": 48.45,
    "adj_estimated": false
   },
   {
    "year": 1911,
-   "mean_f": 73.89,
+   "mean_f": 49.72,
    "days": 31,
    "short": false,
-   "adj_f": 73.35,
+   "adj_f": 50.67,
    "adj_estimated": false
   },
   {
    "year": 1912,
-   "mean_f": 77.71,
+   "mean_f": 48.29,
    "days": 31,
    "short": false,
-   "adj_f": 77.18,
+   "adj_f": 49.24,
    "adj_estimated": false
   },
   {
    "year": 1913,
-   "mean_f": 79.13,
+   "mean_f": 51.55,
    "days": 31,
    "short": false,
-   "adj_f": 78.58,
+   "adj_f": 52.5,
    "adj_estimated": false
   },
   {
    "year": 1914,
-   "mean_f": 70.6,
+   "mean_f": 50.74,
    "days": 31,
    "short": false,
-   "adj_f": 70.07,
+   "adj_f": 51.69,
    "adj_estimated": false
   },
   {
    "year": 1915,
-   "mean_f": 78.61,
-   "days": 30,
+   "mean_f": 49.59,
+   "days": 31,
    "short": false,
-   "adj_f": 78.08,
+   "adj_f": 50.54,
    "adj_estimated": false
   },
   {
    "year": 1916,
-   "mean_f": 73.09,
+   "mean_f": 48.5,
    "days": 31,
    "short": false,
-   "adj_f": 72.55,
+   "adj_f": 49.44,
    "adj_estimated": false
   },
   {
    "year": 1917,
-   "mean_f": 72.22,
+   "mean_f": 50.57,
    "days": 31,
    "short": false,
-   "adj_f": 71.69,
+   "adj_f": 51.53,
    "adj_estimated": false
   },
   {
    "year": 1918,
-   "mean_f": 74.87,
+   "mean_f": 51.83,
    "days": 31,
    "short": false,
-   "adj_f": 74.34,
+   "adj_f": 52.23,
    "adj_estimated": false
   },
   {
    "year": 1919,
-   "mean_f": 75.13,
-   "days": 31,
+   "mean_f": 50.56,
+   "days": 30,
    "short": false,
-   "adj_f": 74.59,
+   "adj_f": 50.95,
    "adj_estimated": false
   },
   {
    "year": 1920,
-   "mean_f": 73.54,
-   "days": 30,
+   "mean_f": 52.44,
+   "days": 31,
    "short": false,
-   "adj_f": 73.0,
+   "adj_f": 52.84,
    "adj_estimated": false
   },
   {
    "year": 1921,
-   "mean_f": 75.8,
+   "mean_f": 50.11,
    "days": 31,
    "short": false,
-   "adj_f": 75.25,
+   "adj_f": 50.5,
    "adj_estimated": false
   },
   {
    "year": 1922,
-   "mean_f": 78.95,
+   "mean_f": 49.05,
    "days": 31,
    "short": false,
-   "adj_f": 78.4,
+   "adj_f": 49.44,
    "adj_estimated": false
   },
   {
    "year": 1923,
-   "mean_f": 77.77,
+   "mean_f": 51.7,
    "days": 31,
    "short": false,
-   "adj_f": 77.23,
+   "adj_f": 52.11,
    "adj_estimated": false
   },
   {
    "year": 1924,
-   "mean_f": 75.84,
+   "mean_f": 51.49,
    "days": 31,
    "short": false,
-   "adj_f": 74.53,
+   "adj_f": 51.89,
    "adj_estimated": false
   },
   {
    "year": 1925,
-   "mean_f": 75.89,
-   "days": 27,
+   "mean_f": 50.31,
+   "days": 16,
    "short": true,
-   "adj_f": 74.59,
+   "adj_f": 50.99,
    "adj_estimated": false
   },
   {
    "year": 1926,
-   "mean_f": 79.37,
+   "mean_f": 52.06,
    "days": 31,
    "short": false,
-   "adj_f": 78.06,
+   "adj_f": 52.45,
    "adj_estimated": false
   },
   {
    "year": 1927,
-   "mean_f": 73.65,
-   "days": 30,
+   "mean_f": 50.57,
+   "days": 31,
    "short": false,
-   "adj_f": 72.34,
+   "adj_f": 50.97,
    "adj_estimated": false
   },
   {
    "year": 1928,
-   "mean_f": 70.26,
+   "mean_f": 49.76,
    "days": 31,
    "short": false,
-   "adj_f": 72.3,
-   "adj_estimated": true
+   "adj_f": 50.16,
+   "adj_estimated": false
   },
   {
    "year": 1929,
-   "mean_f": 71.68,
-   "days": 31,
+   "mean_f": 51.14,
+   "days": 29,
    "short": false,
-   "adj_f": 71.47,
+   "adj_f": 51.53,
    "adj_estimated": false
   },
   {
@@ -406,743 +403,743 @@
    "mean_f": null,
    "days": 0,
    "short": false,
-   "adj_f": 75.99,
+   "adj_f": 52.07,
    "adj_estimated": true
   },
   {
    "year": 1931,
-   "mean_f": 73.88,
+   "mean_f": 52.29,
    "days": 31,
    "short": false,
-   "adj_f": 73.65,
+   "adj_f": 52.68,
    "adj_estimated": false
   },
   {
    "year": 1932,
-   "mean_f": 74.16,
+   "mean_f": 48.96,
    "days": 31,
    "short": false,
-   "adj_f": 75.11,
+   "adj_f": 49.35,
    "adj_estimated": false
   },
   {
    "year": 1933,
-   "mean_f": 73.46,
+   "mean_f": 51.42,
    "days": 31,
    "short": false,
-   "adj_f": 74.41,
+   "adj_f": 51.82,
    "adj_estimated": false
   },
   {
    "year": 1934,
-   "mean_f": 74.39,
+   "mean_f": 52.49,
    "days": 30,
    "short": false,
-   "adj_f": 75.34,
+   "adj_f": 52.88,
    "adj_estimated": false
   },
   {
    "year": 1935,
-   "mean_f": 75.52,
+   "mean_f": 50.19,
    "days": 31,
    "short": false,
-   "adj_f": 76.48,
+   "adj_f": 50.59,
    "adj_estimated": false
   },
   {
    "year": 1936,
-   "mean_f": 74.81,
+   "mean_f": 54.99,
    "days": 31,
    "short": false,
-   "adj_f": 73.45,
+   "adj_f": 55.38,
    "adj_estimated": false
   },
   {
    "year": 1937,
-   "mean_f": 77.41,
+   "mean_f": 49.32,
    "days": 31,
    "short": false,
-   "adj_f": 76.06,
+   "adj_f": 49.71,
    "adj_estimated": false
   },
   {
    "year": 1938,
-   "mean_f": 77.49,
+   "mean_f": 51.84,
    "days": 31,
    "short": false,
-   "adj_f": 76.14,
+   "adj_f": 52.23,
    "adj_estimated": false
   },
   {
    "year": 1939,
-   "mean_f": 78.43,
+   "mean_f": 51.23,
    "days": 31,
    "short": false,
-   "adj_f": 77.07,
+   "adj_f": 51.62,
    "adj_estimated": false
   },
   {
    "year": 1940,
-   "mean_f": 76.04,
+   "mean_f": 47.94,
    "days": 31,
    "short": false,
-   "adj_f": 74.68,
+   "adj_f": 48.34,
    "adj_estimated": false
   },
   {
    "year": 1941,
-   "mean_f": 79.19,
+   "mean_f": 52.01,
    "days": 31,
    "short": false,
-   "adj_f": 77.85,
+   "adj_f": 52.41,
    "adj_estimated": false
   },
   {
    "year": 1942,
-   "mean_f": 73.37,
+   "mean_f": 50.32,
    "days": 31,
    "short": false,
-   "adj_f": 72.01,
+   "adj_f": 50.72,
    "adj_estimated": false
   },
   {
    "year": 1943,
-   "mean_f": 78.6,
+   "mean_f": 48.41,
    "days": 31,
    "short": false,
-   "adj_f": 77.25,
+   "adj_f": 48.81,
    "adj_estimated": false
   },
   {
    "year": 1944,
-   "mean_f": 77.45,
+   "mean_f": 49.16,
    "days": 31,
    "short": false,
-   "adj_f": 76.1,
+   "adj_f": 49.57,
    "adj_estimated": false
   },
   {
    "year": 1945,
-   "mean_f": 77.46,
+   "mean_f": 50.57,
    "days": 31,
    "short": false,
-   "adj_f": 76.12,
+   "adj_f": 50.97,
    "adj_estimated": false
   },
   {
    "year": 1946,
-   "mean_f": 74.67,
+   "mean_f": 50.1,
    "days": 31,
    "short": false,
-   "adj_f": 73.33,
+   "adj_f": 50.49,
    "adj_estimated": false
   },
   {
    "year": 1947,
-   "mean_f": 78.33,
+   "mean_f": 50.12,
    "days": 31,
    "short": false,
-   "adj_f": 77.13,
-   "adj_estimated": true
+   "adj_f": 51.28,
+   "adj_estimated": false
   },
   {
    "year": 1948,
-   "mean_f": 76.84,
+   "mean_f": 49.51,
    "days": 31,
    "short": false,
-   "adj_f": 76.68,
-   "adj_estimated": true
+   "adj_f": 50.67,
+   "adj_estimated": false
   },
   {
    "year": 1949,
-   "mean_f": 75.65,
+   "mean_f": 48.21,
    "days": 31,
    "short": false,
-   "adj_f": 74.52,
-   "adj_estimated": true
+   "adj_f": 49.35,
+   "adj_estimated": false
   },
   {
    "year": 1950,
-   "mean_f": 74.32,
+   "mean_f": 50.84,
    "days": 31,
    "short": false,
-   "adj_f": 75.6,
-   "adj_estimated": true
+   "adj_f": 51.98,
+   "adj_estimated": false
   },
   {
    "year": 1951,
-   "mean_f": 70.18,
+   "mean_f": 51.65,
    "days": 31,
    "short": false,
-   "adj_f": 70.14,
+   "adj_f": 52.81,
    "adj_estimated": false
   },
   {
    "year": 1952,
-   "mean_f": 75.36,
+   "mean_f": 49.69,
    "days": 31,
    "short": false,
-   "adj_f": 75.33,
+   "adj_f": 50.85,
    "adj_estimated": false
   },
   {
    "year": 1953,
-   "mean_f": 75.05,
+   "mean_f": 49.6,
    "days": 31,
    "short": false,
-   "adj_f": 75.02,
+   "adj_f": 50.76,
    "adj_estimated": false
   },
   {
    "year": 1954,
-   "mean_f": 71.72,
+   "mean_f": 51.36,
    "days": 31,
    "short": false,
-   "adj_f": 71.67,
+   "adj_f": 52.52,
    "adj_estimated": false
   },
   {
    "year": 1955,
-   "mean_f": 72.29,
+   "mean_f": 48.76,
    "days": 31,
    "short": false,
-   "adj_f": 72.25,
+   "adj_f": 49.91,
    "adj_estimated": false
   },
   {
    "year": 1956,
-   "mean_f": 71.23,
-   "days": 30,
+   "mean_f": 49.83,
+   "days": 31,
    "short": false,
-   "adj_f": 71.19,
+   "adj_f": 50.99,
    "adj_estimated": false
   },
   {
    "year": 1957,
-   "mean_f": 76.28,
+   "mean_f": 48.61,
    "days": 31,
    "short": false,
-   "adj_f": 76.24,
+   "adj_f": 49.77,
    "adj_estimated": false
   },
   {
    "year": 1958,
-   "mean_f": 74.54,
+   "mean_f": 54.09,
    "days": 31,
    "short": false,
-   "adj_f": 74.5,
+   "adj_f": 55.24,
    "adj_estimated": false
   },
   {
    "year": 1959,
-   "mean_f": 76.96,
+   "mean_f": 52.53,
    "days": 31,
    "short": false,
-   "adj_f": 76.93,
+   "adj_f": 53.67,
    "adj_estimated": false
   },
   {
    "year": 1960,
-   "mean_f": 72.92,
+   "mean_f": 50.06,
    "days": 31,
    "short": false,
-   "adj_f": 72.88,
+   "adj_f": 51.22,
    "adj_estimated": false
   },
   {
    "year": 1961,
-   "mean_f": 77.89,
+   "mean_f": 52.1,
    "days": 25,
    "short": true,
-   "adj_f": 77.85,
+   "adj_f": 53.26,
    "adj_estimated": false
   },
   {
    "year": 1962,
-   "mean_f": 79.1,
+   "mean_f": 49.79,
    "days": 31,
    "short": false,
-   "adj_f": 79.05,
+   "adj_f": 50.94,
    "adj_estimated": false
   },
   {
    "year": 1963,
-   "mean_f": 76.36,
+   "mean_f": 49.33,
    "days": 31,
    "short": false,
-   "adj_f": 75.51,
+   "adj_f": 50.49,
    "adj_estimated": false
   },
   {
    "year": 1964,
-   "mean_f": 76.29,
+   "mean_f": 49.72,
    "days": 31,
    "short": false,
-   "adj_f": 75.45,
+   "adj_f": 50.86,
    "adj_estimated": false
   },
   {
    "year": 1965,
-   "mean_f": 79.73,
-   "days": 31,
+   "mean_f": 52.43,
+   "days": 30,
    "short": false,
-   "adj_f": 78.89,
+   "adj_f": 53.58,
    "adj_estimated": false
   },
   {
    "year": 1966,
-   "mean_f": 74.36,
+   "mean_f": 50.39,
    "days": 31,
    "short": false,
-   "adj_f": 73.51,
+   "adj_f": 51.55,
    "adj_estimated": false
   },
   {
    "year": 1967,
-   "mean_f": 73.55,
+   "mean_f": 52.15,
    "days": 31,
    "short": false,
-   "adj_f": 72.7,
+   "adj_f": 53.31,
    "adj_estimated": false
   },
   {
    "year": 1968,
-   "mean_f": 77.93,
+   "mean_f": 50.11,
    "days": 31,
    "short": false,
-   "adj_f": 77.09,
+   "adj_f": 51.26,
    "adj_estimated": false
   },
   {
    "year": 1969,
-   "mean_f": 75.46,
+   "mean_f": 47.42,
    "days": 31,
    "short": false,
-   "adj_f": 74.62,
+   "adj_f": 48.58,
    "adj_estimated": false
   },
   {
    "year": 1970,
-   "mean_f": 74.85,
+   "mean_f": 50.2,
    "days": 31,
    "short": false,
-   "adj_f": 73.99,
+   "adj_f": 51.35,
    "adj_estimated": false
   },
   {
    "year": 1971,
-   "mean_f": 77.99,
+   "mean_f": 51.37,
    "days": 31,
    "short": false,
-   "adj_f": 77.14,
+   "adj_f": 52.52,
    "adj_estimated": false
   },
   {
    "year": 1972,
-   "mean_f": 77.92,
+   "mean_f": 51.06,
    "days": 31,
    "short": false,
-   "adj_f": 77.07,
+   "adj_f": 52.21,
    "adj_estimated": false
   },
   {
    "year": 1973,
-   "mean_f": 74.94,
+   "mean_f": 49.67,
    "days": 31,
    "short": false,
-   "adj_f": 74.1,
+   "adj_f": 50.83,
    "adj_estimated": false
   },
   {
    "year": 1974,
-   "mean_f": 72.33,
+   "mean_f": 51.71,
    "days": 31,
    "short": false,
-   "adj_f": 71.49,
+   "adj_f": 52.86,
    "adj_estimated": false
   },
   {
    "year": 1975,
-   "mean_f": 75.41,
+   "mean_f": 50.38,
    "days": 31,
    "short": false,
-   "adj_f": 74.57,
+   "adj_f": 51.53,
    "adj_estimated": false
   },
   {
    "year": 1976,
-   "mean_f": 77.09,
+   "mean_f": 53.16,
    "days": 31,
    "short": false,
-   "adj_f": 76.96,
-   "adj_estimated": false
+   "adj_f": 53.96,
+   "adj_estimated": true
   },
   {
    "year": 1977,
-   "mean_f": 78.7,
+   "mean_f": 52.94,
    "days": 31,
    "short": false,
-   "adj_f": 78.58,
-   "adj_estimated": false
+   "adj_f": 53.28,
+   "adj_estimated": true
   },
   {
    "year": 1978,
-   "mean_f": 75.9,
+   "mean_f": 51.1,
    "days": 31,
    "short": false,
-   "adj_f": 75.78,
+   "adj_f": 51.03,
    "adj_estimated": false
   },
   {
    "year": 1979,
-   "mean_f": 77.01,
+   "mean_f": 51.71,
    "days": 31,
    "short": false,
-   "adj_f": 76.89,
+   "adj_f": 51.64,
    "adj_estimated": false
   },
   {
    "year": 1980,
-   "mean_f": 73.26,
+   "mean_f": 53.61,
    "days": 31,
    "short": false,
-   "adj_f": 73.13,
+   "adj_f": 53.53,
    "adj_estimated": false
   },
   {
    "year": 1981,
-   "mean_f": 75.92,
+   "mean_f": 48.03,
    "days": 31,
    "short": false,
-   "adj_f": 75.79,
+   "adj_f": 47.97,
    "adj_estimated": false
   },
   {
    "year": 1982,
-   "mean_f": 76.04,
+   "mean_f": 52.2,
    "days": 31,
    "short": false,
-   "adj_f": 75.9,
+   "adj_f": 52.12,
    "adj_estimated": false
   },
   {
    "year": 1983,
-   "mean_f": 79.19,
+   "mean_f": 55.04,
    "days": 31,
    "short": false,
-   "adj_f": 79.07,
+   "adj_f": 54.97,
    "adj_estimated": false
   },
   {
    "year": 1984,
-   "mean_f": 77.66,
+   "mean_f": 53.5,
    "days": 31,
    "short": false,
-   "adj_f": 77.54,
+   "adj_f": 53.42,
    "adj_estimated": false
   },
   {
    "year": 1985,
-   "mean_f": 77.13,
+   "mean_f": 51.31,
    "days": 31,
    "short": false,
-   "adj_f": 77.0,
+   "adj_f": 51.24,
    "adj_estimated": false
   },
   {
    "year": 1986,
-   "mean_f": 71.62,
+   "mean_f": 54.04,
    "days": 31,
    "short": false,
-   "adj_f": 71.49,
+   "adj_f": 53.96,
    "adj_estimated": false
   },
   {
    "year": 1987,
-   "mean_f": 74.11,
+   "mean_f": 54.43,
    "days": 31,
    "short": false,
-   "adj_f": 73.99,
+   "adj_f": 54.36,
    "adj_estimated": false
   },
   {
    "year": 1988,
-   "mean_f": 75.21,
+   "mean_f": 53.64,
    "days": 31,
    "short": false,
-   "adj_f": 74.35,
+   "adj_f": 53.55,
    "adj_estimated": false
   },
   {
    "year": 1989,
-   "mean_f": 70.88,
+   "mean_f": 53.07,
    "days": 31,
    "short": false,
-   "adj_f": 70.03,
+   "adj_f": 52.99,
    "adj_estimated": false
   },
   {
    "year": 1990,
-   "mean_f": 74.75,
+   "mean_f": 55.75,
    "days": 31,
    "short": false,
-   "adj_f": 74.98,
+   "adj_f": 55.65,
    "adj_estimated": false
   },
   {
    "year": 1991,
-   "mean_f": 75.69,
+   "mean_f": 55.3,
    "days": 31,
    "short": false,
-   "adj_f": 75.92,
+   "adj_f": 54.45,
    "adj_estimated": false
   },
   {
    "year": 1992,
-   "mean_f": 75.65,
+   "mean_f": 54.87,
    "days": 31,
    "short": false,
-   "adj_f": 75.88,
+   "adj_f": 54.03,
    "adj_estimated": false
   },
   {
    "year": 1993,
-   "mean_f": 74.55,
+   "mean_f": 55.42,
    "days": 31,
    "short": false,
-   "adj_f": 74.79,
+   "adj_f": 54.57,
    "adj_estimated": false
   },
   {
    "year": 1994,
-   "mean_f": 73.92,
+   "mean_f": 52.26,
    "days": 31,
    "short": false,
-   "adj_f": 74.16,
+   "adj_f": 51.42,
    "adj_estimated": false
   },
   {
    "year": 1995,
-   "mean_f": 75.33,
+   "mean_f": 53.27,
    "days": 31,
    "short": false,
-   "adj_f": 75.56,
+   "adj_f": 52.43,
    "adj_estimated": false
   },
   {
    "year": 1996,
-   "mean_f": 73.23,
+   "mean_f": 53.23,
    "days": 31,
    "short": false,
-   "adj_f": 73.45,
+   "adj_f": 52.39,
    "adj_estimated": false
   },
   {
    "year": 1997,
-   "mean_f": 77.0,
+   "mean_f": 56.1,
    "days": 31,
    "short": false,
-   "adj_f": 77.23,
+   "adj_f": 55.26,
    "adj_estimated": false
   },
   {
    "year": 1998,
-   "mean_f": 74.25,
+   "mean_f": 54.75,
    "days": 31,
    "short": false,
-   "adj_f": 74.48,
+   "adj_f": 53.91,
    "adj_estimated": false
   },
   {
    "year": 1999,
-   "mean_f": 72.72,
+   "mean_f": 54.48,
    "days": 31,
    "short": false,
-   "adj_f": 74.62,
+   "adj_f": 53.64,
    "adj_estimated": false
   },
   {
    "year": 2000,
-   "mean_f": 71.45,
+   "mean_f": 53.11,
    "days": 31,
    "short": false,
-   "adj_f": 73.36,
+   "adj_f": 52.27,
    "adj_estimated": false
   },
   {
    "year": 2001,
-   "mean_f": 71.68,
+   "mean_f": 53.13,
    "days": 31,
    "short": false,
-   "adj_f": 73.58,
+   "adj_f": 52.29,
    "adj_estimated": false
   },
   {
    "year": 2002,
-   "mean_f": 70.44,
+   "mean_f": 53.97,
    "days": 31,
    "short": false,
-   "adj_f": 72.36,
+   "adj_f": 53.11,
    "adj_estimated": false
   },
   {
    "year": 2003,
-   "mean_f": 76.35,
+   "mean_f": 56.65,
    "days": 29,
    "short": false,
-   "adj_f": 78.26,
+   "adj_f": 55.81,
    "adj_estimated": false
   },
   {
    "year": 2004,
-   "mean_f": 73.23,
+   "mean_f": 55.97,
    "days": 31,
    "short": false,
-   "adj_f": 75.13,
+   "adj_f": 55.13,
    "adj_estimated": false
   },
   {
    "year": 2005,
-   "mean_f": 72.06,
+   "mean_f": 54.77,
    "days": 31,
    "short": false,
-   "adj_f": 73.98,
+   "adj_f": 53.92,
    "adj_estimated": false
   },
   {
    "year": 2006,
-   "mean_f": 70.74,
+   "mean_f": 53.98,
    "days": 31,
    "short": false,
-   "adj_f": 72.64,
+   "adj_f": 53.13,
    "adj_estimated": false
   },
   {
    "year": 2007,
-   "mean_f": 74.06,
+   "mean_f": 54.2,
    "days": 31,
    "short": false,
-   "adj_f": 75.54,
-   "adj_estimated": true
+   "adj_f": 53.35,
+   "adj_estimated": false
   },
   {
    "year": 2008,
-   "mean_f": 73.32,
+   "mean_f": 54.26,
    "days": 31,
    "short": false,
-   "adj_f": 74.73,
-   "adj_estimated": true
+   "adj_f": 53.42,
+   "adj_estimated": false
   },
   {
    "year": 2009,
-   "mean_f": 77.05,
+   "mean_f": 54.8,
    "days": 31,
    "short": false,
-   "adj_f": 76.91,
+   "adj_f": 53.96,
    "adj_estimated": false
   },
   {
    "year": 2010,
-   "mean_f": 73.13,
+   "mean_f": 52.65,
    "days": 31,
    "short": false,
-   "adj_f": 72.99,
+   "adj_f": 52.34,
    "adj_estimated": false
   },
   {
    "year": 2011,
-   "mean_f": 71.32,
+   "mean_f": 53.61,
    "days": 31,
    "short": false,
-   "adj_f": 71.19,
+   "adj_f": 53.31,
    "adj_estimated": false
   },
   {
    "year": 2012,
-   "mean_f": 76.36,
+   "mean_f": 53.24,
    "days": 31,
    "short": false,
-   "adj_f": 74.93,
+   "adj_f": 52.93,
    "adj_estimated": false
   },
   {
    "year": 2013,
-   "mean_f": 78.87,
+   "mean_f": 55.86,
    "days": 31,
    "short": false,
-   "adj_f": 77.45,
+   "adj_f": 55.54,
    "adj_estimated": false
   },
   {
    "year": 2014,
-   "mean_f": 76.85,
+   "mean_f": 58.85,
    "days": 31,
    "short": false,
-   "adj_f": 75.43,
+   "adj_f": 58.55,
    "adj_estimated": false
   },
   {
    "year": 2015,
-   "mean_f": 84.02,
+   "mean_f": 57.72,
    "days": 31,
    "short": false,
-   "adj_f": 82.6,
+   "adj_f": 57.42,
    "adj_estimated": false
   },
   {
    "year": 2016,
-   "mean_f": 72.82,
+   "mean_f": 55.72,
    "days": 31,
    "short": false,
-   "adj_f": 72.16,
+   "adj_f": 55.42,
    "adj_estimated": false
   },
   {
    "year": 2017,
-   "mean_f": 75.32,
-   "days": 25,
+   "mean_f": 56.85,
+   "days": 24,
    "short": true,
-   "adj_f": 74.66,
+   "adj_f": 56.53,
    "adj_estimated": false
   },
   {
    "year": 2018,
-   "mean_f": 74.0,
+   "mean_f": 55.0,
    "days": 28,
    "short": false,
-   "adj_f": 73.35,
+   "adj_f": 54.7,
    "adj_estimated": false
   },
   {
    "year": 2019,
-   "mean_f": 77.87,
+   "mean_f": 56.51,
    "days": 31,
    "short": false,
-   "adj_f": 77.2,
+   "adj_f": 56.21,
    "adj_estimated": false
   },
   {
    "year": 2020,
-   "mean_f": 79.18,
+   "mean_f": 58.1,
    "days": 26,
    "short": true,
-   "adj_f": 78.51,
+   "adj_f": 57.79,
    "adj_estimated": false
   },
   {
    "year": 2021,
-   "mean_f": 74.46,
+   "mean_f": 56.83,
    "days": 31,
    "short": false,
-   "adj_f": 75.63,
-   "adj_estimated": true
+   "adj_f": 56.53,
+   "adj_estimated": false
   },
   {
    "year": 2022,
    "mean_f": null,
    "days": 0,
    "short": false,
-   "adj_f": 76.91,
+   "adj_f": 55.81,
    "adj_estimated": true
   },
   {
@@ -1150,7 +1147,7 @@
    "mean_f": null,
    "days": 0,
    "short": false,
-   "adj_f": 77.0,
+   "adj_f": 56.7,
    "adj_estimated": true
   },
   {
@@ -1158,7 +1155,7 @@
    "mean_f": null,
    "days": 0,
    "short": false,
-   "adj_f": 75.94,
+   "adj_f": 54.45,
    "adj_estimated": true
   },
   {
@@ -1166,7 +1163,7 @@
    "mean_f": null,
    "days": 0,
    "short": false,
-   "adj_f": 76.93,
+   "adj_f": 55.51,
    "adj_estimated": true
   }
  ]

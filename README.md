@@ -17,7 +17,7 @@ Three groups are covered:
 | **2027 and younger** | 60 | Age-eligible — see below | [`docs/bntdp-2027_younger.html`](docs/bntdp-2027_younger.html) |
 | **2028 and younger** | 60 | Age-eligible — see below | [`docs/bntdp-2028_younger.html`](docs/bntdp-2028_younger.html) |
 
-Three companion pages answer planning questions the matrix cannot:
+Four companion pages answer planning questions the matrix cannot:
 
 | Page | Question |
 | --- | --- |
@@ -26,6 +26,7 @@ Three companion pages answer planning questions the matrix cannot:
 | [`docs/partners-2027_younger.html`](docs/partners-2027_younger.html) | The same, across the 18U-eligible top 60. |
 | [`docs/partners-2028_younger.html`](docs/partners-2028_younger.html) | The same, across the 17U-eligible top 60. |
 | [`docs/august-temps.html`](docs/august-temps.html) | How hot is an August day in Santa Cruz, and has it moved? |
+| [`docs/august-nights.html`](docs/august-nights.html) | The same question for August nights &mdash; where the answer is yes. |
 
 **Doubles only.** Club, 3v3 and 5v5 results are excluded: a placing there reflects a squad
 of five to twelve, not the individual. The test is roster size rather than the division
@@ -366,45 +367,58 @@ calendar: women's Saturdays through the autumn and spring, and a midweek girls' 
 series every Wednesday through June and July. `scripts/cbva.py --upcoming` crawls the
 not-yet-played listing the same way, and those dates join the next-season table.
 
-## August warmth at Santa Cruz
+## August temperature at Santa Cruz
 
-The calendar's home venue is Santa Cruz, so the last page asks what an August day there is
-actually like: **the mean of every daily high temperature in August, one datapoint per year,
-back to 1893.**
+The calendar's home venue is Santa Cruz, so the last two pages ask what an August day there
+is actually like: **the mean of every daily reading in August, one datapoint per year, back
+to 1893.** Days and nights are separate pages because they are separate answers.
+
+| Page | Element | Observed trend | Homogenised trend |
+| --- | --- | --- | --- |
+| [`docs/august-temps.html`](docs/august-temps.html) | Daily highs (TMAX) | −0.03 °F/decade | +0.08 °F/decade |
+| [`docs/august-nights.html`](docs/august-nights.html) | Daily lows (TMIN) | **+0.46 °F/decade** | **+0.35 °F/decade** |
 
 ```
-python3 scripts/august_temps.py --refresh   # -> data/august_temps.json, docs/august-temps.html
+python3 scripts/august_temps.py --refresh   # both pages, re-downloading the sources
+python3 scripts/august_temps.py tmin        # just the nights, from the cached sources
 ```
 
 The source is NOAA's station **USC00047916, Santa Cruz, CA** — a Historical Climatology
 Network site with daily observations from 1893 and the only long temperature record in the
 town; every other Santa Cruz entry in GHCN is a modern volunteer rain gauge with no
 thermometer. Days carrying a GHCN quality flag are dropped, and a year needs 28 of its 31
-days to be averaged, which leaves **124 Augusts between 1893 and 2021**. The station stopped
-reporting in April 2022.
+days to be averaged, which leaves **124 Augusts of highs and 123 of lows between 1893 and
+2021**. The station stopped reporting in April 2022.
 
-Two series are drawn, because the raw one cannot be read alone:
+Each page draws two series, because the raw one cannot be read alone: the daily record as
+observed, and NOAA's homogenised version of the same station (USHCN v2.5, `FLs.52j`),
+corrected for changes of observation hour, instrument and siting and extended to 2025 by
+infilling from neighbours.
 
-- **As observed** — the daily maxima as the observer wrote them down. This is literally the
-  quantity asked for, and its trend is **−0.03 °F per decade**: nothing.
-- **NOAA homogenised** — USHCN v2.5 (`FLs.52j`) for the same station, corrected for changes
-  in observation hour, instrument and siting, and extended to 2025 by infilling from
-  neighbouring stations. Its trend is **+0.08 °F per decade**.
+**The days say nothing.** Observed −0.03 °F per decade, homogenised +0.08 — the correction
+is larger than the trend it corrects, so the daytime record cannot settle its own sign.
+That the raw daytime line carries station history is measurable rather than assumed: the
+pipeline differences every August against **Watsonville**, 21 km down the coast, and reports
+the gap by decade. It wanders across 5.3 °F — for two stations that share their weather it
+should be a constant — and the 2010s sit at +4.1 °F after two decades near +1.5. That
+stretch is shaded on the chart, and it is why 2015 appears as the warmest August on record
+at 84.0 °F where the homogenised series puts it at 82.6 °F.
 
-The gap between them is a station artefact, and it is visible: against Watsonville, 21 km
-away and still reporting, Santa Cruz reads ~1.3 °F warmer through the 1990s and 2000s, then
-4–6 °F warmer from 2009 to 2015, then falls back. That stretch is shaded on the chart. It is
-why 2015 appears as the warmest August on record at 84.0 °F — 2015 was genuinely hot on this
-whole coast, but this station's number is inflated on top of it, and the homogenised series
-puts it at 82.6 °F.
+**The nights say a great deal.** Observed +0.46 °F per decade, homogenised +0.35: the
+correction changes the size of the answer, not the answer. The last 30 Augusts average
+**4.8 °F warmer at night** than the first 30, and every decade average from the 1980s on is
+warmer than every decade average before it. The nighttime gap against Watsonville wanders
+too, but without direction. What the record cannot separate is the town from the climate —
+homogenisation catches a thermometer moving, not a city growing around one, and warmer
+nights with unchanged afternoons is the textbook shape of an urban heat island as well as of
+a warming ocean.
 
-The long-run answer is a flat one: **a mean daily high of 75.2 °F**, with the coolest August
-in the record (1910, 70.1 °F) and the warmest under 14 °F apart. Santa Cruz in August is a
-marine-layer climate and the ocean sets the afternoon ceiling. Nights are a different
-question and not this chart's.
+Either way the day–night gap has closed: across the 112 Augusts with both readings, the mean
+spread between the day's high and its low fell from 24.4 °F over the first 30 to 19.7 °F over
+the last 30, about a fifth of it gone.
 
-`scripts/august_page.py` renders the figure as inline SVG on the same terms as the scatter —
-two hues checked with the dataviz validator against both the light and dark chart surfaces,
+`scripts/august_page.py` renders both figures as inline SVG on the same terms as the scatter
+— two hues checked with the dataviz validator against both the light and dark chart surfaces,
 the second series dashed as well as differently coloured, hover text in an SVG `<title>` so
 the page needs no JavaScript, and the full table below the chart as the non-visual view.
 
