@@ -397,15 +397,36 @@ infilling from neighbours.
 
 **The days say nothing.** Observed −0.03 °F per decade, homogenised +0.08 — the correction
 is larger than the trend it corrects, so the daytime record cannot settle its own sign.
-That the raw daytime line carries station history is measurable rather than assumed: the
+
+That the raw daytime line carries station history is measurable rather than assumed. The
 pipeline differences every August against **Watsonville**, 21 km down the coast, and reports
-the gap by decade. It wanders across 5.3 °F — for two stations that share their weather it
-should be a constant — and the 2010s sit at +4.1 °F after two decades near +1.5. That
-stretch is shaded on the chart, and it is why 2015 appears as the warmest August on record
-at 84.0 °F where the homogenised series puts it at 82.6 °F.
+the gap by decade. It does not hold still: near +5 °F through the 1940s–70s, near +1.5 °F
+from 1980 to 2008, near +4 °F again since. Every August from 2009 to 2015 sits above the
+whole 2000–2008 range, and the same jump shows against Watsonville's airport station and San
+Jose's. It is daytime-only — the nighttime gap does not move — and warm-season-only, which
+is the signature of a gauge's exposure rather than of a climate. The station histories agree
+about which of the two is the moving part: Santa Cruz read at 8am until 1987, 5pm until 2017
+and 7pm since, and relocated 0.54 miles WSW in 2017 after several earlier moves; Watsonville
+has not moved since 1941 and has read at 8am since 1931.
+
+**NOAA's algorithm reads the same evidence the other way round**, which is worth stating
+plainly because it is the more defensible call: its largest correction at this station is
+**+2.5 °F applied to 1999–2008** — that stretch reads too *cool*, rather than the years after
+it reading too warm. It also puts the size of the thing in proportion. The correction on 2015
+is −1.4 °F, not four: a 4-to-6-degree gap between two stations is a change in their
+*difference*, not an error bar on a thermometer. 2015 stays the warmest August in the record
+after adjustment, at 82.6 °F; what changes is how exceptional it looks next to the 2000s.
+
+Both pages now carry a second figure showing exactly that — the time-of-observation
+correction and the pairwise homogenisation, per year, in °F. NOAA publishes the raw,
+TOB-adjusted and homogenised series separately, so the ladder is read from its own files
+rather than inferred.
 
 **The nights say a great deal.** Observed +0.46 °F per decade, homogenised +0.35: the
-correction changes the size of the answer, not the answer. The last 30 Augusts average
+correction changes the size of the answer, not the answer — and note which way it cuts.
+The algorithm raises this station's *early* Augusts (+1.6 °F on 1894–1917, +1.5 °F on
+1947–1976), which works against a warming trend rather than for one. The trend survives a
+correction that is trying to flatten it. The last 30 Augusts average
 **4.8 °F warmer at night** than the first 30, and every decade average from the 1980s on is
 warmer than every decade average before it. The nighttime gap against Watsonville wanders
 too, but without direction. What the record cannot separate is the town from the climate —

@@ -10,8 +10,7 @@ Every year carries a hit target with its own numbers on hover, so the figure nee
 script, and the full table below is the same data in a form a reader can search.
 
 One renderer, two pages: the daytime maxima and the nighttime minima are the same shape of
-question and differ only in wording, in whether a drift band is drawn, and in what the
-evidence actually says. COPY holds the parts that differ.
+question and differ only in wording and in what the evidence actually says. COPY holds the parts that differ.
 """
 import html
 
@@ -93,19 +92,6 @@ def figure(d):
          f'year from {d["observed_span"][0]} to {d["adjusted_span"][1]}, as observed and '
          f'as homogenised by NOAA.">']
 
-    if d["drift"]:
-        # the stretch where the station reads warm against its neighbour, marked where it
-        # happens rather than only described underneath
-        a, b = d["drift"]
-        bx0, bx1 = sx(a - 0.5), sx(b + 0.5)
-        gap = next(o_["diff"] for o_ in d["neighbour"]["decades"] if o_["decade"] == 2010)
-        o.append(f'<rect class="band" x="{bx0:.1f}" y="{MT}" width="{bx1-bx0:.1f}" '
-                 f'height="{PH}"><title>{a}&#8211;{b}: this station runs {gap:+.1f} &#176;F '
-                 f'against {d["neighbour"]["name"]} over the 2010s, after two decades near '
-                 f'+1.5. A difference that opens and closes against a neighbour 21 km away '
-                 f'is the station, not the weather.</title></rect>')
-        o.append(f'<text class="bandlab" x="{(bx0+bx1)/2:.0f}" y="{MT+13}">station drift</text>')
-
     for v in range(y0, y1 + 1, 2):
         y = sy(v)
         o.append(f'<line class="grid" x1="{ML}" y1="{y:.1f}" x2="{ML+PW}" y2="{y:.1f}"/>')
@@ -170,6 +156,64 @@ def figure(d):
     return "".join(o), hot, cold, obs, adj
 
 
+AW, AH = 1060, 200
+AML, AMR, AMT, AMB = 58, 132, 16, 34
+
+
+def adjust_figure(d):
+    """What NOAA changed, per year: the time-of-observation correction and the pairwise
+    one on top of it. Same units as the chart above, its own axis, one measure."""
+    per = {int(y): v for y, v in d["ladder"]["per_year"].items()}
+    years = sorted(per)
+    tot = {y: per[y]["tob"] + per[y]["pha"] for y in years}
+    tob = {y: per[y]["tob"] for y in years}
+    pw, ph = AW - AML - AMR, AH - AMT - AMB
+    x0, x1 = years[0] - 1, max(years) + 1
+    lo = min(min(tot.values()), min(tob.values())) - 0.4
+    hi = max(max(tot.values()), max(tob.values())) + 0.4
+    sx = lambda v: AML + (v - x0) / (x1 - x0) * pw
+    sy = lambda v: AMT + ph - (v - lo) / (hi - lo) * ph
+
+    def steps(series):
+        """One flat tread per year: an adjustment holds until the algorithm changes it."""
+        pts = []
+        for y in years:
+            pts.append(f"{sx(y - 0.5):.1f},{sy(series[y]):.1f}")
+            pts.append(f"{sx(y + 0.5):.1f},{sy(series[y]):.1f}")
+        return " ".join(pts)
+
+    o = [f'<svg class="fig afig" viewBox="0 0 {AW} {AH}" role="img" width="100%" '
+         f'aria-label="The adjustment NOAA applies to this station\'s August values, '
+         f'per year, in degrees Fahrenheit.">']
+    for v in range(int(lo // 1), int(hi) + 1):
+        y = sy(v)
+        cls = "zero" if v == 0 else "grid"
+        o.append(f'<line class="{cls}" x1="{AML}" y1="{y:.1f}" x2="{AML+pw}" y2="{y:.1f}"/>')
+        o.append(f'<text class="tick ty" x="{AML-10}" y="{y+4:.1f}">{v:+d}</text>'.replace(">+0<", ">0<"))
+    for v in range(1900, int(x1) + 1, 10):
+        o.append(f'<text class="tick tx" x="{sx(v):.1f}" y="{AMT+ph+20}">{v}</text>')
+    o.append(f'<text class="axlab" transform="translate(14,{AMT+ph/2:.0f}) rotate(-90)" '
+             f'x="0" y="0">Adjustment (&#176;F)</text>')
+    o.append(f'<polyline class="ln tobln" points="{steps(tob)}"/>')
+    o.append(f'<polyline class="ln totln" points="{steps(tot)}"/>')
+    o.append(f'<text class="endlab adj" x="{sx(max(years))+8:.0f}" '
+             f'y="{sy(tot[max(years)])+4:.0f}">total</text>')
+    o.append(f'<text class="endlab tobl" x="{sx(max(years))+8:.0f}" '
+             f'y="{sy(tob[max(years)])+16:.0f}">time-of-obs only</text>')
+    for seg in d["ladder"]["segments"]:
+        mid = (seg["from"] + seg["to"]) / 2
+        o.append(f'<text class="seglab" x="{sx(mid):.0f}" '
+                 f'y="{sy(seg["adj"] + d["ladder"]["tob_mean"]) - 9:.0f}">'
+                 f'{seg["from"]}&#8211;{seg["to"]}</text>')
+    for y in years:
+        o.append(f'<rect class="hit" x="{sx(y-0.5):.1f}" y="{AMT}" '
+                 f'width="{pw/(x1-x0):.2f}" height="{ph}"><title>August {y} &#8212; '
+                 f'time-of-observation {per[y]["tob"]:+.2f}&#176;F, pairwise '
+                 f'{per[y]["pha"]:+.2f}&#176;F, total {tot[y]:+.2f}&#176;F</title></rect>')
+    o.append("</svg>")
+    return "".join(o)
+
+
 FIG_CSS = """
 .figwrap { border:1px solid var(--line); border-radius:3px; background:var(--surface);
   padding:18px 20px 10px; overflow-x:auto; }
@@ -209,6 +253,14 @@ FIG_CSS = """
 .fig .endlab.adj { fill:var(--adj); }
 .fig .hit { fill:transparent; }
 .fig .hit:hover { fill:var(--accent-soft); opacity:.5; }
+.afig { min-width:820px; }
+.afig .zero { stroke:var(--line); stroke-width:1.5; }
+.afig .totln { fill:none; stroke:var(--adj); stroke-width:2.2; }
+.afig .tobln { fill:none; stroke:var(--faint); stroke-width:1.4; stroke-dasharray:4 3; }
+.afig .seglab { fill:var(--muted); font-size:11px; text-anchor:middle;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; paint-order:stroke;
+  stroke:var(--surface); stroke-width:3px; }
+.afig .endlab.tobl { fill:var(--faint); font-weight:500; }
 .figcap { color:var(--faint); font-size:12px; margin:10px 0 0; max-width:82ch; }
 .keys { display:flex; flex-wrap:wrap; gap:18px; margin:14px 0 0; align-items:center; }
 .keys .k { display:flex; align-items:center; gap:8px; font-size:12px; color:var(--muted); }
@@ -347,16 +399,35 @@ def offsets(d):
 
 def evidence(d, obs, adj, hot):
     """The middle section: why a second line is drawn, and what it changes here."""
-    c, n = COPY[d["element"]], d["neighbour"]
+    c, n, L = COPY[d["element"]], d["neighbour"], d["ladder"]
     to, ta = d["observed_trend_f_per_decade"], d["adjusted_trend_f_per_decade"]
     shift = d["last30_f"] - d["first30_f"]
+    per = {int(y): v for y, v in L["per_year"].items()}
+    big = max(L["segments"], key=lambda s_: abs(s_["adj"])) if L["segments"] else None
     strip = f"""  <div class="offs">{offsets(d)}</div>
   <p class="figcap" style="margin-bottom:22px">Santa Cruz minus {n["name"]}
   ({n["id"]}, {n["km"]}&#8202;km down the coast), mean August {c["value"]}, by decade.
   Decades with fewer than three comparable Augusts are left out. Two stations this close
   share their weather, so this difference should be flat; the widest decade is marked.</p>"""
+    hist = """  <p class="lede">The station histories say which of the two is the moving
+  part. NOAA&#8217;s own metadata has Santa Cruz reading at 8am until 1987, at 5pm from
+  1987 to 2017, and at 7pm from 2018; relocated 0.54&#8202;miles west-southwest in 2017
+  after the previous observer gave up, and at least three times before that. It is a
+  backyard gauge &#8212; the site description records a house 8 to 35&#8202;feet away and a
+  fence at five. Watsonville has not moved since 1941 and has read at 8am since 1931.</p>"""
+    ladder_fig = f"""  <div class="figwrap" style="margin-top:6px">
+{adjust_figure(d)}
+  </div>
+  <p class="figcap">What NOAA changes, in &#176;F, before the gold line on the chart above
+  is drawn. The dashed line is the time-of-observation correction, which follows from the
+  hour the observer read the gauge; the solid line adds the pairwise homogenisation on top
+  of it. Flat treads are the algorithm&#8217;s own segments &#8212; it does not adjust years,
+  it adjusts the stretch between two breaks. Hover any year for its two components.</p>"""
 
     if d["element"] == "tmax":
+        cool = next((s_ for s_ in L["segments"] if s_["from"] >= 1990), None)
+        c_tot = per[cool["from"]]["tob"] + per[cool["from"]]["pha"] if cool else 0
+        h_tot = per[hot]["tob"] + per[hot]["pha"]
         return f"""
 <section>
   <h2>Why there are two lines</h2>
@@ -371,17 +442,28 @@ def evidence(d, obs, adj, hot):
   the trend it is correcting, so which way August afternoons have gone here is a question
   this station cannot answer on its own.</p>
   <p class="lede">That the raw line carries station history is not a guess. Differenced
-  against <b>{n["name"]}</b>, {n["km"]}&#8202;km down the coast, the August daytime gap
-  wanders across {n["spread_f"]:.1f}&#176;F from decade to decade &#8212; it should be a
-  constant.</p>
+  against <b>{n["name"]}</b>, {n["km"]}&#8202;km down the coast, the August daytime gap has
+  held three different levels: near +5&#176;F through the 1940s to the 1970s, near
+  +1.5&#176;F from 1980 to 2008, and near +4&#176;F again since. Every August from 2009 to
+  2015 sits above the whole 2000&#8211;2008 range, and the same jump shows against
+  Watsonville&#8217;s airport station and San Jose&#8217;s. It is daytime-only &#8212; the
+  nighttime gap does not move &#8212; and warm-season-only, which is the signature of a
+  gauge&#8217;s exposure to the sun rather than of a climate.</p>
 {strip}
-  <p class="lede">The 2010s stand out: {sgn(next(o["diff"] for o in n["decades"] if o["decade"] == 2010), 1)}&#176;F,
-  after two decades near +1.5. That is the shaded stretch on the chart, and it is why
-  {hot} shows as the warmest August in {d["observed_span"][1] - d["observed_span"][0]} years
-  at {obs[hot]:.1f}&#176;F. {hot} was genuinely hot everywhere on this coast &#8212;
-  {n["name"]} was hot that August too &#8212; but this station's
-  number is inflated on top of it, and the homogenised series puts it at
-  {adj[hot]:.1f}&#176;F.</p>
+{hist}
+  <p class="lede"><b>NOAA&#8217;s algorithm reads the same evidence the other way round,
+  and that is worth sitting with.</b> Its largest correction at this station is
+  {sgn(big["adj"], 1)}&#176;F applied to <b>{big["from"]}&#8211;{big["to"]}</b> &#8212; it
+  concludes that stretch reads too <i>cool</i>, not that the years after it read too warm.
+  Given the century-long relationship with Watsonville, that is the more defensible call.
+  It also puts the size of all this in proportion: the correction on {hot} is
+  {sgn(h_tot, 1)}&#176;F, not four. A 4-to-6-degree gap between two stations is a change in
+  their <i>difference</i>, not an error bar on a thermometer.</p>
+{ladder_fig}
+  <p class="lede">So {hot} at {obs[hot]:.1f}&#176;F stays the warmest August in this
+  record even after adjustment, at {adj[hot]:.1f}&#176;F. What changes is how exceptional it
+  looks: the 2000s come up by {sgn(c_tot, 1)}&#176;F and {hot} comes down, closing about
+  three degrees of the gap between them.</p>
   <p class="lede">The nights are the other half of the question, and unlike the afternoons
   they give a clear answer: <a href="{c["other"][0]}">{c["other"][1]}</a> warmed
   {d["diurnal"]["first30_f"] - d["diurnal"]["last30_f"]:.1f}&#176;F relative to the days,
@@ -394,37 +476,42 @@ def evidence(d, obs, adj, hot):
             f'average before it: {sp[2]:.1f}&#176;F at the coolest, against '
             f'{sp[1]:.1f}&#176;F at the warmest of the {sp[3]}s&#8211;{sp[4]}s. A drift '
             f'that jitters cannot make a step like that.') if sp else ""
+    segs = " and ".join(f'{sgn(s_["adj"], 1)}&#176;F on {s_["from"]}&#8211;{s_["to"]}'
+                        for s_ in L["segments"]) or "nothing sustained"
     return f"""
 <section>
   <h2>The trend that survives the correction</h2>
   <p class="lede">Nights are where the signal is. Over {d["observed_years"]} Augusts the
   observed trend is <b>{sgn(to)}&#176;F per decade</b>, and the last 30 Augusts average
   <b>{sgn(shift, 1)}&#176;F warmer at night</b> than the first 30 &#8212;
-  {d["first30_f"]:.1f}&#176;F against {d["last30_f"]:.1f}&#176;F. That is not a subtle
-  effect: on the chart it is the one thing you do not need the heavy line to see.</p>
-  <p class="lede">And it holds up. Homogenising the series &#8212; correcting for changes
-  of observation hour, instrument and siting &#8212; moves {sgn(to)} to {sgn(ta)}&#176;F
-  per decade. <b>The correction changes the size of the answer, not the answer.</b> That is
-  the difference from the daytime series, where the same correction is larger than the
-  trend and flips its sign.</p>
+  {d["first30_f"]:.1f}&#176;F against {d["last30_f"]:.1f}&#176;F. On the chart it is the one
+  thing you do not need the heavy line to see.</p>
+  <p class="lede">And it holds up. Homogenising the series moves {sgn(to)} to
+  {sgn(ta)}&#176;F per decade. <b>The correction changes the size of the answer, not the
+  answer</b> &#8212; and note which way it cuts: the algorithm raises this station&#8217;s
+  <i>early</i> Augusts, {segs}, which works against a warming trend rather than for one.
+  The trend survives a correction that is trying to flatten it. On the daytime series the
+  same machinery is larger than the trend and flips its sign.</p>
+{ladder_fig}
   <p class="lede">The neighbour test does not dent it either. Differenced against
   <b>{n["name"]}</b>, {n["km"]}&#8202;km down the coast, the August nighttime gap wanders
   across {n["spread_f"]:.1f}&#176;F over a century &#8212; both of these are real stations,
   tended by hand, and neither is a reference standard &#8212; but it wanders without
-  direction, and the warming does not.{step}</p>
+  direction, and the warming does not.{step} It also shows none of the jump the daytime gap
+  takes after 2009, which is what you would expect if that jump is about sun on a gauge.</p>
 {strip}
-  <p class="lede"><b>What this cannot separate is the town from the climate.</b>
+{hist}
+  <p class="lede"><b>What none of this can separate is the town from the climate.</b>
   Homogenisation catches the thermometer moving; it does not catch a city growing around a
   thermometer that stayed put. Santa Cruz went from a town of a few thousand when this
-  record opened to a city of sixty thousand, and
-  built surfaces release at night what they absorbed by day &#8212; the textbook shape of an
-  urban heat island is warmer nights with unchanged afternoons, which is exactly the shape
-  here. A warming ocean pushes the same way. The record tells you August nights in this town
-  are {abs(shift):.1f}&#176;F warmer than they were; it does not tell you how much of that
-  is the town.</p>
+  record opened to a city of sixty thousand, and built surfaces release at night what they
+  absorbed by day &#8212; the textbook shape of an urban heat island is warmer nights with
+  unchanged afternoons, which is exactly the shape here. A warming ocean pushes the same
+  way. The record tells you August nights in this town are {abs(shift):.1f}&#176;F warmer
+  than they were; it does not tell you how much of that is the town.</p>
   <p class="lede">Either way the day&#8211;night gap has closed. Across the
-  {dr["years"]} Augusts with both readings, the mean spread between the day's high and its
-  low fell from {dr["first30_f"]:.1f}&#176;F over the first 30 to
+  {dr["years"]} Augusts with both readings, the mean spread between the day&#8217;s high and
+  its low fell from {dr["first30_f"]:.1f}&#176;F over the first 30 to
   {dr["last30_f"]:.1f}&#176;F over the last 30, {sgn(dr["trend_f_per_decade"])}&#176;F per
   decade &#8212; about a fifth of it gone. Read that with the caveat from
   <a href="{c["other"][0]}">{c["other"][1]}</a>: part of the daytime half of that gap is
@@ -527,7 +614,7 @@ def page(d):
     <span>Long-run mean {c["value"]}</span>
     <i>{_c(d["observed_mean_f"]):.1f}&#176;C across the whole record</i></div>
   <div class="fact"><b>{obs[hot]:.1f}&#176;F</b><span>{c["warm"]}</span>
-    <i>{hot}{" &#8212; see the caveat below" if d["drift"] else ""}</i></div>
+    <i>{hot}{" &#8212; see the caveat below" if d["element"] == "tmax" else ""}</i></div>
   <div class="fact"><b>{obs[cold]:.1f}&#176;F</b><span>{c["cool"]}</span>
     <i>{cold}</i></div>
   {trend_tile}

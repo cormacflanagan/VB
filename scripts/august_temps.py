@@ -54,7 +54,11 @@ NEIGHBOUR_KM = 21
 
 DAILY = ("https://www.ncei.noaa.gov/data/global-historical-climatology-network-daily"
          "/access/{}.csv")
-USHCN = "https://www.ncei.noaa.gov/pub/data/ushcn/v2.5/ushcn.{}.latest.FLs.52j.tar.gz"
+USHCN = "https://www.ncei.noaa.gov/pub/data/ushcn/v2.5/ushcn.{1}.latest.{0}.tar.gz"
+# NOAA publishes its own working: the station as reported, the same series after the
+# time-of-observation correction, and the same again after pairwise homogenisation. The
+# difference between consecutive stages is the adjustment, per station and per month.
+STAGES = ("raw", "tob", "FLs.52j")
 
 MIN_DAYS = 28      # of 31; below this the month's mean is a different question
 SMOOTH = 11        # centred running mean, the usual window for a climate series
@@ -92,12 +96,14 @@ def refresh():
         with urllib.request.urlopen(DAILY.format(sid), context=_ctx(), timeout=300) as r:
             open(os.path.join(CACHE, sid + ".csv"), "wb").write(r.read())
     for el in ELEMENTS:
-        with urllib.request.urlopen(USHCN.format(el), context=_ctx(), timeout=600) as r:
-            blob = r.read()
-        with tarfile.open(fileobj=io.BytesIO(blob), mode="r:gz") as t:
-            member = next(m for m in t.getmembers() if USHCN_ID in m.name)
-            open(os.path.join(CACHE, f"{USHCN_ID}.FLs.52j.{el}"), "wb").write(
-                t.extractfile(member).read())
+        for stage in STAGES:
+            with urllib.request.urlopen(USHCN.format(stage, el), context=_ctx(),
+                                        timeout=600) as r:
+                blob = r.read()
+            with tarfile.open(fileobj=io.BytesIO(blob), mode="r:gz") as t:
+                member = next(m for m in t.getmembers() if USHCN_ID in m.name)
+                open(os.path.join(CACHE, f"{USHCN_ID}.{stage}.{el}"), "wb").write(
+                    t.extractfile(member).read())
 
 
 def f(tenths_c):
@@ -131,10 +137,10 @@ def observed(station, key):
     return {y: (sum(v) / len(v), len(v)) for y, v in days.items()}, rejected
 
 
-def adjusted(element):
-    """{year: (mean degF, estimated?)} from USHCN. Fixed-width: value 6, then 3 flags."""
+def stage(element, which="FLs.52j"):
+    """{year: (mean degF, estimated?)} from one USHCN stage. Fixed-width: value 6, 3 flags."""
     out = {}
-    for line in open(os.path.join(CACHE, f"{USHCN_ID}.FLs.52j.{element}")):
+    for line in open(os.path.join(CACHE, f"{USHCN_ID}.{which}.{element}")):
         year, off = int(line[12:16]), 16 + (AUG - 1) * 9
         v = line[off:off + 6].strip()
         if v == "-9999":
@@ -143,6 +149,45 @@ def adjusted(element):
         # homogenisation dropped it. Either way it is not this station's own reading.
         out[year] = (int(v) / 100.0 * 9 / 5 + 32, line[off + 6] == "E")
     return out
+
+
+def adjusted(element):
+    return stage(element, "FLs.52j")
+
+
+def ladder(element):
+    """What each stage of NOAA's pipeline did to this station's Augusts.
+
+    tob is the time-of-observation correction, which follows from the observer's recorded
+    reading hour; pha is what the pairwise homogenisation algorithm did on top of it,
+    comparing this station against its neighbours. Reported per year, and collapsed into
+    the segments the algorithm actually works in.
+    """
+    raw, tob, fin = (stage(element, s) for s in STAGES)
+    years = [y for y in sorted(fin) if y in raw and y in tob]
+    per = {y: (round(tob[y][0] - raw[y][0], 2), round(fin[y][0] - tob[y][0], 2))
+           for y in years}
+    segs = []
+    for y in years:
+        a = per[y][1]
+        # one segment per constant adjustment; near-equal adjacent steps are the same
+        # break seen through slightly different months, so they are merged
+        if segs and y == segs[-1]["to"] + 1 and abs(segs[-1]["adj"] - a) < 0.75:
+            segs[-1]["to"] = y
+            segs[-1]["_v"].append(a)
+        else:
+            segs.append({"from": y, "to": y, "adj": a, "_v": [a]})
+    for s_ in segs:
+        s_["adj"] = round(sum(s_["_v"]) / len(s_["_v"]), 2)
+        s_["years"] = s_["to"] - s_["from"] + 1
+        del s_["_v"]
+    return {
+        "per_year": {str(y): {"tob": per[y][0], "pha": per[y][1]} for y in years},
+        "tob_mean": round(sum(v[0] for v in per.values()) / len(per), 2),
+        "pha_mean": round(sum(v[1] for v in per.values()) / len(per), 2),
+        # the breaks worth naming: a sustained correction of at least a degree
+        "segments": [s_ for s_ in segs if s_["years"] >= 3 and abs(s_["adj"]) >= 1.0],
+    }
 
 
 def against_neighbour(key):
@@ -243,6 +288,7 @@ def build(element):
             "decades": off,
             "spread_f": round(max(o["diff"] for o in off) - min(o["diff"] for o in off), 2),
         },
+        "ladder": ladder(element),
         "diurnal": {
             "span": [ry[0], ry[-1]], "years": len(ry),
             "mean_f": round(sum(rng.values()) / len(rng), 2),
