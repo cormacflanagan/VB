@@ -17,7 +17,7 @@ Three groups are covered:
 | **2027 and younger** | 60 | Age-eligible — see below | [`docs/bntdp-2027_younger.html`](docs/bntdp-2027_younger.html) |
 | **2028 and younger** | 60 | Age-eligible — see below | [`docs/bntdp-2028_younger.html`](docs/bntdp-2028_younger.html) |
 
-Two companion pages answer planning questions the matrix cannot:
+Three companion pages answer planning questions the matrix cannot:
 
 | Page | Question |
 | --- | --- |
@@ -25,6 +25,7 @@ Two companion pages answer planning questions the matrix cannot:
 | [`docs/partners-2028_top30.html`](docs/partners-2028_top30.html) | Who partners with whom inside the class-of-2028 top 30? |
 | [`docs/partners-2027_younger.html`](docs/partners-2027_younger.html) | The same, across the 18U-eligible top 60. |
 | [`docs/partners-2028_younger.html`](docs/partners-2028_younger.html) | The same, across the 17U-eligible top 60. |
+| [`docs/august-temps.html`](docs/august-temps.html) | How hot is an August day in Santa Cruz, and has it moved? |
 
 **Doubles only.** Club, 3v3 and 5v5 results are excluded: a placing there reflects a squad
 of five to twelve, not the individual. The test is roster size rather than the division
@@ -364,6 +365,48 @@ carries nothing the week either side does not. That leaves **11 local dates** on
 calendar: women's Saturdays through the autumn and spring, and a midweek girls' 18U Cal Cup bid
 series every Wednesday through June and July. `scripts/cbva.py --upcoming` crawls the
 not-yet-played listing the same way, and those dates join the next-season table.
+
+## August warmth at Santa Cruz
+
+The calendar's home venue is Santa Cruz, so the last page asks what an August day there is
+actually like: **the mean of every daily high temperature in August, one datapoint per year,
+back to 1893.**
+
+```
+python3 scripts/august_temps.py --refresh   # -> data/august_temps.json, docs/august-temps.html
+```
+
+The source is NOAA's station **USC00047916, Santa Cruz, CA** — a Historical Climatology
+Network site with daily observations from 1893 and the only long temperature record in the
+town; every other Santa Cruz entry in GHCN is a modern volunteer rain gauge with no
+thermometer. Days carrying a GHCN quality flag are dropped, and a year needs 28 of its 31
+days to be averaged, which leaves **124 Augusts between 1893 and 2021**. The station stopped
+reporting in April 2022.
+
+Two series are drawn, because the raw one cannot be read alone:
+
+- **As observed** — the daily maxima as the observer wrote them down. This is literally the
+  quantity asked for, and its trend is **−0.03 °F per decade**: nothing.
+- **NOAA homogenised** — USHCN v2.5 (`FLs.52j`) for the same station, corrected for changes
+  in observation hour, instrument and siting, and extended to 2025 by infilling from
+  neighbouring stations. Its trend is **+0.08 °F per decade**.
+
+The gap between them is a station artefact, and it is visible: against Watsonville, 21 km
+away and still reporting, Santa Cruz reads ~1.3 °F warmer through the 1990s and 2000s, then
+4–6 °F warmer from 2009 to 2015, then falls back. That stretch is shaded on the chart. It is
+why 2015 appears as the warmest August on record at 84.0 °F — 2015 was genuinely hot on this
+whole coast, but this station's number is inflated on top of it, and the homogenised series
+puts it at 82.6 °F.
+
+The long-run answer is a flat one: **a mean daily high of 75.2 °F**, with the coolest August
+in the record (1910, 70.1 °F) and the warmest under 14 °F apart. Santa Cruz in August is a
+marine-layer climate and the ocean sets the afternoon ceiling. Nights are a different
+question and not this chart's.
+
+`scripts/august_page.py` renders the figure as inline SVG on the same terms as the scatter —
+two hues checked with the dataviz validator against both the light and dark chart surfaces,
+the second series dashed as well as differently coloured, hover text in an SVG `<title>` so
+the page needs no JavaScript, and the full table below the chart as the non-visual view.
 
 ## Partnerships
 

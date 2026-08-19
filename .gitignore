@@ -7,3 +7,7 @@ final.json
 *.png
 node_modules/
 data/cohortexpanded*.json
+
+# NOAA source files for the August series; re-fetch with
+# python3 scripts/august_temps.py --refresh
+data/ghcn/
