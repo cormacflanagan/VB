@@ -114,7 +114,7 @@ def build(group):
         prows.append(f"""      <tr>
         <th scope="row"><span class="rk">{rank[n]}</span>{lnk(n)}</th>
         {f'<td class="num gy">{p.get("grad") or "&#8212;"}</td>' if showgrad else ''}
-        {f'<td class="num nw ht">{esc(p.get("height") or "&#8212;")}</td>' if showht else ''}
+        {f'<td class="num nw ht">{esc(p["height"]) if p.get("height") else "&#8212;"}</td>' if showht else ''}
         <td class="num tv">{p['tv']:.3f}</td>
         <td class="num">{comps}</td>
         <td class="num big">{distinct or '&#8212;'}</td>
