@@ -138,7 +138,7 @@ def link(window):
 
 
 if __name__ == "__main__":
-    win = ("2025-08-11", "2026-08-11")
+    win = ("2025-08-20", "2026-08-20")
     ahead = ("2026-08-12", "2027-08-11")
     if "--link" in sys.argv:
         link(win)

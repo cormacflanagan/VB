@@ -5,7 +5,7 @@ ramp. The per-player table counts *every* partner, inside the group or not, beca
 most-used partner is frequently someone outside the cut — which is exactly why a row can
 be blank across the matrix and still belong to a settled pair.
 """
-import html, json, re, sys
+import datetime, html, json, re, sys
 from collections import Counter, defaultdict
 
 VBL = "https://volleyballlife.com"
@@ -13,6 +13,20 @@ VBL = "https://volleyballlife.com"
 
 def esc(s):
     return html.escape(str(s), quote=True)
+
+
+def dlong(iso):
+    return datetime.date.fromisoformat(iso).strftime("%-d %B %Y")
+
+
+def field(label):
+    """Read the group label back as a noun phrase: the page describes the cut it renders,
+    and this file serves a graduating class and an age-eligible cohort alike."""
+    m = re.match(r"Class of (\d{4})", label)
+    if m:
+        return f"the class of {m.group(1)}"
+    m = re.match(r"(\d{4}) and younger", label)
+    return f"the {m.group(1)}-and-younger field" if m else label.split(" &#8212;")[0]
 
 
 def step(n):
@@ -138,6 +152,8 @@ def build(group):
     solo = [p["name"] for p in players if len(allp[p["name"]]) == 1]
     label = site["label"]
     N = len(order)
+    wfrom, wto = site["window"]
+    cohort, asof = field(label), dlong(wto)
     return f"""<title>{esc(label)} &#183; Partnerships</title>
 <style>
 :root {{
@@ -264,8 +280,8 @@ a {{ color:var(--accent); }}
 <header>
   <p class="eyebrow">{esc(label)} &#183; Partnerships</p>
   <h1>Who plays <em>with</em> whom</h1>
-  <p class="standfirst">Partnerships among the {N} highest-rated girls in the class of 2028, over
-  the twelve months to 11 August 2026. The matrix counts competitions two of them entered as a
+  <p class="standfirst">Partnerships among the {N} highest-rated girls in {cohort}, over
+  the twelve months to {asof}. The matrix counts competitions two of them entered as a
   pair; the table counts how many different partners each has had, inside this group or out.</p>
   <div class="facts">
     <div class="fact"><b>{len(cnt)}</b><span>Pairings inside the {N}</span></div>
@@ -363,8 +379,8 @@ a {{ color:var(--accent); }}
   </ul>
 </section>
 <footer>
-  {esc(label)}, cut on TruVolley as of 11 August 2026. Partnerships and results from
-  Volleyball Life, doubles only, twelve months to 11 August 2026.
+  {esc(label)}, cut on TruVolley as of {asof}. Partnerships and results from
+  Volleyball Life, doubles only, {dlong(wfrom)} to {asof}.
 </footer>
 </div>
 """
