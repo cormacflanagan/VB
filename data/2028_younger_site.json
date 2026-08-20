@@ -2,8 +2,8 @@
  "group": "2028_younger",
  "label": "2028 and younger &#8212; top 60",
  "window": [
-  "2025-08-11",
-  "2026-08-11"
+  "2025-08-20",
+  "2026-08-20"
  ],
  "players": [
   {
@@ -12,6 +12,7 @@
    "region": "CA",
    "club": "MBsand",
    "height": "5' 7\"",
+   "grad": 2028,
    "city": "Los Angeles, CA",
    "tv": 8.822,
    "peak": 8.922,
@@ -51,12 +52,13 @@
    "region": "VA",
    "club": "757 Beach",
    "height": "6' 0\"",
+   "grad": 2028,
    "city": "NORFOLK, VA",
    "tv": 8.703,
-   "peak": 8.723,
+   "peak": 8.722,
    "w": 353,
    "l": 93,
-   "comps": 22,
+   "comps": 23,
    "cells": {
     "34243:126056": {
      "f": 9,
@@ -106,6 +108,12 @@
       "Nariah Johnson"
      ]
     },
+    "30985:115903": {
+     "f": 1,
+     "partners": [
+      "Danica Waterman"
+     ]
+    },
     "25638:97292": {
      "f": 1,
      "partners": [
@@ -117,11 +125,45 @@
      "partners": [
       "Alayna Smeltzer"
      ]
-    },
-    "30985:115903": {
-     "f": 1,
+    }
+   }
+  },
+  {
+   "name": "Haisley Flanagan",
+   "id": 64896,
+   "region": "CA",
+   "club": "Santa Cruz Beach Volleyball Club",
+   "height": "5' 9\"",
+   "grad": 2028,
+   "city": "Santa Cruz, CA",
+   "tv": 8.696,
+   "peak": 8.718,
+   "w": 273,
+   "l": 73,
+   "comps": 15,
+   "cells": {
+    "34243:126056": {
+     "f": 2,
      "partners": [
-      "Danica Waterman"
+      "Madison Gillinger"
+     ]
+    },
+    "31567:117695": {
+     "f": 9,
+     "partners": [
+      "Ella Buchanan"
+     ]
+    },
+    "25578:97149": {
+     "f": 5,
+     "partners": [
+      "Charlotte Jansen"
+     ]
+    },
+    "31568:117700": {
+     "f": 3,
+     "partners": [
+      "Haven Gindoff"
      ]
     }
    }
@@ -132,9 +174,10 @@
    "region": "HI",
    "club": "Outrigger Canoe Club Girls Beach Volleyball",
    "height": "5' 10\"",
+   "grad": 2028,
    "city": "Wailuku, HI",
-   "tv": 8.645,
-   "peak": 8.645,
+   "tv": 8.644,
+   "peak": 8.644,
    "w": 263,
    "l": 110,
    "comps": 11,
@@ -177,9 +220,10 @@
    "region": "KS",
    "club": "P4:13 Beach",
    "height": "6' 1\"",
+   "grad": 2028,
    "city": "Wichita , KS",
    "tv": 8.643,
-   "peak": 8.826,
+   "peak": 8.825,
    "w": 248,
    "l": 76,
    "comps": 16,
@@ -223,53 +267,15 @@
    }
   },
   {
-   "name": "Haisley Flanagan",
-   "id": 64896,
-   "region": "CA",
-   "club": "Santa Cruz Beach Volleyball Club",
-   "height": "5' 9\"",
-   "city": "Santa Cruz, CA",
-   "tv": 8.614,
-   "peak": 8.618,
-   "w": 265,
-   "l": 73,
-   "comps": 15,
-   "cells": {
-    "34243:126056": {
-     "f": 2,
-     "partners": [
-      "Madison Gillinger"
-     ]
-    },
-    "31567:117695": {
-     "f": 9,
-     "partners": [
-      "Ella Buchanan"
-     ]
-    },
-    "25578:97149": {
-     "f": 5,
-     "partners": [
-      "Charlotte Jansen"
-     ]
-    },
-    "31568:117700": {
-     "f": 3,
-     "partners": [
-      "Haven Gindoff"
-     ]
-    }
-   }
-  },
-  {
    "name": "Nariah Johnson",
    "id": 92193,
    "region": "CA",
    "club": "WAVE Beach",
    "height": "5' 9\"",
+   "grad": 2029,
    "city": "RCHO SANTA FE, CA",
-   "tv": 8.572,
-   "peak": 8.572,
+   "tv": 8.571,
+   "peak": 8.571,
    "w": 219,
    "l": 37,
    "comps": 15,
@@ -330,8 +336,9 @@
    "region": "CA",
    "club": "Spiker Beach Volleyball Club",
    "height": "5' 11\"",
+   "grad": 2028,
    "city": "Huntington Beach, CA",
-   "tv": 8.553,
+   "tv": 8.552,
    "peak": 8.629,
    "w": 249,
    "l": 127,
@@ -381,8 +388,9 @@
    "region": "FL",
    "club": "MBsand",
    "height": "6'",
+   "grad": 2028,
    "city": "Boca Raton, FL",
-   "tv": 8.549,
+   "tv": 8.548,
    "peak": 8.649,
    "w": 348,
    "l": 149,
@@ -450,9 +458,10 @@
    "region": "CA",
    "club": "WAVE Beach",
    "height": "5' 11\"",
+   "grad": 2028,
    "city": "Coronado, CA",
    "tv": 8.539,
-   "peak": 8.566,
+   "peak": 8.565,
    "w": 192,
    "l": 53,
    "comps": 8,
@@ -490,11 +499,40 @@
    }
   },
   {
+   "name": "Breeze Johnson",
+   "id": 84049,
+   "region": "VA",
+   "club": "BRVA Beach",
+   "height": "6'",
+   "grad": 2028,
+   "city": "Winchester , VA",
+   "tv": 8.501,
+   "peak": 8.851,
+   "w": 208,
+   "l": 36,
+   "comps": 7,
+   "cells": {
+    "32578:120658": {
+     "f": 4,
+     "partners": [
+      "Elle Sossong"
+     ]
+    },
+    "31566:117686": {
+     "f": 2,
+     "partners": [
+      "Elle Sossong"
+     ]
+    }
+   }
+  },
+  {
    "name": "Tristan Ana Del Riego",
    "id": 66728,
    "region": "CA",
    "club": "MBsand",
    "height": "5' 8\"",
+   "grad": 2029,
    "city": "Hermosa Beach, CA",
    "tv": 8.454,
    "peak": 8.454,
@@ -520,43 +558,16 @@
       "Sienna Mattoon"
      ]
     },
-    "25578:97150": {
-     "f": 5,
-     "partners": [
-      "Sienna Mattoon"
-     ]
-    },
     "31567:117696": {
      "f": 7,
      "partners": [
       "Taylor Daley"
      ]
-    }
-   }
-  },
-  {
-   "name": "Breeze Johnson",
-   "id": 84049,
-   "region": "VA",
-   "club": "BRVA Beach",
-   "height": "6'",
-   "city": "Winchester , VA",
-   "tv": 8.438,
-   "peak": 8.851,
-   "w": 202,
-   "l": 36,
-   "comps": 6,
-   "cells": {
-    "32578:120658": {
-     "f": 4,
-     "partners": [
-      "Elle Sossong"
-     ]
     },
-    "31566:117686": {
-     "f": 2,
+    "25578:97150": {
+     "f": 5,
      "partners": [
-      "Elle Sossong"
+      "Sienna Mattoon"
      ]
     }
    }
@@ -567,6 +578,7 @@
    "region": "CA",
    "club": "WAVE Beach",
    "height": "6'",
+   "grad": 2029,
    "city": "Coronado, CA",
    "tv": 8.429,
    "peak": 8.429,
@@ -600,6 +612,7 @@
    "region": "CA",
    "club": "WAVE Beach",
    "height": "5' 10\"",
+   "grad": 2030,
    "city": "Encinitas, CA",
    "tv": 8.386,
    "peak": 8.386,
@@ -619,19 +632,13 @@
       "Parker Wilson"
      ]
     },
-    "34243:126057": {
-     "f": 1,
-     "partners": [
-      "Brooke Proctor"
-     ]
-    },
     "31568:117700": {
      "f": 2,
      "partners": [
       "Brynn Harris"
      ]
     },
-    "25578:97150": {
+    "34243:126057": {
      "f": 1,
      "partners": [
       "Brooke Proctor"
@@ -642,6 +649,12 @@
      "partners": [
       "Brynn Harris"
      ]
+    },
+    "25578:97150": {
+     "f": 1,
+     "partners": [
+      "Brooke Proctor"
+     ]
     }
    }
   },
@@ -651,6 +664,7 @@
    "region": "TX",
    "club": "Jaja beach",
    "height": "5' 5\"",
+   "grad": 2029,
    "city": "McKinney , TX",
    "tv": 8.37,
    "peak": 8.474,
@@ -676,16 +690,16 @@
       "Haven Gindoff"
      ]
     },
-    "32578:120659": {
-     "f": 5,
-     "partners": [
-      "Julianna Godbey"
-     ]
-    },
     "31483:117394": {
      "f": 3,
      "partners": [
       "Cayden Dorger"
+     ]
+    },
+    "32578:120659": {
+     "f": 5,
+     "partners": [
+      "Julianna Godbey"
      ]
     },
     "25578:97149": {
@@ -700,20 +714,26 @@
       "Cayden Dorger"
      ]
     },
+    "30985:115903": {
+     "f": 3,
+     "partners": [
+      "Cayden Dorger"
+     ]
+    },
     "25638:97292": {
      "f": 2,
      "partners": [
       "Julianna Godbey"
      ]
     },
-    "31625:117914": {
+    "31568:117700": {
      "f": 5,
      "partners": [
-      "Cayden Dorger"
+      "Brazos Allred"
      ]
     },
-    "30985:115903": {
-     "f": 3,
+    "31625:117914": {
+     "f": 5,
      "partners": [
       "Cayden Dorger"
      ]
@@ -729,12 +749,6 @@
      "partners": [
       "Tesa Solis"
      ]
-    },
-    "31568:117700": {
-     "f": 5,
-     "partners": [
-      "Brazos Allred"
-     ]
     }
    }
   },
@@ -744,9 +758,10 @@
    "region": "CA",
    "club": "WAVE Beach",
    "height": "6' 0\"",
+   "grad": 2028,
    "city": "Temecula, CA",
-   "tv": 8.357,
-   "peak": 8.357,
+   "tv": 8.354,
+   "peak": 8.354,
    "w": 136,
    "l": 39,
    "comps": 5,
@@ -771,8 +786,9 @@
    "region": "NC",
    "club": "Club W",
    "height": "5' 6\"",
+   "grad": 2028,
    "city": "Carolina Beach, NC",
-   "tv": 8.324,
+   "tv": 8.323,
    "peak": 8.892,
    "w": 338,
    "l": 100,
@@ -804,6 +820,7 @@
    "region": "CA",
    "club": "Golden Gate volleyball",
    "height": "5' 10\"",
+   "grad": 2028,
    "city": "San Anselmo, CA",
    "tv": 8.307,
    "peak": 8.307,
@@ -855,8 +872,9 @@
    "region": "VA",
    "club": "757 Beach",
    "height": "5' 6\"",
+   "grad": 2028,
    "city": "Virginia Beach, VA",
-   "tv": 8.301,
+   "tv": 8.3,
    "peak": 8.307,
    "w": 267,
    "l": 74,
@@ -889,14 +907,55 @@
    }
   },
   {
+   "name": "Milan Hendrickson",
+   "id": 22857,
+   "region": "CA",
+   "club": "Golden Gate volleyball",
+   "height": "5' 10\"",
+   "grad": 2028,
+   "city": "Kentfield, CA",
+   "tv": 8.283,
+   "peak": 8.283,
+   "w": 222,
+   "l": 90,
+   "comps": 4,
+   "cells": {
+    "38087:139560": {
+     "f": 17,
+     "partners": [
+      "Eden Cisneros"
+     ]
+    },
+    "34243:126056": {
+     "f": 1,
+     "partners": [
+      "Eden Cisneros"
+     ]
+    },
+    "31567:117695": {
+     "f": 17,
+     "partners": [
+      "Brooke Codey"
+     ]
+    },
+    "31568:117699": {
+     "f": 17,
+     "partners": [
+      "Eden Cisneros"
+     ]
+    }
+   }
+  },
+  {
    "name": "Dreya Scherfenberg",
    "id": 2048,
    "region": "MO",
    "club": "P4:13 Beach",
    "height": "5' 6\"",
+   "grad": 2028,
    "city": "Harrisonville, MO",
-   "tv": 8.283,
-   "peak": 8.743,
+   "tv": 8.282,
+   "peak": 8.742,
    "w": 348,
    "l": 107,
    "comps": 12,
@@ -934,52 +993,14 @@
    }
   },
   {
-   "name": "Milan Hendrickson",
-   "id": 22857,
-   "region": "CA",
-   "club": "Golden Gate volleyball",
-   "height": "5' 10\"",
-   "city": "Kentfield, CA",
-   "tv": 8.283,
-   "peak": 8.283,
-   "w": 222,
-   "l": 90,
-   "comps": 4,
-   "cells": {
-    "38087:139560": {
-     "f": 17,
-     "partners": [
-      "Eden Cisneros"
-     ]
-    },
-    "34243:126056": {
-     "f": 1,
-     "partners": [
-      "Eden Cisneros"
-     ]
-    },
-    "31567:117695": {
-     "f": 17,
-     "partners": [
-      "Brooke Codey"
-     ]
-    },
-    "31568:117699": {
-     "f": 17,
-     "partners": [
-      "Eden Cisneros"
-     ]
-    }
-   }
-  },
-  {
    "name": "Cayden Dorger",
    "id": 128445,
    "region": "AL",
    "club": "MVP Beach ",
    "height": "5' 10\"",
+   "grad": 2028,
    "city": "Spanish Fort, AL",
-   "tv": 8.228,
+   "tv": 8.227,
    "peak": 8.36,
    "w": 183,
    "l": 72,
@@ -997,16 +1018,16 @@
       "Skye Douglass"
      ]
     },
-    "32578:120659": {
-     "f": 2,
-     "partners": [
-      "Stella Sheeran"
-     ]
-    },
     "31483:117394": {
      "f": 3,
      "partners": [
       "Ashley Ruschill"
+     ]
+    },
+    "32578:120659": {
+     "f": 2,
+     "partners": [
+      "Stella Sheeran"
      ]
     },
     "31569:117703": {
@@ -1016,6 +1037,12 @@
      ]
     },
     "36451:133267": {
+     "f": 3,
+     "partners": [
+      "Ashley Ruschill"
+     ]
+    },
+    "30985:115903": {
      "f": 3,
      "partners": [
       "Ashley Ruschill"
@@ -1032,12 +1059,6 @@
      "partners": [
       "Ashley Ruschill"
      ]
-    },
-    "30985:115903": {
-     "f": 3,
-     "partners": [
-      "Ashley Ruschill"
-     ]
     }
    }
   },
@@ -1047,6 +1068,7 @@
    "region": "CA",
    "club": "MBsand",
    "height": "5' 9\"",
+   "grad": 2029,
    "city": "El Segundo, CA",
    "tv": 8.211,
    "peak": 8.275,
@@ -1066,16 +1088,16 @@
       "Tristan Ana Del Riego"
      ]
     },
-    "25578:97150": {
-     "f": 5,
-     "partners": [
-      "Tristan Ana Del Riego"
-     ]
-    },
     "31567:117696": {
      "f": 2,
      "partners": [
       "Haley Spak"
+     ]
+    },
+    "25578:97150": {
+     "f": 5,
+     "partners": [
+      "Tristan Ana Del Riego"
      ]
     }
    }
@@ -1086,6 +1108,7 @@
    "region": "FL",
    "club": "Optimum Beach",
    "height": "5' 10\"",
+   "grad": 2028,
    "city": "Delray Beach , FL",
    "tv": 8.173,
    "peak": 8.397,
@@ -1100,9 +1123,10 @@
    "region": "CA",
    "club": "SLOVBC",
    "height": "6'",
+   "grad": 2028,
    "city": "San Luis Obispo, CA",
    "tv": 8.149,
-   "peak": 8.255,
+   "peak": 8.254,
    "w": 164,
    "l": 63,
    "comps": 11,
@@ -1119,14 +1143,14 @@
       "Haisley Flanagan"
      ]
     },
-    "34180:125823": {
-     "f": 9,
+    "31483:117394": {
+     "f": 2,
      "partners": [
       "Brooke Canaday"
      ]
     },
-    "31483:117394": {
-     "f": 2,
+    "34180:125823": {
+     "f": 9,
      "partners": [
       "Brooke Canaday"
      ]
@@ -1151,6 +1175,7 @@
    "region": "FL",
    "club": null,
    "height": "5' 11\"",
+   "grad": 2028,
    "city": "Odessa, FL",
    "tv": 8.125,
    "peak": 8.433,
@@ -1214,6 +1239,7 @@
    "region": "TX",
    "club": "Spiker Beach Volleyball Club",
    "height": "5' 10\"",
+   "grad": 2030,
    "city": "McKinney , TX",
    "tv": 8.109,
    "peak": 8.194,
@@ -1239,16 +1265,16 @@
       "Ashley Ruschill"
      ]
     },
-    "32578:120659": {
-     "f": 5,
-     "partners": [
-      "Ashley Ruschill"
-     ]
-    },
     "31483:117394": {
      "f": 9,
      "partners": [
       "Lily Vandeweghe"
+     ]
+    },
+    "32578:120659": {
+     "f": 5,
+     "partners": [
+      "Ashley Ruschill"
      ]
     },
     "25578:97149": {
@@ -1283,6 +1309,7 @@
    "region": "CA",
    "club": "WAVE Beach",
    "height": "6' 2\"",
+   "grad": 2029,
    "city": "Del Mar, CA",
    "tv": 8.107,
    "peak": 8.37,
@@ -1297,8 +1324,9 @@
    "region": "CA",
    "club": "Spiker Beach Volleyball Club",
    "height": "5' 9\"",
+   "grad": 2028,
    "city": "Yorba Linda, CA",
-   "tv": 8.105,
+   "tv": 8.104,
    "peak": 8.179,
    "w": 373,
    "l": 137,
@@ -1349,58 +1377,29 @@
    }
   },
   {
-   "name": "Taylie Hansen",
-   "id": 99506,
-   "region": "FL",
-   "club": "Vero Beach Beach Club (VBVB)",
-   "height": "6' 2\"",
-   "city": "Vero Beach, FL",
-   "tv": 8.072,
-   "peak": 8.492,
-   "w": 243,
-   "l": 99,
-   "comps": 13,
+   "name": "Kendal Walker",
+   "id": 146170,
+   "region": "VA",
+   "club": "108 Beach Volleyball Club",
+   "height": null,
+   "grad": 2028,
+   "city": "Fredericksburg, VA",
+   "tv": 8.101,
+   "peak": 8.451,
+   "w": 369,
+   "l": 56,
+   "comps": 26,
    "cells": {
-    "31567:117695": {
-     "f": 21,
-     "partners": [
-      "Kendyl Maxwell"
-     ]
-    },
-    "31622:117904": {
-     "f": 9,
-     "partners": [
-      "Elle Sossong"
-     ]
-    },
-    "25578:97149": {
-     "f": 3,
-     "partners": [
-      "Emma Abernathy"
-     ]
-    },
-    "32578:120658": {
+    "32578:120659": {
      "f": 1,
      "partners": [
-      "Brooklyn Rosales"
+      "Reese Hislop"
      ]
     },
-    "31569:117703": {
-     "f": 13,
-     "partners": [
-      "Isabelle Izzy Ramos"
-     ]
-    },
-    "31568:117699": {
+    "25638:97292": {
      "f": 5,
      "partners": [
-      "Danica Waterman"
-     ]
-    },
-    "34243:126054": {
-     "f": 41,
-     "partners": [
-      "Elle Sossong"
+      "Emerson Thomas"
      ]
     }
    }
@@ -1411,6 +1410,7 @@
    "region": "FL",
    "club": "Sports Edge Beach",
    "height": "6' 1\"",
+   "grad": 2029,
    "city": "Ponte Vedra Beach, FL",
    "tv": 8.072,
    "peak": 8.163,
@@ -1463,14 +1463,73 @@
    }
   },
   {
+   "name": "Taylie Hansen",
+   "id": 99506,
+   "region": "FL",
+   "club": "Vero Beach Beach Club (VBVB)",
+   "height": "6' 2\"",
+   "grad": 2028,
+   "city": "Vero Beach, FL",
+   "tv": 8.071,
+   "peak": 8.492,
+   "w": 243,
+   "l": 99,
+   "comps": 13,
+   "cells": {
+    "31567:117695": {
+     "f": 21,
+     "partners": [
+      "Kendyl Maxwell"
+     ]
+    },
+    "31622:117904": {
+     "f": 9,
+     "partners": [
+      "Elle Sossong"
+     ]
+    },
+    "25578:97149": {
+     "f": 3,
+     "partners": [
+      "Emma Abernathy"
+     ]
+    },
+    "32578:120658": {
+     "f": 1,
+     "partners": [
+      "Brooklyn Rosales"
+     ]
+    },
+    "31569:117703": {
+     "f": 13,
+     "partners": [
+      "Isabelle Izzy Ramos"
+     ]
+    },
+    "31568:117699": {
+     "f": 5,
+     "partners": [
+      "Danica Waterman"
+     ]
+    },
+    "34243:126054": {
+     "f": 41,
+     "partners": [
+      "Elle Sossong"
+     ]
+    }
+   }
+  },
+  {
    "name": "Emma Abernathy",
    "id": 105341,
    "region": "FL",
    "club": "Sports Edge Beach",
    "height": "5' 7\"",
+   "grad": 2028,
    "city": "Jacksonville Beach, FL",
-   "tv": 8.069,
-   "peak": 8.159,
+   "tv": 8.068,
+   "peak": 8.158,
    "w": 237,
    "l": 81,
    "comps": 13,
@@ -1519,12 +1578,13 @@
    "region": "MO",
    "club": "Jaja Beach",
    "height": "6' 0\"",
+   "grad": 2028,
    "city": "Arnold, MO",
    "tv": 8.026,
    "peak": 8.163,
    "w": 148,
    "l": 60,
-   "comps": 11,
+   "comps": 9,
    "cells": {
     "31622:117904": {
      "f": 9,
@@ -1559,13 +1619,48 @@
    }
   },
   {
+   "name": "Brooke Codey",
+   "id": 25347,
+   "region": "KY",
+   "club": "Ohio Valley/Next Level Beach",
+   "height": "5' 8\"",
+   "grad": 2028,
+   "city": "Louisville, KY",
+   "tv": 8.026,
+   "peak": 8.196,
+   "w": 317,
+   "l": 97,
+   "comps": 4,
+   "cells": {
+    "31567:117695": {
+     "f": 17,
+     "partners": [
+      "Milan Hendrickson"
+     ]
+    },
+    "31622:117904": {
+     "f": 33,
+     "partners": [
+      "Macy Sorg"
+     ]
+    },
+    "32578:120658": {
+     "f": 3,
+     "partners": [
+      "Sadie Stafford"
+     ]
+    }
+   }
+  },
+  {
    "name": "Charlotte Jansen",
    "id": 161398,
    "region": "CA",
    "club": "WAVE Beach",
    "height": "5' 10\"",
+   "grad": 2028,
    "city": "Del Mar, CA",
-   "tv": 8.026,
+   "tv": 8.025,
    "peak": 8.157,
    "w": 270,
    "l": 118,
@@ -1589,6 +1684,12 @@
       "Nariah Johnson"
      ]
     },
+    "31483:117394": {
+     "f": 5,
+     "partners": [
+      "Tristan Ana Del Riego"
+     ]
+    },
     "34180:125823": {
      "f": 9,
      "partners": [
@@ -1599,12 +1700,6 @@
      "f": 3,
      "partners": [
       "Abigail Moffett"
-     ]
-    },
-    "31483:117394": {
-     "f": 5,
-     "partners": [
-      "Tristan Ana Del Riego"
      ]
     },
     "25578:97149": {
@@ -1634,44 +1729,12 @@
    }
   },
   {
-   "name": "Brooke Codey",
-   "id": 25347,
-   "region": "KY",
-   "club": "Ohio Valley/Next Level Beach",
-   "height": "5' 8\"",
-   "city": "Louisville, KY",
-   "tv": 8.026,
-   "peak": 8.196,
-   "w": 317,
-   "l": 97,
-   "comps": 5,
-   "cells": {
-    "31567:117695": {
-     "f": 17,
-     "partners": [
-      "Milan Hendrickson"
-     ]
-    },
-    "31622:117904": {
-     "f": 33,
-     "partners": [
-      "Macy Sorg"
-     ]
-    },
-    "32578:120658": {
-     "f": 3,
-     "partners": [
-      "Sadie Stafford"
-     ]
-    }
-   }
-  },
-  {
    "name": "Stella Sheeran",
    "id": 42463,
    "region": "WA",
    "club": "Dakine Beach Volleyball Club",
    "height": "5' 6\"",
+   "grad": 2028,
    "city": "Tumwater , WA",
    "tv": 8.002,
    "peak": 8.028,
@@ -1691,16 +1754,16 @@
       "Cayden Dorger"
      ]
     },
-    "32578:120659": {
-     "f": 2,
-     "partners": [
-      "Cayden Dorger"
-     ]
-    },
     "31483:117394": {
      "f": 5,
      "partners": [
       "Brighton Atchley"
+     ]
+    },
+    "32578:120659": {
+     "f": 2,
+     "partners": [
+      "Cayden Dorger"
      ]
     },
     "31568:117699": {
@@ -1718,38 +1781,12 @@
    }
   },
   {
-   "name": "Kendal Walker",
-   "id": 146170,
-   "region": "VA",
-   "club": "108 Beach Volleyball Club",
-   "height": null,
-   "city": "Fredericksburg, VA",
-   "tv": 7.955,
-   "peak": 8.452,
-   "w": 363,
-   "l": 56,
-   "comps": 25,
-   "cells": {
-    "32578:120659": {
-     "f": 1,
-     "partners": [
-      "Reese Hislop"
-     ]
-    },
-    "25638:97292": {
-     "f": 5,
-     "partners": [
-      "Emerson Thomas"
-     ]
-    }
-   }
-  },
-  {
    "name": "Sadie Harris",
    "id": 94909,
    "region": "CA",
    "club": "Spiker Beach Volleyball Club",
    "height": "5' 11\"",
+   "grad": 2028,
    "city": "San Juan Capistrano, CA",
    "tv": 7.952,
    "peak": 8.254,
@@ -1801,6 +1838,7 @@
    "region": "CA",
    "club": "MBsand",
    "height": "6' 2\"",
+   "grad": 2029,
    "city": "Hermosa Beach, CA",
    "tv": 7.942,
    "peak": 7.987,
@@ -1840,9 +1878,10 @@
    "region": "CA",
    "club": "Spiker Beach Volleyball Club",
    "height": "5' 7\"",
+   "grad": 2029,
    "city": "Villa Park , CA",
-   "tv": 7.921,
-   "peak": 8.003,
+   "tv": 7.92,
+   "peak": 8.002,
    "w": 219,
    "l": 73,
    "comps": 8,
@@ -1873,9 +1912,10 @@
    "region": "PA",
    "club": "",
    "height": "5' 8\"",
+   "grad": 2028,
    "city": "Phoenixville , PA",
-   "tv": 7.916,
-   "peak": 8.559,
+   "tv": 7.915,
+   "peak": 8.558,
    "w": 261,
    "l": 81,
    "comps": 9,
@@ -1930,6 +1970,7 @@
    "region": "TX",
    "club": "210 Beach",
    "height": "5' 10\"",
+   "grad": 2028,
    "city": "Boerne, TX",
    "tv": 7.906,
    "peak": 8.07,
@@ -1975,6 +2016,7 @@
    "region": "NE",
    "club": "",
    "height": "5' 6\"",
+   "grad": 2028,
    "city": "Lincoln, NE",
    "tv": 7.859,
    "peak": 8.059,
@@ -1989,9 +2031,10 @@
    "region": "WA",
    "club": "KBeach VBC",
    "height": "5' 7\"",
+   "grad": 2028,
    "city": "Wenatchee, WA",
    "tv": 7.851,
-   "peak": 8.16,
+   "peak": 8.159,
    "w": 156,
    "l": 66,
    "comps": 8,
@@ -2034,12 +2077,13 @@
    "region": "CA",
    "club": "Golden Gate volleyball",
    "height": "5' 10\"",
+   "grad": 2028,
    "city": "Saratoga , CA",
    "tv": 7.843,
-   "peak": 8.091,
+   "peak": 8.084,
    "w": 393,
    "l": 107,
-   "comps": 11,
+   "comps": 10,
    "cells": {
     "38087:139560": {
      "f": 9,
@@ -2079,6 +2123,7 @@
    "region": "MI",
    "club": "NorthShore Volleyball",
    "height": "5' 6\"",
+   "grad": 2029,
    "city": "Kingsley, MI",
    "tv": 7.842,
    "peak": 7.71,
@@ -2093,6 +2138,7 @@
    "region": "NE",
    "club": "Independent",
    "height": "5' 6\"",
+   "grad": 2029,
    "city": "Lincoln, NE",
    "tv": 7.84,
    "peak": 7.925,
@@ -2107,8 +2153,9 @@
    "region": "CA",
    "club": "692 West",
    "height": "5' 9\"",
+   "grad": 2029,
    "city": "san diego, CA",
-   "tv": 7.838,
+   "tv": 7.837,
    "peak": 7.914,
    "w": 212,
    "l": 76,
@@ -2140,9 +2187,10 @@
    "region": "CA",
    "club": "South Bay Sand",
    "height": "5' 9\"",
+   "grad": 2029,
    "city": "Manhattan Beach, CA",
-   "tv": 7.836,
-   "peak": 7.92,
+   "tv": 7.835,
+   "peak": 7.919,
    "w": 309,
    "l": 116,
    "comps": 12,
@@ -2165,16 +2213,16 @@
       "Taylor Daley"
      ]
     },
-    "25578:97150": {
-     "f": 5,
-     "partners": [
-      "Tegan Smith"
-     ]
-    },
     "31567:117696": {
      "f": 3,
      "partners": [
       "Stacy Balestrieri"
+     ]
+    },
+    "25578:97150": {
+     "f": 5,
+     "partners": [
+      "Tegan Smith"
      ]
     }
    }
@@ -2185,6 +2233,7 @@
    "region": "NE",
    "club": "",
    "height": "6' 2\"",
+   "grad": 2028,
    "city": "Lincoln, NE",
    "tv": 7.82,
    "peak": 7.82,
@@ -2199,12 +2248,13 @@
    "region": "NC",
    "club": "Sinjin Beach Volleyball",
    "height": "5' 11\"",
+   "grad": 2028,
    "city": "Cary, NC",
    "tv": 7.778,
    "peak": 8.126,
    "w": 312,
    "l": 146,
-   "comps": 7,
+   "comps": 8,
    "cells": {
     "34243:126054": {
      "f": 63,
@@ -2220,9 +2270,10 @@
    "region": "AZ",
    "club": "Stealth Beach Volleyball",
    "height": "5' 8\"",
+   "grad": 2030,
    "city": "Peoria, AZ",
-   "tv": 7.731,
-   "peak": 7.874,
+   "tv": 7.73,
+   "peak": 7.873,
    "w": 428,
    "l": 98,
    "comps": 14,
@@ -2234,6 +2285,7 @@
    "region": "CA",
    "club": "South Bay Sand",
    "height": "5' 10\"",
+   "grad": 2028,
    "city": "San Pedro, CA",
    "tv": 7.708,
    "peak": 7.785,
@@ -2261,6 +2313,7 @@
    "region": "FL",
    "club": "PCA Beach Volleyball Club",
    "height": "5' 6\"",
+   "grad": 2028,
    "city": "Boca Raton, FL",
    "tv": 7.7,
    "peak": 7.816,
@@ -2306,12 +2359,13 @@
    "region": "VA",
    "club": "757 Beach",
    "height": "5' 11\"",
+   "grad": 2029,
    "city": "Virginia Beach, VA",
    "tv": 7.68,
    "peak": 7.796,
    "w": 259,
    "l": 122,
-   "comps": 20,
+   "comps": 21,
    "cells": {
     "32578:120659": {
      "f": 9,
@@ -2333,12 +2387,13 @@
    "region": "TX",
    "club": "Third Coast",
    "height": "5' 7\"",
+   "grad": 2029,
    "city": "Spring , TX",
    "tv": 7.67,
    "peak": 8.232,
    "w": 220,
    "l": 139,
-   "comps": 10,
+   "comps": 11,
    "cells": {
     "34243:126056": {
      "f": 3,
@@ -2360,6 +2415,7 @@
    "region": "SC",
    "club": "Beach Elite CLT ",
    "height": "5' 10\"",
+   "grad": 2028,
    "city": "Fort Mill, SC",
    "tv": 7.65,
    "peak": 7.964,
@@ -2391,6 +2447,12 @@
       "Stella Sheeran"
      ]
     },
+    "31568:117700": {
+     "f": 3,
+     "partners": [
+      "Haisley Flanagan"
+     ]
+    },
     "31625:117914": {
      "f": 9,
      "partners": [
@@ -2402,11 +2464,63 @@
      "partners": [
       "Giani Boerner"
      ]
+    }
+   }
+  },
+  {
+   "name": "Lily Larrabee",
+   "id": 162723,
+   "region": "CA",
+   "club": "Golden Gate volleyball",
+   "height": "5' 10\"",
+   "grad": 2028,
+   "city": "Winters, CA",
+   "tv": 7.65,
+   "peak": 7.703,
+   "w": 214,
+   "l": 98,
+   "comps": 19,
+   "cells": {
+    "38087:139560": {
+     "f": 17,
+     "partners": [
+      "Kobi Sanchez"
+     ]
+    },
+    "34243:126056": {
+     "f": 41,
+     "partners": [
+      "Taylor Chastain"
+     ]
+    },
+    "31483:117394": {
+     "f": 11,
+     "partners": [
+      "Colette Sutton"
+     ]
+    },
+    "32578:120659": {
+     "f": 5,
+     "partners": [
+      "Skyler Smith"
+     ]
+    },
+    "30985:115903": {
+     "f": 7,
+     "partners": [
+      "Katie Hamburger"
+     ]
     },
     "31568:117700": {
-     "f": 3,
+     "f": 9,
      "partners": [
-      "Haisley Flanagan"
+      "Sienna Utge"
+     ]
+    },
+    "31567:117696": {
+     "f": 9,
+     "partners": [
+      "Katie Hamburger"
      ]
     }
    }
@@ -2417,6 +2531,7 @@
    "region": "IL",
    "club": null,
    "height": "5' 8\"",
+   "grad": 2028,
    "city": "Rolling meadows , IL",
    "tv": 7.641,
    "peak": 7.577,
@@ -2431,12 +2546,13 @@
    "region": "VA",
    "club": "108 Beach Volleyball Club",
    "height": "5' 10\"",
+   "grad": 2028,
    "city": "Stafford, VA",
    "tv": 7.632,
    "peak": 8.054,
    "w": 283,
    "l": 65,
-   "comps": 21,
+   "comps": 19,
    "cells": {
     "25638:97292": {
      "f": 5,
@@ -2452,6 +2568,7 @@
    "region": "MI",
    "club": "NorthShore Volleyball",
    "height": "5' 8\"",
+   "grad": 2029,
    "city": "Traverse city, MI",
    "tv": 7.626,
    "peak": 0,
@@ -2459,33 +2576,6 @@
    "l": 6,
    "comps": 2,
    "cells": {}
-  },
-  {
-   "name": "Isabella Cordaway-Dreier",
-   "id": 79997,
-   "region": "TX",
-   "club": "AJV Sand",
-   "height": "5' 2\"",
-   "city": "Round Rock, TX",
-   "tv": 7.625,
-   "peak": 7.674,
-   "w": 446,
-   "l": 127,
-   "comps": 11,
-   "cells": {
-    "38087:139560": {
-     "f": 17,
-     "partners": [
-      "Victoria Azarov"
-     ]
-    },
-    "32578:120659": {
-     "f": 9,
-     "partners": [
-      "Victoria Azarov"
-     ]
-    }
-   }
   }
  ],
  "comps": [
@@ -2511,7 +2601,7 @@
    "field": 72,
    "date": "2026-07-26",
    "sanction": "AVPA",
-   "n": 21
+   "n": 22
   },
   {
    "key": "31567:117695",
@@ -2538,6 +2628,18 @@
    "n": 17
   },
   {
+   "key": "31483:117394",
+   "tid": 31483,
+   "tdId": 117394,
+   "event": "33rd AAU Hermosa Beach National Pairs Championships",
+   "short": "AAU Hermosa Nat'l Pairs",
+   "division": "Girls 16 - 2028",
+   "field": 59,
+   "date": "2026-07-19",
+   "sanction": "AAU",
+   "n": 15
+  },
+  {
    "key": "34180:125823",
    "tid": 34180,
    "tdId": 125823,
@@ -2559,18 +2661,6 @@
    "field": 104,
    "date": "2026-05-03",
    "sanction": "USAV",
-   "n": 14
-  },
-  {
-   "key": "31483:117394",
-   "tid": 31483,
-   "tdId": 117394,
-   "event": "33rd AAU Hermosa Beach National Pairs Championships",
-   "short": "AAU Hermosa Nat'l Pairs",
-   "division": "Girls 16 - 2028",
-   "field": 59,
-   "date": "2026-07-19",
-   "sanction": "AAU",
    "n": 14
   },
   {
@@ -2634,6 +2724,18 @@
    "n": 11
   },
   {
+   "key": "30985:115903",
+   "tid": 30985,
+   "tdId": 115903,
+   "event": "2026 Futures Tour WESTERN NATIONAL CHAMPIONSHIPS",
+   "short": "Futures Western Nats",
+   "division": "Class of 2028 & Younger",
+   "field": 31,
+   "date": "2026-06-19",
+   "sanction": "p1440",
+   "n": 11
+  },
+  {
    "key": "25638:97292",
    "tid": 25638,
    "tdId": 97292,
@@ -2646,6 +2748,18 @@
    "n": 10
   },
   {
+   "key": "31568:117700",
+   "tid": 31568,
+   "tdId": 117700,
+   "event": "2026 Futures Tour: Arizona",
+   "short": "Futures Tour: Arizona",
+   "division": "Class of '28 & Younger",
+   "field": 36,
+   "date": "2026-01-18",
+   "sanction": "p1440",
+   "n": 10
+  },
+  {
    "key": "31625:117914",
    "tid": 31625,
    "tdId": 117914,
@@ -2654,18 +2768,6 @@
    "division": "Class of '26 & Younger",
    "field": 32,
    "date": "2026-04-12",
-   "sanction": "p1440",
-   "n": 10
-  },
-  {
-   "key": "30985:115903",
-   "tid": 30985,
-   "tdId": 115903,
-   "event": "2026 Futures Tour WESTERN NATIONAL CHAMPIONSHIPS",
-   "short": "Futures Western Nats",
-   "division": "Class of 2028 & Younger",
-   "field": 31,
-   "date": "2026-06-19",
    "sanction": "p1440",
    "n": 10
   },
@@ -2694,14 +2796,14 @@
    "n": 9
   },
   {
-   "key": "31568:117700",
-   "tid": 31568,
-   "tdId": 117700,
-   "event": "2026 Futures Tour: Arizona",
-   "short": "Futures Tour: Arizona",
+   "key": "31567:117696",
+   "tid": 31567,
+   "tdId": 117696,
+   "event": "2026 Futures Tour Spring Championship",
+   "short": "Futures Spring Champ",
    "division": "Class of '28 & Younger",
-   "field": 36,
-   "date": "2026-01-18",
+   "field": 38,
+   "date": "2026-03-29",
    "sanction": "p1440",
    "n": 9
   },
@@ -2728,21 +2830,32 @@
    "date": "2025-11-09",
    "sanction": "AVPA",
    "n": 8
-  },
-  {
-   "key": "31567:117696",
-   "tid": 31567,
-   "tdId": 117696,
-   "event": "2026 Futures Tour Spring Championship",
-   "short": "Futures Spring Champ",
-   "division": "Class of '28 & Younger",
-   "field": 38,
-   "date": "2026-03-29",
-   "sanction": "p1440",
-   "n": 8
   }
  ],
  "pairs": [
+  {
+   "key": "35176:128940",
+   "tid": 35176,
+   "tdId": 128940,
+   "event": "BRVA Beach AVP Qualifier #9 '26",
+   "short": "BRVA Beach AVP Qual #9 '26",
+   "division": "Girls 18U",
+   "field": 12,
+   "date": "2026-08-16",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Breeze Johnson",
+     "id": 84049,
+     "f": 1
+    },
+    {
+     "name": "Kendal Walker",
+     "id": 146170,
+     "f": 1
+    }
+   ]
+  },
   {
    "key": "33876:124946",
    "tid": 33876,
@@ -2763,29 +2876,6 @@
      "name": "Sage Illian",
      "id": 91052,
      "f": 3
-    }
-   ]
-  },
-  {
-   "key": "40756:149147",
-   "tid": 40756,
-   "tdId": 149147,
-   "event": "2026 Cal Cup Championships, 8/9/26, Hermosa Pier, Hermosa Beach",
-   "short": "Cal Cup Champs, 8/9/26",
-   "division": "Girls 16U",
-   "field": 20,
-   "date": "2026-08-09",
-   "sanction": "AVPA",
-   "players": [
-    {
-     "name": "Tristan Ana Del Riego",
-     "id": 66728,
-     "f": 1
-    },
-    {
-     "name": "Ella Buchanan",
-     "id": 98125,
-     "f": 2
     }
    ]
   },
@@ -2974,6 +3064,29 @@
    ]
   },
   {
+   "key": "39742:145577",
+   "tid": 39742,
+   "tdId": 145577,
+   "event": "6/24/26, Main Beach, Santa Cruz",
+   "short": "6/24/26, Main Beach",
+   "division": "Girls 18U",
+   "field": 14,
+   "date": "2026-06-24",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Regina Stella Broshear",
+     "id": 64782,
+     "f": 3
+    },
+    {
+     "name": "Lily Larrabee",
+     "id": 162723,
+     "f": 3
+    }
+   ]
+  },
+  {
    "key": "33014:121911",
    "tid": 33014,
    "tdId": 121911,
@@ -3158,25 +3271,25 @@
    ]
   },
   {
-   "key": "32237:119779",
-   "tid": 32237,
-   "tdId": 119779,
-   "event": "GNBV National Recruiting Showcase June 2026",
-   "short": "GNBV Nat'l Recruiting",
-   "division": "Elite 16",
-   "field": 11,
-   "date": "2026-06-07",
-   "sanction": "BVNE",
+   "key": "39439:144622",
+   "tid": 39439,
+   "tdId": 144622,
+   "event": "6/10/26, Main Beach, Santa Cruz",
+   "short": "6/10/26, Main Beach",
+   "division": "Girls 18U",
+   "field": 15,
+   "date": "2026-06-10",
+   "sanction": "AVPA",
    "players": [
     {
-     "name": "Tristan Ana Del Riego",
-     "id": 66728,
-     "f": 1
+     "name": "Haisley Flanagan",
+     "id": 64896,
+     "f": 2
     },
     {
-     "name": "Sienna Mattoon",
-     "id": 48567,
-     "f": 1
+     "name": "Lily Larrabee",
+     "id": 162723,
+     "f": 5
     }
    ]
   },
@@ -3315,6 +3428,29 @@
      "name": "Emerson Thomas",
      "id": 163776,
      "f": 1
+    }
+   ]
+  },
+  {
+   "key": "32034:119224",
+   "tid": 32034,
+   "tdId": 119224,
+   "event": "GNBV National Recruiting Showcase Texas",
+   "short": "GNBV Nat'l Recruiting",
+   "division": "Girls 16U",
+   "field": 28,
+   "date": "2026-05-17",
+   "sanction": "BVNE",
+   "players": [
+    {
+     "name": "Stella Sheeran",
+     "id": 42463,
+     "f": 3
+    },
+    {
+     "name": "Haven Gindoff",
+     "id": 150387,
+     "f": 3
     }
    ]
   },
@@ -3476,6 +3612,29 @@
      "name": "Eden Cisneros",
      "id": 98425,
      "f": 7
+    }
+   ]
+  },
+  {
+   "key": "38205:139901",
+   "tid": 38205,
+   "tdId": 139901,
+   "event": "4/25/26, Belmont Shore, Long Beach",
+   "short": "4/25/26, Belmont Shore",
+   "division": "Girls 16U",
+   "field": 11,
+   "date": "2026-04-25",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Tristan Ana Del Riego",
+     "id": 66728,
+     "f": 1
+    },
+    {
+     "name": "Lily Larrabee",
+     "id": 162723,
+     "f": 1
     }
    ]
   },
@@ -3683,29 +3842,6 @@
      "name": "Avery Tussing",
      "id": 95222,
      "f": 2
-    }
-   ]
-  },
-  {
-   "key": "34696:127564",
-   "tid": 34696,
-   "tdId": 127564,
-   "event": "Beach Elite SoCal Series Winter #5 (AVP 3 STAR)-  2026",
-   "short": "Beach Elite SoCal W5",
-   "division": "Girls 16U",
-   "field": 8,
-   "date": "2026-02-14",
-   "sanction": "AVPA",
-   "players": [
-    {
-     "name": "Madison Gillinger",
-     "id": 99596,
-     "f": 1
-    },
-    {
-     "name": "Sadie Harris",
-     "id": 94909,
-     "f": 1
     }
    ]
   },
@@ -4032,29 +4168,6 @@
    ]
   },
   {
-   "key": "23697:91217",
-   "tid": 23697,
-   "tdId": 91217,
-   "event": "Kauai Bikini Open Santa Monica CA",
-   "short": "Kauai Bikini Open Santa",
-   "division": "Girls 16U",
-   "field": 21,
-   "date": "2025-10-04",
-   "sanction": "BVNE",
-   "players": [
-    {
-     "name": "Tristan Ana Del Riego",
-     "id": 66728,
-     "f": 1
-    },
-    {
-     "name": "Sophia Grish",
-     "id": 98897,
-     "f": 5
-    }
-   ]
-  },
-  {
    "key": "26799:101366",
    "tid": 26799,
    "tdId": 101366,
@@ -4352,37 +4465,14 @@
      "f": 17
     }
    ]
-  },
-  {
-   "key": "26795:101346",
-   "tid": 26795,
-   "tdId": 101346,
-   "event": "WVS 2025 Adults August Heat Wave",
-   "short": "WVS 2025 Adults August",
-   "division": "Womens Open",
-   "field": 17,
-   "date": "2025-08-16",
-   "sanction": "AVPA",
-   "players": [
-    {
-     "name": "Brooklyn Rosales",
-     "id": 59411,
-     "f": 3
-    },
-    {
-     "name": "Skyler Smith",
-     "id": 149113,
-     "f": 9
-    }
-   ]
   }
  ],
- "totalComps": 281,
- "totalEvents": 224,
- "totalEntries": 720,
- "droppedTeam": 154,
+ "totalComps": 274,
+ "totalEvents": 219,
+ "totalEntries": 728,
+ "droppedTeam": 153,
  "thresh": 8,
  "population": 13126,
- "ratedPop": 11309,
- "cutNote": "The cut is tight: #61 is Isabelle Haas at 7.624, 0.001 behind #60."
+ "ratedPop": 11311,
+ "cutNote": "The cut is tight: #61 is Isabella Cordaway-Dreier at 7.625, 0.001 behind #60."
 }

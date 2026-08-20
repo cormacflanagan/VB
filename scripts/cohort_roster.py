@@ -18,7 +18,7 @@ def main(year, n=60):
     top = rated[:n]
     key = f"{year}_younger"
     out = {
-        "label": f"{year} and younger &#8212; top {n}",
+        "label": f"{year} and younger — top {n}",
         "roster": [[p["name"], p["id"], p.get("state") or ""] for p in top],
         "meta": {str(p["id"]): {k: p.get(k) for k in
                                 ("height", "club", "city", "state", "tv", "grad")}

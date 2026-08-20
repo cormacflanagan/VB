@@ -8,39 +8,38 @@
   "3113": "Ella Olson",
   "28688": "Olivia Herron",
   "29854": "Sienna Castillo",
-  "2771": "Sandie Souza",
-  "25289": "Simrin Adams",
   "59914": "JoJo Wilson",
-  "44267": "Thalia Lindahl",
+  "2771": "Sandie Souza",
   "26871": "Abby King",
+  "44267": "Thalia Lindahl",
   "61785": "Georgeann Lee",
   "2420": "Christy Boulware",
-  "5160": "Addison Choi",
+  "5973": "Lerin Rosenthal",
+  "53164": "Sammy Nammack",
   "26984": "Maddy  Wagner",
   "25288": "Zoe Znider",
   "4517": "Ella Dueck",
   "68351": "Megan McLarty",
   "29918": "Karsyn Rogers",
   "24727": "Isabelle Izzy Ramos",
+  "5160": "Addison Choi",
   "17437": "London Merchant",
   "56781": "Meg Hearn",
-  "5973": "Lerin Rosenthal",
   "148640": "Claire Hanson",
-  "53164": "Sammy Nammack",
   "40933": "Allyn Hilt",
+  "25289": "Simrin Adams",
   "64683": "Bristyn Burness",
   "20220": "Ryan Anderson",
   "17491": "Paloma Smith",
-  "23868": "Jordyn Wilson",
   "170641": "Giani Boerner",
+  "23868": "Jordyn Wilson",
   "44574": "Ashley Markle",
   "19592": "Lyla Paulsen",
-  "63770": "Marley Robinson",
   "56789": "Leah Blair",
+  "63770": "Marley Robinson",
   "92803": "Linnaea Nielsen",
   "52517": "Meadow Rosales",
   "63216": "Sienna Carr",
-  "121625": "Amelia Berent",
   "17798": "Johanna Snyder",
   "23641": "Kendyl Maxwell",
   "23188": "Emma Burnside",
@@ -51,18 +50,19 @@
   "7094": "Kiah McCoy",
   "42682": "Lekhana Donnies",
   "27879": "Claire Demirjian",
+  "105907": "Lola Heckman",
   "110464": "Ali Lubach",
+  "5288": "Kiley Bowman",
   "17061": "Anna Popovic",
+  "121625": "Amelia Berent",
   "57246": "Logan Leverte",
   "105342": "Izzy Fischer",
-  "105907": "Lola Heckman",
+  "59661": "GRACIE LUTES",
   "14082": "Laney Evers",
   "188020": "Lila Waite",
-  "5138": "Zailey High",
-  "69116": "Ashley Chuba",
-  "5288": "Kiley Bowman"
+  "69116": "Ashley Chuba"
  },
- "matches": 2635,
+ "matches": 2674,
  "pairs": [
   {
    "a": "Thalia Lindahl",
@@ -591,124 +591,6 @@
    ]
   },
   {
-   "a": "Simrin Adams",
-   "b": "Sammy Nammack",
-   "aId": 25289,
-   "bId": 53164,
-   "aWins": 4,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2025-11-09",
-     "event": "AVP Juniors West Coast Championships 2025",
-     "division": "Girls 17U",
-     "tid": 25578,
-     "tdId": 97148,
-     "phase": "Playoffs",
-     "round": "Gold Playoffs",
-     "won": true,
-     "sets": [
-      [
-       22,
-       20
-      ],
-      [
-       21,
-       19
-      ]
-     ],
-     "with": [
-      "Thalia Lindahl"
-     ],
-     "against": [
-      "Ella Dueck"
-     ]
-    },
-    {
-     "date": "2026-02-22",
-     "event": "AAU California Open",
-     "division": "Girls 18U",
-     "tid": 32993,
-     "tdId": 121812,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": true,
-     "sets": [
-      [
-       18,
-       21
-      ],
-      [
-       21,
-       19
-      ],
-      [
-       15,
-       12
-      ]
-     ],
-     "with": [
-      "Lerin Rosenthal"
-     ],
-     "against": [
-      "Leah Blair"
-     ]
-    },
-    {
-     "date": "2026-03-01",
-     "event": "California IBVL Winter Series Championships - p1440 Crown Series ",
-     "division": "Girls 18U",
-     "tid": 32939,
-     "tdId": 121642,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": true,
-     "sets": [
-      [
-       21,
-       16
-      ],
-      [
-       21,
-       17
-      ]
-     ],
-     "with": [
-      "Ella Dueck"
-     ],
-     "against": [
-      "Lerin Rosenthal"
-     ]
-    },
-    {
-     "date": "2026-07-24",
-     "event": "AVP Juniors National Championships 2026",
-     "division": "Girls 18U",
-     "tid": 34243,
-     "tdId": 126054,
-     "phase": "Playoffs",
-     "round": "Gold",
-     "won": true,
-     "sets": [
-      [
-       21,
-       17
-      ],
-      [
-       26,
-       24
-      ]
-     ],
-     "with": [
-      "Sandie Souza"
-     ],
-     "against": [
-      "Ella Dueck"
-     ]
-    }
-   ]
-  },
-  {
    "a": "Thalia Lindahl",
    "b": "Sammy Nammack",
    "aId": 44267,
@@ -814,6 +696,124 @@
      ],
      "against": [
       "Leah Blair"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Simrin Adams",
+   "b": "Sammy Nammack",
+   "aId": 25289,
+   "bId": 53164,
+   "aWins": 4,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-11-09",
+     "event": "AVP Juniors West Coast Championships 2025",
+     "division": "Girls 17U",
+     "tid": 25578,
+     "tdId": 97148,
+     "phase": "Playoffs",
+     "round": "Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       22,
+       20
+      ],
+      [
+       21,
+       19
+      ]
+     ],
+     "with": [
+      "Thalia Lindahl"
+     ],
+     "against": [
+      "Ella Dueck"
+     ]
+    },
+    {
+     "date": "2026-02-22",
+     "event": "AAU California Open",
+     "division": "Girls 18U",
+     "tid": 32993,
+     "tdId": 121812,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       18,
+       21
+      ],
+      [
+       21,
+       19
+      ],
+      [
+       15,
+       12
+      ]
+     ],
+     "with": [
+      "Lerin Rosenthal"
+     ],
+     "against": [
+      "Leah Blair"
+     ]
+    },
+    {
+     "date": "2026-03-01",
+     "event": "California IBVL Winter Series Championships - p1440 Crown Series ",
+     "division": "Girls 18U",
+     "tid": 32939,
+     "tdId": 121642,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       16
+      ],
+      [
+       21,
+       17
+      ]
+     ],
+     "with": [
+      "Lerin Rosenthal"
+     ],
+     "against": [
+      "Ella Dueck"
+     ]
+    },
+    {
+     "date": "2026-07-24",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 18U",
+     "tid": 34243,
+     "tdId": 126054,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       26,
+       24
+      ]
+     ],
+     "with": [
+      "Sandie Souza"
+     ],
+     "against": [
+      "Ella Dueck"
      ]
     }
    ]
@@ -1987,98 +1987,6 @@
    ]
   },
   {
-   "a": "Addison Choi",
-   "b": "Sammy Nammack",
-   "aId": 5160,
-   "bId": 53164,
-   "aWins": 2,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-03-01",
-     "event": "California IBVL Winter Series Championships - p1440 Crown Series ",
-     "division": "Girls 18U",
-     "tid": 32939,
-     "tdId": 121642,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": true,
-     "sets": [
-      [
-       21,
-       19
-      ],
-      [
-       21,
-       19
-      ]
-     ],
-     "with": [
-      56544
-     ],
-     "against": [
-      "Lerin Rosenthal"
-     ]
-    },
-    {
-     "date": "2026-05-16",
-     "event": "AVP Juniors Huntington Beach Regionals 2026",
-     "division": "Girls 18U",
-     "tid": 34968,
-     "tdId": 128296,
-     "phase": "Pool",
-     "round": "18U Pools",
-     "won": true,
-     "sets": [
-      [
-       19,
-       21
-      ],
-      [
-       21,
-       15
-      ],
-      [
-       15,
-       12
-      ]
-     ],
-     "with": [
-      "Sandie Souza"
-     ],
-     "against": [
-      "Ashley Chuba"
-     ]
-    },
-    {
-     "date": "2026-07-23",
-     "event": "AVP Juniors National Championships 2026",
-     "division": "Girls 18U",
-     "tid": 34243,
-     "tdId": 126054,
-     "phase": "Playoffs",
-     "round": "Gold",
-     "won": false,
-     "sets": [
-      [
-       22,
-       24
-      ],
-      [
-       19,
-       21
-      ]
-     ],
-     "with": [
-      56544
-     ],
-     "against": [
-      "Ella Dueck"
-     ]
-    }
-   ]
-  },
-  {
    "a": "Jordyn Wilson",
    "b": "Simrin Adams",
    "aId": 23868,
@@ -2162,178 +2070,6 @@
      ],
      "against": [
       "Maddy  Wagner"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Ella Dueck",
-   "b": "Thalia Lindahl",
-   "aId": 4517,
-   "bId": 44267,
-   "aWins": 1,
-   "bWins": 2,
-   "games": [
-    {
-     "date": "2025-11-09",
-     "event": "AVP Juniors West Coast Championships 2025",
-     "division": "Girls 17U",
-     "tid": 25578,
-     "tdId": 97148,
-     "phase": "Playoffs",
-     "round": "Gold Playoffs",
-     "won": false,
-     "sets": [
-      [
-       20,
-       22
-      ],
-      [
-       19,
-       21
-      ]
-     ],
-     "with": [
-      "Simrin Adams"
-     ],
-     "against": [
-      "Sammy Nammack"
-     ]
-    },
-    {
-     "date": "2026-01-19",
-     "event": "AAU MLK Open ",
-     "division": "Girls 18U",
-     "tid": 32390,
-     "tdId": 120204,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": true,
-     "sets": [
-      [
-       28,
-       24
-      ]
-     ],
-     "with": [
-      "Simrin Adams"
-     ],
-     "against": [
-      17417
-     ]
-    },
-    {
-     "date": "2026-07-18",
-     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
-     "division": "Girls 17 - 2027",
-     "tid": 31483,
-     "tdId": 126666,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": false,
-     "sets": [
-      [
-       15,
-       21
-      ],
-      [
-       28,
-       26
-      ],
-      [
-       12,
-       15
-      ]
-     ],
-     "with": [
-      "Simrin Adams"
-     ],
-     "against": [
-      "JoJo Wilson"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Ella Dueck",
-   "b": "Addison Choi",
-   "aId": 4517,
-   "bId": 5160,
-   "aWins": 3,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-03-01",
-     "event": "California IBVL Winter Series Championships - p1440 Crown Series ",
-     "division": "Girls 18U",
-     "tid": 32939,
-     "tdId": 121642,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": true,
-     "sets": [
-      [
-       21,
-       15
-      ],
-      [
-       21,
-       17
-      ]
-     ],
-     "with": [
-      "Simrin Adams"
-     ],
-     "against": [
-      56544
-     ]
-    },
-    {
-     "date": "2026-03-01",
-     "event": "California IBVL Winter Series Championships - p1440 Crown Series ",
-     "division": "Girls 18U",
-     "tid": 32939,
-     "tdId": 121642,
-     "phase": "Playoffs",
-     "round": "Playoffs",
-     "won": true,
-     "sets": [
-      [
-       21,
-       13
-      ]
-     ],
-     "with": [
-      "Simrin Adams"
-     ],
-     "against": [
-      56544
-     ]
-    },
-    {
-     "date": "2026-07-23",
-     "event": "AVP Juniors National Championships 2026",
-     "division": "Girls 18U",
-     "tid": 34243,
-     "tdId": 126054,
-     "phase": "Playoffs",
-     "round": "Gold",
-     "won": true,
-     "sets": [
-      [
-       24,
-       22
-      ],
-      [
-       21,
-       19
-      ]
-     ],
-     "with": [
-      56544
-     ],
-     "against": [
-      "Sammy Nammack"
      ]
     }
    ]
@@ -2427,6 +2163,186 @@
    ]
   },
   {
+   "a": "Ella Dueck",
+   "b": "Thalia Lindahl",
+   "aId": 4517,
+   "bId": 44267,
+   "aWins": 1,
+   "bWins": 2,
+   "games": [
+    {
+     "date": "2025-11-09",
+     "event": "AVP Juniors West Coast Championships 2025",
+     "division": "Girls 17U",
+     "tid": 25578,
+     "tdId": 97148,
+     "phase": "Playoffs",
+     "round": "Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       20,
+       22
+      ],
+      [
+       19,
+       21
+      ]
+     ],
+     "with": [
+      "Simrin Adams"
+     ],
+     "against": [
+      "Sammy Nammack"
+     ]
+    },
+    {
+     "date": "2026-01-19",
+     "event": "AAU MLK Open ",
+     "division": "Girls 18U",
+     "tid": 32390,
+     "tdId": 120204,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": true,
+     "sets": [
+      [
+       28,
+       24
+      ]
+     ],
+     "with": [
+      17417
+     ],
+     "against": [
+      "Simrin Adams"
+     ]
+    },
+    {
+     "date": "2026-07-18",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 17 - 2027",
+     "tid": 31483,
+     "tdId": 126666,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": false,
+     "sets": [
+      [
+       15,
+       21
+      ],
+      [
+       28,
+       26
+      ],
+      [
+       12,
+       15
+      ]
+     ],
+     "with": [
+      "JoJo Wilson"
+     ],
+     "against": [
+      "Simrin Adams"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Addison Choi",
+   "b": "Sammy Nammack",
+   "aId": 5160,
+   "bId": 53164,
+   "aWins": 2,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-03-01",
+     "event": "California IBVL Winter Series Championships - p1440 Crown Series ",
+     "division": "Girls 18U",
+     "tid": 32939,
+     "tdId": 121642,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       19
+      ],
+      [
+       21,
+       19
+      ]
+     ],
+     "with": [
+      "Lerin Rosenthal"
+     ],
+     "against": [
+      56544
+     ]
+    },
+    {
+     "date": "2026-05-16",
+     "event": "AVP Juniors Huntington Beach Regionals 2026",
+     "division": "Girls 18U",
+     "tid": 34968,
+     "tdId": 128296,
+     "phase": "Pool",
+     "round": "18U Pools",
+     "won": true,
+     "sets": [
+      [
+       19,
+       21
+      ],
+      [
+       21,
+       15
+      ],
+      [
+       15,
+       12
+      ]
+     ],
+     "with": [
+      "Sandie Souza"
+     ],
+     "against": [
+      "Ashley Chuba"
+     ]
+    },
+    {
+     "date": "2026-07-23",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 18U",
+     "tid": 34243,
+     "tdId": 126054,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": false,
+     "sets": [
+      [
+       22,
+       24
+      ],
+      [
+       19,
+       21
+      ]
+     ],
+     "with": [
+      "Ella Dueck"
+     ],
+     "against": [
+      56544
+     ]
+    }
+   ]
+  },
+  {
    "a": "Addison Choi",
    "b": "Georgeann Lee",
    "aId": 5160,
@@ -2506,6 +2422,174 @@
      ],
      "against": [
       9258
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Jordyn Wilson",
+   "b": "Lola Heckman",
+   "aId": 23868,
+   "bId": 105907,
+   "aWins": 2,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2025-12-14",
+     "event": "AAU Herrmosa Beach Winter Series Championships",
+     "division": "Girls 18U",
+     "tid": 31527,
+     "tdId": 117546,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": false,
+     "sets": [
+      [
+       20,
+       22
+      ],
+      [
+       22,
+       24
+      ]
+     ],
+     "with": [
+      "Marley Robinson"
+     ],
+     "against": [
+      "Kiley Bowman"
+     ]
+    },
+    {
+     "date": "2026-01-19",
+     "event": "AAU MLK Open ",
+     "division": "Girls 18U",
+     "tid": 32390,
+     "tdId": 120204,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": true,
+     "sets": [
+      [
+       28,
+       26
+      ]
+     ],
+     "with": [
+      "Sammy Nammack"
+     ],
+     "against": [
+      "Kiley Bowman"
+     ]
+    },
+    {
+     "date": "2026-07-08",
+     "event": "2026 BVCA Individual Pairs National Championship ",
+     "division": "Girls 18U",
+     "tid": 38087,
+     "tdId": 139559,
+     "phase": "Playoffs",
+     "round": "Championship Bracket",
+     "won": true,
+     "sets": [
+      [
+       26,
+       24
+      ],
+      [
+       21,
+       9
+      ]
+     ],
+     "with": [
+      "Marley Robinson"
+     ],
+     "against": [
+      "Kiley Bowman"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Ella Dueck",
+   "b": "Addison Choi",
+   "aId": 4517,
+   "bId": 5160,
+   "aWins": 3,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-03-01",
+     "event": "California IBVL Winter Series Championships - p1440 Crown Series ",
+     "division": "Girls 18U",
+     "tid": 32939,
+     "tdId": 121642,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       15
+      ],
+      [
+       21,
+       17
+      ]
+     ],
+     "with": [
+      "Simrin Adams"
+     ],
+     "against": [
+      56544
+     ]
+    },
+    {
+     "date": "2026-03-01",
+     "event": "California IBVL Winter Series Championships - p1440 Crown Series ",
+     "division": "Girls 18U",
+     "tid": 32939,
+     "tdId": 121642,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       13
+      ]
+     ],
+     "with": [
+      "Simrin Adams"
+     ],
+     "against": [
+      56544
+     ]
+    },
+    {
+     "date": "2026-07-23",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 18U",
+     "tid": 34243,
+     "tdId": 126054,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": true,
+     "sets": [
+      [
+       24,
+       22
+      ],
+      [
+       21,
+       19
+      ]
+     ],
+     "with": [
+      "Sammy Nammack"
+     ],
+     "against": [
+      56544
      ]
     }
    ]
@@ -2670,90 +2754,6 @@
      ],
      "against": [
       68025
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Jordyn Wilson",
-   "b": "Lola Heckman",
-   "aId": 23868,
-   "bId": 105907,
-   "aWins": 2,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2025-12-14",
-     "event": "AAU Herrmosa Beach Winter Series Championships",
-     "division": "Girls 18U",
-     "tid": 31527,
-     "tdId": 117546,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": false,
-     "sets": [
-      [
-       20,
-       22
-      ],
-      [
-       22,
-       24
-      ]
-     ],
-     "with": [
-      "Marley Robinson"
-     ],
-     "against": [
-      "Kiley Bowman"
-     ]
-    },
-    {
-     "date": "2026-01-19",
-     "event": "AAU MLK Open ",
-     "division": "Girls 18U",
-     "tid": 32390,
-     "tdId": 120204,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": true,
-     "sets": [
-      [
-       28,
-       26
-      ]
-     ],
-     "with": [
-      "Sammy Nammack"
-     ],
-     "against": [
-      "Kiley Bowman"
-     ]
-    },
-    {
-     "date": "2026-07-08",
-     "event": "2026 BVCA Individual Pairs National Championship ",
-     "division": "Girls 18U",
-     "tid": 38087,
-     "tdId": 139559,
-     "phase": "Playoffs",
-     "round": "Championship Bracket",
-     "won": true,
-     "sets": [
-      [
-       26,
-       24
-      ],
-      [
-       21,
-       9
-      ]
-     ],
-     "with": [
-      "Marley Robinson"
-     ],
-     "against": [
-      "Kiley Bowman"
      ]
     }
    ]
@@ -2930,6 +2930,98 @@
      ],
      "against": [
       "Ashley Chuba"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "GRACIE LUTES",
+   "b": "Amelia Berent",
+   "aId": 59661,
+   "bId": 121625,
+   "aWins": 2,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2025-11-28",
+     "event": "AVP Juniors East Coast Championships 2025",
+     "division": "Girls 17U",
+     "tid": 25638,
+     "tdId": 97291,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       19,
+       21
+      ],
+      [
+       21,
+       16
+      ],
+      [
+       15,
+       13
+      ]
+     ],
+     "with": [
+      58942
+     ],
+     "against": [
+      129320
+     ]
+    },
+    {
+     "date": "2025-11-30",
+     "event": "AVP Juniors East Coast Championships 2025",
+     "division": "Girls 17U",
+     "tid": 25638,
+     "tdId": 97291,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": true,
+     "sets": [
+      [
+       25,
+       27
+      ],
+      [
+       21,
+       17
+      ],
+      [
+       15,
+       13
+      ]
+     ],
+     "with": [
+      58942
+     ],
+     "against": [
+      129320
+     ]
+    },
+    {
+     "date": "2026-06-21",
+     "event": "Alabama Beach Week AVP (AVPA 2-Star Qualifier) '26 (RallyVB HSV)",
+     "division": "Girls 18U",
+     "tid": 33286,
+     "tdId": 122967,
+     "phase": "Playoffs",
+     "round": "Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       13,
+       21
+      ]
+     ],
+     "with": [
+      23930
+     ],
+     "against": [
+      70830
      ]
     }
    ]
@@ -4129,6 +4221,320 @@
    ]
   },
   {
+   "a": "Kiley Bowman",
+   "b": "Simrin Adams",
+   "aId": 5288,
+   "bId": 25289,
+   "aWins": 0,
+   "bWins": 2,
+   "games": [
+    {
+     "date": "2025-12-14",
+     "event": "AAU Herrmosa Beach Winter Series Championships",
+     "division": "Girls 18U",
+     "tid": 31527,
+     "tdId": 117546,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": false,
+     "sets": [
+      [
+       14,
+       21
+      ],
+      [
+       15,
+       21
+      ]
+     ],
+     "with": [
+      "JoJo Wilson"
+     ],
+     "against": [
+      "Lola Heckman"
+     ]
+    },
+    {
+     "date": "2026-01-19",
+     "event": "AAU MLK Open ",
+     "division": "Girls 18U",
+     "tid": 32390,
+     "tdId": 120204,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": false,
+     "sets": [
+      [
+       16,
+       21
+      ],
+      [
+       15,
+       21
+      ]
+     ],
+     "with": [
+      "Ella Dueck"
+     ],
+     "against": [
+      "Lola Heckman"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Simrin Adams",
+   "b": "Lola Heckman",
+   "aId": 25289,
+   "bId": 105907,
+   "aWins": 2,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-12-14",
+     "event": "AAU Herrmosa Beach Winter Series Championships",
+     "division": "Girls 18U",
+     "tid": 31527,
+     "tdId": 117546,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       14
+      ],
+      [
+       21,
+       15
+      ]
+     ],
+     "with": [
+      "JoJo Wilson"
+     ],
+     "against": [
+      "Kiley Bowman"
+     ]
+    },
+    {
+     "date": "2026-01-19",
+     "event": "AAU MLK Open ",
+     "division": "Girls 18U",
+     "tid": 32390,
+     "tdId": 120204,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       16
+      ],
+      [
+       21,
+       15
+      ]
+     ],
+     "with": [
+      "Ella Dueck"
+     ],
+     "against": [
+      "Kiley Bowman"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "JoJo Wilson",
+   "b": "Linnaea Nielsen",
+   "aId": 59914,
+   "bId": 92803,
+   "aWins": 2,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-25",
+     "event": "IBVL Winter Nationals & U18 ISF Trials",
+     "division": "Girls U18 (Year Born: 2008-2009-2010)",
+     "tid": 25008,
+     "tdId": 124255,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       21,
+       14
+      ]
+     ],
+     "with": [
+      "Thalia Lindahl"
+     ],
+     "against": [
+      "Sammy Nammack"
+     ]
+    },
+    {
+     "date": "2026-07-18",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 17 - 2027",
+     "tid": 31483,
+     "tdId": 126666,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       21,
+       9
+      ]
+     ],
+     "with": [
+      "Thalia Lindahl"
+     ],
+     "against": [
+      60184
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Leah Blair",
+   "b": "JoJo Wilson",
+   "aId": 56789,
+   "bId": 59914,
+   "aWins": 1,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-01-24",
+     "event": "IBVL Winter Nationals & U18 ISF Trials",
+     "division": "Girls U18 (Year Born: 2008-2009-2010)",
+     "tid": 25008,
+     "tdId": 124255,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       14
+      ],
+      [
+       19,
+       21
+      ],
+      [
+       15,
+       11
+      ]
+     ],
+     "with": [
+      "Thalia Lindahl"
+     ],
+     "against": [
+      59345
+     ]
+    },
+    {
+     "date": "2026-07-18",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 17 - 2027",
+     "tid": 31483,
+     "tdId": 126666,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": false,
+     "sets": [
+      [
+       14,
+       21
+      ],
+      [
+       19,
+       21
+      ]
+     ],
+     "with": [
+      "Thalia Lindahl"
+     ],
+     "against": [
+      "Allyn Hilt"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Simrin Adams",
+   "b": "Thalia Lindahl",
+   "aId": 25289,
+   "bId": 44267,
+   "aWins": 1,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-01-19",
+     "event": "AAU MLK Open ",
+     "division": "Girls 18U",
+     "tid": 32390,
+     "tdId": 120204,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": true,
+     "sets": [
+      [
+       28,
+       24
+      ]
+     ],
+     "with": [
+      17417
+     ],
+     "against": [
+      "Ella Dueck"
+     ]
+    },
+    {
+     "date": "2026-07-18",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 17 - 2027",
+     "tid": 31483,
+     "tdId": 126666,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": false,
+     "sets": [
+      [
+       15,
+       21
+      ],
+      [
+       28,
+       26
+      ],
+      [
+       12,
+       15
+      ]
+     ],
+     "with": [
+      "JoJo Wilson"
+     ],
+     "against": [
+      "Ella Dueck"
+     ]
+    }
+   ]
+  },
+  {
    "a": "Sammy Nammack",
    "b": "Ashley Chuba",
    "aId": 53164,
@@ -4331,125 +4737,67 @@
    ]
   },
   {
-   "a": "Kiley Bowman",
-   "b": "Simrin Adams",
-   "aId": 5288,
-   "bId": 25289,
-   "aWins": 0,
-   "bWins": 2,
+   "a": "Jordyn Wilson",
+   "b": "Abby King",
+   "aId": 23868,
+   "bId": 26871,
+   "aWins": 1,
+   "bWins": 1,
    "games": [
     {
-     "date": "2025-12-14",
-     "event": "AAU Herrmosa Beach Winter Series Championships",
-     "division": "Girls 18U",
-     "tid": 31527,
-     "tdId": 117546,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": false,
-     "sets": [
-      [
-       14,
-       21
-      ],
-      [
-       15,
-       21
-      ]
-     ],
-     "with": [
-      "JoJo Wilson"
-     ],
-     "against": [
-      "Lola Heckman"
-     ]
-    },
-    {
-     "date": "2026-01-19",
-     "event": "AAU MLK Open ",
-     "division": "Girls 18U",
-     "tid": 32390,
-     "tdId": 120204,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": false,
-     "sets": [
-      [
-       16,
-       21
-      ],
-      [
-       15,
-       21
-      ]
-     ],
-     "with": [
-      "Ella Dueck"
-     ],
-     "against": [
-      "Lola Heckman"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Simrin Adams",
-   "b": "Lola Heckman",
-   "aId": 25289,
-   "bId": 105907,
-   "aWins": 2,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2025-12-14",
-     "event": "AAU Herrmosa Beach Winter Series Championships",
-     "division": "Girls 18U",
-     "tid": 31527,
-     "tdId": 117546,
-     "phase": "Pool",
-     "round": "Pools",
+     "date": "2026-03-29",
+     "event": "2026 Futures Tour Spring Championship",
+     "division": "Class of '26 & Younger",
+     "tid": 31567,
+     "tdId": 117695,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoff",
      "won": true,
      "sets": [
       [
        21,
-       14
+       15
       ],
       [
-       21,
-       15
+       17,
+       21
+      ],
+      [
+       15,
+       6
       ]
      ],
      "with": [
-      "JoJo Wilson"
+      "Simrin Adams"
      ],
      "against": [
-      "Kiley Bowman"
+      "Maddy  Wagner"
      ]
     },
     {
-     "date": "2026-01-19",
-     "event": "AAU MLK Open ",
-     "division": "Girls 18U",
-     "tid": 32390,
-     "tdId": 120204,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": true,
+     "date": "2026-06-30",
+     "event": "BVCA Pairs West Coast Championships 2026",
+     "division": "18U (2026 Grad Year)",
+     "tid": 35588,
+     "tdId": 130318,
+     "phase": "Playoffs",
+     "round": "18U Gold Playoffs",
+     "won": false,
      "sets": [
       [
-       21,
-       16
+       20,
+       22
       ],
       [
-       21,
-       15
+       17,
+       21
       ]
      ],
      "with": [
-      "Ella Dueck"
+      "Maddy  Wagner"
      ],
      "against": [
-      "Kiley Bowman"
+      "Thalia Lindahl"
      ]
     }
    ]
@@ -4574,324 +4922,6 @@
      ],
      "against": [
       "Leah Blair"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Jordyn Wilson",
-   "b": "Abby King",
-   "aId": 23868,
-   "bId": 26871,
-   "aWins": 1,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-03-29",
-     "event": "2026 Futures Tour Spring Championship",
-     "division": "Class of '26 & Younger",
-     "tid": 31567,
-     "tdId": 117695,
-     "phase": "Playoffs",
-     "round": "Day 2: Gold Playoff",
-     "won": true,
-     "sets": [
-      [
-       21,
-       15
-      ],
-      [
-       17,
-       21
-      ],
-      [
-       15,
-       6
-      ]
-     ],
-     "with": [
-      "Simrin Adams"
-     ],
-     "against": [
-      "Maddy  Wagner"
-     ]
-    },
-    {
-     "date": "2026-06-30",
-     "event": "BVCA Pairs West Coast Championships 2026",
-     "division": "18U (2026 Grad Year)",
-     "tid": 35588,
-     "tdId": 130318,
-     "phase": "Playoffs",
-     "round": "18U Gold Playoffs",
-     "won": false,
-     "sets": [
-      [
-       20,
-       22
-      ],
-      [
-       17,
-       21
-      ]
-     ],
-     "with": [
-      "Thalia Lindahl"
-     ],
-     "against": [
-      "Maddy  Wagner"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Simrin Adams",
-   "b": "Thalia Lindahl",
-   "aId": 25289,
-   "bId": 44267,
-   "aWins": 1,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-01-19",
-     "event": "AAU MLK Open ",
-     "division": "Girls 18U",
-     "tid": 32390,
-     "tdId": 120204,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": true,
-     "sets": [
-      [
-       28,
-       24
-      ]
-     ],
-     "with": [
-      "Ella Dueck"
-     ],
-     "against": [
-      17417
-     ]
-    },
-    {
-     "date": "2026-07-18",
-     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
-     "division": "Girls 17 - 2027",
-     "tid": 31483,
-     "tdId": 126666,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": false,
-     "sets": [
-      [
-       15,
-       21
-      ],
-      [
-       28,
-       26
-      ],
-      [
-       12,
-       15
-      ]
-     ],
-     "with": [
-      "Ella Dueck"
-     ],
-     "against": [
-      "JoJo Wilson"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Lerin Rosenthal",
-   "b": "Leah Blair",
-   "aId": 5973,
-   "bId": 56789,
-   "aWins": 1,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-02-01",
-     "event": "Girls Beach High School Pre-Season Tournament ",
-     "division": "Girls Varsity",
-     "tid": 32392,
-     "tdId": 121505,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": false,
-     "sets": [
-      [
-       22,
-       28
-      ]
-     ],
-     "with": [
-      "Allyn Hilt"
-     ],
-     "against": [
-      60510
-     ]
-    },
-    {
-     "date": "2026-02-22",
-     "event": "AAU California Open",
-     "division": "Girls 18U",
-     "tid": 32993,
-     "tdId": 121812,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": true,
-     "sets": [
-      [
-       18,
-       21
-      ],
-      [
-       21,
-       19
-      ],
-      [
-       15,
-       12
-      ]
-     ],
-     "with": [
-      "Simrin Adams"
-     ],
-     "against": [
-      "Sammy Nammack"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "JoJo Wilson",
-   "b": "Linnaea Nielsen",
-   "aId": 59914,
-   "bId": 92803,
-   "aWins": 2,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-01-25",
-     "event": "IBVL Winter Nationals & U18 ISF Trials",
-     "division": "Girls U18 (Year Born: 2008-2009-2010)",
-     "tid": 25008,
-     "tdId": 124255,
-     "phase": "Playoffs",
-     "round": "Playoffs",
-     "won": true,
-     "sets": [
-      [
-       21,
-       17
-      ],
-      [
-       21,
-       14
-      ]
-     ],
-     "with": [
-      "Thalia Lindahl"
-     ],
-     "against": [
-      "Sammy Nammack"
-     ]
-    },
-    {
-     "date": "2026-07-18",
-     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
-     "division": "Girls 17 - 2027",
-     "tid": 31483,
-     "tdId": 126666,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": true,
-     "sets": [
-      [
-       21,
-       17
-      ],
-      [
-       21,
-       9
-      ]
-     ],
-     "with": [
-      "Thalia Lindahl"
-     ],
-     "against": [
-      60184
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Leah Blair",
-   "b": "JoJo Wilson",
-   "aId": 56789,
-   "bId": 59914,
-   "aWins": 1,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-01-24",
-     "event": "IBVL Winter Nationals & U18 ISF Trials",
-     "division": "Girls U18 (Year Born: 2008-2009-2010)",
-     "tid": 25008,
-     "tdId": 124255,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": true,
-     "sets": [
-      [
-       21,
-       14
-      ],
-      [
-       19,
-       21
-      ],
-      [
-       15,
-       11
-      ]
-     ],
-     "with": [
-      "Thalia Lindahl"
-     ],
-     "against": [
-      59345
-     ]
-    },
-    {
-     "date": "2026-07-18",
-     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
-     "division": "Girls 17 - 2027",
-     "tid": 31483,
-     "tdId": 126666,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": false,
-     "sets": [
-      [
-       14,
-       21
-      ],
-      [
-       19,
-       21
-      ]
-     ],
-     "with": [
-      "Thalia Lindahl"
-     ],
-     "against": [
-      "Allyn Hilt"
      ]
     }
    ]
@@ -5385,33 +5415,95 @@
    ]
   },
   {
-   "a": "Addison Choi",
+   "a": "Lerin Rosenthal",
+   "b": "Leah Blair",
+   "aId": 5973,
+   "bId": 56789,
+   "aWins": 1,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-02-01",
+     "event": "Girls Beach High School Pre-Season Tournament ",
+     "division": "Girls Varsity",
+     "tid": 32392,
+     "tdId": 121505,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": false,
+     "sets": [
+      [
+       22,
+       28
+      ]
+     ],
+     "with": [
+      "Allyn Hilt"
+     ],
+     "against": [
+      60510
+     ]
+    },
+    {
+     "date": "2026-02-22",
+     "event": "AAU California Open",
+     "division": "Girls 18U",
+     "tid": 32993,
+     "tdId": 121812,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       18,
+       21
+      ],
+      [
+       21,
+       19
+      ],
+      [
+       15,
+       12
+      ]
+     ],
+     "with": [
+      "Simrin Adams"
+     ],
+     "against": [
+      "Sammy Nammack"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sammy Nammack",
    "b": "Linnaea Nielsen",
-   "aId": 5160,
+   "aId": 53164,
    "bId": 92803,
    "aWins": 1,
    "bWins": 1,
    "games": [
     {
-     "date": "2026-01-17",
-     "event": "PCA/FBC COLLEGE SHOWCASE Pairs Tournament",
-     "division": "Class of 2027",
-     "tid": 33070,
-     "tdId": 122104,
+     "date": "2026-02-01",
+     "event": "Girls Beach High School Pre-Season Tournament ",
+     "division": "Girls Varsity",
+     "tid": 32392,
+     "tdId": 121505,
      "phase": "Playoffs",
-     "round": "Playoffs",
+     "round": "Gold Bracket",
      "won": false,
      "sets": [
       [
-       19,
-       22
+       17,
+       28
       ]
      ],
      "with": [
-      161530
+      4386
      ],
      "against": [
-      "Leah Blair"
+      60518
      ]
     },
     {
@@ -5430,7 +5522,7 @@
       ]
      ],
      "with": [
-      "Sammy Nammack"
+      "Addison Choi"
      ],
      "against": [
       60184
@@ -5497,90 +5589,33 @@
    ]
   },
   {
-   "a": "Ashley Chuba",
+   "a": "Addison Choi",
    "b": "Linnaea Nielsen",
-   "aId": 69116,
+   "aId": 5160,
    "bId": 92803,
    "aWins": 1,
    "bWins": 1,
    "games": [
     {
-     "date": "2026-03-29",
-     "event": "2026 Futures Tour Spring Championship",
-     "division": "Class of '26 & Younger",
-     "tid": 31567,
-     "tdId": 117695,
+     "date": "2026-01-17",
+     "event": "PCA/FBC COLLEGE SHOWCASE Pairs Tournament",
+     "division": "Class of 2027",
+     "tid": 33070,
+     "tdId": 122104,
      "phase": "Playoffs",
-     "round": "Day 2: Gold Playoff",
-     "won": true,
-     "sets": [],
-     "with": [
-      "Addison Choi"
-     ],
-     "against": [
-      96236
-     ]
-    },
-    {
-     "date": "2026-07-25",
-     "event": "AVP Juniors National Championships 2026",
-     "division": "Girls 17U",
-     "tid": 34243,
-     "tdId": 126055,
-     "phase": "Pool",
-     "round": "Power Pools 1st",
+     "round": "Playoffs",
      "won": false,
      "sets": [
       [
-       11,
-       21
-      ],
-      [
-       21,
-       12
-      ],
-      [
-       9,
-       15
+       19,
+       22
       ]
      ],
      "with": [
-      "Marley Robinson"
+      161530
      ],
      "against": [
-      "Olivia Biggs"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Sammy Nammack",
-   "b": "Linnaea Nielsen",
-   "aId": 53164,
-   "bId": 92803,
-   "aWins": 1,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-02-01",
-     "event": "Girls Beach High School Pre-Season Tournament ",
-     "division": "Girls Varsity",
-     "tid": 32392,
-     "tdId": 121505,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": false,
-     "sets": [
-      [
-       17,
-       28
-      ]
-     ],
-     "with": [
-      4386
-     ],
-     "against": [
-      60518
+      "Leah Blair"
      ]
     },
     {
@@ -5599,7 +5634,7 @@
       ]
      ],
      "with": [
-      "Addison Choi"
+      "Sammy Nammack"
      ],
      "against": [
       60184
@@ -6063,68 +6098,6 @@
   },
   {
    "a": "Isabelle Izzy Ramos",
-   "b": "Adaleah Bassler",
-   "aId": 24727,
-   "bId": 94499,
-   "aWins": 1,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2025-08-17",
-     "event": "SSOVA Juniors AVP & USAV Regional Qualifier St.Pete Beach, Beach Volleyball Tournament- BRQ ",
-     "division": "Girls 18U",
-     "tid": 25530,
-     "tdId": 96816,
-     "phase": "Playoffs",
-     "round": "Playoffs",
-     "won": true,
-     "sets": [
-      [
-       21,
-       11
-      ]
-     ],
-     "with": [
-      84161
-     ],
-     "against": [
-      "Izzy Fischer"
-     ]
-    },
-    {
-     "date": "2025-12-28",
-     "event": "2025 Futures Tour Winter Championship",
-     "division": "Class of '26 & Younger",
-     "tid": 31566,
-     "tdId": 117686,
-     "phase": "Pool",
-     "round": "Day 1: RD1",
-     "won": false,
-     "sets": [
-      [
-       21,
-       13
-      ],
-      [
-       16,
-       21
-      ],
-      [
-       10,
-       15
-      ]
-     ],
-     "with": [
-      94563
-     ],
-     "against": [
-      108409
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Isabelle Izzy Ramos",
    "b": "Meadow Rosales",
    "aId": 24727,
    "bId": 52517,
@@ -6181,6 +6154,63 @@
      ],
      "against": [
       29887
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Ashley Chuba",
+   "b": "Linnaea Nielsen",
+   "aId": 69116,
+   "bId": 92803,
+   "aWins": 1,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-03-29",
+     "event": "2026 Futures Tour Spring Championship",
+     "division": "Class of '26 & Younger",
+     "tid": 31567,
+     "tdId": 117695,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoff",
+     "won": true,
+     "sets": [],
+     "with": [
+      "Addison Choi"
+     ],
+     "against": [
+      96236
+     ]
+    },
+    {
+     "date": "2026-07-25",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 17U",
+     "tid": 34243,
+     "tdId": 126055,
+     "phase": "Pool",
+     "round": "Power Pools 1st",
+     "won": false,
+     "sets": [
+      [
+       11,
+       21
+      ],
+      [
+       21,
+       12
+      ],
+      [
+       9,
+       15
+      ]
+     ],
+     "with": [
+      "Marley Robinson"
+     ],
+     "against": [
+      "Olivia Biggs"
      ]
     }
    ]
@@ -6536,6 +6566,60 @@
      ],
      "against": [
       59411
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Johanna Snyder",
+   "b": "GRACIE LUTES",
+   "aId": 17798,
+   "bId": 59661,
+   "aWins": 2,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-06-05",
+     "event": "3 STAR AVP America Juniors Nashville Beach Tournament    ",
+     "division": "Girls 18U",
+     "tid": 38130,
+     "tdId": 139716,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": true,
+     "sets": [
+      [
+       21,
+       11
+      ]
+     ],
+     "with": [
+      163358
+     ],
+     "against": [
+      163357
+     ]
+    },
+    {
+     "date": "2026-06-05",
+     "event": "3 STAR AVP America Juniors Nashville Beach Tournament    ",
+     "division": "Girls 18U",
+     "tid": 38130,
+     "tdId": 139716,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": true,
+     "sets": [
+      [
+       21,
+       15
+      ]
+     ],
+     "with": [
+      163358
+     ],
+     "against": [
+      163357
      ]
     }
    ]
@@ -9529,6 +9613,374 @@
    ]
   },
   {
+   "a": "Kiley Bowman",
+   "b": "JoJo Wilson",
+   "aId": 5288,
+   "bId": 59914,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2025-12-14",
+     "event": "AAU Herrmosa Beach Winter Series Championships",
+     "division": "Girls 18U",
+     "tid": 31527,
+     "tdId": 117546,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": false,
+     "sets": [
+      [
+       14,
+       21
+      ],
+      [
+       15,
+       21
+      ]
+     ],
+     "with": [
+      "Simrin Adams"
+     ],
+     "against": [
+      "Lola Heckman"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "JoJo Wilson",
+   "b": "Lola Heckman",
+   "aId": 59914,
+   "bId": 105907,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-12-14",
+     "event": "AAU Herrmosa Beach Winter Series Championships",
+     "division": "Girls 18U",
+     "tid": 31527,
+     "tdId": 117546,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       14
+      ],
+      [
+       21,
+       15
+      ]
+     ],
+     "with": [
+      "Simrin Adams"
+     ],
+     "against": [
+      "Kiley Bowman"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Simrin Adams",
+   "b": "Marley Robinson",
+   "aId": 25289,
+   "bId": 63770,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-12-14",
+     "event": "AAU Herrmosa Beach Winter Series Championships",
+     "division": "Girls 18U",
+     "tid": 31527,
+     "tdId": 117546,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       9
+      ],
+      [
+       21,
+       16
+      ]
+     ],
+     "with": [
+      "JoJo Wilson"
+     ],
+     "against": [
+      "Jordyn Wilson"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Jordyn Wilson",
+   "b": "JoJo Wilson",
+   "aId": 23868,
+   "bId": 59914,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2025-12-14",
+     "event": "AAU Herrmosa Beach Winter Series Championships",
+     "division": "Girls 18U",
+     "tid": 31527,
+     "tdId": 117546,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": false,
+     "sets": [
+      [
+       9,
+       21
+      ],
+      [
+       16,
+       21
+      ]
+     ],
+     "with": [
+      "Simrin Adams"
+     ],
+     "against": [
+      "Marley Robinson"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "JoJo Wilson",
+   "b": "Marley Robinson",
+   "aId": 59914,
+   "bId": 63770,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-12-14",
+     "event": "AAU Herrmosa Beach Winter Series Championships",
+     "division": "Girls 18U",
+     "tid": 31527,
+     "tdId": 117546,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       9
+      ],
+      [
+       21,
+       16
+      ]
+     ],
+     "with": [
+      "Simrin Adams"
+     ],
+     "against": [
+      "Jordyn Wilson"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Allyn Hilt",
+   "b": "Thalia Lindahl",
+   "aId": 40933,
+   "bId": 44267,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-18",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 17 - 2027",
+     "tid": 31483,
+     "tdId": 126666,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": false,
+     "sets": [
+      [
+       14,
+       21
+      ],
+      [
+       19,
+       21
+      ]
+     ],
+     "with": [
+      "JoJo Wilson"
+     ],
+     "against": [
+      "Leah Blair"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Allyn Hilt",
+   "b": "JoJo Wilson",
+   "aId": 40933,
+   "bId": 59914,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-18",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 17 - 2027",
+     "tid": 31483,
+     "tdId": 126666,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": false,
+     "sets": [
+      [
+       14,
+       21
+      ],
+      [
+       19,
+       21
+      ]
+     ],
+     "with": [
+      "Thalia Lindahl"
+     ],
+     "against": [
+      "Leah Blair"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Ella Dueck",
+   "b": "JoJo Wilson",
+   "aId": 4517,
+   "bId": 59914,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-18",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 17 - 2027",
+     "tid": 31483,
+     "tdId": 126666,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": false,
+     "sets": [
+      [
+       15,
+       21
+      ],
+      [
+       28,
+       26
+      ],
+      [
+       12,
+       15
+      ]
+     ],
+     "with": [
+      "Thalia Lindahl"
+     ],
+     "against": [
+      "Simrin Adams"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Simrin Adams",
+   "b": "JoJo Wilson",
+   "aId": 25289,
+   "bId": 59914,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-18",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 17 - 2027",
+     "tid": 31483,
+     "tdId": 126666,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": false,
+     "sets": [
+      [
+       15,
+       21
+      ],
+      [
+       28,
+       26
+      ],
+      [
+       12,
+       15
+      ]
+     ],
+     "with": [
+      "Thalia Lindahl"
+     ],
+     "against": [
+      "Ella Dueck"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sammy Nammack",
+   "b": "JoJo Wilson",
+   "aId": 53164,
+   "bId": 59914,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-01-25",
+     "event": "IBVL Winter Nationals & U18 ISF Trials",
+     "division": "Girls U18 (Year Born: 2008-2009-2010)",
+     "tid": 25008,
+     "tdId": 124255,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": false,
+     "sets": [
+      [
+       17,
+       21
+      ],
+      [
+       14,
+       21
+      ]
+     ],
+     "with": [
+      "Thalia Lindahl"
+     ],
+     "against": [
+      "Linnaea Nielsen"
+     ]
+    }
+   ]
+  },
+  {
    "a": "Sandie Souza",
    "b": "Kiah McCoy",
    "aId": 2771,
@@ -9909,186 +10361,6 @@
    ]
   },
   {
-   "a": "Kiley Bowman",
-   "b": "JoJo Wilson",
-   "aId": 5288,
-   "bId": 59914,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2025-12-14",
-     "event": "AAU Herrmosa Beach Winter Series Championships",
-     "division": "Girls 18U",
-     "tid": 31527,
-     "tdId": 117546,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": false,
-     "sets": [
-      [
-       14,
-       21
-      ],
-      [
-       15,
-       21
-      ]
-     ],
-     "with": [
-      "Simrin Adams"
-     ],
-     "against": [
-      "Lola Heckman"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "JoJo Wilson",
-   "b": "Lola Heckman",
-   "aId": 59914,
-   "bId": 105907,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2025-12-14",
-     "event": "AAU Herrmosa Beach Winter Series Championships",
-     "division": "Girls 18U",
-     "tid": 31527,
-     "tdId": 117546,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": true,
-     "sets": [
-      [
-       21,
-       14
-      ],
-      [
-       21,
-       15
-      ]
-     ],
-     "with": [
-      "Simrin Adams"
-     ],
-     "against": [
-      "Kiley Bowman"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Simrin Adams",
-   "b": "Marley Robinson",
-   "aId": 25289,
-   "bId": 63770,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2025-12-14",
-     "event": "AAU Herrmosa Beach Winter Series Championships",
-     "division": "Girls 18U",
-     "tid": 31527,
-     "tdId": 117546,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": true,
-     "sets": [
-      [
-       21,
-       9
-      ],
-      [
-       21,
-       16
-      ]
-     ],
-     "with": [
-      "JoJo Wilson"
-     ],
-     "against": [
-      "Jordyn Wilson"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Jordyn Wilson",
-   "b": "JoJo Wilson",
-   "aId": 23868,
-   "bId": 59914,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2025-12-14",
-     "event": "AAU Herrmosa Beach Winter Series Championships",
-     "division": "Girls 18U",
-     "tid": 31527,
-     "tdId": 117546,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": false,
-     "sets": [
-      [
-       9,
-       21
-      ],
-      [
-       16,
-       21
-      ]
-     ],
-     "with": [
-      "Simrin Adams"
-     ],
-     "against": [
-      "Marley Robinson"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "JoJo Wilson",
-   "b": "Marley Robinson",
-   "aId": 59914,
-   "bId": 63770,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2025-12-14",
-     "event": "AAU Herrmosa Beach Winter Series Championships",
-     "division": "Girls 18U",
-     "tid": 31527,
-     "tdId": 117546,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": true,
-     "sets": [
-      [
-       21,
-       9
-      ],
-      [
-       21,
-       16
-      ]
-     ],
-     "with": [
-      "Simrin Adams"
-     ],
-     "against": [
-      "Jordyn Wilson"
-     ]
-    }
-   ]
-  },
-  {
    "a": "Addison Choi",
    "b": "Abby King",
    "aId": 5160,
@@ -10201,641 +10473,389 @@
    ]
   },
   {
-   "a": "Ella Dueck",
-   "b": "Kiley Bowman",
-   "aId": 4517,
-   "bId": 5288,
+   "a": "Abby King",
+   "b": "Tesa Solis",
+   "aId": 26871,
+   "bId": 79627,
    "aWins": 1,
    "bWins": 0,
    "games": [
     {
-     "date": "2026-01-19",
-     "event": "AAU MLK Open ",
-     "division": "Girls 18U",
-     "tid": 32390,
-     "tdId": 120204,
+     "date": "2026-06-29",
+     "event": "BVCA Pairs West Coast Championships 2026",
+     "division": "18U (2026 Grad Year)",
+     "tid": 35588,
+     "tdId": 130318,
      "phase": "Pool",
      "round": "Pools",
      "won": true,
      "sets": [
       [
-       21,
-       16
+       22,
+       20
       ],
       [
        21,
-       15
+       13
       ]
      ],
      "with": [
-      "Simrin Adams"
+      "Maddy  Wagner"
      ],
      "against": [
-      "Lola Heckman"
+      105245
      ]
     }
    ]
   },
   {
-   "a": "Ella Dueck",
-   "b": "Lola Heckman",
-   "aId": 4517,
-   "bId": 105907,
+   "a": "Maddy  Wagner",
+   "b": "Tesa Solis",
+   "aId": 26984,
+   "bId": 79627,
    "aWins": 1,
    "bWins": 0,
    "games": [
     {
-     "date": "2026-01-19",
-     "event": "AAU MLK Open ",
-     "division": "Girls 18U",
-     "tid": 32390,
-     "tdId": 120204,
+     "date": "2026-06-29",
+     "event": "BVCA Pairs West Coast Championships 2026",
+     "division": "18U (2026 Grad Year)",
+     "tid": 35588,
+     "tdId": 130318,
      "phase": "Pool",
      "round": "Pools",
      "won": true,
      "sets": [
       [
-       21,
-       16
+       22,
+       20
       ],
       [
        21,
-       15
+       13
       ]
      ],
      "with": [
-      "Simrin Adams"
+      "Abby King"
      ],
      "against": [
-      "Kiley Bowman"
+      105245
      ]
     }
    ]
   },
   {
-   "a": "Lerin Rosenthal",
-   "b": "Sammy Nammack",
-   "aId": 5973,
-   "bId": 53164,
+   "a": "Abby King",
+   "b": "Thalia Lindahl",
+   "aId": 26871,
+   "bId": 44267,
    "aWins": 1,
    "bWins": 0,
    "games": [
     {
-     "date": "2026-02-22",
-     "event": "AAU California Open",
-     "division": "Girls 18U",
-     "tid": 32993,
-     "tdId": 121812,
-     "phase": "Pool",
-     "round": "Pools",
+     "date": "2026-06-30",
+     "event": "BVCA Pairs West Coast Championships 2026",
+     "division": "18U (2026 Grad Year)",
+     "tid": 35588,
+     "tdId": 130318,
+     "phase": "Playoffs",
+     "round": "18U Gold Playoffs",
      "won": true,
      "sets": [
       [
-       18,
+       22,
+       20
+      ],
+      [
+       21,
+       17
+      ]
+     ],
+     "with": [
+      "Maddy  Wagner"
+     ],
+     "against": [
+      "Jordyn Wilson"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Jordyn Wilson",
+   "b": "Maddy  Wagner",
+   "aId": 23868,
+   "bId": 26984,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-06-30",
+     "event": "BVCA Pairs West Coast Championships 2026",
+     "division": "18U (2026 Grad Year)",
+     "tid": 35588,
+     "tdId": 130318,
+     "phase": "Playoffs",
+     "round": "18U Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       20,
+       22
+      ],
+      [
+       17,
        21
+      ]
+     ],
+     "with": [
+      "Abby King"
+     ],
+     "against": [
+      "Thalia Lindahl"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Maddy  Wagner",
+   "b": "Thalia Lindahl",
+   "aId": 26984,
+   "bId": 44267,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-06-30",
+     "event": "BVCA Pairs West Coast Championships 2026",
+     "division": "18U (2026 Grad Year)",
+     "tid": 35588,
+     "tdId": 130318,
+     "phase": "Playoffs",
+     "round": "18U Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       22,
+       20
       ],
       [
        21,
-       19
-      ],
+       17
+      ]
+     ],
+     "with": [
+      "Abby King"
+     ],
+     "against": [
+      "Jordyn Wilson"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Kiah McCoy",
+   "b": "Abby King",
+   "aId": 7094,
+   "bId": 26871,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-08",
+     "event": "2026 BVCA Individual Pairs National Championship ",
+     "division": "Girls 18U",
+     "tid": 38087,
+     "tdId": 139559,
+     "phase": "Pool",
+     "round": "Gold Pools",
+     "won": false,
+     "sets": [
       [
        15,
-       12
+       21
       ]
      ],
      "with": [
-      "Simrin Adams"
+      "Maddy  Wagner"
      ],
      "against": [
-      "Leah Blair"
+      5011
      ]
     }
    ]
   },
   {
-   "a": "Ella Dueck",
+   "a": "Kiah McCoy",
+   "b": "Maddy  Wagner",
+   "aId": 7094,
+   "bId": 26984,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-08",
+     "event": "2026 BVCA Individual Pairs National Championship ",
+     "division": "Girls 18U",
+     "tid": 38087,
+     "tdId": 139559,
+     "phase": "Pool",
+     "round": "Gold Pools",
+     "won": false,
+     "sets": [
+      [
+       15,
+       21
+      ]
+     ],
+     "with": [
+      "Abby King"
+     ],
+     "against": [
+      5011
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Kiley Bowman",
    "b": "Lerin Rosenthal",
-   "aId": 4517,
+   "aId": 5288,
    "bId": 5973,
    "aWins": 1,
    "bWins": 0,
    "games": [
     {
-     "date": "2026-03-01",
-     "event": "California IBVL Winter Series Championships - p1440 Crown Series ",
-     "division": "Girls 18U",
-     "tid": 32939,
-     "tdId": 121642,
+     "date": "2026-07-16",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 18 - 2026",
+     "tid": 31483,
+     "tdId": 117393,
      "phase": "Pool",
      "round": "Pools",
      "won": true,
      "sets": [
       [
-       21,
-       16
+       22,
+       20
       ],
       [
        21,
-       17
+       12
       ]
      ],
      "with": [
-      "Simrin Adams"
+      "Abby King"
      ],
      "against": [
-      "Sammy Nammack"
+      30905
      ]
     }
    ]
   },
   {
-   "a": "Ella Dueck",
-   "b": "Sammy Nammack",
-   "aId": 4517,
-   "bId": 53164,
+   "a": "Kiley Bowman",
+   "b": "Abby King",
+   "aId": 5288,
+   "bId": 26871,
    "aWins": 1,
    "bWins": 0,
    "games": [
     {
-     "date": "2026-03-01",
-     "event": "California IBVL Winter Series Championships - p1440 Crown Series ",
-     "division": "Girls 18U",
-     "tid": 32939,
-     "tdId": 121642,
+     "date": "2026-07-16",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 18 - 2026",
+     "tid": 31483,
+     "tdId": 117393,
      "phase": "Pool",
      "round": "Pools",
      "won": true,
      "sets": [
       [
-       21,
-       16
+       22,
+       20
       ],
       [
        21,
-       17
+       12
       ]
      ],
      "with": [
-      "Simrin Adams"
+      "Lerin Rosenthal"
      ],
      "against": [
-      "Lerin Rosenthal"
+      30905
      ]
     }
    ]
   },
   {
    "a": "Lerin Rosenthal",
-   "b": "Simrin Adams",
+   "b": "Lola Heckman",
    "aId": 5973,
-   "bId": 25289,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-03-01",
-     "event": "California IBVL Winter Series Championships - p1440 Crown Series ",
-     "division": "Girls 18U",
-     "tid": 32939,
-     "tdId": 121642,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": false,
-     "sets": [
-      [
-       16,
-       21
-      ],
-      [
-       17,
-       21
-      ]
-     ],
-     "with": [
-      "Ella Dueck"
-     ],
-     "against": [
-      "Sammy Nammack"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Ella Dueck",
-   "b": "Logan Leverte",
-   "aId": 4517,
-   "bId": 57246,
+   "bId": 105907,
    "aWins": 1,
    "bWins": 0,
    "games": [
     {
-     "date": "2026-07-18",
+     "date": "2026-07-17",
      "event": "33rd AAU Hermosa Beach National Pairs Championships ",
-     "division": "Girls 17 - 2027",
+     "division": "Girls 18 - 2026",
      "tid": 31483,
-     "tdId": 126666,
+     "tdId": 117393,
      "phase": "Playoffs",
      "round": "Gold Bracket",
      "won": true,
      "sets": [
       [
-       18,
-       21
+       21,
+       9
       ],
       [
        21,
        12
-      ],
-      [
-       15,
-       10
       ]
      ],
      "with": [
-      "Simrin Adams"
+      "Abby King"
      ],
      "against": [
-      "Tesa Solis"
+      99501
      ]
     }
    ]
   },
   {
-   "a": "Ella Dueck",
-   "b": "Tesa Solis",
-   "aId": 4517,
-   "bId": 79627,
+   "a": "Abby King",
+   "b": "Lola Heckman",
+   "aId": 26871,
+   "bId": 105907,
    "aWins": 1,
    "bWins": 0,
    "games": [
     {
-     "date": "2026-07-18",
+     "date": "2026-07-17",
      "event": "33rd AAU Hermosa Beach National Pairs Championships ",
-     "division": "Girls 17 - 2027",
+     "division": "Girls 18 - 2026",
      "tid": 31483,
-     "tdId": 126666,
+     "tdId": 117393,
      "phase": "Playoffs",
      "round": "Gold Bracket",
      "won": true,
      "sets": [
       [
-       18,
-       21
+       21,
+       9
       ],
       [
        21,
        12
-      ],
-      [
-       15,
-       10
       ]
      ],
      "with": [
-      "Simrin Adams"
+      "Lerin Rosenthal"
      ],
      "against": [
-      "Logan Leverte"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Simrin Adams",
-   "b": "Logan Leverte",
-   "aId": 25289,
-   "bId": 57246,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-07-18",
-     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
-     "division": "Girls 17 - 2027",
-     "tid": 31483,
-     "tdId": 126666,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": true,
-     "sets": [
-      [
-       18,
-       21
-      ],
-      [
-       21,
-       12
-      ],
-      [
-       15,
-       10
-      ]
-     ],
-     "with": [
-      "Ella Dueck"
-     ],
-     "against": [
-      "Tesa Solis"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Simrin Adams",
-   "b": "Tesa Solis",
-   "aId": 25289,
-   "bId": 79627,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-07-18",
-     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
-     "division": "Girls 17 - 2027",
-     "tid": 31483,
-     "tdId": 126666,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": true,
-     "sets": [
-      [
-       18,
-       21
-      ],
-      [
-       21,
-       12
-      ],
-      [
-       15,
-       10
-      ]
-     ],
-     "with": [
-      "Ella Dueck"
-     ],
-     "against": [
-      "Logan Leverte"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Ella Dueck",
-   "b": "Isabelle Izzy Ramos",
-   "aId": 4517,
-   "bId": 24727,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-07-18",
-     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
-     "division": "Girls 17 - 2027",
-     "tid": 31483,
-     "tdId": 126666,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": true,
-     "sets": [
-      [
-       21,
-       15
-      ],
-      [
-       21,
-       15
-      ]
-     ],
-     "with": [
-      "Simrin Adams"
-     ],
-     "against": [
-      84161
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Isabelle Izzy Ramos",
-   "b": "Simrin Adams",
-   "aId": 24727,
-   "bId": 25289,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-07-18",
-     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
-     "division": "Girls 17 - 2027",
-     "tid": 31483,
-     "tdId": 126666,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": false,
-     "sets": [
-      [
-       15,
-       21
-      ],
-      [
-       15,
-       21
-      ]
-     ],
-     "with": [
-      "Ella Dueck"
-     ],
-     "against": [
-      84161
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Ella Dueck",
-   "b": "JoJo Wilson",
-   "aId": 4517,
-   "bId": 59914,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-07-18",
-     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
-     "division": "Girls 17 - 2027",
-     "tid": 31483,
-     "tdId": 126666,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": false,
-     "sets": [
-      [
-       15,
-       21
-      ],
-      [
-       28,
-       26
-      ],
-      [
-       12,
-       15
-      ]
-     ],
-     "with": [
-      "Simrin Adams"
-     ],
-     "against": [
-      "Thalia Lindahl"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Simrin Adams",
-   "b": "JoJo Wilson",
-   "aId": 25289,
-   "bId": 59914,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-07-18",
-     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
-     "division": "Girls 17 - 2027",
-     "tid": 31483,
-     "tdId": 126666,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": false,
-     "sets": [
-      [
-       15,
-       21
-      ],
-      [
-       28,
-       26
-      ],
-      [
-       12,
-       15
-      ]
-     ],
-     "with": [
-      "Ella Dueck"
-     ],
-     "against": [
-      "Thalia Lindahl"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Allyn Hilt",
-   "b": "Thalia Lindahl",
-   "aId": 40933,
-   "bId": 44267,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-07-18",
-     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
-     "division": "Girls 17 - 2027",
-     "tid": 31483,
-     "tdId": 126666,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": false,
-     "sets": [
-      [
-       14,
-       21
-      ],
-      [
-       19,
-       21
-      ]
-     ],
-     "with": [
-      "JoJo Wilson"
-     ],
-     "against": [
-      "Leah Blair"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Allyn Hilt",
-   "b": "JoJo Wilson",
-   "aId": 40933,
-   "bId": 59914,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-07-18",
-     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
-     "division": "Girls 17 - 2027",
-     "tid": 31483,
-     "tdId": 126666,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": false,
-     "sets": [
-      [
-       14,
-       21
-      ],
-      [
-       19,
-       21
-      ]
-     ],
-     "with": [
-      "Thalia Lindahl"
-     ],
-     "against": [
-      "Leah Blair"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Sammy Nammack",
-   "b": "JoJo Wilson",
-   "aId": 53164,
-   "bId": 59914,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-01-25",
-     "event": "IBVL Winter Nationals & U18 ISF Trials",
-     "division": "Girls U18 (Year Born: 2008-2009-2010)",
-     "tid": 25008,
-     "tdId": 124255,
-     "phase": "Playoffs",
-     "round": "Playoffs",
-     "won": false,
-     "sets": [
-      [
-       17,
-       21
-      ],
-      [
-       14,
-       21
-      ]
-     ],
-     "with": [
-      "Thalia Lindahl"
-     ],
-     "against": [
-      "Linnaea Nielsen"
+      99501
      ]
     }
    ]
@@ -11018,114 +11038,6 @@
   },
   {
    "a": "Jordyn Wilson",
-   "b": "Maddy  Wagner",
-   "aId": 23868,
-   "bId": 26984,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-06-30",
-     "event": "BVCA Pairs West Coast Championships 2026",
-     "division": "18U (2026 Grad Year)",
-     "tid": 35588,
-     "tdId": 130318,
-     "phase": "Playoffs",
-     "round": "18U Gold Playoffs",
-     "won": false,
-     "sets": [
-      [
-       20,
-       22
-      ],
-      [
-       17,
-       21
-      ]
-     ],
-     "with": [
-      "Thalia Lindahl"
-     ],
-     "against": [
-      "Abby King"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Abby King",
-   "b": "Thalia Lindahl",
-   "aId": 26871,
-   "bId": 44267,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-06-30",
-     "event": "BVCA Pairs West Coast Championships 2026",
-     "division": "18U (2026 Grad Year)",
-     "tid": 35588,
-     "tdId": 130318,
-     "phase": "Playoffs",
-     "round": "18U Gold Playoffs",
-     "won": true,
-     "sets": [
-      [
-       22,
-       20
-      ],
-      [
-       21,
-       17
-      ]
-     ],
-     "with": [
-      "Jordyn Wilson"
-     ],
-     "against": [
-      "Maddy  Wagner"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Maddy  Wagner",
-   "b": "Thalia Lindahl",
-   "aId": 26984,
-   "bId": 44267,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-06-30",
-     "event": "BVCA Pairs West Coast Championships 2026",
-     "division": "18U (2026 Grad Year)",
-     "tid": 35588,
-     "tdId": 130318,
-     "phase": "Playoffs",
-     "round": "18U Gold Playoffs",
-     "won": true,
-     "sets": [
-      [
-       22,
-       20
-      ],
-      [
-       21,
-       17
-      ]
-     ],
-     "with": [
-      "Jordyn Wilson"
-     ],
-     "against": [
-      "Abby King"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Jordyn Wilson",
    "b": "Tesa Solis",
    "aId": 23868,
    "bId": 79627,
@@ -11133,7 +11045,7 @@
    "bWins": 1,
    "games": [
     {
-     "date": "2046-08-11",
+     "date": "2046-08-20",
      "event": "BVCA Pairs West Coast Championships 2026",
      "division": "18U (2026 Grad Year)",
      "tid": 35588,
@@ -11169,7 +11081,7 @@
    "bWins": 1,
    "games": [
     {
-     "date": "2046-08-11",
+     "date": "2046-08-20",
      "event": "BVCA Pairs West Coast Championships 2026",
      "division": "18U (2026 Grad Year)",
      "tid": 35588,
@@ -11192,286 +11104,6 @@
      ],
      "against": [
       105245
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Abby King",
-   "b": "Tesa Solis",
-   "aId": 26871,
-   "bId": 79627,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-06-29",
-     "event": "BVCA Pairs West Coast Championships 2026",
-     "division": "18U (2026 Grad Year)",
-     "tid": 35588,
-     "tdId": 130318,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": true,
-     "sets": [
-      [
-       22,
-       20
-      ],
-      [
-       21,
-       13
-      ]
-     ],
-     "with": [
-      "Maddy  Wagner"
-     ],
-     "against": [
-      105245
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Maddy  Wagner",
-   "b": "Tesa Solis",
-   "aId": 26984,
-   "bId": 79627,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-06-29",
-     "event": "BVCA Pairs West Coast Championships 2026",
-     "division": "18U (2026 Grad Year)",
-     "tid": 35588,
-     "tdId": 130318,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": true,
-     "sets": [
-      [
-       22,
-       20
-      ],
-      [
-       21,
-       13
-      ]
-     ],
-     "with": [
-      "Abby King"
-     ],
-     "against": [
-      105245
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Kiah McCoy",
-   "b": "Abby King",
-   "aId": 7094,
-   "bId": 26871,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-07-08",
-     "event": "2026 BVCA Individual Pairs National Championship ",
-     "division": "Girls 18U",
-     "tid": 38087,
-     "tdId": 139559,
-     "phase": "Pool",
-     "round": "Gold Pools",
-     "won": false,
-     "sets": [
-      [
-       15,
-       21
-      ]
-     ],
-     "with": [
-      "Maddy  Wagner"
-     ],
-     "against": [
-      5011
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Kiah McCoy",
-   "b": "Maddy  Wagner",
-   "aId": 7094,
-   "bId": 26984,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-07-08",
-     "event": "2026 BVCA Individual Pairs National Championship ",
-     "division": "Girls 18U",
-     "tid": 38087,
-     "tdId": 139559,
-     "phase": "Pool",
-     "round": "Gold Pools",
-     "won": false,
-     "sets": [
-      [
-       15,
-       21
-      ]
-     ],
-     "with": [
-      "Abby King"
-     ],
-     "against": [
-      5011
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Kiley Bowman",
-   "b": "Lerin Rosenthal",
-   "aId": 5288,
-   "bId": 5973,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-07-16",
-     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
-     "division": "Girls 18 - 2026",
-     "tid": 31483,
-     "tdId": 117393,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": true,
-     "sets": [
-      [
-       22,
-       20
-      ],
-      [
-       21,
-       12
-      ]
-     ],
-     "with": [
-      "Abby King"
-     ],
-     "against": [
-      30905
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Kiley Bowman",
-   "b": "Abby King",
-   "aId": 5288,
-   "bId": 26871,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-07-16",
-     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
-     "division": "Girls 18 - 2026",
-     "tid": 31483,
-     "tdId": 117393,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": true,
-     "sets": [
-      [
-       22,
-       20
-      ],
-      [
-       21,
-       12
-      ]
-     ],
-     "with": [
-      "Lerin Rosenthal"
-     ],
-     "against": [
-      30905
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Lerin Rosenthal",
-   "b": "Lola Heckman",
-   "aId": 5973,
-   "bId": 105907,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-07-17",
-     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
-     "division": "Girls 18 - 2026",
-     "tid": 31483,
-     "tdId": 117393,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": true,
-     "sets": [
-      [
-       21,
-       9
-      ],
-      [
-       21,
-       12
-      ]
-     ],
-     "with": [
-      "Abby King"
-     ],
-     "against": [
-      99501
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Abby King",
-   "b": "Lola Heckman",
-   "aId": 26871,
-   "bId": 105907,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-07-17",
-     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
-     "division": "Girls 18 - 2026",
-     "tid": 31483,
-     "tdId": 117393,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": true,
-     "sets": [
-      [
-       21,
-       9
-      ],
-      [
-       21,
-       12
-      ]
-     ],
-     "with": [
-      "Lerin Rosenthal"
-     ],
-     "against": [
-      99501
      ]
     }
    ]
@@ -12069,6 +11701,710 @@
    ]
   },
   {
+   "a": "Allyn Hilt",
+   "b": "Leah Blair",
+   "aId": 40933,
+   "bId": 56789,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-02-01",
+     "event": "Girls Beach High School Pre-Season Tournament ",
+     "division": "Girls Varsity",
+     "tid": 32392,
+     "tdId": 121505,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": false,
+     "sets": [
+      [
+       22,
+       28
+      ]
+     ],
+     "with": [
+      "Lerin Rosenthal"
+     ],
+     "against": [
+      60510
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lerin Rosenthal",
+   "b": "Sammy Nammack",
+   "aId": 5973,
+   "bId": 53164,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-02-22",
+     "event": "AAU California Open",
+     "division": "Girls 18U",
+     "tid": 32993,
+     "tdId": 121812,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       18,
+       21
+      ],
+      [
+       21,
+       19
+      ],
+      [
+       15,
+       12
+      ]
+     ],
+     "with": [
+      "Simrin Adams"
+     ],
+     "against": [
+      "Leah Blair"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Addison Choi",
+   "b": "Lerin Rosenthal",
+   "aId": 5160,
+   "bId": 5973,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-03-01",
+     "event": "California IBVL Winter Series Championships - p1440 Crown Series ",
+     "division": "Girls 18U",
+     "tid": 32939,
+     "tdId": 121642,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       19
+      ],
+      [
+       21,
+       19
+      ]
+     ],
+     "with": [
+      "Sammy Nammack"
+     ],
+     "against": [
+      56544
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Ella Dueck",
+   "b": "Lerin Rosenthal",
+   "aId": 4517,
+   "bId": 5973,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-03-01",
+     "event": "California IBVL Winter Series Championships - p1440 Crown Series ",
+     "division": "Girls 18U",
+     "tid": 32939,
+     "tdId": 121642,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       16
+      ],
+      [
+       21,
+       17
+      ]
+     ],
+     "with": [
+      "Sammy Nammack"
+     ],
+     "against": [
+      "Simrin Adams"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lerin Rosenthal",
+   "b": "Simrin Adams",
+   "aId": 5973,
+   "bId": 25289,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-03-01",
+     "event": "California IBVL Winter Series Championships - p1440 Crown Series ",
+     "division": "Girls 18U",
+     "tid": 32939,
+     "tdId": 121642,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": false,
+     "sets": [
+      [
+       16,
+       21
+      ],
+      [
+       17,
+       21
+      ]
+     ],
+     "with": [
+      "Sammy Nammack"
+     ],
+     "against": [
+      "Ella Dueck"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Ella Dueck",
+   "b": "Sammy Nammack",
+   "aId": 4517,
+   "bId": 53164,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-03-01",
+     "event": "California IBVL Winter Series Championships - p1440 Crown Series ",
+     "division": "Girls 18U",
+     "tid": 32939,
+     "tdId": 121642,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       16
+      ],
+      [
+       21,
+       17
+      ]
+     ],
+     "with": [
+      "Lerin Rosenthal"
+     ],
+     "against": [
+      "Simrin Adams"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lerin Rosenthal",
+   "b": "London Merchant",
+   "aId": 5973,
+   "bId": 17437,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-26",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 17U",
+     "tid": 34243,
+     "tdId": 126055,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": false,
+     "sets": [
+      [
+       17,
+       21
+      ],
+      [
+       21,
+       17
+      ],
+      [
+       11,
+       15
+      ]
+     ],
+     "with": [
+      "Allyn Hilt"
+     ],
+     "against": [
+      "Lyla Paulsen"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lerin Rosenthal",
+   "b": "Lyla Paulsen",
+   "aId": 5973,
+   "bId": 19592,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-26",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 17U",
+     "tid": 34243,
+     "tdId": 126055,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": false,
+     "sets": [
+      [
+       17,
+       21
+      ],
+      [
+       21,
+       17
+      ],
+      [
+       11,
+       15
+      ]
+     ],
+     "with": [
+      "Allyn Hilt"
+     ],
+     "against": [
+      "London Merchant"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "London Merchant",
+   "b": "Allyn Hilt",
+   "aId": 17437,
+   "bId": 40933,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-26",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 17U",
+     "tid": 34243,
+     "tdId": 126055,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       17,
+       21
+      ],
+      [
+       15,
+       11
+      ]
+     ],
+     "with": [
+      "Lerin Rosenthal"
+     ],
+     "against": [
+      "Lyla Paulsen"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lyla Paulsen",
+   "b": "Allyn Hilt",
+   "aId": 19592,
+   "bId": 40933,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-26",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 17U",
+     "tid": 34243,
+     "tdId": 126055,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       17,
+       21
+      ],
+      [
+       15,
+       11
+      ]
+     ],
+     "with": [
+      "Lerin Rosenthal"
+     ],
+     "against": [
+      "London Merchant"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lerin Rosenthal",
+   "b": "Ashley Chuba",
+   "aId": 5973,
+   "bId": 69116,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-07",
+     "event": "2026 BVCA Individual Pairs National Championship ",
+     "division": "Girls 18U",
+     "tid": 38087,
+     "tdId": 139559,
+     "phase": "Pool",
+     "round": "Opening Round",
+     "won": true,
+     "sets": [
+      [
+       18,
+       21
+      ],
+      [
+       21,
+       15
+      ],
+      [
+       15,
+       9
+      ]
+     ],
+     "with": [
+      "Sammy Nammack"
+     ],
+     "against": [
+      44403
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lerin Rosenthal",
+   "b": "Claire Demirjian",
+   "aId": 5973,
+   "bId": 27879,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-22",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 18U",
+     "tid": 34243,
+     "tdId": 126054,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       8
+      ],
+      [
+       21,
+       12
+      ]
+     ],
+     "with": [
+      "Ashley Markle"
+     ],
+     "against": [
+      6486
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Claire Demirjian",
+   "b": "Ashley Markle",
+   "aId": 27879,
+   "bId": 44574,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-22",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 18U",
+     "tid": 34243,
+     "tdId": 126054,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": false,
+     "sets": [
+      [
+       8,
+       21
+      ],
+      [
+       12,
+       21
+      ]
+     ],
+     "with": [
+      "Lerin Rosenthal"
+     ],
+     "against": [
+      6486
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lerin Rosenthal",
+   "b": "Bristyn Burness",
+   "aId": 5973,
+   "bId": 64683,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-22",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 18U",
+     "tid": 34243,
+     "tdId": 126054,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": false,
+     "sets": [
+      [
+       14,
+       21
+      ],
+      [
+       16,
+       21
+      ]
+     ],
+     "with": [
+      "Ashley Markle"
+     ],
+     "against": [
+      5131
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Ashley Markle",
+   "b": "Bristyn Burness",
+   "aId": 44574,
+   "bId": 64683,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-22",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 18U",
+     "tid": 34243,
+     "tdId": 126054,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": false,
+     "sets": [
+      [
+       14,
+       21
+      ],
+      [
+       16,
+       21
+      ]
+     ],
+     "with": [
+      "Lerin Rosenthal"
+     ],
+     "against": [
+      5131
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Ella Dueck",
+   "b": "Megan McLarty",
+   "aId": 4517,
+   "bId": 68351,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-11-09",
+     "event": "AVP Juniors West Coast Championships 2025",
+     "division": "Girls 17U",
+     "tid": 25578,
+     "tdId": 97148,
+     "phase": "Playoffs",
+     "round": "Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       19
+      ],
+      [
+       21,
+       17
+      ]
+     ],
+     "with": [
+      "Sammy Nammack"
+     ],
+     "against": [
+      "Izzy Fischer"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Ella Dueck",
+   "b": "Izzy Fischer",
+   "aId": 4517,
+   "bId": 105342,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-11-09",
+     "event": "AVP Juniors West Coast Championships 2025",
+     "division": "Girls 17U",
+     "tid": 25578,
+     "tdId": 97148,
+     "phase": "Playoffs",
+     "round": "Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       19
+      ],
+      [
+       21,
+       17
+      ]
+     ],
+     "with": [
+      "Sammy Nammack"
+     ],
+     "against": [
+      "Megan McLarty"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sammy Nammack",
+   "b": "Megan McLarty",
+   "aId": 53164,
+   "bId": 68351,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-11-09",
+     "event": "AVP Juniors West Coast Championships 2025",
+     "division": "Girls 17U",
+     "tid": 25578,
+     "tdId": 97148,
+     "phase": "Playoffs",
+     "round": "Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       19
+      ],
+      [
+       21,
+       17
+      ]
+     ],
+     "with": [
+      "Ella Dueck"
+     ],
+     "against": [
+      "Izzy Fischer"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sammy Nammack",
+   "b": "Izzy Fischer",
+   "aId": 53164,
+   "bId": 105342,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-11-09",
+     "event": "AVP Juniors West Coast Championships 2025",
+     "division": "Girls 17U",
+     "tid": 25578,
+     "tdId": 97148,
+     "phase": "Playoffs",
+     "round": "Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       19
+      ],
+      [
+       21,
+       17
+      ]
+     ],
+     "with": [
+      "Ella Dueck"
+     ],
+     "against": [
+      "Megan McLarty"
+     ]
+    }
+   ]
+  },
+  {
    "a": "Addison Choi",
    "b": "Jordyn Wilson",
    "aId": 5160,
@@ -12141,62 +12477,90 @@
    ]
   },
   {
-   "a": "Addison Choi",
-   "b": "Kiley Bowman",
-   "aId": 5160,
-   "bId": 5288,
-   "aWins": 1,
-   "bWins": 0,
+   "a": "Kiley Bowman",
+   "b": "Sammy Nammack",
+   "aId": 5288,
+   "bId": 53164,
+   "aWins": 0,
+   "bWins": 1,
    "games": [
     {
-     "date": "2026-07-23",
-     "event": "AVP Juniors National Championships 2026",
+     "date": "2026-01-19",
+     "event": "AAU MLK Open ",
      "division": "Girls 18U",
-     "tid": 34243,
-     "tdId": 126054,
-     "phase": "Pool",
-     "round": "Reseeded Pools",
-     "won": true,
+     "tid": 32390,
+     "tdId": 120204,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": false,
      "sets": [
       [
-       21,
-       15
-      ],
-      [
-       21,
-       18
+       26,
+       28
       ]
      ],
      "with": [
-      56544
+      "Jordyn Wilson"
      ],
      "against": [
-      81161
+      "Lola Heckman"
      ]
     }
    ]
   },
   {
-   "a": "Addison Choi",
-   "b": "Bristyn Burness",
-   "aId": 5160,
-   "bId": 64683,
+   "a": "Sammy Nammack",
+   "b": "Lola Heckman",
+   "aId": 53164,
+   "bId": 105907,
    "aWins": 1,
    "bWins": 0,
    "games": [
     {
-     "date": "2026-07-24",
-     "event": "AVP Juniors National Championships 2026",
+     "date": "2026-01-19",
+     "event": "AAU MLK Open ",
      "division": "Girls 18U",
-     "tid": 34243,
-     "tdId": 126054,
+     "tid": 32390,
+     "tdId": 120204,
      "phase": "Playoffs",
-     "round": "Gold Consolation",
+     "round": "Gold Bracket",
+     "won": true,
+     "sets": [
+      [
+       28,
+       26
+      ]
+     ],
+     "with": [
+      "Jordyn Wilson"
+     ],
+     "against": [
+      "Kiley Bowman"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sammy Nammack",
+   "b": "Marley Robinson",
+   "aId": 53164,
+   "bId": 63770,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-03-15",
+     "event": "AAU Super Regional ",
+     "division": "Girls 18U",
+     "tid": 32995,
+     "tdId": 121820,
+     "phase": "Pool",
+     "round": "Pools",
      "won": true,
      "sets": [
       [
        21,
-       16
+       14
       ],
       [
        21,
@@ -12204,73 +12568,10 @@
       ]
      ],
      "with": [
-      56544
+      "Leah Blair"
      ],
      "against": [
-      5131
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Addison Choi",
-   "b": "Lerin Rosenthal",
-   "aId": 5160,
-   "bId": 5973,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-03-01",
-     "event": "California IBVL Winter Series Championships - p1440 Crown Series ",
-     "division": "Girls 18U",
-     "tid": 32939,
-     "tdId": 121642,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": true,
-     "sets": [
-      [
-       21,
-       19
-      ],
-      [
-       21,
-       19
-      ]
-     ],
-     "with": [
-      56544
-     ],
-     "against": [
-      "Sammy Nammack"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Addison Choi",
-   "b": "Ashley Chuba",
-   "aId": 5160,
-   "bId": 69116,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-03-29",
-     "event": "2026 Futures Tour Spring Championship",
-     "division": "Class of '26 & Younger",
-     "tid": 31567,
-     "tdId": 117695,
-     "phase": "Playoffs",
-     "round": "Day 2: Gold Playoff",
-     "won": false,
-     "sets": [],
-     "with": [
-      "Linnaea Nielsen"
-     ],
-     "against": [
-      96236
+      99596
      ]
     }
    ]
@@ -12809,144 +13110,304 @@
   },
   {
    "a": "Ella Dueck",
-   "b": "Megan McLarty",
+   "b": "Kiley Bowman",
    "aId": 4517,
-   "bId": 68351,
+   "bId": 5288,
    "aWins": 1,
    "bWins": 0,
    "games": [
     {
-     "date": "2025-11-09",
-     "event": "AVP Juniors West Coast Championships 2025",
-     "division": "Girls 17U",
-     "tid": 25578,
-     "tdId": 97148,
-     "phase": "Playoffs",
-     "round": "Gold Playoffs",
+     "date": "2026-01-19",
+     "event": "AAU MLK Open ",
+     "division": "Girls 18U",
+     "tid": 32390,
+     "tdId": 120204,
+     "phase": "Pool",
+     "round": "Pools",
      "won": true,
      "sets": [
       [
        21,
-       19
+       16
       ],
       [
        21,
-       17
+       15
       ]
      ],
      "with": [
-      "Sammy Nammack"
+      "Simrin Adams"
      ],
      "against": [
-      "Izzy Fischer"
+      "Lola Heckman"
      ]
     }
    ]
   },
   {
    "a": "Ella Dueck",
-   "b": "Izzy Fischer",
+   "b": "Lola Heckman",
    "aId": 4517,
-   "bId": 105342,
+   "bId": 105907,
    "aWins": 1,
    "bWins": 0,
    "games": [
     {
-     "date": "2025-11-09",
-     "event": "AVP Juniors West Coast Championships 2025",
-     "division": "Girls 17U",
-     "tid": 25578,
-     "tdId": 97148,
-     "phase": "Playoffs",
-     "round": "Gold Playoffs",
+     "date": "2026-01-19",
+     "event": "AAU MLK Open ",
+     "division": "Girls 18U",
+     "tid": 32390,
+     "tdId": 120204,
+     "phase": "Pool",
+     "round": "Pools",
      "won": true,
      "sets": [
       [
        21,
-       19
+       16
       ],
       [
        21,
-       17
+       15
       ]
      ],
      "with": [
-      "Sammy Nammack"
+      "Simrin Adams"
      ],
      "against": [
-      "Megan McLarty"
+      "Kiley Bowman"
      ]
     }
    ]
   },
   {
-   "a": "Sammy Nammack",
-   "b": "Megan McLarty",
-   "aId": 53164,
-   "bId": 68351,
+   "a": "Ella Dueck",
+   "b": "Logan Leverte",
+   "aId": 4517,
+   "bId": 57246,
    "aWins": 1,
    "bWins": 0,
    "games": [
     {
-     "date": "2025-11-09",
-     "event": "AVP Juniors West Coast Championships 2025",
-     "division": "Girls 17U",
-     "tid": 25578,
-     "tdId": 97148,
+     "date": "2026-07-18",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 17 - 2027",
+     "tid": 31483,
+     "tdId": 126666,
      "phase": "Playoffs",
-     "round": "Gold Playoffs",
+     "round": "Gold Bracket",
      "won": true,
      "sets": [
       [
-       21,
-       19
+       18,
+       21
       ],
       [
        21,
-       17
+       12
+      ],
+      [
+       15,
+       10
+      ]
+     ],
+     "with": [
+      "Simrin Adams"
+     ],
+     "against": [
+      "Tesa Solis"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Ella Dueck",
+   "b": "Tesa Solis",
+   "aId": 4517,
+   "bId": 79627,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-18",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 17 - 2027",
+     "tid": 31483,
+     "tdId": 126666,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": true,
+     "sets": [
+      [
+       18,
+       21
+      ],
+      [
+       21,
+       12
+      ],
+      [
+       15,
+       10
+      ]
+     ],
+     "with": [
+      "Simrin Adams"
+     ],
+     "against": [
+      "Logan Leverte"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Simrin Adams",
+   "b": "Logan Leverte",
+   "aId": 25289,
+   "bId": 57246,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-18",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 17 - 2027",
+     "tid": 31483,
+     "tdId": 126666,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": true,
+     "sets": [
+      [
+       18,
+       21
+      ],
+      [
+       21,
+       12
+      ],
+      [
+       15,
+       10
       ]
      ],
      "with": [
       "Ella Dueck"
      ],
      "against": [
-      "Izzy Fischer"
+      "Tesa Solis"
      ]
     }
    ]
   },
   {
-   "a": "Sammy Nammack",
-   "b": "Izzy Fischer",
-   "aId": 53164,
-   "bId": 105342,
+   "a": "Simrin Adams",
+   "b": "Tesa Solis",
+   "aId": 25289,
+   "bId": 79627,
    "aWins": 1,
    "bWins": 0,
    "games": [
     {
-     "date": "2025-11-09",
-     "event": "AVP Juniors West Coast Championships 2025",
-     "division": "Girls 17U",
-     "tid": 25578,
-     "tdId": 97148,
+     "date": "2026-07-18",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 17 - 2027",
+     "tid": 31483,
+     "tdId": 126666,
      "phase": "Playoffs",
-     "round": "Gold Playoffs",
+     "round": "Gold Bracket",
      "won": true,
      "sets": [
       [
-       21,
-       19
+       18,
+       21
       ],
       [
        21,
-       17
+       12
+      ],
+      [
+       15,
+       10
       ]
      ],
      "with": [
       "Ella Dueck"
      ],
      "against": [
-      "Megan McLarty"
+      "Logan Leverte"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Ella Dueck",
+   "b": "Isabelle Izzy Ramos",
+   "aId": 4517,
+   "bId": 24727,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-18",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 17 - 2027",
+     "tid": 31483,
+     "tdId": 126666,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": true,
+     "sets": [
+      [
+       21,
+       15
+      ],
+      [
+       21,
+       15
+      ]
+     ],
+     "with": [
+      "Simrin Adams"
+     ],
+     "against": [
+      84161
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Isabelle Izzy Ramos",
+   "b": "Simrin Adams",
+   "aId": 24727,
+   "bId": 25289,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-18",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships ",
+     "division": "Girls 17 - 2027",
+     "tid": 31483,
+     "tdId": 126666,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": false,
+     "sets": [
+      [
+       15,
+       21
+      ],
+      [
+       15,
+       21
+      ]
+     ],
+     "with": [
+      "Ella Dueck"
+     ],
+     "against": [
+      84161
      ]
     }
    ]
@@ -13684,38 +14145,6 @@
    ]
   },
   {
-   "a": "Isabelle Izzy Ramos",
-   "b": "Izzy Fischer",
-   "aId": 24727,
-   "bId": 105342,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2025-08-17",
-     "event": "SSOVA Juniors AVP & USAV Regional Qualifier St.Pete Beach, Beach Volleyball Tournament- BRQ ",
-     "division": "Girls 18U",
-     "tid": 25530,
-     "tdId": 96816,
-     "phase": "Playoffs",
-     "round": "Playoffs",
-     "won": true,
-     "sets": [
-      [
-       21,
-       11
-      ]
-     ],
-     "with": [
-      84161
-     ],
-     "against": [
-      "Adaleah Bassler"
-     ]
-    }
-   ]
-  },
-  {
    "a": "Johanna Snyder",
    "b": "Isabelle Izzy Ramos",
    "aId": 17798,
@@ -13747,6 +14176,145 @@
      ],
      "against": [
       95584
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Isabelle Izzy Ramos",
+   "b": "Adaleah Bassler",
+   "aId": 24727,
+   "bId": 94499,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2025-12-28",
+     "event": "2025 Futures Tour Winter Championship",
+     "division": "Class of '26 & Younger",
+     "tid": 31566,
+     "tdId": 117686,
+     "phase": "Pool",
+     "round": "Day 1: RD1",
+     "won": false,
+     "sets": [
+      [
+       21,
+       13
+      ],
+      [
+       16,
+       21
+      ],
+      [
+       10,
+       15
+      ]
+     ],
+     "with": [
+      94563
+     ],
+     "against": [
+      108409
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Addison Choi",
+   "b": "Kiley Bowman",
+   "aId": 5160,
+   "bId": 5288,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-23",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 18U",
+     "tid": 34243,
+     "tdId": 126054,
+     "phase": "Pool",
+     "round": "Reseeded Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       15
+      ],
+      [
+       21,
+       18
+      ]
+     ],
+     "with": [
+      56544
+     ],
+     "against": [
+      81161
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Addison Choi",
+   "b": "Bristyn Burness",
+   "aId": 5160,
+   "bId": 64683,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-24",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "Girls 18U",
+     "tid": 34243,
+     "tdId": 126054,
+     "phase": "Playoffs",
+     "round": "Gold Consolation",
+     "won": true,
+     "sets": [
+      [
+       21,
+       16
+      ],
+      [
+       21,
+       17
+      ]
+     ],
+     "with": [
+      56544
+     ],
+     "against": [
+      5131
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Addison Choi",
+   "b": "Ashley Chuba",
+   "aId": 5160,
+   "bId": 69116,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-03-29",
+     "event": "2026 Futures Tour Spring Championship",
+     "division": "Class of '26 & Younger",
+     "tid": 31567,
+     "tdId": 117695,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoff",
+     "won": false,
+     "sets": [],
+     "with": [
+      "Linnaea Nielsen"
+     ],
+     "against": [
+      96236
      ]
     }
    ]
@@ -13896,166 +14464,6 @@
    ]
   },
   {
-   "a": "Lerin Rosenthal",
-   "b": "London Merchant",
-   "aId": 5973,
-   "bId": 17437,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-07-26",
-     "event": "AVP Juniors National Championships 2026",
-     "division": "Girls 17U",
-     "tid": 34243,
-     "tdId": 126055,
-     "phase": "Playoffs",
-     "round": "Gold",
-     "won": false,
-     "sets": [
-      [
-       17,
-       21
-      ],
-      [
-       21,
-       17
-      ],
-      [
-       11,
-       15
-      ]
-     ],
-     "with": [
-      "Lyla Paulsen"
-     ],
-     "against": [
-      "Allyn Hilt"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "London Merchant",
-   "b": "Allyn Hilt",
-   "aId": 17437,
-   "bId": 40933,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-07-26",
-     "event": "AVP Juniors National Championships 2026",
-     "division": "Girls 17U",
-     "tid": 34243,
-     "tdId": 126055,
-     "phase": "Playoffs",
-     "round": "Gold",
-     "won": true,
-     "sets": [
-      [
-       21,
-       17
-      ],
-      [
-       17,
-       21
-      ],
-      [
-       15,
-       11
-      ]
-     ],
-     "with": [
-      "Lyla Paulsen"
-     ],
-     "against": [
-      "Lerin Rosenthal"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Lerin Rosenthal",
-   "b": "Lyla Paulsen",
-   "aId": 5973,
-   "bId": 19592,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-07-26",
-     "event": "AVP Juniors National Championships 2026",
-     "division": "Girls 17U",
-     "tid": 34243,
-     "tdId": 126055,
-     "phase": "Playoffs",
-     "round": "Gold",
-     "won": false,
-     "sets": [
-      [
-       17,
-       21
-      ],
-      [
-       21,
-       17
-      ],
-      [
-       11,
-       15
-      ]
-     ],
-     "with": [
-      "London Merchant"
-     ],
-     "against": [
-      "Allyn Hilt"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Lyla Paulsen",
-   "b": "Allyn Hilt",
-   "aId": 19592,
-   "bId": 40933,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-07-26",
-     "event": "AVP Juniors National Championships 2026",
-     "division": "Girls 17U",
-     "tid": 34243,
-     "tdId": 126055,
-     "phase": "Playoffs",
-     "round": "Gold",
-     "won": true,
-     "sets": [
-      [
-       21,
-       17
-      ],
-      [
-       17,
-       21
-      ],
-      [
-       15,
-       11
-      ]
-     ],
-     "with": [
-      "London Merchant"
-     ],
-     "against": [
-      "Lerin Rosenthal"
-     ]
-    }
-   ]
-  },
-  {
    "a": "Lyla Paulsen",
    "b": "Meg Hearn",
    "aId": 19592,
@@ -14128,217 +14536,65 @@
    ]
   },
   {
-   "a": "Allyn Hilt",
-   "b": "Leah Blair",
-   "aId": 40933,
-   "bId": 56789,
+   "a": "Meadow Rosales",
+   "b": "GRACIE LUTES",
+   "aId": 52517,
+   "bId": 59661,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-09-07",
+     "event": "GNBV National Recruiting Showcase Florida Sep 2025",
+     "division": "Girls 18U",
+     "tid": 24075,
+     "tdId": 92429,
+     "phase": "Playoffs",
+     "round": "Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       28,
+       26
+      ]
+     ],
+     "with": [
+      "Claire Hanson"
+     ],
+     "against": [
+      53173
+     ]
+    }
+   ]
+  },
+  {
+   "a": "GRACIE LUTES",
+   "b": "Claire Hanson",
+   "aId": 59661,
+   "bId": 148640,
    "aWins": 0,
    "bWins": 1,
    "games": [
     {
-     "date": "2026-02-01",
-     "event": "Girls Beach High School Pre-Season Tournament ",
-     "division": "Girls Varsity",
-     "tid": 32392,
-     "tdId": 121505,
+     "date": "2025-09-07",
+     "event": "GNBV National Recruiting Showcase Florida Sep 2025",
+     "division": "Girls 18U",
+     "tid": 24075,
+     "tdId": 92429,
      "phase": "Playoffs",
-     "round": "Gold Bracket",
+     "round": "Gold Playoffs",
      "won": false,
      "sets": [
       [
-       22,
+       26,
        28
       ]
      ],
      "with": [
-      "Lerin Rosenthal"
+      "Meadow Rosales"
      ],
      "against": [
-      60510
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Lerin Rosenthal",
-   "b": "Ashley Chuba",
-   "aId": 5973,
-   "bId": 69116,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-07-07",
-     "event": "2026 BVCA Individual Pairs National Championship ",
-     "division": "Girls 18U",
-     "tid": 38087,
-     "tdId": 139559,
-     "phase": "Pool",
-     "round": "Opening Round",
-     "won": true,
-     "sets": [
-      [
-       18,
-       21
-      ],
-      [
-       21,
-       15
-      ],
-      [
-       15,
-       9
-      ]
-     ],
-     "with": [
-      "Sammy Nammack"
-     ],
-     "against": [
-      44403
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Lerin Rosenthal",
-   "b": "Claire Demirjian",
-   "aId": 5973,
-   "bId": 27879,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-07-22",
-     "event": "AVP Juniors National Championships 2026",
-     "division": "Girls 18U",
-     "tid": 34243,
-     "tdId": 126054,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": true,
-     "sets": [
-      [
-       21,
-       8
-      ],
-      [
-       21,
-       12
-      ]
-     ],
-     "with": [
-      "Ashley Markle"
-     ],
-     "against": [
-      6486
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Claire Demirjian",
-   "b": "Ashley Markle",
-   "aId": 27879,
-   "bId": 44574,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-07-22",
-     "event": "AVP Juniors National Championships 2026",
-     "division": "Girls 18U",
-     "tid": 34243,
-     "tdId": 126054,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": false,
-     "sets": [
-      [
-       8,
-       21
-      ],
-      [
-       12,
-       21
-      ]
-     ],
-     "with": [
-      "Lerin Rosenthal"
-     ],
-     "against": [
-      6486
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Lerin Rosenthal",
-   "b": "Bristyn Burness",
-   "aId": 5973,
-   "bId": 64683,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-07-22",
-     "event": "AVP Juniors National Championships 2026",
-     "division": "Girls 18U",
-     "tid": 34243,
-     "tdId": 126054,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": false,
-     "sets": [
-      [
-       14,
-       21
-      ],
-      [
-       16,
-       21
-      ]
-     ],
-     "with": [
-      "Ashley Markle"
-     ],
-     "against": [
-      5131
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Ashley Markle",
-   "b": "Bristyn Burness",
-   "aId": 44574,
-   "bId": 64683,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-07-22",
-     "event": "AVP Juniors National Championships 2026",
-     "division": "Girls 18U",
-     "tid": 34243,
-     "tdId": 126054,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": false,
-     "sets": [
-      [
-       14,
-       21
-      ],
-      [
-       16,
-       21
-      ]
-     ],
-     "with": [
-      "Lerin Rosenthal"
-     ],
-     "against": [
-      5131
+      53173
      ]
     }
    ]
@@ -14543,106 +14799,6 @@
      ],
      "against": [
       264185
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Kiley Bowman",
-   "b": "Sammy Nammack",
-   "aId": 5288,
-   "bId": 53164,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-01-19",
-     "event": "AAU MLK Open ",
-     "division": "Girls 18U",
-     "tid": 32390,
-     "tdId": 120204,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": false,
-     "sets": [
-      [
-       26,
-       28
-      ]
-     ],
-     "with": [
-      "Jordyn Wilson"
-     ],
-     "against": [
-      "Lola Heckman"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Sammy Nammack",
-   "b": "Lola Heckman",
-   "aId": 53164,
-   "bId": 105907,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-01-19",
-     "event": "AAU MLK Open ",
-     "division": "Girls 18U",
-     "tid": 32390,
-     "tdId": 120204,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": true,
-     "sets": [
-      [
-       28,
-       26
-      ]
-     ],
-     "with": [
-      "Jordyn Wilson"
-     ],
-     "against": [
-      "Kiley Bowman"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Sammy Nammack",
-   "b": "Marley Robinson",
-   "aId": 53164,
-   "bId": 63770,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-03-15",
-     "event": "AAU Super Regional ",
-     "division": "Girls 18U",
-     "tid": 32995,
-     "tdId": 121820,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": true,
-     "sets": [
-      [
-       21,
-       14
-      ],
-      [
-       21,
-       17
-      ]
-     ],
-     "with": [
-      "Leah Blair"
-     ],
-     "against": [
-      99596
      ]
     }
    ]
@@ -14956,78 +15112,6 @@
    ]
   },
   {
-   "a": "Zailey High",
-   "b": "Kiah McCoy",
-   "aId": 5138,
-   "bId": 7094,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-02-01",
-     "event": "210 Beach Texas Recruiting Showcase Texas, LSU, ASU, South Carolina, Arizona, UTEP, and more tba",
-     "division": "Girls 18U",
-     "tid": 33945,
-     "tdId": 125213,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": false,
-     "sets": [
-      [
-       18,
-       21
-      ],
-      [
-       19,
-       21
-      ]
-     ],
-     "with": [
-      "Ryan Anderson"
-     ],
-     "against": [
-      65201
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Zailey High",
-   "b": "Ryan Anderson",
-   "aId": 5138,
-   "bId": 20220,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-02-01",
-     "event": "210 Beach Texas Recruiting Showcase Texas, LSU, ASU, South Carolina, Arizona, UTEP, and more tba",
-     "division": "Girls 18U",
-     "tid": 33945,
-     "tdId": 125213,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": false,
-     "sets": [
-      [
-       18,
-       21
-      ],
-      [
-       19,
-       21
-      ]
-     ],
-     "with": [
-      "Kiah McCoy"
-     ],
-     "against": [
-      65201
-     ]
-    }
-   ]
-  },
-  {
    "a": "Anna Koehl",
    "b": "Ryan Anderson",
    "aId": 8585,
@@ -15140,6 +15224,132 @@
    ]
   },
   {
+   "a": "GRACIE LUTES",
+   "b": "Giani Boerner",
+   "aId": 59661,
+   "bId": 170641,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2025-09-06",
+     "event": "Kauai Bikini Open Hickory Point ",
+     "division": "Girls 18U",
+     "tid": 28845,
+     "tdId": 109060,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": false,
+     "sets": [
+      [
+       17,
+       21
+      ]
+     ],
+     "with": [
+      150387
+     ],
+     "against": [
+      53173
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Giani Boerner",
+   "b": "Lila Waite",
+   "aId": 170641,
+   "bId": 188020,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-12-28",
+     "event": "2025 Futures Tour Winter Championship",
+     "division": "Class of '26 & Younger",
+     "tid": 31566,
+     "tdId": 117686,
+     "phase": "Pool",
+     "round": "Day 1: RD2 (3rds)",
+     "won": true,
+     "sets": [
+      [
+       19,
+       21
+      ],
+      [
+       21,
+       14
+      ],
+      [
+       15,
+       9
+      ]
+     ],
+     "with": [
+      150387
+     ],
+     "against": [
+      66618
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Johanna Snyder",
+   "b": "Giani Boerner",
+   "aId": 17798,
+   "bId": 170641,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2025-12-29",
+     "event": "2025 Futures Tour Winter Championship",
+     "division": "Class of '26 & Younger",
+     "tid": 31566,
+     "tdId": 117686,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": false,
+     "sets": [],
+     "with": [
+      150387
+     ],
+     "against": [
+      "Izzy Fischer"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Izzy Fischer",
+   "b": "Giani Boerner",
+   "aId": 105342,
+   "bId": 170641,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2025-12-29",
+     "event": "2025 Futures Tour Winter Championship",
+     "division": "Class of '26 & Younger",
+     "tid": 31566,
+     "tdId": 117686,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": false,
+     "sets": [],
+     "with": [
+      150387
+     ],
+     "against": [
+      "Johanna Snyder"
+     ]
+    }
+   ]
+  },
+  {
    "a": "Laney Evers",
    "b": "Jordyn Wilson",
    "aId": 14082,
@@ -15243,100 +15453,6 @@
      ],
      "against": [
       23369
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Giani Boerner",
-   "b": "Lila Waite",
-   "aId": 170641,
-   "bId": 188020,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2025-12-28",
-     "event": "2025 Futures Tour Winter Championship",
-     "division": "Class of '26 & Younger",
-     "tid": 31566,
-     "tdId": 117686,
-     "phase": "Pool",
-     "round": "Day 1: RD2 (3rds)",
-     "won": true,
-     "sets": [
-      [
-       19,
-       21
-      ],
-      [
-       21,
-       14
-      ],
-      [
-       15,
-       9
-      ]
-     ],
-     "with": [
-      150387
-     ],
-     "against": [
-      66618
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Johanna Snyder",
-   "b": "Giani Boerner",
-   "aId": 17798,
-   "bId": 170641,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2025-12-29",
-     "event": "2025 Futures Tour Winter Championship",
-     "division": "Class of '26 & Younger",
-     "tid": 31566,
-     "tdId": 117686,
-     "phase": "Playoffs",
-     "round": "Day 2: Gold Playoffs",
-     "won": false,
-     "sets": [],
-     "with": [
-      150387
-     ],
-     "against": [
-      "Izzy Fischer"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Izzy Fischer",
-   "b": "Giani Boerner",
-   "aId": 105342,
-   "bId": 170641,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2025-12-29",
-     "event": "2025 Futures Tour Winter Championship",
-     "division": "Class of '26 & Younger",
-     "tid": 31566,
-     "tdId": 117686,
-     "phase": "Playoffs",
-     "round": "Day 2: Gold Playoffs",
-     "won": false,
-     "sets": [],
-     "with": [
-      150387
-     ],
-     "against": [
-      "Johanna Snyder"
      ]
     }
    ]
@@ -15574,6 +15690,138 @@
    ]
   },
   {
+   "a": "Leah Blair",
+   "b": "Linnaea Nielsen",
+   "aId": 56789,
+   "bId": 92803,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-02-01",
+     "event": "Girls Beach High School Pre-Season Tournament ",
+     "division": "Girls Varsity",
+     "tid": 32392,
+     "tdId": 121505,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": false,
+     "sets": [
+      [
+       23,
+       28
+      ]
+     ],
+     "with": [
+      60510
+     ],
+     "against": [
+      60518
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Johanna Snyder",
+   "b": "Leah Blair",
+   "aId": 17798,
+   "bId": 56789,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-08",
+     "event": "2026 BVCA Individual Pairs National Championship ",
+     "division": "Girls 18U",
+     "tid": 38087,
+     "tdId": 139559,
+     "phase": "Pool",
+     "round": "Gold Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       19
+      ]
+     ],
+     "with": [
+      22666
+     ],
+     "against": [
+      "Izzy Fischer"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Leah Blair",
+   "b": "Izzy Fischer",
+   "aId": 56789,
+   "bId": 105342,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-08",
+     "event": "2026 BVCA Individual Pairs National Championship ",
+     "division": "Girls 18U",
+     "tid": 38087,
+     "tdId": 139559,
+     "phase": "Pool",
+     "round": "Gold Pools",
+     "won": false,
+     "sets": [
+      [
+       19,
+       21
+      ]
+     ],
+     "with": [
+      22666
+     ],
+     "against": [
+      "Johanna Snyder"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Emma Burnside",
+   "b": "Leah Blair",
+   "aId": 23188,
+   "bId": 56789,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-08",
+     "event": "2026 BVCA Individual Pairs National Championship ",
+     "division": "Girls 18U",
+     "tid": 38087,
+     "tdId": 139559,
+     "phase": "Playoffs",
+     "round": "Championship Bracket",
+     "won": false,
+     "sets": [
+      [
+       19,
+       21
+      ],
+      [
+       20,
+       22
+      ]
+     ],
+     "with": [
+      22666
+     ],
+     "against": [
+      266118
+     ]
+    }
+   ]
+  },
+  {
    "a": "Marley Robinson",
    "b": "Tesa Solis",
    "aId": 63770,
@@ -15725,138 +15973,6 @@
      ],
      "against": [
       "Ashley Chuba"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Leah Blair",
-   "b": "Linnaea Nielsen",
-   "aId": 56789,
-   "bId": 92803,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-02-01",
-     "event": "Girls Beach High School Pre-Season Tournament ",
-     "division": "Girls Varsity",
-     "tid": 32392,
-     "tdId": 121505,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": false,
-     "sets": [
-      [
-       23,
-       28
-      ]
-     ],
-     "with": [
-      60510
-     ],
-     "against": [
-      60518
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Johanna Snyder",
-   "b": "Leah Blair",
-   "aId": 17798,
-   "bId": 56789,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-07-08",
-     "event": "2026 BVCA Individual Pairs National Championship ",
-     "division": "Girls 18U",
-     "tid": 38087,
-     "tdId": 139559,
-     "phase": "Pool",
-     "round": "Gold Pools",
-     "won": true,
-     "sets": [
-      [
-       21,
-       19
-      ]
-     ],
-     "with": [
-      22666
-     ],
-     "against": [
-      "Izzy Fischer"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Leah Blair",
-   "b": "Izzy Fischer",
-   "aId": 56789,
-   "bId": 105342,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-07-08",
-     "event": "2026 BVCA Individual Pairs National Championship ",
-     "division": "Girls 18U",
-     "tid": 38087,
-     "tdId": 139559,
-     "phase": "Pool",
-     "round": "Gold Pools",
-     "won": false,
-     "sets": [
-      [
-       19,
-       21
-      ]
-     ],
-     "with": [
-      22666
-     ],
-     "against": [
-      "Johanna Snyder"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Emma Burnside",
-   "b": "Leah Blair",
-   "aId": 23188,
-   "bId": 56789,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-07-08",
-     "event": "2026 BVCA Individual Pairs National Championship ",
-     "division": "Girls 18U",
-     "tid": 38087,
-     "tdId": 139559,
-     "phase": "Playoffs",
-     "round": "Championship Bracket",
-     "won": false,
-     "sets": [
-      [
-       19,
-       21
-      ],
-      [
-       20,
-       22
-      ]
-     ],
-     "with": [
-      22666
-     ],
-     "against": [
-      266118
      ]
     }
    ]
@@ -16033,42 +16149,6 @@
      ],
      "against": [
       215231
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Amelia Berent",
-   "b": "Lila Waite",
-   "aId": 121625,
-   "bId": 188020,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2025-11-16",
-     "event": "SandStorm Fall Showcase / AVP Match Play ",
-     "division": "Girls 18U",
-     "tid": 28788,
-     "tdId": 108773,
-     "phase": "Playoffs",
-     "round": "PLAYOFF GOLD ",
-     "won": false,
-     "sets": [
-      [
-       13,
-       21
-      ],
-      [
-       18,
-       21
-      ]
-     ],
-     "with": [
-      58942
-     ],
-     "against": [
-      9130
      ]
     }
    ]
@@ -16290,33 +16370,77 @@
    ]
   },
   {
-   "a": "Zailey High",
-   "b": "Claire Demirjian",
-   "aId": 5138,
-   "bId": 27879,
+   "a": "Amelia Berent",
+   "b": "Lila Waite",
+   "aId": 121625,
+   "bId": 188020,
    "aWins": 0,
    "bWins": 1,
    "games": [
     {
-     "date": "2026-07-08",
-     "event": "2026 BVCA Individual Pairs National Championship ",
+     "date": "2025-11-16",
+     "event": "SandStorm Fall Showcase / AVP Match Play ",
      "division": "Girls 18U",
-     "tid": 38087,
-     "tdId": 139559,
-     "phase": "Pool",
-     "round": "Gold Pools",
+     "tid": 28788,
+     "tdId": 108773,
+     "phase": "Playoffs",
+     "round": "PLAYOFF GOLD ",
      "won": false,
      "sets": [
       [
-       19,
+       13,
+       21
+      ],
+      [
+       18,
        21
       ]
      ],
      "with": [
-      14555
+      58942
      ],
      "against": [
-      18093
+      9130
+     ]
+    }
+   ]
+  },
+  {
+   "a": "GRACIE LUTES",
+   "b": "Lila Waite",
+   "aId": 59661,
+   "bId": 188020,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2025-12-14",
+     "event": "Optimum Beach: 2025 GIRLS WINTER SHOWCASE! College Recruiting Clinic &Tournament Weekend ",
+     "division": "Girls 18U",
+     "tid": 32778,
+     "tdId": 121159,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": false,
+     "sets": [
+      [
+       11,
+       21
+      ],
+      [
+       21,
+       13
+      ],
+      [
+       13,
+       15
+      ]
+     ],
+     "with": [
+      211882
+     ],
+     "against": [
+      150384
      ]
     }
    ]
@@ -16459,13 +16583,13 @@
    "matches": 9
   },
   {
-   "a": "Lerin Rosenthal",
-   "b": "Sammy Nammack",
+   "a": "London Merchant",
+   "b": "Lyla Paulsen",
    "matches": 9
   },
   {
-   "a": "London Merchant",
-   "b": "Lyla Paulsen",
+   "a": "Lerin Rosenthal",
+   "b": "Sammy Nammack",
    "matches": 9
   },
   {
@@ -16544,8 +16668,8 @@
    "matches": 7
   },
   {
-   "a": "Leah Blair",
-   "b": "Linnaea Nielsen",
+   "a": "Lerin Rosenthal",
+   "b": "Ashley Markle",
    "matches": 7
   },
   {
@@ -16554,8 +16678,8 @@
    "matches": 7
   },
   {
-   "a": "Lerin Rosenthal",
-   "b": "Ashley Markle",
+   "a": "Leah Blair",
+   "b": "Linnaea Nielsen",
    "matches": 7
   },
   {
@@ -16594,13 +16718,13 @@
    "matches": 6
   },
   {
-   "a": "Ella Dueck",
-   "b": "Linnaea Nielsen",
+   "a": "Simrin Adams",
+   "b": "Thalia Lindahl",
    "matches": 6
   },
   {
-   "a": "Zailey High",
-   "b": "London Merchant",
+   "a": "Ella Dueck",
+   "b": "Linnaea Nielsen",
    "matches": 6
   },
   {
@@ -16624,11 +16748,6 @@
    "matches": 5
   },
   {
-   "a": "Simrin Adams",
-   "b": "Thalia Lindahl",
-   "matches": 5
-  },
-  {
    "a": "Zoe Znider",
    "b": "Georgeann Lee",
    "matches": 5
@@ -16641,11 +16760,6 @@
   {
    "a": "Kiah McCoy",
    "b": "Ryan Anderson",
-   "matches": 5
-  },
-  {
-   "a": "Adaleah Bassler",
-   "b": "Izzy Fischer",
    "matches": 5
   },
   {
@@ -16699,13 +16813,13 @@
    "matches": 3
   },
   {
-   "a": "Lerin Rosenthal",
-   "b": "Simrin Adams",
+   "a": "Christy Boulware",
+   "b": "Thalia Lindahl",
    "matches": 3
   },
   {
-   "a": "Christy Boulware",
-   "b": "Thalia Lindahl",
+   "a": "Lerin Rosenthal",
+   "b": "Simrin Adams",
    "matches": 3
   },
   {

@@ -30,12 +30,12 @@ CHUNK = 600
 # population file -> the rosters cut from it. `younger` marks an age-eligible cohort,
 # which carries a graduating year per player and reports its class mix.
 SOURCES = [
-    ("pop2027.json", [("2027", 60, "Class of 2027 &#8212; top 60")], False),
-    ("pop2028.json", [("2028", 60, "Class of 2028 &#8212; top 60"),
-                      ("2028_top30", 30, "Class of 2028 &#8212; top 30"),
-                      ("2028_top20", 20, "Class of 2028 &#8212; top 20")], False),
-    ("cohort2027.json", [("2027_younger", 60, "2027 and younger &#8212; top 60")], True),
-    ("cohort2028.json", [("2028_younger", 60, "2028 and younger &#8212; top 60")], True),
+    ("pop2027.json", [("2027", 60, "Class of 2027 — top 60")], False),
+    ("pop2028.json", [("2028", 60, "Class of 2028 — top 60"),
+                      ("2028_top30", 30, "Class of 2028 — top 30"),
+                      ("2028_top20", 20, "Class of 2028 — top 20")], False),
+    ("cohort2027.json", [("2027_younger", 60, "2027 and younger — top 60")], True),
+    ("cohort2028.json", [("2028_younger", 60, "2028 and younger — top 60")], True),
 ]
 
 
