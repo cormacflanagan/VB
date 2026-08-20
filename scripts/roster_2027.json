@@ -1,5 +1,5 @@
 {
- "label": "Class of 2027 \u2014 top 60",
+ "label": "Class of 2027 &#8212; top 60",
  "roster": [
   [
    "Thais Treumann",
@@ -37,28 +37,23 @@
    "CA"
   ],
   [
-   "Sandie Souza",
-   2771,
-   "CA"
-  ],
-  [
-   "Simrin Adams",
-   25289,
-   "CA"
-  ],
-  [
    "JoJo Wilson",
    59914,
    "CA"
   ],
   [
-   "Thalia Lindahl",
-   44267,
+   "Sandie Souza",
+   2771,
    "CA"
   ],
   [
    "Abby King",
    26871,
+   "CA"
+  ],
+  [
+   "Thalia Lindahl",
+   44267,
    "CA"
   ],
   [
@@ -72,8 +67,13 @@
    "FL"
   ],
   [
-   "Addison Choi",
-   5160,
+   "Lerin Rosenthal",
+   5973,
+   "CA"
+  ],
+  [
+   "Sammy Nammack",
+   53164,
    "CA"
   ],
   [
@@ -107,6 +107,11 @@
    "FL"
   ],
   [
+   "Addison Choi",
+   5160,
+   "CA"
+  ],
+  [
    "London Merchant",
    17437,
    "TX"
@@ -117,23 +122,18 @@
    "FL"
   ],
   [
-   "Lerin Rosenthal",
-   5973,
-   "CA"
-  ],
-  [
    "Claire Hanson",
    148640,
    "NC"
   ],
   [
-   "Sammy Nammack",
-   53164,
+   "Allyn Hilt",
+   40933,
    "CA"
   ],
   [
-   "Allyn Hilt",
-   40933,
+   "Simrin Adams",
+   25289,
    "CA"
   ],
   [
@@ -152,14 +152,14 @@
    "TX"
   ],
   [
-   "Jordyn Wilson",
-   23868,
-   "CA"
-  ],
-  [
    "Giani Boerner",
    170641,
    "MA"
+  ],
+  [
+   "Jordyn Wilson",
+   23868,
+   "CA"
   ],
   [
    "Ashley Markle",
@@ -172,13 +172,13 @@
    "TX"
   ],
   [
-   "Marley Robinson",
-   63770,
+   "Leah Blair",
+   56789,
    "CA"
   ],
   [
-   "Leah Blair",
-   56789,
+   "Marley Robinson",
+   63770,
    "CA"
   ],
   [
@@ -195,11 +195,6 @@
    "Sienna Carr",
    63216,
    "VA"
-  ],
-  [
-   "Amelia Berent",
-   121625,
-   "NJ"
   ],
   [
    "Johanna Snyder",
@@ -252,14 +247,29 @@
    "WA"
   ],
   [
+   "Lola Heckman",
+   105907,
+   "CA"
+  ],
+  [
    "Ali Lubach",
    110464,
    "NJ"
   ],
   [
+   "Kiley Bowman",
+   5288,
+   "CA"
+  ],
+  [
    "Anna Popovic",
    17061,
    "OH"
+  ],
+  [
+   "Amelia Berent",
+   121625,
+   "NJ"
   ],
   [
    "Logan Leverte",
@@ -272,9 +282,9 @@
    "FL"
   ],
   [
-   "Lola Heckman",
-   105907,
-   "CA"
+   "GRACIE LUTES",
+   59661,
+   "KY"
   ],
   [
    "Laney Evers",
@@ -287,18 +297,8 @@
    "FL"
   ],
   [
-   "Zailey High",
-   5138,
-   "TX"
-  ],
-  [
    "Ashley Chuba",
    69116,
-   "CA"
-  ],
-  [
-   "Kiley Bowman",
-   5288,
    "CA"
   ]
  ],
@@ -308,14 +308,14 @@
    "club": "Bevolley Academy",
    "city": "St Pete Beach ",
    "state": "FL",
-   "tv": 10.17
+   "tv": 10.196
   },
   "8426": {
    "height": "6'",
    "club": "Spiker Beach Volleyball Club",
    "city": "Laguna Beach",
    "state": "CA",
-   "tv": 9.452
+   "tv": 9.451
   },
   "24515": {
    "height": "6' 0\"",
@@ -350,21 +350,7 @@
    "club": "South Bay Sand",
    "city": "Redondo Beach",
    "state": "CA",
-   "tv": 8.824
-  },
-  "2771": {
-   "height": "5' 11\"",
-   "club": "Spiker Beach Volleyball Club",
-   "city": "Riverside",
-   "state": "CA",
-   "tv": 8.724
-  },
-  "25289": {
-   "height": "5' 9\"",
-   "club": "Spiker Beach Volleyball Club",
-   "city": "Long Beach",
-   "state": "CA",
-   "tv": 8.722
+   "tv": 8.852
   },
   "59914": {
    "height": "6'",
@@ -373,26 +359,33 @@
    "state": "CA",
    "tv": 8.578
   },
-  "44267": {
+  "2771": {
    "height": "5' 11\"",
    "club": "Spiker Beach Volleyball Club",
-   "city": "Rancho Palos Verdes",
+   "city": "Riverside",
    "state": "CA",
-   "tv": 8.549
+   "tv": 8.553
   },
   "26871": {
    "height": "6' 1\"",
    "club": "Golden gate volleyball",
    "city": "Richmond",
    "state": "CA",
-   "tv": 8.467
+   "tv": 8.466
+  },
+  "44267": {
+   "height": "5' 11\"",
+   "club": "Spiker Beach Volleyball Club",
+   "city": "Rancho Palos Verdes",
+   "state": "CA",
+   "tv": 8.463
   },
   "61785": {
    "height": "6'",
    "club": "Outrigger Canoe Club Girls Beach Volleyball",
    "city": "Honolulu ",
    "state": "HI",
-   "tv": 8.455
+   "tv": 8.454
   },
   "2420": {
    "height": null,
@@ -401,19 +394,26 @@
    "state": "FL",
    "tv": 8.452
   },
-  "5160": {
-   "height": "5' 7\"",
+  "5973": {
+   "height": "5' 11\"",
    "club": "MBsand",
-   "city": "Redondo Beach",
+   "city": "Hermosa Beach",
    "state": "CA",
-   "tv": 8.45
+   "tv": 8.442
+  },
+  "53164": {
+   "height": "5' 9\"",
+   "club": "MBsand",
+   "city": "Manhattan Beach",
+   "state": "CA",
+   "tv": 8.411
   },
   "26984": {
    "height": "5' 10\"",
    "club": "Golden Gate volleyball",
    "city": "Greenbrae",
    "state": "CA",
-   "tv": 8.406
+   "tv": 8.405
   },
   "25288": {
    "height": "5' 8\"",
@@ -450,12 +450,19 @@
    "state": "FL",
    "tv": 8.322
   },
+  "5160": {
+   "height": "5' 7\"",
+   "club": "MBsand",
+   "city": "Redondo Beach",
+   "state": "CA",
+   "tv": 8.318
+  },
   "17437": {
    "height": "5' 10\"",
    "club": "Independent",
    "city": "Frisco",
    "state": "TX",
-   "tv": 8.269
+   "tv": 8.268
   },
   "56781": {
    "height": "5' 9\"",
@@ -464,13 +471,6 @@
    "state": "FL",
    "tv": 8.268
   },
-  "5973": {
-   "height": "5' 11\"",
-   "club": "MBsand",
-   "city": "Hermosa Beach",
-   "state": "CA",
-   "tv": 8.265
-  },
   "148640": {
    "height": null,
    "club": "None",
@@ -478,19 +478,19 @@
    "state": "NC",
    "tv": 8.252
   },
-  "53164": {
-   "height": "5' 9\"",
-   "club": "MBsand",
-   "city": "Manhattan Beach",
-   "state": "CA",
-   "tv": 8.221
-  },
   "40933": {
    "height": "6' 1\"",
    "club": "South Bay Sand",
    "city": "Hermosa Beach",
    "state": "CA",
    "tv": 8.22
+  },
+  "25289": {
+   "height": "5' 9\"",
+   "club": "Spiker Beach Volleyball Club",
+   "city": "Long Beach",
+   "state": "CA",
+   "tv": 8.214
   },
   "64683": {
    "height": "6'",
@@ -511,14 +511,7 @@
    "club": "692 Beach Volleyball Club- Texas",
    "city": "Wylie",
    "state": "TX",
-   "tv": 8.154
-  },
-  "23868": {
-   "height": "5' 10\"",
-   "club": "Spiker Beach Volleyball Club",
-   "city": "Colton",
-   "state": "CA",
-   "tv": 8.103
+   "tv": 8.153
   },
   "170641": {
    "height": "5' 11\"",
@@ -526,6 +519,13 @@
    "city": "Newton",
    "state": "MA",
    "tv": 8.102
+  },
+  "23868": {
+   "height": "5' 10\"",
+   "club": "Spiker Beach Volleyball Club",
+   "city": "Colton",
+   "state": "CA",
+   "tv": 8.068
   },
   "44574": {
    "height": "5' 10\"",
@@ -541,17 +541,17 @@
    "state": "TX",
    "tv": 8.055
   },
-  "63770": {
-   "height": "5' 6\"",
-   "club": "Spiker Beach Volleyball Club",
-   "city": "Eastvale",
-   "state": "CA",
-   "tv": 8.036
-  },
   "56789": {
    "height": "5' 11\"",
    "club": "MBsand",
    "city": "Redondo Beach",
+   "state": "CA",
+   "tv": 8.035
+  },
+  "63770": {
+   "height": "5' 6\"",
+   "club": "Spiker Beach Volleyball Club",
+   "city": "Eastvale",
    "state": "CA",
    "tv": 8.035
   },
@@ -560,28 +560,21 @@
    "club": "MBsand",
    "city": "Redondo Beach",
    "state": "CA",
-   "tv": 8.025
+   "tv": 8.024
   },
   "52517": {
    "height": "5' 3\"",
    "club": "Club W",
    "city": "Carolina Beach",
    "state": "NC",
-   "tv": 8.015
+   "tv": 8.014
   },
   "63216": {
    "height": "5' 9\"",
    "club": "Club 757",
    "city": "Virginia Beach",
    "state": "VA",
-   "tv": 8.012
-  },
-  "121625": {
-   "height": "5' 10\"",
-   "club": "Sandblazers Volleyball Club",
-   "city": "Manalapan",
-   "state": "NJ",
-   "tv": 7.949
+   "tv": 8.011
   },
   "17798": {
    "height": "5' 11\"",
@@ -644,14 +637,21 @@
    "club": "Golden Gate volleyball",
    "city": "Walnut Creek",
    "state": "CA",
-   "tv": 7.782
+   "tv": 7.781
   },
   "27879": {
    "height": "5' 7\"",
    "club": "KBeach VBC",
    "city": "Wenatchee",
    "state": "WA",
-   "tv": 7.777
+   "tv": 7.776
+  },
+  "105907": {
+   "height": "6' 1\"",
+   "club": "LAVA Beach",
+   "city": "Santa Barbara",
+   "state": "CA",
+   "tv": 7.776
   },
   "110464": {
    "height": null,
@@ -660,12 +660,26 @@
    "state": "NJ",
    "tv": 7.762
   },
+  "5288": {
+   "height": "5' 10\"",
+   "club": "LAVA Beach",
+   "city": "Paso Robles",
+   "state": "CA",
+   "tv": 7.742
+  },
   "17061": {
    "height": "5' 9\"",
    "club": "SandBox Volleyball Club",
    "city": "Twinsburg",
    "state": "OH",
    "tv": 7.737
+  },
+  "121625": {
+   "height": "5' 10\"",
+   "club": "Sandblazers Volleyball Club",
+   "city": "Manalapan",
+   "state": "NJ",
+   "tv": 7.719
   },
   "57246": {
    "height": "5' 8\"",
@@ -676,17 +690,17 @@
   },
   "105342": {
    "height": "5' 9\"",
-   "club": null,
+   "club": "",
    "city": "Jacksonville Beach",
    "state": "FL",
    "tv": 7.679
   },
-  "105907": {
-   "height": "6' 1\"",
-   "club": "LAVA Beach",
-   "city": "Santa Barbara",
-   "state": "CA",
-   "tv": 7.665
+  "59661": {
+   "height": "5' 8\"",
+   "club": "Bosco Beach",
+   "city": "Louisville",
+   "state": "KY",
+   "tv": 7.676
   },
   "14082": {
    "height": "6'",
@@ -700,35 +714,21 @@
    "club": "On Sand Sports",
    "city": "Atlantic Beach",
    "state": "FL",
-   "tv": 7.654
-  },
-  "5138": {
-   "height": "5' 11\"",
-   "club": "692 Beach Volleyball Club- Texas",
-   "city": "Rockwall",
-   "state": "TX",
-   "tv": 7.636
+   "tv": 7.653
   },
   "69116": {
    "height": "6'",
    "club": null,
    "city": "Carlsbad ",
    "state": "CA",
-   "tv": 7.628
-  },
-  "5288": {
-   "height": "5' 10\"",
-   "club": "LAVA Beach",
-   "city": "Paso Robles",
-   "state": "CA",
-   "tv": 7.624
+   "tv": 7.636
   }
  },
  "population": 2132,
  "rated": 1687,
  "cut": {
-  "nTop": 7.624,
-  "next": 7.599,
-  "nextName": "Emmery Capra"
+  "nTop": 7.636,
+  "next": 7.636,
+  "nextName": "Zailey High"
  }
 }

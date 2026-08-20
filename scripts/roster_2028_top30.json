@@ -1,5 +1,5 @@
 {
- "label": "Class of 2028 \u2014 top 30",
+ "label": "Class of 2028 &#8212; top 30",
  "roster": [
   [
    "Lucy Matuszak",
@@ -12,6 +12,11 @@
    "VA"
   ],
   [
+   "Haisley Flanagan",
+   64896,
+   "CA"
+  ],
+  [
    "Milaniakai Padilla",
    95165,
    "HI"
@@ -20,11 +25,6 @@
    "Sage Illian",
    91052,
    "KS"
-  ],
-  [
-   "Haisley Flanagan",
-   64896,
-   "CA"
   ],
   [
    "Madison Gillinger",
@@ -67,14 +67,14 @@
    "VA"
   ],
   [
-   "Dreya Scherfenberg",
-   2048,
-   "MO"
-  ],
-  [
    "Milan Hendrickson",
    22857,
    "CA"
+  ],
+  [
+   "Dreya Scherfenberg",
+   2048,
+   "MO"
   ],
   [
    "Cayden Dorger",
@@ -82,14 +82,14 @@
    "AL"
   ],
   [
-   "Ella Buchanan",
-   98125,
-   "CA"
-  ],
-  [
    "Lia Ray",
    25298,
    "FL"
+  ],
+  [
+   "Ella Buchanan",
+   98125,
+   "CA"
   ],
   [
    "Danica  Waterman",
@@ -100,6 +100,11 @@
    "Abigail Moffett",
    9258,
    "CA"
+  ],
+  [
+   "Kendal Walker",
+   146170,
+   "VA"
   ],
   [
    "Taylie Hansen",
@@ -117,24 +122,19 @@
    "MO"
   ],
   [
-   "Charlotte Jansen",
-   161398,
-   "CA"
-  ],
-  [
    "Brooke Codey",
    25347,
    "KY"
   ],
   [
+   "Charlotte Jansen",
+   161398,
+   "CA"
+  ],
+  [
    "Stella Sheeran",
    42463,
    "WA"
-  ],
-  [
-   "Kendal Walker",
-   146170,
-   "VA"
   ],
   [
    "Sadie Harris",
@@ -167,12 +167,19 @@
    "state": "VA",
    "tv": 8.703
   },
+  "64896": {
+   "height": "5' 9\"",
+   "club": "Santa Cruz Beach Volleyball Club",
+   "city": "Santa Cruz",
+   "state": "CA",
+   "tv": 8.696
+  },
   "95165": {
    "height": "5' 10\"",
    "club": "Outrigger Canoe Club Girls Beach Volleyball",
    "city": "Wailuku",
    "state": "HI",
-   "tv": 8.645
+   "tv": 8.644
   },
   "91052": {
    "height": "6' 1\"",
@@ -181,26 +188,19 @@
    "state": "KS",
    "tv": 8.643
   },
-  "64896": {
-   "height": "5' 9\"",
-   "club": "Santa Cruz Beach Volleyball Club",
-   "city": "Santa Cruz",
-   "state": "CA",
-   "tv": 8.614
-  },
   "99596": {
    "height": "5' 11\"",
    "club": "Spiker Beach Volleyball Club",
    "city": "Huntington Beach",
    "state": "CA",
-   "tv": 8.553
+   "tv": 8.552
   },
   "84725": {
    "height": "6'",
    "club": "MBsand",
    "city": "Boca Raton",
    "state": "FL",
-   "tv": 8.549
+   "tv": 8.548
   },
   "91897": {
    "height": "5' 11\"",
@@ -214,21 +214,21 @@
    "club": "BRVA Beach",
    "city": "Winchester ",
    "state": "VA",
-   "tv": 8.438
+   "tv": 8.501
   },
   "53120": {
    "height": "6' 0\"",
    "club": "WAVE Beach",
    "city": "Temecula",
    "state": "CA",
-   "tv": 8.357
+   "tv": 8.354
   },
   "59411": {
    "height": "5' 6\"",
    "club": "Club W",
    "city": "Carolina Beach",
    "state": "NC",
-   "tv": 8.324
+   "tv": 8.323
   },
   "98425": {
    "height": "5' 10\"",
@@ -242,14 +242,7 @@
    "club": "757 Beach",
    "city": "Virginia Beach",
    "state": "VA",
-   "tv": 8.301
-  },
-  "2048": {
-   "height": "5' 6\"",
-   "club": "P4:13 Beach",
-   "city": "Harrisonville",
-   "state": "MO",
-   "tv": 8.283
+   "tv": 8.3
   },
   "22857": {
    "height": "5' 10\"",
@@ -258,19 +251,19 @@
    "state": "CA",
    "tv": 8.283
   },
+  "2048": {
+   "height": "5' 6\"",
+   "club": "P4:13 Beach",
+   "city": "Harrisonville",
+   "state": "MO",
+   "tv": 8.282
+  },
   "128445": {
    "height": "5' 10\"",
    "club": "MVP Beach ",
    "city": "Spanish Fort",
    "state": "AL",
-   "tv": 8.228
-  },
-  "98125": {
-   "height": "6'",
-   "club": "SLOVBC",
-   "city": "San Luis Obispo",
-   "state": "CA",
-   "tv": 8.184
+   "tv": 8.227
   },
   "25298": {
    "height": "5' 10\"",
@@ -278,6 +271,13 @@
    "city": "Delray Beach ",
    "state": "FL",
    "tv": 8.173
+  },
+  "98125": {
+   "height": "6'",
+   "club": "SLOVBC",
+   "city": "San Luis Obispo",
+   "state": "CA",
+   "tv": 8.149
   },
   "94563": {
    "height": "5' 11\"",
@@ -291,34 +291,34 @@
    "club": "Spiker Beach Volleyball Club",
    "city": "Yorba Linda",
    "state": "CA",
-   "tv": 8.105
+   "tv": 8.104
+  },
+  "146170": {
+   "height": null,
+   "club": "108 Beach Volleyball Club",
+   "city": "Fredericksburg",
+   "state": "VA",
+   "tv": 8.101
   },
   "99506": {
    "height": "6' 2\"",
    "club": "Vero Beach Beach Club (VBVB)",
    "city": "Vero Beach",
    "state": "FL",
-   "tv": 8.072
+   "tv": 8.071
   },
   "105341": {
    "height": "5' 7\"",
    "club": "Sports Edge Beach",
    "city": "Jacksonville Beach",
    "state": "FL",
-   "tv": 8.069
+   "tv": 8.068
   },
   "84161": {
    "height": "6' 0\"",
    "club": "Jaja Beach",
    "city": "Arnold",
    "state": "MO",
-   "tv": 8.026
-  },
-  "161398": {
-   "height": "5' 10\"",
-   "club": "WAVE Beach",
-   "city": "Del Mar",
-   "state": "CA",
    "tv": 8.026
   },
   "25347": {
@@ -328,19 +328,19 @@
    "state": "KY",
    "tv": 8.026
   },
+  "161398": {
+   "height": "5' 10\"",
+   "club": "WAVE Beach",
+   "city": "Del Mar",
+   "state": "CA",
+   "tv": 8.025
+  },
   "42463": {
    "height": "5' 6\"",
    "club": "Dakine Beach Volleyball Club",
    "city": "Tumwater ",
    "state": "WA",
    "tv": 8.002
-  },
-  "146170": {
-   "height": null,
-   "club": "108 Beach Volleyball Club",
-   "city": "Fredericksburg",
-   "state": "VA",
-   "tv": 7.955
   },
   "94909": {
    "height": "5' 11\"",
@@ -354,7 +354,7 @@
    "club": "",
    "city": "Phoenixville ",
    "state": "PA",
-   "tv": 7.916
+   "tv": 7.915
   },
   "29887": {
    "height": "5' 10\"",
@@ -365,7 +365,7 @@
   }
  },
  "population": 1574,
- "rated": 1380,
+ "rated": 1381,
  "cut": {
   "nTop": 7.906,
   "next": 7.851,

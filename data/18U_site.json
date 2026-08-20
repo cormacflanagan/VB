@@ -2,8 +2,8 @@
  "group": "18U",
  "label": "Girls U18",
  "window": [
-  "2025-08-11",
-  "2026-08-11"
+  "2025-08-20",
+  "2026-08-20"
  ],
  "players": [
   {
@@ -12,8 +12,9 @@
    "region": "So. Cal / So. Nevada",
    "club": "Spiker Beach Volleyball Club",
    "height": "6'",
+   "grad": 2027,
    "city": "Laguna Beach, CA",
-   "tv": 9.452,
+   "tv": 9.451,
    "peak": 9.518,
    "w": 361,
    "l": 72,
@@ -99,6 +100,7 @@
    "region": "Puget Sound",
    "club": "Spiker Beach Volleyball Club",
    "height": "6' 0\"",
+   "grad": 2027,
    "city": "Seattle, WA",
    "tv": 9.146,
    "peak": 9.326,
@@ -156,6 +158,7 @@
    "region": "North Texas",
    "club": "Spiker Beach Volleyball Club",
    "height": "6' 2\"",
+   "grad": 2027,
    "city": "Celina, TX",
    "tv": 8.892,
    "peak": 9.529,
@@ -249,12 +252,13 @@
    "region": "Northern California",
    "club": "South Bay Sand",
    "height": "6' 1\"",
+   "grad": 2027,
    "city": "Redondo Beach, CA",
-   "tv": 8.824,
-   "peak": 8.876,
-   "w": 173,
-   "l": 66,
-   "comps": 15,
+   "tv": 8.852,
+   "peak": 8.988,
+   "w": 176,
+   "l": 68,
+   "comps": 16,
    "cells": {
     "34180:125823": {
      "f": 1,
@@ -307,74 +311,18 @@
    }
   },
   {
-   "name": "Simrin Adams",
-   "id": 25289,
-   "region": "So. Cal / So. Nevada",
-   "club": "Spiker Beach Volleyball Club",
-   "height": "5' 9\"",
-   "city": "Long Beach, CA",
-   "tv": 8.722,
-   "peak": 8.93,
-   "w": 364,
-   "l": 117,
-   "comps": 22,
-   "cells": {
-    "34180:125823": {
-     "f": 1,
-     "partners": [
-      "Sienna Castillo"
-     ]
-    },
-    "36451:133267": {
-     "f": 5,
-     "partners": [
-      "Sienna Castillo"
-     ]
-    },
-    "34243:126054": {
-     "f": 5,
-     "partners": [
-      "Sandie Souza"
-     ]
-    },
-    "31567:117695": {
-     "f": 9,
-     "partners": [
-      "Abby King"
-     ]
-    },
-    "39469:144760": {
-     "f": 5,
-     "partners": [
-      "Sienna Castillo"
-     ]
-    },
-    "31527:117546": {
-     "f": 5,
-     "partners": [
-      "JoJo Wilson"
-     ]
-    },
-    "33620:124248": {
-     "f": 3,
-     "partners": [
-      "Sienna Castillo"
-     ]
-    }
-   }
-  },
-  {
    "name": "Sadie Stafford",
    "id": 147394,
    "region": "Old Dominion",
    "club": "757 Beach",
    "height": "6' 0\"",
+   "grad": 2028,
    "city": "NORFOLK, VA",
    "tv": 8.703,
-   "peak": 8.723,
+   "peak": 8.722,
    "w": 353,
    "l": 93,
-   "comps": 22,
+   "comps": 23,
    "cells": {
     "34180:125823": {
      "f": 3,
@@ -432,9 +380,10 @@
    "region": "Aloha",
    "club": "Outrigger Canoe Club Girls Beach Volleyball",
    "height": "5' 10\"",
+   "grad": 2028,
    "city": "Wailuku, HI",
-   "tv": 8.645,
-   "peak": 8.645,
+   "tv": 8.644,
+   "peak": 8.644,
    "w": 263,
    "l": 110,
    "comps": 11,
@@ -501,9 +450,10 @@
    "region": "Heart of America",
    "club": "P4:13 Beach",
    "height": "6' 1\"",
+   "grad": 2028,
    "city": "Wichita , KS",
    "tv": 8.643,
-   "peak": 8.826,
+   "peak": 8.825,
    "w": 248,
    "l": 76,
    "comps": 16,
@@ -582,8 +532,9 @@
    "region": "Florida",
    "club": "MBsand",
    "height": "6'",
+   "grad": 2028,
    "city": "Boca Raton, FL",
-   "tv": 8.549,
+   "tv": 8.548,
    "peak": 8.649,
    "w": 348,
    "l": 149,
@@ -663,8 +614,9 @@
    "region": "Aloha",
    "club": "Outrigger Canoe Club Girls Beach Volleyball",
    "height": "6'",
+   "grad": 2027,
    "city": "Honolulu , HI",
-   "tv": 8.455,
+   "tv": 8.454,
    "peak": 8.554,
    "w": 196,
    "l": 98,
@@ -721,16 +673,75 @@
    }
   },
   {
+   "name": "Simrin Adams",
+   "id": 25289,
+   "region": "So. Cal / So. Nevada",
+   "club": "Spiker Beach Volleyball Club",
+   "height": "5' 9\"",
+   "grad": 2027,
+   "city": "Long Beach, CA",
+   "tv": 8.214,
+   "peak": 8.93,
+   "w": 364,
+   "l": 123,
+   "comps": 24,
+   "cells": {
+    "34180:125823": {
+     "f": 1,
+     "partners": [
+      "Sienna Castillo"
+     ]
+    },
+    "36451:133267": {
+     "f": 5,
+     "partners": [
+      "Sienna Castillo"
+     ]
+    },
+    "34243:126054": {
+     "f": 5,
+     "partners": [
+      "Sandie Souza"
+     ]
+    },
+    "31567:117695": {
+     "f": 9,
+     "partners": [
+      "Abby King"
+     ]
+    },
+    "39469:144760": {
+     "f": 5,
+     "partners": [
+      "Sienna Castillo"
+     ]
+    },
+    "31527:117546": {
+     "f": 5,
+     "partners": [
+      "JoJo Wilson"
+     ]
+    },
+    "33620:124248": {
+     "f": 3,
+     "partners": [
+      "Sienna Castillo"
+     ]
+    }
+   }
+  },
+  {
    "name": "Jordyn Wilson",
    "id": 23868,
    "region": "So. Cal / So. Nevada",
    "club": "Spiker Beach Volleyball Club",
    "height": "5' 10\"",
+   "grad": 2027,
    "city": "Colton, CA",
-   "tv": 8.103,
+   "tv": 8.068,
    "peak": 8.38,
-   "w": 416,
-   "l": 178,
+   "w": 419,
+   "l": 180,
    "comps": 23,
    "cells": {
     "34180:125823": {
@@ -813,12 +824,13 @@
    "region": "Gateway",
    "club": "Jaja Beach",
    "height": "6' 0\"",
+   "grad": 2028,
    "city": "Arnold, MO",
    "tv": 8.026,
    "peak": 8.163,
    "w": 148,
    "l": 60,
-   "comps": 11,
+   "comps": 9,
    "cells": {
     "34180:125823": {
      "f": 9,
@@ -864,6 +876,7 @@
    "region": "So. Cal / So. Nevada",
    "club": "Spiker Beach Volleyball Club",
    "height": "5' 11\"",
+   "grad": 2028,
    "city": "San Juan Capistrano, CA",
    "tv": 7.952,
    "peak": 8.254,
@@ -1129,6 +1142,29 @@
   }
  ],
  "pairs": [
+  {
+   "key": "40877:149607",
+   "tid": 40877,
+   "tdId": 149607,
+   "event": "8/16/26, Ocean Park, Santa Monica",
+   "short": "8/16/26, Ocean Park",
+   "division": "Womens Open",
+   "field": 30,
+   "date": "2026-08-16",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Sienna Castillo",
+     "id": 29854,
+     "f": 9
+    },
+    {
+     "name": "Simrin Adams",
+     "id": 25289,
+     "f": 25
+    }
+   ]
+  },
   {
    "key": "33876:124946",
    "tid": 33876,
@@ -1705,9 +1741,9 @@
    ]
   }
  ],
- "totalComps": 103,
- "totalEvents": 87,
- "totalEntries": 222,
+ "totalComps": 104,
+ "totalEvents": 88,
+ "totalEntries": 224,
  "droppedTeam": 40,
  "thresh": 3,
  "population": null,

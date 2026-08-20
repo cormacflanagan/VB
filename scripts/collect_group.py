@@ -5,7 +5,7 @@
 Writes <group>_clean.json (raw retrieved records) and <group>_site.json (render input).
 Each (event, division) pair is treated as a separate competition.
 """
-import json, sys, time, urllib.request, re
+import json, os, sys, time, urllib.request, re
 from collections import defaultdict
 from rosters import GROUPS, WINDOW
 
@@ -37,7 +37,9 @@ def req(path, data=None):
             time.sleep(2 ** a)
 
 
-SHORT_OVERRIDES = json.load(open("shortnames.json"))
+# beside this file, not beside the caller: the collector runs from the data directory
+SHORT_OVERRIDES = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                              "shortnames.json")))
 SUBS = [
     (r"^\d{4}[/-]?\d{0,2}\s+", ""), (r"^\d+(st|nd|rd|th)\s+", ""),
     (r"\bChampionships\b", "Champs"), (r"\bChampionship\b", "Champ"),

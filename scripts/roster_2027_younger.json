@@ -42,19 +42,14 @@
    "CA"
   ],
   [
-   "Sandie Souza",
-   2771,
-   "CA"
-  ],
-  [
-   "Simrin Adams",
-   25289,
-   "CA"
-  ],
-  [
    "Sadie Stafford",
    147394,
    "VA"
+  ],
+  [
+   "Haisley Flanagan",
+   64896,
+   "CA"
   ],
   [
    "Milaniakai Padilla",
@@ -67,11 +62,6 @@
    "KS"
   ],
   [
-   "Haisley Flanagan",
-   64896,
-   "CA"
-  ],
-  [
    "JoJo Wilson",
    59914,
    "CA"
@@ -82,13 +72,13 @@
    "CA"
   ],
   [
-   "Madison Gillinger",
-   99596,
+   "Sandie Souza",
+   2771,
    "CA"
   ],
   [
-   "Thalia Lindahl",
-   44267,
+   "Madison Gillinger",
+   99596,
    "CA"
   ],
   [
@@ -102,8 +92,18 @@
    "CA"
   ],
   [
+   "Breeze Johnson",
+   84049,
+   "VA"
+  ],
+  [
    "Abby King",
    26871,
+   "CA"
+  ],
+  [
+   "Thalia Lindahl",
+   44267,
    "CA"
   ],
   [
@@ -122,18 +122,18 @@
    "FL"
   ],
   [
-   "Addison Choi",
-   5160,
+   "Lerin Rosenthal",
+   5973,
    "CA"
-  ],
-  [
-   "Breeze Johnson",
-   84049,
-   "VA"
   ],
   [
    "Brooke Proctor",
    91896,
+   "CA"
+  ],
+  [
+   "Sammy Nammack",
+   53164,
    "CA"
   ],
   [
@@ -157,13 +157,13 @@
    "TX"
   ],
   [
-   "Summer Tukua",
-   53120,
+   "Ella Dueck",
+   4517,
    "CA"
   ],
   [
-   "Ella Dueck",
-   4517,
+   "Summer Tukua",
+   53120,
    "CA"
   ],
   [
@@ -187,6 +187,11 @@
    "FL"
   ],
   [
+   "Addison Choi",
+   5160,
+   "CA"
+  ],
+  [
    "Eden Cisneros",
    98425,
    "CA"
@@ -197,14 +202,14 @@
    "VA"
   ],
   [
-   "Dreya Scherfenberg",
-   2048,
-   "MO"
-  ],
-  [
    "Milan Hendrickson",
    22857,
    "CA"
+  ],
+  [
+   "Dreya Scherfenberg",
+   2048,
+   "MO"
   ],
   [
    "London Merchant",
@@ -217,11 +222,6 @@
    "FL"
   ],
   [
-   "Lerin Rosenthal",
-   5973,
-   "CA"
-  ],
-  [
    "Claire Hanson",
    148640,
    "NC"
@@ -232,13 +232,13 @@
    "AL"
   ],
   [
-   "Sammy Nammack",
-   53164,
+   "Allyn Hilt",
+   40933,
    "CA"
   ],
   [
-   "Allyn Hilt",
-   40933,
+   "Simrin Adams",
+   25289,
    "CA"
   ],
   [
@@ -257,11 +257,6 @@
    "TX"
   ],
   [
-   "Ella Buchanan",
-   98125,
-   "CA"
-  ],
-  [
    "Lia Ray",
    25298,
    "FL"
@@ -270,6 +265,11 @@
    "Paloma Smith",
    17491,
    "TX"
+  ],
+  [
+   "Ella Buchanan",
+   98125,
+   "CA"
   ],
   [
    "Danica  Waterman",
@@ -292,14 +292,14 @@
    "CA"
   ],
   [
-   "Jordyn Wilson",
-   23868,
-   "CA"
-  ],
-  [
    "Giani Boerner",
    170641,
    "MA"
+  ],
+  [
+   "Kendal Walker",
+   146170,
+   "VA"
   ]
  ],
  "meta": {
@@ -308,7 +308,7 @@
    "club": "Bevolley Academy",
    "city": "St Pete Beach ",
    "state": "FL",
-   "tv": 10.17,
+   "tv": 10.196,
    "grad": 2027
   },
   "8426": {
@@ -316,7 +316,7 @@
    "club": "Spiker Beach Volleyball Club",
    "city": "Laguna Beach",
    "state": "CA",
-   "tv": 9.452,
+   "tv": 9.451,
    "grad": 2027
   },
   "24515": {
@@ -356,7 +356,7 @@
    "club": "South Bay Sand",
    "city": "Redondo Beach",
    "state": "CA",
-   "tv": 8.824,
+   "tv": 8.852,
    "grad": 2027
   },
   "22544": {
@@ -367,22 +367,6 @@
    "tv": 8.822,
    "grad": 2028
   },
-  "2771": {
-   "height": "5' 11\"",
-   "club": "Spiker Beach Volleyball Club",
-   "city": "Riverside",
-   "state": "CA",
-   "tv": 8.724,
-   "grad": 2027
-  },
-  "25289": {
-   "height": "5' 9\"",
-   "club": "Spiker Beach Volleyball Club",
-   "city": "Long Beach",
-   "state": "CA",
-   "tv": 8.722,
-   "grad": 2027
-  },
   "147394": {
    "height": "6' 0\"",
    "club": "757 Beach",
@@ -391,12 +375,20 @@
    "tv": 8.703,
    "grad": 2028
   },
+  "64896": {
+   "height": "5' 9\"",
+   "club": "Santa Cruz Beach Volleyball Club",
+   "city": "Santa Cruz",
+   "state": "CA",
+   "tv": 8.696,
+   "grad": 2028
+  },
   "95165": {
    "height": "5' 10\"",
    "club": "Outrigger Canoe Club Girls Beach Volleyball",
    "city": "Wailuku",
    "state": "HI",
-   "tv": 8.645,
+   "tv": 8.644,
    "grad": 2028
   },
   "91052": {
@@ -405,14 +397,6 @@
    "city": "Wichita ",
    "state": "KS",
    "tv": 8.643,
-   "grad": 2028
-  },
-  "64896": {
-   "height": "5' 9\"",
-   "club": "Santa Cruz Beach Volleyball Club",
-   "city": "Santa Cruz",
-   "state": "CA",
-   "tv": 8.614,
    "grad": 2028
   },
   "59914": {
@@ -428,31 +412,31 @@
    "club": "WAVE Beach",
    "city": "RCHO SANTA FE",
    "state": "CA",
-   "tv": 8.572,
+   "tv": 8.571,
    "grad": 2029
+  },
+  "2771": {
+   "height": "5' 11\"",
+   "club": "Spiker Beach Volleyball Club",
+   "city": "Riverside",
+   "state": "CA",
+   "tv": 8.553,
+   "grad": 2027
   },
   "99596": {
    "height": "5' 11\"",
    "club": "Spiker Beach Volleyball Club",
    "city": "Huntington Beach",
    "state": "CA",
-   "tv": 8.553,
+   "tv": 8.552,
    "grad": 2028
-  },
-  "44267": {
-   "height": "5' 11\"",
-   "club": "Spiker Beach Volleyball Club",
-   "city": "Rancho Palos Verdes",
-   "state": "CA",
-   "tv": 8.549,
-   "grad": 2027
   },
   "84725": {
    "height": "6'",
    "club": "MBsand",
    "city": "Boca Raton",
    "state": "FL",
-   "tv": 8.549,
+   "tv": 8.548,
    "grad": 2028
   },
   "91897": {
@@ -463,12 +447,28 @@
    "tv": 8.539,
    "grad": 2028
   },
+  "84049": {
+   "height": "6'",
+   "club": "BRVA Beach",
+   "city": "Winchester ",
+   "state": "VA",
+   "tv": 8.501,
+   "grad": 2028
+  },
   "26871": {
    "height": "6' 1\"",
    "club": "Golden gate volleyball",
    "city": "Richmond",
    "state": "CA",
-   "tv": 8.467,
+   "tv": 8.466,
+   "grad": 2027
+  },
+  "44267": {
+   "height": "5' 11\"",
+   "club": "Spiker Beach Volleyball Club",
+   "city": "Rancho Palos Verdes",
+   "state": "CA",
+   "tv": 8.463,
    "grad": 2027
   },
   "61785": {
@@ -476,7 +476,7 @@
    "club": "Outrigger Canoe Club Girls Beach Volleyball",
    "city": "Honolulu ",
    "state": "HI",
-   "tv": 8.455,
+   "tv": 8.454,
    "grad": 2027
   },
   "66728": {
@@ -495,21 +495,13 @@
    "tv": 8.452,
    "grad": 2027
   },
-  "5160": {
-   "height": "5' 7\"",
+  "5973": {
+   "height": "5' 11\"",
    "club": "MBsand",
-   "city": "Redondo Beach",
+   "city": "Hermosa Beach",
    "state": "CA",
-   "tv": 8.45,
+   "tv": 8.442,
    "grad": 2027
-  },
-  "84049": {
-   "height": "6'",
-   "club": "BRVA Beach",
-   "city": "Winchester ",
-   "state": "VA",
-   "tv": 8.438,
-   "grad": 2028
   },
   "91896": {
    "height": "6'",
@@ -519,12 +511,20 @@
    "tv": 8.429,
    "grad": 2029
   },
+  "53164": {
+   "height": "5' 9\"",
+   "club": "MBsand",
+   "city": "Manhattan Beach",
+   "state": "CA",
+   "tv": 8.411,
+   "grad": 2027
+  },
   "26984": {
    "height": "5' 10\"",
    "club": "Golden Gate volleyball",
    "city": "Greenbrae",
    "state": "CA",
-   "tv": 8.406,
+   "tv": 8.405,
    "grad": 2027
   },
   "25288": {
@@ -551,14 +551,6 @@
    "tv": 8.37,
    "grad": 2029
   },
-  "53120": {
-   "height": "6' 0\"",
-   "club": "WAVE Beach",
-   "city": "Temecula",
-   "state": "CA",
-   "tv": 8.357,
-   "grad": 2028
-  },
   "4517": {
    "height": "5' 9\"",
    "club": "MBsand",
@@ -566,6 +558,14 @@
    "state": "CA",
    "tv": 8.354,
    "grad": 2027
+  },
+  "53120": {
+   "height": "6' 0\"",
+   "club": "WAVE Beach",
+   "city": "Temecula",
+   "state": "CA",
+   "tv": 8.354,
+   "grad": 2028
   },
   "68351": {
    "height": "6' 0\"",
@@ -588,7 +588,7 @@
    "club": "Club W",
    "city": "Carolina Beach",
    "state": "NC",
-   "tv": 8.324,
+   "tv": 8.323,
    "grad": 2028
   },
   "24727": {
@@ -597,6 +597,14 @@
    "city": "Port St Lucie",
    "state": "FL",
    "tv": 8.322,
+   "grad": 2027
+  },
+  "5160": {
+   "height": "5' 7\"",
+   "club": "MBsand",
+   "city": "Redondo Beach",
+   "state": "CA",
+   "tv": 8.318,
    "grad": 2027
   },
   "98425": {
@@ -612,15 +620,7 @@
    "club": "757 Beach",
    "city": "Virginia Beach",
    "state": "VA",
-   "tv": 8.301,
-   "grad": 2028
-  },
-  "2048": {
-   "height": "5' 6\"",
-   "club": "P4:13 Beach",
-   "city": "Harrisonville",
-   "state": "MO",
-   "tv": 8.283,
+   "tv": 8.3,
    "grad": 2028
   },
   "22857": {
@@ -631,12 +631,20 @@
    "tv": 8.283,
    "grad": 2028
   },
+  "2048": {
+   "height": "5' 6\"",
+   "club": "P4:13 Beach",
+   "city": "Harrisonville",
+   "state": "MO",
+   "tv": 8.282,
+   "grad": 2028
+  },
   "17437": {
    "height": "5' 10\"",
    "club": "Independent",
    "city": "Frisco",
    "state": "TX",
-   "tv": 8.269,
+   "tv": 8.268,
    "grad": 2027
   },
   "56781": {
@@ -645,14 +653,6 @@
    "city": "Tallahassee",
    "state": "FL",
    "tv": 8.268,
-   "grad": 2027
-  },
-  "5973": {
-   "height": "5' 11\"",
-   "club": "MBsand",
-   "city": "Hermosa Beach",
-   "state": "CA",
-   "tv": 8.265,
    "grad": 2027
   },
   "148640": {
@@ -668,16 +668,8 @@
    "club": "MVP Beach ",
    "city": "Spanish Fort",
    "state": "AL",
-   "tv": 8.228,
+   "tv": 8.227,
    "grad": 2028
-  },
-  "53164": {
-   "height": "5' 9\"",
-   "club": "MBsand",
-   "city": "Manhattan Beach",
-   "state": "CA",
-   "tv": 8.221,
-   "grad": 2027
   },
   "40933": {
    "height": "6' 1\"",
@@ -685,6 +677,14 @@
    "city": "Hermosa Beach",
    "state": "CA",
    "tv": 8.22,
+   "grad": 2027
+  },
+  "25289": {
+   "height": "5' 9\"",
+   "club": "Spiker Beach Volleyball Club",
+   "city": "Long Beach",
+   "state": "CA",
+   "tv": 8.214,
    "grad": 2027
   },
   "48567": {
@@ -711,14 +711,6 @@
    "tv": 8.184,
    "grad": 2027
   },
-  "98125": {
-   "height": "6'",
-   "club": "SLOVBC",
-   "city": "San Luis Obispo",
-   "state": "CA",
-   "tv": 8.184,
-   "grad": 2028
-  },
   "25298": {
    "height": "5' 10\"",
    "club": "Optimum Beach",
@@ -732,8 +724,16 @@
    "club": "692 Beach Volleyball Club- Texas",
    "city": "Wylie",
    "state": "TX",
-   "tv": 8.154,
+   "tv": 8.153,
    "grad": 2027
+  },
+  "98125": {
+   "height": "6'",
+   "club": "SLOVBC",
+   "city": "San Luis Obispo",
+   "state": "CA",
+   "tv": 8.149,
+   "grad": 2028
   },
   "94563": {
    "height": "5' 11\"",
@@ -764,16 +764,8 @@
    "club": "Spiker Beach Volleyball Club",
    "city": "Yorba Linda",
    "state": "CA",
-   "tv": 8.105,
+   "tv": 8.104,
    "grad": 2028
-  },
-  "23868": {
-   "height": "5' 10\"",
-   "club": "Spiker Beach Volleyball Club",
-   "city": "Colton",
-   "state": "CA",
-   "tv": 8.103,
-   "grad": 2027
   },
   "170641": {
    "height": "5' 11\"",
@@ -782,18 +774,26 @@
    "state": "MA",
    "tv": 8.102,
    "grad": 2027
+  },
+  "146170": {
+   "height": null,
+   "club": "108 Beach Volleyball Club",
+   "city": "Fredericksburg",
+   "state": "VA",
+   "tv": 8.101,
+   "grad": 2028
   }
  },
  "population": 17178,
- "rated": 14398,
+ "rated": 14400,
  "cut": {
-  "nTop": 8.102,
+  "nTop": 8.101,
   "next": 8.072,
-  "nextName": "Taylie Hansen"
+  "nextName": "Edie Joseph"
  },
  "classes": {
-  "2027": 32,
-  "2028": 20,
+  "2027": 31,
+  "2028": 21,
   "2029": 6,
   "2030": 2
  }
