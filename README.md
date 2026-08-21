@@ -386,6 +386,33 @@ partner is often *not* in the group — Kendal Walker has 14 competitions with E
 no in-group partnership at all — the summary table marks out-of-group partners rather than
 hiding them.
 
+## One player's career
+
+`scripts/history.py <id or name>` prints a single player's whole record rather than the
+twelve-month window the group reports use — results by year with median finish, the mix of
+junior against adult divisions, every podium in an 18U-or-older draw, the biggest fields
+ever won, and the partner history. It writes `data/history_<id>.json` alongside.
+
+The adult-field share is the column that carries the signal. A junior on the way up is
+usually one who started entering older draws a year or two before she could win them, and
+that shows here as a rising adult share with a *worsening* median finish, one to two
+seasons ahead of the year the results arrive.
+
+Two worked examples, both age-aligned rather than grade-aligned (Thais Treumann is 14
+months older within her class, so comparing by graduating year flatters her):
+
+| Age | Thais Treumann (2027) | Haisley Flanagan (2028) |
+| --- | --- | --- |
+| 13 | 5 wins/16, median 2nd, 18% adult | 4 events, 14U only, no podiums, median 13th |
+| 14 | 6 wins/16, median 3rd, 50% adult | 3 wins/16, median 3rd, 6% adult |
+| 15 | 13 wins/20, median 1st, 50% adult | 8 wins/20, median 2nd, 30% adult |
+| 16 | 8 wins/14, 92% adult | 2 wins/11, 36% adult |
+
+Treumann's inflection was the spring of 2024 at fifteen — a 127-team 18U national qualifier
+won outright, then a Pro-division podium at Pottstown — and it followed eighteen months of
+deliberately entering fields she was losing. Flanagan's 2023 has the same shape and her
+2025 the same turn, roughly a year later on results and two on adult exposure.
+
 ## Olympic height and weight
 
 `scripts/olympedia.py` scrapes [Olympedia](https://www.olympedia.org) for the anthropometry of
