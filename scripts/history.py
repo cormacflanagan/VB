@@ -79,7 +79,8 @@ def history(pid):
     ev = [{"date": t["date"][:10], "name": t["tournament"].strip(),
            "div": (t.get("division") or "").strip(), "finish": t.get("finish"),
            "field": field.get(t.get("tdId")),
-           "partners": [p["name"] for p in (t.get("partners") or [])]}
+           "partners": [p["name"] for p in (t.get("partners") or [])],
+           "pids": [p.get("id") for p in (t.get("partners") or [])]}
           for t in tours]
     return pr, [e for e in ev if len(e["partners"]) == PAIRS and e["finish"]]
 
@@ -130,8 +131,52 @@ def report(pr, ev):
         print(f"  {c:>2}  {nm:26s} {min(d)} .. {max(d)}")
 
 
+def placing(e):
+    """Finish as a percentage of the field beaten: a win is 100, last is 0.
+
+    Beach draws share finishes -- everyone knocked out in the same round gets the same
+    number -- so a 5th in a draw of 20 is really 5th-8th and this reads a shade low.
+    """
+    f = e["field"]
+    return None if not f or f < 2 else 100 * (1 - (e["finish"] - 1) / (f - 1))
+
+
+def partners(ev, since=None):
+    """Results grouped by partner. Field size is the column that matters: percentage
+    placing flatters a good result in a small local draw, so it is shown next to the
+    median field rather than on its own."""
+    import statistics as st
+    sel = [e for e in ev if not since or e["date"] >= since]
+    tv = {}
+    for pid in {e["pids"][0] for e in sel if e["pids"][0]}:
+        r = get(f"/playerprofile/{pid}/truvolley") or {}
+        p = get(f"/playerprofile/{pid}") or {}
+        tv[pid] = (r.get("truVolley"), p.get("gradYear"), p.get("height"))
+        time.sleep(0.1)
+
+    groups = defaultdict(list)
+    for e in sel:
+        groups[e["partners"][0]].append(e)
+    print(f"\nby partner{' since ' + since if since else ''}"
+          f"  ({len(sel)} entries, {len(groups)} partners)")
+    print(f"  {'PARTNER':24}{'N':>3}{'WIN':>4}{'POD':>4}{'MED':>5}{'FIELD':>6}{'PLACE':>7}"
+          f"{'TV':>7}{'GRAD':>6}  RANGE")
+    rank = lambda g: -st.median(x["field"] or 0 for x in g)
+    for nm, g in sorted(groups.items(), key=lambda kv: (rank(kv[1]), -len(kv[1]))):
+        pl = [placing(e) for e in g if placing(e) is not None]
+        t, gr, _ = tv.get(g[0]["pids"][0], (None, None, None))
+        print(f"  {nm[:23]:24}{len(g):>3}{sum(1 for e in g if e['finish'] == 1):>4}"
+              f"{sum(1 for e in g if e['finish'] <= 3):>4}"
+              f"{st.median(e['finish'] for e in g):>5.0f}"
+              f"{st.median([e['field'] for e in g if e['field']] or [0]):>6.0f}"
+              f"{(st.mean(pl) if pl else 0):>6.0f}%{str(t or '-'):>7}{str(gr or '-'):>6}  "
+              f"{min(e['date'] for e in g)}..{max(e['date'] for e in g)}")
+
+
 if __name__ == "__main__":
     pid = resolve(sys.argv[1] if len(sys.argv) > 1 else "64896")
     pr, ev = history(pid)
     json.dump(ev, open(os.path.join(DATA, f"history_{pid}.json"), "w"), indent=1)
     report(pr, ev)
+    partners(ev)
+    partners(ev, since=sys.argv[2] if len(sys.argv) > 2 else None)
