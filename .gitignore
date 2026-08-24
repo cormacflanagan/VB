@@ -13,3 +13,4 @@ data/tvcache.json
 # committing snapshots of them would put hundreds of megabytes of intermediate state in
 # the history. Removed from here and committed once, compressed, when the crawl completes.
 data/vb/
+data/cbva/
