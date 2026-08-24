@@ -68,12 +68,16 @@ def conf(argv):
 def load(c):
     """Match rows -> arrays. Returns (index, a1,a2,b1,b2, y, w, train_mask)."""
     path = os.path.join(DATA, "matches.jsonl")
+    opener = open
+    if not os.path.exists(path) and os.path.exists(path + ".gz"):
+        import gzip
+        path, opener = path + ".gz", lambda f: gzip.open(f, "rt")
     # date.fromisoformat rather than time.strptime: scripts/calendar.py shadows the
     # stdlib calendar module on this path, and strptime imports it
     asof = c["asof"] or datetime.date.today().isoformat()
     t_asof = datetime.date.fromisoformat(asof).toordinal()
     rows, old, future = [], 0, 0
-    with open(path) as fh:
+    with opener(path) as fh:
         for line in fh:
             m = json.loads(line)
             if len(m["a"]) != 2 or len(m["b"]) != 2 or not m["date"]:
