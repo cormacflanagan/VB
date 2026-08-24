@@ -8,3 +8,8 @@ final.json
 node_modules/
 data/cohortexpanded*.json
 data/tvcache.json
+
+# the full-index crawl, while it is running: these files are appended to for hours and
+# committing snapshots of them would put hundreds of megabytes of intermediate state in
+# the history. Removed from here and committed once, compressed, when the crawl completes.
+data/vb/
