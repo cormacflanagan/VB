@@ -8,3 +8,8 @@ final.json
 node_modules/
 data/cohortexpanded*.json
 data/tvcache.json
+# the match corpus and its crawl checkpoints: large, and rebuilt by
+# scripts/matchdump.py in about half an hour
+data/matches.jsonl
+data/matchesdone.json
+data/seedschedule.json
