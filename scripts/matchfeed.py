@@ -17,6 +17,9 @@ import json, os, sys, time, urllib.request
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from jsonl import read as read_jsonl
+
 API = "https://api-v8.volleyballlife.com"
 HDRS = {"User-Agent": "Mozilla/5.0", "Accept": "application/json",
         "Content-Type": "application/json"}
@@ -41,17 +44,14 @@ def post(path, body, tries=4):
 def targets(since):
     """tournament -> the doubles players to ask about, newest tournaments first."""
     doubles = set()
-    for line in open(os.path.join(VB, "divisions.jsonl")):
-        d = json.loads(line)
+    for d in read_jsonl(os.path.join(VB, "divisions.jsonl")):
         if d.get("players") == 2 and not d.get("canceled"):
             doubles.add(d["tdId"])
     when = {}
-    for line in open(os.path.join(VB, "tournaments.jsonl")):
-        t = json.loads(line)
+    for t in read_jsonl(os.path.join(VB, "tournaments.jsonl")):
         when[t["id"]] = t.get("start") or ""
     by = defaultdict(set)
-    for line in open(os.path.join(VB, "teams.jsonl")):
-        tm = json.loads(line)
+    for tm in read_jsonl(os.path.join(VB, "teams.jsonl")):
         if tm["tdId"] in doubles and not tm.get("drop"):
             by[tm["tid"]].update(tm["p"])
     out = {t: sorted(p) for t, p in by.items()
@@ -91,10 +91,9 @@ def main(argv):
     donep = os.path.join(VB, "matchdone.json")
     done = set(json.load(open(donep))) if os.path.exists(donep) else set()
     seen = set()
-    if os.path.exists(out):
-        with open(out) as fh:
-            for line in fh:
-                seen.add(json.loads(line)["id"])
+    if os.path.exists(out) or os.path.exists(out + ".gz"):
+        for m in read_jsonl(out):
+            seen.add(m["id"])
     # newest first: if this is ever cut short, the recent seasons are the ones that matter
     todo = sorted((t for t in tgt if t not in done), key=lambda t: when.get(t, ""),
                   reverse=True)
