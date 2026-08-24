@@ -134,7 +134,11 @@ def division(td, roster):
         # completed sets; filtering on status silently discarded every earlier season.
         if not a or not b or not m.get("winnerId"):
             return
-        row = {"id": f"{phase[0]}{m['id']}", "date": td["date"],
+        # "Pool" and "Playoff" share a first letter, and pool and playoff match ids are
+        # separate sequences that overlap, so phase[0] collided 4,310 rows onto 3,000-odd
+        # ids. Namespace them explicitly.
+        tag = "cbp" if phase == "Pool" else "cbk"
+        row = {"id": f"{tag}{m['id']}", "date": td["date"],
                "a": a, "b": b, "aWon": m["winnerId"] == m.get("teamAId"),
                "sets": sets_of(m), "tid": td["tid"], "tdId": td["tdId"],
                "phase": phase, "forfeit": bool(m.get("forfeitTeamId")),
@@ -173,6 +177,16 @@ def main(argv):
     print(f"{len(divs)} women's/coed doubles divisions already played, "
           f"{len(done)} done, {len(todo)} to go", flush=True)
 
+    # matches.jsonl is appended and the checkpoint is written every hundred divisions, so
+    # a run killed mid-batch re-does up to a hundred divisions and appends them twice.
+    # Holding the ids already on disk keeps a resume from duplicating them.
+    written = set()
+    mp = os.path.join(OUT, "matches.jsonl")
+    if os.path.exists(mp):
+        with open(mp) as fh:
+            for line in fh:
+                written.add(json.loads(line)["id"])
+
     roster = {}
     rp = os.path.join(OUT, "players.jsonl")
     if os.path.exists(rp):
@@ -191,9 +205,11 @@ def main(argv):
                 trows, mrows = res
                 for r in trows:
                     ft.write(json.dumps(r) + "\n")
-                for r in mrows:
+                fresh = [r for r in mrows if r["id"] not in written]
+                for r in fresh:
+                    written.add(r["id"])
                     fm.write(json.dumps(r) + "\n")
-                nm += len(mrows)
+                nm += len(fresh)
                 done.add(td["tdId"])
                 n += 1
                 if n % 100 == 0:
