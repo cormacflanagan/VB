@@ -441,6 +441,17 @@ opposition rated under 7.0, where she is 192&#8211;28. For scale, 7.0 is already
 percentile of the 33,024 players with twenty or more observations, so this is a gap inside
 the top 1%.
 
+**Two errors worth recording, because one hid the other.** Bracket rounds were being
+read off the order matches printed in rather than off the `round` field, which mislabelled
+a semi-final as a final. That mislabel concealed the real fault: the merge dropped any
+match with an unresolved player, and both of Haisley's 2026 Women's Open finals were
+discarded because one opponent in each was unlinked. Dropping looked like the conservative
+choice and was not &#8212; a match needs all four players to resolve, so the losses concentrate
+exactly where rarely-seen players appear, which is the local adult draw. Unresolved players
+now get a synthetic id instead, recovering 7,864 CBVA and 15,495 college matches, and the
+linker gained a second pass that matches on a name being unique *among the ids playing
+that day*, worth another 508 players.
+
 **A career average is the wrong summary for someone improving.** Split by season, her
 record against teams rated 7.0+ goes 0&#8211;3 in 2024, 7&#8211;9 in 2025, 10&#8211;10 in 2026, while her
 mean opponent climbs 5.33 to 6.41 and her best win rises every year to 8.09 &#8212; a two-point

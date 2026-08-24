@@ -94,6 +94,22 @@ def cbva_teams():
     return out, name
 
 
+def by_date(vbname):
+    """date -> the Volleyball Life ids playing that day, keyed by normalised name."""
+    when = {t["id"]: (t.get("start") or "")[:10]
+            for t in read_jsonl(os.path.join(DATA, "vb", "tournaments.jsonl"))}
+    out = defaultdict(lambda: defaultdict(set))
+    for tm in read_jsonl(os.path.join(DATA, "vb", "teams.jsonl")):
+        d = when.get(tm["tid"])
+        if not d:
+            continue
+        for pid in tm.get("p") or []:
+            n = vbname.get(pid)
+            if n:
+                out[d][n].add(pid)
+    return out
+
+
 def main():
     idx, vbname = vb_teams_by_date()
     teams, cbname = cbva_teams()
@@ -121,6 +137,33 @@ def main():
         else:
             ambiguous[cid] = {"best": vid, "votes": n, "of": total,
                               "candidates": len(c)}
+
+    # Second pass, for players no partnership ever pinned down. Their name only has to
+    # be unique among the ids playing that day, which is a far narrower claim than being
+    # unique in a pool of 292,000 -- and it recovers the one-event player, who is exactly
+    # who turns up in a local adult draw and whose absence kills a whole match.
+    dates = defaultdict(set)
+    for date, cids, _ in teams:
+        for cid in cids:
+            dates[cid].add(date)
+    onday = by_date(vbname)
+    taken = {v["vblId"] for v in link.values()}
+    second = 0
+    for cid, days in dates.items():
+        if cid in link or cid in ambiguous:
+            continue
+        n = cbname.get(cid)
+        hits = Counter()
+        for d in days:
+            for vid in onday.get(d, {}).get(n, ()):
+                if vid not in taken:
+                    hits[vid] += 1
+        if len(hits) == 1:
+            vid, k = hits.most_common(1)[0]
+            link[cid] = {"vblId": vid, "votes": k, "of": k, "pass": 2}
+            taken.add(vid)
+            second += 1
+    print(f"second pass linked {second} more by unique name on a shared date")
 
     seen = set()
     for tm in (json.loads(l) for l in open(os.path.join(DATA, "cbva", "matches.jsonl"))):

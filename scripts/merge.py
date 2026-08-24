@@ -9,10 +9,16 @@ speaking the same ids:
   college          cbvb/player-detail publishes `vblId` for 99% of them
   CBVA             inferred by scripts/cbva_link.py from partnerships on a date
 
-A match is kept only when all four players resolve. Dropping a match because one opponent
-is unresolved is the right trade: a rating fit on a team with a phantom player learns
-nothing about either side, and the alternative -- inventing a node per unresolved id --
-would silently split one player into several.
+An unresolved player gets a synthetic id rather than killing the match. Dropping looked
+like the conservative choice and was not: a match needs all four players to resolve, so
+the losses concentrate wherever a rarely-seen player appears -- which is exactly the local
+adult draw -- and both of Haisley's 2026 Women's Open finals were discarded because one
+opponent in each was unlinked. A synthetic id does risk splitting one real player across
+two nodes, which understates her; but that costs the opponent a little accuracy, where
+dropping costs the result entirely.
+
+Synthetic ids start at SYNTH, far above any real Volleyball Life id, and are namespaced by
+source so the two never collide.
 
 Standings go through the same translation, because half of all tournaments publish a
 finish order and no matches at all.
@@ -25,6 +31,7 @@ from jsonl import read as read_jsonl
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "..", "data")
+SYNTH = {"cbva": 90_000_000, "college": 91_000_000}   # real ids top out near 300,000
 
 
 def cbva_map():
@@ -46,14 +53,22 @@ def college_map():
 
 
 def translate(rows, mp, source, out, stat):
-    """Rewrite both sides into Volleyball Life ids, dropping any match with a gap."""
+    """Rewrite both sides into Volleyball Life ids, minting one for anybody unresolved."""
+    base = SYNTH.get(source, 0)
+
+    def conv(x):
+        if mp is None:
+            return x
+        v = mp.get(x)
+        if v is None:
+            stat[source + " synthetic id"] += 1
+            return base + x
+        return v
+
     for m in rows:
-        a = [mp.get(x) if mp else x for x in m["a"]]
-        b = [mp.get(x) if mp else x for x in m["b"]]
+        a = [conv(x) for x in m["a"]]
+        b = [conv(x) for x in m["b"]]
         stat[source + " seen"] += 1
-        if None in a or None in b:
-            stat[source + " dropped: unresolved player"] += 1
-            continue
         if len(set(a) | set(b)) != 4:
             stat[source + " dropped: repeated player"] += 1
             continue
@@ -62,7 +77,7 @@ def translate(rows, mp, source, out, stat):
             "a": sorted(a), "b": sorted(b), "aWon": bool(m["aWon"]),
             "sets": m.get("sets") or [], "src": source,
             "tid": m.get("tid"), "tdId": m.get("tdId"),
-            "phase": m.get("phase")}) + "\n")
+            "phase": m.get("phase"), "round": m.get("round")}) + "\n")
         stat[source + " kept"] += 1
 
 
