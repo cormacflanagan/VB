@@ -23,7 +23,7 @@ from concurrent.futures import ThreadPoolExecutor
 BASE = "https://cbva.com/api/trpc"
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "..", "data", "cbva")
-WORKERS = 6
+WORKERS = 4
 PAGE = 100
 
 
@@ -128,12 +128,16 @@ def division(td, roster):
 
     def add(m, phase, extra=None):
         a, b = who.get(m.get("teamAId")), who.get(m.get("teamBId"))
-        if not a or not b or m.get("status") != "completed" or not m.get("winnerId"):
+        # Gate on the winner, not on `status`. CBVA left the status of everything before
+        # 2026 as "scheduled" even where the match was played, carries a winnerId and has
+        # completed sets; filtering on status silently discarded every earlier season.
+        if not a or not b or not m.get("winnerId"):
             return
         row = {"id": f"{phase[0]}{m['id']}", "date": td["date"],
                "a": a, "b": b, "aWon": m["winnerId"] == m.get("teamAId"),
                "sets": sets_of(m), "tid": td["tid"], "tdId": td["tdId"],
-               "phase": phase, "forfeit": bool(m.get("forfeitTeamId"))}
+               "phase": phase, "forfeit": bool(m.get("forfeitTeamId")),
+               "status": m.get("status")}
         row.update(extra or {})
         mrows.append(row)
 
