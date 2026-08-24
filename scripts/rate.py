@@ -65,9 +65,13 @@ def conf(argv):
     return c
 
 
-def load(c):
+def load(c, quiet=False):
     """Match rows -> arrays. Returns (index, a1,a2,b1,b2, y, w, train_mask)."""
     path = os.path.join(DATA, "matches.jsonl")
+    opener = open
+    if not os.path.exists(path) and os.path.exists(path + ".gz"):
+        import gzip
+        path, opener = path + ".gz", lambda f: gzip.open(f, "rt")
     opener = open
     if not os.path.exists(path) and os.path.exists(path + ".gz"):
         import gzip
@@ -93,8 +97,11 @@ def load(c):
                 old += 1
                 continue
             rows.append((m, age))
-    print(f"{len(rows)} matches inside the window "
-          f"({old} older than {c['window_days']} days, {future} dated in the future)")
+    say = (lambda *a, **k: None) if quiet else print
+    say(f"{len(rows)} matches inside the window "
+        f"({old} older than {c['window_days']} days, {future} dated in the future)")
+    if not rows:
+        sys.exit("no matches in the window -- widen --window")
     if not rows:
         sys.exit("no matches in the window -- widen --window or wait for the dump")
 
@@ -121,7 +128,7 @@ def load(c):
     d = dict(a1=np.array(A1), a2=np.array(A2), b1=np.array(B1), b2=np.array(B2),
              y=np.array(Y, float), w=np.array(W, float), age=np.array(AGE, float))
     d["train"] = d["age"] > c["holdout_days"]
-    print(f"  {len(d['y'])} observations ({c['unit']} level), {len(ids)} players; "
+    say(f"  {len(d['y'])} observations ({c['unit']} level), {len(ids)} players; "
           f"{int(d['train'].sum())} train / {int((~d['train']).sum())} holdout")
     return ids, ix, d
 
@@ -141,7 +148,7 @@ def team_grad(r, i, j, alpha, g, coef):
         np.add.at(g, j[~lo_i], coef[~lo_i] * (1 - alpha))
 
 
-def fit(n, d, c, mask=None):
+def fit(n, d, c, mask=None, quiet=False):
     m = d["train"] if mask is None else mask
     a1, a2, b1, b2 = d["a1"][m], d["a2"][m], d["b1"][m], d["b2"][m]
     y, w = d["y"][m], d["w"][m]
@@ -161,7 +168,7 @@ def fit(n, d, c, mask=None):
         mom = b1m * mom + (1 - b1m) * g
         vel = b2m * vel + (1 - b2m) * g * g
         r -= lr * (mom / (1 - b1m ** t)) / (np.sqrt(vel / (1 - b2m ** t)) + eps)
-        if t % 200 == 0:
+        if t % 200 == 0 and not quiet:
             ll = -np.sum(w * (y * np.log(p + eps) + (1 - y) * np.log(1 - p + eps)))
             print(f"    iter {t:>4}  weighted log-loss {ll / w.sum():.4f}", flush=True)
     return r
@@ -176,6 +183,51 @@ def score(r, d, c, mask):
     acc = np.mean((p > 0.5) == (y > 0.5))
     brier = np.mean((p - y) ** 2)
     return ll, acc, brier
+
+
+def versus_truvolley(ids, ix, d, r, c, r_all=None):
+    """Score this rating against TruVolley on the same held-out matches.
+
+    Restricted to matches where all four players carry a TruVolley, so the two are judged
+    on identical rows. TruVolley publishes no scale in logits, so it is given its best
+    one: a search for the divisor minimising its own log-loss, which can only flatter it.
+    """
+    meta = names()
+    tv = np.full(len(ids), np.nan)
+    for i, p in enumerate(ids):
+        v = (meta.get(p) or (None, None, None))[2]
+        if v:
+            tv[i] = v
+    ok = ~d["train"]
+    for k in ("a1", "a2", "b1", "b2"):
+        ok = ok & ~np.isnan(tv[d[k]])
+    if ok.sum() < 200:
+        return
+    y = d["y"][ok]
+    diff = (team(tv, d["a1"][ok], d["a2"][ok], 1.0)
+            - team(tv, d["b1"][ok], d["b2"][ok], 1.0))
+    best = None
+    for s_tv in np.arange(0.1, 3.01, 0.02):
+        q = 1.0 / (1.0 + np.exp(-diff / s_tv))
+        ll = -np.mean(y * np.log(q + 1e-9) + (1 - y) * np.log(1 - q + 1e-9))
+        if best is None or ll < best[0]:
+            best = (ll, s_tv, np.mean((q > 0.5) == (y > 0.5)), np.mean((q - y) ** 2))
+    mine = score(r, d, c, ok)
+    seen = score(r_all, d, c, ok) if r_all is not None else None
+    print("")
+    print(f"head to head on {int(ok.sum())} held-out matches where both rate all four:")
+    print(f"  {'':10}{'LOG-LOSS':>10}{'ACCURACY':>10}{'BRIER':>9}")
+    print(f"  {'TruVolley':10}{best[0]:>10.4f}{best[2]:>10.3f}{best[3]:>9.4f}"
+          f"   (at its own best scale, {best[1]:.2f})")
+    print(f"  {'this fit':10}{mine[0]:>10.4f}{mine[1]:>10.3f}{mine[2]:>9.4f}")
+    print(f"  {'gain':10}{best[0] - mine[0]:>+10.4f}{mine[1] - best[2]:>+10.3f}"
+          f"{best[3] - mine[2]:>+9.4f}")
+    print("  TruVolley is quoted as of today, so it has already absorbed these matches;")
+    print("  the fit above has not seen them. The row below removes that advantage by")
+    print("  letting this fit see them too, which is a fairness patch, not a forecast.")
+    if seen:
+        print(f"  {'both seen':10}{seen[0]:>10.4f}{seen[1]:>10.3f}{seen[2]:>9.4f}"
+              f"   ({best[0] - seen[0]:+.4f} vs TruVolley)")
 
 
 def counts(ids, d):
@@ -214,6 +266,7 @@ def main(argv):
 
     print("\n  refitting on everything")
     r = fit(n, d, c, mask=np.ones(len(d["y"]), bool))
+    versus_truvolley(ids, ix, d, r_tr, c, r_all=r)
     nm = counts(ids, d)
 
     # put it on TruVolley's scale so the two are readable side by side: a least-squares

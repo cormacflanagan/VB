@@ -1,8 +1,8 @@
 {
-  "halflife_days": 365,
+  "halflife_days": 0,
   "window_days": 1095,
   "scale": 1.0,
-  "ridge": 2.0,
+  "ridge": 0.25,
   "pair_alpha": 1.0,
   "unit": "match",
   "pool_weight": 1.0,
