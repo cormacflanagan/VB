@@ -435,11 +435,21 @@ better, but that comparison is rigged &#8212; TruVolley is quoted as of today an
 absorbed the matches being predicted. The case for this rating is that it is transparent
 and adjustable, not that it is sharper.
 
+**Ratings are put on the TruVolley scale by a quantile map, not a least-squares line.**
+The line was fitted with r = 0.77 and so regressed toward the mean: the gap between the
+two scales ran &#8722;0.42 at TruVolley 5.5 and widened to &#8722;0.70 at 8.2, flattening strong
+opponents toward the middle and understating every strength-of-schedule number computed
+from it. Matching percentile to percentile instead is monotone &#8212; it reorders nobody &#8212; and
+band edges then mean the same thing on both scales. The residual gap halves and narrows
+with strength rather than widening; what is left is real disagreement between the two
+ratings, not distortion.
+
 **What it measures that a placing cannot is schedule strength.** Haisley ranks 3rd in the
-17U-eligible field on TruVolley and 20th here, because 84% of her matches are against
-opposition rated under 7.0, where she is 192&#8211;28. For scale, 7.0 is already the 97th
-percentile of the 33,024 players with twenty or more observations, so this is a gap inside
-the top 1%.
+17U-eligible field on TruVolley and 21st here. She is 198&#8211;22 against opposition under
+7.0, 23&#8211;14 from 7.0&#8211;7.5 and 10&#8211;11 from 7.5&#8211;8.0 &#8212; roughly even at the level above her
+usual field &#8212; but only 37 of her 261 matches are against 7.0+ opposition at all. For
+scale, 7.0 is the 97th percentile of the players with twenty or more observations, so this
+is a distinction inside the top 1%.
 
 **Two errors worth recording, because one hid the other.** Bracket rounds were being
 read off the order matches printed in rather than off the `round` field, which mislabelled

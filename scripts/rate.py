@@ -331,25 +331,54 @@ def main(argv):
     versus_truvolley(ids, ix, d, r_tr, c, r_all=r)
     nm = counts(ids, d)
 
-    # put it on TruVolley's scale so the two are readable side by side: a least-squares
-    # line through the players who have both, which changes the ranking not at all
+    # Put it on TruVolley's scale. A least-squares line was wrong here: fitted with
+    # r = 0.77 it regresses toward the mean, so the gap ran -0.42 at TruVolley 5.5 and
+    # -0.70 at 8.2 -- strong opponents flattened toward the middle, which understated
+    # every strength-of-schedule number computed from it. A quantile map instead: the
+    # nth percentile of this rating becomes the nth percentile of TruVolley. It is
+    # monotone, so it reorders nobody, and band edges then mean the same on both scales.
     meta = names()
-    have = [(r[i], meta[p][2]) for i, p in enumerate(ids)
-            if p in meta and meta[p][2] and nm[i] >= c["min_matches"]]
-    if len(have) > 30:
-        X = np.array([h[0] for h in have]); Ytv = np.array([h[1] for h in have])
-        slope = np.cov(X, Ytv, bias=True)[0, 1] / X.var()
-        icept = Ytv.mean() - slope * X.mean()
-        corr = np.corrcoef(X, Ytv)[0, 1]
-        print(f"\nmapped onto the TruVolley scale: x{slope:.3f} {icept:+.3f}  "
-              f"(r = {corr:.3f} across {len(have)} players)")
-    else:
-        slope, icept, corr = 1.0, 0.0, float("nan")
+    ref = [(r[i], meta[p][2]) for i, p in enumerate(ids)
+           if p in meta and meta[p][2] and nm[i] >= c["min_matches"]]
+    if len(ref) > 200:
+        X = np.sort(np.array([a for a, _ in ref]))
+        Y = np.sort(np.array([b for _, b in ref]))
+        q = np.linspace(0, 1, 201)
+        kx = np.quantile(X, q)
+        ky = np.quantile(Y, q)
+        # extend past the reference range with the slope of the outermost decile, so the
+        # very top is not clipped flat -- the exact failure being corrected
+        lo_s = (ky[20] - ky[0]) / max(kx[20] - kx[0], 1e-9)
+        hi_s = (ky[-1] - ky[-21]) / max(kx[-1] - kx[-21], 1e-9)
 
-    out = {str(p): {"r": round(float(r[i] * slope + icept), 3),
+        def to_tv(v):
+            v = np.asarray(v, float)
+            out = np.interp(v, kx, ky)
+            out = np.where(v < kx[0], ky[0] + (v - kx[0]) * lo_s, out)
+            out = np.where(v > kx[-1], ky[-1] + (v - kx[-1]) * hi_s, out)
+            return out
+
+        corr = np.corrcoef([a for a, _ in ref], [b for _, b in ref])[0, 1]
+        mapped = to_tv(r)
+        print(f"\nmapped onto the TruVolley scale by quantile ({len(ref)} players, "
+              f"rank correlation r = {corr:.3f})")
+        chk = to_tv(np.array([a for a, _ in ref]))
+        tvs = np.array([b for _, b in ref])
+        for lo, hi in ((7.5, 8.0), (8.0, 8.5), (8.5, 9.5)):
+            g = (tvs >= lo) & (tvs < hi)
+            if g.sum() > 20:
+                print(f"  TruVolley {lo}-{hi}: mean {tvs[g].mean():.2f} -> "
+                      f"{chk[g].mean():.2f} (gap {chk[g].mean() - tvs[g].mean():+.2f})")
+    else:
+        mapped, corr = r, float("nan")
+        kx = ky = np.array([])
+
+    out = {str(p): {"r": round(float(mapped[i]), 3),
                     "raw": round(float(r[i]), 4), "n": int(nm[i])}
            for i, p in enumerate(ids)}
-    json.dump({"config": c, "map": {"slope": slope, "intercept": icept, "r": corr},
+    json.dump({"config": c, "map": {"kind": "quantile", "r": corr,
+                                    "x": [round(float(v), 4) for v in kx],
+                                    "y": [round(float(v), 4) for v in ky]},
                "ratings": out}, open(os.path.join(DATA, "rating.json"), "w"), indent=1)
     print(f"wrote data/rating.json ({len(out)} players)")
 
