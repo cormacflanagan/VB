@@ -1,7 +1,7 @@
 """Crawl NCAA/JuCo college beach duals from the collegebeachvb.com backend.
 
   python3 scripts/college.py           # duals, matches and rosters
-  python3 scripts/college.py --years 2020 2026
+  python3 scripts/college.py --to 15000
 
 College beach is the level above the juniors this repo tracks, and it is where the girls
 in it are heading -- Haisley to Santa Clara, Thais Treumann to TCU. Without it the rating
@@ -11,14 +11,20 @@ season is her whole record and everything after is invisible.
 collegebeachvb.com is a Vue app over the same Volleyball Life API the rest of this repo
 uses, under a /cbvb prefix. Four calls give the lot:
 
-  college/list                     258 programmes with ids
-  cbvb/team_scores?teamId=&year=   every dual that team played that season
-  cbvb/latest_scores_detail?id=    the dual itself: five pairs, set scores, who won
-  cbvb/roster?id=&year=            the roster, carrying playerProfileId
+  college/list                   258 programmes with ids
+  cbvb/latest_scores_detail?id=  one dual: five pair matches, set scores, who won
+  cbvb/roster?id=                a programme's roster, carrying playerProfileId
 
 That last field is the useful one. College player ids are their own namespace, but the
 roster maps each to a Volleyball Life playerProfileId, so college results join the junior
 corpus on a published key rather than on a name match.
+
+Duals are enumerated by walking the competition id space rather than by asking each team
+for its season. `cbvb/team_scores` accepts a `year` and ignores it -- every season returns
+the current one, so a fourteen-year loop fetched 2026 fourteen times. The ids themselves
+are dense from 1 to about 14,700 and run back to 2017, so walking them is both cheaper and
+the only way to reach the history at all. `cbvb/roster` ignores `year` the same way, and
+is fetched once per programme.
 
 Note the API is served by IIS and answers HTTP/2 requests from curl with a bare 404 while
 serving the same URL over HTTP/1.1 from urllib. Everything here uses urllib.
@@ -30,7 +36,7 @@ API = "https://api-v8.volleyballlife.com"
 HDRS = {"User-Agent": "Mozilla/5.0", "Accept": "application/json"}
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "..", "data", "college")
-YEARS = (2013, 2026)
+MAXID = 15000       # competition ids are dense from 1; the 2026 season ends near 14,700
 WORKERS = 6
 
 
@@ -50,33 +56,19 @@ def get(path, tries=4, **q):
     return None
 
 
-def duals(colleges, years):
-    """Every competition id any programme played, with the season it belongs to."""
-    jobs = [(c["id"], y) for c in colleges for y in years]
-    found = {}
-    with ThreadPoolExecutor(max_workers=WORKERS) as ex:
-        for (cid, y), rows in zip(jobs, ex.map(
-                lambda j: get("cbvb/team_scores", teamId=j[0], year=j[1], last="false"),
-                jobs)):
-            for d in rows or []:
-                if d.get("deleted"):
-                    continue
-                found.setdefault(d["fk_competition_id"], {"year": y, "row": d})
-    return found
-
-
-def rosters(colleges, years, fh):
-    """collegeId x season -> roster rows, each carrying a Volleyball Life id."""
-    jobs = [(c["id"], y) for c in colleges for y in years]
+def rosters(colleges, fh):
+    """One roster per programme -- the endpoint ignores `year` and serves the current
+    season, so asking fourteen times returns the same rows fourteen times."""
     n = 0
     with ThreadPoolExecutor(max_workers=WORKERS) as ex:
-        for (cid, y), r in zip(jobs, ex.map(
-                lambda j: get("cbvb/roster", id=j[0], year=j[1]), jobs)):
+        for c, r in zip(colleges, ex.map(lambda x: get("cbvb/roster", id=x["id"]),
+                                         colleges)):
             for p in (r or {}).get("roster", []) or []:
                 fh.write(json.dumps({
-                    "collegeId": cid, "year": y, "cbvbId": p.get("cbvbId"),
-                    "vblId": p.get("playerProfileId"), "name": p.get("name"),
-                    "recordId": p.get("recordId"), "cls": p.get("classYear") or p.get("year"),
+                    "collegeId": c["id"], "college": c.get("name"),
+                    "cbvbId": p.get("cbvbId"), "vblId": p.get("playerProfileId"),
+                    "name": p.get("name"), "recordId": p.get("recordId"),
+                    "cls": p.get("classYear") or p.get("year"),
                     "height": p.get("height"), "hometown": p.get("hometown")}) + "\n")
                 n += 1
     return n
@@ -109,33 +101,22 @@ def flatten(cid, det):
 
 
 def main(argv):
-    y0, y1 = (int(argv[argv.index("--years") + 1]), int(argv[argv.index("--years") + 2])) \
-        if "--years" in argv else YEARS
-    years = list(range(y0, y1 + 1))
+    top = int(argv[argv.index("--to") + 1]) if "--to" in argv else MAXID
     os.makedirs(OUT, exist_ok=True)
 
     colleges = get("college/list") or []
     json.dump(colleges, open(os.path.join(OUT, "colleges.json"), "w"), indent=1)
-    print(f"{len(colleges)} programmes, seasons {y0}-{y1}", flush=True)
+    print(f"{len(colleges)} programmes; walking competition ids 1-{top}", flush=True)
 
     rp = os.path.join(OUT, "rosters.jsonl")
-    if os.path.exists(rp) and os.path.getsize(rp) > 0:
-        print(f"rosters: reusing {sum(1 for _ in open(rp))} player-seasons already on disk",
-              flush=True)
-    else:
-        with open(rp, "w") as fh:
-            n = rosters(colleges, years, fh)
-        print(f"rosters: {n} player-seasons", flush=True)
-
-    found = duals(colleges, years)
-    print(f"{len(found)} distinct duals", flush=True)
-    json.dump({str(k): v["row"] for k, v in found.items()},
-              open(os.path.join(OUT, "duals.json"), "w"))
+    with open(rp, "w") as fh:
+        n = rosters(colleges, fh)
+    print(f"rosters: {n} players", flush=True)
 
     donep = os.path.join(OUT, "done.json")
     done = set(json.load(open(donep))) if os.path.exists(donep) else set()
-    todo = [c for c in sorted(found) if c not in done]
-    print(f"{len(done)} duals already detailed, {len(todo)} to go", flush=True)
+    todo = [c for c in range(1, top + 1) if c not in done]
+    print(f"{len(done)} competition ids already read, {len(todo)} to go", flush=True)
 
     t0, n, nm = time.time(), 0, 0
     with open(os.path.join(OUT, "matches.jsonl"), "a") as fh:
@@ -151,10 +132,10 @@ def main(argv):
                     fh.flush()
                     json.dump(sorted(done), open(donep, "w"))
                     per = (time.time() - t0) / n
-                    print(f"  {n}/{len(todo)} duals · {nm} pair matches · "
+                    print(f"  {n}/{len(todo)} ids · {nm} pair matches · "
                           f"{(len(todo) - n) * per / 60:.0f} min left", flush=True)
     json.dump(sorted(done), open(donep, "w"))
-    print(f"done: {nm} pair matches from {len(done)} duals")
+    print(f"done: {nm} pair matches; {len(done)} competition ids read")
 
 
 if __name__ == "__main__":
