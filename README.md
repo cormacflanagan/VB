@@ -386,49 +386,61 @@ partner is often *not* in the group — Kendal Walker has 14 competitions with E
 no in-group partnership at all — the summary table marks out-of-group partners rather than
 hiding them.
 
+## The match database
+
+Four crawlers build a corpus of women's and girls' beach volleyball, all resumable:
+
+| Script | Source | Yield |
+| --- | --- | --- |
+| `vbcrawl.py` | Volleyball Life, tournament ids 1&#8211;41,044 | 40,251 tournaments, 116,874 divisions, 705,605 placings, 291,996 players |
+| `matchfeed.py` | its match feed, per tournament | 579,830 matches |
+| `cbva_api.py` | cbva.com's tRPC endpoints | 35,172 matches, 11,335 players |
+| `college.py` | collegebeachvb.com, competition ids 1&#8211;15,000 | 64,281 pair matches, 2017&#8211;2026 |
+
+`merge.py` puts all three into one Volleyball Life id space: **655,882 matches** plus
+13,425 finish-only divisions. College publishes `vblId` directly. CBVA does not, so
+`cbva_link.py` infers it &#8212; not from names, which collide badly in a pool of 292,000, but
+from a partnership on a date: CBVA says two names played together on 8 August, and
+Volleyball Life has one team with that pair of names that day. 22,036 of 27,062 CBVA teams
+matched, resolving 87% of players; 26 were contested and left unresolved.
+
+**Half the calendar publishes no matches at all.** Of 17,981 tournaments with a women's
+doubles roster, 8,563 (47%) recorded only a finish order. `finish_weight` turns those
+standings into weighted pairwise comparisons, which is worth 0.005 of holdout log-loss.
+
 ## A tweakable rating
 
-`scripts/matchdump.py` downloads match-level results for the 2027/2028/2029 classes,
-`scripts/finishdump.py` downloads final standings for the events that publish no matches,
-`scripts/rate.py` fits a rating from both, and `scripts/sweep.py` tunes the knobs against
-held-out results. The corpus is **99,538 doubles matches** across 8,699 tournaments plus
-**6,977 divisions of standings**, covering 42,133 players.
-
-The model is Bradley-Terry on individuals, fit from team outcomes:
+`rate.py` fits an individual strength from team outcomes, `sweep.py` tunes it against
+matches withheld from the fit:
 
     P(A beats B) = sigmoid( (strength(A) - strength(B)) / scale )
     strength(team) = alpha * mean(r1, r2) + (1 - alpha) * min(r1, r2)
 
 TruVolley moves when your *team* wins, which conflates a player with her partner. Here
-partner quality is a term in the model, so it is subtracted out rather than absorbed.
+partner quality is a term in the model rather than something baked into the result.
 
-**Two intuitions the data rejects.** Treating a team as its weaker player -- the weaker
-passer gets served every ball -- predicts monotonically *worse* from alpha 1.0 down to 0.0
-(0.5549 to 0.5808 holdout log-loss), at every half-life tried. And inside a three-year
-window, no time decay beats every half-life: the window cutoff already does that work.
+**A doubles team is the average of its players, not its weaker one.** The intuition that
+the weaker passer gets served every ball predicts monotonically worse at every step from
+alpha 1.0 (0.6144 holdout log-loss) to 0.0 (0.7021). That held on the first 99k-match
+sample and holds harder on 656k.
 
-**The blind spot worth knowing about.** Forty-four percent of tournaments publish placings
-only, CBVA's whole calendar among them. A match-only fit cannot see any of it, which
-silently penalises anyone whose adult volleyball is local. Feeding standings in as weighted
-pairwise comparisons -- a team that finished above another beat it -- adds 213,636
-observations, brings 14,000 otherwise-invisible players into the graph, and improves the
-holdout. `finish_weight` sets how much a placing is worth against a match; 4.0 is the
-optimum, and the curve is flat between 1 and 8.
+**Time decay reverses with sample size.** On the seeded sample no decay won; on the full
+corpus a 365-day half-life is best (0.6016 against 0.6143). The first result was an
+artifact of a corpus built outward from strong players' schedules.
 
-**It matches TruVolley rather than beating it.** On 5,463 held-out matches where both rate
-all four players, TruVolley scores 0.3360 log-loss to this fit's 0.3588 once both have seen
-the same data, with accuracy tied at 0.848. Compared strictly out-of-sample TruVolley looks
-far better still, but that comparison is rigged: TruVolley is quoted as of today and has
-already absorbed the matches being predicted. The case for this rating is that it is
-transparent and adjustable, not that it is sharper.
+**It matches TruVolley rather than beating it.** On held-out matches where both rate all
+four players, with both having seen the same data: TruVolley 0.3577 log-loss and 0.840
+accuracy, this fit 0.3963 and 0.843. Compared strictly out-of-sample TruVolley looks far
+better, but that comparison is rigged &#8212; TruVolley is quoted as of today and has already
+absorbed the matches being predicted. The case for this rating is that it is transparent
+and adjustable, not that it is sharper.
 
-**The half-life is the knob that matters for a junior.** The sweep picks no decay because
-that predicts best across the average player. A fast-improving 16-year-old is not the
-average player: Haisley's CBVA record is mean 56% placing across 2024-25 and 88% with two
-wins from four in 2026, so a setting that weights those equally reads her at her two-year
-average rather than her current form. She ranks 18th with no decay and 12th at a 120-day
-half-life. The holdout prefers no decay (0.4769 against 0.5268), which is the honest
-trade: sharper on the population, blunter on the improvers.
+**What it measures that a placing cannot is schedule strength.** Haisley ranks 3rd in the
+17U-eligible field on TruVolley and 20th here, because 84% of her matches are against
+opposition rated under 7.0 &#8212; where she is 192&#8211;28 &#8212; while against 7.5&#8211;8.0 she is 5&#8211;13. Her
+CBVA adult opposition averages 5.52, *below* her junior opposition's 5.92: local Women's
+Open is a soft field by national measure. For scale, 7.0 is already the 97th percentile of
+the 33,024 players with twenty or more observations, so this is a gap inside the top 1%.
 
 ## One player's career
 
