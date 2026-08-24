@@ -437,10 +437,18 @@ and adjustable, not that it is sharper.
 
 **What it measures that a placing cannot is schedule strength.** Haisley ranks 3rd in the
 17U-eligible field on TruVolley and 20th here, because 84% of her matches are against
-opposition rated under 7.0 &#8212; where she is 192&#8211;28 &#8212; while against 7.5&#8211;8.0 she is 5&#8211;13. Her
-CBVA adult opposition averages 5.52, *below* her junior opposition's 5.92: local Women's
-Open is a soft field by national measure. For scale, 7.0 is already the 97th percentile of
-the 33,024 players with twenty or more observations, so this is a gap inside the top 1%.
+opposition rated under 7.0, where she is 192&#8211;28. For scale, 7.0 is already the 97th
+percentile of the 33,024 players with twenty or more observations, so this is a gap inside
+the top 1%.
+
+**A career average is the wrong summary for someone improving.** Split by season, her
+record against teams rated 7.0+ goes 0&#8211;3 in 2024, 7&#8211;9 in 2025, 10&#8211;10 in 2026, while her
+mean opponent climbs 5.33 to 6.41 and her best win rises every year to 8.09 &#8212; a two-point
+win in a Women's Open final. That trend is invisible in the pooled number, and it is the
+reason `halflife_days` matters so much for a junior: she ranks 20th with no decay, 14th at
+a 180-day half-life and 11th at 120. The holdout still prefers 365 days *for the
+population*, so the short half-life is not a better rating, it is a rating that reads a
+fast improver correctly at everyone else's expense.
 
 ## One player's career
 
