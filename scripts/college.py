@@ -14,10 +14,13 @@ uses, under a /cbvb prefix. Four calls give the lot:
   college/list                   258 programmes with ids
   cbvb/latest_scores_detail?id=  one dual: five pair matches, set scores, who won
   cbvb/roster?id=                a programme's roster, carrying playerProfileId
+  cbvb/player-detail?id=         one player: vblId, height, hometown, class year
 
-That last field is the useful one. College player ids are their own namespace, but the
-roster maps each to a Volleyball Life playerProfileId, so college results join the junior
-corpus on a published key rather than on a name match.
+The identity fields are the useful ones. College player ids are their own namespace, but
+both the roster and player-detail carry a Volleyball Life id, so college results join the
+junior corpus on a published key rather than on a name match. Rosters only cover the
+current season -- a decade of matches involves 9,508 players against 3,915 on any roster
+-- so player-detail is what closes the gap for everyone who has already graduated.
 
 Duals are enumerated by walking the competition id space rather than by asking each team
 for its season. `cbvb/team_scores` accepts a `year` and ignores it -- every season returns
@@ -71,6 +74,29 @@ def rosters(colleges, fh):
                     "cls": p.get("classYear") or p.get("year"),
                     "height": p.get("height"), "hometown": p.get("hometown")}) + "\n")
                 n += 1
+    return n
+
+
+def players(ids, fh):
+    """One row per college player: the Volleyball Life id, plus the recruiting fields.
+
+    Rosters cover only the current season, so most players in a decade of duals never
+    appear on one. player-detail is keyed by the same college player id the matches use
+    and carries `vblId` for all of them.
+    """
+    n = 0
+    with ThreadPoolExecutor(max_workers=WORKERS) as ex:
+        for pid, d in zip(ids, ex.map(lambda i: get("cbvb/player-detail", id=i), ids)):
+            if not isinstance(d, dict):
+                continue
+            info = d.get("info") or {}
+            fh.write(json.dumps({
+                "cbvbId": pid, "vblId": d.get("vblId"), "tvId": d.get("tvId"),
+                "name": d.get("name"), "tv": d.get("truVolleyScore"),
+                "cls": info.get("year"), "height": info.get("height"),
+                "hometown": info.get("hometown"), "grad": info.get("grad_year"),
+                "seasons": len(d.get("history") or [])}) + "\n")
+            n += 1
     return n
 
 
@@ -135,7 +161,17 @@ def main(argv):
                     print(f"  {n}/{len(todo)} ids · {nm} pair matches · "
                           f"{(len(todo) - n) * per / 60:.0f} min left", flush=True)
     json.dump(sorted(done), open(donep, "w"))
-    print(f"done: {nm} pair matches; {len(done)} competition ids read")
+    print(f"matches: {nm} pair matches; {len(done)} competition ids read", flush=True)
+
+    seen = set()
+    with open(os.path.join(OUT, "matches.jsonl")) as fh:
+        for line in fh:
+            m = json.loads(line)
+            seen.update(m["a"] + m["b"])
+    pp = os.path.join(OUT, "players.jsonl")
+    with open(pp, "w") as fh:
+        n = players(sorted(seen), fh)
+    print(f"done: {n} of {len(seen)} college players resolved to a Volleyball Life id")
 
 
 if __name__ == "__main__":
