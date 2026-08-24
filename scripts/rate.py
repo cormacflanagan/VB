@@ -43,6 +43,7 @@ DEFAULTS = {
     "pair_alpha": 1.0,        # 1 = team is the mean of its players, 0 = the weaker one
     "unit": "match",          # "match" or "set": sets give a crude margin of victory
     "pool_weight": 1.0,       # pool play relative to bracket
+    "finish_weight": 0.0,     # weight on placings where no matches exist
     "iters": 600,
     "lr": 0.25,
     "min_matches": 8,         # reporting threshold, not a fitting one
@@ -57,7 +58,7 @@ def conf(argv):
         c.update(json.load(open(CONF)))
     alias = {"--halflife": "halflife_days", "--pair": "pair_alpha", "--ridge": "ridge",
              "--scale": "scale", "--unit": "unit", "--window": "window_days",
-             "--holdout": "holdout_days", "--iters": "iters", "--min": "min_matches"}
+             "--finish": "finish_weight", "--holdout": "holdout_days", "--iters": "iters", "--min": "min_matches"}
     for a, key in alias.items():
         if a in argv:
             v = argv[argv.index(a) + 1]
@@ -66,47 +67,56 @@ def conf(argv):
 
 
 def load(c, quiet=False):
-    """Match rows -> arrays. Returns (index, a1,a2,b1,b2, y, w, train_mask)."""
+    """Match rows and, optionally, standings rows -> arrays keyed by a shared index.
+
+    The index is the union of both sources: a player whose only record is a CBVA-style
+    event with no match data still needs a slot, or the standings that mention her are
+    silently discarded and the blind spot survives the fix.
+    """
+    say = (lambda *a, **k: None) if quiet else print
     path = os.path.join(DATA, "matches.jsonl")
     opener = open
     if not os.path.exists(path) and os.path.exists(path + ".gz"):
         import gzip
         path, opener = path + ".gz", lambda f: gzip.open(f, "rt")
-    opener = open
-    if not os.path.exists(path) and os.path.exists(path + ".gz"):
-        import gzip
-        path, opener = path + ".gz", lambda f: gzip.open(f, "rt")
-    # date.fromisoformat rather than time.strptime: scripts/calendar.py shadows the
-    # stdlib calendar module on this path, and strptime imports it
+    # date.fromisoformat, not time.strptime: scripts/calendar.py shadows the stdlib
+    # calendar module on this path and strptime imports it
     asof = c["asof"] or datetime.date.today().isoformat()
     t_asof = datetime.date.fromisoformat(asof).toordinal()
+
+    def age_of(day):
+        try:
+            return t_asof - datetime.date.fromisoformat(day).toordinal()
+        except ValueError:
+            return None
+
     rows, old, future = [], 0, 0
     with opener(path) as fh:
         for line in fh:
             m = json.loads(line)
             if len(m["a"]) != 2 or len(m["b"]) != 2 or not m["date"]:
                 continue
-            try:
-                age = t_asof - datetime.date.fromisoformat(m["date"]).toordinal()
-            except ValueError:
+            age = age_of(m["date"])
+            if age is None:
                 continue
             if age < 0:
-                future += 1          # the feed carries a few rows dated years ahead
+                future += 1              # the feed carries a few rows dated years ahead
                 continue
             if c["window_days"] and age > c["window_days"]:
                 old += 1
                 continue
             rows.append((m, age))
-    say = (lambda *a, **k: None) if quiet else print
     say(f"{len(rows)} matches inside the window "
         f"({old} older than {c['window_days']} days, {future} dated in the future)")
-    if not rows:
-        sys.exit("no matches in the window -- widen --window")
-    if not rows:
-        sys.exit("no matches in the window -- widen --window or wait for the dump")
 
-    ids = sorted({p for m, _ in rows for p in m["a"] + m["b"]})
+    placings = standings(c, age_of)
+    if not rows and not placings:
+        sys.exit("nothing inside the window -- widen --window")
+
+    ids = sorted({p for m, _ in rows for p in m["a"] + m["b"]}
+                 | {p for hi, lo, _, _ in placings for p in hi + lo})
     ix = {p: i for i, p in enumerate(ids)}
+
     A1, A2, B1, B2, Y, W, AGE = [], [], [], [], [], [], []
     for m, age in rows:
         decay = 0.5 ** (age / c["halflife_days"]) if c["halflife_days"] else 1.0
@@ -115,22 +125,71 @@ def load(c, quiet=False):
         # honest way to let margin of victory matter at all
         obs = []
         if c["unit"] == "set" and m["sets"]:
-            for s in m["sets"]:
-                if s[0] == s[1]:
-                    continue
-                obs.append((1.0 if s[0] > s[1] else 0.0, base))
+            for st in m["sets"]:
+                if st[0] != st[1]:
+                    obs.append((1.0 if st[0] > st[1] else 0.0, base))
         if not obs:
             obs = [(1.0 if m["aWon"] else 0.0, base)]
         for y, w in obs:
             A1.append(ix[m["a"][0]]); A2.append(ix[m["a"][1]])
             B1.append(ix[m["b"][0]]); B2.append(ix[m["b"][1]])
             Y.append(y); W.append(w); AGE.append(age)
+    nmatch = len(Y)
+
+    for hi, lo, w, age in placings:
+        A1.append(ix[hi[0]]); A2.append(ix[hi[1]])
+        B1.append(ix[lo[0]]); B2.append(ix[lo[1]])
+        Y.append(1.0); W.append(w); AGE.append(age)
+    if placings:
+        say(f"  + {len(placings)} pairwise observations from standings at events with no "
+            f"match data (finish_weight {c['finish_weight']})")
+
     d = dict(a1=np.array(A1), a2=np.array(A2), b1=np.array(B1), b2=np.array(B2),
              y=np.array(Y, float), w=np.array(W, float), age=np.array(AGE, float))
     d["train"] = d["age"] > c["holdout_days"]
+    # the holdout is scored on real matches only: a placing is weaker evidence and
+    # including it would grade the model against its own softer target
+    d["real"] = np.arange(len(d["y"])) < nmatch
     say(f"  {len(d['y'])} observations ({c['unit']} level), {len(ids)} players; "
-          f"{int(d['train'].sum())} train / {int((~d['train']).sum())} holdout")
+        f"{int(d['train'].sum())} train / {int((~d['train'] & d['real']).sum())} holdout")
     return ids, ix, d
+
+
+def standings(c, age_of):
+    """Final placings as pairwise observations, for the events with no match data.
+
+    Forty-four percent of tournaments here publish only a finish order -- CBVA's whole
+    calendar among them. Ignoring those makes a player who wins local adult draws look
+    weak for a reason that has nothing to do with her.
+
+    A division of n teams gives every non-tied pair, each weighted finish_weight/(n-1) so
+    one standing carries about the same total evidence as one match rather than n times
+    it. Shared finishes -- the blocks of 5th and 9th that beach draws produce -- say
+    nothing about who was better and are skipped.
+    """
+    path = os.path.join(DATA, "finishes.jsonl")
+    if not c.get("finish_weight") or not os.path.exists(path):
+        return []
+    out = []
+    with open(path) as fh:
+        for line in fh:
+            r = json.loads(line)
+            if not r["date"]:
+                continue
+            age = age_of(r["date"])
+            if age is None or age < 0 or (c["window_days"] and age > c["window_days"]):
+                continue
+            teams = r["teams"]
+            if len(teams) < 3:
+                continue
+            decay = 0.5 ** (age / c["halflife_days"]) if c["halflife_days"] else 1.0
+            w = c["finish_weight"] * decay / (len(teams) - 1)
+            for i in range(len(teams)):
+                for j in range(i + 1, len(teams)):
+                    if teams[i][0] == teams[j][0]:
+                        continue
+                    out.append((teams[i][1], teams[j][1], w, age))
+    return out
 
 
 def team(r, i, j, alpha):
@@ -198,7 +257,7 @@ def versus_truvolley(ids, ix, d, r, c, r_all=None):
         v = (meta.get(p) or (None, None, None))[2]
         if v:
             tv[i] = v
-    ok = ~d["train"]
+    ok = ~d["train"] & d["real"]
     for k in ("a1", "a2", "b1", "b2"):
         ok = ok & ~np.isnan(tv[d[k]])
     if ok.sum() < 200:
@@ -257,10 +316,10 @@ def main(argv):
 
     print("  fitting on the training window")
     r_tr = fit(n, d, c)
-    if (~d["train"]).sum():
-        ll, acc, brier = score(r_tr, d, c, ~d["train"])
-        base = score(np.zeros(n), d, c, ~d["train"])
-        print(f"\nholdout ({int((~d['train']).sum())} obs): log-loss {ll:.4f}  "
+    if (~d["train"] & d["real"]).sum():
+        ll, acc, brier = score(r_tr, d, c, ~d["train"] & d["real"])
+        base = score(np.zeros(n), d, c, ~d["train"] & d["real"])
+        print(f"\nholdout ({int((~d['train'] & d['real']).sum())} obs): log-loss {ll:.4f}  "
               f"accuracy {acc:.3f}  Brier {brier:.4f}"
               f"   [coin-flip baseline {base[0]:.4f} / {base[1]:.3f}]")
 

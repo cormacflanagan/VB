@@ -386,6 +386,50 @@ partner is often *not* in the group — Kendal Walker has 14 competitions with E
 no in-group partnership at all — the summary table marks out-of-group partners rather than
 hiding them.
 
+## A tweakable rating
+
+`scripts/matchdump.py` downloads match-level results for the 2027/2028/2029 classes,
+`scripts/finishdump.py` downloads final standings for the events that publish no matches,
+`scripts/rate.py` fits a rating from both, and `scripts/sweep.py` tunes the knobs against
+held-out results. The corpus is **99,538 doubles matches** across 8,699 tournaments plus
+**6,977 divisions of standings**, covering 42,133 players.
+
+The model is Bradley-Terry on individuals, fit from team outcomes:
+
+    P(A beats B) = sigmoid( (strength(A) - strength(B)) / scale )
+    strength(team) = alpha * mean(r1, r2) + (1 - alpha) * min(r1, r2)
+
+TruVolley moves when your *team* wins, which conflates a player with her partner. Here
+partner quality is a term in the model, so it is subtracted out rather than absorbed.
+
+**Two intuitions the data rejects.** Treating a team as its weaker player -- the weaker
+passer gets served every ball -- predicts monotonically *worse* from alpha 1.0 down to 0.0
+(0.5549 to 0.5808 holdout log-loss), at every half-life tried. And inside a three-year
+window, no time decay beats every half-life: the window cutoff already does that work.
+
+**The blind spot worth knowing about.** Forty-four percent of tournaments publish placings
+only, CBVA's whole calendar among them. A match-only fit cannot see any of it, which
+silently penalises anyone whose adult volleyball is local. Feeding standings in as weighted
+pairwise comparisons -- a team that finished above another beat it -- adds 213,636
+observations, brings 14,000 otherwise-invisible players into the graph, and improves the
+holdout. `finish_weight` sets how much a placing is worth against a match; 4.0 is the
+optimum, and the curve is flat between 1 and 8.
+
+**It matches TruVolley rather than beating it.** On 5,463 held-out matches where both rate
+all four players, TruVolley scores 0.3360 log-loss to this fit's 0.3588 once both have seen
+the same data, with accuracy tied at 0.848. Compared strictly out-of-sample TruVolley looks
+far better still, but that comparison is rigged: TruVolley is quoted as of today and has
+already absorbed the matches being predicted. The case for this rating is that it is
+transparent and adjustable, not that it is sharper.
+
+**The half-life is the knob that matters for a junior.** The sweep picks no decay because
+that predicts best across the average player. A fast-improving 16-year-old is not the
+average player: Haisley's CBVA record is mean 56% placing across 2024-25 and 88% with two
+wins from four in 2026, so a setting that weights those equally reads her at her two-year
+average rather than her current form. She ranks 18th with no decay and 12th at a 120-day
+half-life. The holdout prefers no decay (0.4769 against 0.5268), which is the honest
+trade: sharper on the population, blunter on the improvers.
+
 ## One player's career
 
 `scripts/history.py <id or name>` prints a single player's whole record rather than the
