@@ -118,9 +118,14 @@ def main(argv):
     json.dump(colleges, open(os.path.join(OUT, "colleges.json"), "w"), indent=1)
     print(f"{len(colleges)} programmes, seasons {y0}-{y1}", flush=True)
 
-    with open(os.path.join(OUT, "rosters.jsonl"), "w") as fh:
-        n = rosters(colleges, years, fh)
-    print(f"rosters: {n} player-seasons", flush=True)
+    rp = os.path.join(OUT, "rosters.jsonl")
+    if os.path.exists(rp) and os.path.getsize(rp) > 0:
+        print(f"rosters: reusing {sum(1 for _ in open(rp))} player-seasons already on disk",
+              flush=True)
+    else:
+        with open(rp, "w") as fh:
+            n = rosters(colleges, years, fh)
+        print(f"rosters: {n} player-seasons", flush=True)
 
     found = duals(colleges, years)
     print(f"{len(found)} distinct duals", flush=True)

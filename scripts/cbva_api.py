@@ -25,6 +25,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "..", "data", "cbva")
 WORKERS = 4
 PAGE = 100
+SINCE = "2022-01-01"   # the rating window is three years; older seasons cannot move it
 
 
 def ctx():
@@ -154,12 +155,16 @@ def main(argv):
     if "--index" in argv:
         return index()
     today = time.strftime("%Y-%m-%d")
+    # The rating only looks back `window_days` (three years), so seasons before SINCE
+    # cannot move a current number. The full archive reaches 2005 and is four times the
+    # size; pass --since 2005-01-01 to take it when there is time to spend.
+    since = argv[argv.index("--since") + 1] if "--since" in argv else SINCE
     divs = []
     for line in open(os.path.join(OUT, "divisions.jsonl")):
         d = json.loads(line)
-        # doubles, women's or coed, and already played
+        # doubles, women's or coed, already played, inside the horizon that matters
         if d.get("size") == 2 and (d.get("gender") or "") in ("female", "coed") \
-                and (d.get("date") or "") <= today:
+                and since <= (d.get("date") or "") <= today:
             divs.append(d)
     donep = os.path.join(OUT, "done.json")
     done = set(json.load(open(donep))) if os.path.exists(donep) else set()
