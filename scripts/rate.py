@@ -31,6 +31,9 @@ from collections import defaultdict
 
 import numpy as np
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from jsonl import read as read_jsonl
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "..", "data")
 CONF = os.path.join(HERE, "rating.json")
@@ -74,11 +77,10 @@ def load(c, quiet=False):
     silently discarded and the blind spot survives the fix.
     """
     say = (lambda *a, **k: None) if quiet else print
-    path = os.path.join(DATA, "matches.jsonl")
-    opener = open
-    if not os.path.exists(path) and os.path.exists(path + ".gz"):
-        import gzip
-        path, opener = path + ".gz", lambda f: gzip.open(f, "rt")
+    # the merged corpus if it is there, else the original single-source file
+    path = os.path.join(DATA, "all_matches.jsonl")
+    if not (os.path.exists(path) or os.path.exists(path + ".gz")):
+        path = os.path.join(DATA, "matches.jsonl")
     # date.fromisoformat, not time.strptime: scripts/calendar.py shadows the stdlib
     # calendar module on this path and strptime imports it
     asof = c["asof"] or datetime.date.today().isoformat()
@@ -91,9 +93,8 @@ def load(c, quiet=False):
             return None
 
     rows, old, future = [], 0, 0
-    with opener(path) as fh:
-        for line in fh:
-            m = json.loads(line)
+    if True:
+        for m in read_jsonl(path):
             if len(m["a"]) != 2 or len(m["b"]) != 2 or not m["date"]:
                 continue
             age = age_of(m["date"])
@@ -167,13 +168,15 @@ def standings(c, age_of):
     it. Shared finishes -- the blocks of 5th and 9th that beach draws produce -- say
     nothing about who was better and are skipped.
     """
-    path = os.path.join(DATA, "finishes.jsonl")
-    if not c.get("finish_weight") or not os.path.exists(path):
+    path = os.path.join(DATA, "all_finishes.jsonl")
+    if not (os.path.exists(path) or os.path.exists(path + ".gz")):
+        path = os.path.join(DATA, "finishes.jsonl")
+    if not c.get("finish_weight") or not (os.path.exists(path)
+                                          or os.path.exists(path + ".gz")):
         return []
     out = []
-    with open(path) as fh:
-        for line in fh:
-            r = json.loads(line)
+    if True:
+        for r in read_jsonl(path):
             if not r["date"]:
                 continue
             age = age_of(r["date"])
