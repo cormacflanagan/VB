@@ -107,8 +107,18 @@ def _bt_fit(n, d, fin, mask, halflife=365, ridge=0.25, scale=1.0, wpow=0.0, iter
     return _adam(grad, np.zeros(n), iters=iters)
 
 
+CAL_DAYS = 90
+
+
 def _calibrate(diff, y):
-    """Best single scale turning a rating gap into a probability, on the fitting data."""
+    """Best single divisor turning a rating gap into a probability.
+
+    Must be handed predictions the ratings were not fit on. On the fitting data the gaps
+    are exaggerated by exactly however much the model overfit, so this picks too small a
+    divisor and the model goes out into the world overconfident -- and it does so in
+    proportion to how hard the model memorises, which silently favours the online models
+    over the batch ones in any comparison that gets this wrong.
+    """
     best = (None, 1.0)
     for s in np.arange(0.05, 4.01, 0.05):
         p = np.clip(_sig(diff / s), 1e-6, 1 - 1e-6)
@@ -118,6 +128,12 @@ def _calibrate(diff, y):
     return best[1]
 
 
+def _cal_split(d, fit):
+    """Split a fitting mask into an inner fit and a held-out slice for the divisor."""
+    edge = d["age"][fit].min() + CAL_DAYS
+    return fit & (d["age"] > edge), fit & (d["age"] <= edge)
+
+
 def _predict(r, d, mask, s):
     ta, tb = _teams(r, d, mask)
     return _sig((ta - tb) / s)
@@ -125,9 +141,11 @@ def _predict(r, d, mask, s):
 
 # --------------------------------------------------------------------------- models
 def bt(n, d, fin, fit, ev, halflife=365, ridge=0.25, wpow=0.0, finw=4.0):
+    inner, cal = _cal_split(d, fit)
+    ri = _bt_fit(n, d, fin, inner, halflife=halflife, ridge=ridge, wpow=wpow, finw=finw)
+    ca, cb = _teams(ri, d, cal)
+    s = _calibrate(ca - cb, d["y"][cal])
     r = _bt_fit(n, d, fin, fit, halflife=halflife, ridge=ridge, wpow=wpow, finw=finw)
-    ta, tb = _teams(r, d, fit)
-    s = _calibrate(ta - tb, d["y"][fit])
     return _predict(r, d, ev, s)
 
 
@@ -139,16 +157,11 @@ def bt_margin(n, d, fin, fit, ev):
     return bt(n, d, fin, fit, ev, wpow=1.0)
 
 
-def massey(n, d, fin, fit, ev, halflife=365, ridge=0.5):
-    """Least squares on point margin: rating gap should equal the expected margin.
-
-    Fit against the actual score rather than the winner, which uses information the
-    logistic model discards. The finish rows carry no margin and are given a nominal one,
-    weighted down, so they still order teams without inventing a score.
-    """
-    a1, a2, b1, b2, y, w = _stack_rows(d, fin, fit, halflife)
-    nreal = int(fit.sum())
-    target = np.concatenate([np.clip(d["pd"][fit], -40, 40),
+def _massey_fit(n, d, fin, mask, halflife=365, ridge=0.5):
+    """Least squares on point margin: the rating gap should equal the expected margin."""
+    a1, a2, b1, b2, y, w = _stack_rows(d, fin, mask, halflife)
+    nreal = int(mask.sum())
+    target = np.concatenate([np.clip(d["pd"][mask], -40, 40),
                              np.full(len(y) - nreal, 6.0)])
     w = np.concatenate([w[:nreal], 0.25 * w[nreal:]])
 
@@ -162,25 +175,47 @@ def massey(n, d, fin, fit, ev, halflife=365, ridge=0.5):
         np.add.at(g, b2, -coef * 0.5)
         return g / len(y) * 100.0 + ridge * r
 
-    r = _adam(grad, np.zeros(n), iters=600, lr=0.5)
-    ta, tb = _teams(r, d, fit)
-    s = _calibrate(ta - tb, d["y"][fit])
+    return _adam(grad, np.zeros(n), iters=600, lr=0.5)
+
+
+def massey(n, d, fin, fit, ev, halflife=365, ridge=0.5):
+    """Fit against the actual score rather than the winner.
+
+    That uses information the logistic model discards outright. The finish rows carry no
+    margin and are given a nominal one, weighted down, so they still order teams without
+    inventing a score for a match that was never played.
+    """
+    inner, cal = _cal_split(d, fit)
+    ri = _massey_fit(n, d, fin, inner, halflife, ridge)
+    ca, cb = _teams(ri, d, cal)
+    s = _calibrate(ca - cb, d["y"][cal])
+    r = _massey_fit(n, d, fin, fit, halflife, ridge)
     return _predict(r, d, ev, s)
 
 
 def _online(n, d, fit, ev, k0=0.10, scale=1.0, glicko=False, k_floor=0.02, n0=25.0,
             revert=0.0):
-    """One sequential pass in date order. Ratings at evaluation time are what they are."""
+    """One sequential pass in date order. Ratings at evaluation time are what they are.
+
+    An online model needs no separate calibration slice: at the moment it predicts match i
+    it has only seen matches before i, so its own pass is already out of sample. Sweeping
+    up those running predictions gives an honest divisor for free, and is the same
+    protocol the batch models pay an extra fit for.
+    """
     r = np.zeros(n)
     seen = np.zeros(n)
     idx = np.flatnonzero(fit)
     a1, a2, b1, b2, y = d["a1"], d["a2"], d["b1"], d["b2"], d["y"]
+    run_diff, run_y = [], []
     for i in idx:
         p1, p2, q1, q2 = a1[i], a2[i], b1[i], b2[i]
         ta = 0.5 * (r[p1] + r[p2])
         tb = 0.5 * (r[q1] + r[q2])
         e = 1.0 / (1.0 + np.exp(-np.clip((ta - tb) / scale, -40, 40)))
         err = y[i] - e
+        if seen[p1] and seen[p2] and seen[q1] and seen[q2]:
+            run_diff.append(ta - tb)      # a genuine forecast: made before the result
+            run_y.append(y[i])
         for p, sgn in ((p1, 1), (p2, 1), (q1, -1), (q2, -1)):
             k = k0
             if glicko:
@@ -189,8 +224,11 @@ def _online(n, d, fit, ev, k0=0.10, scale=1.0, glicko=False, k_floor=0.02, n0=25
             if revert:
                 r[p] *= (1.0 - revert)
             seen[p] += 1
-    ta, tb = _teams(r, d, fit)
-    s = _calibrate(ta - tb, d["y"][fit])
+    if len(run_y) > 2000:
+        s = _calibrate(np.array(run_diff), np.array(run_y))
+    else:
+        ta, tb = _teams(r, d, fit)
+        s = _calibrate(ta - tb, d["y"][fit])
     return _predict(r, d, ev, s)
 
 
@@ -241,8 +279,9 @@ def pair(n, d, fin, fit, ev, halflife=365, ridge=0.5, minpair=6):
                         for x, yy in kk])
         return base_v + add
 
-    fa, fb = team_val(d["a1"], d["a2"], fit), team_val(d["b1"], d["b2"], fit)
-    s = _calibrate(fa - fb, d["y"][fit])
+    _, cal = _cal_split(d, fit)
+    ca, cb = team_val(d["a1"], d["a2"], cal), team_val(d["b1"], d["b2"], cal)
+    s = _calibrate(ca - cb, d["y"][cal])
     ea, eb = team_val(d["a1"], d["a2"], ev), team_val(d["b1"], d["b2"], ev)
     return _sig((ea - eb) / s)
 

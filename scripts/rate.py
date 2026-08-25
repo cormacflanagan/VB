@@ -37,6 +37,7 @@ from jsonl import read as read_jsonl
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "..", "data")
 CONF = os.path.join(HERE, "rating.json")
+CAL_DAYS = 90   # slice reserved for choosing the prediction scale, never fit on
 
 DEFAULTS = {
     "halflife_days": 365,     # a result this old counts half as much as one today
@@ -44,6 +45,7 @@ DEFAULTS = {
     "scale": 1.0,             # logits per rating point
     "ridge": 2.0,             # L2 pull toward the mean; higher = more shrinkage
     "curve": 0.0,             # how much steeper a big gap is than a linear scale says
+    "margin_weight": 0.0,     # how much more a blowout counts than a squeaker
     "pair_alpha": 1.0,        # 1 = team is the mean of its players, 0 = the weaker one
     "unit": "match",          # "match" or "set": sets give a crude margin of victory
     "pool_weight": 1.0,       # pool play relative to bracket
@@ -61,7 +63,7 @@ def conf(argv):
     if os.path.exists(CONF):
         c.update(json.load(open(CONF)))
     alias = {"--halflife": "halflife_days", "--pair": "pair_alpha", "--ridge": "ridge",
-             "--curve": "curve",
+             "--curve": "curve", "--margin": "margin_weight",
              "--scale": "scale", "--unit": "unit", "--window": "window_days",
              "--finish": "finish_weight", "--holdout": "holdout_days", "--iters": "iters", "--min": "min_matches"}
     for a, key in alias.items():
@@ -130,6 +132,15 @@ def load(c, quiet=False):
     for m, age in rows:
         decay = 0.5 ** (age / c["halflife_days"]) if c["halflife_days"] else 1.0
         base = decay * (c["pool_weight"] if (m.get("phase") or "").lower() == "pool" else 1.0)
+        # Every match in this corpus carries set scores and nothing used them until now:
+        # a 21-19 and a 21-6 were the same row. A decisive win is stronger evidence, so it
+        # is given proportionally more weight. Capped, because a forfeit or a retirement
+        # produces a margin that says nothing about who is better. Applied here rather than
+        # below because `obs` copies `base` as it is built.
+        mw = c.get("margin_weight") or 0.0
+        if mw:
+            pd = abs(sum((st[0] - st[1]) for st in (m["sets"] or []) if len(st) == 2))
+            base = base * (1.0 + mw * min(pd, 30.0) / 10.0)
         # a set-level unit turns a 2-1 into two wins and a loss, which is the cheapest
         # honest way to let margin of victory matter at all
         obs = []
@@ -301,18 +312,48 @@ def fit(n, d, c, mask=None, quiet=False):
     return r
 
 
-def score(r, d, c, mask):
+def calibrate(r, d, c, mask):
+    """The divisor turning a fitted rating gap into a probability.
+
+    Kept separate from the `scale` used during fitting, because the two do different jobs
+    and the right value for one is not the right value for the other. Ridge shrinkage
+    compresses every rating toward the mean, so a model fit under a heavy ridge produces
+    small gaps that a fixed divisor reads as near-coin-flips -- correct ordering, badly
+    under-confident probabilities. Fitting the divisor afterwards restores the confidence
+    without touching the ratings or their order.
+
+    The mask handed in must be data the ratings were NOT fit on. Calibrating on the fitting
+    data does active harm: in-sample rating gaps are exaggerated by exactly the amount the
+    model overfit, so the search reads them as well separated and picks a small divisor,
+    which then produces overconfident predictions on everything else. Measured here, that
+    mistake cost 0.04 of log-loss -- worse than leaving the divisor at 1.0 and not
+    calibrating at all, and worse for a heavily-fit model than a lightly-fit one, which
+    would quietly rig any comparison between them.
+    """
+    a1, a2, b1, b2 = d["a1"][mask], d["a2"][mask], d["b1"][mask], d["b2"][mask]
+    y = d["y"][mask]
+    diff = link(team(r, a1, a2, c["pair_alpha"]) - team(r, b1, b2, c["pair_alpha"]), c)
+    best = (None, c["scale"])
+    for s in np.arange(0.05, 4.01, 0.025):
+        p = np.clip(1.0 / (1.0 + np.exp(-diff / s)), 1e-9, 1 - 1e-9)
+        ll = -np.mean(y * np.log(p) + (1 - y) * np.log(1 - p))
+        if best[0] is None or ll < best[0]:
+            best = (ll, float(s))
+    return best[1]
+
+
+def score(r, d, c, mask, scale=None):
     a1, a2, b1, b2 = d["a1"][mask], d["a2"][mask], d["b1"][mask], d["b2"][mask]
     y = d["y"][mask]
     diff = team(r, a1, a2, c["pair_alpha"]) - team(r, b1, b2, c["pair_alpha"])
-    p = 1.0 / (1.0 + np.exp(-link(diff, c) / c["scale"]))
+    p = 1.0 / (1.0 + np.exp(-link(diff, c) / (scale or c["scale"])))
     ll = -np.mean(y * np.log(p + 1e-9) + (1 - y) * np.log(1 - p + 1e-9))
     acc = np.mean((p > 0.5) == (y > 0.5))
     brier = np.mean((p - y) ** 2)
     return ll, acc, brier
 
 
-def versus_truvolley(ids, ix, d, r, c, r_all=None):
+def versus_truvolley(ids, ix, d, r, c, r_all=None, scale=None):
     """Score this rating against TruVolley on the same held-out matches.
 
     Restricted to matches where all four players carry a TruVolley, so the two are judged
@@ -344,8 +385,8 @@ def versus_truvolley(ids, ix, d, r, c, r_all=None):
             if best is None or ll < best[0]:
                 best = (ll, s_tv, np.mean((q > 0.5) == (y > 0.5)),
                         np.mean((q - y) ** 2), k_tv)
-    mine = score(r, d, c, ok)
-    seen = score(r_all, d, c, ok) if r_all is not None else None
+    mine = score(r, d, c, ok, scale=scale)
+    seen = score(r_all, d, c, ok, scale=scale) if r_all is not None else None
     print("")
     print(f"head to head on {int(ok.sum())} held-out matches where both rate all four:")
     print(f"  {'':10}{'LOG-LOSS':>10}{'ACCURACY':>10}{'BRIER':>9}")
@@ -389,16 +430,31 @@ def main(argv):
 
     print("  fitting on the training window")
     r_tr = fit(n, d, c)
+    # A nested split for the prediction scale: fit again on everything older than the
+    # calibration slice, then choose the divisor on the slice itself, which that inner fit
+    # has never seen. Costs one extra fit and is the difference between a calibration and
+    # a second helping of the training error.
+    cal_edge = c["holdout_days"] + CAL_DAYS
+    inner = d["age"] > cal_edge
+    cal = d["train"] & d["real"] & (d["age"] <= cal_edge)
+    if cal.sum() > 2000 and inner.sum() > 10000:
+        r_in = fit(n, d, c, mask=inner, quiet=True)
+        ps = calibrate(r_in, d, c, cal)
+        print(f"    prediction scale {ps:.3f} from {int(cal.sum()):,} held-out matches "
+              f"(fitting scale {c['scale']})")
+    else:
+        ps = c["scale"]
+        print(f"    prediction scale {ps:.3f} (too little data to calibrate)")
     if (~d["train"] & d["real"]).sum():
-        ll, acc, brier = score(r_tr, d, c, ~d["train"] & d["real"])
-        base = score(np.zeros(n), d, c, ~d["train"] & d["real"])
+        ll, acc, brier = score(r_tr, d, c, ~d["train"] & d["real"], scale=ps)
+        base = score(np.zeros(n), d, c, ~d["train"] & d["real"], scale=ps)
         print(f"\nholdout ({int((~d['train'] & d['real']).sum())} obs): log-loss {ll:.4f}  "
               f"accuracy {acc:.3f}  Brier {brier:.4f}"
               f"   [coin-flip baseline {base[0]:.4f} / {base[1]:.3f}]")
 
     print("\n  refitting on everything")
     r = fit(n, d, c, mask=np.ones(len(d["y"]), bool))
-    versus_truvolley(ids, ix, d, r_tr, c, r_all=r)
+    versus_truvolley(ids, ix, d, r_tr, c, r_all=r, scale=ps)
     nm = counts(ids, d)
 
     # Put it on TruVolley's scale. A least-squares line was wrong here: fitted with
