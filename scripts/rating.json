@@ -1,8 +1,8 @@
 {
- "halflife_days": 245.0,
+ "halflife_days": 293.0,
  "window_days": 1095,
  "scale": 1.0,
- "ridge": 1.024,
+ "ridge": 0.2875,
  "pair_alpha": 1.0,
  "unit": "match",
  "pool_weight": 1.0,
@@ -11,7 +11,7 @@
  "min_matches": 8,
  "holdout_days": 90,
  "asof": null,
- "finish_weight": 2.02,
- "margin_weight": 0.4,
+ "finish_weight": 2.5,
+ "margin_weight": 1.04,
  "curve": 0.0
 }

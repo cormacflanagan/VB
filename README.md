@@ -424,16 +424,50 @@ the weaker passer gets served every ball predicts monotonically worse at every s
 alpha 1.0 (0.6144 holdout log-loss) to 0.0 (0.7021). That held on the first 99k-match
 sample and holds harder on 656k.
 
-**Time decay reverses with sample size.** On the seeded sample no decay won; on the full
-corpus a 365-day half-life is best (0.6016 against 0.6143). The first result was an
-artifact of a corpus built outward from strong players' schedules.
+**Time decay reverses with sample size, and then holds.** On the seeded sample no decay
+won; on the full corpus a year-ish half-life is best. The first result was an artifact of a
+corpus built outward from strong players' schedules. That conclusion was briefly overturned
+in favour of a 120-day memory and then reinstated: the short half-life only looked better
+while the prediction scale was being calibrated in-sample, which penalised the model with
+more effective data. Corrected, 365 days beats 120 by 0.021 and the coordinate search
+settles at 293.
 
 **It matches TruVolley rather than beating it.** On held-out matches where both rate all
-four players, with both having seen the same data: TruVolley 0.3577 log-loss and 0.840
-accuracy, this fit 0.3963 and 0.843. Compared strictly out-of-sample TruVolley looks far
+four players, with both having seen the same data: TruVolley 0.3580 log-loss and 0.840
+accuracy, this fit 0.3846 and 0.846. Compared strictly out-of-sample TruVolley looks far
 better, but that comparison is rigged &#8212; TruVolley is quoted as of today and has already
 absorbed the matches being predicted. The case for this rating is that it is transparent
 and adjustable, not that it is sharper.
+
+**Point margin was the one thing worth adding.** Every match in the corpus carries set
+scores and none of them were read: a 21&#8211;19 and a 21&#8211;6 were the same row. Weighting a
+result by how decisive it was is the only change out of nine competing algorithms and a
+four-knob coordinate search that survived scrutiny, and it is worth about 0.005 of held-out
+log-loss &#8212; roughly twice the noise floor. Real, and modest.
+
+**Calibrate the prediction scale out of sample or not at all.** The divisor turning a
+rating gap into a probability was being chosen on the same data the ratings were fit to.
+In-sample gaps are exaggerated by however much the model overfit, so the search read them
+as well separated, picked too small a divisor, and produced overconfident predictions. It
+cost 0.04 of log-loss &#8212; worse than leaving the divisor at 1.0 and not calibrating at
+all. Worse still, the damage scales with how hard a model memorises, so it penalised batch
+Bradley-Terry far more than online Elo, and briefly made Elo look like the better
+algorithm. It is not: with a nested split (refit on everything older than a reserved
+90-day slice, choose the divisor on the slice) Bradley-Terry scores 0.5957 to Elo's 0.6165.
+
+**Nine algorithms were tried and the incumbent came second.** Elo, Glicko, a Massey
+least-squares fit on point margin, a partnership-level rating, a learned stacker and a
+plain ensemble all lost to Bradley-Terry with margin weighting (0.5905). Two results worth
+keeping: the learned stacker was beaten by an unweighted average of its own inputs, and
+rating the *partnership* as an entity finished last, so doubles chemistry is either not
+real or not learnable from results.
+
+**Hill climbing helps, but only with a third split.** `climb.py` runs an adaptive
+coordinate search &#8212; cheaper than a grid, which wastes evaluations on bad corners and
+cannot see between its own lines. The catch is that it optimises the validation surface,
+noise included: at a standard error of 0.0023 a 30-evaluation search expects about 0.006 of
+apparent gain from luck alone, which is larger than the real effect it found. So the split
+is three-way and the test window is scored once, at the end.
 
 **Ratings are put on the TruVolley scale by a quantile map, not a least-squares line.**
 The line was fitted with r = 0.77 and so regressed toward the mean: the gap between the
