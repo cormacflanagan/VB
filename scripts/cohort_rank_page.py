@@ -144,7 +144,7 @@ def interval_chart(rows, w=940, rowh=17):
     scale with an uncertainty attached, not a magnitude measured from zero, and bars from
     zero would imply a meaningful origin the rating does not have.
     """
-    L, R, T, B = 168, 26, 26, 34
+    L, R, T, B = 190, 26, 26, 34
     h = T + B + rowh * len(rows)
     vals = [(r["lo2"], r["hi2"]) for r in rows]
     x0 = min(v[0] for v in vals) - 0.05
@@ -163,7 +163,7 @@ def interval_chart(rows, w=940, rowh=17):
     for i, r in enumerate(rows):
         cy = T + rowh * i + rowh / 2
         o.append(f'<text x="{L - 30}" y="{cy + 3.5:.1f}" class="rowlab" '
-                 f'text-anchor="end">{esc(r["name"][:20])}</text>')
+                 f'text-anchor="end">{esc(r["name"][:23])}</text>')
         o.append(f'<text x="{L - 8}" y="{cy + 3.5:.1f}" class="rownum" '
                  f'text-anchor="end">{r["rank"]}</text>')
         o.append(f'<line x1="{px(r["lo2"]):.1f}" y1="{cy:.1f}" x2="{px(r["hi2"]):.1f}" '
@@ -440,13 +440,19 @@ def build():
     worst = steps[-1] if steps else None
     # the widest interval in the top twelve, named, because that is the honest version of
     # the objection this page was rebuilt to answer
-    soft12 = max(top[:12], key=lambda t: rt[str(t[1])]["se"])
-    soft12_se = rt[str(soft12[1])]["se"]
-    tight12 = min(top[:12], key=lambda t: rt[str(t[1])]["se"])
-    ov = sum(1 for c in chart[:20] if c["lo2"] <= chart[0]["val"] <= c["hi2"]
-             or c["hi2"] >= chart[0]["lo2"])
     med_gap = float(np.median([chart[i]["val"] - chart[i + 1]["val"]
                                for i in range(len(chart) - 1)]))
+    widths = [(rng[p][1] - rng[p][0], i, v["name"], rng[p])
+              for i, (_, p, v) in enumerate(top, 1) if p in rng]
+    med_width = int(np.median([w for w, _, _, _ in widths])) if widths else 0
+    # the widest range inside the top twelve, and the tightest immediately around it: the
+    # objection this page was rebuilt to answer, stated as what it actually is
+    top12 = [t for t in widths if t[1] <= 12]
+    soft = max(top12, key=lambda t: t[0]) if top12 else None
+    near = min([t for t in widths if abs(t[1] - (soft[1] if soft else 0)) <= 2
+                and t[1] != (soft[1] if soft else 0)] or widths,
+               key=lambda t: t[0]) if widths else None
+    firm = min(widths, key=lambda t: t[0]) if widths else None
 
     return f"""<title>The 2027 Field, Re-Ranked</title>
 <style>{CSS}</style>
@@ -455,15 +461,15 @@ def build():
   <p class="eyebrow">{LABEL} &#183; top {TOP} &#183; fitted rating</p>
   <h1>A ranking, and how much of it is <em>real</em></h1>
   <p class="standfirst">The 18U-eligible field cut on the rating fitted in this repository.
-  Adjacent places differ by about {med_gap:.2f} while the typical standard error is
-  {np.median(ses):.2f}, so most of the top twenty is a tie that a sorted list conceals.
-  Every player here carries the range of places she actually took across forty refits on
-  resampled results.</p>
+  Adjacent places differ by about {med_gap:.2f} of a rating point, which is nothing next to
+  the uncertainty: refit the model forty times on resampled results and the median player
+  here moves across {med_width} places. Only the very top is solid. Every row carries the
+  range of ranks it actually occupied, so a tie reads as a tie.</p>
 </header>
 
 <div class="facts">
+  <div class="fact"><b>{med_width}</b><span>Places the median player moves</span></div>
   <div class="fact"><b>{med_gap:.2f}</b><span>Gap between adjacent ranks</span></div>
-  <div class="fact"><b>{np.median(ses):.2f}</b><span>Median standard error</span></div>
   <div class="fact"><b>{seinfo["reps"]}</b><span>Bootstrap refits</span></div>
   <div class="fact"><b>{len(rated):,}</b><span>Cohort players ranked</span></div>
   <div class="fact"><b>{younger}</b><span>Younger than 2027</span></div>
@@ -498,19 +504,23 @@ def build():
 
 <section>
   <h2>What is true instead</h2>
-  <p class="lede">The concern was right about where to look and wrong about what it would
-  find. {esc(soft12[2]["name"])} does have the least well determined rating in the top
-  twelve &#8212; a standard error of {soft12_se:.2f} against
-  {rt[str(tight12[1])]["se"]:.2f} for {esc(tight12[2]["name"])} in the same group. That is
-  the objection correctly located: not a number that is wrong, but the softest number up
-  there. The chart shows every interval, so the ties are visible rather than implied.</p>
+  <p class="lede">The objection was right about where to look and wrong about what it would
+  find there. The problem is not that {esc(soft[2]) if soft else "the rating"} is too high;
+  it is that {"her" if soft else "the"} place in this list is barely determined at all.
+  {f'Across the forty refits she lands anywhere from {soft[3][0]} to '
+    f'{soft[3][1]}. {esc(near[2])}, one row {"below" if near[1] > soft[1] else "above"} '
+    f'her, moves only from {near[3][0]} to {near[3][1]}; '
+    f'{esc(firm[2])} at the top moves from {firm[3][0]} to {firm[3][1]}. '
+   if soft and near and firm else ""}Same cohort, same method, three
+  wildly different amounts of evidence &#8212; and a plain sorted list shows none of it.</p>
   <div class="figbox">{interval_chart(chart)}</div>
-  <p class="lede" style="margin-top:14px">Marked dots are players whose standard error
-  falls in the top fifth of the cohort. The whisker is two standard errors either side;
-  the rank column in the table below is the 5th-to-95th percentile of the places a player
-  actually occupied across the forty refits, which accounts for players' errors moving
-  together &#8212; partners' especially &#8212; in a way a standard error taken one player
-  at a time cannot.</p>
+  <p class="lede" style="margin-top:14px">The whisker is two standard errors either side of
+  the rating; marked dots are players whose standard error falls in the top fifth of the
+  cohort. The rank range in the table below is computed differently and matters more: the
+  5th-to-95th percentile of the places a player actually took across the refits, ranks
+  recomputed inside each one. That captures errors moving together &#8212; a player and her
+  regular partner especially &#8212; which a standard error taken one player at a time
+  cannot.</p>
 </section>
 
 <section>
@@ -533,8 +543,9 @@ def build():
 
 <section>
   <h2>Top {TOP}</h2>
-  <p class="lede">Sortable &#8212; click any underlined heading, and the schedule columns
-  are the ones worth sorting on. Range is two standard errors either side of the rating;
+  <p class="lede">Sortable &#8212; click any heading marked with an arrow, and the schedule
+  columns are the ones worth sorting on. Range is two standard errors either side of the
+  rating;
   ranks is where she landed across the refits. The last five columns are her exposure: mean
   opponent, matches against {STRONG}-and-above and her record in them, and the share of
   matches spent with her most frequent partner. By graduating year this cut is
