@@ -425,6 +425,8 @@ def main(argv):
     print("config:", json.dumps({k: c[k] for k in
                                  ("halflife_days", "window_days", "scale", "ridge",
                                   "curve", "pair_alpha", "unit", "holdout_days")}))
+    dest = os.path.join(DATA, argv[argv.index("--out") + 1]) if "--out" in argv \
+        else os.path.join(DATA, "rating.json")
     ids, ix, d = load(c)
     n = len(ids)
 
@@ -505,8 +507,8 @@ def main(argv):
     json.dump({"config": c, "map": {"kind": "quantile", "r": corr,
                                     "x": [round(float(v), 4) for v in kx],
                                     "y": [round(float(v), 4) for v in ky]},
-               "ratings": out}, open(os.path.join(DATA, "rating.json"), "w"), indent=1)
-    print(f"wrote data/rating.json ({len(out)} players)")
+               "ratings": out}, open(dest, "w"), indent=1)
+    print(f"wrote {os.path.relpath(dest)} ({len(out)} players)")
 
     grp = argv[argv.index("--compare") + 1] if "--compare" in argv else None
     if grp:
