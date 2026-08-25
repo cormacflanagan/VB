@@ -471,6 +471,61 @@ a 180-day half-life and 11th at 120. The holdout still prefers 365 days *for the
 population*, so the short half-life is not a better rating, it is a rating that reads a
 fast improver correctly at everyone else's expense.
 
+## What a rating does not know
+
+A maximum-likelihood rating hands back a number with no indication of how much evidence
+produced it, and ranking on it therefore states things the results do not support. The
+case that exposed this: a player sitting twelfth in the 2027-and-younger cohort on a record
+of 100&#8211;14 that contained **three matches against anyone rated 7.5 or better**, two thirds
+of them alongside one partner.
+
+Two shapes of schedule starve a rating of evidence, and a match count detects neither.
+**Lopsided results say almost nothing** &#8212; a logistic model learns in proportion to
+p(1&#8722;p), so a match won 96% of the time is worth about a twentieth of a coin-flip, and a
+long record against overmatched fields is a small amount of evidence wearing a large
+number. **A single partner hides the split** &#8212; `strength(team) = mean(r1, r2)` pins the
+pair down and leaves the halves loose, so a player who almost never appears without the
+same teammate has a rating that is largely inferred rather than observed.
+
+`uncertainty.py` measures both at once, by refitting the whole model on resampled evidence
+and watching which ratings move. Resampling is **by tournament-division rather than by
+match**: six pool results out of one draw share a venue, a day and an opponent pool, and
+treating them as six independent facts would understate every interval by roughly the
+square root of the pool size. Each division gets an Exp(1) weight and the model is refit
+from scratch, forty times.
+
+`shrink.py` then tests the thing that actually needs testing &#8212; whether loosely-determined
+ratings are *too high* rather than merely uncertain. Held-out matches are oriented so the
+shakier side comes first and grouped by how much shakier it is; if the raw rating were
+unbiased those teams would win as often as predicted. The correction is tuned the same way
+every other knob here is: deduct k standard errors, keep the k with the best held-out
+log-loss, and report k = 0 if shrinking does not help.
+
+**The old defence against this was a minimum match count, and it was a bad one.** It
+admitted a 400-match record against nobody and excluded a 15-match record against the best
+players in the country. It is gone.
+
+## The same girl, twice
+
+`dedupe.py`. Players re-register &#8212; a club change, a lost password, a parent signing a kid
+up a second time &#8212; and the site then holds two profiles splitting one career between
+them. Ashley Ruschill (2029, McKinney TX) appeared in one top-sixty cut **twice, at #44 and
+#55**, as id 105245 with 607 matches and id 247847 with 32.
+
+Matching on name alone would be reckless at this scale; there really are two Sydney Smiths.
+The test has to be able to *disprove* a merge, so it requires same normalised name, same
+graduating year, same state, **and that the two ids never appear at the same tournament**.
+That last clause does the work: two distinct girls of the same name and class in one state
+ride the same regional circuit and will turn up in one draw eventually, while one person's
+two accounts cannot, because she enters under one of them at a time. It is stricter than
+requiring they never play each other &#8212; sharing a tournament is far likelier than being
+drawn against each other in it.
+
+Across 292,003 players it finds 176 name-class-state collisions, clears **5 as genuinely
+two people**, and merges the remaining 171. The map lives in `data/aliases.json` and is
+applied at load rather than baked into the corpus, so the merged files stay a faithful
+record of what the three sites published.
+
 ## One player's career
 
 `scripts/history.py <id or name>` prints a single player's whole record rather than the

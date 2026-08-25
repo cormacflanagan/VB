@@ -92,11 +92,17 @@ def load(c, quiet=False):
         except ValueError:
             return None
 
+    al = aliases()
     rows, old, future = [], 0, 0
     if True:
         for m in read_jsonl(path):
             if len(m["a"]) != 2 or len(m["b"]) != 2 or not m["date"]:
                 continue
+            if al:
+                m["a"] = [al.get(p, p) for p in m["a"]]
+                m["b"] = [al.get(p, p) for p in m["b"]]
+                if set(m["a"]) & set(m["b"]) or len(set(m["a"])) < 2:
+                    continue      # a merge that turns a match into one against herself
             age = age_of(m["date"])
             if age is None:
                 continue
@@ -115,10 +121,10 @@ def load(c, quiet=False):
         sys.exit("nothing inside the window -- widen --window")
 
     ids = sorted({p for m, _ in rows for p in m["a"] + m["b"]}
-                 | {p for hi, lo, _, _ in placings for p in hi + lo})
+                 | {p for hi, lo, *_ in placings for p in hi + lo})
     ix = {p: i for i, p in enumerate(ids)}
 
-    A1, A2, B1, B2, Y, W, AGE = [], [], [], [], [], [], []
+    A1, A2, B1, B2, Y, W, AGE, CL = [], [], [], [], [], [], [], []
     for m, age in rows:
         decay = 0.5 ** (age / c["halflife_days"]) if c["halflife_days"] else 1.0
         base = decay * (c["pool_weight"] if (m.get("phase") or "").lower() == "pool" else 1.0)
@@ -135,18 +141,25 @@ def load(c, quiet=False):
             A1.append(ix[m["a"][0]]); A2.append(ix[m["a"][1]])
             B1.append(ix[m["b"][0]]); B2.append(ix[m["b"][1]])
             Y.append(y); W.append(w); AGE.append(age)
+            # namespaced: the three feeds mint division ids independently, and CBVA's
+            # are strings like "7919:1", so a bare tdId is neither unique nor an int
+            CL.append(f'{m.get("src", "?")}:{m.get("tdId", "")}:{m.get("tid", "")}')
     nmatch = len(Y)
 
-    for hi, lo, w, age in placings:
+    for hi, lo, w, age, cl in placings:
         A1.append(ix[hi[0]]); A2.append(ix[hi[1]])
         B1.append(ix[lo[0]]); B2.append(ix[lo[1]])
-        Y.append(1.0); W.append(w); AGE.append(age)
+        Y.append(1.0); W.append(w); AGE.append(age); CL.append(cl)
     if placings:
         say(f"  + {len(placings)} pairwise observations from standings at events with no "
             f"match data (finish_weight {c['finish_weight']})")
 
     d = dict(a1=np.array(A1), a2=np.array(A2), b1=np.array(B1), b2=np.array(B2),
-             y=np.array(Y, float), w=np.array(W, float), age=np.array(AGE, float))
+             y=np.array(Y, float), w=np.array(W, float), age=np.array(AGE, float),
+             # the tournament-division each observation came from. Six pool results out of
+             # one draw are not six independent facts, so anything resampling this corpus
+             # has to resample whole divisions -- see scripts/uncertainty.py
+             cluster=np.array(CL))
     d["train"] = d["age"] > c["holdout_days"]
     # the holdout is scored on real matches only: a placing is weaker evidence and
     # including it would grade the model against its own softer target
@@ -154,6 +167,19 @@ def load(c, quiet=False):
     say(f"  {len(d['y'])} observations ({c['unit']} level), {len(ids)} players; "
         f"{int(d['train'].sum())} train / {int((~d['train'] & d['real']).sum())} holdout")
     return ids, ix, d
+
+
+def aliases():
+    """Second accounts -> the account that keeps the career. See scripts/dedupe.py.
+
+    Applied at load rather than baked into the corpus, so the merged files stay a faithful
+    record of what the three sites actually published and the mapping is one file that can
+    be inspected, edited or deleted without recrawling anything.
+    """
+    p = os.path.join(DATA, "aliases.json")
+    if not os.path.exists(p):
+        return {}
+    return {int(k): int(v) for k, v in json.load(open(p))["alias"].items()}
 
 
 def standings(c, age_of):
@@ -174,6 +200,7 @@ def standings(c, age_of):
     if not c.get("finish_weight") or not (os.path.exists(path)
                                           or os.path.exists(path + ".gz")):
         return []
+    al = aliases()
     out = []
     if True:
         for r in read_jsonl(path):
@@ -183,6 +210,8 @@ def standings(c, age_of):
             if age is None or age < 0 or (c["window_days"] and age > c["window_days"]):
                 continue
             teams = r["teams"]
+            if al:
+                teams = [[pl, [al.get(p, p) for p in tm]] for pl, tm in teams]
             if len(teams) < 3:
                 continue
             decay = 0.5 ** (age / c["halflife_days"]) if c["halflife_days"] else 1.0
@@ -191,7 +220,8 @@ def standings(c, age_of):
                 for j in range(i + 1, len(teams)):
                     if teams[i][0] == teams[j][0]:
                         continue
-                    out.append((teams[i][1], teams[j][1], w, age))
+                    out.append((teams[i][1], teams[j][1], w, age,
+                                f'fin:{r.get("tdId", "")}:{r.get("tid", "")}'))
     return out
 
 
