@@ -25,3 +25,4 @@ data/rating.json
 # and scripts/uncertainty.py from the committed corpus in about twelve minutes each
 data/se_train.npz
 data/rating_se.json
+data/boot.npz

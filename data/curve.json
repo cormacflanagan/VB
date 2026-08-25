@@ -1,0 +1,76 @@
+{
+ "best": 0.0,
+ "flattest": 0.45,
+ "grid": [
+  {
+   "curve": 0.0,
+   "ll": 0.60728,
+   "acc": 0.65093,
+   "brier": 0.21125,
+   "stepPred": 0.18034,
+   "stepAct": 0.11872,
+   "stepErr": -0.06161,
+   "stepN": 3664
+  },
+  {
+   "curve": 0.05,
+   "ll": 0.60794,
+   "acc": 0.6512,
+   "brier": 0.21147,
+   "stepPred": 0.17111,
+   "stepAct": 0.11681,
+   "stepErr": -0.0543,
+   "stepN": 3664
+  },
+  {
+   "curve": 0.1,
+   "ll": 0.60916,
+   "acc": 0.65167,
+   "brier": 0.2118,
+   "stepPred": 0.16411,
+   "stepAct": 0.11517,
+   "stepErr": -0.04894,
+   "stepN": 3664
+  },
+  {
+   "curve": 0.15,
+   "ll": 0.61075,
+   "acc": 0.65177,
+   "brier": 0.21219,
+   "stepPred": 0.15835,
+   "stepAct": 0.11545,
+   "stepErr": -0.0429,
+   "stepN": 3664
+  },
+  {
+   "curve": 0.2,
+   "ll": 0.61261,
+   "acc": 0.65159,
+   "brier": 0.21261,
+   "stepPred": 0.15325,
+   "stepAct": 0.11436,
+   "stepErr": -0.03889,
+   "stepN": 3664
+  },
+  {
+   "curve": 0.3,
+   "ll": 0.61686,
+   "acc": 0.65181,
+   "brier": 0.21351,
+   "stepPred": 0.14577,
+   "stepAct": 0.11436,
+   "stepErr": -0.03141,
+   "stepN": 3664
+  },
+  {
+   "curve": 0.45,
+   "ll": 0.62403,
+   "acc": 0.6518,
+   "brier": 0.21486,
+   "stepPred": 0.13722,
+   "stepAct": 0.11436,
+   "stepErr": -0.02286,
+   "stepN": 3664
+  }
+ ]
+}

@@ -43,6 +43,7 @@ DEFAULTS = {
     "window_days": 1095,      # ignore anything older than this
     "scale": 1.0,             # logits per rating point
     "ridge": 2.0,             # L2 pull toward the mean; higher = more shrinkage
+    "curve": 0.0,             # how much steeper a big gap is than a linear scale says
     "pair_alpha": 1.0,        # 1 = team is the mean of its players, 0 = the weaker one
     "unit": "match",          # "match" or "set": sets give a crude margin of victory
     "pool_weight": 1.0,       # pool play relative to bracket
@@ -60,6 +61,7 @@ def conf(argv):
     if os.path.exists(CONF):
         c.update(json.load(open(CONF)))
     alias = {"--halflife": "halflife_days", "--pair": "pair_alpha", "--ridge": "ridge",
+             "--curve": "curve",
              "--scale": "scale", "--unit": "unit", "--window": "window_days",
              "--finish": "finish_weight", "--holdout": "holdout_days", "--iters": "iters", "--min": "min_matches"}
     for a, key in alias.items():
@@ -225,6 +227,38 @@ def standings(c, age_of):
     return out
 
 
+def link(diff, c):
+    """Rating gap -> logit, allowing the scale to steepen as the gap widens.
+
+    A plain Bradley-Terry model puts the logit proportional to the rating difference, which
+    assumes one point of rating buys the same edge everywhere on the scale. Held-out
+    matches say it does not. Teams playing far above their usual level lose considerably
+    more often than a linear scale predicts -- the error runs from -0.3% where the step up
+    is small to -6.2% in the top quintile of step-ups, monotonically, over eighteen
+    thousand matches (scripts/extrapolation.py).
+
+    That flatness does not merely mispredict; it distorts the fit. If the model needs a
+    bigger gap than reality to explain an 88% win rate, then anyone whose whole record is a
+    high win rate over weaker opposition gets the bigger gap -- her rating inflates to
+    cover for the link. The inflation lands exactly on players never tested near their own
+    level, which is what made a 100-14 record against a mean opponent of 5.56 come out
+    twelfth in a national cohort.
+
+    So: diff * (1 + curve*|diff|). Quadratic in the tail, and deliberately still linear at
+    the origin -- a power law would flatten the gradient to zero for evenly matched teams,
+    discarding the most informative matches in the corpus to fix the least informative
+    ones. curve = 0 is the plain model.
+    """
+    k = c.get("curve") or 0.0
+    return diff if not k else diff * (1.0 + k * np.abs(diff))
+
+
+def dlink(diff, c):
+    """d link / d diff, for the chain rule in fit()."""
+    k = c.get("curve") or 0.0
+    return 1.0 if not k else 1.0 + 2.0 * k * np.abs(diff)
+
+
 def team(r, i, j, alpha):
     ri, rj = r[i], r[j]
     return alpha * 0.5 * (ri + rj) + (1 - alpha) * np.minimum(ri, rj)
@@ -250,9 +284,10 @@ def fit(n, d, c, mask=None, quiet=False):
     vel = np.zeros(n)
     lr, b1m, b2m, eps = c["lr"], 0.9, 0.999, 1e-8
     for t in range(1, int(c["iters"]) + 1):
-        z = (team(r, a1, a2, alpha) - team(r, b1, b2, alpha)) / s
+        diff = team(r, a1, a2, alpha) - team(r, b1, b2, alpha)
+        z = link(diff, c) / s
         p = 1.0 / (1.0 + np.exp(-z))
-        coef = w * (p - y) / s                       # dLoss/dz
+        coef = w * (p - y) * dlink(diff, c) / s      # dLoss/dz . dz/ddiff
         g = np.zeros(n)
         team_grad(r, a1, a2, alpha, g, coef)
         team_grad(r, b1, b2, alpha, g, -coef)
@@ -269,8 +304,8 @@ def fit(n, d, c, mask=None, quiet=False):
 def score(r, d, c, mask):
     a1, a2, b1, b2 = d["a1"][mask], d["a2"][mask], d["b1"][mask], d["b2"][mask]
     y = d["y"][mask]
-    z = (team(r, a1, a2, c["pair_alpha"]) - team(r, b1, b2, c["pair_alpha"])) / c["scale"]
-    p = 1.0 / (1.0 + np.exp(-z))
+    diff = team(r, a1, a2, c["pair_alpha"]) - team(r, b1, b2, c["pair_alpha"])
+    p = 1.0 / (1.0 + np.exp(-link(diff, c) / c["scale"]))
     ll = -np.mean(y * np.log(p + 1e-9) + (1 - y) * np.log(1 - p + 1e-9))
     acc = np.mean((p > 0.5) == (y > 0.5))
     brier = np.mean((p - y) ** 2)
@@ -298,19 +333,24 @@ def versus_truvolley(ids, ix, d, r, c, r_all=None):
     y = d["y"][ok]
     diff = (team(tv, d["a1"][ok], d["a2"][ok], 1.0)
             - team(tv, d["b1"][ok], d["b2"][ok], 1.0))
+    # TruVolley gets the same curved link and its best setting of both knobs, so the
+    # comparison is not won by giving this fit a functional form the other side lacks
     best = None
-    for s_tv in np.arange(0.1, 3.01, 0.02):
-        q = 1.0 / (1.0 + np.exp(-diff / s_tv))
-        ll = -np.mean(y * np.log(q + 1e-9) + (1 - y) * np.log(1 - q + 1e-9))
-        if best is None or ll < best[0]:
-            best = (ll, s_tv, np.mean((q > 0.5) == (y > 0.5)), np.mean((q - y) ** 2))
+    for k_tv in (0.0, 0.05, 0.1, 0.15, 0.2, 0.3, 0.4):
+        eff = diff * (1.0 + k_tv * np.abs(diff))
+        for s_tv in np.arange(0.1, 3.01, 0.02):
+            q = 1.0 / (1.0 + np.exp(-eff / s_tv))
+            ll = -np.mean(y * np.log(q + 1e-9) + (1 - y) * np.log(1 - q + 1e-9))
+            if best is None or ll < best[0]:
+                best = (ll, s_tv, np.mean((q > 0.5) == (y > 0.5)),
+                        np.mean((q - y) ** 2), k_tv)
     mine = score(r, d, c, ok)
     seen = score(r_all, d, c, ok) if r_all is not None else None
     print("")
     print(f"head to head on {int(ok.sum())} held-out matches where both rate all four:")
     print(f"  {'':10}{'LOG-LOSS':>10}{'ACCURACY':>10}{'BRIER':>9}")
     print(f"  {'TruVolley':10}{best[0]:>10.4f}{best[2]:>10.3f}{best[3]:>9.4f}"
-          f"   (at its own best scale, {best[1]:.2f})")
+          f"   (at its own best scale {best[1]:.2f}, curve {best[4]:g})")
     print(f"  {'this fit':10}{mine[0]:>10.4f}{mine[1]:>10.3f}{mine[2]:>9.4f}")
     print(f"  {'gain':10}{best[0] - mine[0]:>+10.4f}{mine[1] - best[2]:>+10.3f}"
           f"{best[3] - mine[2]:>+9.4f}")
@@ -343,7 +383,7 @@ def main(argv):
     c = conf(argv)
     print("config:", json.dumps({k: c[k] for k in
                                  ("halflife_days", "window_days", "scale", "ridge",
-                                  "pair_alpha", "unit", "holdout_days")}))
+                                  "curve", "pair_alpha", "unit", "holdout_days")}))
     ids, ix, d = load(c)
     n = len(ids)
 

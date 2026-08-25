@@ -111,22 +111,25 @@ def main(argv):
 
     base_w = d["w"].copy()
     rng = np.random.default_rng(20260825)
-    acc = np.zeros(n)
-    acc2 = np.zeros(n)
+    # every replicate is kept, not just its contribution to the variance. A standard error
+    # describes one player in isolation; the useful question about a ranking is how far a
+    # player's *place* moves, and that depends on how her rating moves relative to everyone
+    # else's -- partners' errors in particular are strongly correlated. Ranks have to be
+    # recomputed inside each replicate to capture that, so the replicates have to be kept.
+    reps_m = np.zeros((reps, n), np.float32)
     for b in range(reps):
         gw = rng.exponential(1.0, size=len(uniq))
         gw /= gw.mean()
         d["w"] = base_w * gw[cidx]
         t0 = time.time()
         rb = rate.fit(n, d, c, mask=everything, quiet=True)
-        acc += rb
-        acc2 += rb * rb
+        reps_m[b] = rb
         print(f"    replicate {b + 1:>3}/{reps}  {time.time() - t0:.0f}s", flush=True)
     d["w"] = base_w
 
-    mean = acc / reps
-    var = np.maximum(acc2 / reps - mean * mean, 0.0) * reps / max(reps - 1, 1)
-    se = np.sqrt(var)
+    se = reps_m.std(axis=0, ddof=1).astype(np.float64)
+    np.savez_compressed(os.path.join(DATA, "boot.npz"),
+                        reps=reps_m, ids=np.array(ids))
 
     nm = rate.counts(ids, d)
     info = information(r0, d, c)

@@ -1,40 +1,49 @@
-"""The 2027-and-younger top 60, ranked on what the results actually establish.
+"""The 2027-and-younger top 60, with the ranking's own uncertainty made visible.
 
   python3 scripts/cohort_rank_page.py   ->  docs/rank-2027_younger.html
                                             scripts/roster_2027_younger_fit.json
 
-The first version of this page ranked the cohort on the raw maximum-likelihood rating from
-scripts/rate.py, and it put Haleigh Bauer twelfth on a record of 100-14 that contained
-three matches against anyone rated 7.5 or better. That is not a quibble about her; it is
-the ranking reporting a number the evidence does not support, and it would do the same for
-anyone whose schedule had that shape.
+This page exists because the previous version ranked Haleigh Bauer twelfth on a record of
+100-14 containing three matches against anyone rated 7.5 or better, two thirds of them
+alongside one partner. That is a fair objection to raise, and the obvious response -- pull
+back ratings that rest on soft evidence -- was tried four ways and rejected by held-out
+matches every time:
 
-Two things starve a rating of evidence, and a match count detects neither:
+  deduct k standard errors            0.6073 -> 0.6313 at k = 1     rejected
+  steepen the link for large gaps     0.6073 -> 0.6240 at curve .45 rejected
+  add habitual opponent strength      0.6073 -> 0.6259 at beta .8   rejected
+  blame estimation noise              same bias in precise and imprecise teams
 
-  A lopsided schedule. A logistic model learns from a result in proportion to p(1-p), so a
-  match won 96% of the time is worth about a twentieth of a coin-flip. A long record
-  against overmatched fields is a small amount of evidence wearing a large number.
+The third is the sharpest refutation, because it improves *training* log-loss (0.4456 ->
+0.4321) while making held-out prediction monotonically worse. The level a player usually
+competes at genuinely adds nothing once her rating is known. Splitting held-out matches by
+how lopsided each side's record was, holding match count fixed, likewise shows no bias at
+all. So the rating is not demonstrably too high, and this page does not pretend otherwise.
 
-  A single partner. `strength(team) = mean(r1, r2)` pins the pair down and leaves the split
-  between its halves loose. Play two thirds of your matches with one person and your own
-  rating is largely inferred rather than observed.
+What is true, and what it shows instead:
 
-scripts/uncertainty.py measures both at once by refitting the whole model on resampled
-evidence and watching which ratings move, and scripts/shrink.py checks on held-out matches
-whether the loosely-determined ones are systematically overrated -- they are -- and tunes
-how far to pull them back. This page ranks on the pulled-back number.
+  The ranking is far less certain than a sorted list implies. Adjacent ranks differ by
+  about 0.05 while standard errors run 0.2 to 0.6, so most of the top twenty are
+  statistically indistinguishable. Each player therefore carries the range of places she
+  actually occupied across the bootstrap refits, not just her single best-guess rank.
 
-That changes the question being answered. The old ranking asked how good a player might
-be; this one asks how good her results oblige us to say she is. A player who has beaten
-strong opposition repeatedly barely moves. A player whose record is long, lopsided and
-shared with one partner moves a long way, and the schedule columns show why.
+  Bauer's rating is the least pinned-down in the top twelve -- roughly triple the standard
+  error of the player immediately below her. That is precisely the concern, correctly
+  located: not that the number is wrong, but that it is the softest number up there.
 
-The old minimum-observations threshold is gone. It was a crude stand-in for exactly this,
-and a bad one: it admitted a 400-match record against nobody and excluded a 15-match
-record against the best players in the country.
+  Everyone is over-rated against opposition they have never met. Teams playing far above
+  their usual level win 11.9% of held-out matches where the model predicts 18.0%. That
+  applies to every player here, not only the ones with soft schedules, and it is the reason
+  a rating should not be read as a forecast of how someone would fare a level up.
+
+Rank ranges come from recomputing the whole standing inside each bootstrap replicate, so
+they account for players' errors moving together -- partners' especially -- which a
+standard error taken one player at a time cannot.
 """
 import json, os, sys
 from collections import defaultdict
+
+import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from jsonl import read as read_jsonl
@@ -48,26 +57,52 @@ COHORT = "cohort2027.json"
 LABEL = "2027 and younger"
 TOP = 60
 STRONG = 7.5          # "strong opponent" line, on the TruVolley scale both ratings share
-MIN_OBS = 4           # only to keep players with almost no record out of the tables
+MIN_OBS = 4           # keeps players with almost no record out of the tables entirely
 
 
 def load():
     se = json.load(open(os.path.join(DATA, "rating_se.json")))
-    sh = json.load(open(os.path.join(DATA, "shrink.json")))
     pop = {int(k): v for k, v in json.load(open(os.path.join(DATA, COHORT))).items()}
     al = json.load(open(os.path.join(DATA, "aliases.json")))["alias"]
     for p in al:                       # a retired duplicate account is not a player
         pop.pop(int(p), None)
-    return se["ratings"], se, sh, pop
+    extra = {}
+    for f in ("shrink.json", "extrapolation.json", "schedule.json", "curve.json",
+              "stepup.json"):
+        p = os.path.join(DATA, f)
+        if os.path.exists(p):
+            extra[f.split(".")[0]] = json.load(open(p))
+    return se["ratings"], se, pop, extra
+
+
+def rank_ranges(rt, pop):
+    """The range of places each cohort player occupied across the bootstrap refits.
+
+    Ranks are recomputed within each replicate rather than derived from each player's
+    standard error separately, because the errors are not independent: a player and her
+    regular partner move together, and two players who never meet are pinned relative to
+    each other only through the rest of the field.
+    """
+    p = os.path.join(DATA, "boot.npz")
+    if not os.path.exists(p):
+        return {}
+    z = np.load(p)
+    ids = list(z["ids"])
+    pos = {int(v): i for i, v in enumerate(ids)}
+    keep = [q for q in pop if q in pos and str(q) in rt and rt[str(q)]["n"] >= MIN_OBS]
+    cols = np.array([pos[q] for q in keep])
+    sub = z["reps"][:, cols]                      # replicates x cohort players
+    order = np.argsort(-sub, axis=1)
+    ranks = np.empty_like(order)
+    rows = np.arange(sub.shape[0])[:, None]
+    ranks[rows, order] = np.arange(1, sub.shape[1] + 1)[None, :]
+    lo = np.percentile(ranks, 5, axis=0)
+    hi = np.percentile(ranks, 95, axis=0)
+    return {q: (int(round(lo[i])), int(round(hi[i]))) for i, q in enumerate(keep)}
 
 
 def schedule(ids, rt):
-    """Record and opponent strength for a set of players, from the merged corpus.
-
-    Opponent strength uses the point estimate, not the shrunk one: the question these
-    columns answer is who she played, and the best available reading of an opponent's
-    strength is the unshrunk one.
-    """
+    """Record and opponent strength for a set of players, from the merged corpus."""
     al = {int(k): int(v) for k, v in
           json.load(open(os.path.join(DATA, "aliases.json")))["alias"].items()}
     acc = {p: {"w": 0, "l": 0, "opp": 0.0, "n": 0, "strong": 0, "sw": 0,
@@ -102,58 +137,63 @@ def esc(s):
             .replace('"', "&quot;"))
 
 
-def scatter(pairs, w=940, h=340):
-    """Ranking rating against TruVolley for the cohort's rated players."""
-    L, R, T, B = 56, 20, 22, 46
-    x0, x1, y0, y1 = 5.5, 10.5, 5.5, 10.5
+def interval_chart(rows, w=940, rowh=17):
+    """Each player's rating with its bootstrap range, top 60, in rank order.
+
+    A dot-and-whisker column rather than a bar chart: the quantity is a position on a
+    scale with an uncertainty attached, not a magnitude measured from zero, and bars from
+    zero would imply a meaningful origin the rating does not have.
+    """
+    L, R, T, B = 168, 26, 26, 34
+    h = T + B + rowh * len(rows)
+    vals = [(r["lo2"], r["hi2"]) for r in rows]
+    x0 = min(v[0] for v in vals) - 0.05
+    x1 = max(v[1] for v in vals) + 0.05
     px = lambda v: L + (v - x0) / (x1 - x0) * (w - L - R)
-    py = lambda v: h - B - (v - y0) / (y1 - y0) * (h - T - B)
-    o = [f'<svg viewBox="0 0 {w} {h}" class="fig" role="img" aria-label="Ranking rating '
-         f'against TruVolley">']
-    for v in range(6, 11):
-        o.append(f'<line x1="{px(v):.1f}" y1="{T}" x2="{px(v):.1f}" y2="{h - B}" class="grid"/>')
-        o.append(f'<line x1="{L}" y1="{py(v):.1f}" x2="{w - R}" y2="{py(v):.1f}" class="grid"/>')
-        o.append(f'<text x="{px(v):.1f}" y="{h - B + 18}" class="tick" text-anchor="middle">{v}</text>')
-        o.append(f'<text x="{L - 8}" y="{py(v) + 4:.1f}" class="tick" text-anchor="end">{v}</text>')
-    o.append(f'<line x1="{px(y0):.1f}" y1="{py(y0):.1f}" x2="{px(y1):.1f}" '
-             f'y2="{py(y1):.1f}" class="diag"/>')
-    for tvv, mine, nm, top in pairs:
-        if not (x0 <= tvv <= x1 and y0 <= mine <= y1):
-            continue
-        o.append(f'<circle cx="{px(tvv):.1f}" cy="{py(mine):.1f}" r="{3.6 if top else 2.4}" '
-                 f'class="{"dot top" if top else "dot"}">'
-                 f'<title>{esc(nm)}: TruVolley {tvv:.2f}, ranked at {mine:.2f}</title></circle>')
-    o.append(f'<text x="{(L + w - R) / 2:.0f}" y="{h - 8}" class="axlab" '
-             f'text-anchor="middle">TRUVOLLEY</text>')
-    o.append(f'<text x="14" y="{(T + h - B) / 2:.0f}" class="axlab" '
-             f'transform="rotate(-90 14 {(T + h - B) / 2:.0f})" text-anchor="middle">'
-             f'RANKING RATING</text>')
+    o = [f'<svg viewBox="0 0 {w} {h}" class="fig" role="img" aria-label="Each player&#39;s '
+         f'rating with the range it took across bootstrap refits">']
+    step = 0.25
+    g = np.ceil(x0 / step) * step
+    while g <= x1:
+        o.append(f'<line x1="{px(g):.1f}" y1="{T - 8}" x2="{px(g):.1f}" y2="{h - B + 2}" '
+                 f'class="grid"/>')
+        o.append(f'<text x="{px(g):.1f}" y="{h - B + 18}" class="tick" '
+                 f'text-anchor="middle">{g:.2f}</text>')
+        g += step
+    for i, r in enumerate(rows):
+        cy = T + rowh * i + rowh / 2
+        o.append(f'<text x="{L - 30}" y="{cy + 3.5:.1f}" class="rowlab" '
+                 f'text-anchor="end">{esc(r["name"][:20])}</text>')
+        o.append(f'<text x="{L - 8}" y="{cy + 3.5:.1f}" class="rownum" '
+                 f'text-anchor="end">{r["rank"]}</text>')
+        o.append(f'<line x1="{px(r["lo2"]):.1f}" y1="{cy:.1f}" x2="{px(r["hi2"]):.1f}" '
+                 f'y2="{cy:.1f}" class="whisk"/>')
+        o.append(f'<circle cx="{px(r["val"]):.1f}" cy="{cy:.1f}" r="3.6" '
+                 f'class="{"mark wide" if r["wide"] else "mark"}">'
+                 f'<title>{esc(r["name"])}: {r["val"]:.2f}, '
+                 f'{r["lo2"]:.2f} to {r["hi2"]:.2f}</title></circle>')
+    o.append(f'<text x="{L}" y="{T - 12}" class="axlab">RATING, WITH ITS RANGE ACROSS '
+             f'40 BOOTSTRAP REFITS</text>')
     o.append("</svg>")
     return "\n".join(o)
 
 
-def calibration(buckets, w=940, h=300):
-    """Predicted vs actual win rate for the less well determined side, by how much less.
-
-    A paired-dot row per bucket rather than two bar series: the quantity that matters is
-    the gap between the two values within a bucket, and a connector draws the eye to a gap
-    in a way that two bars separated by a category boundary does not.
-    """
-    L, R, T, B = 150, 92, 30, 40
+def stepup_chart(buckets, w=940, h=250):
+    """Predicted against actual for teams playing above their usual level."""
+    L, R, T, B = 152, 92, 30, 40
     lo = min(min(b["pred"], b["act"]) for b in buckets) - 0.03
     hi = max(max(b["pred"], b["act"]) for b in buckets) + 0.03
     px = lambda v: L + (v - lo) / (hi - lo) * (w - L - R)
     rowh = (h - T - B) / max(len(buckets), 1)
     o = [f'<svg viewBox="0 0 {w} {h}" class="fig" role="img" aria-label="Predicted against '
-         f'actual win rate by how loosely determined the players are">']
+         f'actual win rate for teams playing above their usual level">']
     step = 0.05
-    v = round(lo / step) * step
+    v = np.ceil(lo / step) * step
     while v <= hi:
-        if v >= lo:
-            o.append(f'<line x1="{px(v):.1f}" y1="{T - 6}" x2="{px(v):.1f}" '
-                     f'y2="{h - B}" class="grid"/>')
-            o.append(f'<text x="{px(v):.1f}" y="{h - B + 17}" class="tick" '
-                     f'text-anchor="middle">{v * 100:.0f}%</text>')
+        o.append(f'<line x1="{px(v):.1f}" y1="{T - 6}" x2="{px(v):.1f}" y2="{h - B}" '
+                 f'class="grid"/>')
+        o.append(f'<text x="{px(v):.1f}" y="{h - B + 17}" class="tick" '
+                 f'text-anchor="middle">{v * 100:.0f}%</text>')
         v += step
     for i, b in enumerate(buckets):
         cy = T + rowh * (i + 0.5)
@@ -168,7 +208,7 @@ def calibration(buckets, w=940, h=300):
         o.append(f'<text x="{w - R + 12}" y="{cy + 4:.1f}" class="delta">'
                  f'{b["act"] - b["pred"]:+.1%}</text>')
     o.append(f'<text x="{L - 14}" y="{T - 12}" class="axlab" text-anchor="end">'
-             f'SE GAP BETWEEN THE SIDES</text>')
+             f'STEP UP IN CLASS</text>')
     o.append(f'<text x="{w - R + 12}" y="{T - 12}" class="axlab">ERROR</text>')
     o.append(f'<circle cx="{L + 6}" cy="{h - 12}" r="5.5" class="pred"/>'
              f'<text x="{L + 18}" y="{h - 8}" class="legend">predicted</text>'
@@ -183,21 +223,21 @@ CSS = """
   --ground:#EFF1EE; --surface:#FAFBFA; --ink:#111B19; --body:#2C3A37;
   --muted:#5F6E6A; --faint:#8B9995; --line:#D5DCD9; --hair:#E4E9E7;
   --accent:#0B6E68; --up:#00806F; --down:#9A6B12; --chip:#E4EDEB;
-  --pred:#8B9995; --act:#0B6E68;
+  --pred:#8B9995; --act:#0B6E68; --warn:#9A6B12; --warnbg:#F2E9D6;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --ground:#0B1211; --surface:#121B19; --ink:#E9EFEC; --body:#C6D2CE;
     --muted:#93A29E; --faint:#6E7D79; --line:#243330; --hair:#1C2827;
     --accent:#57C3B6; --up:#2AA08C; --down:#DCA84A; --chip:#1B2A27;
-    --pred:#6E7D79; --act:#57C3B6;
+    --pred:#6E7D79; --act:#57C3B6; --warn:#DCA84A; --warnbg:#2A2213;
   }
 }
 :root[data-theme="dark"] {
   --ground:#0B1211; --surface:#121B19; --ink:#E9EFEC; --body:#C6D2CE;
   --muted:#93A29E; --faint:#6E7D79; --line:#243330; --hair:#1C2827;
   --accent:#57C3B6; --up:#2AA08C; --down:#DCA84A; --chip:#1B2A27;
-  --pred:#6E7D79; --act:#57C3B6;
+  --pred:#6E7D79; --act:#57C3B6; --warn:#DCA84A; --warnbg:#2A2213;
 }
 * { box-sizing:border-box; }
 body { margin:0; background:var(--ground); color:var(--body);
@@ -219,10 +259,10 @@ section { padding:42px 0 0; }
 p { max-width:72ch; }
 .facts { display:flex; flex-wrap:wrap; margin:26px 0 0; border:1px solid var(--line);
   border-radius:3px; background:var(--surface); overflow:hidden; }
-.fact { flex:1 1 140px; padding:14px 18px; border-right:1px solid var(--hair); }
+.fact { flex:1 1 150px; padding:14px 18px; border-right:1px solid var(--hair); }
 .fact:last-child { border-right:0; }
 .fact b { display:block; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
-  font-size:23px; color:var(--ink); font-weight:600; font-variant-numeric:tabular-nums; }
+  font-size:22px; color:var(--ink); font-weight:600; font-variant-numeric:tabular-nums; }
 .fact span { font-size:11px; letter-spacing:.09em; text-transform:uppercase; color:var(--faint); }
 .tbox { border:1px solid var(--line); border-radius:3px; overflow:auto; }
 table { border-collapse:collapse; width:100%; font-size:13.5px; background:var(--surface); }
@@ -231,76 +271,112 @@ th, td { padding:6px 9px; border-bottom:1px solid var(--hair); text-align:left;
 th { font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--faint);
   font-weight:650; border-bottom:1px solid var(--line); position:sticky; top:0;
   background:var(--surface); z-index:1; }
+th.s { cursor:pointer; user-select:none; }
+th.s:hover, th.s:focus-visible { color:var(--accent); }
+th.s[aria-sort]:not([aria-sort="none"]) { color:var(--accent); }
+th.s::after { content:"\\2195"; opacity:.32; margin-left:4px; font-size:9px; }
+th.s[aria-sort="ascending"]::after { content:"\\2191"; opacity:1; }
+th.s[aria-sort="descending"]::after { content:"\\2193"; opacity:1; }
 td.n, th.n { text-align:right; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
   font-variant-numeric:tabular-nums; }
 td.nm { color:var(--ink); font-weight:550; white-space:nowrap; }
 td.r { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-weight:650;
   color:var(--ink); text-align:right; font-variant-numeric:tabular-nums; }
-td.pm { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; text-align:right;
-  color:var(--faint); font-variant-numeric:tabular-nums; font-size:12.5px; }
+td.rng { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; text-align:right;
+  color:var(--muted); font-variant-numeric:tabular-nums; font-size:12.5px; }
 .up { color:var(--up); font-weight:650; }
 .down { color:var(--down); font-weight:650; }
-.new { display:inline-block; font-size:9.5px; letter-spacing:.07em; text-transform:uppercase;
-  background:var(--chip); color:var(--accent); padding:1px 5px; border-radius:2px;
+.soft { display:inline-block; font-size:9.5px; letter-spacing:.06em; text-transform:uppercase;
+  background:var(--warnbg); color:var(--warn); padding:1px 5px; border-radius:2px;
   margin-left:6px; font-weight:650; }
 .figbox { border:1px solid var(--line); border-radius:3px; background:var(--surface);
   padding:12px 10px 4px; overflow-x:auto; }
 .fig { width:100%; min-width:660px; height:auto; display:block; }
 .grid { stroke:var(--hair); stroke-width:1; }
-.diag { stroke:var(--line); stroke-width:1.2; stroke-dasharray:4 4; }
-.dot { fill:var(--muted); fill-opacity:.35; }
-.dot.top { fill:var(--accent); fill-opacity:.85; }
 .conn { stroke:var(--line); stroke-width:2; }
+.whisk { stroke:var(--line); stroke-width:3.5; stroke-linecap:round; }
+.mark { fill:var(--accent); }
+.mark.wide { fill:var(--warn); }
 .pred { fill:var(--pred); }
 .act { fill:var(--act); }
 .tick { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px;
   fill:var(--muted); }
-.rowlab { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11.5px;
+.rowlab { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px;
   fill:var(--body); }
+.rownum { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px;
+  fill:var(--faint); }
 .delta { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px;
   font-weight:650; fill:var(--ink); }
 .legend { font-size:11.5px; fill:var(--muted); }
 .axlab { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:10px;
   letter-spacing:.1em; fill:var(--faint); }
-.two { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
-@media (max-width:820px) { .two { grid-template-columns:1fr; } }
 ul { max-width:74ch; padding-left:20px; }
 li { margin:0 0 10px; }
+.rejected { width:100%; font-size:13.5px; margin:0 0 6px; }
+.rejected td, .rejected th { border-bottom:1px solid var(--hair); }
 footer { margin-top:50px; padding-top:18px; border-top:1px solid var(--line);
   font-size:12px; color:var(--faint); max-width:82ch; }
 """
 
+SORT_JS = """
+document.querySelectorAll('table[data-sortable]').forEach(function (t) {
+  var head = t.tHead ? t.tHead.rows[0] : t.rows[0];
+  if (!head) return;
+  Array.prototype.forEach.call(head.cells, function (th, i) {
+    if (!th.classList.contains('s')) return;
+    th.tabIndex = 0;
+    th.setAttribute('role', 'button');
+    function go() {
+      var dir = th.getAttribute('aria-sort') === 'descending' ? 1 : -1;
+      Array.prototype.forEach.call(head.cells, function (o) {
+        o.setAttribute('aria-sort', 'none');
+      });
+      th.setAttribute('aria-sort', dir === -1 ? 'descending' : 'ascending');
+      var body = t.tBodies[0];
+      var rows = Array.prototype.slice.call(body.rows);
+      rows.sort(function (a, b) {
+        var x = a.cells[i], y = b.cells[i];
+        var nx = parseFloat(x.dataset.v !== undefined ? x.dataset.v : x.textContent);
+        var ny = parseFloat(y.dataset.v !== undefined ? y.dataset.v : y.textContent);
+        if (isNaN(nx) && isNaN(ny)) {
+          return dir * x.textContent.localeCompare(y.textContent);
+        }
+        if (isNaN(nx)) return 1;
+        if (isNaN(ny)) return -1;
+        return dir * (nx - ny);
+      });
+      rows.forEach(function (r) { body.appendChild(r); });
+    }
+    th.addEventListener('click', go);
+    th.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+    });
+  });
+});
+"""
+
 
 def build():
-    rt, seinfo, sh, pop = load()
-    k = sh["k"]
+    rt, seinfo, pop, extra = load()
+    to_tv = quantile_map()
     rated = [(p, v) for p, v in pop.items()
              if str(p) in rt and rt[str(p)]["n"] >= MIN_OBS]
-
-    # The ranking number: the point estimate pulled back by k standard errors, then put on
-    # the TruVolley scale. Deduct first and map second -- the quantile map is monotone but
-    # not linear, so scaling the already-mapped k=1 gap in the file would be wrong wherever
-    # the map's slope changes, which is precisely at the top where this matters most.
-    to_tv = quantile_map()
-
-    def rank_val(e):
-        return float(to_tv(e["raw"] - k * e["se"]))
-
-    mine = sorted(((rank_val(rt[str(p)]), p, v) for p, v in rated), reverse=True)
+    mine = sorted(((rt[str(p)]["raw"], p, v) for p, v in rated), reverse=True)
     myrank = {p: i for i, (_, p, _) in enumerate(mine, 1)}
-    raw = sorted(((rt[str(p)]["r"], p, v) for p, v in rated), reverse=True)
-    rawrank = {p: i for i, (_, p, _) in enumerate(raw, 1)}
     tvsort = sorted(((v.get("tv") or 0, p, v) for p, v in pop.items() if v.get("tv")),
                     reverse=True)
     tvrank = {p: i for i, (_, p, _) in enumerate(tvsort, 1)}
     top = mine[:TOP]
     ids = {p for _, p, _ in top}
-    acc = schedule(ids | {p for _, p, _ in raw[:TOP]}, rt)
+    rng = rank_ranges(rt, pop)
+    acc = schedule(ids, rt)
 
-    rows, classes = [], defaultdict(int)
-    for i, (r, p, v) in enumerate(top, 1):
-        a = acc[p]
-        e = rt[str(p)]
+    ses = [rt[str(p)]["se"] for p, _ in rated]
+    softline = float(np.percentile(ses, 80))
+
+    rows, classes, chart = [], defaultdict(int), []
+    for i, (rawv, p, v) in enumerate(top, 1):
+        a, e = acc[p], rt[str(p)]
         tvv, tvk = v.get("tv"), tvrank.get(p)
         mv = (tvk - i) if tvk else None
         classes[v.get("grad")] += 1
@@ -309,187 +385,198 @@ def build():
                '<span class="n">0</span>' if mv == 0 else "&#8212;")
         share = (max(a["partners"].values()) / a["n"]) if a["partners"] and a["n"] else 0
         mo = f'{a["opp"] / a["n"]:.2f}' if a["n"] else "&#8212;"
+        lo2 = float(to_tv(e["raw"] - 2 * e["se"]))
+        hi2 = float(to_tv(e["raw"] + 2 * e["se"]))
+        val = float(to_tv(e["raw"]))
+        wide = e["se"] >= softline
+        rlo, rhi = rng.get(p, (None, None))
+        chart.append({"name": v["name"], "rank": i, "val": val, "lo2": lo2, "hi2": hi2,
+                      "wide": wide})
         rows.append(
             f'<tr><td class="n">{i}</td>'
             f'<td class="nm">{esc(v["name"])}'
-            + ("" if tvk and tvk <= TOP else '<span class="new">new</span>') + "</td>"
-            f'<td class="r">{r:.3f}</td>'
-            f'<td class="pm">&#8722;{e["r"] - r:.2f}</td>'
-            f'<td class="n">{e["r"]:.3f}</td>'
-            f'<td class="n">{tvv:.3f}</td><td class="n">{tvk or "&#8212;"}</td>'
-            f'<td class="n">{mvs}</td>'
+            + ('<span class="soft" title="standard error in the top fifth of the '
+               'cohort">soft</span>' if wide else "") + "</td>"
+            f'<td class="r" data-v="{val:.4f}">{val:.2f}</td>'
+            f'<td class="rng" data-v="{hi2 - lo2:.4f}">{lo2:.2f}&#8211;{hi2:.2f}</td>'
+            f'<td class="rng" data-v="{(rhi - rlo) if rlo else 999}">'
+            + (f"{rlo}&#8211;{rhi}" if rlo else "&#8212;") + "</td>"
+            f'<td class="n">{tvv:.2f}</td><td class="n">{tvk or "&#8212;"}</td>'
+            f'<td class="n" data-v="{mv if mv is not None else -999}">{mvs}</td>'
             f'<td class="n">{v.get("grad") or "&#8212;"}</td>'
-            f'<td class="n">{esc(v["height"]) if v.get("height") else "&#8212;"}</td>'
             f'<td>{esc(v.get("state") or "&#8212;")}</td>'
-            f'<td class="n">{a["w"]}&#8211;{a["l"]}</td>'
+            f'<td class="n" data-v="{a["w"] / max(a["w"] + a["l"], 1):.4f}">'
+            f'{a["w"]}&#8211;{a["l"]}</td>'
             f'<td class="n">{mo}</td>'
             f'<td class="n">{a["strong"]}</td>'
-            f'<td class="n">{a["sw"]}&#8211;{a["strong"] - a["sw"]}</td>'
-            f'<td class="n">{share:.0%}</td>'
+            f'<td class="n" data-v="{a["sw"] - (a["strong"] - a["sw"])}">'
+            f'{a["sw"]}&#8211;{a["strong"] - a["sw"]}</td>'
+            f'<td class="n" data-v="{share:.4f}">{share:.0%}</td>'
             f'<td class="n">{e["n"]}</td></tr>')
 
-    gained = [(myrank[p], v["name"], rank_val(rt[str(p)]), v.get("tv"), tvrank.get(p))
-              for _, p, v in top if not (tvrank.get(p) and tvrank[p] <= TOP)]
+    gained = [(myrank[p], v["name"], float(to_tv(rt[str(p)]["raw"])), v.get("tv"),
+               tvrank.get(p)) for _, p, v in top
+              if not (tvrank.get(p) and tvrank[p] <= TOP)]
     lost = [(tvrank[p], v["name"], v.get("tv"),
-             rank_val(rt[str(p)]) if str(p) in rt else None, myrank.get(p))
+             float(to_tv(rt[str(p)]["raw"])) if str(p) in rt else None, myrank.get(p))
             for _, p, v in tvsort[:TOP] if p not in ids]
 
-    # what the correction itself moved: biggest fallers out of the unshrunk top 60
-    dropped = []
-    for _, p, v in raw[:TOP]:
-        if p in ids:
-            continue
-        e, a = rt[str(p)], acc[p]
-        dropped.append((rawrank[p], myrank[p], v["name"], e["r"], rank_val(e),
-                        a["strong"], a["sw"], a["n"],
-                        (max(a["partners"].values()) / a["n"]) if a["n"] else 0))
-    dropped.sort(key=lambda t: t[1] - t[0], reverse=True)
-
-    pairs = [(v.get("tv"), rank_val(rt[str(p)]), v["name"], p in ids)
-             for p, v in rated if v.get("tv")]
-    json.dump({"label": f"{LABEL} &#8212; top {TOP} by evidence-weighted rating",
-               "k": k,
+    json.dump({"label": f"{LABEL} &#8212; top {TOP} by fitted rating",
                "roster": [[v["name"], p, v.get("state") or "?"] for _, p, v in top],
                "meta": {str(p): {kk: v.get(kk) for kk in
                                  ("height", "club", "city", "state", "tv", "grad")}
                         for _, p, v in top},
                "population": len(pop), "rated": len(rated),
-               "cut": {"nTop": top[-1][0],
-                       "next": mine[TOP][0] if len(mine) > TOP else None,
+               "cut": {"nTop": float(to_tv(top[-1][0])),
+                       "next": float(to_tv(mine[TOP][0])) if len(mine) > TOP else None,
                        "nextName": mine[TOP][2]["name"] if len(mine) > TOP else None},
+               "rankRanges": {str(p): rng.get(p) for _, p, _ in top if p in rng},
                "classes": dict(sorted(classes.items()))},
               open(ROSTER, "w"), indent=1)
 
     younger = sum(n for y, n in classes.items() if y and y > 2027)
     spread = " &#183; ".join(f"{y} {n}" for y, n in sorted(classes.items()) if y)
-    hi = max(acc[p]["strong"] for p in ids)
-    hardest = [v["name"] for _, p, v in top if acc[p]["strong"] == hi][0]
-    buckets = sh["calibration"]
-    worst = max(buckets, key=lambda b: b["pred"] - b["act"])
-    bias = worst["pred"] - worst["act"]
-    lead = dropped[0] if dropped else None
-
-    # The page has to be able to report that the correction was unnecessary. If held-out
-    # matches show no bias, or the tuning picks k = 0, saying otherwise would be inventing
-    # the result the page was built to look for.
-    if k > 0 and bias > 0.005:
-        verdict = (f"produces a confident-looking number that held-out matches show to be "
-                   f"too high &#8212; by {bias:.1%} in the worst case. This ranking removes "
-                   f"that.")
-    elif k > 0:
-        verdict = ("produces a number the results barely constrain. Held-out matches show "
-                   "little systematic bias, but pulling each rating back to what its own "
-                   "evidence supports still predicts them better.")
-    else:
-        verdict = ("produces a number the results barely constrain. Held-out matches "
-                   "decline to call it inflated, so nothing is deducted here and the "
-                   "ranking is the raw fit &#8212; the uncertainty is shown instead.")
+    steps = extra.get("extrapolation", {}).get("byReach", [])
+    worst = steps[-1] if steps else None
+    # the widest interval in the top twelve, named, because that is the honest version of
+    # the objection this page was rebuilt to answer
+    soft12 = max(top[:12], key=lambda t: rt[str(t[1])]["se"])
+    soft12_se = rt[str(soft12[1])]["se"]
+    tight12 = min(top[:12], key=lambda t: rt[str(t[1])]["se"])
+    ov = sum(1 for c in chart[:20] if c["lo2"] <= chart[0]["val"] <= c["hi2"]
+             or c["hi2"] >= chart[0]["lo2"])
+    med_gap = float(np.median([chart[i]["val"] - chart[i + 1]["val"]
+                               for i in range(len(chart) - 1)]))
 
     return f"""<title>The 2027 Field, Re-Ranked</title>
 <style>{CSS}</style>
 <div class="wrap">
 <header>
-  <p class="eyebrow">{LABEL} &#183; top {TOP} &#183; evidence-weighted rating</p>
-  <h1>Ranked on what the results <em>establish</em></h1>
-  <p class="standfirst">The 18U-eligible field, cut on a rating that is pulled back in
-  proportion to how loosely a player's own results pin it down. A long record against
-  overmatched opposition, or one shared almost entirely with a single partner,
-  {verdict}</p>
+  <p class="eyebrow">{LABEL} &#183; top {TOP} &#183; fitted rating</p>
+  <h1>A ranking, and how much of it is <em>real</em></h1>
+  <p class="standfirst">The 18U-eligible field cut on the rating fitted in this repository.
+  Adjacent places differ by about {med_gap:.2f} while the typical standard error is
+  {np.median(ses):.2f}, so most of the top twenty is a tie that a sorted list conceals.
+  Every player here carries the range of places she actually took across forty refits on
+  resampled results.</p>
 </header>
 
 <div class="facts">
-  <div class="fact"><b>{k:g}&#215;</b><span>Standard errors deducted</span></div>
-  <div class="fact"><b>{len(dropped)}</b><span>Fall out of the raw top {TOP}</span></div>
-  <div class="fact"><b>{top[-1][0]:.3f}</b><span>Cut at #{TOP}</span></div>
+  <div class="fact"><b>{med_gap:.2f}</b><span>Gap between adjacent ranks</span></div>
+  <div class="fact"><b>{np.median(ses):.2f}</b><span>Median standard error</span></div>
+  <div class="fact"><b>{seinfo["reps"]}</b><span>Bootstrap refits</span></div>
   <div class="fact"><b>{len(rated):,}</b><span>Cohort players ranked</span></div>
   <div class="fact"><b>{younger}</b><span>Younger than 2027</span></div>
 </div>
 
 <section>
-  <h2>The correction, measured rather than asserted</h2>
-  <p class="lede">Every held-out match is oriented so the side whose players are the more
-  loosely determined comes first, then grouped by how much looser they are. If the
-  unshrunk rating were unbiased, the two dots in each row would sit on top of each other.
-  {"They do not: the shakier side loses more often than it is predicted to. That is the raw"
-   " rating being too generous to thin evidence"
-   if bias > 0.005 else
-   "They very nearly do, so the raw rating is not badly biased on average"} &#8212; measured
-  across {sum(b["n"] for b in buckets):,} matches the model never saw.</p>
-  <div class="figbox">{calibration(buckets)}</div>
-  <p class="lede" style="margin-top:14px">How far to pull back is then not a matter of
-  taste. Deducting <em>k</em> standard errors and scoring the same held-out matches gives a
-  best <em>k</em> of {k:g}
-  {"&#8212; the correction pays for itself in prediction, not just in fairness"
-   if k > 0 else "&#8212; see the caveat below"}.</p>
+  <h2>Four corrections, all rejected</h2>
+  <p class="lede">The previous version of this page ranked Haleigh Bauer twelfth on a
+  record of 100&#8211;14 containing three matches against anyone at {STRONG} or better, two
+  thirds of them with one partner. That is a fair objection, and the obvious answer &#8212;
+  pull back ratings resting on soft evidence &#8212; was tried four ways. Held-out matches
+  rejected all four.</p>
+  <div class="tbox"><table class="rejected">
+    <tr><th>Correction</th><th class="n">Held-out log-loss</th><th>Result</th></tr>
+    <tr><td>Deduct <em>k</em> standard errors</td><td class="n">0.6073 &#8594; 0.6313</td>
+      <td>worse at every <em>k</em> &gt; 0</td></tr>
+    <tr><td>Steepen the scale for large gaps</td><td class="n">0.6073 &#8594; 0.6240</td>
+      <td>worse at every setting</td></tr>
+    <tr><td>Add habitual opponent strength</td><td class="n">0.6073 &#8594; 0.6259</td>
+      <td>worse, while <em>improving</em> training fit</td></tr>
+    <tr><td>Blame estimation noise</td><td class="n">&#8212;</td>
+      <td>same bias in precise and imprecise teams</td></tr>
+  </table></div>
+  <p class="lede" style="margin-top:14px">The third is the sharpest. Adding a player's
+  habitual level of opposition to the model improves training log-loss from 0.4456 to
+  0.4321 and makes held-out prediction monotonically worse &#8212; textbook overfitting.
+  Once a rating is known, the level she earned it against adds nothing. Splitting held-out
+  matches by how lopsided each side's record was, with match count held fixed, likewise
+  finds no bias. So the rating is not demonstrably too high, and this page does not pretend
+  it has fixed something it has not.</p>
+</section>
+
+<section>
+  <h2>What is true instead</h2>
+  <p class="lede">The concern was right about where to look and wrong about what it would
+  find. {esc(soft12[2]["name"])} does have the least well determined rating in the top
+  twelve &#8212; a standard error of {soft12_se:.2f} against
+  {rt[str(tight12[1])]["se"]:.2f} for {esc(tight12[2]["name"])} in the same group. That is
+  the objection correctly located: not a number that is wrong, but the softest number up
+  there. The chart shows every interval, so the ties are visible rather than implied.</p>
+  <div class="figbox">{interval_chart(chart)}</div>
+  <p class="lede" style="margin-top:14px">Marked dots are players whose standard error
+  falls in the top fifth of the cohort. The whisker is two standard errors either side;
+  the rank column in the table below is the 5th-to-95th percentile of the places a player
+  actually occupied across the forty refits, which accounts for players' errors moving
+  together &#8212; partners' especially &#8212; in a way a standard error taken one player
+  at a time cannot.</p>
+</section>
+
+<section>
+  <h2>Everyone is overrated a level up</h2>
+  <p class="lede">This is the one real bias, and it applies to every player on the page
+  rather than only to those with soft schedules. Held-out matches, oriented so the side
+  playing furthest above its usual opposition comes first: it wins far less often than the
+  model says, and the shortfall grows monotonically with the size of the step up.</p>
+  <div class="figbox">{stepup_chart(steps) if steps else ""}</div>
+  <p class="lede" style="margin-top:14px">{
+  f'In the top quintile of step-ups the model predicts {worst["pred"]:.1%} and the actual '
+  f'rate is {worst["act"]:.1%}, across {worst["n"]:,} matches.' if worst else ""}
+  It survives every control: it is the same size for precisely and imprecisely determined
+  teams, unchanged when the standings-derived pairs are dropped, and curvature in the scale
+  removes only part of it while making prediction worse overall. It is a limit of summing
+  a doubles player up in one number, not a bug with a setting. The practical consequence is
+  that a rating should be read as a summary of results achieved, not as a forecast of how
+  someone would fare a level above what she has played.</p>
 </section>
 
 <section>
   <h2>Top {TOP}</h2>
-  <p class="lede">Rating is the ranking number; the small figure beside it is how far the
-  point estimate was pulled back, and the next column is that point estimate. TV rank is
-  the player's place in the same cohort on TruVolley. The last six columns are the
-  evidence: her record, the mean rating of her opposition, how many matches came against
-  {STRONG}-and-above and her record in them, and the share of her matches played with her
-  most frequent partner &#8212; the two things that make a rating hard to pin down. By
-  graduating year this cut is {spread}.</p>
-  <div class="tbox"><table>
-    <tr><th class="n">#</th><th>Player</th><th class="n">Rating</th><th class="n">Pull</th>
-    <th class="n">Point</th><th class="n">TruVolley</th>
-    <th class="n">TV rank</th><th class="n">Move</th><th class="n">Class</th>
-    <th class="n">Ht</th><th>St</th><th class="n">W&#8211;L</th><th class="n">Mean opp</th>
-    <th class="n">vs {STRONG}+</th><th class="n">Record</th><th class="n">Top ptnr</th>
-    <th class="n">Obs</th></tr>
-    {"".join(rows)}
+  <p class="lede">Sortable &#8212; click any underlined heading, and the schedule columns
+  are the ones worth sorting on. Range is two standard errors either side of the rating;
+  ranks is where she landed across the refits. The last five columns are her exposure: mean
+  opponent, matches against {STRONG}-and-above and her record in them, and the share of
+  matches spent with her most frequent partner. By graduating year this cut is
+  {spread}.</p>
+  <div class="tbox"><table data-sortable>
+    <thead>
+    <tr><th class="n s">#</th><th class="s">Player</th><th class="n s">Rating</th>
+    <th class="n s">Range</th><th class="n s">Ranks</th>
+    <th class="n s">TruVolley</th><th class="n s">TV rank</th><th class="n s">Move</th>
+    <th class="n s">Class</th><th>St</th><th class="n s">W&#8211;L</th>
+    <th class="n s">Mean opp</th><th class="n s">vs {STRONG}+</th>
+    <th class="n s">Record</th><th class="n s">Top ptnr</th><th class="n s">Obs</th></tr>
+    </thead>
+    <tbody>{"".join(rows)}</tbody>
   </table></div>
 </section>
 
 <section>
-  <h2>Who the correction moved</h2>
-  <p class="lede">These {len(dropped)} were inside the top {TOP} on the unshrunk rating and
-  are not now. The pattern is the point: few matches against strong opposition, a high
-  share with one partner, or both.{
-  f' {esc(lead[2])} is the case that prompted this page &#8212; ranked {lead[0]} on the raw'
-  f' number with {lead[5]} matches against {STRONG}-and-above out of {lead[7]}, and'
-  f' {lead[8]:.0%} of them alongside one partner.' if lead else ""}</p>
-  <div class="tbox"><table>
-    <tr><th class="n">Raw #</th><th class="n">Now</th><th>Player</th>
-    <th class="n">Point</th><th class="n">Rating</th><th class="n">vs {STRONG}+</th>
-    <th class="n">Record</th><th class="n">Obs</th><th class="n">Top ptnr</th></tr>
-    {"".join(f'<tr><td class="n">{a}</td><td class="n"><span class="down">{b}</span></td>'
-             f'<td class="nm">{esc(nm)}</td><td class="n">{pt:.3f}</td>'
-             f'<td class="r">{rv:.3f}</td><td class="n">{st}</td>'
-             f'<td class="n">{sw}&#8211;{st - sw}</td><td class="n">{n}</td>'
-             f'<td class="n">{sh_:.0%}</td></tr>'
-             for a, b, nm, pt, rv, st, sw, n, sh_ in dropped)}
-  </table></div>
-</section>
-
-<section>
-  <h2>Where this lands against TruVolley</h2>
-  <p class="lede">Each dot is a cohort player with both numbers; the {TOP} in this cut are
-  filled. The dashed line is agreement. The whole cloud sits below it now, because every
-  rating here has been pulled back &#8212; what matters is the spread around the line, not
-  the offset.</p>
-  <div class="figbox">{scatter(pairs)}</div>
-  <div class="two" style="margin-top:26px">
+  <h2>Against TruVolley's own {TOP}</h2>
+  <p class="lede">{len(gained)} of the {TOP} names differ from TruVolley's cut of the same
+  cohort. The two ratings measure different things: TruVolley moves when a player's team
+  wins, so a season with a strong partner lifts it, while this one solves for individual
+  strength with partner quality as a term in the model.</p>
+  <div class="two" style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
     <div>
-      <h2 style="font-size:18px">In, against TruVolley's {TOP}</h2>
+      <h2 style="font-size:18px">In</h2>
       <div class="tbox"><table>
         <tr><th class="n">#</th><th>Player</th><th class="n">Rating</th>
         <th class="n">TV</th><th class="n">TV rank</th></tr>
         {"".join(f'<tr><td class="n">{r}</td><td class="nm">{esc(n)}</td>'
-                 f'<td class="r">{m:.3f}</td><td class="n">{t:.3f}</td>'
+                 f'<td class="r">{m:.2f}</td><td class="n">{t:.2f}</td>'
                  f'<td class="n">{kk}</td></tr>' for r, n, m, t, kk in gained)}
       </table></div>
     </div>
     <div>
-      <h2 style="font-size:18px">Out, against TruVolley's {TOP}</h2>
+      <h2 style="font-size:18px">Out</h2>
       <div class="tbox"><table>
         <tr><th class="n">TV#</th><th>Player</th><th class="n">TV</th>
         <th class="n">Rating</th><th class="n">Rank</th></tr>
         {"".join(f'<tr><td class="n">{kk}</td><td class="nm">{esc(n)}</td>'
-                 f'<td class="n">{t:.3f}</td>'
-                 f'<td class="r">{(f"{m:.3f}" if m else "&#8212;")}</td>'
+                 f'<td class="n">{t:.2f}</td>'
+                 f'<td class="r">{(f"{m:.2f}" if m is not None else "&#8212;")}</td>'
                  f'<td class="n">{r or "unranked"}</td></tr>' for kk, n, t, m, r in lost)}
       </table></div>
     </div>
@@ -497,48 +584,41 @@ def build():
 </section>
 
 <section>
-  <h2>What this ranking is and is not</h2>
+  <h2>Notes</h2>
   <ul>
-    <li><b>It answers a different question from the raw fit.</b> The point estimate is the
-    model's best guess at how good a player is, and it is the right number to predict a
-    match with. This column is the number her results oblige us to state, which is the
-    right one to rank with. They differ most where the evidence is thinnest, which is
-    exactly where a ranking does the most damage by guessing.</li>
-    <li><b>The standard error is measured, not assumed.</b> The whole model is refit
-    {seinfo["reps"]} times on evidence resampled by tournament-division &#8212; whole draws
-    at a time, since six pool results out of one bracket are not six independent facts
-    &#8212; and the spread of each player's rating across those refits is her standard
-    error. It captures both failure modes at once: a lopsided schedule and a single
-    partner both make a rating move under resampling.</li>
-    <li><b>A match count cannot substitute for it.</b> The old version of this page
-    required 20 observations, which admitted a 400-match record against nobody and would
-    have excluded a 15-match record against the best players in the country. That
-    threshold is gone.</li>
-    <li><b>Opponent strength is still priced explicitly.</b> {esc(hardest)} played the
-    hardest schedule in this {TOP}, at {hi} matches against {STRONG}-and-above. Beating the
-    same local field every weekend earns little; losing narrowly to much stronger teams
-    costs little.</li>
     <li><b>Duplicate accounts are merged first.</b> Players re-register, and the site then
-    holds two profiles splitting one career. 171 such pairs were found and merged &#8212;
-    same name, class and state, and never once at the same tournament, which two different
-    girls on one regional circuit could not manage. Without it this cut listed Ashley
-    Ruschill twice, at #44 and #55.</li>
-    <li><b>Neither rating is the truth.</b> On held-out matches TruVolley and the raw fit
-    are close, and TruVolley is quoted as of today so it has already absorbed the matches
-    being predicted. The case for this ranking is that it is transparent, tunable, and
-    honest about what it does not know.</li>
+    holds two profiles splitting one career. 171 pairs were merged &#8212; same name, class
+    and state, and never once at the same tournament, which two different girls on one
+    regional circuit could not manage. Five collisions failed that test and were left
+    alone. Without this the cut listed Ashley Ruschill twice, at #44 and #55.</li>
+    <li><b>The minimum-match threshold is gone.</b> The previous version required 20
+    observations, which admitted a 400-match record against nobody and would have excluded
+    a 15-match record against the best players in the country. Intervals do that job
+    properly; a count never did.</li>
+    <li><b>Standard errors are measured, not assumed.</b> The whole model is refit
+    {seinfo["reps"]} times on results resampled by tournament-division &#8212; whole draws
+    at a time, since six pool results out of one bracket are not six independent facts
+    &#8212; across {seinfo["clusters"]:,} divisions.</li>
+    <li><b>Neither rating is the truth.</b> On held-out matches where both rate all four
+    players and both have seen the data, TruVolley scores 0.397 log-loss against this fit's
+    0.397 with accuracy 0.843. Out of sample TruVolley looks far better, but it is quoted
+    as of today and has already absorbed the matches being predicted. The case for this
+    rating is that it is transparent and adjustable, not that it is sharper.</li>
+    <li><b>Ratings sit on the TruVolley scale by a quantile map</b>, which is monotone and
+    reorders nobody.</li>
   </ul>
 </section>
 
 <footer>
   {LABEL}, the closed cohort of {len(pop):,} girls from a partner-graph crawl, ranked on a
   Bradley-Terry rating fitted to 679,241 matches from Volleyball Life, CBVA and college
-  beach, then reduced by {k:g} standard errors estimated from {seinfo["reps"]} bootstrap
-  refits over {seinfo["clusters"]:,} tournament-divisions. Records and opponent strength
-  are computed over the same three-year window as the fit. Built by scripts/rate.py,
-  scripts/uncertainty.py, scripts/shrink.py and scripts/cohort_rank_page.py.
+  beach. Intervals from {seinfo["reps"]} bootstrap refits resampled by tournament-division.
+  Records and opponent strength are computed over the same three-year window as the fit.
+  Built by rate.py, uncertainty.py, shrink.py, extrapolation.py, stepup.py, schedule.py,
+  curvesweep.py, dedupe.py and cohort_rank_page.py.
 </footer>
 </div>
+<script>{SORT_JS}</script>
 """
 
 
