@@ -1,0 +1,195 @@
+{
+ "model": "bt",
+ "start": {
+  "halflife": 365.0,
+  "ridge": 0.25,
+  "wpow": 0.0,
+  "finw": 4.0
+ },
+ "tuned": {
+  "halflife": 245.0,
+  "ridge": 1.024,
+  "wpow": 0.4,
+  "finw": 2.02
+ },
+ "evals": 28,
+ "se": 0.002312933138290486,
+ "selectionBias": 0.005970956403723102,
+ "validStart": 0.6312751172336551,
+ "validTuned": 0.6093714536291002,
+ "testStart": {
+  "ll": 0.6401641051585154,
+  "acc": 0.6658744429677117,
+  "brier": 0.21693993536310516
+ },
+ "testTuned": {
+  "ll": 0.6095780545332724,
+  "acc": 0.6604956610116488,
+  "brier": 0.21068933234602022
+ },
+ "verdict": "real: the tuned settings also improve the untouched test window",
+ "trail": [
+  {
+   "round": 1,
+   "knob": "halflife",
+   "value": 485.0,
+   "valid": 0.6406775977109186
+  },
+  {
+   "round": 1,
+   "knob": "halflife",
+   "value": 245.0,
+   "valid": 0.6312490508011878
+  },
+  {
+   "round": 1,
+   "knob": "ridge",
+   "value": 0.4,
+   "valid": 0.6264081704691364
+  },
+  {
+   "round": 1,
+   "knob": "wpow",
+   "value": 0.4,
+   "valid": 0.6142866416514285
+  },
+  {
+   "round": 1,
+   "knob": "finw",
+   "value": 5.5,
+   "valid": 0.6150206138992235
+  },
+  {
+   "round": 1,
+   "knob": "finw",
+   "value": 2.5,
+   "valid": 0.6137226389890363
+  },
+  {
+   "round": 2,
+   "knob": "halflife",
+   "value": 437.0,
+   "valid": 0.6295047005074363
+  },
+  {
+   "round": 2,
+   "knob": "halflife",
+   "value": 53.0,
+   "valid": 0.64206088643862
+  },
+  {
+   "round": 2,
+   "knob": "ridge",
+   "value": 0.64,
+   "valid": 0.6106660831031828
+  },
+  {
+   "round": 2,
+   "knob": "wpow",
+   "value": 1.04,
+   "valid": 0.6123479242798905
+  },
+  {
+   "round": 2,
+   "knob": "wpow",
+   "value": 0.0,
+   "valid": 0.6225393984598392
+  },
+  {
+   "round": 2,
+   "knob": "finw",
+   "value": 4.9,
+   "valid": 0.6115191168938929
+  },
+  {
+   "round": 2,
+   "knob": "finw",
+   "value": 0.09999999999999964,
+   "valid": 0.6106634508126214
+  },
+  {
+   "round": 3,
+   "knob": "halflife",
+   "value": 341.0,
+   "valid": 0.6172503048626694
+  },
+  {
+   "round": 3,
+   "knob": "halflife",
+   "value": 149.0,
+   "valid": 0.6124452341175974
+  },
+  {
+   "round": 3,
+   "knob": "ridge",
+   "value": 1.024,
+   "valid": 0.6093988956337275
+  },
+  {
+   "round": 3,
+   "knob": "wpow",
+   "value": 0.7200000000000001,
+   "valid": 0.6141869484732039
+  },
+  {
+   "round": 3,
+   "knob": "wpow",
+   "value": 0.07999999999999996,
+   "valid": 0.6125175363899206
+  },
+  {
+   "round": 3,
+   "knob": "finw",
+   "value": 3.9400000000000004,
+   "valid": 0.6098805636961637
+  },
+  {
+   "round": 3,
+   "knob": "finw",
+   "value": 0.0,
+   "valid": 0.6094332513379799
+  },
+  {
+   "round": 4,
+   "knob": "halflife",
+   "value": 293.0,
+   "valid": 0.6117371961565659
+  },
+  {
+   "round": 4,
+   "knob": "halflife",
+   "value": 197.0,
+   "valid": 0.6146443070592901
+  },
+  {
+   "round": 4,
+   "knob": "ridge",
+   "value": 1.6384,
+   "valid": 0.6178324242076441
+  },
+  {
+   "round": 4,
+   "knob": "ridge",
+   "value": 0.40959999999999996,
+   "valid": 0.6237709861822992
+  },
+  {
+   "round": 4,
+   "knob": "wpow",
+   "value": 0.56,
+   "valid": 0.6116319500650471
+  },
+  {
+   "round": 4,
+   "knob": "wpow",
+   "value": 0.24,
+   "valid": 0.6151599090055343
+  },
+  {
+   "round": 4,
+   "knob": "finw",
+   "value": 2.02,
+   "valid": 0.6093714536291002
+  }
+ ]
+}
