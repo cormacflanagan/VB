@@ -1,0 +1,447 @@
+{
+ "box": [
+  4,
+  4,
+  4
+ ],
+ "note": "Provisional: shapes read from a single photograph - see README.",
+ "pieces": [
+  {
+   "id": "01-red",
+   "label": "A",
+   "colour": "red",
+   "confidence": "low - several shapes fit the photo equally well",
+   "cells": [
+    [
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     1
+    ],
+    [
+     1,
+     0,
+     1
+    ],
+    [
+     1,
+     1,
+     1
+    ],
+    [
+     1,
+     1,
+     2
+    ]
+   ],
+   "catalogue_name": "P27"
+  },
+  {
+   "id": "02-red",
+   "label": "B",
+   "colour": "red",
+   "confidence": "high",
+   "cells": [
+    [
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     1
+    ],
+    [
+     0,
+     1,
+     1
+    ],
+    [
+     0,
+     1,
+     2
+    ]
+   ],
+   "catalogue_name": "T7"
+  },
+  {
+   "id": "03-blue",
+   "label": "C",
+   "colour": "blue",
+   "confidence": "low - several shapes fit the photo equally well",
+   "cells": [
+    [
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     1
+    ],
+    [
+     0,
+     0,
+     2
+    ],
+    [
+     0,
+     1,
+     0
+    ],
+    [
+     1,
+     0,
+     1
+    ]
+   ],
+   "catalogue_name": "P7"
+  },
+  {
+   "id": "04-green",
+   "label": "D",
+   "colour": "green",
+   "confidence": "low - several shapes fit the photo equally well",
+   "cells": [
+    [
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     1
+    ],
+    [
+     0,
+     0,
+     2
+    ],
+    [
+     0,
+     0,
+     3
+    ],
+    [
+     0,
+     1,
+     1
+    ]
+   ],
+   "catalogue_name": "P2"
+  },
+  {
+   "id": "05-green",
+   "label": "E",
+   "colour": "green",
+   "confidence": "low - several shapes fit the photo equally well",
+   "cells": [
+    [
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     1
+    ],
+    [
+     0,
+     1,
+     1
+    ],
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     0,
+     2,
+     2
+    ]
+   ],
+   "catalogue_name": "P22"
+  },
+  {
+   "id": "06-green",
+   "label": "F",
+   "colour": "green",
+   "confidence": "low - several shapes fit the photo equally well",
+   "cells": [
+    [
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     1
+    ],
+    [
+     0,
+     0,
+     2
+    ],
+    [
+     0,
+     1,
+     1
+    ],
+    [
+     1,
+     1,
+     1
+    ]
+   ],
+   "catalogue_name": "P13"
+  },
+  {
+   "id": "07-red",
+   "label": "G",
+   "colour": "red",
+   "confidence": "medium-high",
+   "cells": [
+    [
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     1
+    ],
+    [
+     0,
+     0,
+     2
+    ],
+    [
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     2,
+     0
+    ]
+   ],
+   "catalogue_name": "P5"
+  },
+  {
+   "id": "08-yellow",
+   "label": "H",
+   "colour": "yellow",
+   "confidence": "low - several shapes fit the photo equally well",
+   "cells": [
+    [
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     1
+    ],
+    [
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     1,
+     1
+    ],
+    [
+     1,
+     0,
+     0
+    ]
+   ],
+   "catalogue_name": "P17"
+  },
+  {
+   "id": "09-yellow",
+   "label": "I",
+   "colour": "yellow",
+   "confidence": "low - several shapes fit the photo equally well",
+   "cells": [
+    [
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     1
+    ],
+    [
+     0,
+     0,
+     2
+    ],
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     1,
+     1,
+     2
+    ]
+   ],
+   "catalogue_name": "P16"
+  },
+  {
+   "id": "10-blue",
+   "label": "J",
+   "colour": "blue",
+   "confidence": "high",
+   "cells": [
+    [
+     0,
+     0,
+     1
+    ],
+    [
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     1,
+     1
+    ],
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     0,
+     2,
+     1
+    ]
+   ],
+   "catalogue_name": "P28"
+  },
+  {
+   "id": "11-red",
+   "label": "K",
+   "colour": "red",
+   "confidence": "low - several shapes fit the photo equally well",
+   "cells": [
+    [
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     1
+    ],
+    [
+     0,
+     0,
+     2
+    ],
+    [
+     0,
+     1,
+     0
+    ],
+    [
+     1,
+     0,
+     0
+    ]
+   ],
+   "catalogue_name": "P6"
+  },
+  {
+   "id": "12-blue",
+   "label": "L",
+   "colour": "blue",
+   "confidence": "high",
+   "cells": [
+    [
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     1
+    ],
+    [
+     0,
+     0,
+     2
+    ],
+    [
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     1,
+     2
+    ]
+   ],
+   "catalogue_name": "P4"
+  },
+  {
+   "id": "13-yellow",
+   "label": "M",
+   "colour": "yellow",
+   "confidence": "low - several shapes fit the photo equally well",
+   "cells": [
+    [
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     1
+    ],
+    [
+     0,
+     1,
+     0
+    ],
+    [
+     1,
+     1,
+     0
+    ],
+    [
+     1,
+     2,
+     0
+    ]
+   ],
+   "catalogue_name": "P20"
+  }
+ ]
+}
