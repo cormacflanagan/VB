@@ -56,22 +56,34 @@ Two extras:
 
 ## How the pieces were read
 
-Four photographs of the same layout: one near-overhead (footprints readable directly) and
-three oblique (heights readable). `identify/` holds the supporting pipeline — colour
-segmentation, an orthographic renderer whose face labels reproduce the creases a camera sees,
-and a scorer over every tetracube and pentacube orientation. **Its ranking is not reliable on
-its own** (the true shape was often second or third, and the three views' rankings disagreed),
-so it was used only to shortlist; the readings below come from measuring the pieces against
-each other in the photographs.
+Eight photographs of two layouts, two of them near-overhead. `identify/` holds the supporting
+pipeline - colour segmentation, an orthographic renderer whose face labels reproduce the creases
+a camera sees, and a scorer over every tetracube and pentacube orientation.
 
-Eleven pieces were read that way, at the confidences recorded in `pieces.json`. Four are
-certain — the plus (X), the U, the four-cube S, the L. The last piece was then **forced**: with
-the other twelve fixed, exactly one non-planar pentacube completes a 4x4x4 packing, and it
-matches the photographs. That is the one identification the solver made rather than the eye.
+What actually settled the flat pieces was simpler: in a near-overhead view the silhouette is the
+piece's footprint, so the **minimum-area bounding rectangle**, measured in cube units (the cube
+size comes from the silhouette area), separates the pentomino families outright:
 
-Residual risk: the medium-confidence readings (W, N, Z, V, and the two two-level pieces) are
-shapes whose silhouettes are easy to confuse. If one is wrong, correct its `cells` in
-`pieces.json` and re-run — the solve takes under a second.
+| measured min-rect | shapes |
+| --- | --- |
+| 4 x 2 | L, N, Y |
+| 3 x 3 | F, T, V, W, X, Z |
+| 3 x 2 | P, U (and the S tetromino, at 4 cubes) |
+
+The known-good pieces calibrate it: the plus measures 2.89 x 2.74, the U 3.13 x 2.08, the
+four-cube S 2.97 x 1.93. Fitting only the *flat* shapes to a near-overhead silhouette then picks
+the family member, with a clear margin for most (S tetromino 0.913, P 0.913, W 0.862, F 0.855).
+
+Nine pieces are settled that way. The other four are two-level - a tetromino lying flat with one
+cube on top - which the top-down view shows as a footprint plus a parallax-shifted top face.
+Their footprints are readable (L-tetromino for 04, S-tetromino for 07 and 12, L-tetromino for
+13), but *which* cell carries the top cube is not, so those four carry the residual uncertainty:
+the alternatives that also tile the cube are listed below. The packing constraint alone does not
+resolve them - many combinations of the fourteen "tetromino + one on top" pentacubes complete a
+4x4x4 with the other nine fixed.
+
+Corrections this round (the first pass used one oblique photo and got four of these wrong):
+piece 01 is V, not L; 02 is N, not W; 06 is W, not N; 09 is F, not Z.
 
 ## Files
 

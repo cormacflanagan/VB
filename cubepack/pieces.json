@@ -4,14 +4,14 @@
   4,
   4
  ],
- "note": "Read from four photographs of the same layout; see README.",
+ "note": "Read from eight photographs of two layouts; see README.",
  "pieces": [
   {
    "id": "01-red",
    "label": "A",
-   "description": "L pentomino",
-   "catalogue_name": "P1",
-   "confidence": "high",
+   "description": "V pentomino",
+   "catalogue_name": "P5",
+   "confidence": "high - 3x3 bounding box, flat, right-angle bend",
    "cells": [
     [
      0,
@@ -30,12 +30,12 @@
     ],
     [
      0,
-     0,
-     3
+     1,
+     0
     ],
     [
      0,
-     1,
+     2,
      0
     ]
    ]
@@ -43,9 +43,9 @@
   {
    "id": "02-red",
    "label": "B",
-   "description": "S tetromino - the four-cube piece",
-   "catalogue_name": "T7",
-   "confidence": "high",
+   "description": "N pentomino",
+   "catalogue_name": "P14",
+   "confidence": "high - 4x2 bounding box, flat zigzag",
    "cells": [
     [
      0,
@@ -59,22 +59,27 @@
     ],
     [
      0,
-     1,
-     1
+     0,
+     2
     ],
     [
      0,
      1,
      2
+    ],
+    [
+     0,
+     1,
+     3
     ]
    ]
   },
   {
    "id": "03-red",
    "label": "C",
-   "description": "W pentomino",
-   "catalogue_name": "P22",
-   "confidence": "medium",
+   "description": "S tetromino - the four-cube piece",
+   "catalogue_name": "T7",
+   "confidence": "high - 3x2 box, flat, two rows of two",
    "cells": [
     [
      0,
@@ -94,11 +99,6 @@
     [
      0,
      1,
-     2
-    ],
-    [
-     0,
-     2,
      2
     ]
    ]
@@ -106,9 +106,9 @@
   {
    "id": "04-red",
    "label": "D",
-   "description": "3-bar, one cube beside one end, one cube on top of that end",
+   "description": "L-tetromino base with one cube on the corner",
    "catalogue_name": "P6",
-   "confidence": "medium-high",
+   "confidence": "medium - two levels, L footprint clear in four views",
    "cells": [
     [
      0,
@@ -142,7 +142,7 @@
    "label": "E",
    "description": "Y pentomino",
    "catalogue_name": "P2",
-   "confidence": "medium-high",
+   "confidence": "high - 4x2 box, flat, 4-bar with a bump",
    "cells": [
     [
      0,
@@ -174,9 +174,9 @@
   {
    "id": "06-green",
    "label": "F",
-   "description": "N pentomino",
-   "catalogue_name": "P14",
-   "confidence": "medium",
+   "description": "W pentomino",
+   "catalogue_name": "P22",
+   "confidence": "high - 3x3 box, flat staircase",
    "cells": [
     [
      0,
@@ -190,8 +190,8 @@
     ],
     [
      0,
-     0,
-     2
+     1,
+     1
     ],
     [
      0,
@@ -200,17 +200,17 @@
     ],
     [
      0,
-     1,
-     3
+     2,
+     2
     ]
    ]
   },
   {
    "id": "07-green",
    "label": "G",
-   "description": "S tetromino base with one cube on top of an inner cell",
+   "description": "S-tetromino base with one cube on an inner cell",
    "catalogue_name": "P23",
-   "confidence": "medium",
+   "confidence": "medium - two levels; P25 is the mirror alternative",
    "cells": [
     [
      0,
@@ -244,7 +244,7 @@
    "label": "H",
    "description": "X pentomino (plus)",
    "catalogue_name": "P28",
-   "confidence": "high",
+   "confidence": "high - 3x3 box, flat plus",
    "cells": [
     [
      0,
@@ -276,9 +276,9 @@
   {
    "id": "09-blue",
    "label": "I",
-   "description": "U pentomino",
-   "catalogue_name": "P4",
-   "confidence": "high",
+   "description": "F pentomino",
+   "catalogue_name": "P21",
+   "confidence": "high - 3x3 box, flat",
    "cells": [
     [
      0,
@@ -292,27 +292,27 @@
     ],
     [
      0,
-     0,
-     2
-    ],
-    [
-     0,
      1,
-     0
+     1
     ],
     [
      0,
      1,
      2
+    ],
+    [
+     0,
+     2,
+     1
     ]
    ]
   },
   {
    "id": "10-blue",
    "label": "J",
-   "description": "Z/S pentomino",
-   "catalogue_name": "P24",
-   "confidence": "medium",
+   "description": "U pentomino",
+   "catalogue_name": "P4",
+   "confidence": "high - 3x2 box, flat",
    "cells": [
     [
      0,
@@ -326,17 +326,17 @@
     ],
     [
      0,
+     0,
+     2
+    ],
+    [
+     0,
      1,
-     1
+     0
     ],
     [
      0,
-     2,
-     1
-    ],
-    [
-     0,
-     2,
+     1,
      2
     ]
    ]
@@ -344,9 +344,9 @@
   {
    "id": "11-yellow",
    "label": "K",
-   "description": "P pentomino (resting on edge in the photos)",
+   "description": "P pentomino",
    "catalogue_name": "P3",
-   "confidence": "medium-high",
+   "confidence": "high - 3x2 box, flat",
    "cells": [
     [
      0,
@@ -378,9 +378,9 @@
   {
    "id": "12-yellow",
    "label": "L",
-   "description": "V pentomino",
-   "catalogue_name": "P5",
-   "confidence": "medium",
+   "description": "S-tetromino base with one cube on an end cell",
+   "catalogue_name": "P18",
+   "confidence": "medium - two levels",
    "cells": [
     [
      0,
@@ -394,27 +394,27 @@
     ],
     [
      0,
-     0,
-     2
-    ],
-    [
-     0,
      1,
      0
     ],
     [
+     1,
      0,
-     2,
-     0
+     1
+    ],
+    [
+     1,
+     0,
+     2
     ]
    ]
   },
   {
    "id": "13-yellow",
    "label": "M",
-   "description": "L tetromino base with one cube on top of the far end",
-   "catalogue_name": "P15",
-   "confidence": "forced by the packing",
+   "description": "L-tetromino base with one cube on the corner (mirror of 04)",
+   "catalogue_name": "P16",
+   "confidence": "medium - two levels",
    "cells": [
     [
      0,
@@ -438,8 +438,8 @@
     ],
     [
      1,
-     0,
-     0
+     1,
+     2
     ]
    ]
   }
