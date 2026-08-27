@@ -4,13 +4,14 @@
   4,
   4
  ],
- "note": "Provisional: shapes read from a single photograph - see README.",
+ "note": "Read from four photographs of the same layout; see README.",
  "pieces": [
   {
    "id": "01-red",
    "label": "A",
-   "colour": "red",
-   "confidence": "low - several shapes fit the photo equally well",
+   "description": "L pentomino",
+   "catalogue_name": "P1",
+   "confidence": "high",
    "cells": [
     [
      0,
@@ -23,27 +24,27 @@
      1
     ],
     [
-     1,
      0,
-     1
-    ],
-    [
-     1,
-     1,
-     1
-    ],
-    [
-     1,
-     1,
+     0,
      2
+    ],
+    [
+     0,
+     0,
+     3
+    ],
+    [
+     0,
+     1,
+     0
     ]
-   ],
-   "catalogue_name": "P27"
+   ]
   },
   {
    "id": "02-red",
    "label": "B",
-   "colour": "red",
+   "description": "S tetromino - the four-cube piece",
+   "catalogue_name": "T7",
    "confidence": "high",
    "cells": [
     [
@@ -66,14 +67,48 @@
      1,
      2
     ]
-   ],
-   "catalogue_name": "T7"
+   ]
   },
   {
-   "id": "03-blue",
+   "id": "03-red",
    "label": "C",
-   "colour": "blue",
-   "confidence": "low - several shapes fit the photo equally well",
+   "description": "W pentomino",
+   "catalogue_name": "P22",
+   "confidence": "medium",
+   "cells": [
+    [
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     1
+    ],
+    [
+     0,
+     1,
+     1
+    ],
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     0,
+     2,
+     2
+    ]
+   ]
+  },
+  {
+   "id": "04-red",
+   "label": "D",
+   "description": "3-bar, one cube beside one end, one cube on top of that end",
+   "catalogue_name": "P6",
+   "confidence": "medium-high",
    "cells": [
     [
      0,
@@ -98,16 +133,16 @@
     [
      1,
      0,
-     1
+     0
     ]
-   ],
-   "catalogue_name": "P7"
+   ]
   },
   {
-   "id": "04-green",
-   "label": "D",
-   "colour": "green",
-   "confidence": "low - several shapes fit the photo equally well",
+   "id": "05-green",
+   "label": "E",
+   "description": "Y pentomino",
+   "catalogue_name": "P2",
+   "confidence": "medium-high",
    "cells": [
     [
      0,
@@ -134,14 +169,14 @@
      1,
      1
     ]
-   ],
-   "catalogue_name": "P2"
+   ]
   },
   {
-   "id": "05-green",
-   "label": "E",
-   "colour": "green",
-   "confidence": "low - several shapes fit the photo equally well",
+   "id": "06-green",
+   "label": "F",
+   "description": "N pentomino",
+   "catalogue_name": "P14",
+   "confidence": "medium",
    "cells": [
     [
      0,
@@ -152,6 +187,74 @@
      0,
      0,
      1
+    ],
+    [
+     0,
+     0,
+     2
+    ],
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     0,
+     1,
+     3
+    ]
+   ]
+  },
+  {
+   "id": "07-green",
+   "label": "G",
+   "description": "S tetromino base with one cube on top of an inner cell",
+   "catalogue_name": "P23",
+   "confidence": "medium",
+   "cells": [
+    [
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     1
+    ],
+    [
+     0,
+     1,
+     1
+    ],
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     1,
+     0,
+     1
+    ]
+   ]
+  },
+  {
+   "id": "08-blue",
+   "label": "H",
+   "description": "X pentomino (plus)",
+   "catalogue_name": "P28",
+   "confidence": "high",
+   "cells": [
+    [
+     0,
+     0,
+     1
+    ],
+    [
+     0,
+     1,
+     0
     ],
     [
      0,
@@ -166,16 +269,16 @@
     [
      0,
      2,
-     2
+     1
     ]
-   ],
-   "catalogue_name": "P22"
+   ]
   },
   {
-   "id": "06-green",
-   "label": "F",
-   "colour": "green",
-   "confidence": "low - several shapes fit the photo equally well",
+   "id": "09-blue",
+   "label": "I",
+   "description": "U pentomino",
+   "catalogue_name": "P4",
+   "confidence": "high",
    "cells": [
     [
      0,
@@ -195,20 +298,54 @@
     [
      0,
      1,
+     0
+    ],
+    [
+     0,
+     1,
+     2
+    ]
+   ]
+  },
+  {
+   "id": "10-blue",
+   "label": "J",
+   "description": "Z/S pentomino",
+   "catalogue_name": "P24",
+   "confidence": "medium",
+   "cells": [
+    [
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
      1
     ],
     [
-     1,
+     0,
      1,
      1
+    ],
+    [
+     0,
+     2,
+     1
+    ],
+    [
+     0,
+     2,
+     2
     ]
-   ],
-   "catalogue_name": "P13"
+   ]
   },
   {
-   "id": "07-red",
-   "label": "G",
-   "colour": "red",
+   "id": "11-yellow",
+   "label": "K",
+   "description": "P pentomino (resting on edge in the photos)",
+   "catalogue_name": "P3",
    "confidence": "medium-high",
    "cells": [
     [
@@ -233,153 +370,17 @@
     ],
     [
      0,
-     2,
-     0
-    ]
-   ],
-   "catalogue_name": "P5"
-  },
-  {
-   "id": "08-yellow",
-   "label": "H",
-   "colour": "yellow",
-   "confidence": "low - several shapes fit the photo equally well",
-   "cells": [
-    [
-     0,
-     0,
-     0
-    ],
-    [
-     0,
-     0,
-     1
-    ],
-    [
-     0,
      1,
-     0
-    ],
-    [
-     0,
-     1,
-     1
-    ],
-    [
-     1,
-     0,
-     0
-    ]
-   ],
-   "catalogue_name": "P17"
-  },
-  {
-   "id": "09-yellow",
-   "label": "I",
-   "colour": "yellow",
-   "confidence": "low - several shapes fit the photo equally well",
-   "cells": [
-    [
-     0,
-     0,
-     0
-    ],
-    [
-     0,
-     0,
-     1
-    ],
-    [
-     0,
-     0,
-     2
-    ],
-    [
-     0,
-     1,
-     2
-    ],
-    [
-     1,
-     1,
-     2
-    ]
-   ],
-   "catalogue_name": "P16"
-  },
-  {
-   "id": "10-blue",
-   "label": "J",
-   "colour": "blue",
-   "confidence": "high",
-   "cells": [
-    [
-     0,
-     0,
-     1
-    ],
-    [
-     0,
-     1,
-     0
-    ],
-    [
-     0,
-     1,
-     1
-    ],
-    [
-     0,
-     1,
-     2
-    ],
-    [
-     0,
-     2,
      1
     ]
-   ],
-   "catalogue_name": "P28"
+   ]
   },
   {
-   "id": "11-red",
-   "label": "K",
-   "colour": "red",
-   "confidence": "low - several shapes fit the photo equally well",
-   "cells": [
-    [
-     0,
-     0,
-     0
-    ],
-    [
-     0,
-     0,
-     1
-    ],
-    [
-     0,
-     0,
-     2
-    ],
-    [
-     0,
-     1,
-     0
-    ],
-    [
-     1,
-     0,
-     0
-    ]
-   ],
-   "catalogue_name": "P6"
-  },
-  {
-   "id": "12-blue",
+   "id": "12-yellow",
    "label": "L",
-   "colour": "blue",
-   "confidence": "high",
+   "description": "V pentomino",
+   "catalogue_name": "P5",
+   "confidence": "medium",
    "cells": [
     [
      0,
@@ -403,17 +404,17 @@
     ],
     [
      0,
-     1,
-     2
+     2,
+     0
     ]
-   ],
-   "catalogue_name": "P4"
+   ]
   },
   {
    "id": "13-yellow",
    "label": "M",
-   "colour": "yellow",
-   "confidence": "low - several shapes fit the photo equally well",
+   "description": "L tetromino base with one cube on top of the far end",
+   "catalogue_name": "P15",
+   "confidence": "forced by the packing",
    "cells": [
     [
      0,
@@ -427,21 +428,20 @@
     ],
     [
      0,
+     0,
+     2
+    ],
+    [
+     0,
      1,
-     0
+     2
     ],
     [
      1,
-     1,
-     0
-    ],
-    [
-     1,
-     2,
+     0,
      0
     ]
-   ],
-   "catalogue_name": "P20"
+   ]
   }
  ]
 }

@@ -1,29 +1,29 @@
 # cubepack — packing the 13 printed pieces by SAT
 
-A SAT model for "do these polycubes tile this box, and how", plus the machinery used to
-read the thirteen pieces off the photograph.
+A SAT model for "do these polycubes tile this box, and how", the piece list read off the
+photographs, and a verified packing.
 
-    python3 sat_pack.py pieces_photo_bestguess.json          # solve
-    python3 sat_pack.py <spec>.json --all 20                 # up to 20 distinct solutions
-    python3 sat_pack.py <spec>.json --dimacs cube.cnf        # write the CNF
-    python3 selftest.py                                      # the 12 pentominoes in a 3x4x5 box
+    python3 sat_pack.py pieces.json                  # solve (< 1 s)
+    python3 sat_pack.py pieces.json --all 20         # 20 distinct solutions
+    python3 sat_pack.py pieces.json --dimacs cube.cnf
+    python3 report.py > SOLUTION.md                  # readable piece list + packing
+    python3 selftest.py                              # 12 pentominoes in a 3x4x5 box
 
-## The arithmetic comes first
+## The box is 4x4x4, not 5x5x3
 
-The photograph shows **13 pieces**. Thirteen pentacubes would be 13 x 5 = **65** unit cubes, and
+Thirteen pentacubes would be 13 x 5 = **65** unit cubes:
 
-* 5 x 5 x 3 = **75**, so the pieces cannot fill that box — ten cubes short;
-* 65 factors only as 1 x 5 x 13, a one-cube-thick slab, and several of the pieces are not flat,
-  so **no box of any shape has volume 65**.
+* 5 x 5 x 3 = **75** — ten cubes short;
+* 65 factors only as 1 x 5 x 13, a one-cube-thick slab, and several of these pieces are not
+  flat, so **no box of any shape has volume 65**.
 
-Measuring the pieces in the photo against each other resolves it. Piece 02 (the small flat red
-S, top of the picture) is **four** cubes, not five: its two rows are each two cells long, they
-sit in a single layer, and the ratios between its long edge, its depth edge and its height are
-consistent with one layer of a 2+2 S-tetromino at a camera elevation of ~42 degrees (the same
-elevation that the other pieces show).
+The small flat red S is **four** cubes, not five — two rows of two in a single layer. Measured
+against the other pieces in the photographs, its long edge, depth edge and height are in the
+ratio of one layer of a 2+2 S-tetromino at the camera elevation the rest of the picture shows,
+and the near-overhead view shows both of its rows spanning exactly two cells.
 
-That makes the set **12 pentacubes + 1 tetracube = 64 cubes = 4 x 4 x 4** — the classic
-thirteen-piece cube. So the target is a 4x4x4 cube, not 5x5x3.
+So the set is **12 pentacubes + 1 tetracube = 64 = 4 x 4 x 4** — the classic thirteen-piece
+cube. `SOLUTION.md` has a packing; the set has at least 40 distinct solutions.
 
 ## The SAT encoding
 
@@ -40,65 +40,38 @@ and the packing is exactly two families of cardinality constraints:
 | `sum x[p,k] = 1` over the placements covering a cell, for every cell | each cell is filled exactly once |
 
 Together they say the chosen placements partition the box: an exact cover. Both are encoded
-with pysat's sequential-counter encoding (linear in the literals — pairwise at-most-one would
-be quadratic, and a cell here is covered by hundreds of placements). The 4x4x4 instance is
-about 28 500 variables and 73 000 clauses and solves in well under a second with CaDiCaL.
+with pysat's sequential-counter encoding, which is linear in the literals — pairwise
+at-most-one would be quadratic, and a cell here is covered by hundreds of placements. The
+4x4x4 instance is ~24 000 variables and ~61 000 clauses and solves in well under a second with
+CaDiCaL. Every solution is verified for overlap and coverage before it is printed.
 
 Two extras:
 
-* **Symmetry breaking** (on by default) restricts the first piece to placements that are
-  lexicographically minimal under the 24 rotations that map the box to itself, so the solver
-  does not walk through 24 copies of every solution.
-* **Alternative shapes.** A piece may be given several candidate shapes instead of one; the
-  variables then range over (shape, placement) pairs and the solver chooses the shape too.
-  `--distinct-shapes` additionally forbids two pieces from being assigned the same shape.
-  This is what `pieces_photo_candidates.json` uses.
+* **Symmetry breaking** (default on) restricts the first piece to placements that are
+  lexicographically minimal under the 24 rotations mapping the box to itself.
+* **Alternative shapes.** A piece may carry several candidate shapes instead of one; the
+  variables then range over (shape, placement) pairs, so the solver chooses the shape too.
+  `--distinct-shapes` forbids two pieces from being assigned the same shape. This is how the
+  last piece below was pinned down.
 
-## Reading the pieces off the photograph — and why it is not conclusive
+## How the pieces were read
 
-`identify/` holds the pipeline: colour-segment the 13 pieces (`segment.py`), render a candidate
-polycube under an orthographic camera with the piece resting on the table (`render.py` — faces
-are labelled by plane so the label boundaries are exactly the creases a camera sees), and score
-each of the 8 tetracubes and 29 pentacubes in each of their orientations by silhouette IoU x
-crease alignment x a three-face brightness model, over yaw, elevation, scale and offset
-(`match.py`, `candidates.py`). `cand_NN.json` are the resulting ranked candidate lists.
+Four photographs of the same layout: one near-overhead (footprints readable directly) and
+three oblique (heights readable). `identify/` holds the supporting pipeline — colour
+segmentation, an orthographic renderer whose face labels reproduce the creases a camera sees,
+and a scorer over every tetracube and pentacube orientation. **Its ranking is not reliable on
+its own** (the true shape was often second or third, and the three views' rankings disagreed),
+so it was used only to shortlist; the readings below come from measuring the pieces against
+each other in the photographs.
 
-**One photograph cannot settle it.** A single view hides cubes (a cube tucked behind or under
-another is simply invisible), and different pentacubes routinely project to near-identical
-silhouettes — for the blue U (piece 12) the best-scoring candidate and the true shape differ by
-0.04 in IoU. Nor does the packing constraint pin it down: many different sets of 12 pentacubes
-+ 1 tetracube tile a 4x4x4 cube, so "it packs" is not evidence that a reading is right.
+Eleven pieces were read that way, at the confidences recorded in `pieces.json`. Four are
+certain — the plus (X), the U, the four-cube S, the L. The last piece was then **forced**: with
+the other twelve fixed, exactly one non-planar pentacube completes a 4x4x4 packing, and it
+matches the photographs. That is the one identification the solver made rather than the eye.
 
-What the photograph *does* settle, from direct measurement against the calibrated cube size:
-
-| piece | reading | confidence |
-| --- | --- | --- |
-| 02 red (small flat S) | S-tetromino, 4 cubes, one layer | high |
-| 12 blue | U pentomino, 3x2 minus a corner, one layer | high |
-| 10 blue | X pentomino (plus), one layer — bounding box matches a flat 3x3 plus to within 1% | high |
-| 07 red | V pentomino: a 3-tall column with a 2-long foot | medium-high |
-| the rest | see `pieces_photo_candidates.json` | low — several shapes fit equally well |
-
-`pieces_photo_bestguess.json` is one complete reading consistent with all of the above **and**
-with tiling the cube; `solution_4x4x4.txt` is its verified packing. Treat it as provisional.
-
-## Giving the solver the real piece list
-
-Write each piece as its layers, `z=0` first, `#` for a cube:
-
-```
-piece 05 green:
-  z=0    z=1
-  ##.    #..
-  .#.    ...
-```
-
-Twelve such sketches plus the tetracube, and
-
-    python3 sat_pack.py pieces.json --all 5
-
-returns verified packings in seconds. (Two photographs per piece, from opposite corners, would
-also be enough for `identify/` to resolve the hidden cubes automatically.)
+Residual risk: the medium-confidence readings (W, N, Z, V, and the two two-level pieces) are
+shapes whose silhouettes are easy to confuse. If one is wrong, correct its `cells` in
+`pieces.json` and re-run — the solve takes under a second.
 
 ## Files
 
@@ -106,9 +79,9 @@ also be enough for `identify/` to resolve the hidden cubes automatically.)
 | --- | --- |
 | `polycube.py` | orientations, placements, enumeration of the 8 tetracubes / 29 pentacubes, ASCII rendering |
 | `sat_pack.py` | the SAT model, solver, verifier and pretty printer |
-| `build_spec.py` | turns `identify/cand_NN.json` into a packing spec |
-| `pieces_photo_bestguess.json` | provisional piece list (one shape per piece) |
-| `pieces_photo_candidates.json` | the same pieces with their alternative shapes |
-| `solution_4x4x4.txt`, `.json` | the verified packing of the provisional list |
+| `pieces.json` | the 13 pieces, with a description and confidence for each |
+| `solution_4x4x4.txt`, `.json`, `SOLUTION.md` | a verified packing |
+| `report.py` | renders pieces + solution as Markdown |
+| `build_spec.py` | turns `identify/cand_NN.json` into a packing spec with alternatives |
 | `identify/` | photo -> candidate shapes pipeline |
 | `selftest.py` | 12 pentominoes in a 3x4x5 box |
