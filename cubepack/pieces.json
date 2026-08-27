@@ -4,14 +4,14 @@
   4,
   4
  ],
- "note": "Read from eight photographs of two layouts; see README.",
+ "note": "Read from eight photographs; the V-pentomino reading was corrected by the owner.",
  "pieces": [
   {
    "id": "01-red",
    "label": "A",
-   "description": "V pentomino",
-   "catalogue_name": "P5",
-   "confidence": "high - 3x3 bounding box, flat, right-angle bend",
+   "description": "L-tetromino base, cube on top of the foot cell",
+   "catalogue_name": "P9",
+   "confidence": "medium - two levels (the raised cube is unmistakable in the low-angle views); top-down fit 0.911, mirror P16 at 0.900",
    "cells": [
     [
      0,
@@ -34,8 +34,8 @@
      0
     ],
     [
-     0,
-     2,
+     1,
+     1,
      0
     ]
    ]
@@ -45,7 +45,7 @@
    "label": "B",
    "description": "N pentomino",
    "catalogue_name": "P14",
-   "confidence": "high - 4x2 bounding box, flat zigzag",
+   "confidence": "high - flat, 4x2 bounding box, zigzag",
    "cells": [
     [
      0,
@@ -79,7 +79,7 @@
    "label": "C",
    "description": "S tetromino - the four-cube piece",
    "catalogue_name": "T7",
-   "confidence": "high - 3x2 box, flat, two rows of two",
+   "confidence": "high - flat, 3x2 box, two rows of two",
    "cells": [
     [
      0,
@@ -106,7 +106,7 @@
   {
    "id": "04-red",
    "label": "D",
-   "description": "L-tetromino base with one cube on the corner",
+   "description": "L-tetromino base, cube on top of the corner",
    "catalogue_name": "P6",
    "confidence": "medium - two levels, L footprint clear in four views",
    "cells": [
@@ -142,7 +142,7 @@
    "label": "E",
    "description": "Y pentomino",
    "catalogue_name": "P2",
-   "confidence": "high - 4x2 box, flat, 4-bar with a bump",
+   "confidence": "high - flat, 4x2 box, 4-bar with a bump",
    "cells": [
     [
      0,
@@ -176,7 +176,7 @@
    "label": "F",
    "description": "W pentomino",
    "catalogue_name": "P22",
-   "confidence": "high - 3x3 box, flat staircase",
+   "confidence": "high - flat, 3x3 box, staircase",
    "cells": [
     [
      0,
@@ -208,9 +208,9 @@
   {
    "id": "07-green",
    "label": "G",
-   "description": "S-tetromino base with one cube on an inner cell",
-   "catalogue_name": "P23",
-   "confidence": "medium - two levels; P25 is the mirror alternative",
+   "description": "S-tetromino base, cube on top of an inner cell",
+   "catalogue_name": "P25",
+   "confidence": "medium - two levels; P23 is the mirror alternative and also packs",
    "cells": [
     [
      0,
@@ -228,14 +228,14 @@
      1
     ],
     [
-     0,
      1,
-     2
+     0,
+     1
     ],
     [
      1,
      0,
-     1
+     2
     ]
    ]
   },
@@ -244,7 +244,7 @@
    "label": "H",
    "description": "X pentomino (plus)",
    "catalogue_name": "P28",
-   "confidence": "high - 3x3 box, flat plus",
+   "confidence": "high - flat, 3x3 box",
    "cells": [
     [
      0,
@@ -278,7 +278,7 @@
    "label": "I",
    "description": "F pentomino",
    "catalogue_name": "P21",
-   "confidence": "high - 3x3 box, flat",
+   "confidence": "high - flat, 3x3 box",
    "cells": [
     [
      0,
@@ -312,7 +312,7 @@
    "label": "J",
    "description": "U pentomino",
    "catalogue_name": "P4",
-   "confidence": "high - 3x2 box, flat",
+   "confidence": "high - flat, 3x2 box",
    "cells": [
     [
      0,
@@ -346,7 +346,7 @@
    "label": "K",
    "description": "P pentomino",
    "catalogue_name": "P3",
-   "confidence": "high - 3x2 box, flat",
+   "confidence": "high - flat, 3x2 box",
    "cells": [
     [
      0,
@@ -378,7 +378,7 @@
   {
    "id": "12-yellow",
    "label": "L",
-   "description": "S-tetromino base with one cube on an end cell",
+   "description": "S-tetromino base, cube on top of an end cell",
    "catalogue_name": "P18",
    "confidence": "medium - two levels",
    "cells": [
@@ -412,7 +412,7 @@
   {
    "id": "13-yellow",
    "label": "M",
-   "description": "L-tetromino base with one cube on the corner (mirror of 04)",
+   "description": "L-tetromino base, cube on top of the foot cell (mirror of 01)",
    "catalogue_name": "P16",
    "confidence": "medium - two levels",
    "cells": [

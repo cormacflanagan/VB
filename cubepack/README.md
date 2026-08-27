@@ -82,8 +82,15 @@ the alternatives that also tile the cube are listed below. The packing constrain
 resolve them - many combinations of the fourteen "tetromino + one on top" pentacubes complete a
 4x4x4 with the other nine fixed.
 
-Corrections this round (the first pass used one oblique photo and got four of these wrong):
-piece 01 is V, not L; 02 is N, not W; 06 is W, not N; 09 is F, not Z.
+Corrections so far: the first pass (one oblique photo) had four wrong - piece 02 is N, not W;
+06 is W, not N; 09 is F, not Z; and piece 01 is not L. Piece 01 was then read as the V
+pentomino, which the owner corrected: there is no V in the set. The low-angle views (W2:10,
+W3:3, V2:2) do show a cube standing proud of its bar, so 01 is two-level like 04, 07, 12 and 13 -
+an L-tetromino with a cube on the foot cell. Five L-based candidates all complete a packing, so
+the choice there is the photograph's (top-down fit 0.911 for P9, 0.900 for its mirror P16),
+not the solver's.
+
+Eight of the thirteen are flat pentominoes; five are two-level.
 
 ## Files
 
