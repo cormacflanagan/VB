@@ -92,6 +92,29 @@ not the solver's.
 
 Eight of the thirteen are flat pentominoes; five are two-level.
 
+## What the photographs cannot do
+
+The two-level pieces - a flat tetromino with one cube on top - are beyond this method, and
+there is a clean experiment to prove it. The owner supplied the true shape of piece 13
+(L-tetromino base, fifth cube over the middle of the row of three = P11). Scoring nine
+candidates against three views of that piece and combining by geometric mean:
+
+    P16 0.854   P23 0.849   P11 0.844   P17 0.842   P20 0.829
+    P13 0.828   P15 0.823   P8 0.817    P7 0.797
+
+The correct shape places **third of nine**, its own mirror places **last**, and the whole
+field spans 0.06. Adding views does not help: one view, three views and the packing
+constraint all fail to separate these candidates, because a cube sitting on top of a flat
+base shifts the near-overhead silhouette by only about a third of a cell - less than the
+error in the camera model, the mask edges and the print's rounded corners.
+
+Nor does the packing help: for every one of the nine candidates, the remaining twelve pieces
+still tile the cube. The constraint is simply too weak here.
+
+So the five pieces marked UNRESOLVED in `pieces.json` carry placeholders. Each needs one line
+from someone holding it - the base tetromino (L, S/Z, T or 2x2) and which base cube the fifth
+sits on - after which the solve takes under a second.
+
 ## Files
 
 | file | |
