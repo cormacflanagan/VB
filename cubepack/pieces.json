@@ -4,14 +4,14 @@
   4,
   4
  ],
- "note": "Read from eight photographs; the V-pentomino reading was corrected by the owner.",
+ "note": "Read from eight photographs; pieces 01 and 13 corrected by the owner.",
  "pieces": [
   {
    "id": "01-red",
    "label": "A",
    "description": "L-tetromino base, cube on top of the foot cell",
    "catalogue_name": "P9",
-   "confidence": "medium - two levels (the raised cube is unmistakable in the low-angle views); top-down fit 0.911, mirror P16 at 0.900",
+   "confidence": "medium - two levels; mirror P16 also packs",
    "cells": [
     [
      0,
@@ -45,7 +45,7 @@
    "label": "B",
    "description": "N pentomino",
    "catalogue_name": "P14",
-   "confidence": "high - flat, 4x2 bounding box, zigzag",
+   "confidence": "high - flat, 4x2 box, zigzag",
    "cells": [
     [
      0,
@@ -79,7 +79,7 @@
    "label": "C",
    "description": "S tetromino - the four-cube piece",
    "catalogue_name": "T7",
-   "confidence": "high - flat, 3x2 box, two rows of two",
+   "confidence": "high - flat, 3x2 box",
    "cells": [
     [
      0,
@@ -108,7 +108,7 @@
    "label": "D",
    "description": "L-tetromino base, cube on top of the corner",
    "catalogue_name": "P6",
-   "confidence": "medium - two levels, L footprint clear in four views",
+   "confidence": "medium - two levels",
    "cells": [
     [
      0,
@@ -142,7 +142,7 @@
    "label": "E",
    "description": "Y pentomino",
    "catalogue_name": "P2",
-   "confidence": "high - flat, 4x2 box, 4-bar with a bump",
+   "confidence": "high - flat, 4x2 box",
    "cells": [
     [
      0,
@@ -210,7 +210,7 @@
    "label": "G",
    "description": "S-tetromino base, cube on top of an inner cell",
    "catalogue_name": "P25",
-   "confidence": "medium - two levels; P23 is the mirror alternative and also packs",
+   "confidence": "medium - two levels; mirror P23 also packs",
    "cells": [
     [
      0,
@@ -412,9 +412,9 @@
   {
    "id": "13-yellow",
    "label": "M",
-   "description": "L-tetromino base, cube on top of the foot cell (mirror of 01)",
-   "catalogue_name": "P16",
-   "confidence": "medium - two levels",
+   "description": "L-tetromino base, cube on top of the middle of the 3-bar",
+   "catalogue_name": "P11",
+   "confidence": "confirmed by the owner; mirror P7 also packs",
    "cells": [
     [
      0,
@@ -434,12 +434,12 @@
     [
      0,
      1,
-     2
+     1
     ],
     [
      1,
-     1,
-     2
+     0,
+     0
     ]
    ]
   }
