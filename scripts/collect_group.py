@@ -10,7 +10,9 @@ from collections import defaultdict
 from rosters import GROUPS, WINDOW
 
 API = "https://api-v8.volleyballlife.com"
-HDRS = {"User-Agent": "Mozilla/5.0", "Accept": "application/json"}
+UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+      "(KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36")  # the API 404s a short UA
+HDRS = {"User-Agent": UA, "Accept": "application/json"}
 COACH = ("coach", "coaches", "spectator", "parent")
 THRESH = 3
 # Doubles only. A pairs entry carries exactly one partner; club and 5v5 formats carry

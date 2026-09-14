@@ -9,12 +9,14 @@ sides are reconstructed from the querying player plus her partners versus her
 opponents. Pairs who played *together* are recorded separately as partnerships, not
 as head-to-heads.
 """
-import json, sys, time, urllib.request
+import datetime, json, sys, time, urllib.request
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
 
 API = "https://api-v8.volleyballlife.com"
-HDRS = {"User-Agent": "Mozilla/5.0", "Accept": "application/json",
+UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+      "(KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36")  # the API 404s a short UA
+HDRS = {"User-Agent": UA, "Accept": "application/json",
         "Content-Type": "application/json"}
 
 
@@ -123,6 +125,7 @@ def main(group):
                     "aWins": wins0, "bWins": wins1, "games": uniq}
 
     out = {"group": group, "players": {str(i): n for i, n in ids.items()},
+           "asof": datetime.date.today().isoformat(),  # a crosstable can outlive its matrix
            "matches": len(matches),
            "pairs": sorted(pairs.values(), key=lambda p: -(p["aWins"] + p["bWins"])),
            "partnered": [{"a": ids[k[0]], "b": ids[k[1]], "matches": v}

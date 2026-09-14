@@ -19,7 +19,9 @@ import json, os, sys, time, urllib.request
 from concurrent.futures import ThreadPoolExecutor
 
 API = "https://api-v8.volleyballlife.com"
-HDRS = {"User-Agent": "Mozilla/5.0", "Accept": "application/json"}
+UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+      "(KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36")  # the API 404s a short UA
+HDRS = {"User-Agent": UA, "Accept": "application/json"}
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "..", "data")
 WORKERS = 8

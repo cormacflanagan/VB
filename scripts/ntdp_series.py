@@ -59,9 +59,13 @@ def ctx():
     return ssl.create_default_context()
 
 
+UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+      "(KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36")  # the API 404s a short UA
+
+
 def get(url, body=None):
     req = urllib.request.Request(url, data=body, headers={
-        "User-Agent": "Mozilla/5.0", "Content-Type": "application/json"})
+        "User-Agent": UA, "Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=60, context=ctx()) as r:
         return r.read().decode("utf-8", "replace")
 

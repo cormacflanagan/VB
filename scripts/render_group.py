@@ -271,13 +271,24 @@ def build(group):
         nmatch = sum(p["aWins"] + p["bWins"] for p in H2H["pairs"])
         met = len(H2H["pairs"])
         possible = N * (N - 1) // 2
+        # The match feed now requires an account, so a crosstable can be older than the
+        # matrix above it. Say so, and say who it therefore cannot cover.
+        stale = ""
+        if H2H.get("asof") and H2H["asof"] != wto:
+            missing = [p["name"] for p in players
+                       if p["name"] not in set(H2H.get("players", {}).values())]
+            asof = _d(H2H["asof"])
+            stale = (f" This crosstable is an earlier snapshot, pulled "
+                     f"{asof} rather than {wlong}"
+                     + (f"; {len(missing)} of the {N} entered the cut after it and have no "
+                        f"rows here." if missing else "."))
         h2h_section = f"""<section>
   <h2>Head to head</h2>
   <p class="lede">Actual matches, not finishing positions. {met} of the {possible} possible
   pairings in this group have met across the net at least once, over {nmatch} results drawn
   from {H2H['matches']:,} doubles matches. Rows are athletes in rating order, columns are the
   same athletes by rank number; a cell is the row player's record against that column player.
-  Hover for the last meeting.</p>
+  Hover for the last meeting.{stale}</p>
   {crosstable(players, H2H)}
   <div class="legend">
     <span class="key"><span class="sw ct-up"></span> Row player ahead</span>

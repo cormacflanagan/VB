@@ -18,7 +18,9 @@ import datetime, json, os, re, sys, time, urllib.parse, urllib.request
 from collections import Counter, defaultdict
 
 API = "https://api-v8.volleyballlife.com"
-HDRS = {"User-Agent": "Mozilla/5.0", "Accept": "application/json"}
+UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+      "(KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36")  # the API 404s a short UA
+HDRS = {"User-Agent": UA, "Accept": "application/json"}
 JSON = dict(HDRS, **{"Content-Type": "application/json"})
 DATA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
 PAIRS = 1          # doubles only: a team entry's finish is not the individual's result
