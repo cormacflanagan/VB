@@ -17,14 +17,14 @@
    "CA"
   ],
   [
-   "Milaniakai Padilla",
-   95165,
-   "HI"
-  ],
-  [
    "Sage Illian",
    91052,
    "KS"
+  ],
+  [
+   "Milaniakai Padilla",
+   95165,
+   "HI"
   ],
   [
    "Madison Gillinger",
@@ -47,9 +47,9 @@
    "VA"
   ],
   [
-   "Summer Tukua",
-   53120,
-   "CA"
+   "Skyler Smith",
+   149113,
+   "VA"
   ],
   [
    "Brooklyn Rosales",
@@ -57,14 +57,14 @@
    "NC"
   ],
   [
-   "Eden Cisneros",
-   98425,
+   "Summer Tukua",
+   53120,
    "CA"
   ],
   [
-   "Skyler Smith",
-   149113,
-   "VA"
+   "Eden Cisneros",
+   98425,
+   "CA"
   ],
   [
    "Milan Hendrickson",
@@ -82,24 +82,24 @@
    "AL"
   ],
   [
-   "Lia Ray",
-   25298,
-   "FL"
-  ],
-  [
    "Ella Buchanan",
    98125,
    "CA"
   ],
   [
-   "Danica  Waterman",
-   94563,
-   "FL"
-  ],
-  [
    "Abigail Moffett",
    9258,
    "CA"
+  ],
+  [
+   "Lia Ray",
+   25298,
+   "FL"
+  ],
+  [
+   "Danica  Waterman",
+   94563,
+   "FL"
   ]
  ],
  "meta": {
@@ -115,27 +115,27 @@
    "club": "757 Beach",
    "city": "NORFOLK",
    "state": "VA",
-   "tv": 8.703
+   "tv": 8.784
   },
   "64896": {
    "height": "5' 9\"",
    "club": "Santa Cruz Beach Volleyball Club",
    "city": "Santa Cruz",
    "state": "CA",
-   "tv": 8.696
-  },
-  "95165": {
-   "height": "5' 10\"",
-   "club": "Outrigger Canoe Club Girls Beach Volleyball",
-   "city": "Wailuku",
-   "state": "HI",
-   "tv": 8.644
+   "tv": 8.78
   },
   "91052": {
    "height": "6' 1\"",
    "club": "P4:13 Beach",
    "city": "Wichita ",
    "state": "KS",
+   "tv": 8.644
+  },
+  "95165": {
+   "height": "5' 10\"",
+   "club": "Outrigger Canoe Club Girls Beach Volleyball",
+   "city": "Wailuku",
+   "state": "HI",
    "tv": 8.643
   },
   "99596": {
@@ -143,21 +143,21 @@
    "club": "Spiker Beach Volleyball Club",
    "city": "Huntington Beach",
    "state": "CA",
-   "tv": 8.552
+   "tv": 8.554
   },
   "84725": {
    "height": "6'",
    "club": "MBsand",
    "city": "Boca Raton",
    "state": "FL",
-   "tv": 8.548
+   "tv": 8.549
   },
   "91897": {
    "height": "5' 11\"",
    "club": "WAVE Beach",
    "city": "Coronado",
    "state": "CA",
-   "tv": 8.539
+   "tv": 8.541
   },
   "84049": {
    "height": "6'",
@@ -166,89 +166,89 @@
    "state": "VA",
    "tv": 8.501
   },
+  "149113": {
+   "height": "5' 6\"",
+   "club": "757 Beach",
+   "city": "Virginia Beach",
+   "state": "VA",
+   "tv": 8.466
+  },
+  "59411": {
+   "height": "5' 6\"",
+   "club": "",
+   "city": "Carolina Beach",
+   "state": "NC",
+   "tv": 8.402
+  },
   "53120": {
    "height": "6' 0\"",
    "club": "WAVE Beach",
    "city": "Temecula",
    "state": "CA",
-   "tv": 8.354
-  },
-  "59411": {
-   "height": "5' 6\"",
-   "club": "Club W",
-   "city": "Carolina Beach",
-   "state": "NC",
-   "tv": 8.323
+   "tv": 8.358
   },
   "98425": {
    "height": "5' 10\"",
    "club": "Golden Gate volleyball",
    "city": "San Anselmo",
    "state": "CA",
-   "tv": 8.307
-  },
-  "149113": {
-   "height": "5' 6\"",
-   "club": "757 Beach",
-   "city": "Virginia Beach",
-   "state": "VA",
-   "tv": 8.3
+   "tv": 8.306
   },
   "22857": {
    "height": "5' 10\"",
    "club": "Golden Gate volleyball",
    "city": "Kentfield",
    "state": "CA",
-   "tv": 8.283
+   "tv": 8.284
   },
   "2048": {
    "height": "5' 6\"",
    "club": "P4:13 Beach",
    "city": "Harrisonville",
    "state": "MO",
-   "tv": 8.282
+   "tv": 8.283
   },
   "128445": {
    "height": "5' 10\"",
    "club": "MVP Beach ",
    "city": "Spanish Fort",
    "state": "AL",
-   "tv": 8.227
-  },
-  "25298": {
-   "height": "5' 10\"",
-   "club": "Optimum Beach",
-   "city": "Delray Beach ",
-   "state": "FL",
-   "tv": 8.173
+   "tv": 8.228
   },
   "98125": {
    "height": "6'",
    "club": "SLOVBC",
    "city": "San Luis Obispo",
    "state": "CA",
-   "tv": 8.149
-  },
-  "94563": {
-   "height": "5' 11\"",
-   "club": null,
-   "city": "Odessa",
-   "state": "FL",
-   "tv": 8.125
+   "tv": 8.145
   },
   "9258": {
    "height": "5' 9\"",
    "club": "Spiker Beach Volleyball Club",
    "city": "Yorba Linda",
    "state": "CA",
-   "tv": 8.104
+   "tv": 8.135
+  },
+  "25298": {
+   "height": "5' 10\"",
+   "club": "Optimum Beach",
+   "city": "Delray Beach ",
+   "state": "FL",
+   "tv": 8.131
+  },
+  "94563": {
+   "height": "5' 11\"",
+   "club": "",
+   "city": "Odessa",
+   "state": "FL",
+   "tv": 8.126
   }
  },
  "population": 1574,
- "rated": 1381,
+ "rated": 1365,
  "cut": {
-  "nTop": 8.104,
-  "next": 8.101,
-  "nextName": "Kendal Walker"
+  "nTop": 8.126,
+  "next": 8.08,
+  "nextName": "Stella Sheeran"
  }
 }
