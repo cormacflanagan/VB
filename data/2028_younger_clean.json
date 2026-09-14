@@ -99,6 +99,17 @@
      "Olivia Herron"
     ],
     "field": 64
+   },
+   {
+    "tid": 41617,
+    "tdId": 151902,
+    "division": "Womens Open",
+    "finish": 3,
+    "date": "2026-09-13",
+    "partners": [
+     "Sienna Castillo"
+    ],
+    "field": 17
    }
   ],
   "Sadie Stafford": [
@@ -345,6 +356,28 @@
     "field": 16
    },
    {
+    "tid": 39553,
+    "tdId": 145013,
+    "division": "Womens Open",
+    "finish": 2,
+    "date": "2026-09-06",
+    "partners": [
+     "Brooklyn Rosales"
+    ],
+    "field": 15
+   },
+   {
+    "tid": 36809,
+    "tdId": 134568,
+    "division": "Womens Open",
+    "finish": 1,
+    "date": "2026-08-30",
+    "partners": [
+     "Skyler Smith"
+    ],
+    "field": 6
+   },
+   {
     "tid": 33876,
     "tdId": 124946,
     "division": "Women's Open",
@@ -354,6 +387,17 @@
      "Sage Illian"
     ],
     "field": 18
+   },
+   {
+    "tid": 35687,
+    "tdId": 130674,
+    "division": "Womens Open",
+    "finish": 3,
+    "date": "2026-09-13",
+    "partners": [
+     "Brooklyn Rosales"
+    ],
+    "field": 20
    }
   ],
   "Haisley Flanagan": [
@@ -378,17 +422,6 @@
      "Charlotte Jansen"
     ],
     "field": 23
-   },
-   {
-    "tid": 32088,
-    "tdId": 119382,
-    "division": "Womens AA",
-    "finish": 13,
-    "date": "2025-08-23",
-    "partners": [
-     "Sadie Jeffrey"
-    ],
-    "field": 25
    },
    {
     "tid": 33446,
@@ -521,129 +554,17 @@
      "Ella Buchanan"
     ],
     "field": 20
-   }
-  ],
-  "Milaniakai Padilla": [
-   {
-    "tid": 25578,
-    "tdId": 97147,
-    "division": "Girls 18U",
-    "finish": 14,
-    "date": "2025-11-09",
-    "partners": [
-     "Sarah Cowan"
-    ],
-    "field": 23
    },
    {
-    "tid": 31568,
-    "tdId": 117699,
-    "division": "Class of '26 & Younger",
-    "finish": 9,
-    "date": "2026-01-18",
-    "partners": [
-     "Sadie Stafford"
-    ],
-    "field": 48
-   },
-   {
-    "tid": 31567,
-    "tdId": 117695,
-    "division": "Class of '26 & Younger",
-    "finish": 13,
-    "date": "2026-03-29",
-    "partners": [
-     "Jada Souza"
-    ],
-    "field": 59
-   },
-   {
-    "tid": 34180,
-    "tdId": 125823,
-    "division": "U18 Girls",
-    "finish": 3,
-    "date": "2026-01-31",
-    "partners": [
-     "Sarah Cowan"
-    ],
-    "field": 12
-   },
-   {
-    "tid": 36451,
-    "tdId": 133267,
-    "division": "U18 Girls",
-    "finish": 5,
-    "date": "2026-06-18",
-    "partners": [
-     "Ashlynn Proctor"
-    ],
-    "field": 9
-   },
-   {
-    "tid": 33997,
-    "tdId": 125370,
-    "division": "Girls 18U",
-    "finish": 2,
-    "date": "2026-04-11",
-    "partners": [
-     "Francesca Scapolo"
-    ],
-    "field": 13
-   },
-   {
-    "tid": 31483,
-    "tdId": 117393,
-    "division": "Girls 18 - 2026",
-    "finish": 2,
-    "date": "2026-07-19",
-    "partners": [
-     "Sandie Souza"
-    ],
-    "field": 37
-   },
-   {
-    "tid": 34230,
-    "tdId": 125972,
-    "division": "Girls 16U",
+    "tid": 41612,
+    "tdId": 151882,
+    "division": "Womens Open",
     "finish": 1,
-    "date": "2026-04-25",
+    "date": "2026-09-12",
     "partners": [
-     "Francesca Scapolo"
+     "Ciara Cantlen"
     ],
-    "field": 8
-   },
-   {
-    "tid": 34243,
-    "tdId": 126055,
-    "division": "Girls 17U",
-    "finish": 1,
-    "date": "2026-07-26",
-    "partners": [
-     "Nariah Johnson"
-    ],
-    "field": 63
-   },
-   {
-    "tid": 38087,
-    "tdId": 139559,
-    "division": "Girls 18U",
-    "finish": 33,
-    "date": "2026-07-11",
-    "partners": [
-     "Melahi Palencia"
-    ],
-    "field": 160
-   },
-   {
-    "tid": 34243,
-    "tdId": 126054,
-    "division": "Girls 18U",
-    "finish": 9,
-    "date": "2026-07-26",
-    "partners": [
-     "Sarah Cowan"
-    ],
-    "field": 64
+    "field": 17
    }
   ],
   "Sage Illian": [
@@ -822,6 +743,129 @@
      "Sadie Stafford"
     ],
     "field": 18
+   }
+  ],
+  "Milaniakai Padilla": [
+   {
+    "tid": 25578,
+    "tdId": 97147,
+    "division": "Girls 18U",
+    "finish": 14,
+    "date": "2025-11-09",
+    "partners": [
+     "Sarah Cowan"
+    ],
+    "field": 23
+   },
+   {
+    "tid": 31568,
+    "tdId": 117699,
+    "division": "Class of '26 & Younger",
+    "finish": 9,
+    "date": "2026-01-18",
+    "partners": [
+     "Sadie Stafford"
+    ],
+    "field": 48
+   },
+   {
+    "tid": 31567,
+    "tdId": 117695,
+    "division": "Class of '26 & Younger",
+    "finish": 13,
+    "date": "2026-03-29",
+    "partners": [
+     "Jada Souza"
+    ],
+    "field": 59
+   },
+   {
+    "tid": 34180,
+    "tdId": 125823,
+    "division": "U18 Girls",
+    "finish": 3,
+    "date": "2026-01-31",
+    "partners": [
+     "Sarah Cowan"
+    ],
+    "field": 12
+   },
+   {
+    "tid": 36451,
+    "tdId": 133267,
+    "division": "U18 Girls",
+    "finish": 5,
+    "date": "2026-06-18",
+    "partners": [
+     "Ashlynn Proctor"
+    ],
+    "field": 9
+   },
+   {
+    "tid": 33997,
+    "tdId": 125370,
+    "division": "Girls 18U",
+    "finish": 2,
+    "date": "2026-04-11",
+    "partners": [
+     "Francesca Scapolo"
+    ],
+    "field": 13
+   },
+   {
+    "tid": 31483,
+    "tdId": 117393,
+    "division": "Girls 18 - 2026",
+    "finish": 2,
+    "date": "2026-07-19",
+    "partners": [
+     "Sandie Souza"
+    ],
+    "field": 37
+   },
+   {
+    "tid": 34230,
+    "tdId": 125972,
+    "division": "Girls 16U",
+    "finish": 1,
+    "date": "2026-04-25",
+    "partners": [
+     "Francesca Scapolo"
+    ],
+    "field": 8
+   },
+   {
+    "tid": 34243,
+    "tdId": 126055,
+    "division": "Girls 17U",
+    "finish": 1,
+    "date": "2026-07-26",
+    "partners": [
+     "Nariah Johnson"
+    ],
+    "field": 63
+   },
+   {
+    "tid": 38087,
+    "tdId": 139559,
+    "division": "Girls 18U",
+    "finish": 33,
+    "date": "2026-07-11",
+    "partners": [
+     "Melahi Palencia"
+    ],
+    "field": 160
+   },
+   {
+    "tid": 34243,
+    "tdId": 126054,
+    "division": "Girls 18U",
+    "finish": 9,
+    "date": "2026-07-26",
+    "partners": [
+     "Sarah Cowan"
+    ],
+    "field": 64
    }
   ],
   "Nariah Johnson": [
@@ -1013,17 +1057,6 @@
      "Aubree Marsden"
     ],
     "field": 23
-   },
-   {
-    "tid": 32315,
-    "tdId": 119972,
-    "division": "Girls 16U",
-    "finish": 1,
-    "date": "2025-08-31",
-    "partners": [
-     "Sadie Harris"
-    ],
-    "field": 12
    },
    {
     "tid": 23700,
@@ -1349,28 +1382,6 @@
   ],
   "Ashlynn Proctor": [
    {
-    "tid": 32085,
-    "tdId": 119378,
-    "division": "Womens Open",
-    "finish": 17,
-    "date": "2025-08-23",
-    "partners": [
-     "Summer Tukua"
-    ],
-    "field": 20
-   },
-   {
-    "tid": 32115,
-    "tdId": 119439,
-    "division": "Girls 18U",
-    "finish": 1,
-    "date": "2025-08-24",
-    "partners": [
-     "Summer Tukua"
-    ],
-    "field": 10
-   },
-   {
     "tid": 25578,
     "tdId": 97149,
     "division": "Girls 16U",
@@ -1516,6 +1527,206 @@
     "field": 12
    }
   ],
+  "Skyler Smith": [
+   {
+    "tid": 31566,
+    "tdId": 117686,
+    "division": "Class of '26 & Younger",
+    "finish": 15,
+    "date": "2025-12-29",
+    "partners": [
+     "Sienna Carr"
+    ],
+    "field": 36
+   },
+   {
+    "tid": 30388,
+    "tdId": 114252,
+    "division": "Coed AA",
+    "finish": 5,
+    "date": "2025-09-28",
+    "partners": [
+     "Keegan Anuar"
+    ],
+    "field": 11
+   },
+   {
+    "tid": 25638,
+    "tdId": 97292,
+    "division": "Girls 16U",
+    "finish": 1,
+    "date": "2025-11-30",
+    "partners": [
+     "Sadie Stafford"
+    ],
+    "field": 54
+   },
+   {
+    "tid": 31569,
+    "tdId": 117703,
+    "division": "Class of '26 & Younger",
+    "finish": 5,
+    "date": "2026-02-22",
+    "partners": [
+     "Sadie Stafford"
+    ],
+    "field": 75
+   },
+   {
+    "tid": 33052,
+    "tdId": 122007,
+    "division": "Girls 18U",
+    "finish": 1,
+    "date": "2026-01-25",
+    "partners": [
+     "Sadie Stafford"
+    ],
+    "field": 8
+   },
+   {
+    "tid": 33052,
+    "tdId": 122095,
+    "division": "Girls 16U",
+    "finish": 1,
+    "date": "2026-01-25",
+    "partners": [
+     "Sadie Stafford"
+    ],
+    "field": 9
+   },
+   {
+    "tid": 32909,
+    "tdId": 121576,
+    "division": "Womens Open",
+    "finish": 5,
+    "date": "2026-02-01",
+    "partners": [
+     "Reese Hislop"
+    ],
+    "field": 12
+   },
+   {
+    "tid": 32578,
+    "tdId": 120659,
+    "division": "Girls 16 Open",
+    "finish": 5,
+    "date": "2026-05-03",
+    "partners": [
+     "Lily Larrabee"
+    ],
+    "field": 104
+   },
+   {
+    "tid": 36166,
+    "tdId": 132403,
+    "division": "Womens Open",
+    "finish": 7,
+    "date": "2026-05-16",
+    "partners": [
+     "Reese Hislop"
+    ],
+    "field": 8
+   },
+   {
+    "tid": 34327,
+    "tdId": 126338,
+    "division": "Girls 18U",
+    "finish": 3,
+    "date": "2026-06-07",
+    "partners": [
+     "Lyla Paulsen"
+    ],
+    "field": 8
+   },
+   {
+    "tid": 32971,
+    "tdId": 121739,
+    "division": "Girls 16U Open",
+    "finish": 4,
+    "date": "2026-07-18",
+    "partners": [
+     "Lauren Eklund"
+    ],
+    "field": 44
+   },
+   {
+    "tid": 36018,
+    "tdId": 131763,
+    "division": "Girls 18U",
+    "finish": 1,
+    "date": "2026-06-28",
+    "partners": [
+     "Sadie Stafford"
+    ],
+    "field": 4
+   },
+   {
+    "tid": 36203,
+    "tdId": 132498,
+    "division": "Womens Open",
+    "finish": 7,
+    "date": "2026-07-11",
+    "partners": [
+     "Sadie Hancox"
+    ],
+    "field": 9
+   },
+   {
+    "tid": 32971,
+    "tdId": 121738,
+    "division": "Girls 18U Open",
+    "finish": 1,
+    "date": "2026-07-18",
+    "partners": [
+     "Sadie Stafford"
+    ],
+    "field": 32
+   },
+   {
+    "tid": 36809,
+    "tdId": 134568,
+    "division": "Womens Open",
+    "finish": 1,
+    "date": "2026-08-30",
+    "partners": [
+     "Sadie Stafford"
+    ],
+    "field": 6
+   },
+   {
+    "tid": 36724,
+    "tdId": 134281,
+    "division": "Womens Open",
+    "finish": 1,
+    "date": "2026-07-26",
+    "partners": [
+     "June Culicerto"
+    ],
+    "field": 9
+   },
+   {
+    "tid": 36810,
+    "tdId": 134596,
+    "division": "Coed Open",
+    "finish": 1,
+    "date": "2026-08-16",
+    "partners": [
+     "Keegan Anuar"
+    ],
+    "field": 10
+   },
+   {
+    "tid": 36809,
+    "tdId": 134576,
+    "division": "Girls 18U",
+    "finish": 1,
+    "date": "2026-08-30",
+    "partners": [
+     "Riley Scharver"
+    ],
+    "field": 6
+   }
+  ],
   "Tristan Ana Del Riego": [
    {
     "tid": 30911,
@@ -1527,28 +1738,6 @@
      "Sienna Mattoon"
     ],
     "field": 15
-   },
-   {
-    "tid": 32276,
-    "tdId": 119899,
-    "division": "Girls 16U",
-    "finish": 7,
-    "date": "2025-08-30",
-    "partners": [
-     "Haley Spak"
-    ],
-    "field": 15
-   },
-   {
-    "tid": 32326,
-    "tdId": 120011,
-    "division": "Womens A",
-    "finish": 1,
-    "date": "2025-08-31",
-    "partners": [
-     "Sienna Mattoon"
-    ],
-    "field": 23
    },
    {
     "tid": 23700,
@@ -1718,17 +1907,6 @@
   ],
   "Brooke Proctor": [
    {
-    "tid": 32116,
-    "tdId": 119440,
-    "division": "Girls 16U",
-    "finish": 1,
-    "date": "2025-08-24",
-    "partners": [
-     "Reagan Carlin"
-    ],
-    "field": 19
-   },
-   {
     "tid": 25578,
     "tdId": 97150,
     "division": "Girls 15U",
@@ -1804,455 +1982,9 @@
      "Reagan Carlin"
     ],
     "field": 159
-   }
-  ],
-  "Reagan Carlin": [
-   {
-    "tid": 32116,
-    "tdId": 119440,
-    "division": "Girls 16U",
-    "finish": 1,
-    "date": "2025-08-24",
-    "partners": [
-     "Brooke Proctor"
-    ],
-    "field": 19
-   },
-   {
-    "tid": 25578,
-    "tdId": 97150,
-    "division": "Girls 15U",
-    "finish": 1,
-    "date": "2025-11-09",
-    "partners": [
-     "Brooke Proctor"
-    ],
-    "field": 24
-   },
-   {
-    "tid": 32503,
-    "tdId": 120444,
-    "division": "Womens A",
-    "finish": 5,
-    "date": "2025-09-07",
-    "partners": [
-     "Kennedy Carlin"
-    ],
-    "field": 20
-   },
-   {
-    "tid": 32754,
-    "tdId": 121123,
-    "division": "Girls 18U",
-    "finish": 1,
-    "date": "2025-09-20",
-    "partners": [
-     "Brooke Proctor"
-    ],
-    "field": 6
-   },
-   {
-    "tid": 33029,
-    "tdId": 121953,
-    "division": "Girls 18U",
-    "finish": 2,
-    "date": "2025-10-05",
-    "partners": [
-     "Brooke Proctor"
-    ],
-    "field": 9
-   },
-   {
-    "tid": 33136,
-    "tdId": 122338,
-    "division": "Girls 16U",
-    "finish": 1,
-    "date": "2025-10-12",
-    "partners": [
-     "Brooke Proctor"
-    ],
-    "field": 9
-   },
-   {
-    "tid": 31483,
-    "tdId": 117395,
-    "division": "Girls 15 - 2029",
-    "finish": 3,
-    "date": "2026-07-19",
-    "partners": [
-     "Brooke Proctor"
-    ],
-    "field": 38
-   },
-   {
-    "tid": 31568,
-    "tdId": 117700,
-    "division": "Class of '28 & Younger",
-    "finish": 2,
-    "date": "2026-01-18",
-    "partners": [
-     "Brynn Harris"
-    ],
-    "field": 36
-   },
-   {
-    "tid": 34180,
-    "tdId": 125823,
-    "division": "U18 Girls",
-    "finish": 9,
-    "date": "2026-01-31",
-    "partners": [
-     "Parker Wilson"
-    ],
-    "field": 12
-   },
-   {
-    "tid": 31567,
-    "tdId": 117696,
-    "division": "Class of '28 & Younger",
-    "finish": 5,
-    "date": "2026-03-29",
-    "partners": [
-     "Brynn Harris"
-    ],
-    "field": 38
-   },
-   {
-    "tid": 34243,
-    "tdId": 126057,
-    "division": "Girls 15U",
-    "finish": 1,
-    "date": "2026-07-26",
-    "partners": [
-     "Brooke Proctor"
-    ],
-    "field": 64
-   },
-   {
-    "tid": 38087,
-    "tdId": 139560,
-    "division": "Girls 16U",
-    "finish": 5,
-    "date": "2026-07-11",
-    "partners": [
-     "Brooke Proctor"
-    ],
-    "field": 159
-   },
-   {
-    "tid": 37256,
-    "tdId": 136227,
-    "division": "Womens A",
-    "finish": 1,
-    "date": "2026-03-15",
-    "partners": [
-     "Brynn Harris"
-    ],
-    "field": 19
-   }
-  ],
-  "Ashley Ruschill": [
-   {
-    "tid": 25638,
-    "tdId": 97292,
-    "division": "Girls 16U",
-    "finish": 2,
-    "date": "2025-11-30",
-    "partners": [
-     "Julianna Godbey"
-    ],
-    "field": 54
-   },
-   {
-    "tid": 25578,
-    "tdId": 97149,
-    "division": "Girls 16U",
-    "finish": 5,
-    "date": "2025-11-09",
-    "partners": [
-     "Julianna Godbey"
-    ],
-    "field": 23
-   },
-   {
-    "tid": 31568,
-    "tdId": 117700,
-    "division": "Class of '28 & Younger",
-    "finish": 5,
-    "date": "2026-01-18",
-    "partners": [
-     "Brazos Allred"
-    ],
-    "field": 36
-   },
-   {
-    "tid": 31995,
-    "tdId": 119079,
-    "division": "Girls 18U",
-    "finish": 5,
-    "date": "2025-11-16",
-    "partners": [
-     "Julianna Godbey"
-    ],
-    "field": 31
-   },
-   {
-    "tid": 31489,
-    "tdId": 117417,
-    "division": "Girls 18U",
-    "finish": 1,
-    "date": "2025-09-07",
-    "partners": [
-     "Brazos Allred"
-    ],
-    "field": 13
-   },
-   {
-    "tid": 30437,
-    "tdId": 114423,
-    "division": "Women's Open",
-    "finish": 13,
-    "date": "2025-10-26",
-    "partners": [
-     "Julianna Godbey"
-    ],
-    "field": 21
-   },
-   {
-    "tid": 31622,
-    "tdId": 117904,
-    "division": "Class of '26 & Younger",
-    "finish": 9,
-    "date": "2026-03-15",
-    "partners": [
-     "Haven Gindoff"
-    ],
-    "field": 56
-   },
-   {
-    "tid": 31566,
-    "tdId": 117686,
-    "division": "Class of '26 & Younger",
-    "finish": 9,
-    "date": "2025-12-29",
-    "partners": [
-     "Tesa Solis"
-    ],
-    "field": 36
-   },
-   {
-    "tid": 33945,
-    "tdId": 125213,
-    "division": "Girls 18U",
-    "finish": 2,
-    "date": "2026-02-01",
-    "partners": [
-     "Cayden Dorger"
-    ],
-    "field": 40
-   },
-   {
-    "tid": 31625,
-    "tdId": 117914,
-    "division": "Class of '26 & Younger",
-    "finish": 5,
-    "date": "2026-04-12",
-    "partners": [
-     "Cayden Dorger"
-    ],
-    "field": 32
-   },
-   {
-    "tid": 32578,
-    "tdId": 120659,
-    "division": "Girls 16 Open",
-    "finish": 5,
-    "date": "2026-05-03",
-    "partners": [
-     "Julianna Godbey"
-    ],
-    "field": 104
-   },
-   {
-    "tid": 34243,
-    "tdId": 126057,
-    "division": "Girls 15U",
-    "finish": 3,
-    "date": "2026-07-26",
-    "partners": [
-     "Julianna Godbey"
-    ],
-    "field": 64
-   },
-   {
-    "tid": 30985,
-    "tdId": 115903,
-    "division": "Class of 2028 & Younger",
-    "finish": 3,
-    "date": "2026-06-19",
-    "partners": [
-     "Cayden Dorger"
-    ],
-    "field": 31
-   },
-   {
-    "tid": 31567,
-    "tdId": 117695,
-    "division": "Class of '26 & Younger",
-    "finish": 13,
-    "date": "2026-03-29",
-    "partners": [
-     "Julianna Godbey"
-    ],
-    "field": 59
-   },
-   {
-    "tid": 31483,
-    "tdId": 117395,
-    "division": "Girls 15 - 2029",
-    "finish": 1,
-    "date": "2026-07-19",
-    "partners": [
-     "Lily Vandeweghe"
-    ],
-    "field": 38
-   },
-   {
-    "tid": 31483,
-    "tdId": 117394,
-    "division": "Girls 16 - 2028",
-    "finish": 3,
-    "date": "2026-07-19",
-    "partners": [
-     "Cayden Dorger"
-    ],
-    "field": 59
-   },
-   {
-    "tid": 35588,
-    "tdId": 130318,
-    "division": "18U (2026 Grad Year)",
-    "finish": 5,
-    "date": "2026-06-30",
-    "partners": [
-     "Tesa Solis"
-    ],
-    "field": 20
-   },
-   {
-    "tid": 36451,
-    "tdId": 133267,
-    "division": "U18 Girls",
-    "finish": 3,
-    "date": "2026-06-18",
-    "partners": [
-     "Cayden Dorger"
-    ],
-    "field": 9
-   },
-   {
-    "tid": 34243,
-    "tdId": 126056,
-    "division": "Girls 16U",
-    "finish": 5,
-    "date": "2026-07-26",
-    "partners": [
-     "Edie Joseph"
-    ],
-    "field": 72
-   },
-   {
-    "tid": 38087,
-    "tdId": 139559,
-    "division": "Girls 18U",
-    "finish": 17,
-    "date": "2026-07-11",
-    "partners": [
-     "Tesa Solis"
-    ],
-    "field": 160
-   }
-  ],
-  "Summer Tukua": [
-   {
-    "tid": 32085,
-    "tdId": 119378,
-    "division": "Womens Open",
-    "finish": 17,
-    "date": "2025-08-23",
-    "partners": [
-     "Ashlynn Proctor"
-    ],
-    "field": 20
-   },
-   {
-    "tid": 32115,
-    "tdId": 119439,
-    "division": "Girls 18U",
-    "finish": 1,
-    "date": "2025-08-24",
-    "partners": [
-     "Ashlynn Proctor"
-    ],
-    "field": 10
-   },
-   {
-    "tid": 25578,
-    "tdId": 97149,
-    "division": "Girls 16U",
-    "finish": 1,
-    "date": "2025-11-09",
-    "partners": [
-     "Ashlynn Proctor"
-    ],
-    "field": 23
-   },
-   {
-    "tid": 33620,
-    "tdId": 124248,
-    "division": "Womens Open",
-    "finish": 5,
-    "date": "2025-11-01",
-    "partners": [
-     "Ashlynn Proctor"
-    ],
-    "field": 10
-   },
-   {
-    "tid": 31483,
-    "tdId": 117394,
-    "division": "Girls 16 - 2028",
-    "finish": 1,
-    "date": "2026-07-19",
-    "partners": [
-     "Ashlynn Proctor"
-    ],
-    "field": 59
    }
   ],
   "Brooklyn Rosales": [
-   {
-    "tid": 24075,
-    "tdId": 92429,
-    "division": "Girls 18U",
-    "finish": 3,
-    "date": "2025-09-07",
-    "partners": [
-     "Claire Newell"
-    ],
-    "field": 44
-   },
-   {
-    "tid": 28845,
-    "tdId": 109060,
-    "division": "Girls 18U",
-    "finish": 5,
-    "date": "2025-09-06",
-    "partners": [
-     "Claire Newell"
-    ],
-    "field": 30
-   },
    {
     "tid": 26009,
     "tdId": 98751,
@@ -2428,6 +2160,520 @@
      "Sadie Stafford"
     ],
     "field": 16
+   },
+   {
+    "tid": 39553,
+    "tdId": 145013,
+    "division": "Womens Open",
+    "finish": 2,
+    "date": "2026-09-06",
+    "partners": [
+     "Sadie Stafford"
+    ],
+    "field": 15
+   },
+   {
+    "tid": 35687,
+    "tdId": 130674,
+    "division": "Womens Open",
+    "finish": 3,
+    "date": "2026-09-13",
+    "partners": [
+     "Sadie Stafford"
+    ],
+    "field": 20
+   }
+  ],
+  "Reagan Carlin": [
+   {
+    "tid": 25578,
+    "tdId": 97150,
+    "division": "Girls 15U",
+    "finish": 1,
+    "date": "2025-11-09",
+    "partners": [
+     "Brooke Proctor"
+    ],
+    "field": 24
+   },
+   {
+    "tid": 32754,
+    "tdId": 121123,
+    "division": "Girls 18U",
+    "finish": 1,
+    "date": "2025-09-20",
+    "partners": [
+     "Brooke Proctor"
+    ],
+    "field": 6
+   },
+   {
+    "tid": 33029,
+    "tdId": 121953,
+    "division": "Girls 18U",
+    "finish": 2,
+    "date": "2025-10-05",
+    "partners": [
+     "Brooke Proctor"
+    ],
+    "field": 9
+   },
+   {
+    "tid": 33136,
+    "tdId": 122338,
+    "division": "Girls 16U",
+    "finish": 1,
+    "date": "2025-10-12",
+    "partners": [
+     "Brooke Proctor"
+    ],
+    "field": 9
+   },
+   {
+    "tid": 31483,
+    "tdId": 117395,
+    "division": "Girls 15 - 2029",
+    "finish": 3,
+    "date": "2026-07-19",
+    "partners": [
+     "Brooke Proctor"
+    ],
+    "field": 38
+   },
+   {
+    "tid": 31568,
+    "tdId": 117700,
+    "division": "Class of '28 & Younger",
+    "finish": 2,
+    "date": "2026-01-18",
+    "partners": [
+     "Brynn Harris"
+    ],
+    "field": 36
+   },
+   {
+    "tid": 34180,
+    "tdId": 125823,
+    "division": "U18 Girls",
+    "finish": 9,
+    "date": "2026-01-31",
+    "partners": [
+     "Parker Wilson"
+    ],
+    "field": 12
+   },
+   {
+    "tid": 31567,
+    "tdId": 117696,
+    "division": "Class of '28 & Younger",
+    "finish": 5,
+    "date": "2026-03-29",
+    "partners": [
+     "Brynn Harris"
+    ],
+    "field": 38
+   },
+   {
+    "tid": 34243,
+    "tdId": 126057,
+    "division": "Girls 15U",
+    "finish": 1,
+    "date": "2026-07-26",
+    "partners": [
+     "Brooke Proctor"
+    ],
+    "field": 64
+   },
+   {
+    "tid": 38087,
+    "tdId": 139560,
+    "division": "Girls 16U",
+    "finish": 5,
+    "date": "2026-07-11",
+    "partners": [
+     "Brooke Proctor"
+    ],
+    "field": 159
+   },
+   {
+    "tid": 37256,
+    "tdId": 136227,
+    "division": "Womens A",
+    "finish": 1,
+    "date": "2026-03-15",
+    "partners": [
+     "Brynn Harris"
+    ],
+    "field": 19
+   }
+  ],
+  "Ashley Ruschill": [
+   {
+    "tid": 25638,
+    "tdId": 97292,
+    "division": "Girls 16U",
+    "finish": 2,
+    "date": "2025-11-30",
+    "partners": [
+     "Julianna Godbey"
+    ],
+    "field": 54
+   },
+   {
+    "tid": 25578,
+    "tdId": 97149,
+    "division": "Girls 16U",
+    "finish": 5,
+    "date": "2025-11-09",
+    "partners": [
+     "Julianna Godbey"
+    ],
+    "field": 23
+   },
+   {
+    "tid": 31568,
+    "tdId": 117700,
+    "division": "Class of '28 & Younger",
+    "finish": 5,
+    "date": "2026-01-18",
+    "partners": [
+     "Brazos Allred"
+    ],
+    "field": 36
+   },
+   {
+    "tid": 31995,
+    "tdId": 119079,
+    "division": "Girls 18U",
+    "finish": 5,
+    "date": "2025-11-16",
+    "partners": [
+     "Julianna Godbey"
+    ],
+    "field": 31
+   },
+   {
+    "tid": 30437,
+    "tdId": 114423,
+    "division": "Women's Open",
+    "finish": 13,
+    "date": "2025-10-26",
+    "partners": [
+     "Julianna Godbey"
+    ],
+    "field": 21
+   },
+   {
+    "tid": 31622,
+    "tdId": 117904,
+    "division": "Class of '26 & Younger",
+    "finish": 9,
+    "date": "2026-03-15",
+    "partners": [
+     "Haven Gindoff"
+    ],
+    "field": 56
+   },
+   {
+    "tid": 31566,
+    "tdId": 117686,
+    "division": "Class of '26 & Younger",
+    "finish": 9,
+    "date": "2025-12-29",
+    "partners": [
+     "Tesa Solis"
+    ],
+    "field": 36
+   },
+   {
+    "tid": 33945,
+    "tdId": 125213,
+    "division": "Girls 18U",
+    "finish": 2,
+    "date": "2026-02-01",
+    "partners": [
+     "Cayden Dorger"
+    ],
+    "field": 40
+   },
+   {
+    "tid": 31625,
+    "tdId": 117914,
+    "division": "Class of '26 & Younger",
+    "finish": 5,
+    "date": "2026-04-12",
+    "partners": [
+     "Cayden Dorger"
+    ],
+    "field": 32
+   },
+   {
+    "tid": 32578,
+    "tdId": 120659,
+    "division": "Girls 16 Open",
+    "finish": 5,
+    "date": "2026-05-03",
+    "partners": [
+     "Julianna Godbey"
+    ],
+    "field": 104
+   },
+   {
+    "tid": 34243,
+    "tdId": 126057,
+    "division": "Girls 15U",
+    "finish": 3,
+    "date": "2026-07-26",
+    "partners": [
+     "Julianna Godbey"
+    ],
+    "field": 64
+   },
+   {
+    "tid": 30985,
+    "tdId": 115903,
+    "division": "Class of 2028 & Younger",
+    "finish": 3,
+    "date": "2026-06-19",
+    "partners": [
+     "Cayden Dorger"
+    ],
+    "field": 31
+   },
+   {
+    "tid": 31567,
+    "tdId": 117695,
+    "division": "Class of '26 & Younger",
+    "finish": 13,
+    "date": "2026-03-29",
+    "partners": [
+     "Julianna Godbey"
+    ],
+    "field": 59
+   },
+   {
+    "tid": 31483,
+    "tdId": 117395,
+    "division": "Girls 15 - 2029",
+    "finish": 1,
+    "date": "2026-07-19",
+    "partners": [
+     "Lily Vandeweghe"
+    ],
+    "field": 38
+   },
+   {
+    "tid": 31483,
+    "tdId": 117394,
+    "division": "Girls 16 - 2028",
+    "finish": 3,
+    "date": "2026-07-19",
+    "partners": [
+     "Cayden Dorger"
+    ],
+    "field": 59
+   },
+   {
+    "tid": 35588,
+    "tdId": 130318,
+    "division": "18U (2026 Grad Year)",
+    "finish": 5,
+    "date": "2026-06-30",
+    "partners": [
+     "Tesa Solis"
+    ],
+    "field": 20
+   },
+   {
+    "tid": 36451,
+    "tdId": 133267,
+    "division": "U18 Girls",
+    "finish": 3,
+    "date": "2026-06-18",
+    "partners": [
+     "Cayden Dorger"
+    ],
+    "field": 9
+   },
+   {
+    "tid": 34243,
+    "tdId": 126056,
+    "division": "Girls 16U",
+    "finish": 5,
+    "date": "2026-07-26",
+    "partners": [
+     "Edie Joseph"
+    ],
+    "field": 72
+   },
+   {
+    "tid": 38087,
+    "tdId": 139559,
+    "division": "Girls 18U",
+    "finish": 17,
+    "date": "2026-07-11",
+    "partners": [
+     "Tesa Solis"
+    ],
+    "field": 160
+   }
+  ],
+  "Summer Tukua": [
+   {
+    "tid": 25578,
+    "tdId": 97149,
+    "division": "Girls 16U",
+    "finish": 1,
+    "date": "2025-11-09",
+    "partners": [
+     "Ashlynn Proctor"
+    ],
+    "field": 23
+   },
+   {
+    "tid": 33620,
+    "tdId": 124248,
+    "division": "Womens Open",
+    "finish": 5,
+    "date": "2025-11-01",
+    "partners": [
+     "Ashlynn Proctor"
+    ],
+    "field": 10
+   },
+   {
+    "tid": 31483,
+    "tdId": 117394,
+    "division": "Girls 16 - 2028",
+    "finish": 1,
+    "date": "2026-07-19",
+    "partners": [
+     "Ashlynn Proctor"
+    ],
+    "field": 59
+   }
+  ],
+  "Milana Rivera": [
+   {
+    "tid": 30437,
+    "tdId": 114423,
+    "division": "Women's Open",
+    "finish": 9,
+    "date": "2025-10-26",
+    "partners": [
+     "Olivia Herron"
+    ],
+    "field": 21
+   },
+   {
+    "tid": 30438,
+    "tdId": 114425,
+    "division": "Women's Open",
+    "finish": 7,
+    "date": "2025-11-23",
+    "partners": [
+     "Olivia Herron"
+    ],
+    "field": 29
+   },
+   {
+    "tid": 28051,
+    "tdId": 105801,
+    "division": "Womens Open",
+    "finish": 2,
+    "date": "2026-02-08",
+    "partners": [
+     "Kate Privett"
+    ],
+    "field": 10
+   },
+   {
+    "tid": 34540,
+    "tdId": 126904,
+    "division": "Womens Open",
+    "finish": 5,
+    "date": "2026-02-28",
+    "partners": [
+     "Lindsey Kammermeier"
+    ],
+    "field": 8
+   },
+   {
+    "tid": 34361,
+    "tdId": 126468,
+    "division": "Womens Open",
+    "finish": 17,
+    "date": "2026-03-15",
+    "partners": [
+     "Bethany Clapp"
+    ],
+    "field": 26
+   },
+   {
+    "tid": 31625,
+    "tdId": 117914,
+    "division": "Class of '26 & Younger",
+    "finish": 3,
+    "date": "2026-04-12",
+    "partners": [
+     "Sarah Cowan"
+    ],
+    "field": 32
+   },
+   {
+    "tid": 37439,
+    "tdId": 136873,
+    "division": "Womens Open/AA",
+    "finish": 9,
+    "date": "2026-05-09",
+    "partners": [
+     "Reese Haley"
+    ],
+    "field": 12
+   },
+   {
+    "tid": 38087,
+    "tdId": 139559,
+    "division": "Girls 18U",
+    "finish": 17,
+    "date": "2026-07-11",
+    "partners": [
+     "Naomi Lygas"
+    ],
+    "field": 160
+   },
+   {
+    "tid": 34243,
+    "tdId": 126055,
+    "division": "Girls 17U",
+    "finish": 63,
+    "date": "2026-07-26",
+    "partners": [
+     "Olivia Herron"
+    ],
+    "field": 63
+   },
+   {
+    "tid": 34243,
+    "tdId": 126056,
+    "division": "Girls 16U",
+    "finish": 3,
+    "date": "2026-07-26",
+    "partners": [
+     "Hannah Perez"
+    ],
+    "field": 72
+   },
+   {
+    "tid": 39176,
+    "tdId": 143805,
+    "division": "Womens Open/AA",
+    "finish": 1,
+    "date": "2026-08-15",
+    "partners": [
+     "Maria Kliefoth"
+    ],
+    "field": 13
    }
   ],
   "Eden Cisneros": [
@@ -2441,17 +2687,6 @@
      "Abigail Moffett"
     ],
     "field": 23
-   },
-   {
-    "tid": 32324,
-    "tdId": 120009,
-    "division": "Womens AA",
-    "finish": 3,
-    "date": "2025-08-31",
-    "partners": [
-     "Abigail Moffett"
-    ],
-    "field": 20
    },
    {
     "tid": 31568,
@@ -2529,184 +2764,6 @@
      "Haisley Flanagan"
     ],
     "field": 25
-   }
-  ],
-  "Skyler Smith": [
-   {
-    "tid": 31566,
-    "tdId": 117686,
-    "division": "Class of '26 & Younger",
-    "finish": 15,
-    "date": "2025-12-29",
-    "partners": [
-     "Sienna Carr"
-    ],
-    "field": 36
-   },
-   {
-    "tid": 30388,
-    "tdId": 114252,
-    "division": "Coed AA",
-    "finish": 5,
-    "date": "2025-09-28",
-    "partners": [
-     "Keegan Anuar"
-    ],
-    "field": 11
-   },
-   {
-    "tid": 25638,
-    "tdId": 97292,
-    "division": "Girls 16U",
-    "finish": 1,
-    "date": "2025-11-30",
-    "partners": [
-     "Sadie Stafford"
-    ],
-    "field": 54
-   },
-   {
-    "tid": 31569,
-    "tdId": 117703,
-    "division": "Class of '26 & Younger",
-    "finish": 5,
-    "date": "2026-02-22",
-    "partners": [
-     "Sadie Stafford"
-    ],
-    "field": 75
-   },
-   {
-    "tid": 33052,
-    "tdId": 122007,
-    "division": "Girls 18U",
-    "finish": 1,
-    "date": "2026-01-25",
-    "partners": [
-     "Sadie Stafford"
-    ],
-    "field": 8
-   },
-   {
-    "tid": 33052,
-    "tdId": 122095,
-    "division": "Girls 16U",
-    "finish": 1,
-    "date": "2026-01-25",
-    "partners": [
-     "Sadie Stafford"
-    ],
-    "field": 9
-   },
-   {
-    "tid": 32909,
-    "tdId": 121576,
-    "division": "Womens Open",
-    "finish": 5,
-    "date": "2026-02-01",
-    "partners": [
-     "Reese Hislop"
-    ],
-    "field": 12
-   },
-   {
-    "tid": 32578,
-    "tdId": 120659,
-    "division": "Girls 16 Open",
-    "finish": 5,
-    "date": "2026-05-03",
-    "partners": [
-     "Lily Larrabee"
-    ],
-    "field": 104
-   },
-   {
-    "tid": 36166,
-    "tdId": 132403,
-    "division": "Womens Open",
-    "finish": 7,
-    "date": "2026-05-16",
-    "partners": [
-     "Reese Hislop"
-    ],
-    "field": 8
-   },
-   {
-    "tid": 34327,
-    "tdId": 126338,
-    "division": "Girls 18U",
-    "finish": 3,
-    "date": "2026-06-07",
-    "partners": [
-     "Lyla Paulsen"
-    ],
-    "field": 8
-   },
-   {
-    "tid": 32971,
-    "tdId": 121739,
-    "division": "Girls 16U Open",
-    "finish": 4,
-    "date": "2026-07-18",
-    "partners": [
-     "Lauren Eklund"
-    ],
-    "field": 44
-   },
-   {
-    "tid": 36018,
-    "tdId": 131763,
-    "division": "Girls 18U",
-    "finish": 1,
-    "date": "2026-06-28",
-    "partners": [
-     "Sadie Stafford"
-    ],
-    "field": 4
-   },
-   {
-    "tid": 36203,
-    "tdId": 132498,
-    "division": "Womens Open",
-    "finish": 7,
-    "date": "2026-07-11",
-    "partners": [
-     "Sadie Hancox"
-    ],
-    "field": 9
-   },
-   {
-    "tid": 32971,
-    "tdId": 121738,
-    "division": "Girls 18U Open",
-    "finish": 1,
-    "date": "2026-07-18",
-    "partners": [
-     "Sadie Stafford"
-    ],
-    "field": 32
-   },
-   {
-    "tid": 36724,
-    "tdId": 134281,
-    "division": "Womens Open",
-    "finish": 1,
-    "date": "2026-07-26",
-    "partners": [
-     "June Culicerto"
-    ],
-    "field": 9
-   },
-   {
-    "tid": 36810,
-    "tdId": 134596,
-    "division": "Coed Open",
-    "finish": 1,
-    "date": "2026-08-16",
-    "partners": [
-     "Keegan Anuar"
-    ],
-    "field": 10
    }
   ],
   "Milan Hendrickson": [
@@ -3113,17 +3170,6 @@
     "field": 15
    },
    {
-    "tid": 32326,
-    "tdId": 120011,
-    "division": "Womens A",
-    "finish": 1,
-    "date": "2025-08-31",
-    "partners": [
-     "Tristan Ana Del Riego"
-    ],
-    "field": 23
-   },
-   {
     "tid": 32869,
     "tdId": 121468,
     "division": "Girls 16U",
@@ -3267,7 +3313,6 @@
     "field": 159
    }
   ],
-  "Lia Ray": [],
   "Ella Buchanan": [
    {
     "tid": 25578,
@@ -3391,6 +3436,229 @@
     "field": 20
    }
   ],
+  "Abigail Moffett": [
+   {
+    "tid": 25578,
+    "tdId": 97149,
+    "division": "Girls 16U",
+    "finish": 2,
+    "date": "2025-11-09",
+    "partners": [
+     "Eden Cisneros"
+    ],
+    "field": 23
+   },
+   {
+    "tid": 31568,
+    "tdId": 117700,
+    "division": "Class of '28 & Younger",
+    "finish": 1,
+    "date": "2026-01-18",
+    "partners": [
+     "Charlotte Jansen"
+    ],
+    "field": 36
+   },
+   {
+    "tid": 32055,
+    "tdId": 119282,
+    "division": "Girls 18U",
+    "finish": 3,
+    "date": "2025-09-21",
+    "partners": [
+     "Madison Gillinger"
+    ],
+    "field": 12
+   },
+   {
+    "tid": 23700,
+    "tdId": 91228,
+    "division": "16U OPEN",
+    "finish": 1,
+    "date": "2025-10-05",
+    "partners": [
+     "Madison Gillinger"
+    ],
+    "field": 26
+   },
+   {
+    "tid": 33633,
+    "tdId": 124273,
+    "division": "Womens AA",
+    "finish": 2,
+    "date": "2025-11-02",
+    "partners": [
+     "Sadie Harris"
+    ],
+    "field": 20
+   },
+   {
+    "tid": 32578,
+    "tdId": 120659,
+    "division": "Girls 16 Open",
+    "finish": 3,
+    "date": "2026-05-03",
+    "partners": [
+     "Charlotte Jansen"
+    ],
+    "field": 104
+   },
+   {
+    "tid": 33840,
+    "tdId": 124872,
+    "division": "Womens Open",
+    "finish": 2,
+    "date": "2025-11-16",
+    "partners": [
+     "Brooklyn Lopez"
+    ],
+    "field": 9
+   },
+   {
+    "tid": 31567,
+    "tdId": 117695,
+    "division": "Class of '26 & Younger",
+    "finish": 19,
+    "date": "2026-03-29",
+    "partners": [
+     "Charlotte Jansen"
+    ],
+    "field": 59
+   },
+   {
+    "tid": 34180,
+    "tdId": 125823,
+    "division": "U18 Girls",
+    "finish": 9,
+    "date": "2026-01-31",
+    "partners": [
+     "Charlotte Jansen"
+    ],
+    "field": 12
+   },
+   {
+    "tid": 33844,
+    "tdId": 124876,
+    "division": "18u",
+    "finish": 1,
+    "date": "2026-01-25",
+    "partners": [
+     "Charlotte Jansen"
+    ],
+    "field": 16
+   },
+   {
+    "tid": 32392,
+    "tdId": 121505,
+    "division": "Girls Varsity",
+    "finish": 3,
+    "date": "2026-02-01",
+    "partners": [
+     "Addison Choi"
+    ],
+    "field": 24
+   },
+   {
+    "tid": 34243,
+    "tdId": 126056,
+    "division": "Girls 16U",
+    "finish": 9,
+    "date": "2026-07-26",
+    "partners": [
+     "Charlotte Jansen"
+    ],
+    "field": 72
+   },
+   {
+    "tid": 32939,
+    "tdId": 121642,
+    "division": "Girls 18U",
+    "finish": 5,
+    "date": "2026-03-01",
+    "partners": [
+     "Olivia Marroquin"
+    ],
+    "field": 9
+   },
+   {
+    "tid": 32995,
+    "tdId": 121820,
+    "division": "Girls 18U",
+    "finish": 5,
+    "date": "2026-03-15",
+    "partners": [
+     "Sadie Harris"
+    ],
+    "field": 10
+   },
+   {
+    "tid": 36498,
+    "tdId": 133438,
+    "division": "Class of 2028 & Younger",
+    "finish": 2,
+    "date": "2026-06-05",
+    "partners": [
+     "Sophia Grish"
+    ],
+    "field": 21
+   },
+   {
+    "tid": 36754,
+    "tdId": 134363,
+    "division": "Girls 18U",
+    "finish": 3,
+    "date": "2026-06-14",
+    "partners": [
+     "Sophia Grish"
+    ],
+    "field": 9
+   },
+   {
+    "tid": 38087,
+    "tdId": 139560,
+    "division": "Girls 16U",
+    "finish": 9,
+    "date": "2026-07-11",
+    "partners": [
+     "Julianna Godbey"
+    ],
+    "field": 159
+   },
+   {
+    "tid": 39639,
+    "tdId": 145244,
+    "division": "Womens AA",
+    "finish": 1,
+    "date": "2026-06-20",
+    "partners": [
+     "Julianna Godbey"
+    ],
+    "field": 19
+   },
+   {
+    "tid": 40505,
+    "tdId": 148315,
+    "division": "Girls 18U",
+    "finish": 1,
+    "date": "2026-07-28",
+    "partners": [
+     "Rylee Hartwell"
+    ],
+    "field": 5
+   },
+   {
+    "tid": 37978,
+    "tdId": 139068,
+    "division": "Girls U18 (Year Born 2008-2009-2010)",
+    "finish": 1,
+    "date": "2026-08-30",
+    "partners": [
+     "Olivia Marroquin"
+    ],
+    "field": 4
+   }
+  ],
+  "Lia Ray": [],
   "Danica  Waterman": [
    {
     "tid": 25638,
@@ -3648,29 +3916,518 @@
     "field": 19
    }
   ],
-  "Baylee Wilson": [],
-  "Abigail Moffett": [
+  "Stella Sheeran": [
+   {
+    "tid": 30469,
+    "tdId": 115528,
+    "division": "Girls 16U",
+    "finish": 1,
+    "date": "2025-10-26",
+    "partners": [
+     "Haven Gindoff"
+    ],
+    "field": 0
+   },
+   {
+    "tid": 25638,
+    "tdId": 97292,
+    "division": "Girls 16U",
+    "finish": 3,
+    "date": "2025-11-30",
+    "partners": [
+     "Haven Gindoff"
+    ],
+    "field": 54
+   },
+   {
+    "tid": 31623,
+    "tdId": 117908,
+    "division": "Class of '26 & Younger",
+    "finish": 3,
+    "date": "2026-05-25",
+    "partners": [
+     "Haven Gindoff"
+    ],
+    "field": 18
+   },
+   {
+    "tid": 30472,
+    "tdId": 114499,
+    "division": "Womens Open",
+    "finish": 5,
+    "date": "2025-10-25",
+    "partners": [
+     "Haven Gindoff"
+    ],
+    "field": 13
+   },
+   {
+    "tid": 31568,
+    "tdId": 117699,
+    "division": "Class of '26 & Younger",
+    "finish": 17,
+    "date": "2026-01-18",
+    "partners": [
+     "Abigail Losey"
+    ],
+    "field": 48
+   },
+   {
+    "tid": 31566,
+    "tdId": 117687,
+    "division": "Class of '28 & Younger",
+    "finish": 2,
+    "date": "2025-12-29",
+    "partners": [
+     "Regina Stella Broshear"
+    ],
+    "field": 36
+   },
+   {
+    "tid": 31809,
+    "tdId": 118545,
+    "division": "Girls 18U",
+    "finish": 1,
+    "date": "2025-12-06",
+    "partners": [
+     "Bryn Kastberg"
+    ],
+    "field": 10
+   },
+   {
+    "tid": 31810,
+    "tdId": 118549,
+    "division": "Girls 18U",
+    "finish": 1,
+    "date": "2025-12-20",
+    "partners": [
+     "Abigail Losey"
+    ],
+    "field": 5
+   },
+   {
+    "tid": 34213,
+    "tdId": 125903,
+    "division": "Girls 18U",
+    "finish": 1,
+    "date": "2026-01-03",
+    "partners": [
+     "Yana Tuioti"
+    ],
+    "field": 11
+   },
+   {
+    "tid": 32578,
+    "tdId": 120659,
+    "division": "Girls 16 Open",
+    "finish": 2,
+    "date": "2026-05-03",
+    "partners": [
+     "Cayden Dorger"
+    ],
+    "field": 104
+   },
+   {
+    "tid": 36033,
+    "tdId": 131865,
+    "division": "Girls 18U",
+    "finish": 1,
+    "date": "2026-02-21",
+    "partners": [
+     "Sarah Uebelhoer"
+    ],
+    "field": 12
+   },
+   {
+    "tid": 32034,
+    "tdId": 119224,
+    "division": "Girls 16U",
+    "finish": 3,
+    "date": "2026-05-17",
+    "partners": [
+     "Haven Gindoff"
+    ],
+    "field": 28
+   },
+   {
+    "tid": 32034,
+    "tdId": 119223,
+    "division": "Girls 18U",
+    "finish": 3,
+    "date": "2026-05-17",
+    "partners": [
+     "Haven Gindoff"
+    ],
+    "field": 28
+   },
+   {
+    "tid": 34243,
+    "tdId": 126056,
+    "division": "Girls 16U",
+    "finish": 3,
+    "date": "2026-07-26",
+    "partners": [
+     "Cayden Dorger"
+    ],
+    "field": 72
+   },
+   {
+    "tid": 35937,
+    "tdId": 131445,
+    "division": "Girls 18U - Open",
+    "finish": 1,
+    "date": "2026-08-06",
+    "partners": [
+     "Brooklynn Gwinn"
+    ],
+    "field": 14
+   },
+   {
+    "tid": 38087,
+    "tdId": 139560,
+    "division": "Girls 16U",
+    "finish": 17,
+    "date": "2026-07-11",
+    "partners": [
+     "Nia Tuioti"
+    ],
+    "field": 159
+   },
+   {
+    "tid": 31483,
+    "tdId": 117394,
+    "division": "Girls 16 - 2028",
+    "finish": 5,
+    "date": "2026-07-19",
+    "partners": [
+     "Brighton Atchley"
+    ],
+    "field": 59
+   },
+   {
+    "tid": 39849,
+    "tdId": 145886,
+    "division": "Girls 18U",
+    "finish": 1,
+    "date": "2026-08-22",
+    "partners": [
+     "Alayna Smeltzer"
+    ],
+    "field": 10
+   }
+  ],
+  "Taylie Hansen": [
    {
     "tid": 25578,
     "tdId": 97149,
     "division": "Girls 16U",
-    "finish": 2,
+    "finish": 3,
     "date": "2025-11-09",
     "partners": [
-     "Eden Cisneros"
+     "Emma Abernathy"
     ],
     "field": 23
    },
    {
-    "tid": 32113,
-    "tdId": 119437,
-    "division": "Womens A",
-    "finish": 1,
-    "date": "2025-08-24",
+    "tid": 31622,
+    "tdId": 117904,
+    "division": "Class of '26 & Younger",
+    "finish": 9,
+    "date": "2026-03-15",
     "partners": [
-     "Charlotte Jansen"
+     "Elle Sossong"
     ],
-    "field": 27
+    "field": 56
+   },
+   {
+    "tid": 25638,
+    "tdId": 97290,
+    "division": "Girls 18U",
+    "finish": 5,
+    "date": "2025-11-30",
+    "partners": [
+     "Danica Waterman"
+    ],
+    "field": 54
+   },
+   {
+    "tid": 31569,
+    "tdId": 117703,
+    "division": "Class of '26 & Younger",
+    "finish": 13,
+    "date": "2026-02-22",
+    "partners": [
+     "Isabelle Izzy Ramos"
+    ],
+    "field": 75
+   },
+   {
+    "tid": 31567,
+    "tdId": 117695,
+    "division": "Class of '26 & Younger",
+    "finish": 21,
+    "date": "2026-03-29",
+    "partners": [
+     "Kendyl Maxwell"
+    ],
+    "field": 59
+   },
+   {
+    "tid": 31568,
+    "tdId": 117699,
+    "division": "Class of '26 & Younger",
+    "finish": 5,
+    "date": "2026-01-18",
+    "partners": [
+     "Danica Waterman"
+    ],
+    "field": 48
+   },
+   {
+    "tid": 31995,
+    "tdId": 119079,
+    "division": "Girls 18U",
+    "finish": 3,
+    "date": "2025-11-16",
+    "partners": [
+     "Ella Grimes"
+    ],
+    "field": 31
+   },
+   {
+    "tid": 33463,
+    "tdId": 123462,
+    "division": "Womens Open",
+    "finish": 9,
+    "date": "2025-12-31",
+    "partners": [
+     "Ella Grimes"
+    ],
+    "field": 20
+   },
+   {
+    "tid": 33839,
+    "tdId": 124871,
+    "division": "Womens Open",
+    "finish": 13,
+    "date": "2026-01-11",
+    "partners": [
+     "Grace Lee"
+    ],
+    "field": 22
+   },
+   {
+    "tid": 33426,
+    "tdId": 123317,
+    "division": "Womens Open",
+    "finish": 2,
+    "date": "2026-01-25",
+    "partners": [
+     "Jasmine Rayner"
+    ],
+    "field": 10
+   },
+   {
+    "tid": 32578,
+    "tdId": 120658,
+    "division": "Girls 18U Open",
+    "finish": 1,
+    "date": "2026-05-03",
+    "partners": [
+     "Brooklyn Rosales"
+    ],
+    "field": 103
+   },
+   {
+    "tid": 35430,
+    "tdId": 129825,
+    "division": "Womens Open",
+    "finish": 13,
+    "date": "2026-04-12",
+    "partners": [
+     "Ashley Markle"
+    ],
+    "field": 30
+   },
+   {
+    "tid": 34243,
+    "tdId": 126054,
+    "division": "Girls 18U",
+    "finish": 41,
+    "date": "2026-07-26",
+    "partners": [
+     "Elle Sossong"
+    ],
+    "field": 64
+   }
+  ],
+  "Edie Joseph": [
+   {
+    "tid": 25578,
+    "tdId": 97150,
+    "division": "Girls 15U",
+    "finish": 3,
+    "date": "2025-11-09",
+    "partners": [
+     "Taylor Daley"
+    ],
+    "field": 24
+   },
+   {
+    "tid": 25638,
+    "tdId": 97292,
+    "division": "Girls 16U",
+    "finish": 3,
+    "date": "2025-11-30",
+    "partners": [
+     "Taylor Daley"
+    ],
+    "field": 54
+   },
+   {
+    "tid": 31995,
+    "tdId": 119079,
+    "division": "Girls 18U",
+    "finish": 9,
+    "date": "2025-11-16",
+    "partners": [
+     "Brazos Allred"
+    ],
+    "field": 31
+   },
+   {
+    "tid": 26009,
+    "tdId": 98759,
+    "division": "Girls 18U",
+    "finish": 2,
+    "date": "2025-09-21",
+    "partners": [
+     "Meadow Rosales"
+    ],
+    "field": 4
+   },
+   {
+    "tid": 31569,
+    "tdId": 117703,
+    "division": "Class of '26 & Younger",
+    "finish": 13,
+    "date": "2026-02-22",
+    "partners": [
+     "Emma Abernathy"
+    ],
+    "field": 75
+   },
+   {
+    "tid": 26011,
+    "tdId": 98791,
+    "division": "Girls 18U",
+    "finish": 3,
+    "date": "2025-11-02",
+    "partners": [
+     "Emma Abernathy"
+    ],
+    "field": 10
+   },
+   {
+    "tid": 31622,
+    "tdId": 117904,
+    "division": "Class of '26 & Younger",
+    "finish": 5,
+    "date": "2026-03-15",
+    "partners": [
+     "Emma Abernathy"
+    ],
+    "field": 56
+   },
+   {
+    "tid": 31625,
+    "tdId": 117914,
+    "division": "Class of '26 & Younger",
+    "finish": 9,
+    "date": "2026-04-12",
+    "partners": [
+     "Brazos Allred"
+    ],
+    "field": 32
+   },
+   {
+    "tid": 32578,
+    "tdId": 120659,
+    "division": "Girls 16 Open",
+    "finish": 9,
+    "date": "2026-05-03",
+    "partners": [
+     "Brazos Allred"
+    ],
+    "field": 104
+   },
+   {
+    "tid": 34542,
+    "tdId": 126907,
+    "division": "Womens Open",
+    "finish": 1,
+    "date": "2026-03-29",
+    "partners": [
+     "Emma Abernathy"
+    ],
+    "field": 13
+   },
+   {
+    "tid": 31483,
+    "tdId": 126666,
+    "division": "Girls 17 - 2027",
+    "finish": 13,
+    "date": "2026-07-19",
+    "partners": [
+     "Izzy Fischer"
+    ],
+    "field": 54
+   },
+   {
+    "tid": 34243,
+    "tdId": 126056,
+    "division": "Girls 16U",
+    "finish": 5,
+    "date": "2026-07-26",
+    "partners": [
+     "Ashley Ruschill"
+    ],
+    "field": 72
+   },
+   {
+    "tid": 36498,
+    "tdId": 133436,
+    "division": "Class of 2026 & Younger",
+    "finish": 3,
+    "date": "2026-06-05",
+    "partners": [
+     "Emma Abernathy"
+    ],
+    "field": 12
+   }
+  ],
+  "Charlotte Jansen": [
+   {
+    "tid": 23700,
+    "tdId": 119582,
+    "division": "16U Elite (1300 Pts Required)",
+    "finish": 1,
+    "date": "2025-10-05",
+    "partners": [
+     "Haisley Flanagan"
+    ],
+    "field": 14
+   },
+   {
+    "tid": 25578,
+    "tdId": 97149,
+    "division": "Girls 16U",
+    "finish": 5,
+    "date": "2025-11-09",
+    "partners": [
+     "Haisley Flanagan"
+    ],
+    "field": 23
    },
    {
     "tid": 31568,
@@ -3679,62 +4436,40 @@
     "finish": 1,
     "date": "2026-01-18",
     "partners": [
-     "Charlotte Jansen"
+     "Abigail Moffett"
     ],
     "field": 36
    },
    {
-    "tid": 32306,
-    "tdId": 119949,
-    "division": "Womens Open",
-    "finish": 9,
-    "date": "2025-08-30",
-    "partners": [
-     "Charlotte Jansen"
-    ],
-    "field": 39
-   },
-   {
-    "tid": 32324,
-    "tdId": 120009,
+    "tid": 32769,
+    "tdId": 121145,
     "division": "Womens AA",
-    "finish": 3,
-    "date": "2025-08-31",
-    "partners": [
-     "Eden Cisneros"
-    ],
-    "field": 20
-   },
-   {
-    "tid": 32055,
-    "tdId": 119282,
-    "division": "Girls 18U",
-    "finish": 3,
+    "finish": 2,
     "date": "2025-09-21",
     "partners": [
-     "Madison Gillinger"
+     "Lynne Galli"
     ],
-    "field": 12
+    "field": 16
    },
    {
-    "tid": 23700,
-    "tdId": 91228,
-    "division": "16U OPEN",
-    "finish": 1,
-    "date": "2025-10-05",
+    "tid": 33446,
+    "tdId": 123435,
+    "division": "Womens Open",
+    "finish": 17,
+    "date": "2025-10-25",
     "partners": [
-     "Madison Gillinger"
+     "Haisley Flanagan"
     ],
-    "field": 26
+    "field": 18
    },
    {
     "tid": 33633,
     "tdId": 124273,
     "division": "Womens AA",
-    "finish": 2,
+    "finish": 3,
     "date": "2025-11-02",
     "partners": [
-     "Sadie Harris"
+     "Isabel Ruiz"
     ],
     "field": 20
    },
@@ -3745,20 +4480,31 @@
     "finish": 3,
     "date": "2026-05-03",
     "partners": [
-     "Charlotte Jansen"
+     "Abigail Moffett"
     ],
     "field": 104
    },
    {
-    "tid": 33840,
-    "tdId": 124872,
+    "tid": 34019,
+    "tdId": 125413,
     "division": "Womens Open",
-    "finish": 2,
-    "date": "2025-11-16",
+    "finish": 5,
+    "date": "2025-11-23",
     "partners": [
-     "Brooklyn Lopez"
+     "Lynne Galli"
     ],
-    "field": 9
+    "field": 15
+   },
+   {
+    "tid": 34128,
+    "tdId": 125678,
+    "division": "Womens AA",
+    "finish": 5,
+    "date": "2025-11-30",
+    "partners": [
+     "Isabel Ruiz"
+    ],
+    "field": 20
    },
    {
     "tid": 31567,
@@ -3767,7 +4513,7 @@
     "finish": 19,
     "date": "2026-03-29",
     "partners": [
-     "Charlotte Jansen"
+     "Abigail Moffett"
     ],
     "field": 59
    },
@@ -3778,7 +4524,7 @@
     "finish": 9,
     "date": "2026-01-31",
     "partners": [
-     "Charlotte Jansen"
+     "Abigail Moffett"
     ],
     "field": 12
    },
@@ -3789,20 +4535,20 @@
     "finish": 1,
     "date": "2026-01-25",
     "partners": [
-     "Charlotte Jansen"
+     "Abigail Moffett"
     ],
     "field": 16
    },
    {
-    "tid": 32392,
-    "tdId": 121505,
-    "division": "Girls Varsity",
-    "finish": 3,
-    "date": "2026-02-01",
+    "tid": 31483,
+    "tdId": 117394,
+    "division": "Girls 16 - 2028",
+    "finish": 5,
+    "date": "2026-07-19",
     "partners": [
-     "Addison Choi"
+     "Tristan Ana Del Riego"
     ],
-    "field": 24
+    "field": 59
    },
    {
     "tid": 34243,
@@ -3811,111 +4557,224 @@
     "finish": 9,
     "date": "2026-07-26",
     "partners": [
-     "Charlotte Jansen"
+     "Abigail Moffett"
     ],
     "field": 72
    },
    {
-    "tid": 32939,
-    "tdId": 121642,
-    "division": "Girls 18U",
-    "finish": 5,
-    "date": "2026-03-01",
-    "partners": [
-     "Olivia Marroquin"
-    ],
-    "field": 9
-   },
-   {
-    "tid": 32995,
-    "tdId": 121820,
-    "division": "Girls 18U",
+    "tid": 31622,
+    "tdId": 117904,
+    "division": "Class of '26 & Younger",
     "finish": 5,
     "date": "2026-03-15",
     "partners": [
-     "Sadie Harris"
+     "Nariah Johnson"
     ],
-    "field": 10
+    "field": 56
    },
    {
-    "tid": 36498,
-    "tdId": 133438,
+    "tid": 30985,
+    "tdId": 115903,
     "division": "Class of 2028 & Younger",
     "finish": 2,
-    "date": "2026-06-05",
+    "date": "2026-06-19",
     "partners": [
-     "Sophia Grish"
+     "Nariah Johnson"
     ],
-    "field": 21
+    "field": 31
    },
    {
-    "tid": 36754,
-    "tdId": 134363,
-    "division": "Girls 18U",
-    "finish": 3,
-    "date": "2026-06-14",
+    "tid": 36451,
+    "tdId": 133267,
+    "division": "U18 Girls",
+    "finish": 9,
+    "date": "2026-06-18",
     "partners": [
-     "Sophia Grish"
+     "Ella Buchanan"
     ],
     "field": 9
    },
    {
-    "tid": 38087,
-    "tdId": 139560,
-    "division": "Girls 16U",
-    "finish": 9,
-    "date": "2026-07-11",
-    "partners": [
-     "Julianna Godbey"
-    ],
-    "field": 159
-   },
-   {
-    "tid": 39639,
-    "tdId": 145244,
+    "tid": 40540,
+    "tdId": 148435,
     "division": "Womens AA",
     "finish": 1,
-    "date": "2026-06-20",
+    "date": "2026-03-08",
     "partners": [
-     "Julianna Godbey"
+     "Nariah Johnson"
     ],
     "field": 19
    },
    {
-    "tid": 40505,
-    "tdId": 148315,
-    "division": "Girls 18U",
-    "finish": 1,
-    "date": "2026-07-28",
+    "tid": 38073,
+    "tdId": 139460,
+    "division": "Girls 16U",
+    "finish": 2,
+    "date": "2026-04-19",
     "partners": [
-     "Rylee Hartwell"
+     "Madison Gillinger"
     ],
-    "field": 5
+    "field": 7
+   },
+   {
+    "tid": 41032,
+    "tdId": 150106,
+    "division": "Womens Open",
+    "finish": 3,
+    "date": "2026-08-22",
+    "partners": [
+     "Jordyn Wilson"
+    ],
+    "field": 24
+   },
+   {
+    "tid": 41047,
+    "tdId": 150136,
+    "division": "Girls 16U",
+    "finish": 1,
+    "date": "2026-08-23",
+    "partners": [
+     "Scarlett Ollenburger"
+    ],
+    "field": 10
    }
   ],
-  "Kendal Walker": [
+  "Emma Abernathy": [
    {
-    "tid": 26749,
-    "tdId": 101212,
-    "division": "Girls 18U",
-    "finish": 1,
-    "date": "2025-08-31",
+    "tid": 25578,
+    "tdId": 97149,
+    "division": "Girls 16U",
+    "finish": 3,
+    "date": "2025-11-09",
     "partners": [
-     "Karisma Eich"
+     "Taylie Hansen"
+    ],
+    "field": 23
+   },
+   {
+    "tid": 31566,
+    "tdId": 117686,
+    "division": "Class of '26 & Younger",
+    "finish": 9,
+    "date": "2025-12-29",
+    "partners": [
+     "Alana May"
+    ],
+    "field": 36
+   },
+   {
+    "tid": 31569,
+    "tdId": 117703,
+    "division": "Class of '26 & Younger",
+    "finish": 13,
+    "date": "2026-02-22",
+    "partners": [
+     "Edie Joseph"
+    ],
+    "field": 75
+   },
+   {
+    "tid": 26011,
+    "tdId": 98783,
+    "division": "Womens Open",
+    "finish": 2,
+    "date": "2025-11-02",
+    "partners": [
+     "Izzy Fischer"
     ],
     "field": 8
    },
    {
-    "tid": 26749,
-    "tdId": 101213,
-    "division": "Girls 16U",
-    "finish": 1,
-    "date": "2025-08-31",
+    "tid": 26011,
+    "tdId": 98791,
+    "division": "Girls 18U",
+    "finish": 3,
+    "date": "2025-11-02",
     "partners": [
-     "Karisma Eich"
+     "Edie Joseph"
     ],
-    "field": 27
+    "field": 10
    },
+   {
+    "tid": 33945,
+    "tdId": 125213,
+    "division": "Girls 18U",
+    "finish": 3,
+    "date": "2026-02-01",
+    "partners": [
+     "Julianna Godbey"
+    ],
+    "field": 40
+   },
+   {
+    "tid": 31622,
+    "tdId": 117904,
+    "division": "Class of '26 & Younger",
+    "finish": 5,
+    "date": "2026-03-15",
+    "partners": [
+     "Edie Joseph"
+    ],
+    "field": 56
+   },
+   {
+    "tid": 31623,
+    "tdId": 117908,
+    "division": "Class of '26 & Younger",
+    "finish": 5,
+    "date": "2026-05-25",
+    "partners": [
+     "Izzy Fischer"
+    ],
+    "field": 18
+   },
+   {
+    "tid": 34243,
+    "tdId": 126056,
+    "division": "Girls 16U",
+    "finish": 5,
+    "date": "2026-07-26",
+    "partners": [
+     "Julianna Godbey"
+    ],
+    "field": 72
+   },
+   {
+    "tid": 31483,
+    "tdId": 117394,
+    "division": "Girls 16 - 2028",
+    "finish": 3,
+    "date": "2026-07-19",
+    "partners": [
+     "Kate Berry"
+    ],
+    "field": 59
+   },
+   {
+    "tid": 34542,
+    "tdId": 126907,
+    "division": "Womens Open",
+    "finish": 1,
+    "date": "2026-03-29",
+    "partners": [
+     "Edie Joseph"
+    ],
+    "field": 13
+   },
+   {
+    "tid": 36498,
+    "tdId": 133436,
+    "division": "Class of 2026 & Younger",
+    "finish": 3,
+    "date": "2026-06-05",
+    "partners": [
+     "Edie Joseph"
+    ],
+    "field": 12
+   }
+  ],
+  "Baylee Wilson": [],
+  "Kendal Walker": [
    {
     "tid": 25638,
     "tdId": 97292,
@@ -4179,441 +5038,28 @@
      "Breeze Johnson"
     ],
     "field": 12
-   }
-  ],
-  "Edie Joseph": [
-   {
-    "tid": 25578,
-    "tdId": 97150,
-    "division": "Girls 15U",
-    "finish": 3,
-    "date": "2025-11-09",
-    "partners": [
-     "Taylor Daley"
-    ],
-    "field": 24
    },
    {
-    "tid": 25638,
-    "tdId": 97292,
-    "division": "Girls 16U",
-    "finish": 3,
-    "date": "2025-11-30",
-    "partners": [
-     "Taylor Daley"
-    ],
-    "field": 54
-   },
-   {
-    "tid": 31995,
-    "tdId": 119079,
-    "division": "Girls 18U",
-    "finish": 9,
-    "date": "2025-11-16",
-    "partners": [
-     "Brazos Allred"
-    ],
-    "field": 31
-   },
-   {
-    "tid": 26009,
-    "tdId": 98759,
-    "division": "Girls 18U",
-    "finish": 2,
-    "date": "2025-09-21",
-    "partners": [
-     "Meadow Rosales"
-    ],
-    "field": 4
-   },
-   {
-    "tid": 31569,
-    "tdId": 117703,
-    "division": "Class of '26 & Younger",
-    "finish": 13,
-    "date": "2026-02-22",
-    "partners": [
-     "Emma Abernathy"
-    ],
-    "field": 75
-   },
-   {
-    "tid": 26011,
-    "tdId": 98791,
-    "division": "Girls 18U",
-    "finish": 3,
-    "date": "2025-11-02",
-    "partners": [
-     "Emma Abernathy"
-    ],
-    "field": 10
-   },
-   {
-    "tid": 31622,
-    "tdId": 117904,
-    "division": "Class of '26 & Younger",
-    "finish": 5,
-    "date": "2026-03-15",
-    "partners": [
-     "Emma Abernathy"
-    ],
-    "field": 56
-   },
-   {
-    "tid": 31625,
-    "tdId": 117914,
-    "division": "Class of '26 & Younger",
-    "finish": 9,
-    "date": "2026-04-12",
-    "partners": [
-     "Brazos Allred"
-    ],
-    "field": 32
-   },
-   {
-    "tid": 32578,
-    "tdId": 120659,
-    "division": "Girls 16 Open",
-    "finish": 9,
-    "date": "2026-05-03",
-    "partners": [
-     "Brazos Allred"
-    ],
-    "field": 104
-   },
-   {
-    "tid": 34542,
-    "tdId": 126907,
+    "tid": 39553,
+    "tdId": 145013,
     "division": "Womens Open",
+    "finish": 13,
+    "date": "2026-09-06",
+    "partners": [
+     "Reese Hislop"
+    ],
+    "field": 15
+   },
+   {
+    "tid": 39556,
+    "tdId": 145023,
+    "division": "Girls 18U",
     "finish": 1,
-    "date": "2026-03-29",
+    "date": "2026-09-06",
     "partners": [
-     "Emma Abernathy"
+     "Reese Hislop"
     ],
-    "field": 13
-   },
-   {
-    "tid": 31483,
-    "tdId": 126666,
-    "division": "Girls 17 - 2027",
-    "finish": 13,
-    "date": "2026-07-19",
-    "partners": [
-     "Izzy Fischer"
-    ],
-    "field": 54
-   },
-   {
-    "tid": 34243,
-    "tdId": 126056,
-    "division": "Girls 16U",
-    "finish": 5,
-    "date": "2026-07-26",
-    "partners": [
-     "Ashley Ruschill"
-    ],
-    "field": 72
-   },
-   {
-    "tid": 36498,
-    "tdId": 133436,
-    "division": "Class of 2026 & Younger",
-    "finish": 3,
-    "date": "2026-06-05",
-    "partners": [
-     "Emma Abernathy"
-    ],
-    "field": 12
-   }
-  ],
-  "Taylie Hansen": [
-   {
-    "tid": 25578,
-    "tdId": 97149,
-    "division": "Girls 16U",
-    "finish": 3,
-    "date": "2025-11-09",
-    "partners": [
-     "Emma Abernathy"
-    ],
-    "field": 23
-   },
-   {
-    "tid": 31622,
-    "tdId": 117904,
-    "division": "Class of '26 & Younger",
-    "finish": 9,
-    "date": "2026-03-15",
-    "partners": [
-     "Elle Sossong"
-    ],
-    "field": 56
-   },
-   {
-    "tid": 25638,
-    "tdId": 97290,
-    "division": "Girls 18U",
-    "finish": 5,
-    "date": "2025-11-30",
-    "partners": [
-     "Danica Waterman"
-    ],
-    "field": 54
-   },
-   {
-    "tid": 31569,
-    "tdId": 117703,
-    "division": "Class of '26 & Younger",
-    "finish": 13,
-    "date": "2026-02-22",
-    "partners": [
-     "Isabelle Izzy Ramos"
-    ],
-    "field": 75
-   },
-   {
-    "tid": 31567,
-    "tdId": 117695,
-    "division": "Class of '26 & Younger",
-    "finish": 21,
-    "date": "2026-03-29",
-    "partners": [
-     "Kendyl Maxwell"
-    ],
-    "field": 59
-   },
-   {
-    "tid": 31568,
-    "tdId": 117699,
-    "division": "Class of '26 & Younger",
-    "finish": 5,
-    "date": "2026-01-18",
-    "partners": [
-     "Danica Waterman"
-    ],
-    "field": 48
-   },
-   {
-    "tid": 31995,
-    "tdId": 119079,
-    "division": "Girls 18U",
-    "finish": 3,
-    "date": "2025-11-16",
-    "partners": [
-     "Ella Grimes"
-    ],
-    "field": 31
-   },
-   {
-    "tid": 33463,
-    "tdId": 123462,
-    "division": "Womens Open",
-    "finish": 9,
-    "date": "2025-12-31",
-    "partners": [
-     "Ella Grimes"
-    ],
-    "field": 20
-   },
-   {
-    "tid": 33839,
-    "tdId": 124871,
-    "division": "Womens Open",
-    "finish": 13,
-    "date": "2026-01-11",
-    "partners": [
-     "Grace Lee"
-    ],
-    "field": 22
-   },
-   {
-    "tid": 33426,
-    "tdId": 123317,
-    "division": "Womens Open",
-    "finish": 2,
-    "date": "2026-01-25",
-    "partners": [
-     "Jasmine Rayner"
-    ],
-    "field": 10
-   },
-   {
-    "tid": 32578,
-    "tdId": 120658,
-    "division": "Girls 18U Open",
-    "finish": 1,
-    "date": "2026-05-03",
-    "partners": [
-     "Brooklyn Rosales"
-    ],
-    "field": 103
-   },
-   {
-    "tid": 35430,
-    "tdId": 129825,
-    "division": "Womens Open",
-    "finish": 13,
-    "date": "2026-04-12",
-    "partners": [
-     "Ashley Markle"
-    ],
-    "field": 30
-   },
-   {
-    "tid": 34243,
-    "tdId": 126054,
-    "division": "Girls 18U",
-    "finish": 41,
-    "date": "2026-07-26",
-    "partners": [
-     "Elle Sossong"
-    ],
-    "field": 64
-   }
-  ],
-  "Emma Abernathy": [
-   {
-    "tid": 24075,
-    "tdId": 92429,
-    "division": "Girls 18U",
-    "finish": 9,
-    "date": "2025-09-07",
-    "partners": [
-     "Brooklynn Gwinn"
-    ],
-    "field": 44
-   },
-   {
-    "tid": 25578,
-    "tdId": 97149,
-    "division": "Girls 16U",
-    "finish": 3,
-    "date": "2025-11-09",
-    "partners": [
-     "Taylie Hansen"
-    ],
-    "field": 23
-   },
-   {
-    "tid": 31566,
-    "tdId": 117686,
-    "division": "Class of '26 & Younger",
-    "finish": 9,
-    "date": "2025-12-29",
-    "partners": [
-     "Alana May"
-    ],
-    "field": 36
-   },
-   {
-    "tid": 31569,
-    "tdId": 117703,
-    "division": "Class of '26 & Younger",
-    "finish": 13,
-    "date": "2026-02-22",
-    "partners": [
-     "Edie Joseph"
-    ],
-    "field": 75
-   },
-   {
-    "tid": 26011,
-    "tdId": 98783,
-    "division": "Womens Open",
-    "finish": 2,
-    "date": "2025-11-02",
-    "partners": [
-     "Izzy Fischer"
-    ],
-    "field": 8
-   },
-   {
-    "tid": 26011,
-    "tdId": 98791,
-    "division": "Girls 18U",
-    "finish": 3,
-    "date": "2025-11-02",
-    "partners": [
-     "Edie Joseph"
-    ],
-    "field": 10
-   },
-   {
-    "tid": 33945,
-    "tdId": 125213,
-    "division": "Girls 18U",
-    "finish": 3,
-    "date": "2026-02-01",
-    "partners": [
-     "Julianna Godbey"
-    ],
-    "field": 40
-   },
-   {
-    "tid": 31622,
-    "tdId": 117904,
-    "division": "Class of '26 & Younger",
-    "finish": 5,
-    "date": "2026-03-15",
-    "partners": [
-     "Edie Joseph"
-    ],
-    "field": 56
-   },
-   {
-    "tid": 31623,
-    "tdId": 117908,
-    "division": "Class of '26 & Younger",
-    "finish": 5,
-    "date": "2026-05-25",
-    "partners": [
-     "Izzy Fischer"
-    ],
-    "field": 18
-   },
-   {
-    "tid": 34243,
-    "tdId": 126056,
-    "division": "Girls 16U",
-    "finish": 5,
-    "date": "2026-07-26",
-    "partners": [
-     "Julianna Godbey"
-    ],
-    "field": 72
-   },
-   {
-    "tid": 31483,
-    "tdId": 117394,
-    "division": "Girls 16 - 2028",
-    "finish": 3,
-    "date": "2026-07-19",
-    "partners": [
-     "Kate Berry"
-    ],
-    "field": 59
-   },
-   {
-    "tid": 34542,
-    "tdId": 126907,
-    "division": "Womens Open",
-    "finish": 1,
-    "date": "2026-03-29",
-    "partners": [
-     "Edie Joseph"
-    ],
-    "field": 13
-   },
-   {
-    "tid": 36498,
-    "tdId": 133436,
-    "division": "Class of 2026 & Younger",
-    "finish": 3,
-    "date": "2026-06-05",
-    "partners": [
-     "Edie Joseph"
-    ],
-    "field": 12
+    "field": 7
    }
   ],
   "Sarah Albers": [
@@ -4763,251 +5209,273 @@
     "field": 103
    }
   ],
-  "Charlotte Jansen": [
+  "Sophia Grish": [
    {
     "tid": 23700,
     "tdId": 119582,
     "division": "16U Elite (1300 Pts Required)",
-    "finish": 1,
+    "finish": 5,
     "date": "2025-10-05",
     "partners": [
-     "Haisley Flanagan"
+     "Brooklynn Gwinn"
     ],
     "field": 14
    },
    {
-    "tid": 25578,
-    "tdId": 97149,
+    "tid": 23697,
+    "tdId": 91217,
     "division": "Girls 16U",
     "finish": 5,
-    "date": "2025-11-09",
+    "date": "2025-10-04",
     "partners": [
-     "Haisley Flanagan"
+     "Brooklynn Gwinn"
     ],
-    "field": 23
+    "field": 21
    },
    {
-    "tid": 32113,
-    "tdId": 119437,
-    "division": "Womens A",
-    "finish": 1,
-    "date": "2025-08-24",
+    "tid": 31995,
+    "tdId": 119079,
+    "division": "Girls 18U",
+    "finish": 5,
+    "date": "2025-11-16",
     "partners": [
-     "Abigail Moffett"
+     "Brooke Smith"
     ],
-    "field": 27
+    "field": 31
    },
    {
-    "tid": 31568,
-    "tdId": 117700,
+    "tid": 31566,
+    "tdId": 117687,
     "division": "Class of '28 & Younger",
-    "finish": 1,
-    "date": "2026-01-18",
+    "finish": 3,
+    "date": "2025-12-29",
     "partners": [
-     "Abigail Moffett"
+     "Katie Hamburger"
     ],
     "field": 36
    },
    {
-    "tid": 32306,
-    "tdId": 119949,
+    "tid": 25557,
+    "tdId": 96991,
+    "division": "Girls 18U",
+    "finish": 1,
+    "date": "2025-10-26",
+    "partners": [
+     "Brooke Smith"
+    ],
+    "field": 9
+   },
+   {
+    "tid": 25556,
+    "tdId": 97863,
     "division": "Womens Open",
-    "finish": 9,
-    "date": "2025-08-30",
+    "finish": 1,
+    "date": "2025-10-26",
     "partners": [
-     "Abigail Moffett"
+     "Madison Rantin"
     ],
-    "field": 39
+    "field": 4
    },
    {
-    "tid": 32324,
-    "tdId": 120009,
-    "division": "Womens AA",
-    "finish": 17,
-    "date": "2025-08-31",
-    "partners": [
-     "Bristyn Burness"
-    ],
-    "field": 20
-   },
-   {
-    "tid": 32769,
-    "tdId": 121145,
-    "division": "Womens AA",
-    "finish": 2,
-    "date": "2025-09-21",
-    "partners": [
-     "Lynne Galli"
-    ],
-    "field": 16
-   },
-   {
-    "tid": 33446,
-    "tdId": 123435,
+    "tid": 33426,
+    "tdId": 123317,
     "division": "Womens Open",
-    "finish": 17,
-    "date": "2025-10-25",
+    "finish": 7,
+    "date": "2026-01-25",
     "partners": [
-     "Haisley Flanagan"
+     "Claire Hanson"
     ],
-    "field": 18
+    "field": 10
    },
    {
-    "tid": 33633,
-    "tdId": 124273,
-    "division": "Womens AA",
-    "finish": 3,
-    "date": "2025-11-02",
-    "partners": [
-     "Isabel Ruiz"
-    ],
-    "field": 20
-   },
-   {
-    "tid": 32578,
-    "tdId": 120659,
-    "division": "Girls 16 Open",
-    "finish": 3,
-    "date": "2026-05-03",
-    "partners": [
-     "Abigail Moffett"
-    ],
-    "field": 104
-   },
-   {
-    "tid": 34019,
-    "tdId": 125413,
-    "division": "Womens Open",
-    "finish": 5,
-    "date": "2025-11-23",
-    "partners": [
-     "Lynne Galli"
-    ],
-    "field": 15
-   },
-   {
-    "tid": 34128,
-    "tdId": 125678,
-    "division": "Womens AA",
-    "finish": 5,
-    "date": "2025-11-30",
-    "partners": [
-     "Isabel Ruiz"
-    ],
-    "field": 20
-   },
-   {
-    "tid": 31567,
-    "tdId": 117695,
-    "division": "Class of '26 & Younger",
-    "finish": 19,
-    "date": "2026-03-29",
-    "partners": [
-     "Abigail Moffett"
-    ],
-    "field": 59
-   },
-   {
-    "tid": 34180,
-    "tdId": 125823,
-    "division": "U18 Girls",
-    "finish": 9,
-    "date": "2026-01-31",
-    "partners": [
-     "Abigail Moffett"
-    ],
-    "field": 12
-   },
-   {
-    "tid": 33844,
-    "tdId": 124876,
-    "division": "18u",
+    "tid": 33427,
+    "tdId": 123328,
+    "division": "Girls 18U",
     "finish": 1,
     "date": "2026-01-25",
     "partners": [
-     "Abigail Moffett"
+     "Claire Hanson"
     ],
-    "field": 16
+    "field": 11
    },
    {
-    "tid": 31483,
-    "tdId": 117394,
-    "division": "Girls 16 - 2028",
-    "finish": 5,
-    "date": "2026-07-19",
+    "tid": 32464,
+    "tdId": 120369,
+    "division": "Girls 18U Open",
+    "finish": 3,
+    "date": "2025-12-07",
     "partners": [
-     "Tristan Ana Del Riego"
+     "Brooke Smith"
     ],
-    "field": 59
-   },
-   {
-    "tid": 34243,
-    "tdId": 126056,
-    "division": "Girls 16U",
-    "finish": 9,
-    "date": "2026-07-26",
-    "partners": [
-     "Abigail Moffett"
-    ],
-    "field": 72
+    "field": 11
    },
    {
     "tid": 31622,
     "tdId": 117904,
     "division": "Class of '26 & Younger",
-    "finish": 5,
+    "finish": 13,
     "date": "2026-03-15",
     "partners": [
-     "Nariah Johnson"
+     "Brooke Smith"
     ],
     "field": 56
+   },
+   {
+    "tid": 33070,
+    "tdId": 122103,
+    "division": "Class of 2026",
+    "finish": 3,
+    "date": "2026-01-17",
+    "partners": [
+     "Shaunna Merrill"
+    ],
+    "field": 17
+   },
+   {
+    "tid": 31187,
+    "tdId": 128500,
+    "division": "16U ELITE",
+    "finish": 5,
+    "date": "2026-02-08",
+    "partners": [
+     "Makaela Munzon"
+    ],
+    "field": 16
+   },
+   {
+    "tid": 31569,
+    "tdId": 117703,
+    "division": "Class of '26 & Younger",
+    "finish": 17,
+    "date": "2026-02-22",
+    "partners": [
+     "Brooke Smith"
+    ],
+    "field": 75
+   },
+   {
+    "tid": 31567,
+    "tdId": 117696,
+    "division": "Class of '28 & Younger",
+    "finish": 7,
+    "date": "2026-03-29",
+    "partners": [
+     "Madison Rantin"
+    ],
+    "field": 38
    },
    {
     "tid": 30985,
     "tdId": 115903,
     "division": "Class of 2028 & Younger",
-    "finish": 2,
+    "finish": 7,
     "date": "2026-06-19",
     "partners": [
-     "Nariah Johnson"
+     "Makaela Munzon"
     ],
     "field": 31
    },
    {
-    "tid": 36451,
-    "tdId": 133267,
-    "division": "U18 Girls",
-    "finish": 9,
-    "date": "2026-06-18",
+    "tid": 32578,
+    "tdId": 120659,
+    "division": "Girls 16 Open",
+    "finish": 4,
+    "date": "2026-05-03",
     "partners": [
-     "Ella Buchanan"
+     "Eva Dooley"
+    ],
+    "field": 104
+   },
+   {
+    "tid": 36498,
+    "tdId": 133438,
+    "division": "Class of 2028 & Younger",
+    "finish": 2,
+    "date": "2026-06-05",
+    "partners": [
+     "Abigail Moffett"
+    ],
+    "field": 21
+   },
+   {
+    "tid": 31581,
+    "tdId": 117783,
+    "division": "Girls 18U",
+    "finish": 3,
+    "date": "2026-06-28",
+    "partners": [
+     "Brooke Smith"
+    ],
+    "field": 10
+   },
+   {
+    "tid": 36754,
+    "tdId": 134363,
+    "division": "Girls 18U",
+    "finish": 3,
+    "date": "2026-06-14",
+    "partners": [
+     "Abigail Moffett"
     ],
     "field": 9
    },
    {
-    "tid": 40540,
-    "tdId": 148435,
-    "division": "Womens AA",
-    "finish": 1,
-    "date": "2026-03-08",
+    "tid": 32238,
+    "tdId": 119783,
+    "division": "Girls 18U",
+    "finish": 3,
+    "date": "2026-09-13",
     "partners": [
-     "Nariah Johnson"
+     "Alcyona Rusu"
     ],
-    "field": 19
+    "field": 44
    },
    {
-    "tid": 38073,
-    "tdId": 139460,
-    "division": "Girls 16U",
-    "finish": 2,
-    "date": "2026-04-19",
+    "tid": 32266,
+    "tdId": 119873,
+    "division": "Girls 18U",
+    "finish": 1,
+    "date": "2026-09-12",
     "partners": [
-     "Madison Gillinger"
+     "Brooke Smith"
     ],
-    "field": 7
+    "field": 27
    }
   ],
-  "Stella Sheeran": [
+  "Haven Gindoff": [
+   {
+    "tid": 31566,
+    "tdId": 117686,
+    "division": "Class of '26 & Younger",
+    "finish": 5,
+    "date": "2025-12-29",
+    "partners": [
+     "Giani Boerner"
+    ],
+    "field": 36
+   },
+   {
+    "tid": 31569,
+    "tdId": 117703,
+    "division": "Class of '26 & Younger",
+    "finish": 13,
+    "date": "2026-02-22",
+    "partners": [
+     "Giani Boerner"
+    ],
+    "field": 75
+   },
+   {
+    "tid": 31567,
+    "tdId": 117695,
+    "division": "Class of '26 & Younger",
+    "finish": 21,
+    "date": "2026-03-29",
+    "partners": [
+     "Giani Boerner"
+    ],
+    "field": 59
+   },
    {
     "tid": 30469,
     "tdId": 115528,
@@ -5015,7 +5483,7 @@
     "finish": 1,
     "date": "2025-10-26",
     "partners": [
-     "Haven Gindoff"
+     "Stella Sheeran"
     ],
     "field": 0
    },
@@ -5026,7 +5494,7 @@
     "finish": 3,
     "date": "2025-11-30",
     "partners": [
-     "Haven Gindoff"
+     "Stella Sheeran"
     ],
     "field": 54
    },
@@ -5037,9 +5505,42 @@
     "finish": 3,
     "date": "2026-05-25",
     "partners": [
-     "Haven Gindoff"
+     "Stella Sheeran"
     ],
     "field": 18
+   },
+   {
+    "tid": 26799,
+    "tdId": 101366,
+    "division": "Womens Open",
+    "finish": 5,
+    "date": "2025-10-04",
+    "partners": [
+     "Gracen Bach"
+    ],
+    "field": 6
+   },
+   {
+    "tid": 31625,
+    "tdId": 117914,
+    "division": "Class of '26 & Younger",
+    "finish": 9,
+    "date": "2026-04-12",
+    "partners": [
+     "Julianna Godbey"
+    ],
+    "field": 32
+   },
+   {
+    "tid": 31622,
+    "tdId": 117904,
+    "division": "Class of '26 & Younger",
+    "finish": 9,
+    "date": "2026-03-15",
+    "partners": [
+     "Ashley Ruschill"
+    ],
+    "field": 56
    },
    {
     "tid": 30472,
@@ -5048,84 +5549,40 @@
     "finish": 5,
     "date": "2025-10-25",
     "partners": [
-     "Haven Gindoff"
+     "Stella Sheeran"
     ],
     "field": 13
    },
    {
     "tid": 31568,
-    "tdId": 117699,
-    "division": "Class of '26 & Younger",
-    "finish": 17,
+    "tdId": 117700,
+    "division": "Class of '28 & Younger",
+    "finish": 3,
     "date": "2026-01-18",
     "partners": [
-     "Abigail Losey"
-    ],
-    "field": 48
-   },
-   {
-    "tid": 31566,
-    "tdId": 117687,
-    "division": "Class of '28 & Younger",
-    "finish": 2,
-    "date": "2025-12-29",
-    "partners": [
-     "Regina Stella Broshear"
+     "Haisley Flanagan"
     ],
     "field": 36
    },
    {
-    "tid": 31809,
-    "tdId": 118545,
-    "division": "Girls 18U",
-    "finish": 1,
-    "date": "2025-12-06",
+    "tid": 33839,
+    "tdId": 124871,
+    "division": "Womens Open",
+    "finish": 7,
+    "date": "2026-01-11",
     "partners": [
-     "Bryn Kastberg"
+     "Aleksandra Wachowicz"
     ],
-    "field": 10
+    "field": 22
    },
    {
-    "tid": 31810,
-    "tdId": 118549,
-    "division": "Girls 18U",
-    "finish": 1,
-    "date": "2025-12-20",
+    "tid": 32909,
+    "tdId": 121576,
+    "division": "Womens Open",
+    "finish": 3,
+    "date": "2026-02-01",
     "partners": [
-     "Abigail Losey"
-    ],
-    "field": 5
-   },
-   {
-    "tid": 34213,
-    "tdId": 125903,
-    "division": "Girls 18U",
-    "finish": 1,
-    "date": "2026-01-03",
-    "partners": [
-     "Yana Tuioti"
-    ],
-    "field": 11
-   },
-   {
-    "tid": 32578,
-    "tdId": 120659,
-    "division": "Girls 16 Open",
-    "finish": 2,
-    "date": "2026-05-03",
-    "partners": [
-     "Cayden Dorger"
-    ],
-    "field": 104
-   },
-   {
-    "tid": 36033,
-    "tdId": 131865,
-    "division": "Girls 18U",
-    "finish": 1,
-    "date": "2026-02-21",
-    "partners": [
-     "Sarah Uebelhoer"
+     "Giani Boerner"
     ],
     "field": 12
    },
@@ -5136,7 +5593,7 @@
     "finish": 3,
     "date": "2026-05-17",
     "partners": [
-     "Haven Gindoff"
+     "Stella Sheeran"
     ],
     "field": 28
    },
@@ -5147,53 +5604,42 @@
     "finish": 3,
     "date": "2026-05-17",
     "partners": [
-     "Haven Gindoff"
+     "Stella Sheeran"
     ],
     "field": 28
    },
    {
-    "tid": 34243,
-    "tdId": 126056,
-    "division": "Girls 16U",
-    "finish": 3,
-    "date": "2026-07-26",
-    "partners": [
-     "Cayden Dorger"
-    ],
-    "field": 72
-   },
-   {
-    "tid": 35937,
-    "tdId": 131445,
-    "division": "Girls 18U - Open",
-    "finish": 1,
-    "date": "2026-08-06",
-    "partners": [
-     "Brooklynn Gwinn"
-    ],
-    "field": 14
-   },
-   {
-    "tid": 38087,
-    "tdId": 139560,
-    "division": "Girls 16U",
+    "tid": 35431,
+    "tdId": 129833,
+    "division": "Womens Open",
     "finish": 17,
-    "date": "2026-07-11",
+    "date": "2026-05-10",
     "partners": [
-     "Nia Tuioti"
+     "Aleksandra Wachowicz"
     ],
-    "field": 159
+    "field": 28
    },
    {
-    "tid": 31483,
-    "tdId": 117394,
-    "division": "Girls 16 - 2028",
-    "finish": 5,
-    "date": "2026-07-19",
+    "tid": 35905,
+    "tdId": 131330,
+    "division": "Womens Open",
+    "finish": 3,
+    "date": "2026-06-07",
     "partners": [
-     "Brighton Atchley"
+     "Gracen Bach"
     ],
-    "field": 59
+    "field": 10
+   },
+   {
+    "tid": 37708,
+    "tdId": 137811,
+    "division": "Womens Open",
+    "finish": 2,
+    "date": "2026-08-23",
+    "partners": [
+     "Giani Boerner"
+    ],
+    "field": 12
    }
   ],
   "Sadie Harris": [
@@ -5207,17 +5653,6 @@
      "Jordyn Flynn"
     ],
     "field": 23
-   },
-   {
-    "tid": 32315,
-    "tdId": 119972,
-    "division": "Girls 16U",
-    "finish": 1,
-    "date": "2025-08-31",
-    "partners": [
-     "Madison Gillinger"
-    ],
-    "field": 12
    },
    {
     "tid": 33136,
@@ -5451,96 +5886,6 @@
      "Scarlett Ollenburger"
     ],
     "field": 159
-   }
-  ],
-  "Sienna Cicero": [
-   {
-    "tid": 25578,
-    "tdId": 97150,
-    "division": "Girls 15U",
-    "finish": 2,
-    "date": "2025-11-09",
-    "partners": [
-     "Brooklyn Lopez"
-    ],
-    "field": 24
-   },
-   {
-    "tid": 33470,
-    "tdId": 123471,
-    "division": "Girls 16U",
-    "finish": 1,
-    "date": "2025-10-26",
-    "partners": [
-     "Brooklyn Lopez"
-    ],
-    "field": 20
-   },
-   {
-    "tid": 34691,
-    "tdId": 127510,
-    "division": "Girls 16U",
-    "finish": 1,
-    "date": "2026-01-10",
-    "partners": [
-     "Elizabeth Belnap"
-    ],
-    "field": 6
-   },
-   {
-    "tid": 34243,
-    "tdId": 126057,
-    "division": "Girls 15U",
-    "finish": 3,
-    "date": "2026-07-26",
-    "partners": [
-     "Brooklyn Lopez"
-    ],
-    "field": 64
-   },
-   {
-    "tid": 38205,
-    "tdId": 139902,
-    "division": "Girls 18U",
-    "finish": 3,
-    "date": "2026-04-25",
-    "partners": [
-     "Brooklyn Lopez"
-    ],
-    "field": 4
-   },
-   {
-    "tid": 35588,
-    "tdId": 130319,
-    "division": "17U (2027 Grad Year)",
-    "finish": 3,
-    "date": "2026-06-30",
-    "partners": [
-     "Brooklyn Lopez"
-    ],
-    "field": 24
-   },
-   {
-    "tid": 38087,
-    "tdId": 139560,
-    "division": "Girls 16U",
-    "finish": 3,
-    "date": "2026-07-11",
-    "partners": [
-     "Brooklyn Lopez"
-    ],
-    "field": 159
-   },
-   {
-    "tid": 33014,
-    "tdId": 121911,
-    "division": "Girls 18/16",
-    "finish": 1,
-    "date": "2026-06-21",
-    "partners": [
-     "Brooklyn Lopez"
-    ],
-    "field": 14
    }
   ],
   "Elle Sossong": [
@@ -5831,6 +6176,107 @@
      "Averie Ackel"
     ],
     "field": 159
+   }
+  ],
+  "Sienna Cicero": [
+   {
+    "tid": 25578,
+    "tdId": 97150,
+    "division": "Girls 15U",
+    "finish": 2,
+    "date": "2025-11-09",
+    "partners": [
+     "Brooklyn Lopez"
+    ],
+    "field": 24
+   },
+   {
+    "tid": 33470,
+    "tdId": 123471,
+    "division": "Girls 16U",
+    "finish": 1,
+    "date": "2025-10-26",
+    "partners": [
+     "Brooklyn Lopez"
+    ],
+    "field": 20
+   },
+   {
+    "tid": 34691,
+    "tdId": 127510,
+    "division": "Girls 16U",
+    "finish": 1,
+    "date": "2026-01-10",
+    "partners": [
+     "Elizabeth Belnap"
+    ],
+    "field": 6
+   },
+   {
+    "tid": 34243,
+    "tdId": 126057,
+    "division": "Girls 15U",
+    "finish": 3,
+    "date": "2026-07-26",
+    "partners": [
+     "Brooklyn Lopez"
+    ],
+    "field": 64
+   },
+   {
+    "tid": 38205,
+    "tdId": 139902,
+    "division": "Girls 18U",
+    "finish": 3,
+    "date": "2026-04-25",
+    "partners": [
+     "Brooklyn Lopez"
+    ],
+    "field": 4
+   },
+   {
+    "tid": 35588,
+    "tdId": 130319,
+    "division": "17U (2027 Grad Year)",
+    "finish": 3,
+    "date": "2026-06-30",
+    "partners": [
+     "Brooklyn Lopez"
+    ],
+    "field": 24
+   },
+   {
+    "tid": 38087,
+    "tdId": 139560,
+    "division": "Girls 16U",
+    "finish": 3,
+    "date": "2026-07-11",
+    "partners": [
+     "Brooklyn Lopez"
+    ],
+    "field": 159
+   },
+   {
+    "tid": 33014,
+    "tdId": 121911,
+    "division": "Girls 18/16",
+    "finish": 1,
+    "date": "2026-06-21",
+    "partners": [
+     "Brooklyn Lopez"
+    ],
+    "field": 14
+   },
+   {
+    "tid": 41208,
+    "tdId": 150760,
+    "division": "Girls 16U",
+    "finish": 1,
+    "date": "2026-08-30",
+    "partners": [
+     "Emery O'Connor"
+    ],
+    "field": 10
    }
   ],
   "Reese Pedersen": [
@@ -6131,17 +6577,6 @@
   ],
   "Brooklyn Lopez": [
    {
-    "tid": 32081,
-    "tdId": 119370,
-    "division": "Girls 16U",
-    "finish": 1,
-    "date": "2025-08-23",
-    "partners": [
-     "Kaitlyn Dostert"
-    ],
-    "field": 7
-   },
-   {
     "tid": 25578,
     "tdId": 97150,
     "division": "Girls 15U",
@@ -6261,140 +6696,6 @@
      "Sienna Cicero"
     ],
     "field": 14
-   }
-  ],
-  "Avery Tussing": [
-   {
-    "tid": 25578,
-    "tdId": 97150,
-    "division": "Girls 15U",
-    "finish": 5,
-    "date": "2025-11-09",
-    "partners": [
-     "Tegan Smith"
-    ],
-    "field": 24
-   },
-   {
-    "tid": 31567,
-    "tdId": 117696,
-    "division": "Class of '28 & Younger",
-    "finish": 3,
-    "date": "2026-03-29",
-    "partners": [
-     "Stacy Balestrieri"
-    ],
-    "field": 38
-   },
-   {
-    "tid": 31843,
-    "tdId": 118618,
-    "division": "Girls 18U",
-    "finish": 3,
-    "date": "2026-01-11",
-    "partners": [
-     "Haley Spak"
-    ],
-    "field": 6
-   },
-   {
-    "tid": 34243,
-    "tdId": 126056,
-    "division": "Girls 16U",
-    "finish": 9,
-    "date": "2026-07-26",
-    "partners": [
-     "Lily Vandeweghe"
-    ],
-    "field": 72
-   },
-   {
-    "tid": 32392,
-    "tdId": 121505,
-    "division": "Girls Varsity",
-    "finish": 11,
-    "date": "2026-02-01",
-    "partners": [
-     "Isabella Elston"
-    ],
-    "field": 24
-   },
-   {
-    "tid": 32939,
-    "tdId": 121643,
-    "division": "Girls 16U",
-    "finish": 1,
-    "date": "2026-03-01",
-    "partners": [
-     "Taylor Daley"
-    ],
-    "field": 4
-   },
-   {
-    "tid": 32993,
-    "tdId": 121813,
-    "division": "Girls 16U",
-    "finish": 2,
-    "date": "2026-02-22",
-    "partners": [
-     "Summer Wong"
-    ],
-    "field": 8
-   },
-   {
-    "tid": 32941,
-    "tdId": 139115,
-    "division": "Girls 16:U (Grad Year: 2028-2029)",
-    "finish": 1,
-    "date": "2026-04-19",
-    "partners": [
-     "Stacy Balestrieri"
-    ],
-    "field": 9
-   },
-   {
-    "tid": 34243,
-    "tdId": 126057,
-    "division": "Girls 15U",
-    "finish": 5,
-    "date": "2026-07-26",
-    "partners": [
-     "Taylor Daley"
-    ],
-    "field": 64
-   },
-   {
-    "tid": 38087,
-    "tdId": 139560,
-    "division": "Girls 16U",
-    "finish": 17,
-    "date": "2026-07-11",
-    "partners": [
-     "Stacy Balestrieri"
-    ],
-    "field": 159
-   },
-   {
-    "tid": 37257,
-    "tdId": 136232,
-    "division": "Womens A",
-    "finish": 2,
-    "date": "2026-03-21",
-    "partners": [
-     "Lily Enfield"
-    ],
-    "field": 19
-   },
-   {
-    "tid": 38072,
-    "tdId": 139456,
-    "division": "Girls 16U",
-    "finish": 1,
-    "date": "2026-04-18",
-    "partners": [
-     "Elyse Wong"
-    ],
-    "field": 11
    }
   ],
   "Haleigh Bauer": [
@@ -6557,17 +6858,6 @@
   ],
   "Kalenna Thiele": [
    {
-    "tid": 31546,
-    "tdId": 117608,
-    "division": "Class of '26 & Younger",
-    "finish": 3,
-    "date": "2025-09-13",
-    "partners": [
-     "Charli Lilley"
-    ],
-    "field": 11
-   },
-   {
     "tid": 25578,
     "tdId": 97151,
     "division": "Girls 14U",
@@ -6711,72 +7001,17 @@
     "field": 34
    }
   ],
-  "Stacy Balestrieri": [
-   {
-    "tid": 23700,
-    "tdId": 119582,
-    "division": "16U Elite (1300 Pts Required)",
-    "finish": 2,
-    "date": "2025-10-05",
-    "partners": [
-     "Ava Saffell"
-    ],
-    "field": 14
-   },
-   {
-    "tid": 30469,
-    "tdId": 115528,
-    "division": "Girls 16U",
-    "finish": 2,
-    "date": "2025-10-26",
-    "partners": [
-     "Ava Saffell"
-    ],
-    "field": 0
-   },
+  "Avery Tussing": [
    {
     "tid": 25578,
-    "tdId": 97148,
-    "division": "Girls 17U",
-    "finish": 9,
+    "tdId": 97150,
+    "division": "Girls 15U",
+    "finish": 5,
     "date": "2025-11-09",
     "partners": [
-     "Ava Saffell"
+     "Tegan Smith"
     ],
-    "field": 23
-   },
-   {
-    "tid": 34028,
-    "tdId": 125440,
-    "division": "Womens AA",
-    "finish": 5,
-    "date": "2025-11-23",
-    "partners": [
-     "Haley Spak"
-    ],
-    "field": 27
-   },
-   {
-    "tid": 25718,
-    "tdId": 97612,
-    "division": "Girls 18:U (Grad Year 2026-2027)",
-    "finish": 9,
-    "date": "2026-01-11",
-    "partners": [
-     "Ava Saffell"
-    ],
-    "field": 13
-   },
-   {
-    "tid": 33104,
-    "tdId": 122247,
-    "division": "Girls 16U",
-    "finish": 1,
-    "date": "2026-02-22",
-    "partners": [
-     "Ava Saffell"
-    ],
-    "field": 12
+    "field": 24
    },
    {
     "tid": 31567,
@@ -6785,42 +7020,64 @@
     "finish": 3,
     "date": "2026-03-29",
     "partners": [
-     "Avery Tussing"
+     "Stacy Balestrieri"
     ],
     "field": 38
+   },
+   {
+    "tid": 31843,
+    "tdId": 118618,
+    "division": "Girls 18U",
+    "finish": 3,
+    "date": "2026-01-11",
+    "partners": [
+     "Haley Spak"
+    ],
+    "field": 6
+   },
+   {
+    "tid": 34243,
+    "tdId": 126056,
+    "division": "Girls 16U",
+    "finish": 9,
+    "date": "2026-07-26",
+    "partners": [
+     "Lily Vandeweghe"
+    ],
+    "field": 72
+   },
+   {
+    "tid": 32392,
+    "tdId": 121505,
+    "division": "Girls Varsity",
+    "finish": 11,
+    "date": "2026-02-01",
+    "partners": [
+     "Isabella Elston"
+    ],
+    "field": 24
    },
    {
     "tid": 32939,
     "tdId": 121643,
     "division": "Girls 16U",
-    "finish": 2,
+    "finish": 1,
     "date": "2026-03-01",
     "partners": [
-     "Haley Spak"
+     "Taylor Daley"
     ],
     "field": 4
    },
    {
-    "tid": 32995,
-    "tdId": 121820,
-    "division": "Girls 18U",
-    "finish": 9,
-    "date": "2026-03-15",
+    "tid": 32993,
+    "tdId": 121813,
+    "division": "Girls 16U",
+    "finish": 2,
+    "date": "2026-02-22",
     "partners": [
-     "Stephanie Balestrieri"
+     "Summer Wong"
     ],
-    "field": 10
-   },
-   {
-    "tid": 32254,
-    "tdId": 119823,
-    "division": "Girls 18U",
-    "finish": 1,
-    "date": "2026-03-22",
-    "partners": [
-     "Isabella Elston"
-    ],
-    "field": 7
+    "field": 8
    },
    {
     "tid": 32941,
@@ -6829,18 +7086,18 @@
     "finish": 1,
     "date": "2026-04-19",
     "partners": [
-     "Avery Tussing"
+     "Stacy Balestrieri"
     ],
     "field": 9
    },
    {
-    "tid": 38462,
-    "tdId": 140958,
-    "division": "Varsity Pairs",
-    "finish": 9,
-    "date": "2026-05-07",
+    "tid": 34243,
+    "tdId": 126057,
+    "division": "Girls 15U",
+    "finish": 5,
+    "date": "2026-07-26",
     "partners": [
-     "Stephanie Balestrieri"
+     "Taylor Daley"
     ],
     "field": 64
    },
@@ -6851,89 +7108,45 @@
     "finish": 17,
     "date": "2026-07-11",
     "partners": [
-     "Avery Tussing"
+     "Stacy Balestrieri"
     ],
     "field": 159
    },
    {
-    "tid": 37253,
-    "tdId": 136220,
+    "tid": 37978,
+    "tdId": 139068,
+    "division": "Girls U18 (Year Born 2008-2009-2010)",
+    "finish": 2,
+    "date": "2026-08-30",
+    "partners": [
+     "Christa Wilcox"
+    ],
+    "field": 4
+   },
+   {
+    "tid": 37257,
+    "tdId": 136232,
     "division": "Womens A",
     "finish": 2,
-    "date": "2026-03-07",
+    "date": "2026-03-21",
     "partners": [
-     "Haley Spak"
+     "Lily Enfield"
     ],
-    "field": 16
+    "field": 19
    },
    {
-    "tid": 38074,
-    "tdId": 139466,
-    "division": "Girls 18U",
-    "finish": 3,
-    "date": "2026-04-04",
-    "partners": [
-     "Haley Spak"
-    ],
-    "field": 9
-   }
-  ],
-  "Sophia Grish": [
-   {
-    "tid": 24075,
-    "tdId": 92430,
+    "tid": 38072,
+    "tdId": 139456,
     "division": "Girls 16U",
     "finish": 1,
-    "date": "2025-09-07",
+    "date": "2026-04-18",
     "partners": [
-     "Megan Baker"
+     "Elyse Wong"
     ],
-    "field": 36
-   },
-   {
-    "tid": 23700,
-    "tdId": 119582,
-    "division": "16U Elite (1300 Pts Required)",
-    "finish": 5,
-    "date": "2025-10-05",
-    "partners": [
-     "Brooklynn Gwinn"
-    ],
-    "field": 14
-   },
-   {
-    "tid": 28845,
-    "tdId": 109060,
-    "division": "Girls 18U",
-    "finish": 3,
-    "date": "2025-09-06",
-    "partners": [
-     "Brooke Smith"
-    ],
-    "field": 30
-   },
-   {
-    "tid": 23697,
-    "tdId": 91217,
-    "division": "Girls 16U",
-    "finish": 5,
-    "date": "2025-10-04",
-    "partners": [
-     "Brooklynn Gwinn"
-    ],
-    "field": 21
-   },
-   {
-    "tid": 31995,
-    "tdId": 119079,
-    "division": "Girls 18U",
-    "finish": 5,
-    "date": "2025-11-16",
-    "partners": [
-     "Brooke Smith"
-    ],
-    "field": 31
-   },
+    "field": 11
+   }
+  ],
+  "Sterling Carlile": [
    {
     "tid": 31566,
     "tdId": 117687,
@@ -6941,161 +7154,194 @@
     "finish": 3,
     "date": "2025-12-29",
     "partners": [
-     "Katie Hamburger"
+     "Madelyn Maddie Schrand"
     ],
     "field": 36
    },
    {
-    "tid": 25557,
-    "tdId": 96991,
-    "division": "Girls 18U",
-    "finish": 1,
-    "date": "2025-10-26",
+    "tid": 25638,
+    "tdId": 97291,
+    "division": "Girls 17U",
+    "finish": 3,
+    "date": "2025-11-30",
     "partners": [
-     "Brooke Smith"
+     "Gracie Lutes"
+    ],
+    "field": 46
+   },
+   {
+    "tid": 27917,
+    "tdId": 105356,
+    "division": "Class of '29 & '28 Girls",
+    "finish": 3,
+    "date": "2025-11-15",
+    "partners": [
+     "Gabriella Colmenares"
+    ],
+    "field": 6
+   },
+   {
+    "tid": 26951,
+    "tdId": 101901,
+    "division": "Girls 18U",
+    "finish": 9,
+    "date": "2026-01-04",
+    "partners": [
+     "Gracie Lutes"
+    ],
+    "field": 36
+   },
+   {
+    "tid": 30316,
+    "tdId": 113987,
+    "division": "Girls 18U",
+    "finish": 3,
+    "date": "2025-11-09",
+    "partners": [
+     "Riley Knipple"
+    ],
+    "field": 11
+   },
+   {
+    "tid": 25538,
+    "tdId": 96888,
+    "division": "Girls 18U",
+    "finish": 5,
+    "date": "2025-12-07",
+    "partners": [
+     "Elsa Schroth"
     ],
     "field": 9
    },
    {
-    "tid": 25556,
-    "tdId": 97863,
-    "division": "Womens Open",
-    "finish": 1,
-    "date": "2025-10-26",
-    "partners": [
-     "Madison Rantin"
-    ],
-    "field": 4
-   },
-   {
-    "tid": 33426,
-    "tdId": 123317,
-    "division": "Womens Open",
-    "finish": 7,
-    "date": "2026-01-25",
-    "partners": [
-     "Claire Hanson"
-    ],
-    "field": 10
-   },
-   {
-    "tid": 33427,
-    "tdId": 123328,
+    "tid": 33486,
+    "tdId": 123525,
     "division": "Girls 18U",
-    "finish": 1,
-    "date": "2026-01-25",
-    "partners": [
-     "Claire Hanson"
-    ],
-    "field": 11
-   },
-   {
-    "tid": 32464,
-    "tdId": 120369,
-    "division": "Girls 18U Open",
     "finish": 3,
-    "date": "2025-12-07",
+    "date": "2025-12-14",
     "partners": [
-     "Brooke Smith"
+     "Sadie Wiggins"
     ],
-    "field": 11
+    "field": 12
    },
    {
-    "tid": 31622,
-    "tdId": 117904,
-    "division": "Class of '26 & Younger",
-    "finish": 13,
-    "date": "2026-03-15",
+    "tid": 33815,
+    "tdId": 124792,
+    "division": "Girls 18U",
+    "finish": 2,
+    "date": "2026-01-11",
     "partners": [
-     "Brooke Smith"
+     "Karsyn Smith"
     ],
-    "field": 56
-   },
-   {
-    "tid": 33070,
-    "tdId": 122103,
-    "division": "Class of 2026",
-    "finish": 3,
-    "date": "2026-01-17",
-    "partners": [
-     "Shaunna Merrill"
-    ],
-    "field": 17
-   },
-   {
-    "tid": 31187,
-    "tdId": 128500,
-    "division": "16U ELITE",
-    "finish": 5,
-    "date": "2026-02-08",
-    "partners": [
-     "Makaela Munzon"
-    ],
-    "field": 16
-   },
-   {
-    "tid": 31569,
-    "tdId": 117703,
-    "division": "Class of '26 & Younger",
-    "finish": 17,
-    "date": "2026-02-22",
-    "partners": [
-     "Brooke Smith"
-    ],
-    "field": 75
-   },
-   {
-    "tid": 31567,
-    "tdId": 117696,
-    "division": "Class of '28 & Younger",
-    "finish": 7,
-    "date": "2026-03-29",
-    "partners": [
-     "Madison Rantin"
-    ],
-    "field": 38
-   },
-   {
-    "tid": 30985,
-    "tdId": 115903,
-    "division": "Class of 2028 & Younger",
-    "finish": 7,
-    "date": "2026-06-19",
-    "partners": [
-     "Makaela Munzon"
-    ],
-    "field": 31
+    "field": 9
    },
    {
     "tid": 32578,
     "tdId": 120659,
     "division": "Girls 16 Open",
-    "finish": 4,
+    "finish": 17,
     "date": "2026-05-03",
     "partners": [
-     "Eva Dooley"
+     "Elsa Schroth"
     ],
     "field": 104
+   },
+   {
+    "tid": 34542,
+    "tdId": 126912,
+    "division": "Girls 18U",
+    "finish": 2,
+    "date": "2026-03-29",
+    "partners": [
+     "Kendal Walker"
+    ],
+    "field": 13
+   },
+   {
+    "tid": 31312,
+    "tdId": 116981,
+    "division": "Girls 16U",
+    "finish": 1,
+    "date": "2026-05-25",
+    "partners": [
+     "Kendal Walker"
+    ],
+    "field": 40
+   },
+   {
+    "tid": 31622,
+    "tdId": 117905,
+    "division": "Class of '28 & Younger",
+    "finish": 3,
+    "date": "2026-03-15",
+    "partners": [
+     "Alaina Scafidi"
+    ],
+    "field": 48
+   },
+   {
+    "tid": 34356,
+    "tdId": 126454,
+    "division": "Girls 18U",
+    "finish": 5,
+    "date": "2026-03-08",
+    "partners": [
+     "Gabriella Colmenares"
+    ],
+    "field": 10
    },
    {
     "tid": 36498,
     "tdId": 133438,
     "division": "Class of 2028 & Younger",
-    "finish": 2,
+    "finish": 3,
     "date": "2026-06-05",
     "partners": [
-     "Abigail Moffett"
+     "Reese Hislop"
     ],
     "field": 21
    },
    {
-    "tid": 31581,
-    "tdId": 117783,
+    "tid": 36698,
+    "tdId": 134206,
     "division": "Girls 18U",
     "finish": 3,
-    "date": "2026-06-28",
+    "date": "2026-04-12",
     "partners": [
-     "Brooke Smith"
+     "Kenadie Greene"
+    ],
+    "field": 7
+   },
+   {
+    "tid": 33243,
+    "tdId": 122741,
+    "division": "Girls 16U",
+    "finish": 1,
+    "date": "2026-04-26",
+    "partners": [
+     "Selah Peck"
+    ],
+    "field": 23
+   },
+   {
+    "tid": 33819,
+    "tdId": 124803,
+    "division": "Girls 18U",
+    "finish": 3,
+    "date": "2026-04-18",
+    "partners": [
+     "Elsa Schroth"
+    ],
+    "field": 10
+   },
+   {
+    "tid": 34544,
+    "tdId": 126952,
+    "division": "Coed AA",
+    "finish": 5,
+    "date": "2026-05-17",
+    "partners": [
+     "Justin Grant"
     ],
     "field": 10
    },
@@ -7103,36 +7349,478 @@
     "tid": 36754,
     "tdId": 134363,
     "division": "Girls 18U",
-    "finish": 3,
+    "finish": 5,
     "date": "2026-06-14",
     "partners": [
-     "Abigail Moffett"
+     "Avea Casperson"
     ],
     "field": 9
+   },
+   {
+    "tid": 32971,
+    "tdId": 121738,
+    "division": "Girls 18U Open",
+    "finish": 5,
+    "date": "2026-07-18",
+    "partners": [
+     "Kendal Walker"
+    ],
+    "field": 32
+   },
+   {
+    "tid": 33561,
+    "tdId": 123868,
+    "division": "Girls 16U",
+    "finish": 1,
+    "date": "2026-06-21",
+    "partners": [
+     "Rhiannon Carlile"
+    ],
+    "field": 15
+   },
+   {
+    "tid": 34546,
+    "tdId": 126979,
+    "division": "Girls 18U",
+    "finish": 1,
+    "date": "2026-07-26",
+    "partners": [
+     "Madison Rantin"
+    ],
+    "field": 19
+   },
+   {
+    "tid": 34546,
+    "tdId": 126971,
+    "division": "Womens Open",
+    "finish": 13,
+    "date": "2026-07-26",
+    "partners": [
+     "Madison Rantin"
+    ],
+    "field": 15
+   },
+   {
+    "tid": 35310,
+    "tdId": 129384,
+    "division": "Girls 16U",
+    "finish": 3,
+    "date": "2026-08-02",
+    "partners": [
+     "Rhiannon Carlile"
+    ],
+    "field": 6
+   },
+   {
+    "tid": 32266,
+    "tdId": 119873,
+    "division": "Girls 18U",
+    "finish": 2,
+    "date": "2026-09-12",
+    "partners": [
+     "Madison Rantin"
+    ],
+    "field": 27
+   },
+   {
+    "tid": 32238,
+    "tdId": 119783,
+    "division": "Girls 18U",
+    "finish": 5,
+    "date": "2026-09-13",
+    "partners": [
+     "Madison Rantin"
+    ],
+    "field": 44
    }
   ],
-  "Riley Scharver": [
+  "Reese Hislop": [
+   {
+    "tid": 25638,
+    "tdId": 97292,
+    "division": "Girls 16U",
+    "finish": 5,
+    "date": "2025-11-30",
+    "partners": [
+     "Paige Moyer"
+    ],
+    "field": 54
+   },
    {
     "tid": 31566,
     "tdId": 117687,
     "division": "Class of '28 & Younger",
-    "finish": 13,
+    "finish": 9,
     "date": "2025-12-29",
     "partners": [
-     "Tessa Smith"
+     "Katie Behr"
     ],
     "field": 36
    },
    {
-    "tid": 32149,
-    "tdId": 119570,
-    "division": "Girls 16U",
+    "tid": 30736,
+    "tdId": 119349,
+    "division": "Womens A",
     "finish": 1,
+    "date": "2025-09-21",
+    "partners": [
+     "Paige Moyer"
+    ],
+    "field": 5
+   },
+   {
+    "tid": 32149,
+    "tdId": 119569,
+    "division": "Girls 18U",
+    "finish": 5,
     "date": "2025-10-19",
     "partners": [
-     "Brooke Alexander"
+     "Paige Moyer"
+    ],
+    "field": 9
+   },
+   {
+    "tid": 26800,
+    "tdId": 101372,
+    "division": "Girls 18U",
+    "finish": 3,
+    "date": "2025-11-01",
+    "partners": [
+     "Paige Moyer"
+    ],
+    "field": 7
+   },
+   {
+    "tid": 32778,
+    "tdId": 121159,
+    "division": "Girls 18U",
+    "finish": 5,
+    "date": "2025-12-14",
+    "partners": [
+     "Gracie Lutes"
+    ],
+    "field": 0
+   },
+   {
+    "tid": 31625,
+    "tdId": 117915,
+    "division": "Class of '28 & Younger",
+    "finish": 2,
+    "date": "2026-04-12",
+    "partners": [
+     "Reese Trebisacci"
+    ],
+    "field": 18
+   },
+   {
+    "tid": 31622,
+    "tdId": 117904,
+    "division": "Class of '26 & Younger",
+    "finish": 11,
+    "date": "2026-03-15",
+    "partners": [
+     "Lauren Eklund"
+    ],
+    "field": 56
+   },
+   {
+    "tid": 31568,
+    "tdId": 117699,
+    "division": "Class of '26 & Younger",
+    "finish": 24,
+    "date": "2026-01-18",
+    "partners": [
+     "Ellie Keene"
+    ],
+    "field": 48
+   },
+   {
+    "tid": 33052,
+    "tdId": 122007,
+    "division": "Girls 18U",
+    "finish": 2,
+    "date": "2026-01-25",
+    "partners": [
+     "Blake Arzonico"
+    ],
+    "field": 8
+   },
+   {
+    "tid": 33052,
+    "tdId": 122095,
+    "division": "Girls 16U",
+    "finish": 3,
+    "date": "2026-01-25",
+    "partners": [
+     "Blake Arzonico"
+    ],
+    "field": 9
+   },
+   {
+    "tid": 31582,
+    "tdId": 117787,
+    "division": "Girls 16U",
+    "finish": 2,
+    "date": "2026-07-26",
+    "partners": [
+     "Alaina Scafidi"
+    ],
+    "field": 33
+   },
+   {
+    "tid": 32578,
+    "tdId": 120659,
+    "division": "Girls 16 Open",
+    "finish": 1,
+    "date": "2026-05-03",
+    "partners": [
+     "Kendal Walker"
+    ],
+    "field": 104
+   },
+   {
+    "tid": 32909,
+    "tdId": 121576,
+    "division": "Womens Open",
+    "finish": 5,
+    "date": "2026-02-01",
+    "partners": [
+     "Skyler Smith"
+    ],
+    "field": 12
+   },
+   {
+    "tid": 36498,
+    "tdId": 133438,
+    "division": "Class of 2028 & Younger",
+    "finish": 3,
+    "date": "2026-06-05",
+    "partners": [
+     "Sterling Carlile"
+    ],
+    "field": 21
+   },
+   {
+    "tid": 33911,
+    "tdId": 125059,
+    "division": "Womens Open",
+    "finish": 5,
+    "date": "2026-03-21",
+    "partners": [
+     "Carson Hetzell"
+    ],
+    "field": 13
+   },
+   {
+    "tid": 35834,
+    "tdId": 131124,
+    "division": "Girls 18U",
+    "finish": 1,
+    "date": "2026-03-29",
+    "partners": [
+     "Tessa Smith"
+    ],
+    "field": 7
+   },
+   {
+    "tid": 36712,
+    "tdId": 134250,
+    "division": "Girls 18U",
+    "finish": 5,
+    "date": "2026-04-26",
+    "partners": [
+     "Taylor Pasternak"
+    ],
+    "field": 17
+   },
+   {
+    "tid": 36711,
+    "tdId": 134249,
+    "division": "Girls 16U",
+    "finish": 1,
+    "date": "2026-04-25",
+    "partners": [
+     "Katie Behr"
+    ],
+    "field": 16
+   },
+   {
+    "tid": 35943,
+    "tdId": 131474,
+    "division": "Womens AA",
+    "finish": 2,
+    "date": "2026-04-04",
+    "partners": [
+     "Gwen Orth"
+    ],
+    "field": 18
+   },
+   {
+    "tid": 34243,
+    "tdId": 126056,
+    "division": "Girls 16U",
+    "finish": 25,
+    "date": "2026-07-26",
+    "partners": [
+     "Blake Arzonico"
+    ],
+    "field": 72
+   },
+   {
+    "tid": 30985,
+    "tdId": 115903,
+    "division": "Class of 2028 & Younger",
+    "finish": 3,
+    "date": "2026-06-19",
+    "partners": [
+     "Lauren Eklund"
+    ],
+    "field": 31
+   },
+   {
+    "tid": 31312,
+    "tdId": 116980,
+    "division": "Girls 18U",
+    "finish": 3,
+    "date": "2026-05-25",
+    "partners": [
+     "Tessa Smith"
+    ],
+    "field": 44
+   },
+   {
+    "tid": 36166,
+    "tdId": 132403,
+    "division": "Womens Open",
+    "finish": 7,
+    "date": "2026-05-16",
+    "partners": [
+     "Skyler Smith"
+    ],
+    "field": 8
+   },
+   {
+    "tid": 37062,
+    "tdId": 135593,
+    "division": "Girls 16U",
+    "finish": 1,
+    "date": "2026-05-30",
+    "partners": [
+     "Gwen Orth"
+    ],
+    "field": 23
+   },
+   {
+    "tid": 37063,
+    "tdId": 135594,
+    "division": "Girls 18U",
+    "finish": 1,
+    "date": "2026-05-31",
+    "partners": [
+     "Clara Evans"
+    ],
+    "field": 18
+   },
+   {
+    "tid": 37067,
+    "tdId": 135606,
+    "division": "Girls 16U",
+    "finish": 2,
+    "date": "2026-06-06",
+    "partners": [
+     "Lauren Eklund"
     ],
     "field": 14
+   },
+   {
+    "tid": 35908,
+    "tdId": 131335,
+    "division": "Girls 18U",
+    "finish": 2,
+    "date": "2026-06-27",
+    "partners": [
+     "Cheyenne Dixon"
+    ],
+    "field": 12
+   },
+   {
+    "tid": 37070,
+    "tdId": 135611,
+    "division": "Girls 18U",
+    "finish": 1,
+    "date": "2026-06-07",
+    "partners": [
+     "Gwen Orth"
+    ],
+    "field": 10
+   },
+   {
+    "tid": 37080,
+    "tdId": 135627,
+    "division": "Girls 16U",
+    "finish": 1,
+    "date": "2026-06-28",
+    "partners": [
+     "Elyse Smelcer"
+    ],
+    "field": 11
+   },
+   {
+    "tid": 37074,
+    "tdId": 135617,
+    "division": "Girls 18U",
+    "finish": 1,
+    "date": "2026-08-16",
+    "partners": [
+     "Katie Behr"
+    ],
+    "field": 15
+   },
+   {
+    "tid": 39553,
+    "tdId": 145013,
+    "division": "Womens Open",
+    "finish": 13,
+    "date": "2026-09-06",
+    "partners": [
+     "Kendal Walker"
+    ],
+    "field": 15
+   },
+   {
+    "tid": 37073,
+    "tdId": 135616,
+    "division": "Girls 16U",
+    "finish": 1,
+    "date": "2026-08-15",
+    "partners": [
+     "Katie Behr"
+    ],
+    "field": 11
+   },
+   {
+    "tid": 39556,
+    "tdId": 145023,
+    "division": "Girls 18U",
+    "finish": 1,
+    "date": "2026-09-06",
+    "partners": [
+     "Kendal Walker"
+    ],
+    "field": 7
+   }
+  ],
+  "Zoey Kincaid": [
+   {
+    "tid": 31566,
+    "tdId": 117688,
+    "division": "Class of '30 & Younger",
+    "finish": 1,
+    "date": "2025-12-29",
+    "partners": [
+     "Ayla Young"
+    ],
+    "field": 12
    },
    {
     "tid": 31569,
@@ -7141,141 +7829,152 @@
     "finish": 3,
     "date": "2026-02-22",
     "partners": [
-     "Olivia LeDoyen"
+     "Ayla Young"
     ],
     "field": 33
    },
    {
+    "tid": 25578,
+    "tdId": 97151,
+    "division": "Girls 14U",
+    "finish": 1,
+    "date": "2025-11-09",
+    "partners": [
+     "Olivia LeDoyen"
+    ],
+    "field": 22
+   },
+   {
+    "tid": 31568,
+    "tdId": 117700,
+    "division": "Class of '28 & Younger",
+    "finish": 9,
+    "date": "2026-01-18",
+    "partners": [
+     "Isabel Galmarini"
+    ],
+    "field": 36
+   },
+   {
+    "tid": 31567,
+    "tdId": 117697,
+    "division": "Class of '30 & Younger",
+    "finish": 1,
+    "date": "2026-03-29",
+    "partners": [
+     "Olivia LeDoyen"
+    ],
+    "field": 6
+   },
+   {
+    "tid": 32097,
+    "tdId": 122206,
+    "division": "Class of '26 & Younger",
+    "finish": 1,
+    "date": "2025-10-10",
+    "partners": [
+     "Kalenna Thiele"
+    ],
+    "field": 4
+   },
+   {
     "tid": 25638,
-    "tdId": 97293,
-    "division": "Girls 15U",
-    "finish": 3,
+    "tdId": 97294,
+    "division": "Girls 14U",
+    "finish": 2,
     "date": "2025-11-30",
     "partners": [
-     "Tessa Smith"
+     "Kalenna Thiele"
     ],
-    "field": 47
+    "field": 64
    },
    {
-    "tid": 33050,
-    "tdId": 122087,
-    "division": "Girls 16U",
+    "tid": 32535,
+    "tdId": 120492,
+    "division": "Womens Open",
     "finish": 1,
-    "date": "2025-11-15",
+    "date": "2025-12-06",
     "partners": [
-     "Isabelle Thompson"
+     "Reagan Miller"
     ],
-    "field": 15
+    "field": 10
    },
    {
-    "tid": 33051,
-    "tdId": 122091,
-    "division": "Girls 16U",
-    "finish": 3,
-    "date": "2025-12-13",
-    "partners": [
-     "Soleil Trejo"
-    ],
-    "field": 5
-   },
-   {
-    "tid": 31622,
-    "tdId": 117905,
-    "division": "Class of '28 & Younger",
-    "finish": 5,
-    "date": "2026-03-15",
-    "partners": [
-     "Elsa Schroth"
-    ],
-    "field": 48
-   },
-   {
-    "tid": 33052,
-    "tdId": 122095,
-    "division": "Girls 16U",
+    "tid": 30985,
+    "tdId": 115905,
+    "division": "Class of 2030 & Younger",
     "finish": 2,
-    "date": "2026-01-25",
+    "date": "2026-06-19",
     "partners": [
-     "Gwen Orth"
+     "Olivia LeDoyen"
     ],
-    "field": 9
+    "field": 11
    },
    {
-    "tid": 33052,
-    "tdId": 122007,
-    "division": "Girls 18U",
-    "finish": 3,
-    "date": "2026-01-25",
+    "tid": 31623,
+    "tdId": 117909,
+    "division": "Class of '28 & Younger",
+    "finish": 2,
+    "date": "2026-05-25",
     "partners": [
-     "Gwen Orth"
+     "Olivia LeDoyen"
     ],
-    "field": 8
+    "field": 22
    },
    {
-    "tid": 33053,
-    "tdId": 122099,
-    "division": "Girls 16U",
-    "finish": 3,
-    "date": "2026-02-08",
+    "tid": 31625,
+    "tdId": 117916,
+    "division": "Class of '30 & Younger",
+    "finish": 2,
+    "date": "2026-04-12",
     "partners": [
-     "Gwen Orth"
+     "Aleeya Scherfenberg"
     ],
-    "field": 20
+    "field": 10
    },
    {
     "tid": 32578,
-    "tdId": 120659,
-    "division": "Girls 16 Open",
-    "finish": 9,
+    "tdId": 120660,
+    "division": "Girls 14 Open",
+    "finish": 1,
     "date": "2026-05-03",
     "partners": [
-     "Emily Sas"
+     "Reese Trebisacci"
     ],
-    "field": 104
+    "field": 35
    },
    {
-    "tid": 32909,
-    "tdId": 121576,
-    "division": "Womens Open",
-    "finish": 9,
-    "date": "2026-02-01",
-    "partners": [
-     "Sadie Hancox"
-    ],
-    "field": 12
-   },
-   {
-    "tid": 33053,
-    "tdId": 122010,
-    "division": "Girls 18U",
-    "finish": 2,
-    "date": "2026-02-08",
-    "partners": [
-     "Gwen Orth"
-    ],
-    "field": 18
-   },
-   {
-    "tid": 34319,
-    "tdId": 126295,
+    "tid": 31843,
+    "tdId": 118619,
     "division": "Girls 16U",
     "finish": 1,
-    "date": "2026-05-17",
+    "date": "2026-01-11",
     "partners": [
-     "Gwen Orth"
+     "Summer Wong"
     ],
-    "field": 15
+    "field": 11
    },
    {
-    "tid": 37063,
-    "tdId": 135594,
-    "division": "Girls 18U",
-    "finish": 3,
-    "date": "2026-05-31",
+    "tid": 31187,
+    "tdId": 128500,
+    "division": "16U ELITE",
+    "finish": 5,
+    "date": "2026-02-08",
     "partners": [
-     "Sicily Ventimiglia"
+     "Summer Wong"
     ],
-    "field": 18
+    "field": 16
+   },
+   {
+    "tid": 34243,
+    "tdId": 126058,
+    "division": "Girls 14U",
+    "finish": 3,
+    "date": "2026-07-26",
+    "partners": [
+     "Hope Hengler"
+    ],
+    "field": 64
    },
    {
     "tid": 34243,
@@ -7284,398 +7983,163 @@
     "finish": 9,
     "date": "2026-07-26",
     "partners": [
-     "Ambre Stehle"
+     "Reagan Miller"
     ],
     "field": 64
    },
    {
-    "tid": 36856,
-    "tdId": 134811,
-    "division": "Womens Open",
-    "finish": 5,
-    "date": "2026-08-19",
-    "partners": [
-     "Kelly` Scharver"
-    ],
-    "field": 17
-   },
-   {
-    "tid": 34319,
-    "tdId": 126294,
-    "division": "Girls 18U",
-    "finish": 1,
+    "tid": 34968,
+    "tdId": 128300,
+    "division": "Girls 14U",
+    "finish": 2,
     "date": "2026-05-17",
     "partners": [
-     "Isabelle Thompson"
-    ],
-    "field": 11
-   },
-   {
-    "tid": 32971,
-    "tdId": 121739,
-    "division": "Girls 16U Open",
-    "finish": 2,
-    "date": "2026-07-18",
-    "partners": [
-     "Gwen Orth"
-    ],
-    "field": 44
-   },
-   {
-    "tid": 32971,
-    "tdId": 121738,
-    "division": "Girls 18U Open",
-    "finish": 9,
-    "date": "2026-07-18",
-    "partners": [
-     "Ambre Stehle"
-    ],
-    "field": 32
-   },
-   {
-    "tid": 36774,
-    "tdId": 134451,
-    "division": "Womens Open",
-    "finish": 17,
-    "date": "2026-06-13",
-    "partners": [
-     "Celi Clark"
-    ],
-    "field": 24
-   }
-  ],
-  "Milana Rivera": [
-   {
-    "tid": 30437,
-    "tdId": 114423,
-    "division": "Women's Open",
-    "finish": 9,
-    "date": "2025-10-26",
-    "partners": [
-     "Olivia Herron"
-    ],
-    "field": 21
-   },
-   {
-    "tid": 30438,
-    "tdId": 114425,
-    "division": "Women's Open",
-    "finish": 7,
-    "date": "2025-11-23",
-    "partners": [
-     "Olivia Herron"
-    ],
-    "field": 29
-   },
-   {
-    "tid": 28051,
-    "tdId": 105801,
-    "division": "Womens Open",
-    "finish": 2,
-    "date": "2026-02-08",
-    "partners": [
-     "Kate Privett"
-    ],
-    "field": 10
-   },
-   {
-    "tid": 34540,
-    "tdId": 126904,
-    "division": "Womens Open",
-    "finish": 5,
-    "date": "2026-02-28",
-    "partners": [
-     "Lindsey Kammermeier"
-    ],
-    "field": 8
-   },
-   {
-    "tid": 34361,
-    "tdId": 126468,
-    "division": "Womens Open",
-    "finish": 17,
-    "date": "2026-03-15",
-    "partners": [
-     "Bethany Clapp"
-    ],
-    "field": 26
-   },
-   {
-    "tid": 31625,
-    "tdId": 117914,
-    "division": "Class of '26 & Younger",
-    "finish": 3,
-    "date": "2026-04-12",
-    "partners": [
-     "Sarah Cowan"
-    ],
-    "field": 32
-   },
-   {
-    "tid": 37439,
-    "tdId": 136873,
-    "division": "Womens Open/AA",
-    "finish": 9,
-    "date": "2026-05-09",
-    "partners": [
-     "Reese Haley"
+     "Summer Wong"
     ],
     "field": 12
    },
    {
-    "tid": 38087,
-    "tdId": 139559,
-    "division": "Girls 18U",
-    "finish": 17,
-    "date": "2026-07-11",
-    "partners": [
-     "Naomi Lygas"
-    ],
-    "field": 160
-   },
-   {
-    "tid": 34243,
-    "tdId": 126055,
-    "division": "Girls 17U",
-    "finish": 63,
-    "date": "2026-07-26",
-    "partners": [
-     "Olivia Herron"
-    ],
-    "field": 63
-   },
-   {
-    "tid": 34243,
-    "tdId": 126056,
-    "division": "Girls 16U",
-    "finish": 3,
-    "date": "2026-07-26",
-    "partners": [
-     "Hannah Perez"
-    ],
-    "field": 72
-   },
-   {
-    "tid": 39176,
-    "tdId": 143805,
-    "division": "Womens Open/AA",
+    "tid": 35314,
+    "tdId": 129396,
+    "division": "Girls 15U",
     "finish": 1,
-    "date": "2026-08-15",
+    "date": "2026-05-31",
     "partners": [
-     "Maria Kliefoth"
+     "Reagan Miller"
     ],
     "field": 13
-   }
-  ],
-  "Haven Gindoff": [
+   },
    {
-    "tid": 24075,
-    "tdId": 92429,
-    "division": "Girls 18U",
+    "tid": 36498,
+    "tdId": 133443,
+    "division": "Class of 2030 or Younger",
     "finish": 1,
-    "date": "2025-09-07",
+    "date": "2026-06-05",
     "partners": [
-     "Giani Boerner"
+     "Talula Walsh"
     ],
-    "field": 44
+    "field": 13
    },
    {
-    "tid": 28845,
-    "tdId": 109060,
-    "division": "Girls 18U",
-    "finish": 5,
-    "date": "2025-09-06",
-    "partners": [
-     "Giani Boerner"
-    ],
-    "field": 30
-   },
-   {
-    "tid": 31566,
-    "tdId": 117686,
-    "division": "Class of '26 & Younger",
-    "finish": 5,
-    "date": "2025-12-29",
-    "partners": [
-     "Giani Boerner"
-    ],
-    "field": 36
-   },
-   {
-    "tid": 31569,
-    "tdId": 117703,
-    "division": "Class of '26 & Younger",
-    "finish": 13,
-    "date": "2026-02-22",
-    "partners": [
-     "Giani Boerner"
-    ],
-    "field": 75
-   },
-   {
-    "tid": 31567,
-    "tdId": 117695,
-    "division": "Class of '26 & Younger",
-    "finish": 21,
-    "date": "2026-03-29",
-    "partners": [
-     "Giani Boerner"
-    ],
-    "field": 59
-   },
-   {
-    "tid": 30469,
-    "tdId": 115528,
-    "division": "Girls 16U",
+    "tid": 32940,
+    "tdId": 121651,
+    "division": "Girls 14U",
     "finish": 1,
-    "date": "2025-10-26",
+    "date": "2026-03-22",
     "partners": [
-     "Stella Sheeran"
+     "Kaeley \u201cKJ\u201d Johnston"
     ],
-    "field": 0
+    "field": 4
    },
    {
-    "tid": 25638,
-    "tdId": 97292,
-    "division": "Girls 16U",
-    "finish": 3,
-    "date": "2025-11-30",
+    "tid": 34934,
+    "tdId": 128174,
+    "division": "Class of 2026/2027",
+    "finish": 1,
+    "date": "2026-04-26",
     "partners": [
-     "Stella Sheeran"
-    ],
-    "field": 54
-   },
-   {
-    "tid": 31623,
-    "tdId": 117908,
-    "division": "Class of '26 & Younger",
-    "finish": 3,
-    "date": "2026-05-25",
-    "partners": [
-     "Stella Sheeran"
-    ],
-    "field": 18
-   },
-   {
-    "tid": 26799,
-    "tdId": 101366,
-    "division": "Womens Open",
-    "finish": 5,
-    "date": "2025-10-04",
-    "partners": [
-     "Gracen Bach"
+     "Kaeley \u201cKJ\u201d Johnston"
     ],
     "field": 6
    },
    {
-    "tid": 31625,
-    "tdId": 117914,
-    "division": "Class of '26 & Younger",
-    "finish": 9,
-    "date": "2026-04-12",
-    "partners": [
-     "Julianna Godbey"
-    ],
-    "field": 32
-   },
-   {
-    "tid": 31622,
-    "tdId": 117904,
-    "division": "Class of '26 & Younger",
-    "finish": 9,
-    "date": "2026-03-15",
-    "partners": [
-     "Ashley Ruschill"
-    ],
-    "field": 56
-   },
-   {
-    "tid": 30472,
-    "tdId": 114499,
-    "division": "Womens Open",
+    "tid": 31483,
+    "tdId": 117396,
+    "division": "Girls 14 -  2030",
     "finish": 5,
-    "date": "2025-10-25",
+    "date": "2026-07-19",
     "partners": [
-     "Stella Sheeran"
+     "Summer Wong"
     ],
-    "field": 13
+    "field": 34
    },
    {
-    "tid": 31568,
-    "tdId": 117700,
-    "division": "Class of '28 & Younger",
+    "tid": 33014,
+    "tdId": 121901,
+    "division": "Girls 14U",
+    "finish": 1,
+    "date": "2026-06-21",
+    "partners": [
+     "Olivia LeDoyen"
+    ],
+    "field": 11
+   },
+   {
+    "tid": 39548,
+    "tdId": 144998,
+    "division": "Girls 14U",
+    "finish": 1,
+    "date": "2026-06-16",
+    "partners": [
+     "Olivia LeDoyen"
+    ],
+    "field": 11
+   },
+   {
+    "tid": 38087,
+    "tdId": 139561,
+    "division": "Girls 14U",
     "finish": 3,
-    "date": "2026-01-18",
+    "date": "2026-07-11",
     "partners": [
-     "Haisley Flanagan"
+     "Summer Wong"
     ],
-    "field": 36
+    "field": 119
    },
    {
-    "tid": 33839,
-    "tdId": 124871,
-    "division": "Womens Open",
-    "finish": 7,
-    "date": "2026-01-11",
-    "partners": [
-     "Aleksandra Wachowicz"
-    ],
-    "field": 22
-   },
-   {
-    "tid": 32909,
-    "tdId": 121576,
-    "division": "Womens Open",
+    "tid": 37978,
+    "tdId": 139069,
+    "division": "Girls 16:U (Grad Year 2029-2030)",
     "finish": 3,
-    "date": "2026-02-01",
+    "date": "2026-08-30",
     "partners": [
-     "Giani Boerner"
+     "Talula Walsh"
     ],
-    "field": 12
+    "field": 11
    },
    {
-    "tid": 32034,
-    "tdId": 119224,
-    "division": "Girls 16U",
-    "finish": 3,
-    "date": "2026-05-17",
+    "tid": 38074,
+    "tdId": 139463,
+    "division": "Girls 14U",
+    "finish": 1,
+    "date": "2026-04-04",
     "partners": [
-     "Stella Sheeran"
+     "Talula Walsh"
     ],
-    "field": 28
+    "field": 6
    },
    {
-    "tid": 32034,
-    "tdId": 119223,
-    "division": "Girls 18U",
-    "finish": 3,
-    "date": "2026-05-17",
+    "tid": 40749,
+    "tdId": 149113,
+    "division": "Womens AA",
+    "finish": 5,
+    "date": "2026-08-08",
     "partners": [
-     "Stella Sheeran"
+     "Talula Walsh"
     ],
-    "field": 28
+    "field": 19
    },
    {
-    "tid": 35431,
-    "tdId": 129833,
-    "division": "Womens Open",
-    "finish": 17,
-    "date": "2026-05-10",
+    "tid": 40756,
+    "tdId": 149150,
+    "division": "Girls 14U",
+    "finish": 1,
+    "date": "2026-08-09",
     "partners": [
-     "Aleksandra Wachowicz"
+     "Talula Walsh"
     ],
-    "field": 28
+    "field": 20
    },
    {
-    "tid": 35905,
-    "tdId": 131330,
-    "division": "Womens Open",
-    "finish": 3,
-    "date": "2026-06-07",
+    "tid": 41046,
+    "tdId": 150131,
+    "division": "Womens A",
+    "finish": 1,
+    "date": "2026-08-23",
     "partners": [
-     "Gracen Bach"
+     "Jordyn Miller"
     ],
-    "field": 10
+    "field": 25
    }
   ],
   "Lily Larrabee": [
@@ -7889,7 +8353,261 @@
     "field": 20
    }
   ],
-  "Harper Neill": [],
+  "Avery Fauver": [
+   {
+    "tid": 25638,
+    "tdId": 97292,
+    "division": "Girls 16U",
+    "finish": 19,
+    "date": "2025-11-30",
+    "partners": [
+     "Teagan Braun-Duin"
+    ],
+    "field": 54
+   },
+   {
+    "tid": 33053,
+    "tdId": 122010,
+    "division": "Girls 18U",
+    "finish": 5,
+    "date": "2026-02-08",
+    "partners": [
+     "Teagan Braun-Duin"
+    ],
+    "field": 18
+   },
+   {
+    "tid": 33053,
+    "tdId": 122099,
+    "division": "Girls 16U",
+    "finish": 2,
+    "date": "2026-02-08",
+    "partners": [
+     "Teagan Braun-Duin"
+    ],
+    "field": 20
+   },
+   {
+    "tid": 32578,
+    "tdId": 120659,
+    "division": "Girls 16 Open",
+    "finish": 17,
+    "date": "2026-05-03",
+    "partners": [
+     "Clara Hays"
+    ],
+    "field": 104
+   },
+   {
+    "tid": 33322,
+    "tdId": 123071,
+    "division": "Girls 16U",
+    "finish": 2,
+    "date": "2026-04-12",
+    "partners": [
+     "Teagan Braun-Duin"
+    ],
+    "field": 30
+   },
+   {
+    "tid": 33322,
+    "tdId": 123070,
+    "division": "Girls 18U",
+    "finish": 5,
+    "date": "2026-04-12",
+    "partners": [
+     "Teagan Braun-Duin"
+    ],
+    "field": 18
+   },
+   {
+    "tid": 35167,
+    "tdId": 128906,
+    "division": "Girls 18U",
+    "finish": 3,
+    "date": "2026-05-17",
+    "partners": [
+     "Teagan Braun-Duin"
+    ],
+    "field": 10
+   },
+   {
+    "tid": 35167,
+    "tdId": 128907,
+    "division": "Girls 16U",
+    "finish": 2,
+    "date": "2026-05-17",
+    "partners": [
+     "Teagan Braun-Duin"
+    ],
+    "field": 30
+   },
+   {
+    "tid": 35165,
+    "tdId": 128901,
+    "division": "Girls 16U",
+    "finish": 9,
+    "date": "2026-04-26",
+    "partners": [
+     "Clara Hays"
+    ],
+    "field": 27
+   },
+   {
+    "tid": 35172,
+    "tdId": 128925,
+    "division": "Girls 16U",
+    "finish": 5,
+    "date": "2026-06-14",
+    "partners": [
+     "Teagan Braun-Duin"
+    ],
+    "field": 30
+   },
+   {
+    "tid": 35172,
+    "tdId": 128924,
+    "division": "Girls 18U",
+    "finish": 2,
+    "date": "2026-06-14",
+    "partners": [
+     "Teagan Braun-Duin"
+    ],
+    "field": 26
+   },
+   {
+    "tid": 33323,
+    "tdId": 123077,
+    "division": "Girls 16U",
+    "finish": 1,
+    "date": "2026-05-10",
+    "partners": [
+     "Soleil Trejo"
+    ],
+    "field": 33
+   },
+   {
+    "tid": 33323,
+    "tdId": 123075,
+    "division": "Girls 18U",
+    "finish": 5,
+    "date": "2026-05-10",
+    "partners": [
+     "Soleil Trejo"
+    ],
+    "field": 10
+   },
+   {
+    "tid": 35169,
+    "tdId": 128912,
+    "division": "Girls 18U",
+    "finish": 1,
+    "date": "2026-05-24",
+    "partners": [
+     "Kate Madden"
+    ],
+    "field": 8
+   },
+   {
+    "tid": 37062,
+    "tdId": 135593,
+    "division": "Girls 16U",
+    "finish": 3,
+    "date": "2026-05-30",
+    "partners": [
+     "Teagan Braun-Duin"
+    ],
+    "field": 23
+   },
+   {
+    "tid": 35171,
+    "tdId": 128920,
+    "division": "Girls 18U",
+    "finish": 3,
+    "date": "2026-06-07",
+    "partners": [
+     "Teagan Braun-Duin"
+    ],
+    "field": 11
+   },
+   {
+    "tid": 35171,
+    "tdId": 128921,
+    "division": "Girls 16U",
+    "finish": 2,
+    "date": "2026-06-07",
+    "partners": [
+     "Teagan Braun-Duin"
+    ],
+    "field": 28
+   },
+   {
+    "tid": 35176,
+    "tdId": 128940,
+    "division": "Girls 18U",
+    "finish": 5,
+    "date": "2026-08-16",
+    "partners": [
+     "McKenna Homans"
+    ],
+    "field": 12
+   },
+   {
+    "tid": 35176,
+    "tdId": 128941,
+    "division": "Girls 16U",
+    "finish": 1,
+    "date": "2026-08-16",
+    "partners": [
+     "McKenna Homans"
+    ],
+    "field": 20
+   },
+   {
+    "tid": 32971,
+    "tdId": 121739,
+    "division": "Girls 16U Open",
+    "finish": 5,
+    "date": "2026-07-18",
+    "partners": [
+     "Teagan Braun-Duin"
+    ],
+    "field": 44
+   },
+   {
+    "tid": 35175,
+    "tdId": 128936,
+    "division": "Girls 18U",
+    "finish": 1,
+    "date": "2026-07-12",
+    "partners": [
+     "Alivia Knotts"
+    ],
+    "field": 10
+   },
+   {
+    "tid": 32971,
+    "tdId": 121738,
+    "division": "Girls 18U Open",
+    "finish": 9,
+    "date": "2026-07-18",
+    "partners": [
+     "Clara Hays"
+    ],
+    "field": 32
+   },
+   {
+    "tid": 35178,
+    "tdId": 128946,
+    "division": "Girls 18U",
+    "finish": 1,
+    "date": "2026-08-30",
+    "partners": [
+     "Teagan Braun-Duin"
+    ],
+    "field": 8
+   }
+  ],
   "Emerson Thomas": [
    {
     "tid": 25638,
@@ -8100,30 +8818,6 @@
     ],
     "field": 15
    }
-  ],
-  "Ashlynn Stimpson": [
-   {
-    "tid": 38549,
-    "tdId": 141231,
-    "division": "Girls 17U",
-    "finish": 1,
-    "date": "2026-07-23",
-    "partners": [
-     "Macaire Kudary"
-    ],
-    "field": 18
-   },
-   {
-    "tid": 38551,
-    "tdId": 141240,
-    "division": "Womens A",
-    "finish": 3,
-    "date": "2026-08-08",
-    "partners": [
-     "Coco Miller"
-    ],
-    "field": 6
-   }
   ]
  },
  "tour_info": {
@@ -8170,6 +8864,11 @@
   "34243": {
    "name": "AVP Juniors National Championships 2026",
    "date": "2026-07-26",
+   "sanction": "AVPA"
+  },
+  "41617": {
+   "name": ", 9/13/26, Ocean Park, Santa Monica",
+   "date": "2026-09-13",
    "sanction": "AVPA"
   },
   "31625": {
@@ -8252,20 +8951,30 @@
    "date": "2026-08-15",
    "sanction": "AVPA"
   },
+  "39553": {
+   "name": "AVP Next Women's Pro at Super Girl Surf Festival",
+   "date": "2026-09-06",
+   "sanction": "AVPA"
+  },
+  "36809": {
+   "name": "2026 ECSC Amateur Divisions Men's/Women's/Coed/Juniors Doubles",
+   "date": "2026-08-30",
+   "sanction": "AVPA"
+  },
   "33876": {
    "name": "AVP NEXT $10,000 SandBox Open 2026",
    "date": "2026-08-09",
+   "sanction": "AVPA"
+  },
+  "35687": {
+   "name": "AVP NEXT South Beach September Open '26",
+   "date": "2026-09-13",
    "sanction": "AVPA"
   },
   "23700": {
    "name": "GNBV National Recruiting Showcase Oct 2025",
    "date": "2025-10-05",
    "sanction": "BVNE"
-  },
-  "32088": {
-   "name": "Women's AA at Main Beach, Santa Cruz",
-   "date": "2025-08-23",
-   "sanction": "AVPA"
   },
   "33446": {
    "name": "Women's Open at Main Beach, Santa Cruz",
@@ -8302,20 +9011,10 @@
    "date": "2026-08-08",
    "sanction": "AVPA"
   },
-  "33997": {
-   "name": "Hawaii High School Beach Volleyball Invitational",
-   "date": "2026-04-11",
-   "sanction": "AAU"
-  },
-  "31483": {
-   "name": "33rd AAU Hermosa Beach National Pairs Championships",
-   "date": "2026-07-19",
-   "sanction": "AAU"
-  },
-  "34230": {
-   "name": "DaKine Jrs Beach Double Qualifier 4/25",
-   "date": "2026-04-25",
-   "sanction": "p1440"
+  "41612": {
+   "name": "9/12/26, Main Beach, Santa Cruz",
+   "date": "2026-09-12",
+   "sanction": "AVPA"
   },
   "31995": {
    "name": "2025 p1440 Elite Dev Open Tournament",
@@ -8326,6 +9025,11 @@
    "name": "AVP Austin Open",
    "date": "2026-04-18",
    "sanction": "AVPA"
+  },
+  "31483": {
+   "name": "33rd AAU Hermosa Beach National Pairs Championships",
+   "date": "2026-07-19",
+   "sanction": "AAU"
   },
   "38620": {
    "name": "5/10/26, Ocean Park, Santa Monica",
@@ -8347,6 +9051,16 @@
    "date": "2026-07-19",
    "sanction": "AAU"
   },
+  "33997": {
+   "name": "Hawaii High School Beach Volleyball Invitational",
+   "date": "2026-04-11",
+   "sanction": "AAU"
+  },
+  "34230": {
+   "name": "DaKine Jrs Beach Double Qualifier 4/25",
+   "date": "2026-04-25",
+   "sanction": "p1440"
+  },
   "25008": {
    "name": "IBVL Winter Nationals & U18 ISF Trials",
    "date": "2026-01-25",
@@ -8361,11 +9075,6 @@
    "name": "Super Girl Pro Invitational '25",
    "date": "2025-09-21",
    "sanction": null
-  },
-  "32315": {
-   "name": "CBVA Fall Championship Bid + AVP Bid Event Girl's 16u at Belmont Shore, Long Beach",
-   "date": "2025-08-31",
-   "sanction": "AVPA"
   },
   "33136": {
    "name": "2025 CBVA Fall Championships: Invitation Only Girl's 16u at Newland, Huntington Beach",
@@ -8402,16 +9111,6 @@
    "date": "2025-09-21",
    "sanction": "AVPA"
   },
-  "32085": {
-   "name": "Mich Ultra Premier Tour: $2,000 Women's Open at Ocean Beach, San Diego",
-   "date": "2025-08-23",
-   "sanction": "AVPA"
-  },
-  "32115": {
-   "name": "CBVA Fall Championship Bid + AVP Bid Event Girl's 18u at Central Beach, Coronado, San Diego",
-   "date": "2025-08-24",
-   "sanction": "AVPA"
-  },
   "33620": {
    "name": "Women's Open at Newland, Huntington Beach",
    "date": "2025-11-01",
@@ -8442,20 +9141,45 @@
    "date": "2026-08-16",
    "sanction": "AVPA"
   },
+  "30388": {
+   "name": "Neptune Festival '25",
+   "date": "2025-09-28",
+   "sanction": "AVPA"
+  },
+  "32909": {
+   "name": "TVA Winter AVP Next $8K & Boston Beer Co. Player Party",
+   "date": "2026-02-01",
+   "sanction": "AVPA"
+  },
+  "36166": {
+   "name": "WVS 2026 Adult May Maynia",
+   "date": "2026-05-16",
+   "sanction": "AVPA"
+  },
+  "34327": {
+   "name": "Juniors: P1440 National Qualifier \ud83c\udfc6",
+   "date": "2026-06-07",
+   "sanction": "p1440"
+  },
+  "36203": {
+   "name": "WVS 2026 Adult Summerfest",
+   "date": "2026-07-11",
+   "sanction": "AVPA"
+  },
+  "36724": {
+   "name": "Midsummer Open",
+   "date": "2026-07-26",
+   "sanction": "AVPA"
+  },
+  "36810": {
+   "name": "Wilson Open",
+   "date": "2026-08-16",
+   "sanction": "AVPA"
+  },
   "30911": {
    "name": "AAU Hermosa Beach Fall Series #1",
    "date": "2025-09-14",
    "sanction": "AAU"
-  },
-  "32276": {
-   "name": "CBVA Fall Championship Bid + AVP Bid Event Girl's 16u at Manhattan Pier, Manhattan Beach",
-   "date": "2025-08-30",
-   "sanction": "AVPA"
-  },
-  "32326": {
-   "name": "Women's A at Manhattan Pier, Manhattan Beach",
-   "date": "2025-08-31",
-   "sanction": "AVPA"
   },
   "23697": {
    "name": "Kauai Bikini Open Santa Monica CA",
@@ -8492,11 +9216,6 @@
    "date": "2026-08-09",
    "sanction": "AVPA"
   },
-  "32116": {
-   "name": "CBVA Fall Championship Bid + AVP Bid Event Girl's 16u at Central Beach, Coronado, San Diego",
-   "date": "2025-08-24",
-   "sanction": "AVPA"
-  },
   "32754": {
    "name": "CBVA Fall Championship Bid + AVP Bid Event Girl's 18u at Mira Costa College, Oceanside",
    "date": "2025-09-20",
@@ -8506,41 +9225,6 @@
    "name": "CBVA Fall Championship Bid + AVP Bid Event Girl's 18u at Central Beach, Coronado, San Diego",
    "date": "2025-10-05",
    "sanction": "AVPA"
-  },
-  "32503": {
-   "name": "Surf City Days Women's A at Huntington Pier, Huntington Beach",
-   "date": "2025-09-07",
-   "sanction": "AVPA"
-  },
-  "37256": {
-   "name": "Women's A + Men's AA + Men's B at Belmont Shore, Long Beach",
-   "date": "2026-03-15",
-   "sanction": "AVPA"
-  },
-  "31489": {
-   "name": "Battle for Lulu & AVP Bids",
-   "date": "2025-09-07",
-   "sanction": "AVPA"
-  },
-  "30437": {
-   "name": "AVP Next Men\u2019s & Women\u2019s Fall Triple Crown Series #2 $8,000 Purse",
-   "date": "2025-10-26",
-   "sanction": "AVPA"
-  },
-  "33945": {
-   "name": "210 Beach Texas Recruiting Showcase Texas, LSU, ASU, South Carolina, Arizona, UTEP, and more tba",
-   "date": "2026-02-01",
-   "sanction": "AVPA"
-  },
-  "24075": {
-   "name": "GNBV National Recruiting Showcase Florida Sep 2025",
-   "date": "2025-09-07",
-   "sanction": "BVNE"
-  },
-  "28845": {
-   "name": "Kauai Bikini Open Hickory Point",
-   "date": "2025-09-06",
-   "sanction": "BVNE"
   },
   "26009": {
    "name": "First Coast Volleyball Jax Beach Series Presented by PT Solutions Sept 20-21st",
@@ -8572,11 +9256,6 @@
    "date": "2026-05-25",
    "sanction": "AVPA"
   },
-  "36166": {
-   "name": "WVS 2026 Adult May Maynia",
-   "date": "2026-05-16",
-   "sanction": "AVPA"
-  },
   "36551": {
    "name": "Eastern Futures Tour Pro (FTP)",
    "date": "2026-06-06",
@@ -8592,39 +9271,49 @@
    "date": "2026-07-26",
    "sanction": "AVPA"
   },
-  "32324": {
-   "name": "Women's AA at Hermosa Pier, Hermosa Beach",
-   "date": "2025-08-31",
+  "37256": {
+   "name": "Women's A + Men's AA + Men's B at Belmont Shore, Long Beach",
+   "date": "2026-03-15",
    "sanction": "AVPA"
   },
-  "30388": {
-   "name": "Neptune Festival '25",
-   "date": "2025-09-28",
+  "30437": {
+   "name": "AVP Next Men\u2019s & Women\u2019s Fall Triple Crown Series #2 $8,000 Purse",
+   "date": "2025-10-26",
    "sanction": "AVPA"
   },
-  "32909": {
-   "name": "TVA Winter AVP Next $8K & Boston Beer Co. Player Party",
+  "33945": {
+   "name": "210 Beach Texas Recruiting Showcase Texas, LSU, ASU, South Carolina, Arizona, UTEP, and more tba",
    "date": "2026-02-01",
    "sanction": "AVPA"
   },
-  "34327": {
-   "name": "Juniors: P1440 National Qualifier \ud83c\udfc6",
-   "date": "2026-06-07",
-   "sanction": "p1440"
-  },
-  "36203": {
-   "name": "WVS 2026 Adult Summerfest",
-   "date": "2026-07-11",
+  "30438": {
+   "name": "AVP Next Men\u2019s & Women\u2019s Fall Triple Crown Series #3 $12,000 Purse",
+   "date": "2025-11-23",
    "sanction": "AVPA"
   },
-  "36724": {
-   "name": "Midsummer Open",
-   "date": "2026-07-26",
+  "28051": {
+   "name": "SUN 2/8 ~ SuperBALLER Sunday (Beach Baller #8)  Last One!",
+   "date": "2026-02-08",
    "sanction": "AVPA"
   },
-  "36810": {
-   "name": "Wilson Open",
-   "date": "2026-08-16",
+  "34540": {
+   "name": "2/27-28 ~ AVPnext $10K \u2018SIDEOUT Rules\u2019 (M/W O)",
+   "date": "2026-02-28",
+   "sanction": "AVPA"
+  },
+  "34361": {
+   "name": "AVP Next Spring Texas Triple Crown Series #2 $8,000 Purse",
+   "date": "2026-03-15",
+   "sanction": "AVPA"
+  },
+  "37439": {
+   "name": "SAT 5/9 ~ Beach Baller Series 26' #2",
+   "date": "2026-05-09",
+   "sanction": "AVPA"
+  },
+  "39176": {
+   "name": "SAT 8/15 ~ Beach Baller 26' #4 ~ EVENING TOURNEY!",
+   "date": "2026-08-15",
    "sanction": "AVPA"
   },
   "34377": {
@@ -8697,21 +9386,6 @@
    "date": "2025-09-14",
    "sanction": "AVPA"
   },
-  "39639": {
-   "name": "6/20/26, Ocean Park, Santa Monica",
-   "date": "2026-06-20",
-   "sanction": "AVPA"
-  },
-  "32113": {
-   "name": "Women's A at Manhattan Pier, Manhattan Beach",
-   "date": "2025-08-24",
-   "sanction": "AVPA"
-  },
-  "32306": {
-   "name": "Mich Ultra Premier Tour: $4,000 Gene Selznick Women's Open at Hermosa Pier, Hermosa Beach",
-   "date": "2025-08-30",
-   "sanction": "AVPA"
-  },
   "33633": {
    "name": "Women's AA at Newland, Huntington Beach",
    "date": "2025-11-02",
@@ -8742,110 +9416,25 @@
    "date": "2026-06-14",
    "sanction": "BVNE"
   },
+  "39639": {
+   "name": "6/20/26, Ocean Park, Santa Monica",
+   "date": "2026-06-20",
+   "sanction": "AVPA"
+  },
   "40505": {
    "name": "7/28/26, Belmont Shore, Long Beach",
    "date": "2026-07-28",
    "sanction": "AVPA"
   },
-  "26749": {
-   "name": "BRVA Beach AVP Qualifier #8",
-   "date": "2025-08-31",
-   "sanction": "AVPA"
-  },
-  "33050": {
-   "name": "Pre-East Coast Championships '25",
-   "date": "2025-11-15",
-   "sanction": "AVPA"
-  },
-  "33051": {
-   "name": "Gingerbread Volley '25",
-   "date": "2025-12-13",
-   "sanction": "USAV"
-  },
-  "33164": {
-   "name": "December Men's & Women's 2s",
-   "date": "2025-12-06",
-   "sanction": null
-  },
-  "33053": {
-   "name": "Heart and Soul Showdown '26",
-   "date": "2026-02-08",
-   "sanction": "USAV"
-  },
-  "34542": {
-   "name": "First Coast Volleyball Jax Beach Series March 28-29 '26",
-   "date": "2026-03-29",
-   "sanction": "AVPA"
-  },
-  "35167": {
-   "name": "BRVA Beach AVP Qualifier #2  '26",
-   "date": "2026-05-17",
-   "sanction": "AVPA"
-  },
-  "35021": {
-   "name": "Battle on the Beach BRQ - Fredericksburg 2026",
-   "date": "2026-05-09",
-   "sanction": "AVPA"
-  },
-  "35174": {
-   "name": "BRVA Beach AVP Qualifier #7 '26",
-   "date": "2026-07-05",
-   "sanction": "AVPA"
-  },
-  "26011": {
-   "name": "First Coast Volleyball Jax Beach Series Nov 1-2nd",
-   "date": "2025-11-02",
-   "sanction": "AVPA"
-  },
-  "33463": {
-   "name": "5th Annual Flounders Polar Plunge Pro/Am $8000 AVPNEXT",
-   "date": "2025-12-31",
-   "sanction": "AVPA"
-  },
-  "33839": {
-   "name": "AVP NEXT South Beach Art Deco Open",
-   "date": "2026-01-11",
-   "sanction": "AVPA"
-  },
-  "33426": {
-   "name": "SSOVA GASPARILLA THEMED Men's/Women's/Coed\u2019s St. Pete Beach, Beach Volleyball Tournament",
-   "date": "2026-01-25",
-   "sanction": "AVPA"
+  "37978": {
+   "name": "Tropic Pacific Beach Games - National ISF Trials / Beach Volleyball",
+   "date": "2026-08-30",
+   "sanction": "p1440"
   },
   "31623": {
    "name": "2026 Futures Tour: Washington",
    "date": "2026-05-25",
    "sanction": "p1440"
-  },
-  "36406": {
-   "name": "USA Volleyball Beach Tour - Gateway Open Beach Jr. National Qualifier - Gateway Region National Qualifier",
-   "date": "2026-05-25",
-   "sanction": "USAV"
-  },
-  "38646": {
-   "name": "Total Prime Sports AVP Juniors #4 - Girls 12u/18u",
-   "date": "2026-06-27",
-   "sanction": "AVPA"
-  },
-  "30429": {
-   "name": "AVP Next Men\u2019s & Women\u2019s Fall Triple Crown Series #1 $8,000 Purse",
-   "date": "2025-09-28",
-   "sanction": "AVPA"
-  },
-  "32769": {
-   "name": "Women's AA at Marine Ave, Manhattan Beach",
-   "date": "2025-09-21",
-   "sanction": "AVPA"
-  },
-  "34019": {
-   "name": "Women's Open at Main Beach, Laguna Beach",
-   "date": "2025-11-23",
-   "sanction": "AVPA"
-  },
-  "34128": {
-   "name": "Women's AA at Ocean Park, Santa Monica",
-   "date": "2025-11-30",
-   "sanction": "AVPA"
   },
   "30472": {
    "name": "Surf City Women\u2019s Open ($1000)",
@@ -8882,6 +9471,171 @@
    "date": "2026-08-06",
    "sanction": null
   },
+  "39849": {
+   "name": "Dakine Beach College Showcase 8/22",
+   "date": "2026-08-22",
+   "sanction": "p1440"
+  },
+  "33463": {
+   "name": "5th Annual Flounders Polar Plunge Pro/Am $8000 AVPNEXT",
+   "date": "2025-12-31",
+   "sanction": "AVPA"
+  },
+  "33839": {
+   "name": "AVP NEXT South Beach Art Deco Open",
+   "date": "2026-01-11",
+   "sanction": "AVPA"
+  },
+  "33426": {
+   "name": "SSOVA GASPARILLA THEMED Men's/Women's/Coed\u2019s St. Pete Beach, Beach Volleyball Tournament",
+   "date": "2026-01-25",
+   "sanction": "AVPA"
+  },
+  "26011": {
+   "name": "First Coast Volleyball Jax Beach Series Nov 1-2nd",
+   "date": "2025-11-02",
+   "sanction": "AVPA"
+  },
+  "34542": {
+   "name": "First Coast Volleyball Jax Beach Series March 28-29 '26",
+   "date": "2026-03-29",
+   "sanction": "AVPA"
+  },
+  "32769": {
+   "name": "Women's AA at Marine Ave, Manhattan Beach",
+   "date": "2025-09-21",
+   "sanction": "AVPA"
+  },
+  "34019": {
+   "name": "Women's Open at Main Beach, Laguna Beach",
+   "date": "2025-11-23",
+   "sanction": "AVPA"
+  },
+  "34128": {
+   "name": "Women's AA at Ocean Park, Santa Monica",
+   "date": "2025-11-30",
+   "sanction": "AVPA"
+  },
+  "41032": {
+   "name": "8/22/26, Ocean Beach, San Diego",
+   "date": "2026-08-22",
+   "sanction": "AVPA"
+  },
+  "41047": {
+   "name": "8/23/26, Central Beach, Coronado, San Diego",
+   "date": "2026-08-23",
+   "sanction": "AVPA"
+  },
+  "33050": {
+   "name": "Pre-East Coast Championships '25",
+   "date": "2025-11-15",
+   "sanction": "AVPA"
+  },
+  "33051": {
+   "name": "Gingerbread Volley '25",
+   "date": "2025-12-13",
+   "sanction": "USAV"
+  },
+  "33164": {
+   "name": "December Men's & Women's 2s",
+   "date": "2025-12-06",
+   "sanction": null
+  },
+  "33053": {
+   "name": "Heart and Soul Showdown '26",
+   "date": "2026-02-08",
+   "sanction": "USAV"
+  },
+  "35167": {
+   "name": "BRVA Beach AVP Qualifier #2  '26",
+   "date": "2026-05-17",
+   "sanction": "AVPA"
+  },
+  "35021": {
+   "name": "Battle on the Beach BRQ - Fredericksburg 2026",
+   "date": "2026-05-09",
+   "sanction": "AVPA"
+  },
+  "35174": {
+   "name": "BRVA Beach AVP Qualifier #7 '26",
+   "date": "2026-07-05",
+   "sanction": "AVPA"
+  },
+  "39556": {
+   "name": "AVP America Women's/Girls' Volleyball Tournament at Virginia Beach Super Girl Surf Festival",
+   "date": "2026-09-06",
+   "sanction": "AVPA"
+  },
+  "36406": {
+   "name": "USA Volleyball Beach Tour - Gateway Open Beach Jr. National Qualifier - Gateway Region National Qualifier",
+   "date": "2026-05-25",
+   "sanction": "USAV"
+  },
+  "38646": {
+   "name": "Total Prime Sports AVP Juniors #4 - Girls 12u/18u",
+   "date": "2026-06-27",
+   "sanction": "AVPA"
+  },
+  "30429": {
+   "name": "AVP Next Men\u2019s & Women\u2019s Fall Triple Crown Series #1 $8,000 Purse",
+   "date": "2025-09-28",
+   "sanction": "AVPA"
+  },
+  "25557": {
+   "name": "SSOVA HALLOWEEN Juniors AVP & USAV Regional Qualifier POMPANO BEACH, Beach Volleyball Tournament",
+   "date": "2025-10-26",
+   "sanction": "AVPA"
+  },
+  "25556": {
+   "name": "SSOVA HALLOWEEN Men's/Women's/Coed\u2019s Pompano Beach, Beach Volleyball Tournament",
+   "date": "2025-10-26",
+   "sanction": "AVPA"
+  },
+  "33427": {
+   "name": "SSOVA's GASPARILLA Themed Juniors AVP & USAV Regional Qualifier St.Pete Beach, Beach Volleyball Tournament- BRQ",
+   "date": "2026-01-25",
+   "sanction": "AVPA"
+  },
+  "32464": {
+   "name": "2025-26 USA Volleyball Beach Tour - Florida Region - Pompano Beach Fest National Qualifier",
+   "date": "2025-12-07",
+   "sanction": "USAV"
+  },
+  "33070": {
+   "name": "PCA/FBC COLLEGE SHOWCASE Pairs Tournament",
+   "date": "2026-01-17",
+   "sanction": "AVPA"
+  },
+  "31581": {
+   "name": "BVNE 2026 East Coast National Championships",
+   "date": "2026-06-28",
+   "sanction": "BVNE"
+  },
+  "32238": {
+   "name": "GNBV National Recruiting Showcase Florida Sep 2026",
+   "date": "2026-09-13",
+   "sanction": "BVNE"
+  },
+  "32266": {
+   "name": "Kauai Bikini Open Hickory Point Sep 2026",
+   "date": "2026-09-12",
+   "sanction": "BVNE"
+  },
+  "26799": {
+   "name": "WVS 2025 Adults Season Championships Sponsored by Castle Productions (100% Open Payout)",
+   "date": "2025-10-04",
+   "sanction": "AVPA"
+  },
+  "35905": {
+   "name": "AVP Womens Open & Jrs Showcase",
+   "date": "2026-06-07",
+   "sanction": "AVPA"
+  },
+  "37708": {
+   "name": "NVC Summer Series Championships",
+   "date": "2026-08-23",
+   "sanction": "AVPA"
+  },
   "33260": {
    "name": "Women's A at Belmont Shore, Long Beach",
    "date": "2025-10-18",
@@ -8896,21 +9650,6 @@
    "name": "Cal Cup Tour Stop, 5/25/26, Hermosa Pier, Hermosa Beach",
    "date": "2026-05-25",
    "sanction": "AVPA"
-  },
-  "33470": {
-   "name": "Annual SD Halloween Classic/Costume Contest- AVP Bid Event Girl's 16u at Central Beach, Coronado, San Diego",
-   "date": "2025-10-26",
-   "sanction": "AVPA"
-  },
-  "34691": {
-   "name": "Beach Elite SoCal Series Winter #1 (AVP Points Awarded)-  2026",
-   "date": "2026-01-10",
-   "sanction": "AVPA"
-  },
-  "33014": {
-   "name": "AAU Southern Pacific Championships",
-   "date": "2026-06-21",
-   "sanction": "AAU"
   },
   "33892": {
    "name": "AVP America/p1440 Junior Tournament",
@@ -8932,11 +9671,6 @@
    "date": "2026-02-14",
    "sanction": "p1440"
   },
-  "34540": {
-   "name": "2/27-28 ~ AVPnext $10K \u2018SIDEOUT Rules\u2019 (M/W O)",
-   "date": "2026-02-28",
-   "sanction": "AVPA"
-  },
   "34356": {
    "name": "Cat5BVB Campus Tournament @ Florida State University",
    "date": "2026-03-08",
@@ -8945,6 +9679,26 @@
   "33956": {
    "name": "$1,000 AVP Womens San Antonio Open",
    "date": "2026-03-28",
+   "sanction": "AVPA"
+  },
+  "33470": {
+   "name": "Annual SD Halloween Classic/Costume Contest- AVP Bid Event Girl's 16u at Central Beach, Coronado, San Diego",
+   "date": "2025-10-26",
+   "sanction": "AVPA"
+  },
+  "34691": {
+   "name": "Beach Elite SoCal Series Winter #1 (AVP Points Awarded)-  2026",
+   "date": "2026-01-10",
+   "sanction": "AVPA"
+  },
+  "33014": {
+   "name": "AAU Southern Pacific Championships",
+   "date": "2026-06-21",
+   "sanction": "AAU"
+  },
+  "41208": {
+   "name": "8/30/26, Belmont Shore, Long Beach",
+   "date": "2026-08-30",
    "sanction": "AVPA"
   },
   "35008": {
@@ -8982,11 +9736,6 @@
    "date": "2026-08-08",
    "sanction": "AVPA"
   },
-  "32081": {
-   "name": "CBVA Fall Championship Bid + AVP Bid Event Girl's 16u at North Beach, Santa Monica",
-   "date": "2025-08-23",
-   "sanction": "AVPA"
-  },
   "32993": {
    "name": "AAU California Open",
    "date": "2026-02-22",
@@ -9000,26 +9749,6 @@
   "39470": {
    "name": "6/13/26, Mission Beach, San Diego",
    "date": "2026-06-13",
-   "sanction": "AVPA"
-  },
-  "31843": {
-   "name": "BVNE SANTA MONICA TRIPLE BID QUALIFIER",
-   "date": "2026-01-11",
-   "sanction": "BVNE"
-  },
-  "32941": {
-   "name": "West Coast Championships (p1440) & Boys 17U ISF Trials",
-   "date": "2026-04-19",
-   "sanction": "p1440"
-  },
-  "37257": {
-   "name": "Men's A + Women's Open + Women's A at Newland, Huntington Beach",
-   "date": "2026-03-21",
-   "sanction": "AVPA"
-  },
-  "38072": {
-   "name": "4/18/26, Manhattan Pier, Manhattan Beach",
-   "date": "2026-04-18",
    "sanction": "AVPA"
   },
   "33099": {
@@ -9047,11 +9776,6 @@
    "date": "2026-08-04",
    "sanction": null
   },
-  "26799": {
-   "name": "WVS 2025 Adults Season Championships Sponsored by Castle Productions (100% Open Payout)",
-   "date": "2025-10-04",
-   "sanction": "AVPA"
-  },
   "37070": {
    "name": "Sinjin Collegiate Showcase #2 U18/U14 hosted with Blue Sky",
    "date": "2026-06-07",
@@ -9066,11 +9790,6 @@
    "name": "Sinjin Beach June U16 Event hosted with Blue Sky",
    "date": "2026-06-28",
    "sanction": "AVPA"
-  },
-  "31546": {
-   "name": "3-Star \u2b50\ufe0f \u2b50\ufe0f \u2b50\ufe0f National Qualifier",
-   "date": "2025-09-13",
-   "sanction": "p1440"
   },
   "32097": {
    "name": "National Qualifier \ud83c\udfc6",
@@ -9102,99 +9821,189 @@
    "date": "2026-03-28",
    "sanction": "AVPA"
   },
-  "34028": {
-   "name": "Women's AA at Dockweiler, Los Angeles",
-   "date": "2025-11-23",
-   "sanction": "AVPA"
-  },
-  "33104": {
-   "name": "Beach Volleyball San Diego Jr. Beach Volleyball Tournament @ Coronado",
-   "date": "2026-02-22",
-   "sanction": null
-  },
-  "32254": {
-   "name": "BVNE Qualifier March 22, 2026",
-   "date": "2026-03-22",
+  "31843": {
+   "name": "BVNE SANTA MONICA TRIPLE BID QUALIFIER",
+   "date": "2026-01-11",
    "sanction": "BVNE"
   },
-  "37253": {
-   "name": "Men's A + Women's A + Women's B at Dockweiler, Los Angeles",
-   "date": "2026-03-07",
+  "32941": {
+   "name": "West Coast Championships (p1440) & Boys 17U ISF Trials",
+   "date": "2026-04-19",
+   "sanction": "p1440"
+  },
+  "37257": {
+   "name": "Men's A + Women's Open + Women's A at Newland, Huntington Beach",
+   "date": "2026-03-21",
    "sanction": "AVPA"
   },
-  "25557": {
-   "name": "SSOVA HALLOWEEN Juniors AVP & USAV Regional Qualifier POMPANO BEACH, Beach Volleyball Tournament",
-   "date": "2025-10-26",
+  "38072": {
+   "name": "4/18/26, Manhattan Pier, Manhattan Beach",
+   "date": "2026-04-18",
    "sanction": "AVPA"
   },
-  "25556": {
-   "name": "SSOVA HALLOWEEN Men's/Women's/Coed\u2019s Pompano Beach, Beach Volleyball Tournament",
-   "date": "2025-10-26",
+  "27917": {
+   "name": "Florida Crown Championship 2025 Boys and Girls 2X POINTS",
+   "date": "2025-11-15",
+   "sanction": "p1440"
+  },
+  "30316": {
+   "name": "Tally Sand Juniors Event 14's/16's/18's  (EPB) '2025 'FALL",
+   "date": "2025-11-09",
    "sanction": "AVPA"
   },
-  "33427": {
-   "name": "SSOVA's GASPARILLA Themed Juniors AVP & USAV Regional Qualifier St.Pete Beach, Beach Volleyball Tournament- BRQ",
-   "date": "2026-01-25",
-   "sanction": "AVPA"
-  },
-  "32464": {
-   "name": "2025-26 USA Volleyball Beach Tour - Florida Region - Pompano Beach Fest National Qualifier",
+  "25538": {
+   "name": "SSOVA Juniors AVP & USAV Regional Qualifier St.Pete Beach, Beach Volleyball Tournament- BRQ",
    "date": "2025-12-07",
-   "sanction": "USAV"
-  },
-  "33070": {
-   "name": "PCA/FBC COLLEGE SHOWCASE Pairs Tournament",
-   "date": "2026-01-17",
    "sanction": "AVPA"
   },
-  "31581": {
-   "name": "BVNE 2026 East Coast National Championships",
-   "date": "2026-06-28",
+  "33486": {
+   "name": "Boardwalk Beach Bash",
+   "date": "2025-12-14",
+   "sanction": "AVPA"
+  },
+  "33815": {
+   "name": "Cat5BVB Winter Series",
+   "date": "2026-01-11",
    "sanction": "BVNE"
   },
-  "34319": {
-   "name": "USA Volleyball - Beach Mayhem - Old Dominion Region Beach National Qualifier",
-   "date": "2026-05-17",
+  "36698": {
+   "name": "Cat5BVB Campus Tournament @ Florida State University",
+   "date": "2026-04-12",
+   "sanction": "BVNE"
+  },
+  "33243": {
+   "name": "USA Volleyball Beach Tour - Southern Region Atlanta Beach National Qualifier",
+   "date": "2026-04-26",
    "sanction": "USAV"
+  },
+  "33819": {
+   "name": "Cat5BVB Boys & Girls Top Gun Tournament AVP \u2b50\u2b50\u2b50",
+   "date": "2026-04-18",
+   "sanction": "BVNE"
+  },
+  "34544": {
+   "name": "First Coast Volleyball Jax Beach Series May 16-17 '26",
+   "date": "2026-05-17",
+   "sanction": "AVPA"
+  },
+  "33561": {
+   "name": "SSOVA's June 21st Juniors AVP & USAV Regional Qualifier St.Pete Beach, Beach Volleyball Tournament- BRQ",
+   "date": "2026-06-21",
+   "sanction": "AVPA"
+  },
+  "35310": {
+   "name": "VOLLEYiQ AVP 3 STAR \u2b50\ufe0f \u2b50\ufe0f\u2b50\ufe0f GIRLS JRS ECC Qualifier '26",
+   "date": "2026-08-02",
+   "sanction": "AVPA"
+  },
+  "30736": {
+   "name": "Back to School Bash",
+   "date": "2025-09-21",
+   "sanction": "AVPA"
+  },
+  "26800": {
+   "name": "WVS 2025 Juniors Fall Classic",
+   "date": "2025-11-01",
+   "sanction": "AVPA"
+  },
+  "32778": {
+   "name": "Optimum Beach: 2025 GIRLS WINTER SHOWCASE! College Recruiting Clinic &Tournament Weekend",
+   "date": "2025-12-14",
+   "sanction": "AVPA"
+  },
+  "31582": {
+   "name": "BVNE 2026 West Coast National Championship",
+   "date": "2026-07-26",
+   "sanction": "BVNE"
+  },
+  "33911": {
+   "name": "WVS 2026 Adult Season Opener",
+   "date": "2026-03-21",
+   "sanction": "AVPA"
+  },
+  "35834": {
+   "name": "Myrtle Beach SkyWheel Open 2026",
+   "date": "2026-03-29",
+   "sanction": "AVPA"
+  },
+  "36712": {
+   "name": "Sinjin April U18/U14 Event hosted with Blue Sky",
+   "date": "2026-04-26",
+   "sanction": "AVPA"
+  },
+  "36711": {
+   "name": "Sinjin Beach April U16 Event hosted with Blue Sky",
+   "date": "2026-04-25",
+   "sanction": "AVPA"
+  },
+  "35943": {
+   "name": "NC State Club Beach Spring Fundraiser '26",
+   "date": "2026-04-04",
+   "sanction": "AVPA"
+  },
+  "37062": {
+   "name": "Sinjin Collegiate Showcase #1 U16 hosted with Blue Sky",
+   "date": "2026-05-30",
+   "sanction": "p1440"
   },
   "37063": {
    "name": "Sinjin Collegiate Showcase #1 U18/U14 hosted with Blue Sky",
    "date": "2026-05-31",
    "sanction": "p1440"
   },
-  "36856": {
-   "name": "Wednesdays - Summer League - Juniors 2s/M&W Open 2s/Coed 3s & Coed 4s",
-   "date": "2026-08-19",
-   "sanction": null
+  "37067": {
+   "name": "Sinjin Collegiate Showcase #2 U16 hosted with Blue Sky",
+   "date": "2026-06-06",
+   "sanction": "p1440"
   },
-  "30438": {
-   "name": "AVP Next Men\u2019s & Women\u2019s Fall Triple Crown Series #3 $12,000 Purse",
-   "date": "2025-11-23",
+  "37074": {
+   "name": "Sinjin Collegiate Showcase #3 U18/U14 hosted with Blue Sky",
+   "date": "2026-08-16",
    "sanction": "AVPA"
   },
-  "28051": {
-   "name": "SUN 2/8 ~ SuperBALLER Sunday (Beach Baller #8)  Last One!",
-   "date": "2026-02-08",
-   "sanction": "AVPA"
-  },
-  "34361": {
-   "name": "AVP Next Spring Texas Triple Crown Series #2 $8,000 Purse",
-   "date": "2026-03-15",
-   "sanction": "AVPA"
-  },
-  "37439": {
-   "name": "SAT 5/9 ~ Beach Baller Series 26' #2",
-   "date": "2026-05-09",
-   "sanction": "AVPA"
-  },
-  "39176": {
-   "name": "SAT 8/15 ~ Beach Baller 26' #4 ~ EVENING TOURNEY!",
+  "37073": {
+   "name": "Sinjin Collegiate Showcase #3 U16 hosted with Blue Sky",
    "date": "2026-08-15",
    "sanction": "AVPA"
   },
-  "35905": {
-   "name": "AVP Womens Open & Jrs Showcase",
-   "date": "2026-06-07",
+  "32535": {
+   "name": "Calorie Burner Men's And Women's Doubles Tournament '25",
+   "date": "2025-12-06",
+   "sanction": "AVPA"
+  },
+  "34968": {
+   "name": "AVP Juniors Huntington Beach Regionals 2026",
+   "date": "2026-05-17",
+   "sanction": "AVPA"
+  },
+  "35314": {
+   "name": "AVP Juniors New Jersey Regionals 2026",
+   "date": "2026-05-31",
+   "sanction": "AVPA"
+  },
+  "32940": {
+   "name": "Marine Open - p1440",
+   "date": "2026-03-22",
+   "sanction": "p1440"
+  },
+  "34934": {
+   "name": "Girl's P1440 Beach Volleyball Tournament April 26th",
+   "date": "2026-04-26",
+   "sanction": "p1440"
+  },
+  "39548": {
+   "name": "6/16/26, Belmont Shore, Long Beach",
+   "date": "2026-06-16",
+   "sanction": "AVPA"
+  },
+  "40749": {
+   "name": "8/8/26, Ocean Park, Santa Monica",
+   "date": "2026-08-08",
+   "sanction": "AVPA"
+  },
+  "41046": {
+   "name": "8/23/26, Manhattan Pier, Manhattan Beach",
+   "date": "2026-08-23",
    "sanction": "AVPA"
   },
   "35186": {
@@ -9207,6 +10016,36 @@
    "date": "2026-06-06",
    "sanction": "BVNE"
   },
+  "35165": {
+   "name": "BRVA Beach AVP Qualifier #1  '26",
+   "date": "2026-04-26",
+   "sanction": "AVPA"
+  },
+  "33323": {
+   "name": "USA Volleyball Beach Tour - Chesapeake Region Spring Beach National Qualifier #2",
+   "date": "2026-05-10",
+   "sanction": "USAV"
+  },
+  "35169": {
+   "name": "BRVA Beach AVP Qualifier #3 '26",
+   "date": "2026-05-24",
+   "sanction": "AVPA"
+  },
+  "35171": {
+   "name": "BRVA Beach AVP Qualifier #5 '26",
+   "date": "2026-06-07",
+   "sanction": "AVPA"
+  },
+  "35175": {
+   "name": "BRVA Beach AVP Qualifier #8 '26",
+   "date": "2026-07-12",
+   "sanction": "AVPA"
+  },
+  "35178": {
+   "name": "BRVA Beach AVP Qualifier #10 '26",
+   "date": "2026-08-30",
+   "sanction": "AVPA"
+  },
   "35578": {
    "name": "AVP America College Showcase / Scholarship Payout",
    "date": "2026-04-25",
@@ -9216,11 +10055,6 @@
    "name": "USA Volleyball Beach Tour - Chesapeake Region Summer Beach National Qualifier (2026-27)",
    "date": "2026-08-02",
    "sanction": "USAV"
-  },
-  "38549": {
-   "name": "2026 Slabtown Championship NorthShore AVP Beach Volleyball Tournament",
-   "date": "2026-07-23",
-   "sanction": "AVPA"
   }
  },
  "tv": {
@@ -9244,11 +10078,11 @@
    "height": "6' 0\"",
    "grad": 2028,
    "cityState": "NORFOLK, VA",
-   "truvolley": 8.703,
-   "peak": 8.722,
+   "truvolley": 8.784,
+   "peak": 8.858,
    "conf": 100,
-   "w": 353,
-   "matches": 446
+   "w": 364,
+   "matches": 458
   },
   "Haisley Flanagan": {
    "region": "CA",
@@ -9257,24 +10091,11 @@
    "height": "5' 9\"",
    "grad": 2028,
    "cityState": "Santa Cruz, CA",
-   "truvolley": 8.696,
-   "peak": 8.718,
+   "truvolley": 8.78,
+   "peak": 8.78,
    "conf": 100,
-   "w": 273,
-   "matches": 346
-  },
-  "Milaniakai Padilla": {
-   "region": "HI",
-   "id": 95165,
-   "club": "Outrigger Canoe Club Girls Beach Volleyball",
-   "height": "5' 10\"",
-   "grad": 2028,
-   "cityState": "Wailuku, HI",
-   "truvolley": 8.644,
-   "peak": 8.644,
-   "conf": 100,
-   "w": 263,
-   "matches": 373
+   "w": 272,
+   "matches": 345
   },
   "Sage Illian": {
    "region": "KS",
@@ -9283,11 +10104,24 @@
    "height": "6' 1\"",
    "grad": 2028,
    "cityState": "Wichita , KS",
-   "truvolley": 8.643,
-   "peak": 8.825,
+   "truvolley": 8.644,
+   "peak": 8.826,
    "conf": 100,
    "w": 248,
    "matches": 324
+  },
+  "Milaniakai Padilla": {
+   "region": "HI",
+   "id": 95165,
+   "club": "Outrigger Canoe Club Girls Beach Volleyball",
+   "height": "5' 10\"",
+   "grad": 2028,
+   "cityState": "Wailuku, HI",
+   "truvolley": 8.643,
+   "peak": 8.643,
+   "conf": 100,
+   "w": 263,
+   "matches": 373
   },
   "Nariah Johnson": {
    "region": "CA",
@@ -9296,8 +10130,8 @@
    "height": "5' 9\"",
    "grad": 2029,
    "cityState": "RCHO SANTA FE, CA",
-   "truvolley": 8.571,
-   "peak": 8.571,
+   "truvolley": 8.568,
+   "peak": 8.568,
    "conf": 100,
    "w": 219,
    "matches": 256
@@ -9309,8 +10143,8 @@
    "height": "5' 11\"",
    "grad": 2028,
    "cityState": "Huntington Beach, CA",
-   "truvolley": 8.552,
-   "peak": 8.629,
+   "truvolley": 8.554,
+   "peak": 8.631,
    "conf": 100,
    "w": 249,
    "matches": 376
@@ -9322,8 +10156,8 @@
    "height": "6'",
    "grad": 2028,
    "cityState": "Boca Raton, FL",
-   "truvolley": 8.548,
-   "peak": 8.649,
+   "truvolley": 8.549,
+   "peak": 8.65,
    "conf": 100,
    "w": 348,
    "matches": 497
@@ -9335,8 +10169,8 @@
    "height": "5' 11\"",
    "grad": 2028,
    "cityState": "Coronado, CA",
-   "truvolley": 8.539,
-   "peak": 8.565,
+   "truvolley": 8.541,
+   "peak": 8.567,
    "conf": 100,
    "w": 192,
    "matches": 245
@@ -9354,6 +10188,19 @@
    "w": 208,
    "matches": 244
   },
+  "Skyler Smith": {
+   "region": "VA",
+   "id": 149113,
+   "club": "757 Beach",
+   "height": "5' 6\"",
+   "grad": 2028,
+   "cityState": "Virginia Beach, VA",
+   "truvolley": 8.466,
+   "peak": 8.515,
+   "conf": 100,
+   "w": 281,
+   "matches": 355
+  },
   "Tristan Ana Del Riego": {
    "region": "CA",
    "id": 66728,
@@ -9361,8 +10208,8 @@
    "height": "5' 8\"",
    "grad": 2029,
    "cityState": "Hermosa Beach, CA",
-   "truvolley": 8.454,
-   "peak": 8.454,
+   "truvolley": 8.453,
+   "peak": 8.453,
    "conf": 100,
    "w": 288,
    "matches": 346
@@ -9374,11 +10221,24 @@
    "height": "6'",
    "grad": 2029,
    "cityState": "Coronado, CA",
-   "truvolley": 8.429,
-   "peak": 8.429,
+   "truvolley": 8.43,
+   "peak": 8.43,
    "conf": 100,
    "w": 189,
    "matches": 221
+  },
+  "Brooklyn Rosales": {
+   "region": "NC",
+   "id": 59411,
+   "club": "",
+   "height": "5' 6\"",
+   "grad": 2028,
+   "cityState": "Carolina Beach, NC",
+   "truvolley": 8.402,
+   "peak": 8.892,
+   "conf": 100,
+   "w": 342,
+   "matches": 443
   },
   "Reagan Carlin": {
    "region": "CA",
@@ -9387,8 +10247,8 @@
    "height": "5' 10\"",
    "grad": 2030,
    "cityState": "Encinitas, CA",
-   "truvolley": 8.386,
-   "peak": 8.386,
+   "truvolley": 8.387,
+   "peak": 8.387,
    "conf": 100,
    "w": 273,
    "matches": 320
@@ -9400,8 +10260,8 @@
    "height": "5' 5\"",
    "grad": 2029,
    "cityState": "McKinney , TX",
-   "truvolley": 8.37,
-   "peak": 8.474,
+   "truvolley": 8.377,
+   "peak": 8.482,
    "conf": 100,
    "w": 525,
    "matches": 674
@@ -9413,24 +10273,24 @@
    "height": "6' 0\"",
    "grad": 2028,
    "cityState": "Temecula, CA",
-   "truvolley": 8.354,
-   "peak": 8.354,
+   "truvolley": 8.358,
+   "peak": 8.358,
    "conf": 100,
    "w": 136,
    "matches": 175
   },
-  "Brooklyn Rosales": {
-   "region": "NC",
-   "id": 59411,
-   "club": "Club W",
-   "height": "5' 6\"",
-   "grad": 2028,
-   "cityState": "Carolina Beach, NC",
-   "truvolley": 8.323,
-   "peak": 8.892,
+  "Milana Rivera": {
+   "region": "TX",
+   "id": 60877,
+   "club": "Third Coast",
+   "height": "5' 7\"",
+   "grad": 2029,
+   "cityState": "Spring , TX",
+   "truvolley": 8.338,
+   "peak": 8.338,
    "conf": 100,
-   "w": 338,
-   "matches": 438
+   "w": 226,
+   "matches": 364
   },
   "Eden Cisneros": {
    "region": "CA",
@@ -9439,24 +10299,11 @@
    "height": "5' 10\"",
    "grad": 2028,
    "cityState": "San Anselmo, CA",
-   "truvolley": 8.307,
-   "peak": 8.307,
+   "truvolley": 8.306,
+   "peak": 8.306,
    "conf": 100,
    "w": 316,
    "matches": 426
-  },
-  "Skyler Smith": {
-   "region": "VA",
-   "id": 149113,
-   "club": "757 Beach",
-   "height": "5' 6\"",
-   "grad": 2028,
-   "cityState": "Virginia Beach, VA",
-   "truvolley": 8.3,
-   "peak": 8.307,
-   "conf": 100,
-   "w": 267,
-   "matches": 341
   },
   "Milan Hendrickson": {
    "region": "CA",
@@ -9465,8 +10312,8 @@
    "height": "5' 10\"",
    "grad": 2028,
    "cityState": "Kentfield, CA",
-   "truvolley": 8.283,
-   "peak": 8.283,
+   "truvolley": 8.284,
+   "peak": 8.284,
    "conf": 100,
    "w": 222,
    "matches": 312
@@ -9478,8 +10325,8 @@
    "height": "5' 6\"",
    "grad": 2028,
    "cityState": "Harrisonville, MO",
-   "truvolley": 8.282,
-   "peak": 8.742,
+   "truvolley": 8.283,
+   "peak": 8.743,
    "conf": 100,
    "w": 348,
    "matches": 455
@@ -9491,7 +10338,7 @@
    "height": "5' 10\"",
    "grad": 2028,
    "cityState": "Spanish Fort, AL",
-   "truvolley": 8.227,
+   "truvolley": 8.228,
    "peak": 8.36,
    "conf": 100,
    "w": 183,
@@ -9510,6 +10357,32 @@
    "w": 308,
    "matches": 424
   },
+  "Ella Buchanan": {
+   "region": "CA",
+   "id": 98125,
+   "club": "SLOVBC",
+   "height": null,
+   "grad": 2028,
+   "cityState": "San Luis Obispo, CA",
+   "truvolley": 8.145,
+   "peak": 8.25,
+   "conf": 100,
+   "w": 164,
+   "matches": 227
+  },
+  "Abigail Moffett": {
+   "region": "CA",
+   "id": 9258,
+   "club": "Spiker Beach Volleyball Club",
+   "height": "5' 9\"",
+   "grad": 2028,
+   "cityState": "Yorba Linda, CA",
+   "truvolley": 8.135,
+   "peak": 8.18,
+   "conf": 100,
+   "w": 376,
+   "matches": 513
+  },
   "Lia Ray": {
    "region": "FL",
    "id": 25298,
@@ -9517,33 +10390,20 @@
    "height": "5' 10\"",
    "grad": 2028,
    "cityState": "Delray Beach , FL",
-   "truvolley": 8.173,
-   "peak": 8.397,
-   "conf": 92,
+   "truvolley": 8.131,
+   "peak": 8.398,
+   "conf": 90,
    "w": 171,
    "matches": 201
-  },
-  "Ella Buchanan": {
-   "region": "CA",
-   "id": 98125,
-   "club": "SLOVBC",
-   "height": "6'",
-   "grad": 2028,
-   "cityState": "San Luis Obispo, CA",
-   "truvolley": 8.149,
-   "peak": 8.254,
-   "conf": 100,
-   "w": 164,
-   "matches": 227
   },
   "Danica  Waterman": {
    "region": "FL",
    "id": 94563,
-   "club": null,
+   "club": "",
    "height": "5' 11\"",
    "grad": 2028,
    "cityState": "Odessa, FL",
-   "truvolley": 8.125,
+   "truvolley": 8.126,
    "peak": 8.433,
    "conf": 100,
    "w": 316,
@@ -9556,50 +10416,37 @@
    "height": "5' 10\"",
    "grad": 2030,
    "cityState": "McKinney , TX",
-   "truvolley": 8.109,
-   "peak": 8.194,
+   "truvolley": 8.116,
+   "peak": 8.201,
    "conf": 100,
    "w": 455,
    "matches": 585
   },
-  "Baylee Wilson": {
-   "region": "CA",
-   "id": 60256,
-   "club": "WAVE Beach",
+  "Stella Sheeran": {
+   "region": "WA",
+   "id": 42463,
+   "club": "Dakine Beach Volleyball Club",
+   "height": "5' 6\"",
+   "grad": 2028,
+   "cityState": "Tumwater , WA",
+   "truvolley": 8.08,
+   "peak": 8.08,
+   "conf": 100,
+   "w": 272,
+   "matches": 355
+  },
+  "Taylie Hansen": {
+   "region": "FL",
+   "id": 99506,
+   "club": "Vero Beach Beach Club (VBVB)",
    "height": "6' 2\"",
-   "grad": 2029,
-   "cityState": "Del Mar, CA",
-   "truvolley": 8.107,
-   "peak": 8.37,
-   "conf": 92,
-   "w": 160,
-   "matches": 175
-  },
-  "Abigail Moffett": {
-   "region": "CA",
-   "id": 9258,
-   "club": "Spiker Beach Volleyball Club",
-   "height": "5' 9\"",
    "grad": 2028,
-   "cityState": "Yorba Linda, CA",
-   "truvolley": 8.104,
-   "peak": 8.179,
+   "cityState": "Vero Beach, FL",
+   "truvolley": 8.072,
+   "peak": 8.492,
    "conf": 100,
-   "w": 373,
-   "matches": 510
-  },
-  "Kendal Walker": {
-   "region": "VA",
-   "id": 146170,
-   "club": "108 Beach Volleyball Club",
-   "height": null,
-   "grad": 2028,
-   "cityState": "Fredericksburg, VA",
-   "truvolley": 8.101,
-   "peak": 8.451,
-   "conf": 100,
-   "w": 369,
-   "matches": 425
+   "w": 243,
+   "matches": 342
   },
   "Edie Joseph": {
    "region": "FL",
@@ -9609,23 +10456,23 @@
    "grad": 2029,
    "cityState": "Ponte Vedra Beach, FL",
    "truvolley": 8.072,
-   "peak": 8.163,
+   "peak": 8.164,
    "conf": 100,
    "w": 238,
    "matches": 322
   },
-  "Taylie Hansen": {
-   "region": "FL",
-   "id": 99506,
-   "club": "Vero Beach Beach Club (VBVB)",
-   "height": "6' 2\"",
+  "Charlotte Jansen": {
+   "region": "CA",
+   "id": 161398,
+   "club": "WAVE Beach",
+   "height": "5' 10\"",
    "grad": 2028,
-   "cityState": "Vero Beach, FL",
+   "cityState": "Del Mar, CA",
    "truvolley": 8.071,
-   "peak": 8.492,
+   "peak": 8.157,
    "conf": 100,
-   "w": 243,
-   "matches": 342
+   "w": 280,
+   "matches": 400
   },
   "Emma Abernathy": {
    "region": "FL",
@@ -9634,11 +10481,37 @@
    "height": "5' 7\"",
    "grad": 2028,
    "cityState": "Jacksonville Beach, FL",
-   "truvolley": 8.068,
-   "peak": 8.158,
+   "truvolley": 8.069,
+   "peak": 8.159,
    "conf": 100,
    "w": 237,
    "matches": 318
+  },
+  "Baylee Wilson": {
+   "region": "CA",
+   "id": 60256,
+   "club": "WAVE Beach",
+   "height": "6' 2\"",
+   "grad": 2029,
+   "cityState": "Del Mar, CA",
+   "truvolley": 8.065,
+   "peak": 8.371,
+   "conf": 90,
+   "w": 160,
+   "matches": 175
+  },
+  "Kendal Walker": {
+   "region": "VA",
+   "id": 146170,
+   "club": "108 Beach Volleyball Club",
+   "height": null,
+   "grad": 2028,
+   "cityState": "Fredericksburg, VA",
+   "truvolley": 8.057,
+   "peak": 8.451,
+   "conf": 100,
+   "w": 377,
+   "matches": 435
   },
   "Sarah Albers": {
    "region": "MO",
@@ -9661,36 +10534,36 @@
    "grad": 2028,
    "cityState": "Louisville, KY",
    "truvolley": 8.026,
-   "peak": 8.196,
+   "peak": 8.195,
    "conf": 100,
    "w": 317,
    "matches": 414
   },
-  "Charlotte Jansen": {
-   "region": "CA",
-   "id": 161398,
-   "club": "WAVE Beach",
+  "Sophia Grish": {
+   "region": "FL",
+   "id": 98897,
+   "club": "PCA Beach Volleyball Club",
+   "height": "5' 5\"",
+   "grad": 2028,
+   "cityState": "Boca Raton, FL",
+   "truvolley": 7.981,
+   "peak": 7.981,
+   "conf": 100,
+   "w": 252,
+   "matches": 374
+  },
+  "Haven Gindoff": {
+   "region": "SC",
+   "id": 150387,
+   "club": "Beach Elite CLT ",
    "height": "5' 10\"",
    "grad": 2028,
-   "cityState": "Del Mar, CA",
-   "truvolley": 8.025,
-   "peak": 8.157,
+   "cityState": "Fort Mill, SC",
+   "truvolley": 7.961,
+   "peak": 8,
    "conf": 100,
-   "w": 270,
-   "matches": 388
-  },
-  "Stella Sheeran": {
-   "region": "WA",
-   "id": 42463,
-   "club": "Dakine Beach Volleyball Club",
-   "height": "5' 6\"",
-   "grad": 2028,
-   "cityState": "Tumwater , WA",
-   "truvolley": 8.002,
-   "peak": 8.028,
-   "conf": 100,
-   "w": 267,
-   "matches": 350
+   "w": 301,
+   "matches": 438
   },
   "Sadie Harris": {
    "region": "CA",
@@ -9699,8 +10572,8 @@
    "height": "5' 11\"",
    "grad": 2028,
    "cityState": "San Juan Capistrano, CA",
-   "truvolley": 7.952,
-   "peak": 8.254,
+   "truvolley": 7.953,
+   "peak": 8.255,
    "conf": 100,
    "w": 224,
    "matches": 347
@@ -9712,24 +10585,11 @@
    "height": "6' 2\"",
    "grad": 2029,
    "cityState": "Hermosa Beach, CA",
-   "truvolley": 7.942,
-   "peak": 7.987,
+   "truvolley": 7.943,
+   "peak": 7.988,
    "conf": 100,
    "w": 179,
    "matches": 232
-  },
-  "Sienna Cicero": {
-   "region": "CA",
-   "id": 124871,
-   "club": "Spiker Beach Volleyball Club",
-   "height": "5' 7\"",
-   "grad": 2029,
-   "cityState": "Villa Park , CA",
-   "truvolley": 7.92,
-   "peak": 8.002,
-   "conf": 100,
-   "w": 219,
-   "matches": 292
   },
   "Elle Sossong": {
    "region": "PA",
@@ -9738,8 +10598,8 @@
    "height": "5' 8\"",
    "grad": 2028,
    "cityState": "Phoenixville , PA",
-   "truvolley": 7.915,
-   "peak": 8.558,
+   "truvolley": 7.916,
+   "peak": 8.559,
    "conf": 100,
    "w": 261,
    "matches": 342
@@ -9752,10 +10612,23 @@
    "grad": 2028,
    "cityState": "Boerne, TX",
    "truvolley": 7.906,
-   "peak": 8.07,
+   "peak": 8.071,
    "conf": 100,
    "w": 287,
    "matches": 422
+  },
+  "Sienna Cicero": {
+   "region": "CA",
+   "id": 124871,
+   "club": "Spiker Beach Volleyball Club",
+   "height": "5' 7\"",
+   "grad": 2029,
+   "cityState": "Villa Park , CA",
+   "truvolley": 7.899,
+   "peak": 8.003,
+   "conf": 100,
+   "w": 226,
+   "matches": 299
   },
   "Reese Pedersen": {
    "region": "NE",
@@ -9778,7 +10651,7 @@
    "grad": 2028,
    "cityState": "Wenatchee, WA",
    "truvolley": 7.851,
-   "peak": 8.159,
+   "peak": 8.16,
    "conf": 100,
    "w": 156,
    "matches": 222
@@ -9790,7 +10663,7 @@
    "height": "5' 10\"",
    "grad": 2028,
    "cityState": "Saratoga , CA",
-   "truvolley": 7.843,
+   "truvolley": 7.844,
    "peak": 8.084,
    "conf": 100,
    "w": 393,
@@ -9825,28 +10698,15 @@
   "Brooklyn Lopez": {
    "region": "CA",
    "id": 92284,
-   "club": "692 West",
-   "height": "5' 9\"",
+   "club": "Spiker Beach Volleyball Club",
+   "height": "5' 10\"",
    "grad": 2029,
    "cityState": "san diego, CA",
-   "truvolley": 7.837,
+   "truvolley": 7.838,
    "peak": 7.914,
    "conf": 100,
    "w": 212,
    "matches": 288
-  },
-  "Avery Tussing": {
-   "region": "CA",
-   "id": 95222,
-   "club": "South Bay Sand",
-   "height": "5' 9\"",
-   "grad": 2029,
-   "cityState": "Manhattan Beach, CA",
-   "truvolley": 7.835,
-   "peak": 7.919,
-   "conf": 100,
-   "w": 309,
-   "matches": 425
   },
   "Haleigh Bauer": {
    "region": "NE",
@@ -9881,76 +10741,63 @@
    "height": "5' 8\"",
    "grad": 2030,
    "cityState": "Peoria, AZ",
-   "truvolley": 7.73,
-   "peak": 7.873,
+   "truvolley": 7.731,
+   "peak": 7.874,
    "conf": 100,
    "w": 428,
    "matches": 526
   },
-  "Stacy Balestrieri": {
+  "Avery Tussing": {
    "region": "CA",
-   "id": 98360,
+   "id": 95222,
    "club": "South Bay Sand",
-   "height": "5' 10\"",
-   "grad": 2028,
-   "cityState": "San Pedro, CA",
-   "truvolley": 7.708,
-   "peak": 7.785,
+   "height": "5' 9\"",
+   "grad": 2029,
+   "cityState": "Manhattan Beach, CA",
+   "truvolley": 7.704,
+   "peak": 7.92,
    "conf": 100,
-   "w": 292,
-   "matches": 388
+   "w": 310,
+   "matches": 428
   },
-  "Sophia Grish": {
+  "Sterling Carlile": {
    "region": "FL",
-   "id": 98897,
-   "club": "PCA Beach Volleyball Club",
-   "height": "5' 6\"",
+   "id": 129320,
+   "club": "Seminole High Performance",
+   "height": "5' 8\"",
    "grad": 2028,
-   "cityState": "Boca Raton, FL",
-   "truvolley": 7.7,
-   "peak": 7.816,
+   "cityState": "Tallahassee, FL",
+   "truvolley": 7.686,
+   "peak": 7.793,
    "conf": 100,
-   "w": 246,
-   "matches": 368
+   "w": 204,
+   "matches": 290
   },
-  "Riley Scharver": {
-   "region": "VA",
-   "id": 149111,
-   "club": "757 Beach",
-   "height": "5' 11\"",
-   "grad": 2029,
-   "cityState": "Virginia Beach, VA",
-   "truvolley": 7.68,
-   "peak": 7.796,
-   "conf": 100,
-   "w": 259,
-   "matches": 381
-  },
-  "Milana Rivera": {
-   "region": "TX",
-   "id": 60877,
-   "club": "Third Coast",
-   "height": "5' 7\"",
-   "grad": 2029,
-   "cityState": "Spring , TX",
-   "truvolley": 7.67,
-   "peak": 8.232,
-   "conf": 100,
-   "w": 220,
-   "matches": 359
-  },
-  "Haven Gindoff": {
-   "region": "SC",
-   "id": 150387,
-   "club": "Beach Elite CLT ",
-   "height": "5' 10\"",
+  "Reese Hislop": {
+   "region": "NC",
+   "id": 211882,
+   "club": "Sinjin Beach Volleyball",
+   "height": "6'",
    "grad": 2028,
-   "cityState": "Fort Mill, SC",
-   "truvolley": 7.65,
-   "peak": 7.964,
+   "cityState": "Swansboro, NC",
+   "truvolley": 7.671,
+   "peak": 8.268,
    "conf": 100,
-   "w": 297,
-   "matches": 433
+   "w": 278,
+   "matches": 365
+  },
+  "Zoey Kincaid": {
+   "region": "NV",
+   "id": 58484,
+   "club": "MBsand",
+   "height": "6' 0\"",
+   "grad": 2030,
+   "cityState": "Las Vegas, NV",
+   "truvolley": 7.647,
+   "peak": 7.854,
+   "conf": 100,
+   "w": 363,
+   "matches": 460
   },
   "Lily Larrabee": {
    "region": "CA",
@@ -9959,24 +10806,24 @@
    "height": "5' 10\"",
    "grad": 2028,
    "cityState": "Winters, CA",
-   "truvolley": 7.65,
-   "peak": 7.703,
+   "truvolley": 7.646,
+   "peak": 7.699,
    "conf": 100,
    "w": 214,
    "matches": 312
   },
-  "Harper Neill": {
-   "region": "IL",
-   "id": 43251,
-   "club": null,
-   "height": "5' 8\"",
+  "Avery Fauver": {
+   "region": "VA",
+   "id": 149565,
+   "club": "BRVA Beach",
+   "height": "5' 9\"",
    "grad": 2028,
-   "cityState": "Rolling meadows , IL",
-   "truvolley": 7.641,
-   "peak": 7.577,
-   "conf": 88,
-   "w": 41,
-   "matches": 44
+   "cityState": "Winchester, VA",
+   "truvolley": 7.637,
+   "peak": 7.816,
+   "conf": 100,
+   "w": 317,
+   "matches": 415
   },
   "Emerson Thomas": {
    "region": "VA",
@@ -9990,19 +10837,6 @@
    "conf": 100,
    "w": 283,
    "matches": 348
-  },
-  "Ashlynn Stimpson": {
-   "region": "MI",
-   "id": 192476,
-   "club": "NorthShore Volleyball",
-   "height": "5' 8\"",
-   "grad": 2029,
-   "cityState": "Traverse city, MI",
-   "truvolley": 7.626,
-   "peak": 0,
-   "conf": 100,
-   "w": 45,
-   "matches": 51
   }
  }
 }

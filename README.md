@@ -148,6 +148,14 @@ All read from the Volleyball Life public API at `https://api-v8.volleyballlife.c
 | `GET /vision/players` | Opt-in recruiting directory: height, side, block touch (sparse) |
 | `POST /playerprofile/feed/matches` | Match-level results: opponents, sets, phase — the head-to-head source |
 
+Two things about that API changed in September 2026. It now **rejects a short
+`User-Agent`** &mdash; `Mozilla/5.0` gets a bare `404` on every route, a full browser
+string gets the data &mdash; so every script here sends one. And
+`POST /playerprofile/feed/matches` now answers **401** to an anonymous caller, so the
+head-to-head crosstables cannot be re-fetched without an account. `h2h.py` stamps its
+pull date into its output and the renderer says on the page when a crosstable is older
+than the window it sits under.
+
 Field size comes from the team count of the specific division the athlete competed in,
 matched by `tdId`. Division names alone are not sufficient: one event runs several
 divisions of very different sizes.
@@ -173,6 +181,13 @@ be regenerated without re-querying the API.
 
 All five reports run on the same twelve-month window ending 11 August 2026 and the same
 rating epoch, so they are directly comparable.
+
+**The two cohort reports have since moved on.** `bntdp-2027_younger` and
+`bntdp-2028_younger` were rebuilt on 14 September 2026: every tracked player re-rated
+(17,178 of them) and the window rolled to the twelve months ending 14 September 2026.
+Until the class reports are rebuilt too, only those two are on the new epoch. Their
+head-to-head crosstables are still the 20 August pull and say so on the page, because
+the match feed now requires an account &mdash; see below.
 
 | | Girls U18 | Girls U17 | Class of 2027 | Class of 2028 |
 | --- | --- | --- | --- | --- |
