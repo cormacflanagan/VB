@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VB &#183; Reports</title>
+<style>
+:root {
+  --ground:#EFF1EE; --surface:#FAFBFA; --raise:#FFFFFF;
+  --ink:#111B19; --body:#2C3A37; --muted:#5F6E6A; --faint:#8B9995;
+  --line:#D5DCD9; --hair:#E4E9E7; --wash:#EAEDEB; --accent:#0B6E68; --accent-soft:#D9E7E5;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:#0B1211; --surface:#121B19; --raise:#182322;
+    --ink:#E9EFEC; --body:#C6D2CE; --muted:#93A29E; --faint:#6E7D79;
+    --line:#243330; --hair:#1C2827; --wash:#161F1E; --accent:#57C3B6; --accent-soft:#123733;
+  }
+}
+:root[data-theme="dark"] {
+  --ground:#0B1211; --surface:#121B19; --raise:#182322;
+  --ink:#E9EFEC; --body:#C6D2CE; --muted:#93A29E; --faint:#6E7D79;
+  --line:#243330; --hair:#1C2827; --wash:#161F1E; --accent:#57C3B6; --accent-soft:#123733;
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--ground); color:var(--body);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; font-size:15px;
+  line-height:1.6; -webkit-font-smoothing:antialiased; }
+.wrap { max-width:1180px; margin:0 auto; padding:0 clamp(16px,2.4vw,44px); }
+header { padding:60px 0 30px; border-bottom:1px solid var(--line); }
+.eyebrow { font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent);
+  font-weight:650; margin:0 0 18px; }
+h1 { font-family:"Iowan Old Style",Georgia,"Times New Roman",serif;
+  font-size:clamp(32px,5vw,50px); line-height:1.06; letter-spacing:-.02em; color:var(--ink);
+  margin:0 0 16px; font-weight:600; text-wrap:balance; max-width:20ch; }
+h1 em { font-style:italic; color:var(--accent); }
+.standfirst { font-size:17px; color:var(--muted); max-width:66ch; margin:0; }
+h2 { font-family:"Iowan Old Style",Georgia,"Times New Roman",serif; font-size:24px;
+  color:var(--ink); font-weight:600; margin:0 0 6px; }
+.lede { color:var(--muted); margin:0 0 22px; max-width:72ch; font-size:14.5px; }
+section { padding:44px 0 0; }
+.grid { display:grid; gap:14px; grid-template-columns:repeat(auto-fill,minmax(310px,1fr)); }
+.card { border:1px solid var(--line); border-radius:3px; background:var(--surface);
+  padding:16px 18px 17px; display:flex; flex-direction:column; }
+.card:hover { background:var(--raise); border-color:var(--accent); }
+.card h3 { margin:0 0 5px; font-size:15.5px; font-weight:650; line-height:1.3; }
+.card h3 a { color:var(--ink); text-decoration:none; }
+.card h3 a:hover { color:var(--accent); }
+.card p { margin:0; font-size:13.5px; color:var(--muted); }
+.meta { margin-top:10px; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:11px; letter-spacing:.04em; color:var(--faint); }
+.tag { display:inline-block; margin-top:11px; padding:2px 7px; border-radius:2px;
+  background:var(--accent-soft); color:var(--accent); font-size:10.5px; font-weight:650;
+  letter-spacing:.08em; text-transform:uppercase; align-self:flex-start; }
+.notes { border-top:1px solid var(--line); margin-top:52px; padding-top:30px; }
+.notes ul { margin:0; padding-left:18px; max-width:76ch; }
+.notes li { margin-bottom:9px; font-size:14px; color:var(--muted); }
+.notes b { color:var(--ink); font-weight:650; }
+footer { color:var(--faint); font-size:12.5px; padding:34px 0 56px; margin-top:30px;
+  border-top:1px solid var(--hair); max-width:76ch; }
+a { color:var(--accent); }
+</style>
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">Junior beach volleyball &#183; Volleyball Life data</p>
+  <h1>Fifteen reports on <em>who actually plays whom</em></h1>
+  <p class="standfirst">Every page here is built from Volleyball Life results for junior girls
+  doubles. They answer the questions a ranking number cannot: which events a cohort really
+  turns up to, who partners with whom, and how much of a rating gap is signal rather than
+  a thin record.</p>
+</header>
+
+<section>
+  <h2>Record by competition</h2>
+  <p class="lede">The core report. For each athlete in a cut: her TruVolley, her competitions,
+  her finishes, and the strength of the field she beat to get them &#8212; so a result at a
+  60-team open is not read the same way as one at an eight-team local. Each carries a
+  head-to-head crosstable of who has met whom inside the group.</p>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="bntdp-2027_younger.html">2027 and younger &#183; top 60</a></h3>
+      <p>The widest forward-looking cut: every girl graduating 2027 or later, top 60 by
+      TruVolley. The cohort most often asked about.</p>
+      <p class="meta">60 athletes &#183; 12 months to 14 Sep 2026</p>
+    </div>
+    <div class="card">
+      <h3><a href="bntdp-2028_younger.html">2028 and younger &#183; top 60</a></h3>
+      <p>The same cut one year down &#8212; 2028 and later. Drops the graduating class and
+      surfaces the younger girls the 2027 cut buries.</p>
+      <p class="meta">60 athletes &#183; 12 months to 14 Sep 2026</p>
+    </div>
+    <div class="card">
+      <h3><a href="bntdp-18u.html">BNTDP 18U girls</a></h3>
+      <p>The 18U national team development program roster, rather than a rating cut &#8212;
+      a named group, and what its year actually looked like.</p>
+      <p class="meta">Girls U18 &#183; 12 months to 14 Sep 2026</p>
+    </div>
+    <div class="card">
+      <h3><a href="bntdp-17u.html">BNTDP 17U girls</a></h3>
+      <p>The 17U roster on the same treatment. Companion to the 18U page.</p>
+      <p class="meta">Girls U17 &#183; 12 months to 14 Sep 2026</p>
+    </div>
+    <div class="card">
+      <h3><a href="bntdp-2027.html">Class of 2027 &#183; top 60</a></h3>
+      <p>Graduation year 2027 exactly, not "and younger" &#8212; the recruiting class as a
+      closed group.</p>
+      <p class="meta">60 athletes &#183; 12 months to 14 Sep 2026</p>
+    </div>
+    <div class="card">
+      <h3><a href="bntdp-2028.html">Class of 2028 &#183; top 60</a></h3>
+      <p>Graduation year 2028 exactly, top 60 by TruVolley.</p>
+      <p class="meta">60 athletes &#183; 12 months to 14 Sep 2026</p>
+    </div>
+    <div class="card">
+      <h3><a href="bntdp-2028_top30.html">Class of 2028 &#183; top 30</a></h3>
+      <p>The same class cut to 30. A tighter group means a denser crosstable &#8212; more of
+      these girls have actually met.</p>
+      <p class="meta">30 athletes &#183; 12 months to 14 Sep 2026</p>
+    </div>
+    <div class="card">
+      <h3><a href="bntdp-2028_top20.html">Class of 2028 &#183; top 20</a></h3>
+      <p>The top of the class only, where nearly every pair has a head-to-head record.</p>
+      <p class="meta">20 athletes &#183; 12 months to 14 Sep 2026</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Partnerships</h2>
+  <p class="lede">Beach is a two-player game, so a result belongs to a pair rather than a
+  player. These pages ask how settled each athlete is: how many different partners she has
+  used in a year, and which pairings recur. A matrix covers partnerships inside the group;
+  a second table catches the partners from outside it, which the matrix structurally cannot
+  show.</p>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="partners-2027_younger.html">2027 and younger &#183; top 60</a></h3>
+      <p>Partner counts and the full 60&#215;60 pairing matrix for the 2027-and-younger cut.</p>
+      <p class="meta">Doubles only &#183; 14 Sep 2025 &#8594; 14 Sep 2026</p>
+    </div>
+    <div class="card">
+      <h3><a href="partners-2028_younger.html">2028 and younger &#183; top 60</a></h3>
+      <p>The same for 2028 and younger. Only 87 of the 1,770 possible in-group pairings have
+      ever happened &#8212; most of these girls partner outside the cut.</p>
+      <p class="meta">Doubles only &#183; 14 Sep 2025 &#8594; 14 Sep 2026</p>
+    </div>
+    <div class="card">
+      <h3><a href="partners-2028_top30.html">Class of 2028 &#183; top 30</a></h3>
+      <p>The 2028 class at 30 deep, where the pairing matrix is dense enough to read at a
+      glance.</p>
+      <p class="meta">Doubles only &#183; 14 Sep 2025 &#8594; 14 Sep 2026</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Where and when they play</h2>
+  <p class="lede">Turnout rather than results.</p>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="calendar-2027.html">Class of 2027 &#183; tournament calendar</a></h3>
+      <p>A year of events month by month, showing the biggest single field in each &#8212; how
+      many of the top 60 were in one place at one time, and where. The cohort is drawn from a
+      partner-graph crawl run to closure, not a published list.</p>
+      <p class="meta">Window 14 Sep 2025 &#8594; 14 Sep 2026</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Ratings, and how far to trust them</h2>
+  <p class="lede">TruVolley is Volleyball Life's own number. These two pages interrogate it
+  rather than report it.</p>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="rank-2027_younger.html">The 2027 field, re-ranked</a></h3>
+      <p>A Bradley-Terry rating fitted to 679,241 matches from Volleyball Life, CBVA and
+      college beach, over a closed cohort of 17,119 girls &#8212; then 40 bootstrap refits,
+      resampled by tournament-division, to put an interval on every place. The point is that
+      most of the order is not separable: a rank built on a thin record moves a long way when
+      you refit it.</p>
+      <p class="meta">17,119 girls &#183; 679,241 matches &#183; 40 refits</p>
+      <span class="tag">Fitted, not TruVolley</span>
+    </div>
+    <div class="card">
+      <h3><a href="winrate.html">Where her wins stop</a></h3>
+      <p>One athlete against opponent strength in quarter-point TruVolley bands &#8212; the
+      same increment the rating is quoted in &#8212; with 95% Wilson intervals, to find the
+      level at which winning stops. The intervals are wide where the record is thin, which is
+      the honest answer.</p>
+      <p class="meta">Doubles only &#183; 12 months to 24 Aug 2026</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Elsewhere</h2>
+  <p class="lede">Not junior volleyball, but it lives in this repository.</p>
+  <div class="grid">
+    <div class="card">
+      <h3><a href="anthro.html">Weight at her height</a></h3>
+      <p>Height against weight for every Olympic women's beach volleyball athlete with both
+      figures published &#8212; 230 of the 714 scraped from Olympedia &#8212; to answer what
+      the range actually is at a given height rather than what a BMI table asserts.</p>
+      <p class="meta">230 athletes &#183; source Olympedia</p>
+    </div>
+  </div>
+</section>
+
+<section class="notes">
+  <h2>How to read these</h2>
+  <ul>
+    <li><b>A competition, not a match.</b> Counts are event-divisions entered, so a weekend
+    played as a pair counts once however many matches it ran to.</li>
+    <li><b>Doubles only.</b> Club, 3v3 and 5v5 entries are excluded throughout, so every
+    partnership on these pages is a genuine two-player one.</li>
+    <li><b>A cut is a snapshot.</b> "Top 60" means top 60 on the TruVolley standing at the
+    retrieval date. Volleyball Life replaced the TruVolley formula in September 2026 &#8212;
+    ranks on these pages are not comparable with ranks printed before that.</li>
+    <li><b>The head-to-head crosstables are older than the ratings beside them.</b> On the
+    record-by-competition pages the crosstable was pulled 20 August 2026; the ratings and
+    cuts are 14 September 2026. Each page names the gap and how many of its athletes entered
+    the cut after the snapshot. The partnership pages are not affected.</li>
+  </ul>
+</section>
+
+<footer>
+  Data from Volleyball Life, with CBVA and college beach results in the fitted rating only.
+  Ratings and cuts retrieved 14 September 2026. Source and build scripts:
+  <a href="https://github.com/cormacflanagan/VB">github.com/cormacflanagan/VB</a>.
+</footer>
+
+</div>
+</html>
