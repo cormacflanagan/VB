@@ -2,8 +2,8 @@
  "group": "18U",
  "label": "Girls U18",
  "window": [
-  "2025-08-20",
-  "2026-08-20"
+  "2025-09-14",
+  "2026-09-14"
  ],
  "players": [
   {
@@ -14,11 +14,11 @@
    "height": "6'",
    "grad": 2027,
    "city": "Laguna Beach, CA",
-   "tv": 9.451,
-   "peak": 9.518,
-   "w": 361,
+   "tv": 10.524,
+   "peak": 10.601,
+   "w": 367,
    "l": 72,
-   "comps": 18,
+   "comps": 17,
    "cells": {
     "34180:125823": {
      "f": 2,
@@ -102,8 +102,8 @@
    "height": "6' 0\"",
    "grad": 2027,
    "city": "Seattle, WA",
-   "tv": 9.146,
-   "peak": 9.326,
+   "tv": 10.328,
+   "peak": 10.463,
    "w": 339,
    "l": 109,
    "comps": 9,
@@ -153,17 +153,81 @@
    }
   },
   {
+   "name": "Sienna Castillo",
+   "id": 29854,
+   "region": "Northern California",
+   "club": "South Bay Sand",
+   "height": "6' 1\"",
+   "grad": 2027,
+   "city": "Redondo Beach, CA",
+   "tv": 10.229,
+   "peak": 10.063,
+   "w": 180,
+   "l": 69,
+   "comps": 17,
+   "cells": {
+    "34180:125823": {
+     "f": 1,
+     "partners": [
+      "Simrin Adams"
+     ]
+    },
+    "36451:133267": {
+     "f": 5,
+     "partners": [
+      "Simrin Adams"
+     ]
+    },
+    "34243:126054": {
+     "f": 5,
+     "partners": [
+      "Ella Olson"
+     ]
+    },
+    "31567:117695": {
+     "f": 13,
+     "partners": [
+      "Zoe Znider"
+     ]
+    },
+    "39469:144760": {
+     "f": 5,
+     "partners": [
+      "Simrin Adams"
+     ]
+    },
+    "32995:121820": {
+     "f": 3,
+     "partners": [
+      "Lerin Rosenthal"
+     ]
+    },
+    "33620:124248": {
+     "f": 3,
+     "partners": [
+      "Simrin Adams"
+     ]
+    },
+    "32941:121655": {
+     "f": 5,
+     "partners": [
+      "Leah Blair"
+     ]
+    }
+   }
+  },
+  {
    "name": "Olivia Herron",
    "id": 28688,
    "region": "North Texas",
-   "club": "Spiker Beach Volleyball Club",
+   "club": null,
    "height": "6' 2\"",
    "grad": 2027,
    "city": "Celina, TX",
-   "tv": 8.892,
-   "peak": 9.529,
-   "w": 532,
-   "l": 191,
+   "tv": 10.228,
+   "peak": 10.68,
+   "w": 528,
+   "l": 188,
    "comps": 29,
    "cells": {
     "36451:133267": {
@@ -247,129 +311,59 @@
    }
   },
   {
-   "name": "Sienna Castillo",
-   "id": 29854,
-   "region": "Northern California",
-   "club": "South Bay Sand",
-   "height": "6' 1\"",
+   "name": "Simrin Adams",
+   "id": 25289,
+   "region": "So. Cal / So. Nevada",
+   "club": "Spiker Beach Volleyball Club",
+   "height": "5' 9\"",
    "grad": 2027,
-   "city": "Redondo Beach, CA",
-   "tv": 8.852,
-   "peak": 8.988,
-   "w": 176,
-   "l": 68,
-   "comps": 16,
+   "city": "Long Beach, CA",
+   "tv": 10.065,
+   "peak": 10.104,
+   "w": 369,
+   "l": 125,
+   "comps": 24,
    "cells": {
     "34180:125823": {
      "f": 1,
      "partners": [
-      "Simrin Adams"
+      "Sienna Castillo"
      ]
     },
     "36451:133267": {
      "f": 5,
      "partners": [
-      "Simrin Adams"
+      "Sienna Castillo"
      ]
     },
     "34243:126054": {
      "f": 5,
      "partners": [
-      "Ella Olson"
+      "Sandie Souza"
      ]
     },
     "31567:117695": {
-     "f": 13,
+     "f": 9,
      "partners": [
-      "Zoe Znider"
+      "Abby King"
      ]
     },
     "39469:144760": {
      "f": 5,
      "partners": [
-      "Simrin Adams"
+      "Sienna Castillo"
      ]
     },
-    "32995:121820": {
-     "f": 3,
+    "31527:117546": {
+     "f": 5,
      "partners": [
-      "Lerin Rosenthal"
+      "JoJo Wilson"
      ]
     },
     "33620:124248": {
      "f": 3,
      "partners": [
-      "Simrin Adams"
-     ]
-    },
-    "32941:121655": {
-     "f": 5,
-     "partners": [
-      "Leah Blair"
-     ]
-    }
-   }
-  },
-  {
-   "name": "Sadie Stafford",
-   "id": 147394,
-   "region": "Old Dominion",
-   "club": "757 Beach",
-   "height": "6' 0\"",
-   "grad": 2028,
-   "city": "NORFOLK, VA",
-   "tv": 8.703,
-   "peak": 8.722,
-   "w": 353,
-   "l": 93,
-   "comps": 23,
-   "cells": {
-    "34180:125823": {
-     "f": 3,
-     "partners": [
-      "Georgeann Lee"
-     ]
-    },
-    "36451:133267": {
-     "f": 5,
-     "partners": [
-      "Nariah Johnson"
-     ]
-    },
-    "31567:117695": {
-     "f": 13,
-     "partners": [
-      "Danica Waterman"
-     ]
-    },
-    "31568:117699": {
-     "f": 9,
-     "partners": [
-      "Milaniakai Padilla"
-     ]
-    },
-    "31569:117703": {
-     "f": 5,
-     "partners": [
-      "Skyler Smith"
-     ]
-    },
-    "32578:120658": {
-     "f": 3,
-     "partners": [
-      "Brooke Codey"
-     ]
-    },
-    "31622:117904": {
-     "f": 1,
-     "partners": [
-      "Brooklyn Rosales"
-     ]
-    },
-    "34243:126055": {
-     "f": 2,
-     "partners": [
-      "Georgeann Lee"
+      "Sienna Castillo"
      ]
     }
    }
@@ -382,8 +376,8 @@
    "height": "5' 10\"",
    "grad": 2028,
    "city": "Wailuku, HI",
-   "tv": 8.644,
-   "peak": 8.644,
+   "tv": 9.805,
+   "peak": 9.805,
    "w": 263,
    "l": 110,
    "comps": 11,
@@ -452,8 +446,8 @@
    "height": "6' 1\"",
    "grad": 2028,
    "city": "Wichita , KS",
-   "tv": 8.643,
-   "peak": 8.825,
+   "tv": 9.702,
+   "peak": 9.795,
    "w": 248,
    "l": 76,
    "comps": 16,
@@ -534,8 +528,8 @@
    "height": "6'",
    "grad": 2028,
    "city": "Boca Raton, FL",
-   "tv": 8.548,
-   "peak": 8.649,
+   "tv": 9.518,
+   "peak": 9.621,
    "w": 348,
    "l": 149,
    "comps": 15,
@@ -609,6 +603,70 @@
    }
   },
   {
+   "name": "Sadie Stafford",
+   "id": 147394,
+   "region": "Old Dominion",
+   "club": "757 Beach",
+   "height": "6' 0\"",
+   "grad": 2028,
+   "city": "NORFOLK, VA",
+   "tv": 9.448,
+   "peak": 9.57,
+   "w": 367,
+   "l": 97,
+   "comps": 26,
+   "cells": {
+    "34180:125823": {
+     "f": 3,
+     "partners": [
+      "Georgeann Lee"
+     ]
+    },
+    "36451:133267": {
+     "f": 5,
+     "partners": [
+      "Nariah Johnson"
+     ]
+    },
+    "31567:117695": {
+     "f": 13,
+     "partners": [
+      "Danica Waterman"
+     ]
+    },
+    "31568:117699": {
+     "f": 9,
+     "partners": [
+      "Milaniakai Padilla"
+     ]
+    },
+    "31569:117703": {
+     "f": 5,
+     "partners": [
+      "Skyler Smith"
+     ]
+    },
+    "32578:120658": {
+     "f": 3,
+     "partners": [
+      "Brooke Codey"
+     ]
+    },
+    "31622:117904": {
+     "f": 1,
+     "partners": [
+      "Brooklyn Rosales"
+     ]
+    },
+    "34243:126055": {
+     "f": 2,
+     "partners": [
+      "Georgeann Lee"
+     ]
+    }
+   }
+  },
+  {
    "name": "Georgeann Lee",
    "id": 61785,
    "region": "Aloha",
@@ -616,8 +674,8 @@
    "height": "6'",
    "grad": 2027,
    "city": "Honolulu , HI",
-   "tv": 8.454,
-   "peak": 8.554,
+   "tv": 9.443,
+   "peak": 9.554,
    "w": 196,
    "l": 98,
    "comps": 14,
@@ -673,64 +731,6 @@
    }
   },
   {
-   "name": "Simrin Adams",
-   "id": 25289,
-   "region": "So. Cal / So. Nevada",
-   "club": "Spiker Beach Volleyball Club",
-   "height": "5' 9\"",
-   "grad": 2027,
-   "city": "Long Beach, CA",
-   "tv": 8.214,
-   "peak": 8.93,
-   "w": 364,
-   "l": 123,
-   "comps": 24,
-   "cells": {
-    "34180:125823": {
-     "f": 1,
-     "partners": [
-      "Sienna Castillo"
-     ]
-    },
-    "36451:133267": {
-     "f": 5,
-     "partners": [
-      "Sienna Castillo"
-     ]
-    },
-    "34243:126054": {
-     "f": 5,
-     "partners": [
-      "Sandie Souza"
-     ]
-    },
-    "31567:117695": {
-     "f": 9,
-     "partners": [
-      "Abby King"
-     ]
-    },
-    "39469:144760": {
-     "f": 5,
-     "partners": [
-      "Sienna Castillo"
-     ]
-    },
-    "31527:117546": {
-     "f": 5,
-     "partners": [
-      "JoJo Wilson"
-     ]
-    },
-    "33620:124248": {
-     "f": 3,
-     "partners": [
-      "Sienna Castillo"
-     ]
-    }
-   }
-  },
-  {
    "name": "Jordyn Wilson",
    "id": 23868,
    "region": "So. Cal / So. Nevada",
@@ -738,11 +738,11 @@
    "height": "5' 10\"",
    "grad": 2027,
    "city": "Colton, CA",
-   "tv": 8.068,
-   "peak": 8.38,
-   "w": 419,
-   "l": 180,
-   "comps": 23,
+   "tv": 9.093,
+   "peak": 9.526,
+   "w": 423,
+   "l": 183,
+   "comps": 25,
    "cells": {
     "34180:125823": {
      "f": 5,
@@ -819,6 +819,34 @@
    }
   },
   {
+   "name": "Sadie Harris",
+   "id": 94909,
+   "region": "So. Cal / So. Nevada",
+   "club": "Spiker Beach Volleyball Club",
+   "height": "5' 11\"",
+   "grad": 2028,
+   "city": "San Juan Capistrano, CA",
+   "tv": 8.829,
+   "peak": 9.11,
+   "w": 224,
+   "l": 123,
+   "comps": 16,
+   "cells": {
+    "34180:125823": {
+     "f": 5,
+     "partners": [
+      "Madison Gillinger"
+     ]
+    },
+    "32995:121820": {
+     "f": 5,
+     "partners": [
+      "Abigail Moffett"
+     ]
+    }
+   }
+  },
+  {
    "name": "Sarah Albers",
    "id": 84161,
    "region": "Gateway",
@@ -826,8 +854,8 @@
    "height": "6' 0\"",
    "grad": 2028,
    "city": "Arnold, MO",
-   "tv": 8.026,
-   "peak": 8.163,
+   "tv": 8.424,
+   "peak": 8.474,
    "w": 148,
    "l": 60,
    "comps": 9,
@@ -866,34 +894,6 @@
      "f": 9,
      "partners": [
       "Danica Waterman"
-     ]
-    }
-   }
-  },
-  {
-   "name": "Sadie Harris",
-   "id": 94909,
-   "region": "So. Cal / So. Nevada",
-   "club": "Spiker Beach Volleyball Club",
-   "height": "5' 11\"",
-   "grad": 2028,
-   "city": "San Juan Capistrano, CA",
-   "tv": 7.952,
-   "peak": 8.254,
-   "w": 224,
-   "l": 123,
-   "comps": 17,
-   "cells": {
-    "34180:125823": {
-     "f": 5,
-     "partners": [
-      "Madison Gillinger"
-     ]
-    },
-    "32995:121820": {
-     "f": 5,
-     "partners": [
-      "Abigail Moffett"
      ]
     }
    }
@@ -1142,6 +1142,52 @@
   }
  ],
  "pairs": [
+  {
+   "key": "39261:144134",
+   "tid": 39261,
+   "tdId": 144134,
+   "event": "Wedbush presents The Hermosa Beach Open 2026",
+   "short": "Wedbush presents The",
+   "division": "Womens Open",
+   "field": 54,
+   "date": "2026-09-13",
+   "sanction": "\u2014",
+   "players": [
+    {
+     "name": "Simrin Adams",
+     "id": 25289,
+     "f": 41
+    },
+    {
+     "name": "Jordyn Wilson",
+     "id": 23868,
+     "f": 41
+    }
+   ]
+  },
+  {
+   "key": "41617:151902",
+   "tid": 41617,
+   "tdId": 151902,
+   "event": ", 9/13/26, Ocean Park, Santa Monica",
+   "short": "9/13/26, Ocean Park",
+   "division": "Womens Open",
+   "field": 17,
+   "date": "2026-09-13",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Simrin Adams",
+     "id": 25289,
+     "f": 2
+    },
+    {
+     "name": "Sienna Castillo",
+     "id": 29854,
+     "f": 3
+    }
+   ]
+  },
   {
    "key": "40877:149607",
    "tid": 40877,
@@ -1741,10 +1787,10 @@
    ]
   }
  ],
- "totalComps": 104,
- "totalEvents": 88,
- "totalEntries": 224,
- "droppedTeam": 40,
+ "totalComps": 106,
+ "totalEvents": 90,
+ "totalEntries": 228,
+ "droppedTeam": 41,
  "thresh": 3,
  "population": null,
  "ratedPop": null,

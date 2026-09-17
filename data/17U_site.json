@@ -2,8 +2,8 @@
  "group": "17U",
  "label": "Girls U17",
  "window": [
-  "2025-08-20",
-  "2026-08-20"
+  "2025-09-14",
+  "2026-09-14"
  ],
  "players": [
   {
@@ -14,11 +14,11 @@
    "height": "5' 7\"",
    "grad": 2028,
    "city": "Los Angeles, CA",
-   "tv": 8.822,
-   "peak": 8.922,
-   "w": 254,
-   "l": 61,
-   "comps": 9,
+   "tv": 10.099,
+   "peak": 9.696,
+   "w": 258,
+   "l": 62,
+   "comps": 10,
    "cells": {
     "38087:139560": {
      "f": 2,
@@ -54,9 +54,9 @@
    "height": "5' 9\"",
    "grad": 2028,
    "city": "Santa Cruz, CA",
-   "tv": 8.696,
-   "peak": 8.718,
-   "w": 273,
+   "tv": 9.695,
+   "peak": 9.597,
+   "w": 272,
    "l": 73,
    "comps": 15,
    "cells": {
@@ -106,8 +106,8 @@
    "height": "5' 9\"",
    "grad": 2029,
    "city": "RCHO SANTA FE, CA",
-   "tv": 8.571,
-   "peak": 8.571,
+   "tv": 9.561,
+   "peak": 9.561,
    "w": 219,
    "l": 37,
    "comps": 15,
@@ -182,11 +182,11 @@
    "height": "5' 11\"",
    "grad": 2028,
    "city": "Huntington Beach, CA",
-   "tv": 8.552,
-   "peak": 8.629,
+   "tv": 9.419,
+   "peak": 9.487,
    "w": 249,
    "l": 127,
-   "comps": 17,
+   "comps": 16,
    "cells": {
     "38087:139560": {
      "f": 3,
@@ -240,11 +240,11 @@
    "height": "6'",
    "grad": 2029,
    "city": "Coronado, CA",
-   "tv": 8.429,
-   "peak": 8.429,
+   "tv": 9.303,
+   "peak": 9.303,
    "w": 189,
    "l": 32,
-   "comps": 8,
+   "comps": 7,
    "cells": {
     "38087:139560": {
      "f": 5,
@@ -279,59 +279,41 @@
    }
   },
   {
-   "name": "Reagan Carlin",
-   "id": 92974,
-   "region": "So. Cal / So. Nevada",
-   "club": "WAVE Beach",
-   "height": "5' 10\"",
-   "grad": 2030,
-   "city": "Encinitas, CA",
-   "tv": 8.386,
-   "peak": 8.386,
-   "w": 273,
-   "l": 47,
-   "comps": 13,
+   "name": "Milana Rivera",
+   "id": 60877,
+   "region": "Lone Star",
+   "club": "Third Coast",
+   "height": "5' 7\"",
+   "grad": 2029,
+   "city": "Spring , TX",
+   "tv": 9.286,
+   "peak": 9.286,
+   "w": 226,
+   "l": 138,
+   "comps": 11,
    "cells": {
-    "38087:139560": {
-     "f": 5,
-     "partners": [
-      "Brooke Proctor"
-     ]
-    },
-    "31568:117700": {
-     "f": 2,
-     "partners": [
-      "Brynn Harris"
-     ]
-    },
-    "34180:125823": {
-     "f": 9,
-     "partners": [
-      "Parker Wilson"
-     ]
-    },
-    "31483:117395": {
+    "34243:126056": {
      "f": 3,
      "partners": [
-      "Brooke Proctor"
+      "Hannah Perez"
      ]
     },
-    "34243:126057": {
-     "f": 1,
+    "31625:117914": {
+     "f": 3,
      "partners": [
-      "Brooke Proctor"
+      "Sarah Cowan"
      ]
     },
-    "33136:122338": {
-     "f": 1,
+    "30437:114423": {
+     "f": 9,
      "partners": [
-      "Brooke Proctor"
+      "Olivia Herron"
      ]
     },
-    "25578:97150": {
-     "f": 1,
+    "38087:139559": {
+     "f": 17,
      "partners": [
-      "Brooke Proctor"
+      "Naomi Lygas"
      ]
     }
    }
@@ -344,11 +326,11 @@
    "height": "5' 5\"",
    "grad": 2029,
    "city": "McKinney , TX",
-   "tv": 8.37,
-   "peak": 8.474,
+   "tv": 9.239,
+   "peak": 9.384,
    "w": 525,
    "l": 149,
-   "comps": 20,
+   "comps": 19,
    "cells": {
     "34243:126056": {
      "f": 5,
@@ -455,6 +437,122 @@
    }
   },
   {
+   "name": "Reagan Carlin",
+   "id": 92974,
+   "region": "So. Cal / So. Nevada",
+   "club": "WAVE Beach",
+   "height": "5' 10\"",
+   "grad": 2030,
+   "city": "Encinitas, CA",
+   "tv": 9.191,
+   "peak": 9.191,
+   "w": 273,
+   "l": 47,
+   "comps": 11,
+   "cells": {
+    "38087:139560": {
+     "f": 5,
+     "partners": [
+      "Brooke Proctor"
+     ]
+    },
+    "31568:117700": {
+     "f": 2,
+     "partners": [
+      "Brynn Harris"
+     ]
+    },
+    "34180:125823": {
+     "f": 9,
+     "partners": [
+      "Parker Wilson"
+     ]
+    },
+    "31483:117395": {
+     "f": 3,
+     "partners": [
+      "Brooke Proctor"
+     ]
+    },
+    "34243:126057": {
+     "f": 1,
+     "partners": [
+      "Brooke Proctor"
+     ]
+    },
+    "33136:122338": {
+     "f": 1,
+     "partners": [
+      "Brooke Proctor"
+     ]
+    },
+    "25578:97150": {
+     "f": 1,
+     "partners": [
+      "Brooke Proctor"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Ella Buchanan",
+   "id": 98125,
+   "region": "So. Cal / So. Nevada",
+   "club": "SLOVBC",
+   "height": null,
+   "grad": 2028,
+   "city": "San Luis Obispo, CA",
+   "tv": 9.153,
+   "peak": 9.241,
+   "w": 164,
+   "l": 63,
+   "comps": 11,
+   "cells": {
+    "34243:126056": {
+     "f": 9,
+     "partners": [
+      "Brooke Canaday"
+     ]
+    },
+    "31567:117695": {
+     "f": 9,
+     "partners": [
+      "Haisley Flanagan"
+     ]
+    },
+    "31483:117394": {
+     "f": 2,
+     "partners": [
+      "Brooke Canaday"
+     ]
+    },
+    "25578:97149": {
+     "f": 5,
+     "partners": [
+      "Brooke Canaday"
+     ]
+    },
+    "34180:125823": {
+     "f": 9,
+     "partners": [
+      "Brooke Canaday"
+     ]
+    },
+    "36451:133267": {
+     "f": 9,
+     "partners": [
+      "Charlotte Jansen"
+     ]
+    },
+    "40540:148435": {
+     "f": 2,
+     "partners": [
+      "Brooke Canaday"
+     ]
+    }
+   }
+  },
+  {
    "name": "Cayden Dorger",
    "id": 128445,
    "region": "Gulf Coast",
@@ -462,8 +560,8 @@
    "height": "5' 10\"",
    "grad": 2028,
    "city": "Spanish Fort, AL",
-   "tv": 8.227,
-   "peak": 8.36,
+   "tv": 9.119,
+   "peak": 9.2,
    "w": 183,
    "l": 72,
    "comps": 18,
@@ -525,59 +623,141 @@
    }
   },
   {
-   "name": "Ella Buchanan",
-   "id": 98125,
-   "region": "So. Cal / So. Nevada",
-   "club": "SLOVBC",
-   "height": "6'",
+   "name": "Taylie Hansen",
+   "id": 99506,
+   "region": "Florida",
+   "club": "Vero Beach Beach Club (VBVB)",
+   "height": "6' 2\"",
    "grad": 2028,
-   "city": "San Luis Obispo, CA",
-   "tv": 8.149,
-   "peak": 8.254,
-   "w": 164,
-   "l": 63,
-   "comps": 11,
+   "city": "Vero Beach, FL",
+   "tv": 8.918,
+   "peak": 9.117,
+   "w": 243,
+   "l": 99,
+   "comps": 13,
+   "cells": {
+    "31567:117695": {
+     "f": 21,
+     "partners": [
+      "Kendyl Maxwell"
+     ]
+    },
+    "25578:97149": {
+     "f": 3,
+     "partners": [
+      "Emma Abernathy"
+     ]
+    },
+    "31622:117904": {
+     "f": 9,
+     "partners": [
+      "Elle Sossong"
+     ]
+    },
+    "34243:126054": {
+     "f": 41,
+     "partners": [
+      "Elle Sossong"
+     ]
+    },
+    "31995:119079": {
+     "f": 3,
+     "partners": [
+      "Ella Grimes"
+     ]
+    },
+    "32578:120658": {
+     "f": 1,
+     "partners": [
+      "Brooklyn Rosales"
+     ]
+    }
+   }
+  },
+  {
+   "name": "Charlotte Jansen",
+   "id": 161398,
+   "region": "So. Cal / So. Nevada",
+   "club": "WAVE Beach",
+   "height": "5' 10\"",
+   "grad": 2028,
+   "city": "Del Mar, CA",
+   "tv": 8.813,
+   "peak": 9.049,
+   "w": 280,
+   "l": 120,
+   "comps": 21,
    "cells": {
     "34243:126056": {
      "f": 9,
      "partners": [
-      "Brooke Canaday"
+      "Abigail Moffett"
      ]
     },
     "31567:117695": {
-     "f": 9,
+     "f": 19,
      "partners": [
-      "Haisley Flanagan"
+      "Abigail Moffett"
      ]
     },
     "31483:117394": {
-     "f": 2,
+     "f": 5,
      "partners": [
-      "Brooke Canaday"
+      "Tristan Ana Del Riego"
      ]
     },
     "25578:97149": {
      "f": 5,
      "partners": [
-      "Brooke Canaday"
+      "Haisley Flanagan"
+     ]
+    },
+    "31568:117700": {
+     "f": 1,
+     "partners": [
+      "Abigail Moffett"
+     ]
+    },
+    "32578:120659": {
+     "f": 3,
+     "partners": [
+      "Abigail Moffett"
      ]
     },
     "34180:125823": {
      "f": 9,
      "partners": [
-      "Brooke Canaday"
+      "Abigail Moffett"
+     ]
+    },
+    "31622:117904": {
+     "f": 5,
+     "partners": [
+      "Nariah Johnson"
      ]
     },
     "36451:133267": {
      "f": 9,
      "partners": [
-      "Charlotte Jansen"
+      "Ella Buchanan"
+     ]
+    },
+    "30985:115903": {
+     "f": 2,
+     "partners": [
+      "Nariah Johnson"
+     ]
+    },
+    "33446:123435": {
+     "f": 17,
+     "partners": [
+      "Haisley Flanagan"
      ]
     },
     "40540:148435": {
-     "f": 2,
+     "f": 1,
      "partners": [
-      "Brooke Canaday"
+      "Nariah Johnson"
      ]
     }
    }
@@ -590,8 +770,8 @@
    "height": "5' 10\"",
    "grad": 2030,
    "city": "McKinney , TX",
-   "tv": 8.109,
-   "peak": 8.194,
+   "tv": 8.717,
+   "peak": 8.828,
    "w": 455,
    "l": 130,
    "comps": 14,
@@ -677,146 +857,6 @@
    }
   },
   {
-   "name": "Taylie Hansen",
-   "id": 99506,
-   "region": "Florida",
-   "club": "Vero Beach Beach Club (VBVB)",
-   "height": "6' 2\"",
-   "grad": 2028,
-   "city": "Vero Beach, FL",
-   "tv": 8.071,
-   "peak": 8.492,
-   "w": 243,
-   "l": 99,
-   "comps": 13,
-   "cells": {
-    "31567:117695": {
-     "f": 21,
-     "partners": [
-      "Kendyl Maxwell"
-     ]
-    },
-    "25578:97149": {
-     "f": 3,
-     "partners": [
-      "Emma Abernathy"
-     ]
-    },
-    "31622:117904": {
-     "f": 9,
-     "partners": [
-      "Elle Sossong"
-     ]
-    },
-    "34243:126054": {
-     "f": 41,
-     "partners": [
-      "Elle Sossong"
-     ]
-    },
-    "31995:119079": {
-     "f": 3,
-     "partners": [
-      "Ella Grimes"
-     ]
-    },
-    "32578:120658": {
-     "f": 1,
-     "partners": [
-      "Brooklyn Rosales"
-     ]
-    }
-   }
-  },
-  {
-   "name": "Charlotte Jansen",
-   "id": 161398,
-   "region": "So. Cal / So. Nevada",
-   "club": "WAVE Beach",
-   "height": "5' 10\"",
-   "grad": 2028,
-   "city": "Del Mar, CA",
-   "tv": 8.025,
-   "peak": 8.157,
-   "w": 270,
-   "l": 118,
-   "comps": 22,
-   "cells": {
-    "34243:126056": {
-     "f": 9,
-     "partners": [
-      "Abigail Moffett"
-     ]
-    },
-    "31567:117695": {
-     "f": 19,
-     "partners": [
-      "Abigail Moffett"
-     ]
-    },
-    "31483:117394": {
-     "f": 5,
-     "partners": [
-      "Tristan Ana Del Riego"
-     ]
-    },
-    "25578:97149": {
-     "f": 5,
-     "partners": [
-      "Haisley Flanagan"
-     ]
-    },
-    "31568:117700": {
-     "f": 1,
-     "partners": [
-      "Abigail Moffett"
-     ]
-    },
-    "32578:120659": {
-     "f": 3,
-     "partners": [
-      "Abigail Moffett"
-     ]
-    },
-    "34180:125823": {
-     "f": 9,
-     "partners": [
-      "Abigail Moffett"
-     ]
-    },
-    "31622:117904": {
-     "f": 5,
-     "partners": [
-      "Nariah Johnson"
-     ]
-    },
-    "36451:133267": {
-     "f": 9,
-     "partners": [
-      "Ella Buchanan"
-     ]
-    },
-    "30985:115903": {
-     "f": 2,
-     "partners": [
-      "Nariah Johnson"
-     ]
-    },
-    "33446:123435": {
-     "f": 17,
-     "partners": [
-      "Haisley Flanagan"
-     ]
-    },
-    "40540:148435": {
-     "f": 1,
-     "partners": [
-      "Nariah Johnson"
-     ]
-    }
-   }
-  },
-  {
    "name": "Sienna Cicero",
    "id": 124871,
    "region": "So. Cal / So. Nevada",
@@ -824,11 +864,11 @@
    "height": "5' 7\"",
    "grad": 2029,
    "city": "Villa Park , CA",
-   "tv": 7.92,
-   "peak": 8.002,
-   "w": 219,
+   "tv": 8.667,
+   "peak": 8.761,
+   "w": 226,
    "l": 73,
-   "comps": 8,
+   "comps": 9,
    "cells": {
     "38087:139560": {
      "f": 3,
@@ -851,52 +891,6 @@
    }
   },
   {
-   "name": "Elle Sossong",
-   "id": 33084,
-   "region": "Keystone",
-   "club": "",
-   "height": "5' 8\"",
-   "grad": 2028,
-   "city": "Phoenixville , PA",
-   "tv": 7.915,
-   "peak": 8.558,
-   "w": 261,
-   "l": 81,
-   "comps": 9,
-   "cells": {
-    "34180:125823": {
-     "f": 9,
-     "partners": [
-      "Sarah Albers"
-     ]
-    },
-    "31622:117904": {
-     "f": 9,
-     "partners": [
-      "Taylie Hansen"
-     ]
-    },
-    "31625:117914": {
-     "f": 9,
-     "partners": [
-      "Lyla Paulsen"
-     ]
-    },
-    "34243:126054": {
-     "f": 41,
-     "partners": [
-      "Taylie Hansen"
-     ]
-    },
-    "32578:120658": {
-     "f": 4,
-     "partners": [
-      "Breeze Johnson"
-     ]
-    }
-   }
-  },
-  {
    "name": "Regina Stella Broshear",
    "id": 64782,
    "region": "Northern California",
@@ -904,8 +898,8 @@
    "height": "5' 10\"",
    "grad": 2028,
    "city": "Saratoga , CA",
-   "tv": 7.843,
-   "peak": 8.084,
+   "tv": 8.611,
+   "peak": 8.84,
    "w": 393,
    "l": 107,
    "comps": 10,
@@ -943,6 +937,52 @@
    }
   },
   {
+   "name": "Elle Sossong",
+   "id": 33084,
+   "region": "Keystone",
+   "club": "",
+   "height": "5' 8\"",
+   "grad": 2028,
+   "city": "Phoenixville , PA",
+   "tv": 8.605,
+   "peak": 9.072,
+   "w": 261,
+   "l": 81,
+   "comps": 9,
+   "cells": {
+    "34180:125823": {
+     "f": 9,
+     "partners": [
+      "Sarah Albers"
+     ]
+    },
+    "31622:117904": {
+     "f": 9,
+     "partners": [
+      "Taylie Hansen"
+     ]
+    },
+    "31625:117914": {
+     "f": 9,
+     "partners": [
+      "Lyla Paulsen"
+     ]
+    },
+    "34243:126054": {
+     "f": 41,
+     "partners": [
+      "Taylie Hansen"
+     ]
+    },
+    "32578:120658": {
+     "f": 4,
+     "partners": [
+      "Breeze Johnson"
+     ]
+    }
+   }
+  },
+  {
    "name": "Elyse Smelcer",
    "id": 77570,
    "region": "Carolina",
@@ -950,8 +990,8 @@
    "height": "5' 11\"",
    "grad": 2028,
    "city": "Cary, NC",
-   "tv": 7.778,
-   "peak": 8.126,
+   "tv": 8.573,
+   "peak": 8.407,
    "w": 312,
    "l": 146,
    "comps": 8,
@@ -965,46 +1005,6 @@
    }
   },
   {
-   "name": "Milana Rivera",
-   "id": 60877,
-   "region": "Lone Star",
-   "club": "Third Coast",
-   "height": "5' 7\"",
-   "grad": 2029,
-   "city": "Spring , TX",
-   "tv": 7.67,
-   "peak": 8.232,
-   "w": 220,
-   "l": 139,
-   "comps": 11,
-   "cells": {
-    "34243:126056": {
-     "f": 3,
-     "partners": [
-      "Hannah Perez"
-     ]
-    },
-    "31625:117914": {
-     "f": 3,
-     "partners": [
-      "Sarah Cowan"
-     ]
-    },
-    "30437:114423": {
-     "f": 9,
-     "partners": [
-      "Olivia Herron"
-     ]
-    },
-    "38087:139559": {
-     "f": 17,
-     "partners": [
-      "Naomi Lygas"
-     ]
-    }
-   }
-  },
-  {
    "name": "Olivia LeDoyen",
    "id": 30929,
    "region": "So. Cal / So. Nevada",
@@ -1012,11 +1012,11 @@
    "height": "5' 8\"",
    "grad": 2030,
    "city": "Viera, FL",
-   "tv": 7.487,
-   "peak": 7.864,
-   "w": 826,
+   "tv": 8.074,
+   "peak": 8.401,
+   "w": 827,
    "l": 271,
-   "comps": 35,
+   "comps": 36,
    "cells": {
     "31483:117394": {
      "f": 31,
@@ -1046,11 +1046,11 @@
    "height": "5' 6\"",
    "grad": 2030,
    "city": "Los Angeles , CA",
-   "tv": 7.436,
-   "peak": 7.522,
-   "w": 298,
-   "l": 53,
-   "comps": 5,
+   "tv": 7.913,
+   "peak": 7.615,
+   "w": 301,
+   "l": 55,
+   "comps": 4,
    "cells": {}
   },
   {
@@ -1061,11 +1061,11 @@
    "height": "5' 11\"",
    "grad": 2029,
    "city": "Millsap, TX",
-   "tv": 6.863,
-   "peak": 7.874,
-   "w": 314,
+   "tv": 7.397,
+   "peak": 7.694,
+   "w": 320,
    "l": 135,
-   "comps": 11,
+   "comps": 12,
    "cells": {
     "38087:139560": {
      "f": 33,
@@ -2034,57 +2034,11 @@
      "f": 1
     }
    ]
-  },
-  {
-   "key": "32116:119440",
-   "tid": 32116,
-   "tdId": 119440,
-   "event": "CBVA Fall Championship Bid + AVP Bid Event Girl's 16u at Central Beach, Coronado, San Diego",
-   "short": "CBVA Fall Champ Bid + AVP",
-   "division": "Girls 16U",
-   "field": 19,
-   "date": "2025-08-24",
-   "sanction": "AVPA",
-   "players": [
-    {
-     "name": "Reagan Carlin",
-     "id": 92974,
-     "f": 1
-    },
-    {
-     "name": "Brooke Proctor",
-     "id": 91896,
-     "f": 1
-    }
-   ]
-  },
-  {
-   "key": "32113:119437",
-   "tid": 32113,
-   "tdId": 119437,
-   "event": "Women's A at Manhattan Pier, Manhattan Beach",
-   "short": "Women's A at Manhattan",
-   "division": "Womens A",
-   "field": 27,
-   "date": "2025-08-24",
-   "sanction": "AVPA",
-   "players": [
-    {
-     "name": "Charlotte Jansen",
-     "id": 161398,
-     "f": 1
-    },
-    {
-     "name": "Emerson Harper",
-     "id": 80837,
-     "f": 2
-    }
-   ]
   }
  ],
- "totalComps": 140,
- "totalEvents": 109,
- "totalEntries": 272,
+ "totalComps": 139,
+ "totalEvents": 108,
+ "totalEntries": 269,
  "droppedTeam": 75,
  "thresh": 3,
  "population": null,
