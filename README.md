@@ -2,7 +2,10 @@
 
 Cross-references the rosters of USA Volleyball's 2026 Beach NTDP Summer Training Series
 against each athlete's competition record on [Volleyball Life](https://volleyballlife.com),
-for the twelve months ending **9 August 2026**.
+for the twelve months ending **14 September 2026**.
+
+**[Start here: the report index](docs/index.html)** — every page below, grouped by the
+question it answers.
 
 Four cuts are covered:
 
@@ -13,7 +16,7 @@ Four cuts are covered:
 | **2027 and younger** | 60 | Age-eligible — see below | [`docs/bntdp-2027_younger.html`](docs/bntdp-2027_younger.html) |
 | **2028 and younger** | 60 | Age-eligible — see below | [`docs/bntdp-2028_younger.html`](docs/bntdp-2028_younger.html) |
 
-Two companion pages answer planning questions the matrix cannot:
+Four companion pages answer planning questions the matrix cannot:
 
 | Page | Question |
 | --- | --- |
@@ -21,6 +24,14 @@ Two companion pages answer planning questions the matrix cannot:
 | [`docs/partners-2028_top30.html`](docs/partners-2028_top30.html) | Who partners with whom inside the class-of-2028 top 30? |
 | [`docs/partners-2027_younger.html`](docs/partners-2027_younger.html) | The same, across the 18U-eligible top 60. |
 | [`docs/partners-2028_younger.html`](docs/partners-2028_younger.html) | The same, across the 17U-eligible top 60. |
+
+Three further pages step outside the roster reports:
+
+| Page | Question |
+| --- | --- |
+| [`docs/rank-2027_younger.html`](docs/rank-2027_younger.html) | How much of a ranking is real? A Bradley-Terry rating fitted over 17,119 girls, with bootstrap intervals on every place. |
+| [`docs/winrate.html`](docs/winrate.html) | At what level of opponent does one athlete stop winning? |
+| [`docs/anthro.html`](docs/anthro.html) | What do Olympic women's beach players actually weigh at a given height? |
 
 **Doubles only.** Club, 3v3 and 5v5 results are excluded: a placing there reflects a squad
 of five to twelve, not the individual. The test is roster size rather than the division
@@ -173,28 +184,24 @@ automatically at a word boundary.
 `data/*_clean.json` and `data/*_site.json` are the retrieved snapshots, so the reports can
 be regenerated without re-querying the API.
 
-## What the two groups look like
+## What the four cuts look like
 
-All five reports run on the same twelve-month window ending 11 August 2026 and the same
-rating epoch, so they are directly comparable.
+All four reports run on the same twelve-month window, 14 September 2025 to 14 September
+2026, and the same rating epoch, so they are directly comparable. Every tracked player
+(17,178 of them) was re-rated on 14 September 2026, after Volleyball Life replaced the
+TruVolley formula &mdash; ranks from before that date are not comparable with these.
 
-**The two cohort reports have since moved on.** `bntdp-2027_younger` and
-`bntdp-2028_younger` were rebuilt on 14 September 2026: every tracked player re-rated
-(17,178 of them) and the window rolled to the twelve months ending 14 September 2026.
-Until the class reports are rebuilt too, only those two are on the new epoch. Their
-head-to-head crosstables are still the 20 August pull and say so on the page, because
-the match feed now requires an account &mdash; see below.
+Their head-to-head crosstables are still the 20 August pull and say so on the page,
+because the match feed now requires an account &mdash; see below.
 
-| | Girls U18 | Girls U17 | Class of 2027 | Class of 2028 |
+| | Girls U18 | Girls U17 | 2027 and younger | 2028 and younger |
 | --- | --- | --- | --- | --- |
 | Athletes | 13 | 20 | 60 | 60 |
-| Events attended (doubles) | 87 | 110 | 294 | 283 |
-| Pairs competitions | 103 | 141 | 305 | 353 |
+| Events attended (doubles) | 90 | 108 | 224 | 250 |
+| Pairs competitions | 106 | 139 | 255 | 301 |
 | Matrix threshold | 3+ | 3+ | 8+ | 8+ |
-| Matrix columns | 20 | 25 | 23 | 21 |
-| Club results dropped | 40 | 73 | 226 | 158 |
-| Distinct doubles matches | 815 | 1,088 | 2,635 | 3,429 |
-| Head-to-head pairings | 52 | 62 | 357 | 434 |
+| Matrix columns | 20 | 25 | 27 | 25 |
+| Club results dropped | 41 | 75 | 230 | 196 |
 
 The class of 2027 is the stronger cohort at the top — Thais Treumann alone is rated 10.170,
 above anything in 2028 — but its members meet each other less often: 357 pairings from 2,635
