@@ -4,16 +4,12 @@ Cross-references the rosters of USA Volleyball's 2026 Beach NTDP Summer Training
 against each athlete's competition record on [Volleyball Life](https://volleyballlife.com),
 for the twelve months ending **9 August 2026**.
 
-Three groups are covered:
+Four cuts are covered:
 
 | Group | Athletes | Source | Report |
 | --- | --- | --- | --- |
 | Girls U18 | 13 | Published NTDP roster | [`docs/bntdp-18u.html`](docs/bntdp-18u.html) |
 | Girls U17 | 20 | Published NTDP roster | [`docs/bntdp-17u.html`](docs/bntdp-17u.html) |
-| Class of 2027 | 60 | Derived — see below | [`docs/bntdp-2027.html`](docs/bntdp-2027.html) |
-| Class of 2028 | 60 | Derived — see below | [`docs/bntdp-2028.html`](docs/bntdp-2028.html) |
-| Class of 2028 | 30 | Same cohort, tighter cut | [`docs/bntdp-2028_top30.html`](docs/bntdp-2028_top30.html) |
-| Class of 2028 | 20 | Same cohort, tightest cut | [`docs/bntdp-2028_top20.html`](docs/bntdp-2028_top20.html) |
 | **2027 and younger** | 60 | Age-eligible — see below | [`docs/bntdp-2027_younger.html`](docs/bntdp-2027_younger.html) |
 | **2028 and younger** | 60 | Age-eligible — see below | [`docs/bntdp-2028_younger.html`](docs/bntdp-2028_younger.html) |
 
