@@ -32,14 +32,14 @@
    "CA"
   ],
   [
-   "Ella Olson",
-   3113,
-   "CA"
-  ],
-  [
    "Haleigh Bauer",
    110867,
    "NE"
+  ],
+  [
+   "Ella Olson",
+   3113,
+   "CA"
   ],
   [
    "Tristan Ana Del Riego",
@@ -62,9 +62,9 @@
    "WA"
   ],
   [
-   "Lia Ray",
-   25298,
-   "FL"
+   "Kendal Walker",
+   146170,
+   "VA"
   ],
   [
    "Leann Wise",
@@ -72,9 +72,9 @@
    "TX"
   ],
   [
-   "Kendal Walker",
-   146170,
-   "VA"
+   "Lia Ray",
+   25298,
+   "FL"
   ],
   [
    "Zoe Znider",
@@ -82,13 +82,13 @@
    "CA"
   ],
   [
-   "Baylee Wilson",
-   60256,
+   "Simrin Adams",
+   25289,
    "CA"
   ],
   [
-   "Simrin Adams",
-   25289,
+   "Baylee Wilson",
+   60256,
    "CA"
   ],
   [
@@ -107,18 +107,23 @@
    "TX"
   ],
   [
+   "Victoria \"VF\" Flores",
+   125077,
+   "CA"
+  ],
+  [
    "Sadie Stafford",
    147394,
    "VA"
   ],
   [
-   "Sandie Souza",
-   2771,
+   "Brooke Proctor",
+   91896,
    "CA"
   ],
   [
-   "Brooke Proctor",
-   91896,
+   "Sandie Souza",
+   2771,
    "CA"
   ],
   [
@@ -127,23 +132,13 @@
    "CA"
   ],
   [
-   "Thalia Lindahl",
-   44267,
-   "CA"
-  ],
-  [
    "Ashley Ruschill",
    105245,
    "TX"
   ],
   [
-   "Victoria \"VF\" Flores",
-   125077,
-   "CA"
-  ],
-  [
-   "Addison Choi",
-   5160,
+   "Thalia Lindahl",
+   44267,
    "CA"
   ],
   [
@@ -157,6 +152,11 @@
    "FL"
   ],
   [
+   "Addison Choi",
+   5160,
+   "CA"
+  ],
+  [
    "Regina Stella Broshear",
    64782,
    "CA"
@@ -167,23 +167,13 @@
    "AZ"
   ],
   [
-   "Abigail Moffett",
-   9258,
-   "CA"
-  ],
-  [
    "Kaeley \u201cKJ\u201d Johnston",
    72414,
    "CA"
   ],
   [
-   "Karsyn Rogers",
-   29918,
-   "TX"
-  ],
-  [
-   "Ashlynn Proctor",
-   91897,
+   "Abigail Moffett",
+   9258,
    "CA"
   ],
   [
@@ -192,14 +182,19 @@
    "CA"
   ],
   [
-   "Kate Berry",
-   27878,
-   "WA"
+   "Karsyn Rogers",
+   29918,
+   "TX"
   ],
   [
    "Reagan Carlin",
    92974,
    "CA"
+  ],
+  [
+   "Kate Berry",
+   27878,
+   "WA"
   ],
   [
    "Milaniakai Padilla",
@@ -212,13 +207,18 @@
    "CA"
   ],
   [
+   "Ashlynn Proctor",
+   91897,
+   "CA"
+  ],
+  [
    "Lerin Rosenthal",
    5973,
    "CA"
   ],
   [
-   "Allyn Hilt",
-   40933,
+   "Wanli Sakugawa",
+   111631,
    "CA"
   ],
   [
@@ -227,14 +227,19 @@
    "CA"
   ],
   [
+   "Allyn Hilt",
+   40933,
+   "CA"
+  ],
+  [
    "Christy Boulware",
    2420,
    "FL"
   ],
   [
-   "Wanli Sakugawa",
-   111631,
-   "CA"
+   "Sloan Schaffer",
+   91740,
+   "TX"
   ],
   [
    "Lyla Paulsen",
@@ -247,18 +252,8 @@
    "TX"
   ],
   [
-   "Sloan Schaffer",
-   91740,
-   "TX"
-  ],
-  [
    "Cienna Enriquez",
    20587,
-   "CA"
-  ],
-  [
-   "Lily Vandeweghe",
-   105637,
    "CA"
   ],
   [
@@ -267,8 +262,8 @@
    "FL"
   ],
   [
-   "JoJo Wilson",
-   59914,
+   "Lily Vandeweghe",
+   105637,
    "CA"
   ],
   [
@@ -292,13 +287,18 @@
    "CA"
   ],
   [
+   "JoJo Wilson",
+   59914,
+   "CA"
+  ],
+  [
    "Lauren Shanner",
    98873,
    "CA"
   ],
   [
-   "Emma Burnside",
-   23188,
+   "Hayden Leavitt",
+   80733,
    "TX"
   ]
  ],
@@ -308,7 +308,7 @@
    "club": "Bevolley Academy",
    "city": "St Pete Beach ",
    "state": "FL",
-   "tv": 10.196,
+   "tv": 12.421,
    "grad": 2027
   },
   "8426": {
@@ -316,7 +316,7 @@
    "club": "Spiker Beach Volleyball Club",
    "city": "Laguna Beach",
    "state": "CA",
-   "tv": 9.451,
+   "tv": 10.524,
    "grad": 2027
   },
   "24515": {
@@ -324,7 +324,7 @@
    "club": "Spiker Beach Volleyball Club",
    "city": "Seattle",
    "state": "WA",
-   "tv": 9.146,
+   "tv": 10.328,
    "grad": 2027
   },
   "84049": {
@@ -332,7 +332,7 @@
    "club": "BRVA Beach",
    "city": "Winchester ",
    "state": "VA",
-   "tv": 8.501,
+   "tv": 9.087,
    "grad": 2028
   },
   "22544": {
@@ -340,7 +340,7 @@
    "club": "MBsand",
    "city": "Los Angeles",
    "state": "CA",
-   "tv": 8.822,
+   "tv": 10.099,
    "grad": 2028
   },
   "92193": {
@@ -348,31 +348,31 @@
    "club": "WAVE Beach",
    "city": "RCHO SANTA FE",
    "state": "CA",
-   "tv": 8.571,
+   "tv": 9.561,
    "grad": 2029
-  },
-  "3113": {
-   "height": "5' 9\"",
-   "club": "Spiker Beach Volleyball Club",
-   "city": "Newport Beach",
-   "state": "CA",
-   "tv": 9.061,
-   "grad": 2027
   },
   "110867": {
    "height": "6' 2\"",
    "club": "",
    "city": "Lincoln",
    "state": "NE",
-   "tv": 7.82,
+   "tv": 7.638,
    "grad": 2028
+  },
+  "3113": {
+   "height": "5' 9\"",
+   "club": "Spiker Beach Volleyball Club",
+   "city": "Newport Beach",
+   "state": "CA",
+   "tv": 10.191,
+   "grad": 2027
   },
   "66728": {
    "height": "5' 8\"",
    "club": "MBsand",
    "city": "Hermosa Beach",
    "state": "CA",
-   "tv": 8.454,
+   "tv": 9.189,
    "grad": 2029
   },
   "59411": {
@@ -380,7 +380,7 @@
    "club": "Club W",
    "city": "Carolina Beach",
    "state": "NC",
-   "tv": 8.323,
+   "tv": 9.388,
    "grad": 2028
   },
   "4517": {
@@ -388,7 +388,7 @@
    "club": "MBsand",
    "city": "Aptos",
    "state": "CA",
-   "tv": 8.354,
+   "tv": 9.537,
    "grad": 2027
   },
   "42463": {
@@ -396,15 +396,15 @@
    "club": "Dakine Beach Volleyball Club",
    "city": "Tumwater ",
    "state": "WA",
-   "tv": 8.002,
+   "tv": 9.151,
    "grad": 2028
   },
-  "25298": {
-   "height": "5' 10\"",
-   "club": "Optimum Beach",
-   "city": "Delray Beach ",
-   "state": "FL",
-   "tv": 8.173,
+  "146170": {
+   "height": null,
+   "club": "108 Beach Volleyball Club",
+   "city": "Fredericksburg",
+   "state": "VA",
+   "tv": 8.204,
    "grad": 2028
   },
   "18671": {
@@ -412,15 +412,15 @@
    "club": "210 Beach",
    "city": "Stockdale",
    "state": "TX",
-   "tv": 9.107,
+   "tv": 10.125,
    "grad": 2027
   },
-  "146170": {
-   "height": null,
-   "club": "108 Beach Volleyball Club",
-   "city": "Fredericksburg",
-   "state": "VA",
-   "tv": 8.101,
+  "25298": {
+   "height": "5' 10\"",
+   "club": "Optimum Beach",
+   "city": "Delray Beach ",
+   "state": "FL",
+   "tv": 8.263,
    "grad": 2028
   },
   "25288": {
@@ -428,7 +428,15 @@
    "club": "Spiker Beach Volleyball Club",
    "city": "Huntington Beach",
    "state": "CA",
-   "tv": 8.391,
+   "tv": 9.393,
+   "grad": 2027
+  },
+  "25289": {
+   "height": "5' 9\"",
+   "club": "Spiker Beach Volleyball Club",
+   "city": "Long Beach",
+   "state": "CA",
+   "tv": 10.065,
    "grad": 2027
   },
   "60256": {
@@ -436,23 +444,15 @@
    "club": "WAVE Beach",
    "city": "Del Mar",
    "state": "CA",
-   "tv": 8.107,
+   "tv": 8.09,
    "grad": 2029
-  },
-  "25289": {
-   "height": "5' 9\"",
-   "club": "Spiker Beach Volleyball Club",
-   "city": "Long Beach",
-   "state": "CA",
-   "tv": 8.214,
-   "grad": 2027
   },
   "2048": {
    "height": "5' 6\"",
    "club": "P4:13 Beach",
    "city": "Harrisonville",
    "state": "MO",
-   "tv": 8.282,
+   "tv": 9.318,
    "grad": 2028
   },
   "80837": {
@@ -460,7 +460,7 @@
    "club": "South Bay Sand",
    "city": "Los Angeles ",
    "state": "CA",
-   "tv": 7.436,
+   "tv": 7.913,
    "grad": 2030
   },
   "28688": {
@@ -468,47 +468,47 @@
    "club": "Spiker Beach Volleyball Club",
    "city": "Celina",
    "state": "TX",
-   "tv": 8.892,
+   "tv": 10.228,
    "grad": 2027
+  },
+  "125077": {
+   "height": "5' 5\"",
+   "club": "MBsand",
+   "city": "Redondo Beach ",
+   "state": "CA",
+   "tv": 7.449,
+   "grad": 2031
   },
   "147394": {
    "height": "6' 0\"",
    "club": "757 Beach",
    "city": "NORFOLK",
    "state": "VA",
-   "tv": 8.703,
+   "tv": 9.448,
    "grad": 2028
-  },
-  "2771": {
-   "height": "5' 11\"",
-   "club": "Spiker Beach Volleyball Club",
-   "city": "Riverside",
-   "state": "CA",
-   "tv": 8.553,
-   "grad": 2027
   },
   "91896": {
    "height": "6'",
    "club": "WAVE Beach",
    "city": "Coronado",
    "state": "CA",
-   "tv": 8.429,
+   "tv": 9.303,
    "grad": 2029
+  },
+  "2771": {
+   "height": "5' 11\"",
+   "club": "Spiker Beach Volleyball Club",
+   "city": "Riverside",
+   "state": "CA",
+   "tv": 10.193,
+   "grad": 2027
   },
   "26984": {
    "height": "5' 10\"",
    "club": "Golden Gate volleyball",
    "city": "Greenbrae",
    "state": "CA",
-   "tv": 8.405,
-   "grad": 2027
-  },
-  "44267": {
-   "height": "5' 11\"",
-   "club": "Spiker Beach Volleyball Club",
-   "city": "Rancho Palos Verdes",
-   "state": "CA",
-   "tv": 8.463,
+   "tv": 9.509,
    "grad": 2027
   },
   "105245": {
@@ -516,23 +516,15 @@
    "club": "Jaja beach",
    "city": "McKinney ",
    "state": "TX",
-   "tv": 8.37,
+   "tv": 9.239,
    "grad": 2029
   },
-  "125077": {
-   "height": "5' 5\"",
-   "club": "MBsand",
-   "city": "Redondo Beach ",
+  "44267": {
+   "height": "5' 11\"",
+   "club": "Spiker Beach Volleyball Club",
+   "city": "Rancho Palos Verdes",
    "state": "CA",
-   "tv": 7.042,
-   "grad": 2031
-  },
-  "5160": {
-   "height": "5' 7\"",
-   "club": "MBsand",
-   "city": "Redondo Beach",
-   "state": "CA",
-   "tv": 8.318,
+   "tv": 9.528,
    "grad": 2027
   },
   "91052": {
@@ -540,7 +532,7 @@
    "club": "P4:13 Beach",
    "city": "Wichita ",
    "state": "KS",
-   "tv": 8.643,
+   "tv": 9.702,
    "grad": 2028
   },
   "24727": {
@@ -548,7 +540,15 @@
    "club": null,
    "city": "Port St Lucie",
    "state": "FL",
-   "tv": 8.322,
+   "tv": 9.194,
+   "grad": 2027
+  },
+  "5160": {
+   "height": "5' 7\"",
+   "club": "MBsand",
+   "city": "Redondo Beach",
+   "state": "CA",
+   "tv": 9.433,
    "grad": 2027
   },
   "64782": {
@@ -556,7 +556,7 @@
    "club": "Golden Gate volleyball",
    "city": "Saratoga ",
    "state": "CA",
-   "tv": 7.843,
+   "tv": 8.611,
    "grad": 2028
   },
   "23641": {
@@ -564,39 +564,23 @@
    "club": "Volley For Life",
    "city": "Gilbert",
    "state": "AZ",
-   "tv": 7.928,
+   "tv": 8.972,
    "grad": 2027
-  },
-  "9258": {
-   "height": "5' 9\"",
-   "club": "Spiker Beach Volleyball Club",
-   "city": "Yorba Linda",
-   "state": "CA",
-   "tv": 8.104,
-   "grad": 2028
   },
   "72414": {
    "height": "5' 5\"",
    "club": "MBsand",
    "city": "Huntington Beach",
    "state": "CA",
-   "tv": 7.369,
+   "tv": 7.637,
    "grad": 2032
   },
-  "29918": {
-   "height": "5' 8\"",
-   "club": "692 Beach Volleyball Club- Texas",
-   "city": "Fort Worth",
-   "state": "TX",
-   "tv": 8.331,
-   "grad": 2027
-  },
-  "91897": {
-   "height": "5' 11\"",
-   "club": "WAVE Beach",
-   "city": "Coronado",
+  "9258": {
+   "height": "5' 9\"",
+   "club": "Spiker Beach Volleyball Club",
+   "city": "Yorba Linda",
    "state": "CA",
-   "tv": 8.539,
+   "tv": 8.99,
    "grad": 2028
   },
   "124871": {
@@ -604,31 +588,39 @@
    "club": "Spiker Beach Volleyball Club",
    "city": "Villa Park ",
    "state": "CA",
-   "tv": 7.92,
+   "tv": 8.667,
    "grad": 2029
   },
-  "27878": {
-   "height": "5' 7\"",
-   "club": "KBeach VBC",
-   "city": "Wenatchee",
-   "state": "WA",
-   "tv": 7.851,
-   "grad": 2028
+  "29918": {
+   "height": "5' 8\"",
+   "club": "692 Beach Volleyball Club- Texas",
+   "city": "Fort Worth",
+   "state": "TX",
+   "tv": 9.294,
+   "grad": 2027
   },
   "92974": {
    "height": "5' 10\"",
    "club": "WAVE Beach",
    "city": "Encinitas",
    "state": "CA",
-   "tv": 8.386,
+   "tv": 9.191,
    "grad": 2030
+  },
+  "27878": {
+   "height": "5' 7\"",
+   "club": "KBeach VBC",
+   "city": "Wenatchee",
+   "state": "WA",
+   "tv": 8.851,
+   "grad": 2028
   },
   "95165": {
    "height": "5' 10\"",
    "club": "Outrigger Canoe Club Girls Beach Volleyball",
    "city": "Wailuku",
    "state": "HI",
-   "tv": 8.644,
+   "tv": 9.805,
    "grad": 2028
   },
   "29854": {
@@ -636,39 +628,23 @@
    "club": "South Bay Sand",
    "city": "Redondo Beach",
    "state": "CA",
-   "tv": 8.852,
+   "tv": 10.229,
    "grad": 2027
+  },
+  "91897": {
+   "height": "5' 11\"",
+   "club": "WAVE Beach",
+   "city": "Coronado",
+   "state": "CA",
+   "tv": 9.617,
+   "grad": 2028
   },
   "5973": {
    "height": "5' 11\"",
    "club": "MBsand",
    "city": "Hermosa Beach",
    "state": "CA",
-   "tv": 8.442,
-   "grad": 2027
-  },
-  "40933": {
-   "height": "6' 1\"",
-   "club": "South Bay Sand",
-   "city": "Hermosa Beach",
-   "state": "CA",
-   "tv": 8.22,
-   "grad": 2027
-  },
-  "64896": {
-   "height": "5' 9\"",
-   "club": "Santa Cruz Beach Volleyball Club",
-   "city": "Santa Cruz",
-   "state": "CA",
-   "tv": 8.696,
-   "grad": 2028
-  },
-  "2420": {
-   "height": null,
-   "club": "C3 Beach/Tallahassee Volleyball Academy",
-   "city": "Tallahassee",
-   "state": "FL",
-   "tv": 8.452,
+   "tv": 9.638,
    "grad": 2027
   },
   "111631": {
@@ -676,15 +652,47 @@
    "club": "MBsand",
    "city": "Torrance",
    "state": "CA",
-   "tv": 7.002,
+   "tv": 7.474,
    "grad": 2031
+  },
+  "64896": {
+   "height": "5' 9\"",
+   "club": "Santa Cruz Beach Volleyball Club",
+   "city": "Santa Cruz",
+   "state": "CA",
+   "tv": 9.695,
+   "grad": 2028
+  },
+  "40933": {
+   "height": "6' 1\"",
+   "club": "South Bay Sand",
+   "city": "Hermosa Beach",
+   "state": "CA",
+   "tv": 9.361,
+   "grad": 2027
+  },
+  "2420": {
+   "height": null,
+   "club": "C3 Beach/Tallahassee Volleyball Academy",
+   "city": "Tallahassee",
+   "state": "FL",
+   "tv": 9.326,
+   "grad": 2027
+  },
+  "91740": {
+   "height": "5' 6\"",
+   "club": "692 Beach Volleyball Club- Texas",
+   "city": "Plano",
+   "state": "TX",
+   "tv": 8.278,
+   "grad": 2029
   },
   "19592": {
    "height": "5' 10\"",
    "club": "Independent",
    "city": "Plano",
    "state": "TX",
-   "tv": 8.055,
+   "tv": 8.91,
    "grad": 2027
   },
   "22324": {
@@ -692,15 +700,7 @@
    "club": "Madsand",
    "city": "Southlake",
    "state": "TX",
-   "tv": 7.083,
-   "grad": 2029
-  },
-  "91740": {
-   "height": "5' 6\"",
-   "club": "692 Beach Volleyball Club- Texas",
-   "city": "Plano",
-   "state": "TX",
-   "tv": 7.47,
+   "tv": 7.793,
    "grad": 2029
   },
   "20587": {
@@ -708,39 +708,31 @@
    "club": "Spiker Beach Volleyball Club",
    "city": "Huntington Beach ",
    "state": "CA",
-   "tv": 7.184,
+   "tv": 8.098,
    "grad": 2028
-  },
-  "105637": {
-   "height": "6' 2\"",
-   "club": "MBsand",
-   "city": "Hermosa Beach",
-   "state": "CA",
-   "tv": 7.942,
-   "grad": 2029
   },
   "30929": {
    "height": "5' 8\"",
    "club": "Southbay Sand",
    "city": "Viera",
    "state": "FL",
-   "tv": 7.487,
+   "tv": 8.074,
    "grad": 2030
   },
-  "59914": {
-   "height": "6'",
-   "club": "WAVE Beach",
-   "city": "Del Mar",
+  "105637": {
+   "height": "6' 2\"",
+   "club": "MBsand",
+   "city": "Hermosa Beach",
    "state": "CA",
-   "tv": 8.578,
-   "grad": 2027
+   "tv": 8.745,
+   "grad": 2029
   },
   "58484": {
    "height": "6' 0\"",
    "club": "MBsand",
    "city": "Las Vegas",
    "state": "NV",
-   "tv": 7.207,
+   "tv": 8.145,
    "grad": 2030
   },
   "128445": {
@@ -748,7 +740,7 @@
    "club": "MVP Beach ",
    "city": "Spanish Fort",
    "state": "AL",
-   "tv": 8.227,
+   "tv": 9.119,
    "grad": 2028
   },
   "68351": {
@@ -756,7 +748,7 @@
    "club": "S3",
    "city": "Acworth",
    "state": "GA",
-   "tv": 8.338,
+   "tv": 9.101,
    "grad": 2027
   },
   "64296": {
@@ -764,32 +756,40 @@
    "club": null,
    "city": "Thousand Oaks",
    "state": "CA",
-   "tv": 7.516,
+   "tv": 8.347,
    "grad": 2029
+  },
+  "59914": {
+   "height": "6'",
+   "club": "WAVE Beach",
+   "city": "Del Mar",
+   "state": "CA",
+   "tv": 9.504,
+   "grad": 2027
   },
   "98873": {
    "height": "6'",
    "club": "WAVE Beach",
    "city": "San Diego",
    "state": "CA",
-   "tv": 7.282,
+   "tv": 7.561,
    "grad": 2029
   },
-  "23188": {
-   "height": "5' 7\"",
+  "80733": {
+   "height": "5' 8\"",
    "club": "692 Beach Volleyball Club- Texas",
-   "city": "Allen",
+   "city": "Fort Worth",
    "state": "TX",
-   "tv": 7.919,
-   "grad": 2027
+   "tv": 7.162,
+   "grad": 2030
   }
  },
  "population": 17119,
- "rated": 14580,
+ "rated": 14554,
  "cut": {
-  "nTop": 8.09021069509447,
-  "next": 8.081489252903449,
-  "nextName": "Danica  Waterman"
+  "nTop": 8.912548074626867,
+  "next": 8.890417820895523,
+  "nextName": "Emma Burnside"
  },
  "rankRanges": {
   "2227": [
@@ -802,242 +802,242 @@
   ],
   "24515": [
    2,
-   14
+   7
   ],
   "84049": [
-   4,
-   45
+   3,
+   16
   ],
   "22544": [
    4,
-   24
+   22
   ],
   "92193": [
-   5,
-   38
-  ],
-  "3113": [
-   5,
-   67
+   3,
+   39
   ],
   "110867": [
-   3,
-   60
+   4,
+   61
+  ],
+  "3113": [
+   4,
+   51
   ],
   "66728": [
-   4,
-   39
+   5,
+   52
   ],
   "59411": [
    5,
-   33
+   27
   ],
   "4517": [
    4,
-   35
+   63
   ],
   "42463": [
    5,
-   37
-  ],
-  "25298": [
-   6,
-   80
-  ],
-  "18671": [
-   4,
-   67
+   34
   ],
   "146170": [
-   4,
-   37
+   6,
+   69
+  ],
+  "18671": [
+   6,
+   41
+  ],
+  "25298": [
+   5,
+   108
   ],
   "25288": [
    8,
    39
   ],
-  "60256": [
-   3,
-   52
-  ],
   "25289": [
-   9,
-   69
+   6,
+   59
+  ],
+  "60256": [
+   4,
+   83
   ],
   "2048": [
-   8,
-   49
+   7,
+   41
   ],
   "80837": [
-   5,
-   43
+   7,
+   56
   ],
   "28688": [
    10,
-   38
+   39
+  ],
+  "125077": [
+   6,
+   72
   ],
   "147394": [
+   9,
+   70
+  ],
+  "91896": [
    8,
-   101
+   117
   ],
   "2771": [
    13,
-   57
-  ],
-  "91896": [
-   5,
-   108
+   70
   ],
   "26984": [
-   14,
-   78
-  ],
-  "44267": [
-   21,
-   63
-  ],
-  "105245": [
-   11,
+   8,
    57
   ],
-  "125077": [
-   5,
-   113
-  ],
-  "5160": [
-   15,
-   56
-  ],
-  "91052": [
-   14,
+  "105245": [
+   19,
    68
   ],
+  "44267": [
+   20,
+   61
+  ],
+  "91052": [
+   15,
+   74
+  ],
   "24727": [
-   8,
-   65
+   14,
+   71
+  ],
+  "5160": [
+   19,
+   59
   ],
   "64782": [
    16,
-   61
+   56
   ],
   "23641": [
-   15,
+   14,
    69
   ],
-  "9258": [
-   13,
-   60
-  ],
   "72414": [
-   8,
-   64
+   17,
+   74
   ],
-  "29918": [
-   16,
-   89
-  ],
-  "91897": [
-   12,
-   73
+  "9258": [
+   20,
+   65
   ],
   "124871": [
-   15,
-   89
+   13,
+   109
   ],
-  "27878": [
-   15,
-   113
+  "29918": [
+   14,
+   65
   ],
   "92974": [
    11,
    87
   ],
+  "27878": [
+   13,
+   106
+  ],
   "95165": [
-   22,
-   94
+   16,
+   72
   ],
   "29854": [
-   16,
-   88
+   10,
+   101
   ],
-  "5973": [
-   18,
-   99
-  ],
-  "40933": [
-   24,
+  "91897": [
+   13,
    105
   ],
-  "64896": [
-   19,
-   93
-  ],
-  "2420": [
-   19,
-   104
+  "5973": [
+   20,
+   105
   ],
   "111631": [
-   15,
-   97
+   14,
+   109
   ],
-  "19592": [
-   20,
+  "64896": [
+   13,
+   108
+  ],
+  "40933": [
+   23,
    89
   ],
-  "22324": [
-   20,
-   88
+  "2420": [
+   31,
+   102
   ],
   "91740": [
    35,
-   91
-  ],
-  "20587": [
-   27,
-   100
-  ],
-  "105637": [
-   31,
-   124
-  ],
-  "30929": [
-   26,
-   94
-  ],
-  "59914": [
-   24,
-   140
-  ],
-  "58484": [
-   32,
-   110
-  ],
-  "128445": [
-   30,
    92
   ],
+  "19592": [
+   31,
+   88
+  ],
+  "22324": [
+   18,
+   93
+  ],
+  "20587": [
+   23,
+   95
+  ],
+  "30929": [
+   29,
+   102
+  ],
+  "105637": [
+   17,
+   116
+  ],
+  "58484": [
+   24,
+   112
+  ],
+  "128445": [
+   29,
+   105
+  ],
   "68351": [
-   35,
-   108
+   36,
+   126
   ],
   "64296": [
-   31,
-   122
+   37,
+   118
+  ],
+  "59914": [
+   20,
+   163
   ],
   "98873": [
-   37,
-   123
+   29,
+   106
   ],
-  "23188": [
-   44,
-   107
+  "80733": [
+   34,
+   149
   ]
  },
  "classes": {
-  "2027": 24,
+  "2027": 23,
   "2028": 18,
   "2029": 11,
-  "2030": 4,
+  "2030": 5,
   "2031": 2,
   "2032": 1
  }

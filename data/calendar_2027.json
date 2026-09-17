@@ -1,924 +1,11 @@
 {
  "group": "2027",
- "label": "Class of 2027 &#8212; top 60",
+ "label": "Class of 2027 \u2014 top 60",
  "window": [
-  "2025-08-20",
-  "2026-08-20"
+  "2025-09-14",
+  "2026-09-14"
  ],
  "events": [
-  {
-   "tid": 32088,
-   "name": "Women's AA at Main Beach, Santa Cruz",
-   "date": "2025-08-23",
-   "endDate": "2025-08-23",
-   "sanction": "AVPA",
-   "location": "",
-   "t15": 0,
-   "t30": 0,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "Women's",
-     "t15": 0,
-     "t30": 0,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Womens AA",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Lekhana Donnies",
-       "f": 21,
-       "field": 25,
-       "div": "Womens AA"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Womens AA",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Lekhana Donnies",
-     "f": 21,
-     "field": 25,
-     "div": "Womens AA"
-    }
-   ]
-  },
-  {
-   "tid": 26091,
-   "name": "ASC Sand Jr August Classic AVP* & USAV",
-   "date": "2025-08-24",
-   "endDate": "2025-08-24",
-   "sanction": "AVPA",
-   "location": "ASC Sand Complex",
-   "t15": 0,
-   "t30": 1,
-   "t60": 2,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 1,
-     "t60": 2,
-     "divisions": [
-      {
-       "name": "Girls 18U/16U",
-       "n": 2
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Paloma Smith",
-       "f": 1,
-       "field": 8,
-       "div": "Girls 18U/16U"
-      },
-      {
-       "name": "Izzy Fischer",
-       "f": 1,
-       "field": 8,
-       "div": "Girls 18U/16U"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Girls 18U/16U",
-     "n": 2
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Paloma Smith",
-     "f": 1,
-     "field": 8,
-     "div": "Girls 18U/16U"
-    },
-    {
-     "name": "Izzy Fischer",
-     "f": 1,
-     "field": 8,
-     "div": "Girls 18U/16U"
-    }
-   ]
-  },
-  {
-   "tid": 32306,
-   "name": "Mich Ultra Premier Tour: $4,000 Gene Selznick Women's Open at Hermosa Pier, Hermosa Beach",
-   "date": "2025-08-30",
-   "endDate": "2025-08-30",
-   "sanction": "AVPA",
-   "location": "",
-   "t15": 1,
-   "t30": 2,
-   "t60": 2,
-   "brackets": [
-    {
-     "bracket": "Women's",
-     "t15": 1,
-     "t30": 2,
-     "t60": 2,
-     "divisions": [
-      {
-       "name": "Womens Open",
-       "n": 2
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Thalia Lindahl",
-       "f": 33,
-       "field": 39,
-       "div": "Womens Open"
-      },
-      {
-       "name": "Simrin Adams",
-       "f": 33,
-       "field": 39,
-       "div": "Womens Open"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Womens Open",
-     "n": 2
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Thalia Lindahl",
-     "f": 33,
-     "field": 39,
-     "div": "Womens Open"
-    },
-    {
-     "name": "Simrin Adams",
-     "f": 33,
-     "field": 39,
-     "div": "Womens Open"
-    }
-   ]
-  },
-  {
-   "tid": 32276,
-   "name": "CBVA Fall Championship Bid + AVP Bid Event Girl's 16u at Manhattan Pier, Manhattan Beach",
-   "date": "2025-08-30",
-   "endDate": "2025-08-30",
-   "sanction": "AVPA",
-   "location": "",
-   "t15": 0,
-   "t30": 0,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "16U",
-     "t15": 0,
-     "t30": 0,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Girls 16U",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Linnaea Nielsen",
-       "f": 5,
-       "field": 15,
-       "div": "Girls 16U"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Girls 16U",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Linnaea Nielsen",
-     "f": 5,
-     "field": 15,
-     "div": "Girls 16U"
-    }
-   ]
-  },
-  {
-   "tid": 32326,
-   "name": "Women's A at Manhattan Pier, Manhattan Beach",
-   "date": "2025-08-31",
-   "endDate": "2025-08-31",
-   "sanction": "AVPA",
-   "location": "",
-   "t15": 0,
-   "t30": 1,
-   "t60": 3,
-   "brackets": [
-    {
-     "bracket": "Women's",
-     "t15": 0,
-     "t30": 1,
-     "t60": 3,
-     "divisions": [
-      {
-       "name": "Womens A",
-       "n": 3
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Allyn Hilt",
-       "f": 3,
-       "field": 23,
-       "div": "Womens A"
-      },
-      {
-       "name": "Leah Blair",
-       "f": 3,
-       "field": 23,
-       "div": "Womens A"
-      },
-      {
-       "name": "Ashley Chuba",
-       "f": 13,
-       "field": 23,
-       "div": "Womens A"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Womens A",
-     "n": 3
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Allyn Hilt",
-     "f": 3,
-     "field": 23,
-     "div": "Womens A"
-    },
-    {
-     "name": "Leah Blair",
-     "f": 3,
-     "field": 23,
-     "div": "Womens A"
-    },
-    {
-     "name": "Ashley Chuba",
-     "f": 13,
-     "field": 23,
-     "div": "Womens A"
-    }
-   ]
-  },
-  {
-   "tid": 32313,
-   "name": "Coed AAA at Hermosa Pier, Hermosa Beach",
-   "date": "2025-08-31",
-   "endDate": "2025-08-31",
-   "sanction": "AVPA",
-   "location": "",
-   "t15": 0,
-   "t30": 1,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "Coed",
-     "t15": 0,
-     "t30": 1,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Coed AAA",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Addison Choi",
-       "f": 5,
-       "field": 8,
-       "div": "Coed AAA"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Coed AAA",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Addison Choi",
-     "f": 5,
-     "field": 8,
-     "div": "Coed AAA"
-    }
-   ]
-  },
-  {
-   "tid": 32324,
-   "name": "Women's AA at Hermosa Pier, Hermosa Beach",
-   "date": "2025-08-31",
-   "endDate": "2025-08-31",
-   "sanction": "AVPA",
-   "location": "",
-   "t15": 0,
-   "t30": 1,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "Women's",
-     "t15": 0,
-     "t30": 1,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Womens AA",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Bristyn Burness",
-       "f": 17,
-       "field": 20,
-       "div": "Womens AA"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Womens AA",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Bristyn Burness",
-     "f": 17,
-     "field": 20,
-     "div": "Womens AA"
-    }
-   ]
-  },
-  {
-   "tid": 28143,
-   "name": "9/1/2025 Labor Day Grass RCO 2s",
-   "date": "2025-09-01",
-   "endDate": "2025-09-01",
-   "sanction": "AVPA",
-   "location": "NARA Park - Acton, MA (parking lot)",
-   "t15": 0,
-   "t30": 0,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "Women's",
-     "t15": 0,
-     "t30": 0,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "RCO OPEN",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Giani Boerner",
-       "f": 3,
-       "field": 5,
-       "div": "RCO OPEN"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "RCO OPEN",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Giani Boerner",
-     "f": 3,
-     "field": 5,
-     "div": "RCO OPEN"
-    }
-   ]
-  },
-  {
-   "tid": 28845,
-   "name": "Kauai Bikini Open Hickory Point",
-   "date": "2025-09-06",
-   "endDate": "2025-09-06",
-   "sanction": "BVNE",
-   "location": "Hickory Point Beach Sand Volleyball Complex",
-   "t15": 0,
-   "t30": 1,
-   "t60": 5,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 1,
-     "t60": 5,
-     "divisions": [
-      {
-       "name": "Girls 18U",
-       "n": 5
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Claire Hanson",
-       "f": 3,
-       "field": 30,
-       "div": "Girls 18U"
-      },
-      {
-       "name": "Meadow Rosales",
-       "f": 3,
-       "field": 30,
-       "div": "Girls 18U"
-      },
-      {
-       "name": "Giani Boerner",
-       "f": 5,
-       "field": 30,
-       "div": "Girls 18U"
-      },
-      {
-       "name": "GRACIE LUTES",
-       "f": 5,
-       "field": 30,
-       "div": "Girls 18U"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Girls 18U",
-     "n": 5
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Claire Hanson",
-     "f": 3,
-     "field": 30,
-     "div": "Girls 18U"
-    },
-    {
-     "name": "Meadow Rosales",
-     "f": 3,
-     "field": 30,
-     "div": "Girls 18U"
-    },
-    {
-     "name": "Giani Boerner",
-     "f": 5,
-     "field": 30,
-     "div": "Girls 18U"
-    },
-    {
-     "name": "GRACIE LUTES",
-     "f": 5,
-     "field": 30,
-     "div": "Girls 18U"
-    }
-   ]
-  },
-  {
-   "tid": 31999,
-   "name": "AVP/USAV ECC/WCC Dual Qualifier - September 6",
-   "date": "2025-09-06",
-   "endDate": "2025-09-06",
-   "sanction": "AVPA",
-   "location": "The Strand",
-   "t15": 0,
-   "t30": 1,
-   "t60": 2,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 1,
-     "t60": 2,
-     "divisions": [
-      {
-       "name": "Girls 18U",
-       "n": 2
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Paloma Smith",
-       "f": 1,
-       "field": 4,
-       "div": "Girls 18U"
-      },
-      {
-       "name": "Emma Burnside",
-       "f": 2,
-       "field": 4,
-       "div": "Girls 18U"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Girls 18U",
-     "n": 2
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Paloma Smith",
-     "f": 1,
-     "field": 4,
-     "div": "Girls 18U"
-    },
-    {
-     "name": "Emma Burnside",
-     "f": 2,
-     "field": 4,
-     "div": "Girls 18U"
-    }
-   ]
-  },
-  {
-   "tid": 24075,
-   "name": "GNBV National Recruiting Showcase Florida Sep 2025",
-   "date": "2025-09-07",
-   "endDate": "2025-09-07",
-   "sanction": "BVNE",
-   "location": "Hickory Point Beach Sand Volleyball Complex",
-   "t15": 0,
-   "t30": 1,
-   "t60": 5,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 1,
-     "t60": 5,
-     "divisions": [
-      {
-       "name": "Girls 18U",
-       "n": 5
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Giani Boerner",
-       "f": 1,
-       "field": 44,
-       "div": "Girls 18U"
-      },
-      {
-       "name": "Claire Hanson",
-       "f": 2,
-       "field": 44,
-       "div": "Girls 18U"
-      },
-      {
-       "name": "Meadow Rosales",
-       "f": 2,
-       "field": 44,
-       "div": "Girls 18U"
-      },
-      {
-       "name": "GRACIE LUTES",
-       "f": 5,
-       "field": 44,
-       "div": "Girls 18U"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Girls 18U",
-     "n": 5
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Giani Boerner",
-     "f": 1,
-     "field": 44,
-     "div": "Girls 18U"
-    },
-    {
-     "name": "Claire Hanson",
-     "f": 2,
-     "field": 44,
-     "div": "Girls 18U"
-    },
-    {
-     "name": "Meadow Rosales",
-     "f": 2,
-     "field": 44,
-     "div": "Girls 18U"
-    },
-    {
-     "name": "GRACIE LUTES",
-     "f": 5,
-     "field": 44,
-     "div": "Girls 18U"
-    }
-   ],
-   "next": {
-    "id": 32238,
-    "date": "2026-09-13",
-    "name": "GNBV National Recruiting Showcase Florida Sep 2026"
-   }
-  },
-  {
-   "tid": 32502,
-   "name": "Surf City Days $2,000 Women's Open at Huntington Pier, Huntington Beach",
-   "date": "2025-09-07",
-   "endDate": "2025-09-07",
-   "sanction": "AVPA",
-   "location": "",
-   "t15": 1,
-   "t30": 2,
-   "t60": 2,
-   "brackets": [
-    {
-     "bracket": "Women's",
-     "t15": 1,
-     "t30": 2,
-     "t60": 2,
-     "divisions": [
-      {
-       "name": "Womens Open",
-       "n": 2
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "JoJo Wilson",
-       "f": 19,
-       "field": 30,
-       "div": "Womens Open"
-      },
-      {
-       "name": "Simrin Adams",
-       "f": 19,
-       "field": 30,
-       "div": "Womens Open"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Womens Open",
-     "n": 2
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "JoJo Wilson",
-     "f": 19,
-     "field": 30,
-     "div": "Womens Open"
-    },
-    {
-     "name": "Simrin Adams",
-     "f": 19,
-     "field": 30,
-     "div": "Womens Open"
-    }
-   ]
-  },
-  {
-   "tid": 26008,
-   "name": "First Coast Volleyball Jax Beach Series Sept 6-7th",
-   "date": "2025-09-07",
-   "endDate": "2025-09-07",
-   "sanction": "AVPA",
-   "location": "South of Jacksonville Beach Fishing Pier",
-   "t15": 1,
-   "t30": 2,
-   "t60": 2,
-   "brackets": [
-    {
-     "bracket": "Women's",
-     "t15": 1,
-     "t30": 2,
-     "t60": 2,
-     "divisions": [
-      {
-       "name": "Womens Open",
-       "n": 2
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Christy Boulware",
-       "f": 1,
-       "field": 6,
-       "div": "Womens Open"
-      },
-      {
-       "name": "Meg Hearn",
-       "f": 1,
-       "field": 6,
-       "div": "Womens Open"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Womens Open",
-     "n": 2
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Christy Boulware",
-     "f": 1,
-     "field": 6,
-     "div": "Womens Open"
-    },
-    {
-     "name": "Meg Hearn",
-     "f": 1,
-     "field": 6,
-     "div": "Womens Open"
-    }
-   ]
-  },
-  {
-   "tid": 29774,
-   "name": "Hermosa Beach Open '25",
-   "date": "2025-09-07",
-   "endDate": "2025-09-07",
-   "sanction": "\u2014",
-   "location": "Hermosa Beach",
-   "t15": 1,
-   "t30": 1,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "Women's",
-     "t15": 1,
-     "t30": 1,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Womens Open",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Lauren Leach",
-       "f": 41,
-       "field": 58,
-       "div": "Womens Open"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Womens Open",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Lauren Leach",
-     "f": 41,
-     "field": 58,
-     "div": "Womens Open"
-    }
-   ]
-  },
-  {
-   "tid": 26705,
-   "name": "Sunday, Sept. 7th - AVPA ECC/WCC Qualifier- Girls 14-18U",
-   "date": "2025-09-07",
-   "endDate": "2025-09-07",
-   "sanction": "avpa",
-   "location": "Hyden Beach",
-   "t15": 0,
-   "t30": 1,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 1,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Class of 2026 - Girls 18U - Sunday AM Wave",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Megan McLarty",
-       "f": 3,
-       "field": 16,
-       "div": "Class of 2026 - Girls 18U - Sunday AM Wave"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Class of 2026 - Girls 18U - Sunday AM Wave",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Megan McLarty",
-     "f": 3,
-     "field": 16,
-     "div": "Class of 2026 - Girls 18U - Sunday AM Wave"
-    }
-   ]
-  },
-  {
-   "tid": 31546,
-   "name": "3-Star \u2b50\ufe0f \u2b50\ufe0f \u2b50\ufe0f National Qualifier",
-   "date": "2025-09-13",
-   "endDate": "2025-09-13",
-   "sanction": "p1440",
-   "location": "Arizona Athletic Grounds, Mesa, AZ",
-   "t15": 0,
-   "t30": 1,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 1,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Class of '26 & Younger",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Bristyn Burness",
-       "f": 3,
-       "field": 11,
-       "div": "Class of '26 & Younger"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Class of '26 & Younger",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Bristyn Burness",
-     "f": 3,
-     "field": 11,
-     "div": "Class of '26 & Younger"
-    }
-   ]
-  },
   {
    "tid": 30510,
    "name": "AVP Laguna - Contender  2025",
@@ -979,6 +66,53 @@
    ]
   },
   {
+   "tid": 32636,
+   "name": "Women's Open at Ocean Park, Santa Monica",
+   "date": "2025-09-14",
+   "endDate": "2025-09-14",
+   "sanction": "AVPA",
+   "location": "",
+   "t15": 0,
+   "t30": 1,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Jordyn Wilson",
+       "f": 17,
+       "field": 19,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Womens Open",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Jordyn Wilson",
+     "f": 17,
+     "field": 19,
+     "div": "Womens Open"
+    }
+   ]
+  },
+  {
    "tid": 31949,
    "name": "Doubles And Bubbles (Grass)",
    "date": "2025-09-14",
@@ -1026,53 +160,6 @@
    ]
   },
   {
-   "tid": 32636,
-   "name": "Women's Open at Ocean Park, Santa Monica",
-   "date": "2025-09-14",
-   "endDate": "2025-09-14",
-   "sanction": "AVPA",
-   "location": "",
-   "t15": 0,
-   "t30": 0,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "Women's",
-     "t15": 0,
-     "t30": 0,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Womens Open",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Jordyn Wilson",
-       "f": 17,
-       "field": 19,
-       "div": "Womens Open"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Womens Open",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Jordyn Wilson",
-     "f": 17,
-     "field": 19,
-     "div": "Womens Open"
-    }
-   ]
-  },
-  {
    "tid": 32055,
    "name": "Super Girl Pro Invitational '25",
    "date": "2025-09-21",
@@ -1081,17 +168,17 @@
    "location": "Oceanside Pier",
    "t15": 2,
    "t30": 2,
-   "t60": 3,
+   "t60": 4,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 2,
      "t30": 2,
-     "t60": 3,
+     "t60": 4,
      "divisions": [
       {
        "name": "Girls 18U",
-       "n": 3
+       "n": 4
       }
      ],
      "topFinishers": [
@@ -1108,6 +195,12 @@
        "div": "Girls 18U"
       },
       {
+       "name": "Kelly Randolph",
+       "f": 5,
+       "field": 12,
+       "div": "Girls 18U"
+      },
+      {
        "name": "Ashley Chuba",
        "f": 9,
        "field": 12,
@@ -1119,7 +212,7 @@
    "divisions": [
     {
      "name": "Girls 18U",
-     "n": 3
+     "n": 4
     }
    ],
    "topFinishers": [
@@ -1132,6 +225,12 @@
     {
      "name": "Thalia Lindahl",
      "f": 1,
+     "field": 12,
+     "div": "Girls 18U"
+    },
+    {
+     "name": "Kelly Randolph",
+     "f": 5,
      "field": 12,
      "div": "Girls 18U"
     },
@@ -1155,14 +254,14 @@
    "endDate": "2025-09-21",
    "sanction": "AVPA",
    "location": "South of Jacksonville Beach Fishing Pier",
-   "t15": 1,
-   "t30": 1,
+   "t15": 0,
+   "t30": 2,
    "t60": 3,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 0,
-     "t30": 0,
+     "t30": 1,
      "t60": 2,
      "divisions": [
       {
@@ -1187,8 +286,8 @@
     },
     {
      "bracket": "Women's",
-     "t15": 1,
-     "t30": 1,
+     "t15": 0,
+     "t30": 2,
      "t60": 3,
      "divisions": [
       {
@@ -1204,13 +303,13 @@
        "div": "Womens Open"
       },
       {
-       "name": "Meadow Rosales",
+       "name": "Izzy Fischer",
        "f": 9,
        "field": 14,
        "div": "Womens Open"
       },
       {
-       "name": "Izzy Fischer",
+       "name": "Meadow Rosales",
        "f": 9,
        "field": 14,
        "div": "Womens Open"
@@ -1340,53 +439,6 @@
      "f": 1,
      "field": 9,
      "div": "Girls 18U"
-    }
-   ]
-  },
-  {
-   "tid": 30574,
-   "name": "JUNIORS: SandBox GIRLS Farewell to Summer AVP Junior ECC 2 Star Qualifier",
-   "date": "2025-09-21",
-   "endDate": "2025-09-21",
-   "sanction": "AVPA",
-   "location": "SandBox Volleyball Club",
-   "t15": 0,
-   "t30": 0,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 0,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "GIRLS GY 2026-2029",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Anna Popovic",
-       "f": 1,
-       "field": 13,
-       "div": "GIRLS GY 2026-2029"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "GIRLS GY 2026-2029",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Anna Popovic",
-     "f": 1,
-     "field": 13,
-     "div": "GIRLS GY 2026-2029"
     }
    ]
   },
@@ -1627,13 +679,13 @@
    "sanction": "AVPA",
    "location": "The Strand",
    "t15": 0,
-   "t30": 2,
+   "t30": 1,
    "t60": 3,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 0,
-     "t30": 2,
+     "t30": 1,
      "t60": 3,
      "divisions": [
       {
@@ -1744,13 +796,13 @@
    "endDate": "2025-10-05",
    "sanction": "AVPA",
    "location": "",
-   "t15": 4,
+   "t15": 5,
    "t30": 6,
    "t60": 6,
    "brackets": [
     {
      "bracket": "Women's",
-     "t15": 4,
+     "t15": 5,
      "t30": 6,
      "t60": 6,
      "divisions": [
@@ -1767,13 +819,13 @@
        "div": "Womens Open"
       },
       {
-       "name": "JoJo Wilson",
+       "name": "Sandie Souza",
        "f": 3,
        "field": 14,
        "div": "Womens Open"
       },
       {
-       "name": "Sandie Souza",
+       "name": "Simrin Adams",
        "f": 3,
        "field": 14,
        "div": "Womens Open"
@@ -1801,13 +853,13 @@
      "div": "Womens Open"
     },
     {
-     "name": "JoJo Wilson",
+     "name": "Sandie Souza",
      "f": 3,
      "field": 14,
      "div": "Womens Open"
     },
     {
-     "name": "Sandie Souza",
+     "name": "Simrin Adams",
      "f": 3,
      "field": 14,
      "div": "Womens Open"
@@ -1868,6 +920,53 @@
    ]
   },
   {
+   "tid": 29755,
+   "name": "Cat5BVB Campus Tour @ Stetson University",
+   "date": "2025-10-05",
+   "endDate": "2025-10-05",
+   "sanction": "BVNE",
+   "location": "Stetson University Beach Volleyball Courts",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lila Waite",
+       "f": 1,
+       "field": 11,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Girls 18U",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Lila Waite",
+     "f": 1,
+     "field": 11,
+     "div": "Girls 18U"
+    }
+   ]
+  },
+  {
    "tid": 23700,
    "name": "GNBV National Recruiting Showcase Oct 2025",
    "date": "2025-10-05",
@@ -1918,53 +1017,6 @@
     "date": "2026-10-04",
     "name": "GNBV National Recruiting Showcase Oct 2026"
    }
-  },
-  {
-   "tid": 29755,
-   "name": "Cat5BVB Campus Tour @ Stetson University",
-   "date": "2025-10-05",
-   "endDate": "2025-10-05",
-   "sanction": "BVNE",
-   "location": "Stetson University Beach Volleyball Courts",
-   "t15": 0,
-   "t30": 0,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 0,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Girls 18U",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Lila Waite",
-       "f": 1,
-       "field": 11,
-       "div": "Girls 18U"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Girls 18U",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Lila Waite",
-     "f": 1,
-     "field": 11,
-     "div": "Girls 18U"
-    }
-   ]
   },
   {
    "tid": 33010,
@@ -2027,17 +1079,17 @@
    "location": "",
    "t15": 1,
    "t30": 2,
-   "t60": 2,
+   "t60": 3,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 1,
      "t30": 2,
-     "t60": 2,
+     "t60": 3,
      "divisions": [
       {
        "name": "Girls 18U",
-       "n": 2
+       "n": 3
       }
      ],
      "topFinishers": [
@@ -2052,6 +1104,12 @@
        "f": 1,
        "field": 5,
        "div": "Girls 18U"
+      },
+      {
+       "name": "Kelly Randolph",
+       "f": 2,
+       "field": 5,
+       "div": "Girls 18U"
       }
      ]
     }
@@ -2059,7 +1117,7 @@
    "divisions": [
     {
      "name": "Girls 18U",
-     "n": 2
+     "n": 3
     }
    ],
    "topFinishers": [
@@ -2072,6 +1130,12 @@
     {
      "name": "Addison Choi",
      "f": 1,
+     "field": 5,
+     "div": "Girls 18U"
+    },
+    {
+     "name": "Kelly Randolph",
+     "f": 2,
      "field": 5,
      "div": "Girls 18U"
     }
@@ -2342,13 +1406,13 @@
    "sanction": "AVPA",
    "location": "Charlotte Rugby Club",
    "t15": 0,
-   "t30": 1,
+   "t30": 0,
    "t60": 1,
    "brackets": [
     {
      "bracket": "Women's",
      "t15": 0,
-     "t30": 1,
+     "t30": 0,
      "t60": 1,
      "divisions": [
       {
@@ -2716,13 +1780,13 @@
      ],
      "topFinishers": [
       {
-       "name": "Leann Wise",
+       "name": "Olivia Herron",
        "f": 9,
        "field": 21,
        "div": "Women's Open"
       },
       {
-       "name": "Olivia Herron",
+       "name": "Leann Wise",
        "f": 9,
        "field": 21,
        "div": "Women's Open"
@@ -2738,13 +1802,13 @@
    ],
    "topFinishers": [
     {
-     "name": "Leann Wise",
+     "name": "Olivia Herron",
      "f": 9,
      "field": 21,
      "div": "Women's Open"
     },
     {
-     "name": "Olivia Herron",
+     "name": "Leann Wise",
      "f": 9,
      "field": 21,
      "div": "Women's Open"
@@ -2811,19 +1875,66 @@
    ]
   },
   {
+   "tid": 25557,
+   "name": "SSOVA HALLOWEEN Juniors AVP & USAV Regional Qualifier POMPANO BEACH, Beach Volleyball Tournament",
+   "date": "2025-10-26",
+   "endDate": "2025-10-26",
+   "sanction": "AVPA",
+   "location": "Pompano Beach",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Brooke Smith",
+       "f": 1,
+       "field": 9,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Girls 18U",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Brooke Smith",
+     "f": 1,
+     "field": 9,
+     "div": "Girls 18U"
+    }
+   ]
+  },
+  {
    "tid": 33620,
    "name": "Women's Open at Newland, Huntington Beach",
    "date": "2025-11-01",
    "endDate": "2025-11-01",
    "sanction": "AVPA",
    "location": "",
-   "t15": 2,
+   "t15": 3,
    "t30": 3,
    "t60": 3,
    "brackets": [
     {
      "bracket": "Women's",
-     "t15": 2,
+     "t15": 3,
      "t30": 3,
      "t60": 3,
      "divisions": [
@@ -2935,14 +2046,14 @@
    "endDate": "2025-11-02",
    "sanction": "AVPA",
    "location": "South of Jacksonville Beach Fishing Pier",
-   "t15": 1,
-   "t30": 1,
+   "t15": 0,
+   "t30": 2,
    "t60": 3,
    "brackets": [
     {
      "bracket": "Women's",
-     "t15": 1,
-     "t30": 1,
+     "t15": 0,
+     "t30": 2,
      "t60": 2,
      "divisions": [
       {
@@ -3136,13 +2247,13 @@
    "sanction": "p1440",
    "location": "The Strand",
    "t15": 0,
-   "t30": 1,
+   "t30": 0,
    "t60": 1,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 0,
-     "t30": 1,
+     "t30": 0,
      "t60": 1,
      "divisions": [
       {
@@ -3176,72 +2287,25 @@
    ]
   },
   {
-   "tid": 32944,
-   "name": "JUNIORS: SandBox GIRLS 2v2 ECC Tune-Up (@ NEO Sports Plant)",
-   "date": "2025-11-08",
-   "endDate": "2025-11-08",
-   "sanction": "AVPA",
-   "location": "NEO Sports Plant",
-   "t15": 0,
-   "t30": 0,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 0,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Girls 16/18U (GY2026-2029)",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Anna Popovic",
-       "f": 1,
-       "field": 12,
-       "div": "Girls 16/18U (GY2026-2029)"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Girls 16/18U (GY2026-2029)",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Anna Popovic",
-     "f": 1,
-     "field": 12,
-     "div": "Girls 16/18U (GY2026-2029)"
-    }
-   ]
-  },
-  {
    "tid": 25578,
    "name": "AVP Juniors West Coast Championships 2025",
    "date": "2025-11-09",
    "endDate": "2025-11-09",
    "sanction": "AVPA",
    "location": "Manhattan Beach",
-   "t15": 7,
-   "t30": 12,
-   "t60": 17,
+   "t15": 8,
+   "t30": 14,
+   "t60": 19,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 4,
-     "t30": 4,
-     "t60": 5,
+     "t30": 5,
+     "t60": 6,
      "divisions": [
       {
        "name": "Girls 18U",
-       "n": 5
+       "n": 6
       }
      ],
      "topFinishers": [
@@ -3273,24 +2337,24 @@
     },
     {
      "bracket": "17U",
-     "t15": 3,
-     "t30": 8,
-     "t60": 12,
+     "t15": 4,
+     "t30": 9,
+     "t60": 13,
      "divisions": [
       {
        "name": "Girls 17U",
-       "n": 12
+       "n": 13
       }
      ],
      "topFinishers": [
       {
-       "name": "Thalia Lindahl",
+       "name": "Simrin Adams",
        "f": 1,
        "field": 23,
        "div": "Girls 17U"
       },
       {
-       "name": "Simrin Adams",
+       "name": "Thalia Lindahl",
        "f": 1,
        "field": 23,
        "div": "Girls 17U"
@@ -3313,22 +2377,22 @@
    "divisions": [
     {
      "name": "Girls 17U",
-     "n": 12
+     "n": 13
     },
     {
      "name": "Girls 18U",
-     "n": 5
+     "n": 6
     }
    ],
    "topFinishers": [
     {
-     "name": "Thalia Lindahl",
+     "name": "Simrin Adams",
      "f": 1,
      "field": 23,
      "div": "Girls 17U"
     },
     {
-     "name": "Simrin Adams",
+     "name": "Thalia Lindahl",
      "f": 1,
      "field": 23,
      "div": "Girls 17U"
@@ -3351,53 +2415,6 @@
     "date": "2026-11-07",
     "name": "AVP Juniors West Coast Championships 2026"
    }
-  },
-  {
-   "tid": 25555,
-   "name": "SSOVA Juniors AVP & USAV Regional Qualifier St Pete Beach, Beach Volleyball Tournament",
-   "date": "2025-11-09",
-   "endDate": "2025-11-09",
-   "sanction": "AVPA",
-   "location": "Crabby Bill's",
-   "t15": 0,
-   "t30": 0,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 0,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Girls 18U",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Adaleah Bassler",
-       "f": 3,
-       "field": 12,
-       "div": "Girls 18U"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Girls 18U",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Adaleah Bassler",
-     "f": 3,
-     "field": 12,
-     "div": "Girls 18U"
-    }
-   ]
   },
   {
    "tid": 29868,
@@ -3529,19 +2546,19 @@
    "endDate": "2025-11-16",
    "sanction": "p1440",
    "location": "Grand Sands",
-   "t15": 2,
-   "t30": 5,
-   "t60": 5,
+   "t15": 1,
+   "t30": 3,
+   "t60": 6,
    "brackets": [
     {
      "bracket": "18U",
-     "t15": 2,
-     "t30": 5,
-     "t60": 5,
+     "t15": 1,
+     "t30": 3,
+     "t60": 6,
      "divisions": [
       {
        "name": "Girls 18U",
-       "n": 5
+       "n": 6
       }
      ],
      "topFinishers": [
@@ -3575,7 +2592,7 @@
    "divisions": [
     {
      "name": "Girls 18U",
-     "n": 5
+     "n": 6
     }
    ],
    "topFinishers": [
@@ -3697,29 +2714,23 @@
    "location": "Hickory Point Beach Sand Volleyball",
    "t15": 0,
    "t30": 0,
-   "t60": 2,
+   "t60": 1,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 0,
      "t30": 0,
-     "t60": 2,
+     "t60": 1,
      "divisions": [
       {
        "name": "Girls 18U",
-       "n": 2
+       "n": 1
       }
      ],
      "topFinishers": [
       {
        "name": "Lila Waite",
        "f": 1,
-       "field": 21,
-       "div": "Girls 18U"
-      },
-      {
-       "name": "Amelia Berent",
-       "f": 3,
        "field": 21,
        "div": "Girls 18U"
       }
@@ -3729,19 +2740,13 @@
    "divisions": [
     {
      "name": "Girls 18U",
-     "n": 2
+     "n": 1
     }
    ],
    "topFinishers": [
     {
      "name": "Lila Waite",
      "f": 1,
-     "field": 21,
-     "div": "Girls 18U"
-    },
-    {
-     "name": "Amelia Berent",
-     "f": 3,
      "field": 21,
      "div": "Girls 18U"
     }
@@ -3760,13 +2765,13 @@
    "sanction": "AVPA",
    "location": "Third Coast HTX",
    "t15": 0,
-   "t30": 0,
+   "t30": 1,
    "t60": 2,
    "brackets": [
     {
      "bracket": "Women's",
      "t15": 0,
-     "t30": 0,
+     "t30": 1,
      "t60": 2,
      "divisions": [
       {
@@ -4107,13 +3112,13 @@
    "sanction": "AVPA",
    "location": "Sheraton Sand Key",
    "t15": 0,
-   "t30": 3,
-   "t60": 10,
+   "t30": 2,
+   "t60": 7,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 0,
-     "t30": 3,
+     "t30": 2,
      "t60": 5,
      "divisions": [
       {
@@ -4135,13 +3140,13 @@
        "div": "Girls 18U"
       },
       {
-       "name": "Megan McLarty",
+       "name": "Isabelle Izzy Ramos",
        "f": 9,
        "field": 54,
        "div": "Girls 18U"
       },
       {
-       "name": "Isabelle Izzy Ramos",
+       "name": "Megan McLarty",
        "f": 9,
        "field": 54,
        "div": "Girls 18U"
@@ -4152,20 +3157,14 @@
      "bracket": "17U",
      "t15": 0,
      "t30": 0,
-     "t60": 5,
+     "t60": 2,
      "divisions": [
       {
        "name": "Girls 17U",
-       "n": 5
+       "n": 2
       }
      ],
      "topFinishers": [
-      {
-       "name": "Sienna Carr",
-       "f": 2,
-       "field": 46,
-       "div": "Girls 17U"
-      },
       {
        "name": "Emma Burnside",
        "f": 2,
@@ -4175,12 +3174,6 @@
       {
        "name": "GRACIE LUTES",
        "f": 3,
-       "field": 46,
-       "div": "Girls 17U"
-      },
-      {
-       "name": "Anna Popovic",
-       "f": 5,
        "field": 46,
        "div": "Girls 17U"
       }
@@ -4194,16 +3187,10 @@
     },
     {
      "name": "Girls 17U",
-     "n": 5
+     "n": 2
     }
    ],
    "topFinishers": [
-    {
-     "name": "Sienna Carr",
-     "f": 2,
-     "field": 46,
-     "div": "Girls 17U"
-    },
     {
      "name": "Emma Burnside",
      "f": 2,
@@ -4221,6 +3208,12 @@
      "f": 3,
      "field": 46,
      "div": "Girls 17U"
+    },
+    {
+     "name": "Lila Waite",
+     "f": 5,
+     "field": 54,
+     "div": "Girls 18U"
     }
    ],
    "next": {
@@ -4253,13 +3246,13 @@
      ],
      "topFinishers": [
       {
-       "name": "JoJo Wilson",
+       "name": "Thalia Lindahl",
        "f": 1,
        "field": 6,
        "div": "18/16"
       },
       {
-       "name": "Thalia Lindahl",
+       "name": "JoJo Wilson",
        "f": 1,
        "field": 6,
        "div": "18/16"
@@ -4275,13 +3268,13 @@
    ],
    "topFinishers": [
     {
-     "name": "JoJo Wilson",
+     "name": "Thalia Lindahl",
      "f": 1,
      "field": 6,
      "div": "18/16"
     },
     {
-     "name": "Thalia Lindahl",
+     "name": "JoJo Wilson",
      "f": 1,
      "field": 6,
      "div": "18/16"
@@ -4344,22 +3337,28 @@
    "location": "Pompano Beach Pier",
    "t15": 0,
    "t30": 0,
-   "t60": 1,
+   "t60": 2,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 0,
      "t30": 0,
-     "t60": 1,
+     "t60": 2,
      "divisions": [
       {
        "name": "Girls 18U Open",
-       "n": 1
+       "n": 2
       }
      ],
      "topFinishers": [
       {
        "name": "Lila Waite",
+       "f": 3,
+       "field": 11,
+       "div": "Girls 18U Open"
+      },
+      {
+       "name": "Brooke Smith",
        "f": 3,
        "field": 11,
        "div": "Girls 18U Open"
@@ -4370,12 +3369,18 @@
    "divisions": [
     {
      "name": "Girls 18U Open",
-     "n": 1
+     "n": 2
     }
    ],
    "topFinishers": [
     {
      "name": "Lila Waite",
+     "f": 3,
+     "field": 11,
+     "div": "Girls 18U Open"
+    },
+    {
+     "name": "Brooke Smith",
      "f": 3,
      "field": 11,
      "div": "Girls 18U Open"
@@ -4484,13 +3489,13 @@
    "sanction": "AVPA",
    "location": "ATX Beach",
    "t15": 0,
-   "t30": 1,
+   "t30": 0,
    "t60": 1,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 0,
-     "t30": 1,
+     "t30": 0,
      "t60": 1,
      "divisions": [
       {
@@ -4530,14 +3535,14 @@
    "endDate": "2025-12-14",
    "sanction": "AAU",
    "location": "Hermosa Beach Pier",
-   "t15": 4,
-   "t30": 5,
+   "t15": 5,
+   "t30": 7,
    "t60": 9,
    "brackets": [
     {
      "bracket": "18U",
-     "t15": 4,
-     "t30": 5,
+     "t15": 5,
+     "t30": 7,
      "t60": 9,
      "divisions": [
       {
@@ -4559,7 +3564,7 @@
        "div": "Girls 18U"
       },
       {
-       "name": "JoJo Wilson",
+       "name": "Simrin Adams",
        "f": 5,
        "field": 13,
        "div": "Girls 18U"
@@ -4593,7 +3598,7 @@
      "div": "Girls 18U"
     },
     {
-     "name": "JoJo Wilson",
+     "name": "Simrin Adams",
      "f": 5,
      "field": 13,
      "div": "Girls 18U"
@@ -4614,13 +3619,13 @@
    "sanction": "AVPA",
    "location": "McDugald Park - Tampa",
    "t15": 0,
-   "t30": 1,
+   "t30": 0,
    "t60": 3,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 0,
-     "t30": 1,
+     "t30": 0,
      "t60": 3,
      "divisions": [
       {
@@ -4685,13 +3690,13 @@
    "sanction": "\u2014",
    "location": "The Strand",
    "t15": 0,
-   "t30": 2,
+   "t30": 1,
    "t60": 2,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 0,
-     "t30": 2,
+     "t30": 1,
      "t60": 2,
      "divisions": [
       {
@@ -4744,13 +3749,13 @@
    "sanction": "AVPA",
    "location": "The Strand",
    "t15": 0,
-   "t30": 3,
+   "t30": 2,
    "t60": 3,
    "brackets": [
     {
      "bracket": "Women's",
      "t15": 0,
-     "t30": 3,
+     "t30": 2,
      "t60": 3,
      "divisions": [
       {
@@ -4816,17 +3821,17 @@
    "location": "Hickory Point Recreation Park, Tavares, FL",
    "t15": 0,
    "t30": 3,
-   "t60": 11,
+   "t60": 10,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 0,
      "t30": 3,
-     "t60": 11,
+     "t60": 10,
      "divisions": [
       {
        "name": "Class of '26 & Younger",
-       "n": 11
+       "n": 10
       }
      ],
      "topFinishers": [
@@ -4860,7 +3865,7 @@
    "divisions": [
     {
      "name": "Class of '26 & Younger",
-     "n": 11
+     "n": 10
     }
    ],
    "topFinishers": [
@@ -4938,6 +3943,65 @@
    ]
   },
   {
+   "tid": 33127,
+   "name": "National Qualifier (p1440 / AVP America)",
+   "date": "2026-01-04",
+   "endDate": "2026-01-04",
+   "sanction": "p1440",
+   "location": "Stealth Beach at Victory Lanes",
+   "t15": 0,
+   "t30": 1,
+   "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Class of 2026-2027 - Girls",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Bristyn Burness",
+       "f": 1,
+       "field": 9,
+       "div": "Class of 2026-2027 - Girls"
+      },
+      {
+       "name": "Lillie Duitsman",
+       "f": 3,
+       "field": 9,
+       "div": "Class of 2026-2027 - Girls"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Class of 2026-2027 - Girls",
+     "n": 2
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Bristyn Burness",
+     "f": 1,
+     "field": 9,
+     "div": "Class of 2026-2027 - Girls"
+    },
+    {
+     "name": "Lillie Duitsman",
+     "f": 3,
+     "field": 9,
+     "div": "Class of 2026-2027 - Girls"
+    }
+   ]
+  },
+  {
    "tid": 26951,
    "name": "Winter World Mega Showcase 2026",
    "date": "2026-01-04",
@@ -4946,35 +4010,23 @@
    "location": "Hickory Point Beach Sand Volleyball",
    "t15": 0,
    "t30": 0,
-   "t60": 4,
+   "t60": 2,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 0,
      "t30": 0,
-     "t60": 4,
+     "t60": 2,
      "divisions": [
       {
        "name": "Girls 18U",
-       "n": 4
+       "n": 2
       }
      ],
      "topFinishers": [
       {
        "name": "Lila Waite",
        "f": 3,
-       "field": 36,
-       "div": "Girls 18U"
-      },
-      {
-       "name": "Adaleah Bassler",
-       "f": 5,
-       "field": 36,
-       "div": "Girls 18U"
-      },
-      {
-       "name": "Amelia Berent",
-       "f": 5,
        "field": 36,
        "div": "Girls 18U"
       },
@@ -4990,25 +4042,13 @@
    "divisions": [
     {
      "name": "Girls 18U",
-     "n": 4
+     "n": 2
     }
    ],
    "topFinishers": [
     {
      "name": "Lila Waite",
      "f": 3,
-     "field": 36,
-     "div": "Girls 18U"
-    },
-    {
-     "name": "Adaleah Bassler",
-     "f": 5,
-     "field": 36,
-     "div": "Girls 18U"
-    },
-    {
-     "name": "Amelia Berent",
-     "f": 5,
      "field": 36,
      "div": "Girls 18U"
     },
@@ -5024,53 +4064,6 @@
     "date": "2027-01-02",
     "name": "Winter World Mega Showcase 2027"
    }
-  },
-  {
-   "tid": 33127,
-   "name": "National Qualifier (p1440 / AVP America)",
-   "date": "2026-01-04",
-   "endDate": "2026-01-04",
-   "sanction": "p1440",
-   "location": "Stealth Beach at Victory Lanes",
-   "t15": 0,
-   "t30": 1,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 1,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Class of 2026-2027 - Girls",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Bristyn Burness",
-       "f": 1,
-       "field": 9,
-       "div": "Class of 2026-2027 - Girls"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Class of 2026-2027 - Girls",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Bristyn Burness",
-     "f": 1,
-     "field": 9,
-     "div": "Class of 2026-2027 - Girls"
-    }
-   ]
   },
   {
    "tid": 32973,
@@ -5128,20 +4121,26 @@
    "location": "Arizona Athletic Grounds",
    "t15": 0,
    "t30": 1,
-   "t60": 2,
+   "t60": 4,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 0,
      "t30": 1,
-     "t60": 2,
+     "t60": 4,
      "divisions": [
       {
        "name": "Class of '26 & Younger",
-       "n": 2
+       "n": 4
       }
      ],
      "topFinishers": [
+      {
+       "name": "Lillie Duitsman",
+       "f": 1,
+       "field": 16,
+       "div": "Class of '26 & Younger"
+      },
       {
        "name": "Bristyn Burness",
        "f": 3,
@@ -5153,6 +4152,12 @@
        "f": 3,
        "field": 16,
        "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Mila Alo",
+       "f": 10,
+       "field": 16,
+       "div": "Class of '26 & Younger"
       }
      ]
     }
@@ -5160,10 +4165,16 @@
    "divisions": [
     {
      "name": "Class of '26 & Younger",
-     "n": 2
+     "n": 4
     }
    ],
    "topFinishers": [
+    {
+     "name": "Lillie Duitsman",
+     "f": 1,
+     "field": 16,
+     "div": "Class of '26 & Younger"
+    },
     {
      "name": "Bristyn Burness",
      "f": 3,
@@ -5173,6 +4184,12 @@
     {
      "name": "Kendyl Maxwell",
      "f": 3,
+     "field": 16,
+     "div": "Class of '26 & Younger"
+    },
+    {
+     "name": "Mila Alo",
+     "f": 10,
      "field": 16,
      "div": "Class of '26 & Younger"
     }
@@ -5187,17 +4204,17 @@
    "location": "Hermosa Beach Pier",
    "t15": 3,
    "t30": 5,
-   "t60": 7,
+   "t60": 8,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 3,
      "t30": 5,
-     "t60": 7,
+     "t60": 8,
      "divisions": [
       {
        "name": "Girls 18:U (Grad Year 2026-2027)",
-       "n": 7
+       "n": 8
       }
      ],
      "topFinishers": [
@@ -5231,7 +4248,7 @@
    "divisions": [
     {
      "name": "Girls 18:U (Grad Year 2026-2027)",
-     "n": 7
+     "n": 8
     }
    ],
    "topFinishers": [
@@ -5268,14 +4285,14 @@
    "endDate": "2026-01-11",
    "sanction": "AVPA",
    "location": "South Beach Volley Courts ",
-   "t15": 1,
-   "t30": 2,
+   "t15": 0,
+   "t30": 1,
    "t60": 2,
    "brackets": [
     {
      "bracket": "Women's",
-     "t15": 1,
-     "t30": 2,
+     "t15": 0,
+     "t30": 1,
      "t60": 2,
      "divisions": [
       {
@@ -5328,13 +4345,13 @@
    "sanction": "BVNE",
    "location": "St. Augustine Beach Fishing Pier",
    "t15": 0,
-   "t30": 0,
+   "t30": 1,
    "t60": 1,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 0,
-     "t30": 0,
+     "t30": 1,
      "t60": 1,
      "divisions": [
       {
@@ -5368,6 +4385,53 @@
    ]
   },
   {
+   "tid": 33129,
+   "name": "AAU National Bid Qualifier",
+   "date": "2026-01-11",
+   "endDate": "2026-01-11",
+   "sanction": "AAU",
+   "location": "Stealth Beach at Victory Lanes",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lillie Duitsman",
+       "f": 5,
+       "field": 10,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Girls 18U",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Lillie Duitsman",
+     "f": 5,
+     "field": 10,
+     "div": "Girls 18U"
+    }
+   ]
+  },
+  {
    "tid": 33070,
    "name": "PCA/FBC COLLEGE SHOWCASE Pairs Tournament",
    "date": "2026-01-17",
@@ -5376,7 +4440,7 @@
    "location": "Pompano Beach North of pier",
    "t15": 1,
    "t30": 2,
-   "t60": 6,
+   "t60": 5,
    "brackets": [
     {
      "bracket": "18U",
@@ -5408,22 +4472,22 @@
      "bracket": "17U",
      "t15": 0,
      "t30": 1,
-     "t60": 4,
+     "t60": 3,
      "divisions": [
       {
        "name": "Class of 2027",
-       "n": 4
+       "n": 3
       }
      ],
      "topFinishers": [
       {
-       "name": "Leah Blair",
+       "name": "Linnaea Nielsen",
        "f": 1,
        "field": 20,
        "div": "Class of 2027"
       },
       {
-       "name": "Linnaea Nielsen",
+       "name": "Leah Blair",
        "f": 1,
        "field": 20,
        "div": "Class of 2027"
@@ -5433,12 +4497,6 @@
        "f": 5,
        "field": 20,
        "div": "Class of 2027"
-      },
-      {
-       "name": "Anna Popovic",
-       "f": 9,
-       "field": 20,
-       "div": "Class of 2027"
       }
      ]
     }
@@ -5446,7 +4504,7 @@
    "divisions": [
     {
      "name": "Class of 2027",
-     "n": 4
+     "n": 3
     },
     {
      "name": "Class of 2026",
@@ -5455,13 +4513,13 @@
    ],
    "topFinishers": [
     {
-     "name": "Leah Blair",
+     "name": "Linnaea Nielsen",
      "f": 1,
      "field": 20,
      "div": "Class of 2027"
     },
     {
-     "name": "Linnaea Nielsen",
+     "name": "Leah Blair",
      "f": 1,
      "field": 20,
      "div": "Class of 2027"
@@ -5489,28 +4547,22 @@
    "location": "Clearwater Beach (Rockaway)",
    "t15": 1,
    "t30": 1,
-   "t60": 2,
+   "t60": 1,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 1,
      "t30": 1,
-     "t60": 2,
+     "t60": 1,
      "divisions": [
       {
        "name": "Class of 2026",
-       "n": 2
+       "n": 1
       }
      ],
      "topFinishers": [
       {
        "name": "Thais Treumann",
-       "f": 1,
-       "field": 12,
-       "div": "Class of 2026"
-      },
-      {
-       "name": "Adaleah Bassler",
        "f": 1,
        "field": 12,
        "div": "Class of 2026"
@@ -5521,18 +4573,12 @@
    "divisions": [
     {
      "name": "Class of 2026",
-     "n": 2
+     "n": 1
     }
    ],
    "topFinishers": [
     {
      "name": "Thais Treumann",
-     "f": 1,
-     "field": 12,
-     "div": "Class of 2026"
-    },
-    {
-     "name": "Adaleah Bassler",
      "f": 1,
      "field": 12,
      "div": "Class of 2026"
@@ -5546,19 +4592,19 @@
    "endDate": "2026-01-18",
    "sanction": "p1440",
    "location": "Arizona Athletic Grounds",
-   "t15": 4,
-   "t30": 6,
-   "t60": 10,
+   "t15": 3,
+   "t30": 7,
+   "t60": 12,
    "brackets": [
     {
      "bracket": "18U",
-     "t15": 4,
-     "t30": 6,
-     "t60": 10,
+     "t15": 3,
+     "t30": 7,
+     "t60": 12,
      "divisions": [
       {
        "name": "Class of '26 & Younger",
-       "n": 10
+       "n": 12
       }
      ],
      "topFinishers": [
@@ -5592,7 +4638,7 @@
    "divisions": [
     {
      "name": "Class of '26 & Younger",
-     "n": 10
+     "n": 12
     }
    ],
    "topFinishers": [
@@ -5623,67 +4669,20 @@
    ]
   },
   {
-   "tid": 34611,
-   "name": "January #6 - WO/WB",
-   "date": "2026-01-18",
-   "endDate": "2026-01-18",
-   "sanction": "\u2014",
-   "location": "Great American Center",
-   "t15": 0,
-   "t30": 0,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "Women's",
-     "t15": 0,
-     "t30": 0,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Womens Open",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Amelia Berent",
-       "f": 9,
-       "field": 18,
-       "div": "Womens Open"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Womens Open",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Amelia Berent",
-     "f": 9,
-     "field": 18,
-     "div": "Womens Open"
-    }
-   ]
-  },
-  {
    "tid": 32390,
    "name": "AAU MLK Open",
    "date": "2026-01-19",
    "endDate": "2026-01-19",
    "sanction": "AAU",
    "location": "Hermosa Beach Pier",
-   "t15": 2,
-   "t30": 4,
+   "t15": 4,
+   "t30": 5,
    "t60": 7,
    "brackets": [
     {
      "bracket": "18U",
-     "t15": 2,
-     "t30": 4,
+     "t15": 4,
+     "t30": 5,
      "t60": 7,
      "divisions": [
       {
@@ -5693,25 +4692,25 @@
      ],
      "topFinishers": [
       {
-       "name": "Ella Dueck",
-       "f": 1,
-       "field": 9,
-       "div": "Girls 18U"
-      },
-      {
        "name": "Simrin Adams",
        "f": 1,
        "field": 9,
        "div": "Girls 18U"
       },
       {
-       "name": "Thalia Lindahl",
-       "f": 3,
+       "name": "Ella Dueck",
+       "f": 1,
        "field": 9,
        "div": "Girls 18U"
       },
       {
        "name": "Sammy Nammack",
+       "f": 3,
+       "field": 9,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Thalia Lindahl",
        "f": 3,
        "field": 9,
        "div": "Girls 18U"
@@ -5727,25 +4726,25 @@
    ],
    "topFinishers": [
     {
-     "name": "Ella Dueck",
-     "f": 1,
-     "field": 9,
-     "div": "Girls 18U"
-    },
-    {
      "name": "Simrin Adams",
      "f": 1,
      "field": 9,
      "div": "Girls 18U"
     },
     {
-     "name": "Thalia Lindahl",
-     "f": 3,
+     "name": "Ella Dueck",
+     "f": 1,
      "field": 9,
      "div": "Girls 18U"
     },
     {
      "name": "Sammy Nammack",
+     "f": 3,
+     "field": 9,
+     "div": "Girls 18U"
+    },
+    {
+     "name": "Thalia Lindahl",
      "f": 3,
      "field": 9,
      "div": "Girls 18U"
@@ -5759,13 +4758,13 @@
    "endDate": "2026-01-24",
    "sanction": "\u2014",
    "location": "Huntington State Beach (Newland)",
-   "t15": 0,
+   "t15": 1,
    "t30": 1,
    "t60": 1,
    "brackets": [
     {
      "bracket": "18U",
-     "t15": 0,
+     "t15": 1,
      "t30": 1,
      "t60": 1,
      "divisions": [
@@ -5808,17 +4807,17 @@
    "location": "Hermosa Beach Pier",
    "t15": 5,
    "t30": 6,
-   "t60": 8,
+   "t60": 9,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 5,
      "t30": 6,
-     "t60": 8,
+     "t60": 9,
      "divisions": [
       {
        "name": "Girls U18 (Year Born: 2008-2009-2010)",
-       "n": 8
+       "n": 9
       }
      ],
      "topFinishers": [
@@ -5835,13 +4834,13 @@
        "div": "Girls U18 (Year Born: 2008-2009-2010)"
       },
       {
-       "name": "JoJo Wilson",
+       "name": "Thalia Lindahl",
        "f": 4,
        "field": 8,
        "div": "Girls U18 (Year Born: 2008-2009-2010)"
       },
       {
-       "name": "Thalia Lindahl",
+       "name": "JoJo Wilson",
        "f": 4,
        "field": 8,
        "div": "Girls U18 (Year Born: 2008-2009-2010)"
@@ -5852,7 +4851,7 @@
    "divisions": [
     {
      "name": "Girls U18 (Year Born: 2008-2009-2010)",
-     "n": 8
+     "n": 9
     }
    ],
    "topFinishers": [
@@ -5869,16 +4868,75 @@
      "div": "Girls U18 (Year Born: 2008-2009-2010)"
     },
     {
-     "name": "JoJo Wilson",
+     "name": "Thalia Lindahl",
      "f": 4,
      "field": 8,
      "div": "Girls U18 (Year Born: 2008-2009-2010)"
     },
     {
-     "name": "Thalia Lindahl",
+     "name": "JoJo Wilson",
      "f": 4,
      "field": 8,
      "div": "Girls U18 (Year Born: 2008-2009-2010)"
+    }
+   ]
+  },
+  {
+   "tid": 33130,
+   "name": "National Qualifier (p1440 / AVP America)",
+   "date": "2026-01-25",
+   "endDate": "2026-01-25",
+   "sanction": "p1440",
+   "location": "Stealth Beach at Victory Lanes",
+   "t15": 0,
+   "t30": 1,
+   "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Class of 2026-2027 (18U) - Girls",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Bristyn Burness",
+       "f": 2,
+       "field": 0,
+       "div": "Class of 2026-2027 (18U) - Girls"
+      },
+      {
+       "name": "Lillie Duitsman",
+       "f": 5,
+       "field": 0,
+       "div": "Class of 2026-2027 (18U) - Girls"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Class of 2026-2027 (18U) - Girls",
+     "n": 2
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Bristyn Burness",
+     "f": 2,
+     "field": 0,
+     "div": "Class of 2026-2027 (18U) - Girls"
+    },
+    {
+     "name": "Lillie Duitsman",
+     "f": 5,
+     "field": 0,
+     "div": "Class of 2026-2027 (18U) - Girls"
     }
    ]
   },
@@ -5891,34 +4949,28 @@
    "location": "Upham Beach Park- St. Pete Beach",
    "t15": 0,
    "t30": 1,
-   "t60": 3,
+   "t60": 2,
    "brackets": [
     {
      "bracket": "Women's",
      "t15": 0,
      "t30": 1,
-     "t60": 3,
+     "t60": 2,
      "divisions": [
       {
        "name": "Womens Open",
-       "n": 3
+       "n": 2
       }
      ],
      "topFinishers": [
       {
-       "name": "Adaleah Bassler",
-       "f": 5,
-       "field": 10,
-       "div": "Womens Open"
-      },
-      {
-       "name": "Claire Hanson",
+       "name": "Izzy Fischer",
        "f": 7,
        "field": 10,
        "div": "Womens Open"
       },
       {
-       "name": "Izzy Fischer",
+       "name": "Claire Hanson",
        "f": 7,
        "field": 10,
        "div": "Womens Open"
@@ -5929,24 +4981,18 @@
    "divisions": [
     {
      "name": "Womens Open",
-     "n": 3
+     "n": 2
     }
    ],
    "topFinishers": [
     {
-     "name": "Adaleah Bassler",
-     "f": 5,
-     "field": 10,
-     "div": "Womens Open"
-    },
-    {
-     "name": "Claire Hanson",
+     "name": "Izzy Fischer",
      "f": 7,
      "field": 10,
      "div": "Womens Open"
     },
     {
-     "name": "Izzy Fischer",
+     "name": "Claire Hanson",
      "f": 7,
      "field": 10,
      "div": "Womens Open"
@@ -5961,13 +5007,13 @@
    "sanction": "AVPA",
    "location": "Upham Beach Park- St.Pete Beach",
    "t15": 0,
-   "t30": 1,
+   "t30": 0,
    "t60": 1,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 0,
-     "t30": 1,
+     "t30": 0,
      "t60": 1,
      "divisions": [
       {
@@ -6001,49 +5047,49 @@
    ]
   },
   {
-   "tid": 33130,
-   "name": "National Qualifier (p1440 / AVP America)",
+   "tid": 33103,
+   "name": "BVSD Jr. Beach Volleyball Tournament @ Central Beach, Coronado",
    "date": "2026-01-25",
    "endDate": "2026-01-25",
-   "sanction": "p1440",
-   "location": "Stealth Beach at Victory Lanes",
+   "sanction": "\u2014",
+   "location": "Central Beach VB Courts on Coronado Island",
    "t15": 0,
-   "t30": 1,
+   "t30": 0,
    "t60": 1,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 0,
-     "t30": 1,
+     "t30": 0,
      "t60": 1,
      "divisions": [
       {
-       "name": "Class of 2026-2027 (18U) - Girls",
+       "name": "Girls 18U",
        "n": 1
       }
      ],
      "topFinishers": [
       {
-       "name": "Bristyn Burness",
+       "name": "Kelly Randolph",
        "f": 2,
-       "field": 0,
-       "div": "Class of 2026-2027 (18U) - Girls"
+       "field": 8,
+       "div": "Girls 18U"
       }
      ]
     }
    ],
    "divisions": [
     {
-     "name": "Class of 2026-2027 (18U) - Girls",
+     "name": "Girls 18U",
      "n": 1
     }
    ],
    "topFinishers": [
     {
-     "name": "Bristyn Burness",
+     "name": "Kelly Randolph",
      "f": 2,
-     "field": 0,
-     "div": "Class of 2026-2027 (18U) - Girls"
+     "field": 8,
+     "div": "Girls 18U"
     }
    ]
   },
@@ -6102,13 +5148,13 @@
    "sanction": "USAV",
    "location": "Manhattan Beach Pier",
    "t15": 5,
-   "t30": 7,
+   "t30": 8,
    "t60": 8,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 5,
-     "t30": 7,
+     "t30": 8,
      "t60": 8,
      "divisions": [
       {
@@ -6184,19 +5230,19 @@
    "endDate": "2026-02-01",
    "sanction": "\u2014",
    "location": "Hermosa Beach Pier",
-   "t15": 3,
+   "t15": 2,
    "t30": 5,
-   "t60": 9,
+   "t60": 10,
    "brackets": [
     {
      "bracket": "18U",
-     "t15": 3,
+     "t15": 2,
      "t30": 5,
-     "t60": 9,
+     "t60": 10,
      "divisions": [
       {
        "name": "Girls Varsity",
-       "n": 9
+       "n": 10
       }
      ],
      "topFinishers": [
@@ -6219,7 +5265,7 @@
        "div": "Girls Varsity"
       },
       {
-       "name": "Georgeann Lee",
+       "name": "Lerin Rosenthal",
        "f": 5,
        "field": 24,
        "div": "Girls Varsity"
@@ -6230,7 +5276,7 @@
    "divisions": [
     {
      "name": "Girls Varsity",
-     "n": 9
+     "n": 10
     }
    ],
    "topFinishers": [
@@ -6253,7 +5299,7 @@
      "div": "Girls Varsity"
     },
     {
-     "name": "Georgeann Lee",
+     "name": "Lerin Rosenthal",
      "f": 5,
      "field": 24,
      "div": "Girls Varsity"
@@ -6268,18 +5314,18 @@
    "sanction": "AVPA",
    "location": "210 Beach Sideliners",
    "t15": 0,
-   "t30": 3,
-   "t60": 4,
+   "t30": 2,
+   "t60": 6,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 0,
-     "t30": 3,
-     "t60": 4,
+     "t30": 2,
+     "t60": 6,
      "divisions": [
       {
        "name": "Girls 18U",
-       "n": 4
+       "n": 6
       }
      ],
      "topFinishers": [
@@ -6313,7 +5359,7 @@
    "divisions": [
     {
      "name": "Girls 18U",
-     "n": 4
+     "n": 6
     }
    ],
    "topFinishers": [
@@ -6340,65 +5386,6 @@
      "f": 5,
      "field": 40,
      "div": "Girls 18U"
-    }
-   ]
-  },
-  {
-   "tid": 32909,
-   "name": "TVA Winter AVP Next $8K & Boston Beer Co. Player Party",
-   "date": "2026-02-01",
-   "endDate": "2026-02-01",
-   "sanction": "AVPA",
-   "location": "Tidewater Volleyball Center",
-   "t15": 0,
-   "t30": 0,
-   "t60": 2,
-   "brackets": [
-    {
-     "bracket": "Women's",
-     "t15": 0,
-     "t30": 0,
-     "t60": 2,
-     "divisions": [
-      {
-       "name": "Womens Open",
-       "n": 2
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Giani Boerner",
-       "f": 3,
-       "field": 12,
-       "div": "Womens Open"
-      },
-      {
-       "name": "Sienna Carr",
-       "f": 5,
-       "field": 12,
-       "div": "Womens Open"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Womens Open",
-     "n": 2
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Giani Boerner",
-     "f": 3,
-     "field": 12,
-     "div": "Womens Open"
-    },
-    {
-     "name": "Sienna Carr",
-     "f": 5,
-     "field": 12,
-     "div": "Womens Open"
     }
    ]
   },
@@ -6497,6 +5484,53 @@
    ]
   },
   {
+   "tid": 32909,
+   "name": "TVA Winter AVP Next $8K & Boston Beer Co. Player Party",
+   "date": "2026-02-01",
+   "endDate": "2026-02-01",
+   "sanction": "AVPA",
+   "location": "Tidewater Volleyball Center",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Giani Boerner",
+       "f": 3,
+       "field": 12,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Womens Open",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Giani Boerner",
+     "f": 3,
+     "field": 12,
+     "div": "Womens Open"
+    }
+   ]
+  },
+  {
    "tid": 31639,
    "name": "Kauai Bikini Open Santa Monica CA",
    "date": "2026-02-07",
@@ -6556,53 +5590,6 @@
    ]
   },
   {
-   "tid": 31704,
-   "name": "Beach College Showcase AVP America 2 star Bid to Nationals 2026",
-   "date": "2026-02-07",
-   "endDate": "2026-02-07",
-   "sanction": "AVPA",
-   "location": "RPS Academies",
-   "t15": 0,
-   "t30": 0,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 0,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Girls 18U",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Amelia Berent",
-       "f": 1,
-       "field": 17,
-       "div": "Girls 18U"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Girls 18U",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Amelia Berent",
-     "f": 1,
-     "field": 17,
-     "div": "Girls 18U"
-    }
-   ]
-  },
-  {
    "tid": 28051,
    "name": "SUN 2/8 ~ SuperBALLER Sunday (Beach Baller #8)  Last One!",
    "date": "2026-02-08",
@@ -6646,6 +5633,53 @@
      "f": 7,
      "field": 10,
      "div": "Womens Open"
+    }
+   ]
+  },
+  {
+   "tid": 31187,
+   "name": "GNBV National Recruiting Showcase Feb 2026",
+   "date": "2026-02-08",
+   "endDate": "2026-02-08",
+   "sanction": "BVNE",
+   "location": "BVNE North Beach Santa Monica",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Mila Alo",
+       "f": 3,
+       "field": 26,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Girls 18U",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Mila Alo",
+     "f": 3,
+     "field": 26,
+     "div": "Girls 18U"
     }
    ]
   },
@@ -6708,14 +5742,14 @@
    "endDate": "2026-02-14",
    "sanction": "AVPA",
    "location": "Beach Elite Volleyball Courts @ Brookhurst Street",
-   "t15": 0,
-   "t30": 1,
+   "t15": 1,
+   "t30": 2,
    "t60": 2,
    "brackets": [
     {
      "bracket": "18U",
-     "t15": 0,
-     "t30": 1,
+     "t15": 1,
+     "t30": 2,
      "t60": 2,
      "divisions": [
       {
@@ -6827,13 +5861,13 @@
    "sanction": "AVPA",
    "location": "The Strand",
    "t15": 0,
-   "t30": 2,
+   "t30": 1,
    "t60": 2,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 0,
-     "t30": 2,
+     "t30": 1,
      "t60": 2,
      "divisions": [
       {
@@ -6932,14 +5966,14 @@
    "endDate": "2026-02-22",
    "sanction": "p1440",
    "location": "Gulf Shores Public Beach",
-   "t15": 3,
-   "t30": 8,
+   "t15": 2,
+   "t30": 7,
    "t60": 13,
    "brackets": [
     {
      "bracket": "18U",
-     "t15": 3,
-     "t30": 8,
+     "t15": 2,
+     "t30": 7,
      "t60": 13,
      "divisions": [
       {
@@ -7015,19 +6049,19 @@
    "endDate": "2026-02-22",
    "sanction": "AAU",
    "location": "Hermosa Beach Pier",
-   "t15": 3,
-   "t30": 4,
-   "t60": 7,
+   "t15": 4,
+   "t30": 5,
+   "t60": 8,
    "brackets": [
     {
      "bracket": "18U",
-     "t15": 3,
-     "t30": 4,
-     "t60": 7,
+     "t15": 4,
+     "t30": 5,
+     "t60": 8,
      "divisions": [
       {
        "name": "Girls 18U",
-       "n": 7
+       "n": 8
       }
      ],
      "topFinishers": [
@@ -7050,7 +6084,7 @@
        "div": "Girls 18U"
       },
       {
-       "name": "Lerin Rosenthal",
+       "name": "Simrin Adams",
        "f": 5,
        "field": 12,
        "div": "Girls 18U"
@@ -7061,7 +6095,7 @@
    "divisions": [
     {
      "name": "Girls 18U",
-     "n": 7
+     "n": 8
     }
    ],
    "topFinishers": [
@@ -7084,7 +6118,7 @@
      "div": "Girls 18U"
     },
     {
-     "name": "Lerin Rosenthal",
+     "name": "Simrin Adams",
      "f": 5,
      "field": 12,
      "div": "Girls 18U"
@@ -7139,6 +6173,53 @@
    ]
   },
   {
+   "tid": 33104,
+   "name": "Beach Volleyball San Diego Jr. Beach Volleyball Tournament @ Coronado",
+   "date": "2026-02-22",
+   "endDate": "2026-02-22",
+   "sanction": "\u2014",
+   "location": "Central Beach VB Courts on Coronado Island",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Kelly Randolph",
+       "f": 1,
+       "field": 11,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Girls 18U",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Kelly Randolph",
+     "f": 1,
+     "field": 11,
+     "div": "Girls 18U"
+    }
+   ]
+  },
+  {
    "tid": 34540,
    "name": "2/27-28 ~ AVPnext $10K \u2018SIDEOUT Rules\u2019 (M/W O)",
    "date": "2026-02-28",
@@ -7146,13 +6227,13 @@
    "sanction": "AVPA",
    "location": "Third Coast HTX",
    "t15": 1,
-   "t30": 1,
+   "t30": 2,
    "t60": 3,
    "brackets": [
     {
      "bracket": "Women's",
      "t15": 1,
-     "t30": 1,
+     "t30": 2,
      "t60": 3,
      "divisions": [
       {
@@ -7168,13 +6249,13 @@
        "div": "Womens Open"
       },
       {
-       "name": "Tesa Solis",
+       "name": "Izzy Fischer",
        "f": 5,
        "field": 8,
        "div": "Womens Open"
       },
       {
-       "name": "Izzy Fischer",
+       "name": "Tesa Solis",
        "f": 5,
        "field": 8,
        "div": "Womens Open"
@@ -7196,13 +6277,13 @@
      "div": "Womens Open"
     },
     {
-     "name": "Tesa Solis",
+     "name": "Izzy Fischer",
      "f": 5,
      "field": 8,
      "div": "Womens Open"
     },
     {
-     "name": "Izzy Fischer",
+     "name": "Tesa Solis",
      "f": 5,
      "field": 8,
      "div": "Womens Open"
@@ -7257,12 +6338,12 @@
    ]
   },
   {
-   "tid": 33540,
-   "name": "Saturday, February 28th - AVPA 2026 National Qualifier- Girls 14-18U",
+   "tid": 34222,
+   "name": "DaKine Jrs Beach Double Qualifier 2/28",
    "date": "2026-02-28",
    "endDate": "2026-02-28",
-   "sanction": "avpa",
-   "location": "Hyden Beach",
+   "sanction": "p1440",
+   "location": "DaKine Sports Center",
    "t15": 0,
    "t30": 0,
    "t60": 1,
@@ -7274,32 +6355,32 @@
      "t60": 1,
      "divisions": [
       {
-       "name": "Class of 2026 - Girls 18U - Saturday AM Wave",
+       "name": "Girls 18U",
        "n": 1
       }
      ],
      "topFinishers": [
       {
-       "name": "Johanna Snyder",
+       "name": "Claire Demirjian",
        "f": 1,
        "field": 8,
-       "div": "Class of 2026 - Girls 18U - Saturday AM Wave"
+       "div": "Girls 18U"
       }
      ]
     }
    ],
    "divisions": [
     {
-     "name": "Class of 2026 - Girls 18U - Saturday AM Wave",
+     "name": "Girls 18U",
      "n": 1
     }
    ],
    "topFinishers": [
     {
-     "name": "Johanna Snyder",
+     "name": "Claire Demirjian",
      "f": 1,
      "field": 8,
-     "div": "Class of 2026 - Girls 18U - Saturday AM Wave"
+     "div": "Girls 18U"
     }
    ]
   },
@@ -7351,12 +6432,12 @@
    ]
   },
   {
-   "tid": 34222,
-   "name": "DaKine Jrs Beach Double Qualifier 2/28",
+   "tid": 33540,
+   "name": "Saturday, February 28th - AVPA 2026 National Qualifier- Girls 14-18U",
    "date": "2026-02-28",
    "endDate": "2026-02-28",
-   "sanction": "p1440",
-   "location": "DaKine Sports Center",
+   "sanction": "avpa",
+   "location": "Hyden Beach",
    "t15": 0,
    "t30": 0,
    "t60": 1,
@@ -7368,32 +6449,32 @@
      "t60": 1,
      "divisions": [
       {
-       "name": "Girls 18U",
+       "name": "Class of 2026 - Girls 18U - Saturday AM Wave",
        "n": 1
       }
      ],
      "topFinishers": [
       {
-       "name": "Claire Demirjian",
+       "name": "Johanna Snyder",
        "f": 1,
        "field": 8,
-       "div": "Girls 18U"
+       "div": "Class of 2026 - Girls 18U - Saturday AM Wave"
       }
      ]
     }
    ],
    "divisions": [
     {
-     "name": "Girls 18U",
+     "name": "Class of 2026 - Girls 18U - Saturday AM Wave",
      "n": 1
     }
    ],
    "topFinishers": [
     {
-     "name": "Claire Demirjian",
+     "name": "Johanna Snyder",
      "f": 1,
      "field": 8,
-     "div": "Girls 18U"
+     "div": "Class of 2026 - Girls 18U - Saturday AM Wave"
     }
    ]
   },
@@ -7404,30 +6485,30 @@
    "endDate": "2026-03-01",
    "sanction": "p1440",
    "location": "Hermosa Beach Pier",
-   "t15": 2,
+   "t15": 4,
    "t30": 6,
-   "t60": 8,
+   "t60": 9,
    "brackets": [
     {
      "bracket": "18U",
-     "t15": 2,
+     "t15": 4,
      "t30": 6,
-     "t60": 8,
+     "t60": 9,
      "divisions": [
       {
        "name": "Girls 18U",
-       "n": 8
+       "n": 9
       }
      ],
      "topFinishers": [
       {
-       "name": "Ella Dueck",
+       "name": "Simrin Adams",
        "f": 1,
        "field": 9,
        "div": "Girls 18U"
       },
       {
-       "name": "Simrin Adams",
+       "name": "Ella Dueck",
        "f": 1,
        "field": 9,
        "div": "Girls 18U"
@@ -7450,18 +6531,18 @@
    "divisions": [
     {
      "name": "Girls 18U",
-     "n": 8
+     "n": 9
     }
    ],
    "topFinishers": [
     {
-     "name": "Ella Dueck",
+     "name": "Simrin Adams",
      "f": 1,
      "field": 9,
      "div": "Girls 18U"
     },
     {
-     "name": "Simrin Adams",
+     "name": "Ella Dueck",
      "f": 1,
      "field": 9,
      "div": "Girls 18U"
@@ -7528,19 +6609,66 @@
    ]
   },
   {
+   "tid": 36271,
+   "name": "National Qualifier (p1440 / AVP America)",
+   "date": "2026-03-01",
+   "endDate": "2026-03-01",
+   "sanction": "p1440",
+   "location": "Stealth Beach at Victory Lanes",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Class of 2026-2027 (18U) - Girls",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lillie Duitsman",
+       "f": 3,
+       "field": 7,
+       "div": "Class of 2026-2027 (18U) - Girls"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Class of 2026-2027 (18U) - Girls",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Lillie Duitsman",
+     "f": 3,
+     "field": 7,
+     "div": "Class of 2026-2027 (18U) - Girls"
+    }
+   ]
+  },
+  {
    "tid": 37252,
    "name": "Men's Open + Women's Open at Manhattan Pier, Manhattan Beach",
    "date": "2026-03-07",
    "endDate": "2026-03-07",
    "sanction": "AVPA",
    "location": "",
-   "t15": 2,
+   "t15": 3,
    "t30": 4,
    "t60": 4,
    "brackets": [
     {
      "bracket": "Women's",
-     "t15": 2,
+     "t15": 3,
      "t30": 4,
      "t60": 4,
      "divisions": [
@@ -7619,17 +6747,17 @@
    "location": "Arizona Athletic Grounds",
    "t15": 0,
    "t30": 1,
-   "t60": 3,
+   "t60": 4,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 0,
      "t30": 1,
-     "t60": 3,
+     "t60": 4,
      "divisions": [
       {
        "name": "Class of '26 & Younger",
-       "n": 3
+       "n": 4
       }
      ],
      "topFinishers": [
@@ -7650,6 +6778,12 @@
        "f": 5,
        "field": 16,
        "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Lillie Duitsman",
+       "f": 5,
+       "field": 16,
+       "div": "Class of '26 & Younger"
       }
      ]
     }
@@ -7657,7 +6791,7 @@
    "divisions": [
     {
      "name": "Class of '26 & Younger",
-     "n": 3
+     "n": 4
     }
    ],
    "topFinishers": [
@@ -7678,53 +6812,12 @@
      "f": 5,
      "field": 16,
      "div": "Class of '26 & Younger"
-    }
-   ]
-  },
-  {
-   "tid": 34551,
-   "name": "JUNIORS: SandBox GIRLS 2v2 Spring Thaw (@ NEO Sports Plant)",
-   "date": "2026-03-07",
-   "endDate": "2026-03-07",
-   "sanction": "AVPA",
-   "location": "NEO Sports Plant",
-   "t15": 0,
-   "t30": 0,
-   "t60": 1,
-   "brackets": [
+    },
     {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 0,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Girls GY2026-2029",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Anna Popovic",
-       "f": 1,
-       "field": 10,
-       "div": "Girls GY2026-2029"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Girls GY2026-2029",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Anna Popovic",
-     "f": 1,
-     "field": 10,
-     "div": "Girls GY2026-2029"
+     "name": "Lillie Duitsman",
+     "f": 5,
+     "field": 16,
+     "div": "Class of '26 & Younger"
     }
    ]
   },
@@ -7795,13 +6888,13 @@
    "sanction": "AVPA",
    "location": "Rally at LakePoint",
    "t15": 0,
-   "t30": 0,
+   "t30": 1,
    "t60": 1,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 0,
-     "t30": 0,
+     "t30": 1,
      "t60": 1,
      "divisions": [
       {
@@ -7870,13 +6963,13 @@
        "div": "Womens Open"
       },
       {
-       "name": "Leah Blair",
+       "name": "Linnaea Nielsen",
        "f": 9,
        "field": 16,
        "div": "Womens Open"
       },
       {
-       "name": "Linnaea Nielsen",
+       "name": "Leah Blair",
        "f": 9,
        "field": 16,
        "div": "Womens Open"
@@ -7904,13 +6997,13 @@
      "div": "Womens Open"
     },
     {
-     "name": "Leah Blair",
+     "name": "Linnaea Nielsen",
      "f": 9,
      "field": 16,
      "div": "Womens Open"
     },
     {
-     "name": "Linnaea Nielsen",
+     "name": "Leah Blair",
      "f": 9,
      "field": 16,
      "div": "Womens Open"
@@ -7925,18 +7018,18 @@
    "sanction": "AAU",
    "location": "Hermosa Beach Pier",
    "t15": 5,
-   "t30": 5,
-   "t60": 8,
+   "t30": 6,
+   "t60": 9,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 5,
-     "t30": 5,
-     "t60": 8,
+     "t30": 6,
+     "t60": 9,
      "divisions": [
       {
        "name": "Girls 18U",
-       "n": 8
+       "n": 9
       }
      ],
      "topFinishers": [
@@ -7970,7 +7063,7 @@
    "divisions": [
     {
      "name": "Girls 18U",
-     "n": 8
+     "n": 9
     }
    ],
    "topFinishers": [
@@ -8007,19 +7100,19 @@
    "endDate": "2026-03-15",
    "sanction": "p1440",
    "location": "Pompano Beach",
-   "t15": 2,
-   "t30": 4,
-   "t60": 8,
+   "t15": 1,
+   "t30": 3,
+   "t60": 6,
    "brackets": [
     {
      "bracket": "18U",
-     "t15": 2,
-     "t30": 4,
-     "t60": 8,
+     "t15": 1,
+     "t30": 3,
+     "t60": 6,
      "divisions": [
       {
        "name": "Class of '26 & Younger",
-       "n": 8
+       "n": 6
       }
      ],
      "topFinishers": [
@@ -8053,7 +7146,7 @@
    "divisions": [
     {
      "name": "Class of '26 & Younger",
-     "n": 8
+     "n": 6
     }
    ],
    "topFinishers": [
@@ -8231,19 +7324,19 @@
    "endDate": "2026-03-21",
    "sanction": "AVPA",
    "location": "",
-   "t15": 3,
+   "t15": 4,
    "t30": 5,
-   "t60": 5,
+   "t60": 6,
    "brackets": [
     {
      "bracket": "Women's",
-     "t15": 3,
+     "t15": 4,
      "t30": 5,
-     "t60": 5,
+     "t60": 6,
      "divisions": [
       {
        "name": "Womens Open",
-       "n": 5
+       "n": 6
       }
      ],
      "topFinishers": [
@@ -8254,13 +7347,13 @@
        "div": "Womens Open"
       },
       {
-       "name": "Thalia Lindahl",
+       "name": "Simrin Adams",
        "f": 5,
        "field": 22,
        "div": "Womens Open"
       },
       {
-       "name": "Simrin Adams",
+       "name": "Thalia Lindahl",
        "f": 5,
        "field": 22,
        "div": "Womens Open"
@@ -8277,7 +7370,7 @@
    "divisions": [
     {
      "name": "Womens Open",
-     "n": 5
+     "n": 6
     }
    ],
    "topFinishers": [
@@ -8288,13 +7381,13 @@
      "div": "Womens Open"
     },
     {
-     "name": "Thalia Lindahl",
+     "name": "Simrin Adams",
      "f": 5,
      "field": 22,
      "div": "Womens Open"
     },
     {
-     "name": "Simrin Adams",
+     "name": "Thalia Lindahl",
      "f": 5,
      "field": 22,
      "div": "Womens Open"
@@ -8426,53 +7519,6 @@
    ]
   },
   {
-   "tid": 33504,
-   "name": "SSOVA March 22nd Juniors AVP & USAV Regional Qualifier St.Pete Beach, Beach Volleyball Tournament- BRQ",
-   "date": "2026-03-22",
-   "endDate": "2026-03-22",
-   "sanction": "AVPA",
-   "location": "Crabby Bill's",
-   "t15": 0,
-   "t30": 0,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 0,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Girls 18U",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Adaleah Bassler",
-       "f": 1,
-       "field": 17,
-       "div": "Girls 18U"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Girls 18U",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Adaleah Bassler",
-     "f": 1,
-     "field": 17,
-     "div": "Girls 18U"
-    }
-   ]
-  },
-  {
    "tid": 33956,
    "name": "$1,000 AVP Womens San Antonio Open",
    "date": "2026-03-28",
@@ -8526,13 +7572,13 @@
    "endDate": "2026-03-28",
    "sanction": "AVPA",
    "location": "",
-   "t15": 1,
+   "t15": 0,
    "t30": 1,
    "t60": 1,
    "brackets": [
     {
      "bracket": "Women's",
-     "t15": 1,
+     "t15": 0,
      "t30": 1,
      "t60": 1,
      "divisions": [
@@ -8574,13 +7620,13 @@
    "sanction": "AVPA",
    "location": "Renaissance Park - Sand Courts",
    "t15": 0,
-   "t30": 1,
+   "t30": 0,
    "t60": 1,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 0,
-     "t30": 1,
+     "t30": 0,
      "t60": 1,
      "divisions": [
       {
@@ -8661,53 +7707,6 @@
    ]
   },
   {
-   "tid": 35839,
-   "name": "Elite VBTC Girls Beach March 28, 2026",
-   "date": "2026-03-28",
-   "endDate": "2026-03-28",
-   "sanction": "USAV",
-   "location": "Flannagan's Dublin",
-   "t15": 0,
-   "t30": 0,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 0,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Girls 18U",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Anna Popovic",
-       "f": 2,
-       "field": 8,
-       "div": "Girls 18U"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Girls 18U",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Anna Popovic",
-     "f": 2,
-     "field": 8,
-     "div": "Girls 18U"
-    }
-   ]
-  },
-  {
    "tid": 31567,
    "name": "2026 Futures Tour Spring Championship",
    "date": "2026-03-29",
@@ -8715,18 +7714,18 @@
    "sanction": "p1440",
    "location": "North Beach - Santa Monica, CA",
    "t15": 8,
-   "t30": 14,
-   "t60": 23,
+   "t30": 16,
+   "t60": 24,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 8,
-     "t30": 14,
-     "t60": 23,
+     "t30": 16,
+     "t60": 24,
      "divisions": [
       {
        "name": "Class of '26 & Younger",
-       "n": 23
+       "n": 24
       }
      ],
      "topFinishers": [
@@ -8760,7 +7759,7 @@
    "divisions": [
     {
      "name": "Class of '26 & Younger",
-     "n": 23
+     "n": 24
     }
    ],
    "topFinishers": [
@@ -8797,24 +7796,30 @@
    "endDate": "2026-03-29",
    "sanction": "AVPA",
    "location": "",
-   "t15": 1,
+   "t15": 0,
    "t30": 1,
-   "t60": 1,
+   "t60": 2,
    "brackets": [
     {
      "bracket": "Women's",
-     "t15": 1,
+     "t15": 0,
      "t30": 1,
-     "t60": 1,
+     "t60": 2,
      "divisions": [
       {
        "name": "Womens Open",
-       "n": 1
+       "n": 2
       }
      ],
      "topFinishers": [
       {
        "name": "Georgeann Lee",
+       "f": 5,
+       "field": 12,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Sydney Toumajian",
        "f": 5,
        "field": 12,
        "div": "Womens Open"
@@ -8825,7 +7830,7 @@
    "divisions": [
     {
      "name": "Womens Open",
-     "n": 1
+     "n": 2
     }
    ],
    "topFinishers": [
@@ -8834,53 +7839,12 @@
      "f": 5,
      "field": 12,
      "div": "Womens Open"
-    }
-   ]
-  },
-  {
-   "tid": 36697,
-   "name": "CHAOS Charlotte 2026 Opener",
-   "date": "2026-03-29",
-   "endDate": "2026-03-29",
-   "sanction": "AVPA",
-   "location": "Walker E. Reid III Park",
-   "t15": 0,
-   "t30": 1,
-   "t60": 1,
-   "brackets": [
+    },
     {
-     "bracket": "Women's",
-     "t15": 0,
-     "t30": 1,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "RevCo Open",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Claire Hanson",
-       "f": 7,
-       "field": 8,
-       "div": "RevCo Open"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "RevCo Open",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Claire Hanson",
-     "f": 7,
-     "field": 8,
-     "div": "RevCo Open"
+     "name": "Sydney Toumajian",
+     "f": 5,
+     "field": 12,
+     "div": "Womens Open"
     }
    ]
   },
@@ -8928,6 +7892,147 @@
      "f": 3,
      "field": 13,
      "div": "Girls 18U"
+    }
+   ]
+  },
+  {
+   "tid": 33320,
+   "name": "DALHAUSSER OPEN - SSOVA's March 28/29 Orlando Men's/Women's/Coed\u2019s Beach Volleyball Tournament",
+   "date": "2026-03-29",
+   "endDate": "2026-03-29",
+   "sanction": "AVPA",
+   "location": "Phil Dalhausser Beach Volleyball Academy",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Brooke Smith",
+       "f": 3,
+       "field": 9,
+       "div": "Womens AA"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Womens AA",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Brooke Smith",
+     "f": 3,
+     "field": 9,
+     "div": "Womens AA"
+    }
+   ]
+  },
+  {
+   "tid": 33321,
+   "name": "DALHAUSSER OPEN - SSOVA's March 29th Orlando Juniors AVP & USAV Regional Qualifier, Beach Volleyball Tournament",
+   "date": "2026-03-29",
+   "endDate": "2026-03-29",
+   "sanction": "AVPA",
+   "location": "Phil Dalhausser Beach Volleyball Academy",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Brooke Smith",
+       "f": 1,
+       "field": 5,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Girls 18U",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Brooke Smith",
+     "f": 1,
+     "field": 5,
+     "div": "Girls 18U"
+    }
+   ]
+  },
+  {
+   "tid": 36697,
+   "name": "CHAOS Charlotte 2026 Opener",
+   "date": "2026-03-29",
+   "endDate": "2026-03-29",
+   "sanction": "AVPA",
+   "location": "Walker E. Reid III Park",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "RevCo Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Claire Hanson",
+       "f": 7,
+       "field": 8,
+       "div": "RevCo Open"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "RevCo Open",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Claire Hanson",
+     "f": 7,
+     "field": 8,
+     "div": "RevCo Open"
     }
    ]
   },
@@ -9050,13 +8155,13 @@
    "sanction": "AVPA",
    "location": "",
    "t15": 1,
-   "t30": 1,
+   "t30": 2,
    "t60": 2,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 1,
-     "t30": 1,
+     "t30": 2,
      "t60": 2,
      "divisions": [
       {
@@ -9149,53 +8254,6 @@
    ]
   },
   {
-   "tid": 34140,
-   "name": "USA Volleyball Beach Tour - Ohio Valley Region Beach National Qualifier",
-   "date": "2026-04-04",
-   "endDate": "2026-04-04",
-   "sanction": "USAV",
-   "location": "Grand Sands Volleyball",
-   "t15": 0,
-   "t30": 0,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 0,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Girls 18U",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Anna Popovic",
-       "f": 1,
-       "field": 8,
-       "div": "Girls 18U"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Girls 18U",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Anna Popovic",
-     "f": 1,
-     "field": 8,
-     "div": "Girls 18U"
-    }
-   ]
-  },
-  {
    "tid": 33505,
    "name": "SSOVA's EASTER THEMED St Pete Beach Men's/Women's/Coed\u2019s  Beach Volleyball Tournament",
    "date": "2026-04-05",
@@ -9204,28 +8262,22 @@
    "location": "Upham Beach Park- St. Pete Beach",
    "t15": 1,
    "t30": 1,
-   "t60": 2,
+   "t60": 1,
    "brackets": [
     {
      "bracket": "Women's",
      "t15": 1,
      "t30": 1,
-     "t60": 2,
+     "t60": 1,
      "divisions": [
       {
        "name": "Womens Open",
-       "n": 2
+       "n": 1
       }
      ],
      "topFinishers": [
       {
        "name": "Thais Treumann",
-       "f": 1,
-       "field": 7,
-       "div": "Womens Open"
-      },
-      {
-       "name": "Adaleah Bassler",
        "f": 1,
        "field": 7,
        "div": "Womens Open"
@@ -9236,18 +8288,12 @@
    "divisions": [
     {
      "name": "Womens Open",
-     "n": 2
+     "n": 1
     }
    ],
    "topFinishers": [
     {
      "name": "Thais Treumann",
-     "f": 1,
-     "field": 7,
-     "div": "Womens Open"
-    },
-    {
-     "name": "Adaleah Bassler",
      "f": 1,
      "field": 7,
      "div": "Womens Open"
@@ -9302,108 +8348,25 @@
    ]
   },
   {
-   "tid": 31625,
-   "name": "2026 Futures Tour: Texas",
-   "date": "2026-04-12",
-   "endDate": "2026-04-12",
-   "sanction": "p1440",
-   "location": "The Strand",
-   "t15": 0,
-   "t30": 5,
-   "t60": 6,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 5,
-     "t60": 6,
-     "divisions": [
-      {
-       "name": "Class of '26 & Younger",
-       "n": 6
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Megan McLarty",
-       "f": 5,
-       "field": 32,
-       "div": "Class of '26 & Younger"
-      },
-      {
-       "name": "Karsyn Rogers",
-       "f": 5,
-       "field": 32,
-       "div": "Class of '26 & Younger"
-      },
-      {
-       "name": "Ryan Anderson",
-       "f": 5,
-       "field": 32,
-       "div": "Class of '26 & Younger"
-      },
-      {
-       "name": "Paloma Smith",
-       "f": 5,
-       "field": 32,
-       "div": "Class of '26 & Younger"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Class of '26 & Younger",
-     "n": 6
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Megan McLarty",
-     "f": 5,
-     "field": 32,
-     "div": "Class of '26 & Younger"
-    },
-    {
-     "name": "Karsyn Rogers",
-     "f": 5,
-     "field": 32,
-     "div": "Class of '26 & Younger"
-    },
-    {
-     "name": "Ryan Anderson",
-     "f": 5,
-     "field": 32,
-     "div": "Class of '26 & Younger"
-    },
-    {
-     "name": "Paloma Smith",
-     "f": 5,
-     "field": 32,
-     "div": "Class of '26 & Younger"
-    }
-   ]
-  },
-  {
    "tid": 37794,
    "name": "Men's A + Women's B + Women's Open at Ocean Park, Santa Monica",
    "date": "2026-04-12",
    "endDate": "2026-04-12",
    "sanction": "AVPA",
    "location": "",
-   "t15": 2,
-   "t30": 5,
-   "t60": 5,
+   "t15": 3,
+   "t30": 6,
+   "t60": 6,
    "brackets": [
     {
      "bracket": "Women's",
-     "t15": 2,
-     "t30": 5,
-     "t60": 5,
+     "t15": 3,
+     "t30": 6,
+     "t60": 6,
      "divisions": [
       {
        "name": "Womens Open",
-       "n": 5
+       "n": 6
       }
      ],
      "topFinishers": [
@@ -9437,7 +8400,7 @@
    "divisions": [
     {
      "name": "Womens Open",
-     "n": 5
+     "n": 6
     }
    ],
    "topFinishers": [
@@ -9464,6 +8427,89 @@
      "f": 5,
      "field": 12,
      "div": "Womens Open"
+    }
+   ]
+  },
+  {
+   "tid": 31625,
+   "name": "2026 Futures Tour: Texas",
+   "date": "2026-04-12",
+   "endDate": "2026-04-12",
+   "sanction": "p1440",
+   "location": "The Strand",
+   "t15": 0,
+   "t30": 3,
+   "t60": 6,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 3,
+     "t60": 6,
+     "divisions": [
+      {
+       "name": "Class of '26 & Younger",
+       "n": 6
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Karsyn Rogers",
+       "f": 5,
+       "field": 32,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Ryan Anderson",
+       "f": 5,
+       "field": 32,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Megan McLarty",
+       "f": 5,
+       "field": 32,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Paloma Smith",
+       "f": 5,
+       "field": 32,
+       "div": "Class of '26 & Younger"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Class of '26 & Younger",
+     "n": 6
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Karsyn Rogers",
+     "f": 5,
+     "field": 32,
+     "div": "Class of '26 & Younger"
+    },
+    {
+     "name": "Ryan Anderson",
+     "f": 5,
+     "field": 32,
+     "div": "Class of '26 & Younger"
+    },
+    {
+     "name": "Megan McLarty",
+     "f": 5,
+     "field": 32,
+     "div": "Class of '26 & Younger"
+    },
+    {
+     "name": "Paloma Smith",
+     "f": 5,
+     "field": 32,
+     "div": "Class of '26 & Younger"
     }
    ]
   },
@@ -9497,6 +8543,12 @@
        "div": "Womens Open"
       },
       {
+       "name": "Lila Waite",
+       "f": 13,
+       "field": 30,
+       "div": "Womens Open"
+      },
+      {
        "name": "Ashley Markle",
        "f": 13,
        "field": 30,
@@ -9504,12 +8556,6 @@
       },
       {
        "name": "Meadow Rosales",
-       "f": 13,
-       "field": 30,
-       "div": "Womens Open"
-      },
-      {
-       "name": "Lila Waite",
        "f": 13,
        "field": 30,
        "div": "Womens Open"
@@ -9531,6 +8577,12 @@
      "div": "Womens Open"
     },
     {
+     "name": "Lila Waite",
+     "f": 13,
+     "field": 30,
+     "div": "Womens Open"
+    },
+    {
      "name": "Ashley Markle",
      "f": 13,
      "field": 30,
@@ -9541,48 +8593,36 @@
      "f": 13,
      "field": 30,
      "div": "Womens Open"
-    },
-    {
-     "name": "Lila Waite",
-     "f": 13,
-     "field": 30,
-     "div": "Womens Open"
     }
    ]
   },
   {
-   "tid": 33322,
-   "name": "USA Volleyball Beach Tour - Chesapeake Region Spring Beach National Qualifier #1",
+   "tid": 38800,
+   "name": "4/12/26, Central Beach, Coronado, San Diego",
    "date": "2026-04-12",
    "endDate": "2026-04-12",
-   "sanction": "USAV",
-   "location": "Clearbrook Park",
+   "sanction": "AVPA",
+   "location": "",
    "t15": 0,
    "t30": 0,
-   "t60": 2,
+   "t60": 1,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 0,
      "t30": 0,
-     "t60": 2,
+     "t60": 1,
      "divisions": [
       {
        "name": "Girls 18U",
-       "n": 2
+       "n": 1
       }
      ],
      "topFinishers": [
       {
-       "name": "Amelia Berent",
-       "f": 3,
-       "field": 18,
-       "div": "Girls 18U"
-      },
-      {
-       "name": "Anna Popovic",
-       "f": 5,
-       "field": 18,
+       "name": "Kelly Randolph",
+       "f": 1,
+       "field": 10,
        "div": "Girls 18U"
       }
      ]
@@ -9591,20 +8631,14 @@
    "divisions": [
     {
      "name": "Girls 18U",
-     "n": 2
+     "n": 1
     }
    ],
    "topFinishers": [
     {
-     "name": "Amelia Berent",
-     "f": 3,
-     "field": 18,
-     "div": "Girls 18U"
-    },
-    {
-     "name": "Anna Popovic",
-     "f": 5,
-     "field": 18,
+     "name": "Kelly Randolph",
+     "f": 1,
+     "field": 10,
      "div": "Girls 18U"
     }
    ]
@@ -9728,6 +8762,65 @@
    ]
   },
   {
+   "tid": 33545,
+   "name": "National Qualifier \ud83c\udfc6",
+   "date": "2026-04-18",
+   "endDate": "2026-04-18",
+   "sanction": "p1440",
+   "location": "Mesquite Beach",
+   "t15": 0,
+   "t30": 0,
+   "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Class of '26 & Younger",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Mila Alo",
+       "f": 1,
+       "field": 6,
+       "div": "Class of '26 & Younger"
+      },
+      {
+       "name": "Lillie Duitsman",
+       "f": 2,
+       "field": 6,
+       "div": "Class of '26 & Younger"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Class of '26 & Younger",
+     "n": 2
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Mila Alo",
+     "f": 1,
+     "field": 6,
+     "div": "Class of '26 & Younger"
+    },
+    {
+     "name": "Lillie Duitsman",
+     "f": 2,
+     "field": 6,
+     "div": "Class of '26 & Younger"
+    }
+   ]
+  },
+  {
    "tid": 35349,
    "name": "WVS 2026 Adult Azalea Challenge",
    "date": "2026-04-18",
@@ -9782,13 +8875,13 @@
    "sanction": "p1440",
    "location": "Hermosa Beach Pier",
    "t15": 4,
-   "t30": 4,
+   "t30": 5,
    "t60": 7,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 4,
-     "t30": 4,
+     "t30": 5,
      "t60": 7,
      "divisions": [
       {
@@ -9864,13 +8957,13 @@
    "endDate": "2026-04-19",
    "sanction": "AVPA",
    "location": "",
-   "t15": 1,
+   "t15": 2,
    "t30": 2,
    "t60": 2,
    "brackets": [
     {
      "bracket": "18U",
-     "t15": 1,
+     "t15": 2,
      "t30": 2,
      "t60": 2,
      "divisions": [
@@ -9881,13 +8974,13 @@
      ],
      "topFinishers": [
       {
-       "name": "Lerin Rosenthal",
+       "name": "Simrin Adams",
        "f": 1,
        "field": 5,
        "div": "Girls 18U"
       },
       {
-       "name": "Simrin Adams",
+       "name": "Lerin Rosenthal",
        "f": 1,
        "field": 5,
        "div": "Girls 18U"
@@ -9903,13 +8996,13 @@
    ],
    "topFinishers": [
     {
-     "name": "Lerin Rosenthal",
+     "name": "Simrin Adams",
      "f": 1,
      "field": 5,
      "div": "Girls 18U"
     },
     {
-     "name": "Simrin Adams",
+     "name": "Lerin Rosenthal",
      "f": 1,
      "field": 5,
      "div": "Girls 18U"
@@ -10100,13 +9193,13 @@
    "endDate": "2026-04-25",
    "sanction": "AVPA",
    "location": "",
-   "t15": 0,
+   "t15": 2,
    "t30": 2,
    "t60": 2,
    "brackets": [
     {
      "bracket": "Women's",
-     "t15": 0,
+     "t15": 2,
      "t30": 2,
      "t60": 2,
      "divisions": [
@@ -10117,13 +9210,13 @@
      ],
      "topFinishers": [
       {
-       "name": "Maddy  Wagner",
+       "name": "Ella Dueck",
        "f": 2,
        "field": 15,
        "div": "Womens Open"
       },
       {
-       "name": "Ella Dueck",
+       "name": "Maddy  Wagner",
        "f": 2,
        "field": 15,
        "div": "Womens Open"
@@ -10139,13 +9232,13 @@
    ],
    "topFinishers": [
     {
-     "name": "Maddy  Wagner",
+     "name": "Ella Dueck",
      "f": 2,
      "field": 15,
      "div": "Womens Open"
     },
     {
-     "name": "Ella Dueck",
+     "name": "Maddy  Wagner",
      "f": 2,
      "field": 15,
      "div": "Womens Open"
@@ -10160,13 +9253,13 @@
    "sanction": "AVPA",
    "location": "Beach South Volleyball Club",
    "t15": 0,
-   "t30": 1,
+   "t30": 0,
    "t60": 1,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 0,
-     "t30": 1,
+     "t30": 0,
      "t60": 1,
      "divisions": [
       {
@@ -10384,13 +9477,13 @@
    "sanction": "AVPA",
    "location": "Richard Barry Park",
    "t15": 0,
-   "t30": 1,
+   "t30": 0,
    "t60": 1,
    "brackets": [
     {
      "bracket": "Women's",
      "t15": 0,
-     "t30": 1,
+     "t30": 0,
      "t60": 1,
      "divisions": [
       {
@@ -10424,12 +9517,12 @@
    ]
   },
   {
-   "tid": 36712,
-   "name": "Sinjin April U18/U14 Event hosted with Blue Sky",
+   "tid": 37813,
+   "name": "AAU National Bid Qualifier",
    "date": "2026-04-26",
    "endDate": "2026-04-26",
-   "sanction": "AVPA",
-   "location": "Umstead Park",
+   "sanction": "AAU",
+   "location": "Stealth Beach at Victory Lanes",
    "t15": 0,
    "t30": 0,
    "t60": 1,
@@ -10447,9 +9540,9 @@
      ],
      "topFinishers": [
       {
-       "name": "Amelia Berent",
-       "f": 5,
-       "field": 17,
+       "name": "Lillie Duitsman",
+       "f": 2,
+       "field": 7,
        "div": "Girls 18U"
       }
      ]
@@ -10463,9 +9556,9 @@
    ],
    "topFinishers": [
     {
-     "name": "Amelia Berent",
-     "f": 5,
-     "field": 17,
+     "name": "Lillie Duitsman",
+     "f": 2,
+     "field": 7,
      "div": "Girls 18U"
     }
    ]
@@ -10577,18 +9670,18 @@
    "sanction": "USAV",
    "location": "Gulf Shores Public Beach - Gulf Place",
    "t15": 0,
-   "t30": 6,
-   "t60": 21,
+   "t30": 7,
+   "t60": 19,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 0,
-     "t30": 6,
-     "t60": 21,
+     "t30": 7,
+     "t60": 19,
      "divisions": [
       {
        "name": "Girls 18U Open",
-       "n": 21
+       "n": 19
       }
      ],
      "topFinishers": [
@@ -10611,7 +9704,7 @@
        "div": "Girls 18U Open"
       },
       {
-       "name": "Megan McLarty",
+       "name": "Izzy Fischer",
        "f": 9,
        "field": 103,
        "div": "Girls 18U Open"
@@ -10622,7 +9715,7 @@
    "divisions": [
     {
      "name": "Girls 18U Open",
-     "n": 21
+     "n": 19
     }
    ],
    "topFinishers": [
@@ -10645,7 +9738,7 @@
      "div": "Girls 18U Open"
     },
     {
-     "name": "Megan McLarty",
+     "name": "Izzy Fischer",
      "f": 9,
      "field": 103,
      "div": "Girls 18U Open"
@@ -10706,13 +9799,13 @@
    "endDate": "2026-05-07",
    "sanction": "\u2014",
    "location": "Huntington Beach Pier",
-   "t15": 1,
+   "t15": 2,
    "t30": 4,
    "t60": 6,
    "brackets": [
     {
      "bracket": "18U",
-     "t15": 1,
+     "t15": 2,
      "t30": 4,
      "t60": 6,
      "divisions": [
@@ -10741,7 +9834,7 @@
        "div": "Varsity Pairs"
       },
       {
-       "name": "Zoe Znider",
+       "name": "Simrin Adams",
        "f": 5,
        "field": 64,
        "div": "Varsity Pairs"
@@ -10775,57 +9868,10 @@
      "div": "Varsity Pairs"
     },
     {
-     "name": "Zoe Znider",
+     "name": "Simrin Adams",
      "f": 5,
      "field": 64,
      "div": "Varsity Pairs"
-    }
-   ]
-  },
-  {
-   "tid": 35189,
-   "name": "First Rites of Summer - Adults - Saturday '26",
-   "date": "2026-05-09",
-   "endDate": "2026-05-09",
-   "sanction": "\u2014",
-   "location": "Rehoboth Beach",
-   "t15": 0,
-   "t30": 0,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "Women's",
-     "t15": 0,
-     "t30": 0,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Women's 2s Open",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Amelia Berent",
-       "f": 3,
-       "field": 10,
-       "div": "Women's 2s Open"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Women's 2s Open",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Amelia Berent",
-     "f": 3,
-     "field": 10,
-     "div": "Women's 2s Open"
     }
    ]
   },
@@ -10990,13 +10036,13 @@
    "sanction": "AVPA",
    "location": "Capt'n Bill's",
    "t15": 0,
-   "t30": 1,
+   "t30": 0,
    "t60": 2,
    "brackets": [
     {
      "bracket": "Women's",
      "t15": 0,
-     "t30": 1,
+     "t30": 0,
      "t60": 2,
      "divisions": [
       {
@@ -11125,6 +10171,82 @@
    ]
   },
   {
+   "tid": 32034,
+   "name": "GNBV National Recruiting Showcase Texas",
+   "date": "2026-05-17",
+   "endDate": "2026-05-17",
+   "sanction": "BVNE",
+   "location": "The Strand @ 692",
+   "t15": 0,
+   "t30": 2,
+   "t60": 3,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 2,
+     "t60": 3,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 3
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "London Merchant",
+       "f": 1,
+       "field": 28,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Zailey High",
+       "f": 1,
+       "field": 28,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Karsyn Rogers",
+       "f": 5,
+       "field": 28,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Girls 18U",
+     "n": 3
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "London Merchant",
+     "f": 1,
+     "field": 28,
+     "div": "Girls 18U"
+    },
+    {
+     "name": "Zailey High",
+     "f": 1,
+     "field": 28,
+     "div": "Girls 18U"
+    },
+    {
+     "name": "Karsyn Rogers",
+     "f": 5,
+     "field": 28,
+     "div": "Girls 18U"
+    }
+   ],
+   "next": {
+    "id": 36211,
+    "date": "2026-11-14",
+    "name": "GNBV National Recruiting Showcase Texas"
+   }
+  },
+  {
    "tid": 37126,
    "name": "AVP Huntington Beach - Heritage Major 2026",
    "date": "2026-05-17",
@@ -11132,13 +10254,13 @@
    "sanction": "AVPA",
    "location": "Huntington Beach Pier",
    "t15": 1,
-   "t30": 1,
+   "t30": 2,
    "t60": 2,
    "brackets": [
     {
      "bracket": "Women's",
      "t15": 1,
-     "t30": 1,
+     "t30": 2,
      "t60": 2,
      "divisions": [
       {
@@ -11184,70 +10306,6 @@
    ]
   },
   {
-   "tid": 32034,
-   "name": "GNBV National Recruiting Showcase Texas",
-   "date": "2026-05-17",
-   "endDate": "2026-05-17",
-   "sanction": "BVNE",
-   "location": "The Strand @ 692",
-   "t15": 0,
-   "t30": 2,
-   "t60": 2,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 2,
-     "t60": 2,
-     "divisions": [
-      {
-       "name": "Girls 18U",
-       "n": 2
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "London Merchant",
-       "f": 1,
-       "field": 28,
-       "div": "Girls 18U"
-      },
-      {
-       "name": "Karsyn Rogers",
-       "f": 5,
-       "field": 28,
-       "div": "Girls 18U"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Girls 18U",
-     "n": 2
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "London Merchant",
-     "f": 1,
-     "field": 28,
-     "div": "Girls 18U"
-    },
-    {
-     "name": "Karsyn Rogers",
-     "f": 5,
-     "field": 28,
-     "div": "Girls 18U"
-    }
-   ],
-   "next": {
-    "id": 36211,
-    "date": "2026-11-14",
-    "name": "GNBV National Recruiting Showcase Texas"
-   }
-  },
-  {
    "tid": 34652,
    "name": "Midwest Sand Volleyball $8000 AVP Next",
    "date": "2026-05-17",
@@ -11255,13 +10313,13 @@
    "sanction": "AVPA",
    "location": "Cedarvale Lanes and Fitz's Bar and Grill",
    "t15": 0,
-   "t30": 1,
+   "t30": 0,
    "t60": 2,
    "brackets": [
     {
      "bracket": "Women's",
      "t15": 0,
-     "t30": 1,
+     "t30": 0,
      "t60": 2,
      "divisions": [
       {
@@ -11307,65 +10365,6 @@
    ]
   },
   {
-   "tid": 34319,
-   "name": "USA Volleyball - Beach Mayhem - Old Dominion Region Beach National Qualifier",
-   "date": "2026-05-17",
-   "endDate": "2026-05-17",
-   "sanction": "USAV",
-   "location": "Virginia Beach Oceanfront",
-   "t15": 0,
-   "t30": 0,
-   "t60": 2,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 0,
-     "t60": 2,
-     "divisions": [
-      {
-       "name": "Girls 18U",
-       "n": 2
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Sienna Carr",
-       "f": 2,
-       "field": 11,
-       "div": "Girls 18U"
-      },
-      {
-       "name": "Anna Popovic",
-       "f": 3,
-       "field": 11,
-       "div": "Girls 18U"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Girls 18U",
-     "n": 2
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Sienna Carr",
-     "f": 2,
-     "field": 11,
-     "div": "Girls 18U"
-    },
-    {
-     "name": "Anna Popovic",
-     "f": 3,
-     "field": 11,
-     "div": "Girls 18U"
-    }
-   ]
-  },
-  {
    "tid": 34544,
    "name": "First Coast Volleyball Jax Beach Series May 16-17 '26",
    "date": "2026-05-17",
@@ -11373,13 +10372,13 @@
    "sanction": "AVPA",
    "location": "South of Jacksonville Beach Fishing Pier",
    "t15": 0,
-   "t30": 0,
+   "t30": 1,
    "t60": 1,
    "brackets": [
     {
      "bracket": "Coed",
      "t15": 0,
-     "t30": 0,
+     "t30": 1,
      "t60": 1,
      "divisions": [
       {
@@ -11409,6 +10408,53 @@
      "f": 3,
      "field": 10,
      "div": "Coed AA"
+    }
+   ]
+  },
+  {
+   "tid": 37814,
+   "name": "National Qualifier (p1440 / AVP America)",
+   "date": "2026-05-17",
+   "endDate": "2026-05-17",
+   "sanction": "p1440",
+   "location": "Stealth Beach at Victory Lanes",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Class of 2026-2027 (18U) - Girls",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lillie Duitsman",
+       "f": 1,
+       "field": 8,
+       "div": "Class of 2026-2027 (18U) - Girls"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Class of 2026-2027 (18U) - Girls",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Lillie Duitsman",
+     "f": 1,
+     "field": 8,
+     "div": "Class of 2026-2027 (18U) - Girls"
     }
    ]
   },
@@ -11448,13 +10494,13 @@
        "div": "Womens Open"
       },
       {
-       "name": "JoJo Wilson",
+       "name": "Thalia Lindahl",
        "f": 5,
        "field": 16,
        "div": "Womens Open"
       },
       {
-       "name": "Thalia Lindahl",
+       "name": "JoJo Wilson",
        "f": 5,
        "field": 16,
        "div": "Womens Open"
@@ -11482,13 +10528,13 @@
      "div": "Womens Open"
     },
     {
-     "name": "JoJo Wilson",
+     "name": "Thalia Lindahl",
      "f": 5,
      "field": 16,
      "div": "Womens Open"
     },
     {
-     "name": "Thalia Lindahl",
+     "name": "JoJo Wilson",
      "f": 5,
      "field": 16,
      "div": "Womens Open"
@@ -11502,13 +10548,13 @@
    "endDate": "2026-05-23",
    "sanction": "AVPA",
    "location": "",
-   "t15": 0,
+   "t15": 1,
    "t30": 1,
    "t60": 4,
    "brackets": [
     {
      "bracket": "Women's",
-     "t15": 0,
+     "t15": 1,
      "t30": 1,
      "t60": 4,
      "divisions": [
@@ -11587,6 +10633,53 @@
    ]
   },
   {
+   "tid": 38604,
+   "name": "Men\u2019s/Women\u2019s Open",
+   "date": "2026-05-23",
+   "endDate": "2026-05-23",
+   "sanction": "AVPA",
+   "location": "Scottsdale Ranch Park",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Laney Evers",
+       "f": 1,
+       "field": 5,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Womens Open",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Laney Evers",
+     "f": 1,
+     "field": 5,
+     "div": "Womens Open"
+    }
+   ]
+  },
+  {
    "tid": 38763,
    "name": "RCO and Juniors 2s",
    "date": "2026-05-23",
@@ -11637,53 +10730,6 @@
     "date": "2026-10-03",
     "name": "RCO and Juniors 2s '26"
    }
-  },
-  {
-   "tid": 38604,
-   "name": "Men\u2019s/Women\u2019s Open",
-   "date": "2026-05-23",
-   "endDate": "2026-05-23",
-   "sanction": "AVPA",
-   "location": "Scottsdale Ranch Park",
-   "t15": 0,
-   "t30": 0,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "Women's",
-     "t15": 0,
-     "t30": 0,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Womens Open",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Laney Evers",
-       "f": 1,
-       "field": 5,
-       "div": "Womens Open"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Womens Open",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Laney Evers",
-     "f": 1,
-     "field": 5,
-     "div": "Womens Open"
-    }
-   ]
   },
   {
    "tid": 36778,
@@ -11740,23 +10786,29 @@
    "sanction": "AVPA",
    "location": "",
    "t15": 1,
-   "t30": 2,
-   "t60": 4,
+   "t30": 4,
+   "t60": 6,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 1,
-     "t30": 2,
-     "t60": 4,
+     "t30": 4,
+     "t60": 6,
      "divisions": [
       {
        "name": "Girls 18U",
-       "n": 4
+       "n": 6
       }
      ],
      "topFinishers": [
       {
        "name": "Jordyn Wilson",
+       "f": 1,
+       "field": 8,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Marley Robinson",
        "f": 1,
        "field": 8,
        "div": "Girls 18U"
@@ -11772,12 +10824,6 @@
        "f": 2,
        "field": 8,
        "div": "Girls 18U"
-      },
-      {
-       "name": "Ashley Chuba",
-       "f": 5,
-       "field": 8,
-       "div": "Girls 18U"
       }
      ]
     }
@@ -11785,12 +10831,18 @@
    "divisions": [
     {
      "name": "Girls 18U",
-     "n": 4
+     "n": 6
     }
    ],
    "topFinishers": [
     {
      "name": "Jordyn Wilson",
+     "f": 1,
+     "field": 8,
+     "div": "Girls 18U"
+    },
+    {
+     "name": "Marley Robinson",
      "f": 1,
      "field": 8,
      "div": "Girls 18U"
@@ -11806,95 +10858,6 @@
      "f": 2,
      "field": 8,
      "div": "Girls 18U"
-    },
-    {
-     "name": "Ashley Chuba",
-     "f": 5,
-     "field": 8,
-     "div": "Girls 18U"
-    }
-   ]
-  },
-  {
-   "tid": 31312,
-   "name": "Beach Prospects National Recruiting Showcase 2026",
-   "date": "2026-05-25",
-   "endDate": "2026-05-25",
-   "sanction": "AVPA",
-   "location": "Hickory Point Beach Sand Volleyball",
-   "t15": 0,
-   "t30": 0,
-   "t60": 4,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 0,
-     "t60": 4,
-     "divisions": [
-      {
-       "name": "Girls 18U",
-       "n": 4
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Meadow Rosales",
-       "f": 2,
-       "field": 44,
-       "div": "Girls 18U"
-      },
-      {
-       "name": "Adaleah Bassler",
-       "f": 2,
-       "field": 44,
-       "div": "Girls 18U"
-      },
-      {
-       "name": "Amelia Berent",
-       "f": 9,
-       "field": 44,
-       "div": "Girls 18U"
-      },
-      {
-       "name": "Lila Waite",
-       "f": 9,
-       "field": 44,
-       "div": "Girls 18U"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Girls 18U",
-     "n": 4
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Meadow Rosales",
-     "f": 2,
-     "field": 44,
-     "div": "Girls 18U"
-    },
-    {
-     "name": "Adaleah Bassler",
-     "f": 2,
-     "field": 44,
-     "div": "Girls 18U"
-    },
-    {
-     "name": "Amelia Berent",
-     "f": 9,
-     "field": 44,
-     "div": "Girls 18U"
-    },
-    {
-     "name": "Lila Waite",
-     "f": 9,
-     "field": 44,
-     "div": "Girls 18U"
     }
    ]
   },
@@ -11906,13 +10869,13 @@
    "sanction": "p1440",
    "location": "Futures Tour: Browns Park",
    "t15": 0,
-   "t30": 0,
+   "t30": 1,
    "t60": 2,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 0,
-     "t30": 0,
+     "t30": 1,
      "t60": 2,
      "divisions": [
       {
@@ -11958,12 +10921,71 @@
    ]
   },
   {
-   "tid": 33858,
-   "name": "JUNIORS: SandBox Friday Night Lights #1 (GIRLS 2v2 GY 2026-2028)",
-   "date": "2026-05-29",
-   "endDate": "2026-05-29",
+   "tid": 31312,
+   "name": "Beach Prospects National Recruiting Showcase 2026",
+   "date": "2026-05-25",
+   "endDate": "2026-05-25",
    "sanction": "AVPA",
-   "location": "SandBox Volleyball Club",
+   "location": "Hickory Point Beach Sand Volleyball",
+   "t15": 0,
+   "t30": 0,
+   "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Meadow Rosales",
+       "f": 2,
+       "field": 44,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Lila Waite",
+       "f": 9,
+       "field": 44,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Girls 18U",
+     "n": 2
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Meadow Rosales",
+     "f": 2,
+     "field": 44,
+     "div": "Girls 18U"
+    },
+    {
+     "name": "Lila Waite",
+     "f": 9,
+     "field": 44,
+     "div": "Girls 18U"
+    }
+   ]
+  },
+  {
+   "tid": 39089,
+   "name": "SATURDAY SUNRISE SERIES - May 30",
+   "date": "2026-05-30",
+   "endDate": "2026-05-30",
+   "sanction": "\u2014",
+   "location": "The Strand",
    "t15": 0,
    "t30": 0,
    "t60": 1,
@@ -11975,32 +10997,32 @@
      "t60": 1,
      "divisions": [
       {
-       "name": "GIRLS GY 2026-2028",
+       "name": "COLLEGE/18U",
        "n": 1
       }
      ],
      "topFinishers": [
       {
-       "name": "Anna Popovic",
+       "name": "Emma Burnside",
        "f": 1,
-       "field": 11,
-       "div": "GIRLS GY 2026-2028"
+       "field": 4,
+       "div": "COLLEGE/18U"
       }
      ]
     }
    ],
    "divisions": [
     {
-     "name": "GIRLS GY 2026-2028",
+     "name": "COLLEGE/18U",
      "n": 1
     }
    ],
    "topFinishers": [
     {
-     "name": "Anna Popovic",
+     "name": "Emma Burnside",
      "f": 1,
-     "field": 11,
-     "div": "GIRLS GY 2026-2028"
+     "field": 4,
+     "div": "COLLEGE/18U"
     }
    ]
   },
@@ -12057,53 +11079,6 @@
    }
   },
   {
-   "tid": 39089,
-   "name": "SATURDAY SUNRISE SERIES - May 30",
-   "date": "2026-05-30",
-   "endDate": "2026-05-30",
-   "sanction": "\u2014",
-   "location": "The Strand",
-   "t15": 0,
-   "t30": 0,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 0,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "COLLEGE/18U",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Emma Burnside",
-       "f": 1,
-       "field": 4,
-       "div": "COLLEGE/18U"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "COLLEGE/18U",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Emma Burnside",
-     "f": 1,
-     "field": 4,
-     "div": "COLLEGE/18U"
-    }
-   ]
-  },
-  {
    "tid": 35614,
    "name": "MAVERICKS AVP @ Santa Cruz Beach - LuluLemon Qualifier - Sunday, May 31 (12u, 14u, 16u, & 18u)",
    "date": "2026-05-31",
@@ -12127,13 +11102,13 @@
      ],
      "topFinishers": [
       {
-       "name": "Abby King",
+       "name": "Maddy  Wagner",
        "f": 1,
        "field": 5,
        "div": "Girls 18U"
       },
       {
-       "name": "Maddy  Wagner",
+       "name": "Abby King",
        "f": 1,
        "field": 5,
        "div": "Girls 18U"
@@ -12149,13 +11124,13 @@
    ],
    "topFinishers": [
     {
-     "name": "Abby King",
+     "name": "Maddy  Wagner",
      "f": 1,
      "field": 5,
      "div": "Girls 18U"
     },
     {
-     "name": "Maddy  Wagner",
+     "name": "Abby King",
      "f": 1,
      "field": 5,
      "div": "Girls 18U"
@@ -12210,53 +11185,6 @@
    ]
   },
   {
-   "tid": 35314,
-   "name": "AVP Juniors New Jersey Regionals 2026",
-   "date": "2026-05-31",
-   "endDate": "2026-05-31",
-   "sanction": "AVPA",
-   "location": "Belmar Beach, NJ",
-   "t15": 0,
-   "t30": 0,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 0,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Girls 18U",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Ashley Markle",
-       "f": 1,
-       "field": 12,
-       "div": "Girls 18U"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Girls 18U",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Ashley Markle",
-     "f": 1,
-     "field": 12,
-     "div": "Girls 18U"
-    }
-   ]
-  },
-  {
    "tid": 37912,
    "name": "Highline - Men's/Women's Open $3K",
    "date": "2026-05-31",
@@ -12300,6 +11228,53 @@
      "f": 9,
      "field": 13,
      "div": "Womens Open"
+    }
+   ]
+  },
+  {
+   "tid": 35314,
+   "name": "AVP Juniors New Jersey Regionals 2026",
+   "date": "2026-05-31",
+   "endDate": "2026-05-31",
+   "sanction": "AVPA",
+   "location": "Belmar Beach, NJ",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Ashley Markle",
+       "f": 1,
+       "field": 12,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Girls 18U",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Ashley Markle",
+     "f": 1,
+     "field": 12,
+     "div": "Girls 18U"
     }
    ]
   },
@@ -12374,30 +11349,30 @@
    "endDate": "2026-06-05",
    "sanction": "p1440",
    "location": "Pompano Beach",
-   "t15": 1,
-   "t30": 4,
-   "t60": 5,
+   "t15": 0,
+   "t30": 3,
+   "t60": 4,
    "brackets": [
     {
      "bracket": "18U",
-     "t15": 1,
-     "t30": 4,
-     "t60": 5,
+     "t15": 0,
+     "t30": 3,
+     "t60": 4,
      "divisions": [
       {
        "name": "Class of 2026 & Younger",
-       "n": 5
+       "n": 4
       }
      ],
      "topFinishers": [
       {
-       "name": "Megan McLarty",
+       "name": "Isabelle Izzy Ramos",
        "f": 1,
        "field": 12,
        "div": "Class of 2026 & Younger"
       },
       {
-       "name": "Isabelle Izzy Ramos",
+       "name": "Megan McLarty",
        "f": 1,
        "field": 12,
        "div": "Class of 2026 & Younger"
@@ -12420,18 +11395,18 @@
    "divisions": [
     {
      "name": "Class of 2026 & Younger",
-     "n": 5
+     "n": 4
     }
    ],
    "topFinishers": [
     {
-     "name": "Megan McLarty",
+     "name": "Isabelle Izzy Ramos",
      "f": 1,
      "field": 12,
      "div": "Class of 2026 & Younger"
     },
     {
-     "name": "Isabelle Izzy Ramos",
+     "name": "Megan McLarty",
      "f": 1,
      "field": 12,
      "div": "Class of 2026 & Younger"
@@ -12516,14 +11491,14 @@
    "endDate": "2026-06-06",
    "sanction": "p1440",
    "location": "Pompano Beach",
-   "t15": 1,
-   "t30": 2,
+   "t15": 0,
+   "t30": 1,
    "t60": 3,
    "brackets": [
     {
      "bracket": "Women's",
-     "t15": 1,
-     "t30": 2,
+     "t15": 0,
+     "t30": 1,
      "t60": 3,
      "divisions": [
       {
@@ -12588,13 +11563,13 @@
    "sanction": "AVPA",
    "location": "",
    "t15": 0,
-   "t30": 1,
+   "t30": 2,
    "t60": 2,
    "brackets": [
     {
      "bracket": "Women's",
      "t15": 0,
-     "t30": 1,
+     "t30": 2,
      "t60": 2,
      "divisions": [
       {
@@ -12635,53 +11610,6 @@
      "name": "Jordyn Wilson",
      "f": 5,
      "field": 16,
-     "div": "Womens Open"
-    }
-   ]
-  },
-  {
-   "tid": 35905,
-   "name": "AVP Womens Open & Jrs Showcase",
-   "date": "2026-06-07",
-   "endDate": "2026-06-07",
-   "sanction": "AVPA",
-   "location": "Beach South Volleyball Club",
-   "t15": 0,
-   "t30": 1,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "Women's",
-     "t15": 0,
-     "t30": 1,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Womens Open",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Claire Hanson",
-       "f": 1,
-       "field": 10,
-       "div": "Womens Open"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Womens Open",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Claire Hanson",
-     "f": 1,
-     "field": 10,
      "div": "Womens Open"
     }
    ]
@@ -12730,6 +11658,53 @@
      "f": 3,
      "field": 8,
      "div": "Girls 18U"
+    }
+   ]
+  },
+  {
+   "tid": 35905,
+   "name": "AVP Womens Open & Jrs Showcase",
+   "date": "2026-06-07",
+   "endDate": "2026-06-07",
+   "sanction": "AVPA",
+   "location": "Beach South Volleyball Club",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Claire Hanson",
+       "f": 1,
+       "field": 10,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Womens Open",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Claire Hanson",
+     "f": 1,
+     "field": 10,
+     "div": "Womens Open"
     }
    ]
   },
@@ -12861,13 +11836,13 @@
      ],
      "topFinishers": [
       {
-       "name": "Abby King",
+       "name": "Ella Dueck",
        "f": 3,
        "field": 15,
        "div": "Girls 18U"
       },
       {
-       "name": "Ella Dueck",
+       "name": "Abby King",
        "f": 3,
        "field": 15,
        "div": "Girls 18U"
@@ -12889,13 +11864,13 @@
    ],
    "topFinishers": [
     {
-     "name": "Abby King",
+     "name": "Ella Dueck",
      "f": 3,
      "field": 15,
      "div": "Girls 18U"
     },
     {
-     "name": "Ella Dueck",
+     "name": "Abby King",
      "f": 3,
      "field": 15,
      "div": "Girls 18U"
@@ -12905,6 +11880,53 @@
      "f": 3,
      "field": 15,
      "div": "Girls 18U"
+    }
+   ]
+  },
+  {
+   "tid": 39228,
+   "name": "Get Dat Bread Coed #2",
+   "date": "2026-06-10",
+   "endDate": "2026-06-10",
+   "sanction": "AVPA",
+   "location": "Williamsfield High School",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Mila Alo",
+       "f": 5,
+       "field": 8,
+       "div": "Coed Open"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Coed Open",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Mila Alo",
+     "f": 5,
+     "field": 8,
+     "div": "Coed Open"
     }
    ]
   },
@@ -12963,13 +11985,13 @@
    "sanction": "AVPA",
    "location": "",
    "t15": 3,
-   "t30": 5,
+   "t30": 6,
    "t60": 8,
    "brackets": [
     {
      "bracket": "Women's",
      "t15": 3,
-     "t30": 5,
+     "t30": 6,
      "t60": 8,
      "divisions": [
       {
@@ -12985,13 +12007,13 @@
        "div": "Womens Open"
       },
       {
-       "name": "Sammy Nammack",
+       "name": "Simrin Adams",
        "f": 5,
        "field": 19,
        "div": "Womens Open"
       },
       {
-       "name": "Simrin Adams",
+       "name": "Sammy Nammack",
        "f": 5,
        "field": 19,
        "div": "Womens Open"
@@ -13019,13 +12041,13 @@
      "div": "Womens Open"
     },
     {
-     "name": "Sammy Nammack",
+     "name": "Simrin Adams",
      "f": 5,
      "field": 19,
      "div": "Womens Open"
     },
     {
-     "name": "Simrin Adams",
+     "name": "Sammy Nammack",
      "f": 5,
      "field": 19,
      "div": "Womens Open"
@@ -13047,29 +12069,23 @@
    "location": "32nd Street Virginia Beach Oceanfront",
    "t15": 1,
    "t30": 1,
-   "t60": 3,
+   "t60": 2,
    "brackets": [
     {
      "bracket": "Women's",
      "t15": 1,
      "t30": 1,
-     "t60": 3,
+     "t60": 2,
      "divisions": [
       {
        "name": "Womens Open",
-       "n": 3
+       "n": 2
       }
      ],
      "topFinishers": [
       {
        "name": "Olivia Herron",
        "f": 2,
-       "field": 24,
-       "div": "Womens Open"
-      },
-      {
-       "name": "Sienna Carr",
-       "f": 9,
        "field": 24,
        "div": "Womens Open"
       },
@@ -13085,19 +12101,13 @@
    "divisions": [
     {
      "name": "Womens Open",
-     "n": 3
+     "n": 2
     }
    ],
    "topFinishers": [
     {
      "name": "Olivia Herron",
      "f": 2,
-     "field": 24,
-     "div": "Womens Open"
-    },
-    {
-     "name": "Sienna Carr",
-     "f": 9,
      "field": 24,
      "div": "Womens Open"
     },
@@ -13133,13 +12143,13 @@
      ],
      "topFinishers": [
       {
-       "name": "JoJo Wilson",
+       "name": "Thalia Lindahl",
        "f": 1,
        "field": 22,
        "div": "Womens Open"
       },
       {
-       "name": "Thalia Lindahl",
+       "name": "JoJo Wilson",
        "f": 1,
        "field": 22,
        "div": "Womens Open"
@@ -13155,13 +12165,13 @@
    ],
    "topFinishers": [
     {
-     "name": "JoJo Wilson",
+     "name": "Thalia Lindahl",
      "f": 1,
      "field": 22,
      "div": "Womens Open"
     },
     {
-     "name": "Thalia Lindahl",
+     "name": "JoJo Wilson",
      "f": 1,
      "field": 22,
      "div": "Womens Open"
@@ -13192,13 +12202,13 @@
      ],
      "topFinishers": [
       {
-       "name": "Abby King",
+       "name": "Maddy  Wagner",
        "f": 2,
        "field": 25,
        "div": "Womens Open"
       },
       {
-       "name": "Maddy  Wagner",
+       "name": "Abby King",
        "f": 2,
        "field": 25,
        "div": "Womens Open"
@@ -13214,63 +12224,16 @@
    ],
    "topFinishers": [
     {
-     "name": "Abby King",
+     "name": "Maddy  Wagner",
      "f": 2,
      "field": 25,
      "div": "Womens Open"
     },
     {
-     "name": "Maddy  Wagner",
+     "name": "Abby King",
      "f": 2,
      "field": 25,
      "div": "Womens Open"
-    }
-   ]
-  },
-  {
-   "tid": 33856,
-   "name": "JUNIORS: GIRLS 2s Fathers' Day Challenge (GY26-29/GY30-34) [AVP]",
-   "date": "2026-06-13",
-   "endDate": "2026-06-13",
-   "sanction": "AVPA",
-   "location": "SandBox Volleyball Club",
-   "t15": 0,
-   "t30": 0,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 0,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "GIRLS GY 2026-2029",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Anna Popovic",
-       "f": 1,
-       "field": 11,
-       "div": "GIRLS GY 2026-2029"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "GIRLS GY 2026-2029",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Anna Popovic",
-     "f": 1,
-     "field": 11,
-     "div": "GIRLS GY 2026-2029"
     }
    ]
   },
@@ -13281,14 +12244,14 @@
    "endDate": "2026-06-14",
    "sanction": "AVPA",
    "location": "",
-   "t15": 1,
-   "t30": 4,
+   "t15": 0,
+   "t30": 5,
    "t60": 6,
    "brackets": [
     {
      "bracket": "Women's",
-     "t15": 1,
-     "t30": 4,
+     "t15": 0,
+     "t30": 5,
      "t60": 6,
      "divisions": [
       {
@@ -13358,100 +12321,6 @@
    ]
   },
   {
-   "tid": 34995,
-   "name": "The Grand Prize (15k Guaranteed Prize Pool)",
-   "date": "2026-06-14",
-   "endDate": "2026-06-14",
-   "sanction": "AVPA",
-   "location": "Manchester Meadows Park",
-   "t15": 0,
-   "t30": 1,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "Women's",
-     "t15": 0,
-     "t30": 1,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Women's Open Doubles",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Claire Hanson",
-       "f": 1,
-       "field": 13,
-       "div": "Women's Open Doubles"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Women's Open Doubles",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Claire Hanson",
-     "f": 1,
-     "field": 13,
-     "div": "Women's Open Doubles"
-    }
-   ]
-  },
-  {
-   "tid": 35172,
-   "name": "BRVA Beach AVP Qualifier #6 '26",
-   "date": "2026-06-14",
-   "endDate": "2026-06-14",
-   "sanction": "AVPA",
-   "location": "BRVA Beach",
-   "t15": 0,
-   "t30": 0,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 0,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Girls 18U",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Amelia Berent",
-       "f": 5,
-       "field": 26,
-       "div": "Girls 18U"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Girls 18U",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Amelia Berent",
-     "f": 5,
-     "field": 26,
-     "div": "Girls 18U"
-    }
-   ]
-  },
-  {
    "tid": 36754,
    "name": "Cat5BVB Campus Tournament @ Florida State University  III",
    "date": "2026-06-14",
@@ -13495,6 +12364,53 @@
      "f": 3,
      "field": 9,
      "div": "Girls 18U"
+    }
+   ]
+  },
+  {
+   "tid": 34995,
+   "name": "The Grand Prize (15k Guaranteed Prize Pool)",
+   "date": "2026-06-14",
+   "endDate": "2026-06-14",
+   "sanction": "AVPA",
+   "location": "Manchester Meadows Park",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Women's Open Doubles",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Claire Hanson",
+       "f": 1,
+       "field": 13,
+       "div": "Women's Open Doubles"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Women's Open Doubles",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Claire Hanson",
+     "f": 1,
+     "field": 13,
+     "div": "Women's Open Doubles"
     }
    ]
   },
@@ -13586,13 +12502,13 @@
        "div": "Girls 18U"
       },
       {
-       "name": "JoJo Wilson",
+       "name": "Lerin Rosenthal",
        "f": 2,
        "field": 6,
        "div": "Girls 18U"
       },
       {
-       "name": "Lerin Rosenthal",
+       "name": "JoJo Wilson",
        "f": 2,
        "field": 6,
        "div": "Girls 18U"
@@ -13620,13 +12536,13 @@
      "div": "Girls 18U"
     },
     {
-     "name": "JoJo Wilson",
+     "name": "Lerin Rosenthal",
      "f": 2,
      "field": 6,
      "div": "Girls 18U"
     },
     {
-     "name": "Lerin Rosenthal",
+     "name": "JoJo Wilson",
      "f": 2,
      "field": 6,
      "div": "Girls 18U"
@@ -13657,13 +12573,13 @@
      ],
      "topFinishers": [
       {
-       "name": "Abby King",
+       "name": "Maddy  Wagner",
        "f": 9,
        "field": 12,
        "div": "Women's Division"
       },
       {
-       "name": "Maddy  Wagner",
+       "name": "Abby King",
        "f": 9,
        "field": 12,
        "div": "Women's Division"
@@ -13679,13 +12595,13 @@
    ],
    "topFinishers": [
     {
-     "name": "Abby King",
+     "name": "Maddy  Wagner",
      "f": 9,
      "field": 12,
      "div": "Women's Division"
     },
     {
-     "name": "Maddy  Wagner",
+     "name": "Abby King",
      "f": 9,
      "field": 12,
      "div": "Women's Division"
@@ -13763,13 +12679,13 @@
      ],
      "topFinishers": [
       {
-       "name": "Lekhana Donnies",
+       "name": "Logan Leverte",
        "f": 1,
        "field": 8,
        "div": "Girls 18U"
       },
       {
-       "name": "Logan Leverte",
+       "name": "Lekhana Donnies",
        "f": 1,
        "field": 8,
        "div": "Girls 18U"
@@ -13785,13 +12701,13 @@
    ],
    "topFinishers": [
     {
-     "name": "Lekhana Donnies",
+     "name": "Logan Leverte",
      "f": 1,
      "field": 8,
      "div": "Girls 18U"
     },
     {
-     "name": "Logan Leverte",
+     "name": "Lekhana Donnies",
      "f": 1,
      "field": 8,
      "div": "Girls 18U"
@@ -13806,13 +12722,13 @@
    "sanction": "USAV",
    "location": "Hermosa Beach Pier",
    "t15": 5,
-   "t30": 6,
+   "t30": 7,
    "t60": 7,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 5,
-     "t30": 6,
+     "t30": 7,
      "t60": 7,
      "divisions": [
       {
@@ -13888,19 +12804,19 @@
    "endDate": "2026-06-19",
    "sanction": "p1440",
    "location": "North Beach, Santa Monica",
-   "t15": 4,
-   "t30": 7,
-   "t60": 11,
+   "t15": 3,
+   "t30": 8,
+   "t60": 12,
    "brackets": [
     {
      "bracket": "18U",
-     "t15": 4,
-     "t30": 7,
-     "t60": 11,
+     "t15": 3,
+     "t30": 8,
+     "t60": 12,
      "divisions": [
       {
        "name": "Class of 2026 & Younger",
-       "n": 11
+       "n": 12
       }
      ],
      "topFinishers": [
@@ -13934,7 +12850,7 @@
    "divisions": [
     {
      "name": "Class of 2026 & Younger",
-     "n": 11
+     "n": 12
     }
    ],
    "topFinishers": [
@@ -14018,13 +12934,13 @@
    "endDate": "2026-06-20",
    "sanction": "p1440",
    "location": "North Beach, Santa Monica",
-   "t15": 1,
+   "t15": 0,
    "t30": 1,
    "t60": 1,
    "brackets": [
     {
      "bracket": "Women's",
-     "t15": 1,
+     "t15": 0,
      "t30": 1,
      "t60": 1,
      "divisions": [
@@ -14106,53 +13022,6 @@
    ]
   },
   {
-   "tid": 38259,
-   "name": "ADULTS: SandBox Solstice Kickoff (AVP M/W 2s - Open/AA)",
-   "date": "2026-06-20",
-   "endDate": "2026-06-20",
-   "sanction": "AVPA",
-   "location": "SandBox Volleyball Club",
-   "t15": 0,
-   "t30": 0,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "Women's",
-     "t15": 0,
-     "t30": 0,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "WOMEN'S 2s Open/A",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Anna Popovic",
-       "f": 2,
-       "field": 10,
-       "div": "WOMEN'S 2s Open/A"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "WOMEN'S 2s Open/A",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Anna Popovic",
-     "f": 2,
-     "field": 10,
-     "div": "WOMEN'S 2s Open/A"
-    }
-   ]
-  },
-  {
    "tid": 39673,
    "name": "Cal Cup Tour Stop, 6/20/26, Central Beach, Coronado, San Diego",
    "date": "2026-06-20",
@@ -14207,13 +13076,13 @@
    "sanction": "AVPA",
    "location": "ATX Beach",
    "t15": 1,
-   "t30": 3,
+   "t30": 2,
    "t60": 5,
    "brackets": [
     {
      "bracket": "Women's",
      "t15": 1,
-     "t30": 3,
+     "t30": 2,
      "t60": 5,
      "divisions": [
       {
@@ -14291,17 +13160,17 @@
    "location": "",
    "t15": 1,
    "t30": 1,
-   "t60": 2,
+   "t60": 3,
    "brackets": [
     {
      "bracket": "Women's",
      "t15": 1,
      "t30": 1,
-     "t60": 2,
+     "t60": 3,
      "divisions": [
       {
        "name": "Womens Open",
-       "n": 2
+       "n": 3
       }
      ],
      "topFinishers": [
@@ -14316,6 +13185,12 @@
        "f": 3,
        "field": 25,
        "div": "Womens Open"
+      },
+      {
+       "name": "Sydney Toumajian",
+       "f": 9,
+       "field": 25,
+       "div": "Womens Open"
       }
      ]
     }
@@ -14323,7 +13198,7 @@
    "divisions": [
     {
      "name": "Womens Open",
-     "n": 2
+     "n": 3
     }
    ],
    "topFinishers": [
@@ -14338,6 +13213,59 @@
      "f": 3,
      "field": 25,
      "div": "Womens Open"
+    },
+    {
+     "name": "Sydney Toumajian",
+     "f": 9,
+     "field": 25,
+     "div": "Womens Open"
+    }
+   ]
+  },
+  {
+   "tid": 39674,
+   "name": "6/21/26, Central Beach, Coronado, San Diego",
+   "date": "2026-06-21",
+   "endDate": "2026-06-21",
+   "sanction": "AVPA",
+   "location": "",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Kelly Randolph",
+       "f": 3,
+       "field": 7,
+       "div": "Coed 18U"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Coed 18U",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Kelly Randolph",
+     "f": 3,
+     "field": 7,
+     "div": "Coed 18U"
     }
    ]
   },
@@ -14350,26 +13278,20 @@
    "location": "John Hunt Sand Complex- Huntsville, AL",
    "t15": 0,
    "t30": 0,
-   "t60": 2,
+   "t60": 1,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 0,
      "t30": 0,
-     "t60": 2,
+     "t60": 1,
      "divisions": [
       {
        "name": "Girls 18U",
-       "n": 2
+       "n": 1
       }
      ],
      "topFinishers": [
-      {
-       "name": "Amelia Berent",
-       "f": 1,
-       "field": 20,
-       "div": "Girls 18U"
-      },
       {
        "name": "GRACIE LUTES",
        "f": 2,
@@ -14382,16 +13304,10 @@
    "divisions": [
     {
      "name": "Girls 18U",
-     "n": 2
+     "n": 1
     }
    ],
    "topFinishers": [
-    {
-     "name": "Amelia Berent",
-     "f": 1,
-     "field": 20,
-     "div": "Girls 18U"
-    },
     {
      "name": "GRACIE LUTES",
      "f": 2,
@@ -14456,17 +13372,17 @@
    "location": "",
    "t15": 1,
    "t30": 2,
-   "t60": 2,
+   "t60": 3,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 1,
      "t30": 2,
-     "t60": 2,
+     "t60": 3,
      "divisions": [
       {
        "name": "Girls 18U",
-       "n": 2
+       "n": 3
       }
      ],
      "topFinishers": [
@@ -14481,6 +13397,12 @@
        "f": 1,
        "field": 9,
        "div": "Girls 18U"
+      },
+      {
+       "name": "Kelly Randolph",
+       "f": 3,
+       "field": 9,
+       "div": "Girls 18U"
       }
      ]
     }
@@ -14488,7 +13410,7 @@
    "divisions": [
     {
      "name": "Girls 18U",
-     "n": 2
+     "n": 3
     }
    ],
    "topFinishers": [
@@ -14501,6 +13423,12 @@
     {
      "name": "Zoe Znider",
      "f": 1,
+     "field": 9,
+     "div": "Girls 18U"
+    },
+    {
+     "name": "Kelly Randolph",
+     "f": 3,
      "field": 9,
      "div": "Girls 18U"
     }
@@ -14707,53 +13635,6 @@
    ]
   },
   {
-   "tid": 35908,
-   "name": "AVP America 2 Star College Showcase",
-   "date": "2026-06-27",
-   "endDate": "2026-06-27",
-   "sanction": "AVPA",
-   "location": "Beach South Volleyball Club",
-   "t15": 0,
-   "t30": 1,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 1,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Girls 18U",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Claire Hanson",
-       "f": 1,
-       "field": 12,
-       "div": "Girls 18U"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Girls 18U",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Claire Hanson",
-     "f": 1,
-     "field": 12,
-     "div": "Girls 18U"
-    }
-   ]
-  },
-  {
    "tid": 39252,
    "name": "Sterling Pismo June Classic",
    "date": "2026-06-27",
@@ -14801,6 +13682,53 @@
    ]
   },
   {
+   "tid": 35908,
+   "name": "AVP America 2 Star College Showcase",
+   "date": "2026-06-27",
+   "endDate": "2026-06-27",
+   "sanction": "AVPA",
+   "location": "Beach South Volleyball Club",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Claire Hanson",
+       "f": 1,
+       "field": 12,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Girls 18U",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Claire Hanson",
+     "f": 1,
+     "field": 12,
+     "div": "Girls 18U"
+    }
+   ]
+  },
+  {
    "tid": 39831,
    "name": "6/28/26, Santa Monica Pier, Santa Monica",
    "date": "2026-06-28",
@@ -14808,18 +13736,18 @@
    "sanction": "AVPA",
    "location": "",
    "t15": 4,
-   "t30": 6,
-   "t60": 9,
+   "t30": 8,
+   "t60": 11,
    "brackets": [
     {
      "bracket": "Women's",
      "t15": 4,
-     "t30": 6,
-     "t60": 9,
+     "t30": 8,
+     "t60": 11,
      "divisions": [
       {
        "name": "Womens Open",
-       "n": 9
+       "n": 11
       }
      ],
      "topFinishers": [
@@ -14830,13 +13758,13 @@
        "div": "Womens Open"
       },
       {
-       "name": "JoJo Wilson",
+       "name": "Lerin Rosenthal",
        "f": 5,
        "field": 30,
        "div": "Womens Open"
       },
       {
-       "name": "Lerin Rosenthal",
+       "name": "JoJo Wilson",
        "f": 5,
        "field": 30,
        "div": "Womens Open"
@@ -14853,7 +13781,7 @@
    "divisions": [
     {
      "name": "Womens Open",
-     "n": 9
+     "n": 11
     }
    ],
    "topFinishers": [
@@ -14864,13 +13792,13 @@
      "div": "Womens Open"
     },
     {
-     "name": "JoJo Wilson",
+     "name": "Lerin Rosenthal",
      "f": 5,
      "field": 30,
      "div": "Womens Open"
     },
     {
-     "name": "Lerin Rosenthal",
+     "name": "JoJo Wilson",
      "f": 5,
      "field": 30,
      "div": "Womens Open"
@@ -14891,13 +13819,13 @@
    "sanction": "AVPA",
    "location": "South of Jacksonville Beach Fishing Pier",
    "t15": 0,
-   "t30": 0,
+   "t30": 1,
    "t60": 3,
    "brackets": [
     {
      "bracket": "Women's",
      "t15": 0,
-     "t30": 0,
+     "t30": 1,
      "t60": 3,
      "divisions": [
       {
@@ -14907,13 +13835,13 @@
      ],
      "topFinishers": [
       {
-       "name": "Tesa Solis",
+       "name": "Izzy Fischer",
        "f": 3,
        "field": 16,
        "div": "Womens Open"
       },
       {
-       "name": "Izzy Fischer",
+       "name": "Tesa Solis",
        "f": 3,
        "field": 16,
        "div": "Womens Open"
@@ -14935,13 +13863,13 @@
    ],
    "topFinishers": [
     {
-     "name": "Tesa Solis",
+     "name": "Izzy Fischer",
      "f": 3,
      "field": 16,
      "div": "Womens Open"
     },
     {
-     "name": "Izzy Fischer",
+     "name": "Tesa Solis",
      "f": 3,
      "field": 16,
      "div": "Womens Open"
@@ -15002,6 +13930,53 @@
    ]
   },
   {
+   "tid": 31581,
+   "name": "BVNE 2026 East Coast National Championships",
+   "date": "2026-06-28",
+   "endDate": "2026-06-28",
+   "sanction": "BVNE",
+   "location": "Florida Beach Volleyball Tour - Pompano Beach FL",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Brooke Smith",
+       "f": 3,
+       "field": 10,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Girls 18U",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Brooke Smith",
+     "f": 3,
+     "field": 10,
+     "div": "Girls 18U"
+    }
+   ]
+  },
+  {
    "tid": 38837,
    "name": "Inlet Splash - Coed/Junior Girls",
    "date": "2026-06-28",
@@ -15045,53 +14020,6 @@
      "f": 2,
      "field": 5,
      "div": "Coed AA"
-    }
-   ]
-  },
-  {
-   "tid": 31581,
-   "name": "BVNE 2026 East Coast National Championships",
-   "date": "2026-06-28",
-   "endDate": "2026-06-28",
-   "sanction": "BVNE",
-   "location": "Florida Beach Volleyball Tour - Pompano Beach FL",
-   "t15": 0,
-   "t30": 0,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 0,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Girls 18U",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Adaleah Bassler",
-       "f": 1,
-       "field": 10,
-       "div": "Girls 18U"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Girls 18U",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Adaleah Bassler",
-     "f": 1,
-     "field": 10,
-     "div": "Girls 18U"
     }
    ]
   },
@@ -15155,13 +14083,13 @@
    "sanction": "BVCA",
    "location": "Huntington State Beach (Newland)",
    "t15": 3,
-   "t30": 5,
+   "t30": 7,
    "t60": 9,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 3,
-     "t30": 5,
+     "t30": 7,
      "t60": 8,
      "divisions": [
       {
@@ -15171,13 +14099,13 @@
      ],
      "topFinishers": [
       {
-       "name": "Abby King",
+       "name": "Maddy  Wagner",
        "f": 1,
        "field": 20,
        "div": "18U (2026 Grad Year)"
       },
       {
-       "name": "Maddy  Wagner",
+       "name": "Abby King",
        "f": 1,
        "field": 20,
        "div": "18U (2026 Grad Year)"
@@ -15229,13 +14157,13 @@
    ],
    "topFinishers": [
     {
-     "name": "Abby King",
+     "name": "Maddy  Wagner",
      "f": 1,
      "field": 20,
      "div": "18U (2026 Grad Year)"
     },
     {
-     "name": "Maddy  Wagner",
+     "name": "Abby King",
      "f": 1,
      "field": 20,
      "div": "18U (2026 Grad Year)"
@@ -15298,6 +14226,53 @@
      "f": 2,
      "field": 12,
      "div": "Coed AA"
+    }
+   ]
+  },
+  {
+   "tid": 35344,
+   "name": "AVP Juniors Denver Regionals 2026",
+   "date": "2026-07-02",
+   "endDate": "2026-07-02",
+   "sanction": "AVPA",
+   "location": "The Island (VOTR)",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "17U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 17U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lillie Duitsman",
+       "f": 1,
+       "field": 12,
+       "div": "Girls 17U"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Girls 17U",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Lillie Duitsman",
+     "f": 1,
+     "field": 12,
+     "div": "Girls 17U"
     }
    ]
   },
@@ -15455,18 +14430,18 @@
    "sanction": "BVCA",
    "location": "Hermosa Beach",
    "t15": 7,
-   "t30": 16,
-   "t60": 33,
+   "t30": 18,
+   "t60": 38,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 7,
-     "t30": 16,
-     "t60": 33,
+     "t30": 18,
+     "t60": 38,
      "divisions": [
       {
        "name": "Girls 18U",
-       "n": 33
+       "n": 38
       }
      ],
      "topFinishers": [
@@ -15500,7 +14475,7 @@
    "divisions": [
     {
      "name": "Girls 18U",
-     "n": 33
+     "n": 38
     }
    ],
    "topFinishers": [
@@ -15538,13 +14513,13 @@
    "sanction": "AVPA",
    "location": "",
    "t15": 0,
-   "t30": 0,
+   "t30": 1,
    "t60": 2,
    "brackets": [
     {
      "bracket": "Women's",
      "t15": 0,
-     "t30": 0,
+     "t30": 1,
      "t60": 2,
      "divisions": [
       {
@@ -15554,13 +14529,13 @@
      ],
      "topFinishers": [
       {
-       "name": "Johanna Snyder",
+       "name": "Izzy Fischer",
        "f": 2,
        "field": 27,
        "div": "Womens AA"
       },
       {
-       "name": "Izzy Fischer",
+       "name": "Johanna Snyder",
        "f": 2,
        "field": 27,
        "div": "Womens AA"
@@ -15576,13 +14551,13 @@
    ],
    "topFinishers": [
     {
-     "name": "Johanna Snyder",
+     "name": "Izzy Fischer",
      "f": 2,
      "field": 27,
      "div": "Womens AA"
     },
     {
-     "name": "Izzy Fischer",
+     "name": "Johanna Snyder",
      "f": 2,
      "field": 27,
      "div": "Womens AA"
@@ -15596,13 +14571,13 @@
    "endDate": "2026-07-11",
    "sanction": "AVPA",
    "location": "",
-   "t15": 0,
+   "t15": 1,
    "t30": 1,
    "t60": 1,
    "brackets": [
     {
      "bracket": "Women's",
-     "t15": 0,
+     "t15": 1,
      "t30": 1,
      "t60": 1,
      "divisions": [
@@ -15633,53 +14608,6 @@
      "f": 13,
      "field": 20,
      "div": "Womens Open"
-    }
-   ]
-  },
-  {
-   "tid": 33870,
-   "name": "JUNIORS: Summer Heat Challenge (GY26-28/GY29-31/GY32-34) [AVP 2 Star]",
-   "date": "2026-07-11",
-   "endDate": "2026-07-11",
-   "sanction": "AVPA",
-   "location": "SandBox Volleyball Club",
-   "t15": 0,
-   "t30": 0,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 0,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "GIRLS GY 2026-2028",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Anna Popovic",
-       "f": 1,
-       "field": 10,
-       "div": "GIRLS GY 2026-2028"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "GIRLS GY 2026-2028",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Anna Popovic",
-     "f": 1,
-     "field": 10,
-     "div": "GIRLS GY 2026-2028"
     }
    ]
   },
@@ -15743,53 +14671,6 @@
    ]
   },
   {
-   "tid": 35912,
-   "name": "AVP Womens Open & Jrs Showcase",
-   "date": "2026-07-12",
-   "endDate": "2026-07-12",
-   "sanction": "AVPA",
-   "location": "Beach South Volleyball Club",
-   "t15": 0,
-   "t30": 1,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "Women's",
-     "t15": 0,
-     "t30": 1,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Womens Open",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Claire Hanson",
-       "f": 7,
-       "field": 13,
-       "div": "Womens Open"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Womens Open",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Claire Hanson",
-     "f": 7,
-     "field": 13,
-     "div": "Womens Open"
-    }
-   ]
-  },
-  {
    "tid": 37488,
    "name": "NVC Tournament 5",
    "date": "2026-07-12",
@@ -15837,6 +14718,100 @@
    ]
   },
   {
+   "tid": 35912,
+   "name": "AVP Womens Open & Jrs Showcase",
+   "date": "2026-07-12",
+   "endDate": "2026-07-12",
+   "sanction": "AVPA",
+   "location": "Beach South Volleyball Club",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Claire Hanson",
+       "f": 7,
+       "field": 13,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Womens Open",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Claire Hanson",
+     "f": 7,
+     "field": 13,
+     "div": "Womens Open"
+    }
+   ]
+  },
+  {
+   "tid": 40108,
+   "name": "Cal Cup Tour Stop, 7/12/26, Manhattan Pier, Manhattan Beach",
+   "date": "2026-07-12",
+   "endDate": "2026-07-12",
+   "sanction": "AVPA",
+   "location": "",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Sydney Toumajian",
+       "f": 1,
+       "field": 5,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Girls 18U",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Sydney Toumajian",
+     "f": 1,
+     "field": 5,
+     "div": "Girls 18U"
+    }
+   ]
+  },
+  {
    "tid": 32971,
    "name": "2026 USA Volleyball Beach National Championship",
    "date": "2026-07-18",
@@ -15844,27 +14819,21 @@
    "sanction": "USAV",
    "location": "Virginia Beach Oceanfront - 32nd Street",
    "t15": 0,
-   "t30": 1,
-   "t60": 6,
+   "t30": 0,
+   "t60": 3,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 0,
-     "t30": 1,
-     "t60": 6,
+     "t30": 0,
+     "t60": 3,
      "divisions": [
       {
        "name": "Girls 18U Open",
-       "n": 6
+       "n": 3
       }
      ],
      "topFinishers": [
-      {
-       "name": "Sienna Carr",
-       "f": 2,
-       "field": 32,
-       "div": "Girls 18U Open"
-      },
       {
        "name": "Emma Burnside",
        "f": 2,
@@ -15872,13 +14841,13 @@
        "div": "Girls 18U Open"
       },
       {
-       "name": "Claire Hanson",
+       "name": "Giani Boerner",
        "f": 3,
        "field": 32,
        "div": "Girls 18U Open"
       },
       {
-       "name": "Giani Boerner",
+       "name": "Claire Hanson",
        "f": 3,
        "field": 32,
        "div": "Girls 18U Open"
@@ -15889,16 +14858,10 @@
    "divisions": [
     {
      "name": "Girls 18U Open",
-     "n": 6
+     "n": 3
     }
    ],
    "topFinishers": [
-    {
-     "name": "Sienna Carr",
-     "f": 2,
-     "field": 32,
-     "div": "Girls 18U Open"
-    },
     {
      "name": "Emma Burnside",
      "f": 2,
@@ -15906,13 +14869,13 @@
      "div": "Girls 18U Open"
     },
     {
-     "name": "Claire Hanson",
+     "name": "Giani Boerner",
      "f": 3,
      "field": 32,
      "div": "Girls 18U Open"
     },
     {
-     "name": "Giani Boerner",
+     "name": "Claire Hanson",
      "f": 3,
      "field": 32,
      "div": "Girls 18U Open"
@@ -15926,14 +14889,14 @@
    "endDate": "2026-07-19",
    "sanction": "AAU",
    "location": "Hermosa Beach Pier",
-   "t15": 12,
-   "t30": 18,
-   "t60": 27,
+   "t15": 11,
+   "t30": 20,
+   "t60": 28,
    "brackets": [
     {
      "bracket": "18U",
-     "t15": 9,
-     "t30": 9,
+     "t15": 6,
+     "t30": 10,
      "t60": 13,
      "divisions": [
       {
@@ -15943,13 +14906,13 @@
      ],
      "topFinishers": [
       {
-       "name": "Leann Wise",
+       "name": "Ella Olson",
        "f": 1,
        "field": 37,
        "div": "Girls 18 - 2026"
       },
       {
-       "name": "Ella Olson",
+       "name": "Leann Wise",
        "f": 1,
        "field": 37,
        "div": "Girls 18 - 2026"
@@ -15970,22 +14933,16 @@
     },
     {
      "bracket": "17U",
-     "t15": 3,
-     "t30": 9,
-     "t60": 14,
+     "t15": 5,
+     "t30": 10,
+     "t60": 15,
      "divisions": [
       {
        "name": "Girls 17 - 2027",
-       "n": 14
+       "n": 15
       }
      ],
      "topFinishers": [
-      {
-       "name": "JoJo Wilson",
-       "f": 1,
-       "field": 54,
-       "div": "Girls 17 - 2027"
-      },
       {
        "name": "Thalia Lindahl",
        "f": 1,
@@ -15993,13 +14950,19 @@
        "div": "Girls 17 - 2027"
       },
       {
-       "name": "Ella Dueck",
-       "f": 2,
+       "name": "JoJo Wilson",
+       "f": 1,
        "field": 54,
        "div": "Girls 17 - 2027"
       },
       {
        "name": "Simrin Adams",
+       "f": 2,
+       "field": 54,
+       "div": "Girls 17 - 2027"
+      },
+      {
+       "name": "Ella Dueck",
        "f": 2,
        "field": 54,
        "div": "Girls 17 - 2027"
@@ -16010,7 +14973,7 @@
    "divisions": [
     {
      "name": "Girls 17 - 2027",
-     "n": 14
+     "n": 15
     },
     {
      "name": "Girls 18 - 2026",
@@ -16019,25 +14982,25 @@
    ],
    "topFinishers": [
     {
-     "name": "Leann Wise",
-     "f": 1,
-     "field": 37,
-     "div": "Girls 18 - 2026"
-    },
-    {
      "name": "Ella Olson",
      "f": 1,
      "field": 37,
      "div": "Girls 18 - 2026"
     },
     {
-     "name": "JoJo Wilson",
+     "name": "Leann Wise",
+     "f": 1,
+     "field": 37,
+     "div": "Girls 18 - 2026"
+    },
+    {
+     "name": "Thalia Lindahl",
      "f": 1,
      "field": 54,
      "div": "Girls 17 - 2027"
     },
     {
-     "name": "Thalia Lindahl",
+     "name": "JoJo Wilson",
      "f": 1,
      "field": 54,
      "div": "Girls 17 - 2027"
@@ -16056,13 +15019,13 @@
    "endDate": "2026-07-19",
    "sanction": "AVPA",
    "location": "",
-   "t15": 2,
+   "t15": 0,
    "t30": 2,
    "t60": 2,
    "brackets": [
     {
      "bracket": "Women's",
-     "t15": 2,
+     "t15": 0,
      "t30": 2,
      "t60": 2,
      "divisions": [
@@ -16115,13 +15078,13 @@
    "endDate": "2026-07-19",
    "sanction": "AAU",
    "location": "Hermosa Beach Pier",
-   "t15": 1,
+   "t15": 0,
    "t30": 1,
    "t60": 2,
    "brackets": [
     {
      "bracket": "Coed",
-     "t15": 1,
+     "t15": 0,
      "t30": 1,
      "t60": 2,
      "divisions": [
@@ -16175,13 +15138,13 @@
    "sanction": "AVPA",
    "location": "Henry Anderson Park",
    "t15": 0,
-   "t30": 0,
+   "t30": 1,
    "t60": 1,
    "brackets": [
     {
      "bracket": "Coed",
      "t15": 0,
-     "t30": 0,
+     "t30": 1,
      "t60": 1,
      "divisions": [
       {
@@ -16468,19 +15431,19 @@
    "endDate": "2026-07-26",
    "sanction": "AVPA",
    "location": "Hermosa Beach Pier",
-   "t15": 12,
-   "t30": 21,
-   "t60": 40,
+   "t15": 13,
+   "t30": 24,
+   "t60": 41,
    "brackets": [
     {
      "bracket": "18U",
-     "t15": 12,
-     "t30": 19,
-     "t60": 30,
+     "t15": 13,
+     "t30": 20,
+     "t60": 29,
      "divisions": [
       {
        "name": "Girls 18U",
-       "n": 30
+       "n": 29
       }
      ],
      "topFinishers": [
@@ -16503,7 +15466,7 @@
        "div": "Girls 18U"
       },
       {
-       "name": "Ella Olson",
+       "name": "Sienna Castillo",
        "f": 5,
        "field": 64,
        "div": "Girls 18U"
@@ -16512,13 +15475,13 @@
     },
     {
      "bracket": "17U",
-     "t15": 4,
-     "t30": 6,
-     "t60": 15,
+     "t15": 3,
+     "t30": 8,
+     "t60": 17,
      "divisions": [
       {
        "name": "Girls 17U",
-       "n": 15
+       "n": 17
       }
      ],
      "topFinishers": [
@@ -16552,11 +15515,11 @@
    "divisions": [
     {
      "name": "Girls 18U",
-     "n": 30
+     "n": 29
     },
     {
      "name": "Girls 17U",
-     "n": 15
+     "n": 17
     }
    ],
    "topFinishers": [
@@ -16670,53 +15633,6 @@
    ]
   },
   {
-   "tid": 39328,
-   "name": "The Dig 11th Annual Coed and Juniors '26",
-   "date": "2026-07-26",
-   "endDate": "2026-07-26",
-   "sanction": "AVPA",
-   "location": "Wapping Fairgrounds",
-   "t15": 0,
-   "t30": 0,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "Coed",
-     "t15": 0,
-     "t30": 0,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Coed Open",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Giani Boerner",
-       "f": 9,
-       "field": 53,
-       "div": "Coed Open"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Coed Open",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Giani Boerner",
-     "f": 9,
-     "field": 53,
-     "div": "Coed Open"
-    }
-   ]
-  },
-  {
    "tid": 40441,
    "name": "7/26/26, Manhattan Pier, Manhattan Beach",
    "date": "2026-07-26",
@@ -16764,49 +15680,49 @@
    ]
   },
   {
-   "tid": 33867,
-   "name": "JUNIORS: SandBox Summer Championships (Girls Divisions: GY26-28/29-30/31-32/33-35) [AVP ECC 3 Star Qualifier]",
+   "tid": 39328,
+   "name": "The Dig 11th Annual Coed and Juniors '26",
    "date": "2026-07-26",
    "endDate": "2026-07-26",
    "sanction": "AVPA",
-   "location": "SandBox Volleyball Club",
+   "location": "Wapping Fairgrounds",
    "t15": 0,
    "t30": 0,
    "t60": 1,
    "brackets": [
     {
-     "bracket": "18U",
+     "bracket": "Coed",
      "t15": 0,
      "t30": 0,
      "t60": 1,
      "divisions": [
       {
-       "name": "GIRLS GY 2026-2028",
+       "name": "Coed Open",
        "n": 1
       }
      ],
      "topFinishers": [
       {
-       "name": "Anna Popovic",
-       "f": 1,
-       "field": 14,
-       "div": "GIRLS GY 2026-2028"
+       "name": "Giani Boerner",
+       "f": 9,
+       "field": 53,
+       "div": "Coed Open"
       }
      ]
     }
    ],
    "divisions": [
     {
-     "name": "GIRLS GY 2026-2028",
+     "name": "Coed Open",
      "n": 1
     }
    ],
    "topFinishers": [
     {
-     "name": "Anna Popovic",
-     "f": 1,
-     "field": 14,
-     "div": "GIRLS GY 2026-2028"
+     "name": "Giani Boerner",
+     "f": 9,
+     "field": 53,
+     "div": "Coed Open"
     }
    ]
   },
@@ -16917,53 +15833,6 @@
    ]
   },
   {
-   "tid": 33325,
-   "name": "USA Volleyball Beach Tour - Chesapeake Region Summer Beach National Qualifier (2026-27)",
-   "date": "2026-08-02",
-   "endDate": "2026-08-02",
-   "sanction": "USAV",
-   "location": "Clearbrook Park",
-   "t15": 0,
-   "t30": 0,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "18U",
-     "t15": 0,
-     "t30": 0,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Girls 18U",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Amelia Berent",
-       "f": 3,
-       "field": 15,
-       "div": "Girls 18U"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Girls 18U",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Amelia Berent",
-     "f": 3,
-     "field": 15,
-     "div": "Girls 18U"
-    }
-   ]
-  },
-  {
    "tid": 35935,
    "name": "Adult OPEN",
    "date": "2026-08-08",
@@ -17007,53 +15876,6 @@
      "f": 7,
      "field": 19,
      "div": "Women's Doubles OPEN"
-    }
-   ]
-  },
-  {
-   "tid": 38933,
-   "name": "$1500 Per Gender!! Summer Slam - Women's/Men's/Junior Boys",
-   "date": "2026-08-08",
-   "endDate": "2026-08-08",
-   "sanction": "\u2014",
-   "location": "Point Pleasant, NJ",
-   "t15": 0,
-   "t30": 0,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "Women's",
-     "t15": 0,
-     "t30": 0,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "Womens Open",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Ali Lubach",
-       "f": 2,
-       "field": 6,
-       "div": "Womens Open"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "Womens Open",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Ali Lubach",
-     "f": 2,
-     "field": 6,
-     "div": "Womens Open"
     }
    ]
   },
@@ -17159,13 +15981,13 @@
    "sanction": "AVPA",
    "location": "",
    "t15": 3,
-   "t30": 4,
+   "t30": 5,
    "t60": 8,
    "brackets": [
     {
      "bracket": "18U",
      "t15": 3,
-     "t30": 4,
+     "t30": 5,
      "t60": 8,
      "divisions": [
       {
@@ -17282,49 +16104,49 @@
    ]
   },
   {
-   "tid": 33876,
-   "name": "AVP NEXT $10,000 SandBox Open 2026",
+   "tid": 40758,
+   "name": "8/9/26, Central Beach, Coronado, San Diego",
    "date": "2026-08-09",
    "endDate": "2026-08-09",
    "sanction": "AVPA",
-   "location": "SandBox Volleyball Club",
+   "location": "",
    "t15": 0,
    "t30": 0,
    "t60": 1,
    "brackets": [
     {
-     "bracket": "Women's",
+     "bracket": "Coed",
      "t15": 0,
      "t30": 0,
      "t60": 1,
      "divisions": [
       {
-       "name": "Women's Open",
+       "name": "Coed 18U",
        "n": 1
       }
      ],
      "topFinishers": [
       {
-       "name": "Anna Popovic",
-       "f": 13,
-       "field": 18,
-       "div": "Women's Open"
+       "name": "Kelly Randolph",
+       "f": 2,
+       "field": 8,
+       "div": "Coed 18U"
       }
      ]
     }
    ],
    "divisions": [
     {
-     "name": "Women's Open",
+     "name": "Coed 18U",
      "n": 1
     }
    ],
    "topFinishers": [
     {
-     "name": "Anna Popovic",
-     "f": 13,
-     "field": 18,
-     "div": "Women's Open"
+     "name": "Kelly Randolph",
+     "f": 2,
+     "field": 8,
+     "div": "Coed 18U"
     }
    ]
   },
@@ -17387,19 +16209,19 @@
    "endDate": "2026-08-16",
    "sanction": "AVPA",
    "location": "Manhattan Beach Pier ",
-   "t15": 2,
+   "t15": 3,
    "t30": 3,
-   "t60": 3,
+   "t60": 4,
    "brackets": [
     {
      "bracket": "Women's",
-     "t15": 2,
+     "t15": 3,
      "t30": 3,
-     "t60": 3,
+     "t60": 4,
      "divisions": [
       {
        "name": "Womens",
-       "n": 3
+       "n": 4
       }
      ],
      "topFinishers": [
@@ -17410,13 +16232,19 @@
        "div": "Womens"
       },
       {
+       "name": "Simrin Adams",
+       "f": 57,
+       "field": 69,
+       "div": "Womens"
+      },
+      {
        "name": "Thalia Lindahl",
        "f": 57,
        "field": 69,
        "div": "Womens"
       },
       {
-       "name": "Simrin Adams",
+       "name": "Sydney Toumajian",
        "f": 57,
        "field": 69,
        "div": "Womens"
@@ -17427,7 +16255,7 @@
    "divisions": [
     {
      "name": "Womens",
-     "n": 3
+     "n": 4
     }
    ],
    "topFinishers": [
@@ -17438,13 +16266,19 @@
      "div": "Womens"
     },
     {
+     "name": "Simrin Adams",
+     "f": 57,
+     "field": 69,
+     "div": "Womens"
+    },
+    {
      "name": "Thalia Lindahl",
      "f": 57,
      "field": 69,
      "div": "Womens"
     },
     {
-     "name": "Simrin Adams",
+     "name": "Sydney Toumajian",
      "f": 57,
      "field": 69,
      "div": "Womens"
@@ -17463,13 +16297,13 @@
    "endDate": "2026-08-16",
    "sanction": "AVPA",
    "location": "",
-   "t15": 1,
+   "t15": 2,
    "t30": 2,
    "t60": 2,
    "brackets": [
     {
      "bracket": "Women's",
-     "t15": 1,
+     "t15": 2,
      "t30": 2,
      "t60": 2,
      "divisions": [
@@ -17514,58 +16348,6 @@
      "div": "Womens Open"
     }
    ]
-  },
-  {
-   "tid": 40302,
-   "name": "Queen City Grass Bash",
-   "date": "2026-08-16",
-   "endDate": "2026-08-16",
-   "sanction": "AVPA",
-   "location": "Walker E. Reid III Park",
-   "t15": 0,
-   "t30": 1,
-   "t60": 1,
-   "brackets": [
-    {
-     "bracket": "Other",
-     "t15": 0,
-     "t30": 1,
-     "t60": 1,
-     "divisions": [
-      {
-       "name": "RevCo A Doubles",
-       "n": 1
-      }
-     ],
-     "topFinishers": [
-      {
-       "name": "Claire Hanson",
-       "f": 17,
-       "field": 32,
-       "div": "RevCo A Doubles"
-      }
-     ]
-    }
-   ],
-   "divisions": [
-    {
-     "name": "RevCo A Doubles",
-     "n": 1
-    }
-   ],
-   "topFinishers": [
-    {
-     "name": "Claire Hanson",
-     "f": 17,
-     "field": 32,
-     "div": "RevCo A Doubles"
-    }
-   ],
-   "next": {
-    "id": 40302,
-    "date": "2026-08-15",
-    "name": "Queen City Grass Bash"
-   }
   },
   {
    "tid": 38364,
@@ -17620,12 +16402,246 @@
    }
   },
   {
-   "tid": 35176,
-   "name": "BRVA Beach AVP Qualifier #9 '26",
+   "tid": 40302,
+   "name": "Queen City Grass Bash",
    "date": "2026-08-16",
    "endDate": "2026-08-16",
    "sanction": "AVPA",
-   "location": "BRVA Beach",
+   "location": "Walker E. Reid III Park",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Other",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "RevCo A Doubles",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Claire Hanson",
+       "f": 17,
+       "field": 32,
+       "div": "RevCo A Doubles"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "RevCo A Doubles",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Claire Hanson",
+     "f": 17,
+     "field": 32,
+     "div": "RevCo A Doubles"
+    }
+   ],
+   "next": {
+    "id": 40302,
+    "date": "2026-08-15",
+    "name": "Queen City Grass Bash"
+   }
+  },
+  {
+   "tid": 41032,
+   "name": "8/22/26, Ocean Beach, San Diego",
+   "date": "2026-08-22",
+   "endDate": "2026-08-22",
+   "sanction": "AVPA",
+   "location": "",
+   "t15": 1,
+   "t30": 2,
+   "t60": 2,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 2,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Jordyn Wilson",
+       "f": 3,
+       "field": 24,
+       "div": "Womens Open"
+      },
+      {
+       "name": "JoJo Wilson",
+       "f": 11,
+       "field": 24,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Womens Open",
+     "n": 2
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Jordyn Wilson",
+     "f": 3,
+     "field": 24,
+     "div": "Womens Open"
+    },
+    {
+     "name": "JoJo Wilson",
+     "f": 11,
+     "field": 24,
+     "div": "Womens Open"
+    }
+   ]
+  },
+  {
+   "tid": 41031,
+   "name": "8/22/26, Main Beach, Santa Cruz",
+   "date": "2026-08-22",
+   "endDate": "2026-08-22",
+   "sanction": "AVPA",
+   "location": "",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens AA",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Lekhana Donnies",
+       "f": 9,
+       "field": 25,
+       "div": "Womens AA"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Womens AA",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Lekhana Donnies",
+     "f": 9,
+     "field": 25,
+     "div": "Womens AA"
+    }
+   ]
+  },
+  {
+   "tid": 37708,
+   "name": "NVC Summer Series Championships",
+   "date": "2026-08-23",
+   "endDate": "2026-08-23",
+   "sanction": "AVPA",
+   "location": "Easton's Beach",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Giani Boerner",
+       "f": 2,
+       "field": 12,
+       "div": "Womens Open"
+      }
+     ]
+    },
+    {
+     "bracket": "Coed",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Coed Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Giani Boerner",
+       "f": 3,
+       "field": 20,
+       "div": "Coed Open"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Womens Open",
+     "n": 1
+    },
+    {
+     "name": "Coed Open",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Giani Boerner",
+     "f": 2,
+     "field": 12,
+     "div": "Womens Open"
+    }
+   ],
+   "next": {
+    "id": 37708,
+    "date": "2026-08-22",
+    "name": "NVC Summer Series Championships"
+   }
+  },
+  {
+   "tid": 40465,
+   "name": "Super Girl Pro Invitational '26",
+   "date": "2026-08-23",
+   "endDate": "2026-08-23",
+   "sanction": "\u2014",
+   "location": "Oceanside Pier",
    "t15": 0,
    "t30": 0,
    "t60": 1,
@@ -17643,9 +16659,9 @@
      ],
      "topFinishers": [
       {
-       "name": "Amelia Berent",
-       "f": 5,
-       "field": 12,
+       "name": "Lillie Duitsman",
+       "f": 1,
+       "field": 8,
        "div": "Girls 18U"
       }
      ]
@@ -17659,18 +16675,764 @@
    ],
    "topFinishers": [
     {
-     "name": "Amelia Berent",
-     "f": 5,
-     "field": 12,
+     "name": "Lillie Duitsman",
+     "f": 1,
+     "field": 8,
      "div": "Girls 18U"
     }
    ],
    "next": {
-    "id": 35176,
-    "date": "2026-08-15",
-    "name": "BRVA Beach AVP Qualifier #9 '26"
+    "id": 40465,
+    "date": "2026-08-22",
+    "name": "Super Girl Pro Invitational '26"
    }
+  },
+  {
+   "tid": 36809,
+   "name": "2026 ECSC Amateur Divisions Men's/Women's/Coed/Juniors Doubles",
+   "date": "2026-08-30",
+   "endDate": "2026-08-30",
+   "sanction": "AVPA",
+   "location": "6th Street Virginia Beach Oceanfront",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Claire Hanson",
+       "f": 3,
+       "field": 6,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Womens Open",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Claire Hanson",
+     "f": 3,
+     "field": 6,
+     "div": "Womens Open"
+    }
+   ],
+   "next": {
+    "id": 36809,
+    "date": "2026-08-29",
+    "name": "2026 ECSC Amateur Divisions Men's/Women's/Coed/Juniors Doubles"
+   }
+  },
+  {
+   "tid": 33582,
+   "name": "SSOVA September 6th Juniors AVP & USAV Regional Qualifier ST PETE BEACH, Beach Volleyball Tournament- BRQ",
+   "date": "2026-09-06",
+   "endDate": "2026-09-06",
+   "sanction": "AVPA",
+   "location": "Upham Beach Park- St. Pete Beach",
+   "t15": 0,
+   "t30": 1,
+   "t60": 2,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 2,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 2
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Izzy Fischer",
+       "f": 1,
+       "field": 10,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Lila Waite",
+       "f": 1,
+       "field": 10,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Girls 18U",
+     "n": 2
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Izzy Fischer",
+     "f": 1,
+     "field": 10,
+     "div": "Girls 18U"
+    },
+    {
+     "name": "Lila Waite",
+     "f": 1,
+     "field": 10,
+     "div": "Girls 18U"
+    }
+   ],
+   "next": {
+    "id": 33582,
+    "date": "2026-09-06",
+    "name": "SSOVA September 6th Juniors AVP & USAV Regional Qualifier ST PETE BEACH, Beach Volleyball Tournament- BRQ"
+   }
+  },
+  {
+   "tid": 40669,
+   "name": "SMASH & YOYO Showdown II Coed",
+   "date": "2026-09-06",
+   "endDate": "2026-09-06",
+   "sanction": "AVPA",
+   "location": "Cold Spring Field",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "RCO Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Giani Boerner",
+       "f": 3,
+       "field": 14,
+       "div": "RCO Open"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "RCO Open",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Giani Boerner",
+     "f": 3,
+     "field": 14,
+     "div": "RCO Open"
+    }
+   ],
+   "next": {
+    "id": 40669,
+    "date": "2026-09-06",
+    "name": "SMASH & YOYO Showdown II Coed"
+   }
+  },
+  {
+   "tid": 39553,
+   "name": "AVP Next Women's Pro at Super Girl Surf Festival",
+   "date": "2026-09-06",
+   "endDate": "2026-09-06",
+   "sanction": "AVPA",
+   "location": "6th Street Virginia Beach Oceanfront",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Meadow Rosales",
+       "f": 5,
+       "field": 15,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Womens Open",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Meadow Rosales",
+     "f": 5,
+     "field": 15,
+     "div": "Womens Open"
+    }
+   ],
+   "next": {
+    "id": 39553,
+    "date": "2026-09-05",
+    "name": "AVP Next Women's Pro at Super Girl Surf Festival"
+   }
+  },
+  {
+   "tid": 38362,
+   "name": "2026 AVP Mother Lode OPEN presented by LetsGO",
+   "date": "2026-09-07",
+   "endDate": "2026-09-05",
+   "sanction": "AVPA",
+   "location": "Koch Lumber Park",
+   "t15": 1,
+   "t30": 1,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 1,
+     "t30": 1,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens OPEN Sand",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Thais Treumann",
+       "f": 3,
+       "field": 21,
+       "div": "Womens OPEN Sand"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Womens OPEN Sand",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Thais Treumann",
+     "f": 3,
+     "field": 21,
+     "div": "Womens OPEN Sand"
+    }
+   ],
+   "next": {
+    "id": 38362,
+    "date": "2026-09-04",
+    "name": "2026 AVP Mother Lode OPEN presented by LetsGO"
+   }
+  },
+  {
+   "tid": 32266,
+   "name": "Kauai Bikini Open Hickory Point Sep 2026",
+   "date": "2026-09-12",
+   "endDate": "2026-09-12",
+   "sanction": "BVNE",
+   "location": "Hickory Point Beach Sand Volleyball Complex",
+   "t15": 0,
+   "t30": 0,
+   "t60": 3,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 3,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 3
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Brooke Smith",
+       "f": 1,
+       "field": 27,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "GRACIE LUTES",
+       "f": 8,
+       "field": 27,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Lila Waite",
+       "f": 12,
+       "field": 27,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Girls 18U",
+     "n": 3
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Brooke Smith",
+     "f": 1,
+     "field": 27,
+     "div": "Girls 18U"
+    },
+    {
+     "name": "GRACIE LUTES",
+     "f": 8,
+     "field": 27,
+     "div": "Girls 18U"
+    },
+    {
+     "name": "Lila Waite",
+     "f": 12,
+     "field": 27,
+     "div": "Girls 18U"
+    }
+   ],
+   "next": {
+    "id": 32266,
+    "date": "2026-09-12",
+    "name": "Kauai Bikini Open Hickory Point Sep 2026"
+   }
+  },
+  {
+   "tid": 41617,
+   "name": ", 9/13/26, Ocean Park, Santa Monica",
+   "date": "2026-09-13",
+   "endDate": "2026-09-13",
+   "sanction": "AVPA",
+   "location": "",
+   "t15": 5,
+   "t30": 5,
+   "t60": 5,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 5,
+     "t30": 5,
+     "t60": 5,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 5
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Sandie Souza",
+       "f": 2,
+       "field": 17,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Simrin Adams",
+       "f": 2,
+       "field": 17,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Sienna Castillo",
+       "f": 3,
+       "field": 17,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Lerin Rosenthal",
+       "f": 5,
+       "field": 17,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Womens Open",
+     "n": 5
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Sandie Souza",
+     "f": 2,
+     "field": 17,
+     "div": "Womens Open"
+    },
+    {
+     "name": "Simrin Adams",
+     "f": 2,
+     "field": 17,
+     "div": "Womens Open"
+    },
+    {
+     "name": "Sienna Castillo",
+     "f": 3,
+     "field": 17,
+     "div": "Womens Open"
+    },
+    {
+     "name": "Lerin Rosenthal",
+     "f": 5,
+     "field": 17,
+     "div": "Womens Open"
+    }
+   ]
+  },
+  {
+   "tid": 39261,
+   "name": "Wedbush presents The Hermosa Beach Open 2026",
+   "date": "2026-09-13",
+   "endDate": "2026-09-13",
+   "sanction": "\u2014",
+   "location": "Hermosa Beach",
+   "t15": 2,
+   "t30": 3,
+   "t60": 4,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 2,
+     "t30": 3,
+     "t60": 4,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 4
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Thais Treumann",
+       "f": 5,
+       "field": 54,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Simrin Adams",
+       "f": 41,
+       "field": 54,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Jordyn Wilson",
+       "f": 41,
+       "field": 54,
+       "div": "Womens Open"
+      },
+      {
+       "name": "Sydney Toumajian",
+       "f": 41,
+       "field": 54,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Womens Open",
+     "n": 4
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Thais Treumann",
+     "f": 5,
+     "field": 54,
+     "div": "Womens Open"
+    },
+    {
+     "name": "Simrin Adams",
+     "f": 41,
+     "field": 54,
+     "div": "Womens Open"
+    },
+    {
+     "name": "Jordyn Wilson",
+     "f": 41,
+     "field": 54,
+     "div": "Womens Open"
+    },
+    {
+     "name": "Sydney Toumajian",
+     "f": 41,
+     "field": 54,
+     "div": "Womens Open"
+    }
+   ],
+   "next": {
+    "id": 39261,
+    "date": "2026-09-10",
+    "name": "Wedbush presents The Hermosa Beach Open 2026"
+   }
+  },
+  {
+   "tid": 32238,
+   "name": "GNBV National Recruiting Showcase Florida Sep 2026",
+   "date": "2026-09-13",
+   "endDate": "2026-09-13",
+   "sanction": "BVNE",
+   "location": "Hickory Point Beach Sand Volleyball Complex",
+   "t15": 0,
+   "t30": 1,
+   "t60": 3,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 1,
+     "t60": 3,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 3
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Izzy Fischer",
+       "f": 1,
+       "field": 44,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "Lila Waite",
+       "f": 1,
+       "field": 44,
+       "div": "Girls 18U"
+      },
+      {
+       "name": "GRACIE LUTES",
+       "f": 3,
+       "field": 44,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Girls 18U",
+     "n": 3
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Izzy Fischer",
+     "f": 1,
+     "field": 44,
+     "div": "Girls 18U"
+    },
+    {
+     "name": "Lila Waite",
+     "f": 1,
+     "field": 44,
+     "div": "Girls 18U"
+    },
+    {
+     "name": "GRACIE LUTES",
+     "f": 3,
+     "field": 44,
+     "div": "Girls 18U"
+    }
+   ],
+   "next": {
+    "id": 32238,
+    "date": "2026-09-13",
+    "name": "GNBV National Recruiting Showcase Florida Sep 2026"
+   }
+  },
+  {
+   "tid": 37709,
+   "name": "NVC Fall Classic",
+   "date": "2026-09-13",
+   "endDate": "2026-09-13",
+   "sanction": "AVPA",
+   "location": "Easton's Beach",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Giani Boerner",
+       "f": 1,
+       "field": 10,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Womens Open",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Giani Boerner",
+     "f": 1,
+     "field": 10,
+     "div": "Womens Open"
+    }
+   ],
+   "next": {
+    "id": 37709,
+    "date": "2026-09-12",
+    "name": "NVC Fall Classic"
+   }
+  },
+  {
+   "tid": 35687,
+   "name": "AVP NEXT South Beach September Open '26",
+   "date": "2026-09-13",
+   "endDate": "2026-09-12",
+   "sanction": "AVPA",
+   "location": "South Beach Volley Courts ",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "Women's",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Womens Open",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Meadow Rosales",
+       "f": 9,
+       "field": 20,
+       "div": "Womens Open"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Womens Open",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Meadow Rosales",
+     "f": 9,
+     "field": 20,
+     "div": "Womens Open"
+    }
+   ],
+   "next": {
+    "id": 35687,
+    "date": "2026-09-12",
+    "name": "AVP NEXT South Beach September Open '26 "
+   }
+  },
+  {
+   "tid": 41618,
+   "name": "9/13/26, Central Beach, Coronado, San Diego",
+   "date": "2026-09-13",
+   "endDate": "2026-09-13",
+   "sanction": "AVPA",
+   "location": "",
+   "t15": 0,
+   "t30": 0,
+   "t60": 1,
+   "brackets": [
+    {
+     "bracket": "18U",
+     "t15": 0,
+     "t30": 0,
+     "t60": 1,
+     "divisions": [
+      {
+       "name": "Girls 18U",
+       "n": 1
+      }
+     ],
+     "topFinishers": [
+      {
+       "name": "Ashley Chuba",
+       "f": 1,
+       "field": 8,
+       "div": "Girls 18U"
+      }
+     ]
+    }
+   ],
+   "divisions": [
+    {
+     "name": "Girls 18U",
+     "n": 1
+    }
+   ],
+   "topFinishers": [
+    {
+     "name": "Ashley Chuba",
+     "f": 1,
+     "field": 8,
+     "div": "Girls 18U"
+    }
+   ]
   }
  ],
- "matchedNext": 33
+ "matchedNext": 43
 }
