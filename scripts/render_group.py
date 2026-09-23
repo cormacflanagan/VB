@@ -31,7 +31,18 @@ TEXT = {
                 "Summer Training Series at Chula Vista; this roster is the Fall series, named "
                 "later and drawn from a wider age band. Ten of these twenty appear on one "
                 "of the summer rosters — three from the 18U group and seven from the 17U — so the "
-                "three pages overlap without being comparable selections.</li>",
+                "three pages overlap without being comparable selections.</li>"
+                "<li><b>Nobody here is 19, or 18.</b> The label is an eligibility ceiling, not a "
+                "description: the Fall series fields only two girls groups, U16 and U19, so every "
+                "girl too old for U16 lands in U19 by default. Six of these twenty were born in "
+                "2009 and fourteen in 2010; Volleyball Life's own age field reads 18 for two of "
+                "them, 17 for thirteen and 16 for four. The boundary is a birth-year line at "
+                "1 January 2011, which the class of 2029 straddles — Sienna Cicero (11 December "
+                "2010) is on this roster and Ashley Ruschill (25 January 2011) is on the U16 one, "
+                "six weeks apart and in the same graduating class. Age divisions run on birth "
+                "year; graduation year is only a proxy for it. One consequence: this roster is "
+                "<i>younger</i> than the summer 18U group, which carried seven class-of-2027 "
+                "athletes where this has none.</li>",
     },
     "CLASS": {
         "eyebrow": "Girls beach volleyball &#183; Class of {Y} &#183; National top {N}",

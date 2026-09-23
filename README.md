@@ -159,10 +159,16 @@ All read from the Volleyball Life public API at `https://api-v8.volleyballlife.c
 Two things about that API changed in September 2026. It now **rejects a short
 `User-Agent`** &mdash; `Mozilla/5.0` gets a bare `404` on every route, a full browser
 string gets the data &mdash; so every script here sends one. And
-`POST /playerprofile/feed/matches` now answers **401** to an anonymous caller, so the
-head-to-head crosstables cannot be re-fetched without an account. `h2h.py` stamps its
-pull date into its output and the renderer says on the page when a crosstable is older
-than the window it sits under.
+`POST /playerprofile/feed/matches` now answers **401** to an anonymous caller, so
+`h2h.py` cannot re-fetch a crosstable without an account.
+
+`h2h_corpus.py` rebuilds the same file from `data/all_matches.jsonl` instead &mdash; the
+feed as crawled before it closed, plus CBVA's public games. Every crosstable on the site
+is now built that way, which trades one limitation for another and says so on the page:
+it reaches only as far as the last crawl, and it *gains* the open-draw matches Volleyball
+Life files as a finish order rather than as matches. The change is not cosmetic. On the
+2028-and-younger cut it takes the crosstable from 399 pairings over 527 matches to 500
+over 665.
 
 Field size comes from the team count of the specific division the athlete competed in,
 matched by `tdId`. Division names alone are not sufficient: one event runs several
@@ -192,8 +198,8 @@ All four reports run on the same twelve-month window, 14 September 2025 to 14 Se
 (17,178 of them) was re-rated on 14 September 2026, after Volleyball Life replaced the
 TruVolley formula &mdash; ranks from before that date are not comparable with these.
 
-Their head-to-head crosstables are still the 20 August pull and say so on the page,
-because the match feed now requires an account &mdash; see below.
+Their head-to-head crosstables are rebuilt from the stored match corpus rather than the
+live feed, which now requires an account &mdash; see below.
 
 | | Girls U18 | Girls U17 | 2027 and younger | 2028 and younger |
 | --- | --- | --- | --- | --- |
