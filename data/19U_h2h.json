@@ -1,0 +1,2803 @@
+{
+ "group": "19U",
+ "players": {
+  "91052": "Sage Illian",
+  "64896": "Haisley Flanagan",
+  "84725": "Sarah Cowan",
+  "147394": "Sadie Stafford",
+  "98125": "Ella Buchanan",
+  "9258": "Abigail Moffett",
+  "161398": "Charlotte Jansen",
+  "94563": "Danica Waterman",
+  "124871": "Sienna Cicero",
+  "64782": "Regina Stella Broshear",
+  "98360": "Stacy Balestrieri",
+  "25298": "Lia Ray",
+  "77570": "Elyse Smelcer",
+  "211882": "Reese Hislop",
+  "129730": "Taylor Daley",
+  "123209": "Olivia Leon",
+  "147247": "Lauren Eklund",
+  "196589": "Hazel Williams",
+  "193639": "Celi Clark",
+  "70421": "Ella Whiteside"
+ },
+ "asof": "2026-09-23",
+ "source": "corpus",
+ "matches": 57,
+ "pairs": [
+  {
+   "a": "Celi Clark",
+   "b": "Reese Hislop",
+   "aId": 193639,
+   "bId": 211882,
+   "aWins": 1,
+   "bWins": 6,
+   "games": [
+    {
+     "date": "2026-04-25",
+     "event": "Sinjin Beach April U16 Event hosted with Blue Sky",
+     "division": "",
+     "tid": 36711,
+     "tdId": 134249,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": false,
+     "sets": [
+      [
+       9,
+       21
+      ]
+     ],
+     "with": [
+      261774
+     ],
+     "against": [
+      144801
+     ]
+    },
+    {
+     "date": "2026-04-25",
+     "event": "Sinjin Beach April U16 Event hosted with Blue Sky",
+     "division": "",
+     "tid": 36711,
+     "tdId": 134249,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": false,
+     "sets": [
+      [
+       13,
+       21
+      ],
+      [
+       13,
+       21
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      261774
+     ],
+     "against": [
+      144801
+     ]
+    },
+    {
+     "date": "2026-06-06",
+     "event": "Sinjin Collegiate Showcase #2 U16 hosted with Blue Sky",
+     "division": "",
+     "tid": 37067,
+     "tdId": 135606,
+     "phase": "Pool",
+     "round": "",
+     "won": false,
+     "sets": [
+      [
+       14,
+       21
+      ]
+     ],
+     "with": [
+      "Lauren Eklund"
+     ],
+     "against": [
+      242755
+     ]
+    },
+    {
+     "date": "2026-06-06",
+     "event": "Sinjin Collegiate Showcase #2 U16 hosted with Blue Sky",
+     "division": "",
+     "tid": 37067,
+     "tdId": 135606,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": false,
+     "sets": [
+      [
+       11,
+       21
+      ],
+      [
+       14,
+       21
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Lauren Eklund"
+     ],
+     "against": [
+      242755
+     ]
+    },
+    {
+     "date": "2026-06-27",
+     "event": "AVP America 2 Star College Showcase",
+     "division": "",
+     "tid": 35908,
+     "tdId": 131335,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": false,
+     "sets": [
+      [
+       22,
+       20
+      ],
+      [
+       18,
+       21
+      ],
+      [
+       17,
+       19
+      ]
+     ],
+     "with": [
+      162568
+     ],
+     "against": [
+      197037
+     ]
+    },
+    {
+     "date": "2026-08-15",
+     "event": "Sinjin Collegiate Showcase #3 U16 hosted with Blue Sky",
+     "division": "",
+     "tid": 37073,
+     "tdId": 135616,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": false,
+     "sets": [
+      [
+       19,
+       21
+      ]
+     ],
+     "with": [
+      261774
+     ],
+     "against": [
+      144801
+     ]
+    },
+    {
+     "date": "2026-08-16",
+     "event": "Sinjin Collegiate Showcase #3 U18/U14 hosted with Blue Sky",
+     "division": "",
+     "tid": 37074,
+     "tdId": 135617,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       16
+      ]
+     ],
+     "with": [
+      144801
+     ],
+     "against": [
+      149454
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lauren Eklund",
+   "b": "Reese Hislop",
+   "aId": 147247,
+   "bId": 211882,
+   "aWins": 3,
+   "bWins": 2,
+   "games": [
+    {
+     "date": "2026-01-18",
+     "event": "2026 Futures Tour: Arizona",
+     "division": "",
+     "tid": 31568,
+     "tdId": 117699,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       14
+      ],
+      [
+       21,
+       15
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      149454
+     ],
+     "against": [
+      149742
+     ]
+    },
+    {
+     "date": "2026-04-26",
+     "event": "Sinjin April U18/U14 Event hosted with Blue Sky",
+     "division": "",
+     "tid": 36712,
+     "tdId": 134250,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       14
+      ],
+      [
+       21,
+       16
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      67744
+     ],
+     "against": [
+      192523
+     ]
+    },
+    {
+     "date": "2026-06-07",
+     "event": "Sinjin Collegiate Showcase #2 U18/U14 hosted with Blue Sky",
+     "division": "",
+     "tid": 37070,
+     "tdId": 135611,
+     "phase": "Pool",
+     "round": "",
+     "won": true,
+     "sets": [
+      [
+       21,
+       18
+      ]
+     ],
+     "with": [
+      "Elyse Smelcer"
+     ],
+     "against": [
+      149454
+     ]
+    },
+    {
+     "date": "2026-06-28",
+     "event": "Sinjin Beach June U16 Event hosted with Blue Sky",
+     "division": "",
+     "tid": 37080,
+     "tdId": 135627,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": false,
+     "sets": [
+      [
+       11,
+       21
+      ],
+      [
+       14,
+       21
+      ]
+     ],
+     "with": [
+      149454
+     ],
+     "against": [
+      "Elyse Smelcer"
+     ]
+    },
+    {
+     "date": "2026-06-28",
+     "event": "Sinjin Beach June U16 Event hosted with Blue Sky",
+     "division": "",
+     "tid": 37080,
+     "tdId": 135627,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": false,
+     "sets": [
+      [
+       16,
+       21
+      ],
+      [
+       13,
+       21
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      149454
+     ],
+     "against": [
+      "Elyse Smelcer"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sadie Stafford",
+   "b": "Charlotte Jansen",
+   "aId": 147394,
+   "bId": 161398,
+   "aWins": 2,
+   "bWins": 2,
+   "games": [
+    {
+     "date": "2026-03-14",
+     "event": "2026 Futures Tour: Florida",
+     "division": "",
+     "tid": 31622,
+     "tdId": 117904,
+     "phase": "Pool",
+     "round": "Day 1: RD2 (1sts)",
+     "won": false,
+     "sets": [
+      [
+       21,
+       13
+      ],
+      [
+       15,
+       21
+      ],
+      [
+       11,
+       15
+      ]
+     ],
+     "with": [
+      59411
+     ],
+     "against": [
+      92193
+     ]
+    },
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       15
+      ],
+      [
+       21,
+       19
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      92193
+     ],
+     "against": [
+      "Ella Buchanan"
+     ]
+    },
+    {
+     "date": "2026-06-19",
+     "event": "2026 Futures Tour WESTERN NATIONAL CHAMPIONSHIPS",
+     "division": "",
+     "tid": 30985,
+     "tdId": 115903,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       21,
+       17
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      92193
+     ],
+     "against": [
+      "Danica Waterman"
+     ]
+    },
+    {
+     "date": "2026-07-23",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "",
+     "tid": 34243,
+     "tdId": 126056,
+     "phase": "Pool",
+     "round": "Power Pools 1st",
+     "won": false,
+     "sets": [
+      [
+       24,
+       22
+      ],
+      [
+       19,
+       21
+      ],
+      [
+       15,
+       17
+      ]
+     ],
+     "with": [
+      "Abigail Moffett"
+     ],
+     "against": [
+      "Danica Waterman"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sienna Cicero",
+   "b": "Taylor Daley",
+   "aId": 124871,
+   "bId": 129730,
+   "aWins": 3,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-11-08",
+     "event": "AVP Juniors West Coast Championships 2025",
+     "division": "",
+     "tid": 25578,
+     "tdId": 97150,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       12
+      ],
+      [
+       21,
+       17
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      91155
+     ],
+     "against": [
+      92284
+     ]
+    },
+    {
+     "date": "2025-11-09",
+     "event": "AVP Juniors West Coast Championships 2025",
+     "division": "",
+     "tid": 25578,
+     "tdId": 97150,
+     "phase": "Playoffs",
+     "round": "Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       24,
+       22
+      ],
+      [
+       25,
+       23
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      91155
+     ],
+     "against": [
+      92284
+     ]
+    },
+    {
+     "date": "2026-07-26",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "",
+     "tid": 34243,
+     "tdId": 126057,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": true,
+     "sets": [
+      [
+       21,
+       13
+      ],
+      [
+       21,
+       17
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      92284
+     ],
+     "against": [
+      95222
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Elyse Smelcer",
+   "b": "Lauren Eklund",
+   "aId": 77570,
+   "bId": 147247,
+   "aWins": 3,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-06-27",
+     "event": "Sinjin June U18/U14 Event hosted with Blue Sky",
+     "division": "",
+     "tid": 37081,
+     "tdId": 135628,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       12
+      ]
+     ],
+     "with": [
+      147851
+     ],
+     "against": [
+      147969
+     ]
+    },
+    {
+     "date": "2026-06-28",
+     "event": "Sinjin Beach June U16 Event hosted with Blue Sky",
+     "division": "",
+     "tid": 37080,
+     "tdId": 135627,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       11
+      ],
+      [
+       21,
+       14
+      ]
+     ],
+     "with": [
+      149454
+     ],
+     "against": [
+      "Reese Hislop"
+     ]
+    },
+    {
+     "date": "2026-06-28",
+     "event": "Sinjin Beach June U16 Event hosted with Blue Sky",
+     "division": "",
+     "tid": 37080,
+     "tdId": 135627,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       16
+      ],
+      [
+       21,
+       13
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      149454
+     ],
+     "against": [
+      "Reese Hislop"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sadie Stafford",
+   "b": "Reese Hislop",
+   "aId": 147394,
+   "bId": 211882,
+   "aWins": 3,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-24",
+     "event": "Snowball '26",
+     "division": "",
+     "tid": 33052,
+     "tdId": 122007,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       28,
+       16
+      ]
+     ],
+     "with": [
+      150386
+     ],
+     "against": [
+      149113
+     ]
+    },
+    {
+     "date": "2026-01-24",
+     "event": "Snowball '26",
+     "division": "",
+     "tid": 33052,
+     "tdId": 122007,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       18
+      ],
+      [
+       21,
+       16
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      150386
+     ],
+     "against": [
+      149113
+     ]
+    },
+    {
+     "date": "2026-06-19",
+     "event": "2026 Futures Tour WESTERN NATIONAL CHAMPIONSHIPS",
+     "division": "",
+     "tid": 30985,
+     "tdId": 115903,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       21,
+       11
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Lauren Eklund"
+     ],
+     "against": [
+      "Danica Waterman"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Hazel Williams",
+   "b": "Reese Hislop",
+   "aId": 196589,
+   "bId": 211882,
+   "aWins": 0,
+   "bWins": 2,
+   "games": [
+    {
+     "date": "2026-06-19",
+     "event": "2026 Futures Tour WESTERN NATIONAL CHAMPIONSHIPS",
+     "division": "",
+     "tid": 30985,
+     "tdId": 115903,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       12,
+       21
+      ],
+      [
+       18,
+       21
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      81489
+     ],
+     "against": [
+      "Lauren Eklund"
+     ]
+    },
+    {
+     "date": "2026-07-26",
+     "event": "BVNE 2026 West Coast National Championship",
+     "division": "",
+     "tid": 31582,
+     "tdId": 117787,
+     "phase": "Playoffs",
+     "round": "Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       21,
+       23
+      ],
+      [
+       15,
+       21
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      147991
+     ],
+     "against": [
+      81489
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Abigail Moffett",
+   "b": "Sadie Stafford",
+   "aId": 9258,
+   "bId": 147394,
+   "aWins": 2,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-02-01",
+     "event": "Girls Beach High School Pre-Season Tournament",
+     "division": "",
+     "tid": 32392,
+     "tdId": 121505,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": true,
+     "sets": [
+      [
+       28,
+       23
+      ]
+     ],
+     "with": [
+      5160
+     ],
+     "against": [
+      61785
+     ]
+    },
+    {
+     "date": "2026-07-23",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "",
+     "tid": 34243,
+     "tdId": 126056,
+     "phase": "Pool",
+     "round": "Power Pools 1st",
+     "won": true,
+     "sets": [
+      [
+       22,
+       24
+      ],
+      [
+       21,
+       19
+      ],
+      [
+       17,
+       15
+      ]
+     ],
+     "with": [
+      "Charlotte Jansen"
+     ],
+     "against": [
+      "Danica Waterman"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Danica Waterman",
+   "b": "Charlotte Jansen",
+   "aId": 94563,
+   "bId": 161398,
+   "aWins": 1,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-06-19",
+     "event": "2026 Futures Tour WESTERN NATIONAL CHAMPIONSHIPS",
+     "division": "",
+     "tid": 30985,
+     "tdId": 115903,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       21,
+       17
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      92193
+     ],
+     "against": [
+      "Sadie Stafford"
+     ]
+    },
+    {
+     "date": "2026-07-23",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "",
+     "tid": 34243,
+     "tdId": 126056,
+     "phase": "Pool",
+     "round": "Power Pools 1st",
+     "won": false,
+     "sets": [
+      [
+       24,
+       22
+      ],
+      [
+       19,
+       21
+      ],
+      [
+       15,
+       17
+      ]
+     ],
+     "with": [
+      "Abigail Moffett"
+     ],
+     "against": [
+      "Sadie Stafford"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Regina Stella Broshear",
+   "b": "Hazel Williams",
+   "aId": 64782,
+   "bId": 196589,
+   "aWins": 2,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-06-18",
+     "event": "2026 Futures Tour WESTERN NATIONAL CHAMPIONSHIPS",
+     "division": "",
+     "tid": 30985,
+     "tdId": 115903,
+     "phase": "Pool",
+     "round": "Day 1: Power Pools",
+     "won": true,
+     "sets": [
+      [
+       16,
+       21
+      ],
+      [
+       21,
+       15
+      ],
+      [
+       15,
+       7
+      ]
+     ],
+     "with": [
+      27878
+     ],
+     "against": [
+      81489
+     ]
+    },
+    {
+     "date": "2026-07-22",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "",
+     "tid": 34243,
+     "tdId": 126056,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       22,
+       20
+      ],
+      [
+       21,
+       15
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      94909
+     ],
+     "against": [
+      81489
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sage Illian",
+   "b": "Charlotte Jansen",
+   "aId": 91052,
+   "bId": 161398,
+   "aWins": 2,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       23,
+       21
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Abigail Moffett"
+     ],
+     "against": [
+      2048
+     ]
+    },
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       16
+      ],
+      [
+       21,
+       17
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Sarah Cowan"
+     ],
+     "against": [
+      "Ella Buchanan"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lauren Eklund",
+   "b": "Celi Clark",
+   "aId": 147247,
+   "bId": 193639,
+   "aWins": 2,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-06-06",
+     "event": "Sinjin Collegiate Showcase #2 U16 hosted with Blue Sky",
+     "division": "",
+     "tid": 37067,
+     "tdId": 135606,
+     "phase": "Pool",
+     "round": "",
+     "won": true,
+     "sets": [
+      [
+       21,
+       14
+      ]
+     ],
+     "with": [
+      "Reese Hislop"
+     ],
+     "against": [
+      242755
+     ]
+    },
+    {
+     "date": "2026-06-06",
+     "event": "Sinjin Collegiate Showcase #2 U16 hosted with Blue Sky",
+     "division": "",
+     "tid": 37067,
+     "tdId": 135606,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       11
+      ],
+      [
+       21,
+       14
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Reese Hislop"
+     ],
+     "against": [
+      242755
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Stacy Balestrieri",
+   "b": "Taylor Daley",
+   "aId": 98360,
+   "bId": 129730,
+   "aWins": 1,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-03-01",
+     "event": "California IBVL Winter Series Championships - p1440 Crown Series",
+     "division": "",
+     "tid": 32939,
+     "tdId": 121643,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": false,
+     "sets": [
+      [
+       23,
+       28
+      ]
+     ],
+     "with": [
+      65102
+     ],
+     "against": [
+      95222
+     ]
+    },
+    {
+     "date": "2026-03-29",
+     "event": "2026 Futures Tour Spring Championship",
+     "division": "",
+     "tid": 31567,
+     "tdId": 117696,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       20,
+       22
+      ],
+      [
+       22,
+       20
+      ],
+      [
+       15,
+       10
+      ]
+     ],
+     "with": [
+      95222
+     ],
+     "against": [
+      66728
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Taylor Daley",
+   "b": "Reese Hislop",
+   "aId": 129730,
+   "bId": 211882,
+   "aWins": 1,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2025-11-29",
+     "event": "AVP Juniors East Coast Championships 2025",
+     "division": "",
+     "tid": 25638,
+     "tdId": 97292,
+     "phase": "Pool",
+     "round": "Power Pools",
+     "won": false,
+     "sets": [
+      [
+       21,
+       16
+      ],
+      [
+       19,
+       21
+      ],
+      [
+       14,
+       16
+      ]
+     ],
+     "with": [
+      91155
+     ],
+     "against": [
+      178761
+     ]
+    },
+    {
+     "date": "2025-11-30",
+     "event": "AVP Juniors East Coast Championships 2025",
+     "division": "",
+     "tid": 25638,
+     "tdId": 97292,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       21,
+       12
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      91155
+     ],
+     "against": [
+      178761
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Haisley Flanagan",
+   "b": "Stacy Balestrieri",
+   "aId": 64896,
+   "bId": 98360,
+   "aWins": 2,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-10-05",
+     "event": "GNBV National Recruiting Showcase Oct 2025",
+     "division": "",
+     "tid": 23700,
+     "tdId": 119582,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       28,
+       24
+      ]
+     ],
+     "with": [
+      "Charlotte Jansen"
+     ],
+     "against": [
+      89436
+     ]
+    },
+    {
+     "date": "2025-10-05",
+     "event": "GNBV National Recruiting Showcase Oct 2025",
+     "division": "",
+     "tid": 23700,
+     "tdId": 119582,
+     "phase": "Playoffs",
+     "round": "Gold Elite Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ]
+     ],
+     "with": [
+      "Charlotte Jansen"
+     ],
+     "against": [
+      89436
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Stacy Balestrieri",
+   "b": "Charlotte Jansen",
+   "aId": 98360,
+   "bId": 161398,
+   "aWins": 0,
+   "bWins": 2,
+   "games": [
+    {
+     "date": "2025-10-05",
+     "event": "GNBV National Recruiting Showcase Oct 2025",
+     "division": "",
+     "tid": 23700,
+     "tdId": 119582,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": false,
+     "sets": [
+      [
+       24,
+       28
+      ]
+     ],
+     "with": [
+      "Haisley Flanagan"
+     ],
+     "against": [
+      89436
+     ]
+    },
+    {
+     "date": "2025-10-05",
+     "event": "GNBV National Recruiting Showcase Oct 2025",
+     "division": "",
+     "tid": 23700,
+     "tdId": 119582,
+     "phase": "Playoffs",
+     "round": "Gold Elite Playoffs",
+     "won": false,
+     "sets": [
+      [
+       17,
+       21
+      ]
+     ],
+     "with": [
+      "Haisley Flanagan"
+     ],
+     "against": [
+      89436
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Abigail Moffett",
+   "b": "Danica Waterman",
+   "aId": 9258,
+   "bId": 94563,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-23",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "",
+     "tid": 34243,
+     "tdId": 126056,
+     "phase": "Pool",
+     "round": "Power Pools 1st",
+     "won": true,
+     "sets": [
+      [
+       22,
+       24
+      ],
+      [
+       21,
+       19
+      ],
+      [
+       17,
+       15
+      ]
+     ],
+     "with": [
+      "Charlotte Jansen"
+     ],
+     "against": [
+      "Sadie Stafford"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Haisley Flanagan",
+   "b": "Reese Hislop",
+   "aId": 64896,
+   "bId": 211882,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-23",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "",
+     "tid": 34243,
+     "tdId": 126056,
+     "phase": "Pool",
+     "round": "Power Pools 1st",
+     "won": true,
+     "sets": [
+      [
+       21,
+       8
+      ],
+      [
+       21,
+       12
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      99596
+     ],
+     "against": [
+      150386
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Ella Buchanan",
+   "b": "Hazel Williams",
+   "aId": 98125,
+   "bId": 196589,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-16",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships",
+     "division": "",
+     "tid": 31483,
+     "tdId": 117394,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       14
+      ],
+      [
+       21,
+       9
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      98124
+     ],
+     "against": [
+      112452
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Abigail Moffett",
+   "b": "Ella Whiteside",
+   "aId": 9258,
+   "bId": 70421,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-08",
+     "event": "2026 BVCA Individual Pairs National Championship",
+     "division": "",
+     "tid": 38087,
+     "tdId": 139560,
+     "phase": "Playoffs",
+     "round": "Championship Bracket",
+     "won": true,
+     "sets": [
+      [
+       21,
+       12
+      ],
+      [
+       21,
+       10
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      58303
+     ],
+     "against": [
+      48462
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Ella Whiteside",
+   "b": "Sarah Cowan",
+   "aId": 70421,
+   "bId": 84725,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-08",
+     "event": "2026 BVCA Individual Pairs National Championship",
+     "division": "",
+     "tid": 38087,
+     "tdId": 139560,
+     "phase": "Pool",
+     "round": "Gold Pools",
+     "won": false,
+     "sets": [
+      [
+       5,
+       21
+      ]
+     ],
+     "with": [
+      22544
+     ],
+     "against": [
+      48462
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sarah Cowan",
+   "b": "Sienna Cicero",
+   "aId": 84725,
+   "bId": 124871,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-09",
+     "event": "2026 BVCA Individual Pairs National Championship",
+     "division": "",
+     "tid": 38087,
+     "tdId": 139560,
+     "phase": "Playoffs",
+     "round": "Championship Bracket",
+     "won": true,
+     "sets": [
+      [
+       22,
+       20
+      ],
+      [
+       21,
+       10
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      22544
+     ],
+     "against": [
+      92284
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Stacy Balestrieri",
+   "b": "Sienna Cicero",
+   "aId": 98360,
+   "bId": 124871,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-08",
+     "event": "2026 BVCA Individual Pairs National Championship",
+     "division": "",
+     "tid": 38087,
+     "tdId": 139560,
+     "phase": "Playoffs",
+     "round": "Championship Bracket",
+     "won": false,
+     "sets": [
+      [
+       13,
+       21
+      ],
+      [
+       15,
+       21
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      92284
+     ],
+     "against": [
+      95222
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Regina Stella Broshear",
+   "b": "Charlotte Jansen",
+   "aId": 64782,
+   "bId": 161398,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-06-19",
+     "event": "2026 Futures Tour WESTERN NATIONAL CHAMPIONSHIPS",
+     "division": "",
+     "tid": 30985,
+     "tdId": 115903,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       18,
+       21
+      ],
+      [
+       21,
+       19
+      ],
+      [
+       8,
+       15
+      ]
+     ],
+     "with": [
+      92193
+     ],
+     "against": [
+      27878
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lauren Eklund",
+   "b": "Hazel Williams",
+   "aId": 147247,
+   "bId": 196589,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-06-19",
+     "event": "2026 Futures Tour WESTERN NATIONAL CHAMPIONSHIPS",
+     "division": "",
+     "tid": 30985,
+     "tdId": 115903,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       12
+      ],
+      [
+       21,
+       18
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      81489
+     ],
+     "against": [
+      "Reese Hislop"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Danica Waterman",
+   "b": "Lauren Eklund",
+   "aId": 94563,
+   "bId": 147247,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-06-19",
+     "event": "2026 Futures Tour WESTERN NATIONAL CHAMPIONSHIPS",
+     "division": "",
+     "tid": 30985,
+     "tdId": 115903,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       21,
+       11
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Reese Hislop"
+     ],
+     "against": [
+      "Sadie Stafford"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lauren Eklund",
+   "b": "Sadie Stafford",
+   "aId": 147247,
+   "bId": 147394,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-06-19",
+     "event": "2026 Futures Tour WESTERN NATIONAL CHAMPIONSHIPS",
+     "division": "",
+     "tid": 30985,
+     "tdId": 115903,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       17,
+       21
+      ],
+      [
+       11,
+       21
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Reese Hislop"
+     ],
+     "against": [
+      "Danica Waterman"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Danica Waterman",
+   "b": "Reese Hislop",
+   "aId": 94563,
+   "bId": 211882,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-06-19",
+     "event": "2026 Futures Tour WESTERN NATIONAL CHAMPIONSHIPS",
+     "division": "",
+     "tid": 30985,
+     "tdId": 115903,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       21,
+       11
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Lauren Eklund"
+     ],
+     "against": [
+      "Sadie Stafford"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sarah Cowan",
+   "b": "Ella Buchanan",
+   "aId": 84725,
+   "bId": 98125,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       16
+      ],
+      [
+       21,
+       17
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Sage Illian"
+     ],
+     "against": [
+      "Charlotte Jansen"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sarah Cowan",
+   "b": "Charlotte Jansen",
+   "aId": 84725,
+   "bId": 161398,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       16
+      ],
+      [
+       21,
+       17
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Sage Illian"
+     ],
+     "against": [
+      "Ella Buchanan"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sage Illian",
+   "b": "Ella Buchanan",
+   "aId": 91052,
+   "bId": 98125,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       16
+      ],
+      [
+       21,
+       17
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Sarah Cowan"
+     ],
+     "against": [
+      "Charlotte Jansen"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Ella Buchanan",
+   "b": "Sadie Stafford",
+   "aId": 98125,
+   "bId": 147394,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": false,
+     "sets": [
+      [
+       15,
+       21
+      ],
+      [
+       19,
+       21
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      92193
+     ],
+     "against": [
+      "Charlotte Jansen"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Elyse Smelcer",
+   "b": "Reese Hislop",
+   "aId": 77570,
+   "bId": 211882,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-06-07",
+     "event": "Sinjin Collegiate Showcase #2 U18/U14 hosted with Blue Sky",
+     "division": "",
+     "tid": 37070,
+     "tdId": 135611,
+     "phase": "Pool",
+     "round": "",
+     "won": true,
+     "sets": [
+      [
+       21,
+       18
+      ]
+     ],
+     "with": [
+      "Lauren Eklund"
+     ],
+     "against": [
+      149454
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Danica Waterman",
+   "b": "Sadie Stafford",
+   "aId": 94563,
+   "bId": 147394,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-05-03",
+     "event": "2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier",
+     "division": "",
+     "tid": 32578,
+     "tdId": 120658,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": false,
+     "sets": [
+      [
+       24,
+       26
+      ],
+      [
+       15,
+       21
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      25347
+     ],
+     "against": [
+      8585
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sadie Stafford",
+   "b": "Celi Clark",
+   "aId": 147394,
+   "bId": 193639,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-04-12",
+     "event": "2026 Futures Tour: Texas",
+     "division": "",
+     "tid": 31625,
+     "tdId": 117914,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       11
+      ],
+      [
+       21,
+       14
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      56655
+     ],
+     "against": [
+      149742
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Haisley Flanagan",
+   "b": "Lauren Eklund",
+   "aId": 64896,
+   "bId": 147247,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-03-28",
+     "event": "2026 Futures Tour Spring Championship",
+     "division": "",
+     "tid": 31567,
+     "tdId": 117695,
+     "phase": "Pool",
+     "round": "Day 1: RD2 (2nds/3rds)",
+     "won": true,
+     "sets": [
+      [
+       21,
+       18
+      ],
+      [
+       21,
+       17
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      67744
+     ],
+     "against": [
+      "Ella Buchanan"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Ella Buchanan",
+   "b": "Lauren Eklund",
+   "aId": 98125,
+   "bId": 147247,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-03-28",
+     "event": "2026 Futures Tour Spring Championship",
+     "division": "",
+     "tid": 31567,
+     "tdId": 117695,
+     "phase": "Pool",
+     "round": "Day 1: RD2 (2nds/3rds)",
+     "won": true,
+     "sets": [
+      [
+       21,
+       18
+      ],
+      [
+       21,
+       17
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      67744
+     ],
+     "against": [
+      "Haisley Flanagan"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Regina Stella Broshear",
+   "b": "Stacy Balestrieri",
+   "aId": 64782,
+   "bId": 98360,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-03-29",
+     "event": "2026 Futures Tour Spring Championship",
+     "division": "",
+     "tid": 31567,
+     "tdId": 117696,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       11
+      ],
+      [
+       21,
+       12
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      27878
+     ],
+     "against": [
+      95222
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Abigail Moffett",
+   "b": "Stacy Balestrieri",
+   "aId": 9258,
+   "bId": 98360,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-03-15",
+     "event": "AAU Super Regional",
+     "division": "",
+     "tid": 32995,
+     "tdId": 121820,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       25,
+       23
+      ],
+      [
+       21,
+       18
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      106217
+     ],
+     "against": [
+      94909
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Abigail Moffett",
+   "b": "Sage Illian",
+   "aId": 9258,
+   "bId": 91052,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": false,
+     "sets": [
+      [
+       17,
+       21
+      ],
+      [
+       21,
+       23
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Charlotte Jansen"
+     ],
+     "against": [
+      2048
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sarah Cowan",
+   "b": "Danica Waterman",
+   "aId": 84725,
+   "bId": 94563,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-18",
+     "event": "2026 Futures Tour: Arizona",
+     "division": "",
+     "tid": 31568,
+     "tdId": 117699,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       21,
+       8
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      14555
+     ],
+     "against": [
+      99506
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Abigail Moffett",
+   "b": "Haisley Flanagan",
+   "aId": 9258,
+   "bId": 64896,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-17",
+     "event": "2026 Futures Tour: Arizona",
+     "division": "",
+     "tid": 31568,
+     "tdId": 117700,
+     "phase": "Pool",
+     "round": "Day 1: RD2 1sts",
+     "won": true,
+     "sets": [
+      [
+       21,
+       16
+      ],
+      [
+       18,
+       21
+      ],
+      [
+       15,
+       13
+      ]
+     ],
+     "with": [
+      "Charlotte Jansen"
+     ],
+     "against": [
+      150387
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Haisley Flanagan",
+   "b": "Charlotte Jansen",
+   "aId": 64896,
+   "bId": 161398,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-01-17",
+     "event": "2026 Futures Tour: Arizona",
+     "division": "",
+     "tid": 31568,
+     "tdId": 117700,
+     "phase": "Pool",
+     "round": "Day 1: RD2 1sts",
+     "won": false,
+     "sets": [
+      [
+       16,
+       21
+      ],
+      [
+       21,
+       18
+      ],
+      [
+       13,
+       15
+      ]
+     ],
+     "with": [
+      "Abigail Moffett"
+     ],
+     "against": [
+      150387
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Haisley Flanagan",
+   "b": "Taylor Daley",
+   "aId": 64896,
+   "bId": 129730,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-18",
+     "event": "2026 Futures Tour: Arizona",
+     "division": "",
+     "tid": 31568,
+     "tdId": 117700,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       19,
+       21
+      ],
+      [
+       21,
+       14
+      ],
+      [
+       15,
+       10
+      ]
+     ],
+     "with": [
+      92193
+     ],
+     "against": [
+      150387
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Taylor Daley",
+   "b": "Sadie Stafford",
+   "aId": 129730,
+   "bId": 147394,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2025-11-30",
+     "event": "AVP Juniors East Coast Championships 2025",
+     "division": "",
+     "tid": 25638,
+     "tdId": 97292,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": false,
+     "sets": [
+      [
+       21,
+       23
+      ],
+      [
+       15,
+       21
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      91155
+     ],
+     "against": [
+      149113
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sage Illian",
+   "b": "Danica Waterman",
+   "aId": 91052,
+   "bId": 94563,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-11-29",
+     "event": "AVP Juniors East Coast Championships 2025",
+     "division": "",
+     "tid": 25638,
+     "tdId": 97290,
+     "phase": "Pool",
+     "round": "Power Pools",
+     "won": true,
+     "sets": [
+      [
+       23,
+       21
+      ],
+      [
+       21,
+       19
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      2048
+     ],
+     "against": [
+      99506
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Abigail Moffett",
+   "b": "Hazel Williams",
+   "aId": 9258,
+   "bId": 196589,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-11-08",
+     "event": "AVP Juniors West Coast Championships 2025",
+     "division": "",
+     "tid": 25578,
+     "tdId": 97149,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       9
+      ],
+      [
+       21,
+       16
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      98425
+     ],
+     "against": [
+      81489
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Elyse Smelcer",
+   "b": "Sage Illian",
+   "aId": 77570,
+   "bId": 91052,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2025-11-09",
+     "event": "AVP Juniors West Coast Championships 2025",
+     "division": "",
+     "tid": 25578,
+     "tdId": 97147,
+     "phase": "Playoffs",
+     "round": "Silver Playoffs",
+     "won": false,
+     "sets": [
+      [
+       22,
+       24
+      ],
+      [
+       18,
+       21
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      22544
+     ],
+     "against": [
+      84161
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sarah Cowan",
+   "b": "Sage Illian",
+   "aId": 84725,
+   "bId": 91052,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2025-11-09",
+     "event": "AVP Juniors West Coast Championships 2025",
+     "division": "",
+     "tid": 25578,
+     "tdId": 97147,
+     "phase": "Playoffs",
+     "round": "Silver Playoffs",
+     "won": false,
+     "sets": [
+      [
+       13,
+       21
+      ],
+      [
+       15,
+       21
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      22544
+     ],
+     "against": [
+      95165
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Ella Buchanan",
+   "b": "Charlotte Jansen",
+   "aId": 98125,
+   "bId": 161398,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-03-08",
+     "event": "Dockweiler",
+     "division": "Dockweiler",
+     "tid": 4579,
+     "tdId": 16227,
+     "phase": "Playoff",
+     "round": "3",
+     "won": false,
+     "sets": [
+      [
+       19,
+       21
+      ]
+     ],
+     "with": [
+      92193
+     ],
+     "against": [
+      98124
+     ]
+    }
+   ]
+  }
+ ],
+ "partnered": [
+  {
+   "a": "Abigail Moffett",
+   "b": "Charlotte Jansen",
+   "matches": 42
+  },
+  {
+   "a": "Sarah Cowan",
+   "b": "Sage Illian",
+   "matches": 23
+  },
+  {
+   "a": "Danica Waterman",
+   "b": "Sadie Stafford",
+   "matches": 19
+  },
+  {
+   "a": "Haisley Flanagan",
+   "b": "Charlotte Jansen",
+   "matches": 16
+  },
+  {
+   "a": "Lauren Eklund",
+   "b": "Reese Hislop",
+   "matches": 15
+  },
+  {
+   "a": "Haisley Flanagan",
+   "b": "Ella Buchanan",
+   "matches": 14
+  },
+  {
+   "a": "Elyse Smelcer",
+   "b": "Lauren Eklund",
+   "matches": 6
+  },
+  {
+   "a": "Elyse Smelcer",
+   "b": "Reese Hislop",
+   "matches": 5
+  },
+  {
+   "a": "Ella Buchanan",
+   "b": "Charlotte Jansen",
+   "matches": 3
+  }
+ ]
+}

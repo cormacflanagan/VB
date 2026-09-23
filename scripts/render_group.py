@@ -22,6 +22,17 @@ TEXT = {
                 "Training Series at Chula Vista, against their Volleyball Life record",
         "note": "",
     },
+    "19U": {
+        "eyebrow": "USA Volleyball &#183; Beach NTDP Fall Training Series 2026 &#183; Girls U19",
+        "title": "The 19U girls, and <em>who they actually played</em>",
+        "lede": "All {N} athletes named to the Girls U19 roster for the Beach NTDP Fall "
+                "Training Series, against their Volleyball Life record",
+        "note": "<li><b>A different series from the 18U and 17U pages.</b> Those two are the "
+                "Summer Training Series at Chula Vista; this roster is the Fall series, named "
+                "later and drawn from a wider age band. Ten of these twenty appear on one "
+                "of the summer rosters — three from the 18U group and seven from the 17U — so the "
+                "three pages overlap without being comparable selections.</li>",
+    },
     "CLASS": {
         "eyebrow": "Girls beach volleyball &#183; Class of {Y} &#183; National top {N}",
         "title": "The class of {Y}, and <em>where the top {N} keep meeting</em>",
@@ -274,7 +285,15 @@ def build(group):
         # The match feed now requires an account, so a crosstable can be older than the
         # matrix above it. Say so, and say who it therefore cannot cover.
         stale = ""
-        if H2H.get("asof") and H2H["asof"] != wto:
+        if H2H.get("source") == "corpus":
+            # Not a stale pull but a different source: the crawled match corpus rather
+            # than the live feed. It ends where the last crawl ended, and it carries the
+            # open-draw matches Volleyball Life files only as a finish order.
+            stale = (" This crosstable is rebuilt from the stored match corpus rather than "
+                     "the live feed, which now requires an account. It therefore stops at "
+                     "the last crawl, and it includes CBVA open-draw matches that do not "
+                     "appear as matches on a Volleyball Life profile at all.")
+        elif H2H.get("asof") and H2H["asof"] != wto:
             missing = [p["name"] for p in players
                        if p["name"] not in set(H2H.get("players", {}).values())]
             asof = _d(H2H["asof"])

@@ -1,8 +1,9 @@
-"""Beach NTDP Summer Training Series 2026 rosters, resolved to Volleyball Life player IDs.
+"""Beach NTDP Training Series 2026 rosters, resolved to Volleyball Life player IDs.
 
-Names and USAV regions come from USA Volleyball's published roster page. IDs were
-resolved by name search against Volleyball Life and checked against date of birth,
-graduation year, club and competition footprint.
+18U and 17U are the Summer series at Chula Vista; 19U is the Fall series. Names and USAV
+regions come from USA Volleyball's published roster pages. IDs were resolved by name
+search against Volleyball Life and checked against date of birth, graduation year, club
+and competition footprint.
 """
 
 GROUPS = {
@@ -47,6 +48,33 @@ GROUPS = {
             ("Elyse Smelcer", 77570, "Carolina"),
             ("Elle Sossong", 33084, "Keystone"),
             ("Ella Whiteside", 70421, "North Texas"),
+        ],
+    },
+    "19U": {
+        "label": "Girls U19",
+        "roster": [
+            ("Stacy Balestrieri", 98360, "So. Cal / So. Nevada"),
+            ("Regina Stella Broshear", 64782, "Northern California"),
+            ("Ella Buchanan", 98125, "So. Cal / So. Nevada"),
+            ("Sienna Cicero", 124871, "So. Cal / So. Nevada"),
+            ("Celi Clark", 193639, "Carolina"),
+            ("Sarah Cowan", 84725, "Florida"),
+            ("Taylor Daley", 129730, "So. Cal / So. Nevada"),
+            ("Lauren Eklund", 147247, "Carolina"),
+            ("Haisley Flanagan", 64896, "Northern California"),
+            # USAV files Hislop under Atlantic; her Volleyball Life profile is Swansboro,
+            # NC. Only one profile carries the name and the graduating year matches.
+            ("Reese Hislop", 211882, "Atlantic"),
+            ("Sage Illian", 91052, "Heart of America"),
+            ("Charlotte Jansen", 161398, "So. Cal / So. Nevada"),
+            ("Olivia Leon", 123209, "Lone Star"),
+            ("Abigail Moffett", 9258, "So. Cal / So. Nevada"),
+            ("Lia Ray", 25298, "Florida"),
+            ("Elyse Smelcer", 77570, "Carolina"),
+            ("Sadie Stafford", 147394, "Old Dominion"),
+            ("Danica Waterman", 94563, "Florida"),
+            ("Ella Whiteside", 70421, "North Texas"),
+            ("Hazel Williams", 196589, "Northern California"),
         ],
     },
 }

@@ -7,10 +7,11 @@ for the twelve months ending **14 September 2026**.
 **[Start here: the report index](docs/index.html)** — every page below, grouped by the
 question it answers.
 
-Four cuts are covered:
+Five cuts are covered:
 
 | Group | Athletes | Source | Report |
 | --- | --- | --- | --- |
+| Girls U19 | 20 | Published NTDP roster (Fall series) | [`docs/bntdp-19u.html`](docs/bntdp-19u.html) |
 | Girls U18 | 13 | Published NTDP roster | [`docs/bntdp-18u.html`](docs/bntdp-18u.html) |
 | Girls U17 | 20 | Published NTDP roster | [`docs/bntdp-17u.html`](docs/bntdp-17u.html) |
 | **2027 and younger** | 60 | Age-eligible — see below | [`docs/bntdp-2027_younger.html`](docs/bntdp-2027_younger.html) |
