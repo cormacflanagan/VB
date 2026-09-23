@@ -24,8 +24,8 @@
 {"tid": 4835, "date": "2026-11-15", "tdId": 17174, "name": "", "gender": "coed", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Wave Courts"}
 {"tid": 4835, "date": "2026-11-15", "tdId": 17173, "name": "", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Wave Courts"}
 {"tid": 4835, "date": "2026-11-15", "tdId": 17175, "name": null, "gender": "coed", "size": 2, "level": "18u", "maxAge": 18, "status": "closed", "venue": "Wave Courts"}
-{"tid": 4805, "date": "2026-11-14", "tdId": 16988, "name": null, "gender": "coed", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Newland"}
 {"tid": 4805, "date": "2026-11-14", "tdId": 16989, "name": null, "gender": "coed", "size": 2, "level": "12u", "maxAge": 12, "status": "closed", "venue": "Newland"}
+{"tid": 4805, "date": "2026-11-14", "tdId": 16988, "name": null, "gender": "coed", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Newland"}
 {"tid": 4766, "date": "2026-11-14", "tdId": 16826, "name": null, "gender": "coed", "size": 2, "level": "b", "maxAge": null, "status": "closed", "venue": "Newland"}
 {"tid": 4766, "date": "2026-11-14", "tdId": 16827, "name": null, "gender": "male", "size": 2, "level": "a", "maxAge": null, "status": "closed", "venue": "Newland"}
 {"tid": 4766, "date": "2026-11-14", "tdId": 16828, "name": null, "gender": "female", "size": 2, "level": "a", "maxAge": null, "status": "closed", "venue": "Newland"}
@@ -44,7 +44,7 @@
 {"tid": 4763, "date": "2026-11-07", "tdId": 16818, "name": null, "gender": "male", "size": 2, "level": "open", "maxAge": null, "status": "closed", "venue": "Belmont Shore"}
 {"tid": 4763, "date": "2026-11-07", "tdId": 16819, "name": null, "gender": "female", "size": 2, "level": "open", "maxAge": null, "status": "closed", "venue": "Belmont Shore"}
 {"tid": 4804, "date": "2026-11-01", "tdId": 16986, "name": null, "gender": "coed", "size": 2, "level": "18u", "maxAge": 18, "status": "closed", "venue": "Newland"}
-{"tid": 4804, "date": "2026-11-01", "tdId": 16987, "name": null, "gender": "coed", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Newland"}
+{"tid": 4804, "date": "2026-11-01", "tdId": 16987, "name": null, "gender": "coed", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Newland"}
 {"tid": 4761, "date": "2026-11-01", "tdId": 16809, "name": null, "gender": "male", "size": 2, "level": "b", "maxAge": null, "status": "closed", "venue": "Newland"}
 {"tid": 4761, "date": "2026-11-01", "tdId": 16810, "name": null, "gender": "female", "size": 2, "level": "b", "maxAge": null, "status": "closed", "venue": "Newland"}
 {"tid": 4761, "date": "2026-11-01", "tdId": 16811, "name": null, "gender": "coed", "size": 2, "level": "a", "maxAge": null, "status": "closed", "venue": "Newland"}
@@ -73,10 +73,11 @@
 {"tid": 4759, "date": "2026-10-25", "tdId": 16802, "name": null, "gender": "male", "size": 2, "level": "a", "maxAge": null, "status": "closed", "venue": "Ocean Park"}
 {"tid": 4759, "date": "2026-10-25", "tdId": 16803, "name": null, "gender": "female", "size": 2, "level": "open", "maxAge": null, "status": "closed", "venue": "Ocean Park"}
 {"tid": 4759, "date": "2026-10-25", "tdId": 16801, "name": null, "gender": "female", "size": 2, "level": "a", "maxAge": null, "status": "closed", "venue": "Ocean Park"}
-{"tid": 4803, "date": "2026-10-24", "tdId": 17381, "name": "Coed Halloween Haunt/Fall Fours(4's) ", "gender": "coed", "size": 4, "level": "open", "maxAge": null, "status": "closed", "venue": "Newland"}
 {"tid": 4803, "date": "2026-10-24", "tdId": 17379, "name": "Halloween Haunt/Fall Fours", "gender": "female", "size": 4, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Newland"}
 {"tid": 4803, "date": "2026-10-24", "tdId": 17380, "name": "Halloween Haunt/Fall Fours B&G Mixed", "gender": "coed", "size": 2, "level": "12u", "maxAge": 12, "status": "closed", "venue": "Newland"}
 {"tid": 4803, "date": "2026-10-24", "tdId": 16983, "name": "Halloween Haunt/Fall Fours(4's)", "gender": "female", "size": 4, "level": "18u", "maxAge": 18, "status": "closed", "venue": "Newland"}
+{"tid": 4803, "date": "2026-10-24", "tdId": 17381, "name": "Halloween Haunt/Fall Fours(4's) ", "gender": "coed", "size": 4, "level": "open", "maxAge": null, "status": "closed", "venue": "Newland"}
+{"tid": 4803, "date": "2026-10-24", "tdId": 17487, "name": "Halloween Haunt/Fall Fours(4's) ", "gender": "male", "size": 4, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Newland"}
 {"tid": 4803, "date": "2026-10-24", "tdId": 16984, "name": "Halloween Haunt/Fall Fours(4's) ", "gender": "male", "size": 4, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Newland"}
 {"tid": 4755, "date": "2026-10-24", "tdId": 16785, "name": null, "gender": "male", "size": 2, "level": "a", "maxAge": null, "status": "closed", "venue": "Main Beach"}
 {"tid": 4755, "date": "2026-10-24", "tdId": 16786, "name": null, "gender": "female", "size": 2, "level": "a", "maxAge": null, "status": "closed", "venue": "Main Beach"}
@@ -110,6 +111,8 @@
 {"tid": 4914, "date": "2026-10-10", "tdId": 17482, "name": null, "gender": "coed", "size": 2, "level": "open", "maxAge": null, "status": "closed", "venue": "Main Beach"}
 {"tid": 4914, "date": "2026-10-10", "tdId": 17484, "name": null, "gender": "female", "size": 2, "level": "12u", "maxAge": 12, "status": "closed", "venue": "Main Beach"}
 {"tid": 4914, "date": "2026-10-10", "tdId": 17483, "name": null, "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Main Beach"}
+{"tid": 4914, "date": "2026-10-10", "tdId": 17489, "name": null, "gender": "male", "size": 2, "level": "b", "maxAge": null, "status": "closed", "venue": "Main Beach"}
+{"tid": 4914, "date": "2026-10-10", "tdId": 17490, "name": null, "gender": "female", "size": 2, "level": "b", "maxAge": null, "status": "closed", "venue": "Main Beach"}
 {"tid": 4747, "date": "2026-10-04", "tdId": 16764, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Central Beach"}
 {"tid": 4747, "date": "2026-10-04", "tdId": 16765, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Central Beach"}
 {"tid": 4747, "date": "2026-10-04", "tdId": 16766, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "closed", "venue": "Central Beach"}
@@ -139,8 +142,8 @@
 {"tid": 4822, "date": "2026-09-27", "tdId": 17110, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Belmont Shore"}
 {"tid": 4785, "date": "2026-09-27", "tdId": 16885, "name": null, "gender": "female", "size": 2, "level": "b", "maxAge": null, "status": "closed", "venue": "North Beach"}
 {"tid": 4785, "date": "2026-09-27", "tdId": 16882, "name": null, "gender": "coed", "size": 2, "level": "aaa", "maxAge": null, "status": "closed", "venue": "North Beach"}
-{"tid": 4785, "date": "2026-09-27", "tdId": 16883, "name": null, "gender": "coed", "size": 2, "level": "a", "maxAge": null, "status": "closed", "venue": "North Beach"}
 {"tid": 4785, "date": "2026-09-27", "tdId": 16884, "name": null, "gender": "male", "size": 2, "level": "b", "maxAge": null, "status": "closed", "venue": "North Beach"}
+{"tid": 4785, "date": "2026-09-27", "tdId": 16883, "name": null, "gender": "coed", "size": 2, "level": "a", "maxAge": null, "status": "closed", "venue": "North Beach"}
 {"tid": 4740, "date": "2026-09-26", "tdId": 16744, "name": null, "gender": "male", "size": 2, "level": "unrated", "maxAge": null, "status": "closed", "venue": "Belmont Shore"}
 {"tid": 4740, "date": "2026-09-26", "tdId": 16745, "name": null, "gender": "female", "size": 2, "level": "unrated", "maxAge": null, "status": "closed", "venue": "Belmont Shore"}
 {"tid": 4740, "date": "2026-09-26", "tdId": 16746, "name": null, "gender": "male", "size": 2, "level": "a", "maxAge": null, "status": "closed", "venue": "Belmont Shore"}
@@ -148,62 +151,56 @@
 {"tid": 4742, "date": "2026-09-26", "tdId": 16750, "name": null, "gender": "male", "size": 2, "level": "open", "maxAge": null, "status": "closed", "venue": "Dockweiler"}
 {"tid": 4742, "date": "2026-09-26", "tdId": 16751, "name": null, "gender": "female", "size": 2, "level": "open", "maxAge": null, "status": "closed", "venue": "Dockweiler"}
 {"tid": 4733, "date": "2026-09-26", "tdId": 16728, "name": null, "gender": "female", "size": 2, "level": "aa", "maxAge": null, "status": "closed", "venue": "Waterfront Park"}
-{"tid": 4738, "date": "2026-09-20", "tdId": 16741, "name": "", "gender": "coed", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Wave Courts"}
-{"tid": 4738, "date": "2026-09-20", "tdId": 16740, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Wave Courts"}
-{"tid": 4738, "date": "2026-09-20", "tdId": 17159, "name": null, "gender": "coed", "size": 2, "level": "18u", "maxAge": 18, "status": "closed", "venue": "Wave Courts"}
-{"tid": 4739, "date": "2026-09-20", "tdId": 16742, "name": null, "gender": "male", "size": 2, "level": "aa", "maxAge": null, "status": "closed", "venue": "Marine Ave"}
-{"tid": 4739, "date": "2026-09-20", "tdId": 16743, "name": null, "gender": "female", "size": 2, "level": "aa", "maxAge": null, "status": "closed", "venue": "Marine Ave"}
-{"tid": 4821, "date": "2026-09-19", "tdId": 17101, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "12u", "maxAge": 12, "status": "closed", "venue": "Belmont Shore"}
-{"tid": 4821, "date": "2026-09-19", "tdId": 17102, "name": "AVP Bid Event", "gender": "male", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Belmont Shore"}
-{"tid": 4821, "date": "2026-09-19", "tdId": 17103, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Belmont Shore"}
-{"tid": 4821, "date": "2026-09-19", "tdId": 17104, "name": "AVP Bid Event", "gender": "male", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Belmont Shore"}
-{"tid": 4821, "date": "2026-09-19", "tdId": 17105, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Belmont Shore"}
-{"tid": 4736, "date": "2026-09-19", "tdId": 16735, "name": null, "gender": "male", "size": 2, "level": "b", "maxAge": null, "status": "closed", "venue": "Marine Ave"}
-{"tid": 4736, "date": "2026-09-19", "tdId": 16736, "name": null, "gender": "female", "size": 2, "level": "a", "maxAge": null, "status": "closed", "venue": "Marine Ave"}
-{"tid": 4728, "date": "2026-09-19", "tdId": 16717, "name": null, "gender": "male", "size": 2, "level": "open", "maxAge": null, "status": "closed", "venue": "Waterfront Park"}
+{"tid": 4738, "date": "2026-09-20", "tdId": 16741, "name": "", "gender": "coed", "size": 2, "level": "18u", "maxAge": 18, "status": "complete", "venue": "Wave Courts"}
+{"tid": 4738, "date": "2026-09-20", "tdId": 16740, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Wave Courts"}
+{"tid": 4739, "date": "2026-09-20", "tdId": 16742, "name": null, "gender": "male", "size": 2, "level": "aa", "maxAge": null, "status": "complete", "venue": "Marine Ave"}
+{"tid": 4739, "date": "2026-09-20", "tdId": 16743, "name": null, "gender": "female", "size": 2, "level": "aa", "maxAge": null, "status": "complete", "venue": "Marine Ave"}
+{"tid": 4821, "date": "2026-09-19", "tdId": 17101, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "12u", "maxAge": 12, "status": "complete", "venue": "Belmont Shore"}
+{"tid": 4821, "date": "2026-09-19", "tdId": 17103, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Belmont Shore"}
+{"tid": 4821, "date": "2026-09-19", "tdId": 17105, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "complete", "venue": "Belmont Shore"}
+{"tid": 4736, "date": "2026-09-19", "tdId": 16735, "name": null, "gender": "male", "size": 2, "level": "b", "maxAge": null, "status": "complete", "venue": "Marine Ave"}
+{"tid": 4736, "date": "2026-09-19", "tdId": 16736, "name": null, "gender": "female", "size": 2, "level": "a", "maxAge": null, "status": "complete", "venue": "Marine Ave"}
+{"tid": 4728, "date": "2026-09-19", "tdId": 16717, "name": null, "gender": "male", "size": 2, "level": "open", "maxAge": null, "status": "complete", "venue": "Waterfront Park"}
 {"tid": 4735, "date": "2026-09-19", "tdId": 16733, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Mira Costa College"}
-{"tid": 4735, "date": "2026-09-19", "tdId": 16734, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "closed", "venue": "Mira Costa College"}
-{"tid": 4735, "date": "2026-09-19", "tdId": 17158, "name": null, "gender": "coed", "size": 2, "level": "18u", "maxAge": 18, "status": "closed", "venue": "Mira Costa College"}
-{"tid": 4832, "date": "2026-09-13", "tdId": 17153, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "12u", "maxAge": 12, "status": "closed", "venue": "Central Beach"}
-{"tid": 4832, "date": "2026-09-13", "tdId": 17154, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Central Beach"}
-{"tid": 4832, "date": "2026-09-13", "tdId": 17155, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Central Beach"}
-{"tid": 4832, "date": "2026-09-13", "tdId": 17156, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "closed", "venue": "Central Beach"}
+{"tid": 4735, "date": "2026-09-19", "tdId": 16734, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "complete", "venue": "Mira Costa College"}
+{"tid": 4735, "date": "2026-09-19", "tdId": 17488, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Mira Costa College"}
+{"tid": 4832, "date": "2026-09-13", "tdId": 17153, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "12u", "maxAge": 12, "status": "complete", "venue": "Central Beach"}
+{"tid": 4832, "date": "2026-09-13", "tdId": 17154, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Central Beach"}
+{"tid": 4832, "date": "2026-09-13", "tdId": 17155, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "complete", "venue": "Central Beach"}
+{"tid": 4832, "date": "2026-09-13", "tdId": 17156, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "complete", "venue": "Central Beach"}
 {"tid": 4832, "date": "2026-09-13", "tdId": 17157, "name": null, "gender": "coed", "size": 2, "level": "18u", "maxAge": 18, "status": "closed", "venue": "Central Beach"}
-{"tid": 4795, "date": "2026-09-13", "tdId": 16912, "name": null, "gender": "female", "size": 2, "level": "open", "maxAge": null, "status": "closed", "venue": "Ocean Park"}
-{"tid": 4795, "date": "2026-09-13", "tdId": 16913, "name": null, "gender": "male", "size": 2, "level": "aa", "maxAge": null, "status": "closed", "venue": "Ocean Park"}
-{"tid": 4795, "date": "2026-09-13", "tdId": 16914, "name": null, "gender": "female", "size": 2, "level": "a", "maxAge": null, "status": "closed", "venue": "Ocean Park"}
-{"tid": 4724, "date": "2026-09-12", "tdId": 16703, "name": null, "gender": "male", "size": 2, "level": "open", "maxAge": null, "status": "closed", "venue": "Main Beach"}
-{"tid": 4724, "date": "2026-09-12", "tdId": 16704, "name": null, "gender": "female", "size": 2, "level": "open", "maxAge": null, "status": "closed", "venue": "Main Beach"}
-{"tid": 4724, "date": "2026-09-12", "tdId": 16701, "name": null, "gender": "male", "size": 2, "level": "a", "maxAge": null, "status": "closed", "venue": "Main Beach"}
-{"tid": 4724, "date": "2026-09-12", "tdId": 16702, "name": null, "gender": "female", "size": 2, "level": "a", "maxAge": null, "status": "closed", "venue": "Main Beach"}
-{"tid": 4794, "date": "2026-09-12", "tdId": 16909, "name": null, "gender": "female", "size": 2, "level": "aa", "maxAge": null, "status": "closed", "venue": "Ocean Park"}
-{"tid": 4794, "date": "2026-09-12", "tdId": 16910, "name": null, "gender": "male", "size": 2, "level": "b", "maxAge": null, "status": "closed", "venue": "Ocean Park"}
-{"tid": 4794, "date": "2026-09-12", "tdId": 16911, "name": null, "gender": "female", "size": 2, "level": "b", "maxAge": null, "status": "closed", "venue": "Ocean Park"}
-{"tid": 4721, "date": "2026-09-06", "tdId": 16689, "name": null, "gender": "male", "size": 2, "level": "b", "maxAge": null, "status": "closed", "venue": "Hermosa Pier"}
-{"tid": 4721, "date": "2026-09-06", "tdId": 16690, "name": null, "gender": "coed", "size": 2, "level": "a", "maxAge": null, "status": "closed", "venue": "Hermosa Pier"}
-{"tid": 4721, "date": "2026-09-06", "tdId": 16691, "name": null, "gender": "female", "size": 2, "level": "aa", "maxAge": null, "status": "closed", "venue": "Hermosa Pier"}
-{"tid": 4721, "date": "2026-09-06", "tdId": 16692, "name": null, "gender": "coed", "size": 2, "level": "aaa", "maxAge": null, "status": "closed", "venue": "Hermosa Pier"}
-{"tid": 4722, "date": "2026-09-06", "tdId": 16693, "name": null, "gender": "male", "size": 2, "level": "unrated", "maxAge": null, "status": "closed", "venue": "Manhattan Pier"}
-{"tid": 4722, "date": "2026-09-06", "tdId": 16694, "name": null, "gender": "female", "size": 2, "level": "a", "maxAge": null, "status": "closed", "venue": "Manhattan Pier"}
-{"tid": 4722, "date": "2026-09-06", "tdId": 16695, "name": null, "gender": "male", "size": 2, "level": "aa", "maxAge": null, "status": "closed", "venue": "Manhattan Pier"}
-{"tid": 4718, "date": "2026-09-05", "tdId": 16683, "name": "Mich Ultra Premier Tour: $2,500", "gender": "female", "size": 2, "level": "open", "maxAge": null, "status": "closed", "venue": "Hermosa Pier"}
-{"tid": 4718, "date": "2026-09-05", "tdId": 16682, "name": "Mich Ultra Premier Tour: $2,500", "gender": "male", "size": 2, "level": "open", "maxAge": null, "status": "closed", "venue": "Hermosa Pier"}
-{"tid": 4718, "date": "2026-09-05", "tdId": 16681, "name": null, "gender": "coed", "size": 2, "level": "b", "maxAge": null, "status": "closed", "venue": "Hermosa Pier"}
-{"tid": 4717, "date": "2026-09-05", "tdId": 16927, "name": "AVP Bid Event", "gender": "male", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Manhattan Pier"}
-{"tid": 4717, "date": "2026-09-05", "tdId": 16676, "name": "AVP Bid Event", "gender": "male", "size": 2, "level": "12u", "maxAge": 12, "status": "closed", "venue": "Manhattan Pier"}
-{"tid": 4717, "date": "2026-09-05", "tdId": 16677, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "12u", "maxAge": 12, "status": "closed", "venue": "Manhattan Pier"}
-{"tid": 4717, "date": "2026-09-05", "tdId": 16678, "name": "AVP Bid Event", "gender": "male", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Manhattan Pier"}
-{"tid": 4717, "date": "2026-09-05", "tdId": 16679, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Manhattan Pier"}
-{"tid": 4717, "date": "2026-09-05", "tdId": 16680, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Manhattan Pier"}
-{"tid": 4831, "date": "2026-08-30", "tdId": 17151, "name": "AVP Bid Event", "gender": "male", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Wave Courts"}
-{"tid": 4831, "date": "2026-08-30", "tdId": 17152, "name": "AVP Bid Event", "gender": "male", "size": 2, "level": "18u", "maxAge": 18, "status": "closed", "venue": "Wave Courts"}
-{"tid": 4720, "date": "2026-08-30", "tdId": 16685, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "12u", "maxAge": 12, "status": "closed", "venue": "Belmont Shore"}
-{"tid": 4720, "date": "2026-08-30", "tdId": 16686, "name": "AVP Bid Event", "gender": "male", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Belmont Shore"}
-{"tid": 4720, "date": "2026-08-30", "tdId": 16687, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Belmont Shore"}
-{"tid": 4720, "date": "2026-08-30", "tdId": 16688, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Belmont Shore"}
-{"tid": 4720, "date": "2026-08-30", "tdId": 17098, "name": "AVP Bid Event", "gender": "male", "size": 2, "level": "12u", "maxAge": 12, "status": "closed", "venue": "Belmont Shore"}
-{"tid": 4720, "date": "2026-08-30", "tdId": 17099, "name": "AVP Bid Event", "gender": "male", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Belmont Shore"}
-{"tid": 4719, "date": "2026-08-29", "tdId": 16684, "name": null, "gender": "female", "size": 2, "level": "a", "maxAge": null, "status": "closed", "venue": "Waterfront Park"}
+{"tid": 4795, "date": "2026-09-13", "tdId": 16912, "name": null, "gender": "female", "size": 2, "level": "open", "maxAge": null, "status": "complete", "venue": "Ocean Park"}
+{"tid": 4795, "date": "2026-09-13", "tdId": 16913, "name": null, "gender": "male", "size": 2, "level": "aa", "maxAge": null, "status": "complete", "venue": "Ocean Park"}
+{"tid": 4795, "date": "2026-09-13", "tdId": 16914, "name": null, "gender": "female", "size": 2, "level": "a", "maxAge": null, "status": "complete", "venue": "Ocean Park"}
+{"tid": 4724, "date": "2026-09-12", "tdId": 16703, "name": null, "gender": "male", "size": 2, "level": "open", "maxAge": null, "status": "complete", "venue": "Main Beach"}
+{"tid": 4724, "date": "2026-09-12", "tdId": 16704, "name": null, "gender": "female", "size": 2, "level": "open", "maxAge": null, "status": "complete", "venue": "Main Beach"}
+{"tid": 4724, "date": "2026-09-12", "tdId": 16701, "name": null, "gender": "male", "size": 2, "level": "a", "maxAge": null, "status": "complete", "venue": "Main Beach"}
+{"tid": 4724, "date": "2026-09-12", "tdId": 16702, "name": null, "gender": "female", "size": 2, "level": "a", "maxAge": null, "status": "complete", "venue": "Main Beach"}
+{"tid": 4794, "date": "2026-09-12", "tdId": 16909, "name": null, "gender": "female", "size": 2, "level": "aa", "maxAge": null, "status": "complete", "venue": "Ocean Park"}
+{"tid": 4794, "date": "2026-09-12", "tdId": 16910, "name": null, "gender": "male", "size": 2, "level": "b", "maxAge": null, "status": "complete", "venue": "Ocean Park"}
+{"tid": 4794, "date": "2026-09-12", "tdId": 16911, "name": null, "gender": "female", "size": 2, "level": "b", "maxAge": null, "status": "complete", "venue": "Ocean Park"}
+{"tid": 4721, "date": "2026-09-06", "tdId": 16689, "name": null, "gender": "male", "size": 2, "level": "b", "maxAge": null, "status": "complete", "venue": "Hermosa Pier"}
+{"tid": 4721, "date": "2026-09-06", "tdId": 16690, "name": null, "gender": "coed", "size": 2, "level": "a", "maxAge": null, "status": "complete", "venue": "Hermosa Pier"}
+{"tid": 4721, "date": "2026-09-06", "tdId": 16691, "name": null, "gender": "female", "size": 2, "level": "aa", "maxAge": null, "status": "complete", "venue": "Hermosa Pier"}
+{"tid": 4721, "date": "2026-09-06", "tdId": 16692, "name": null, "gender": "coed", "size": 2, "level": "aaa", "maxAge": null, "status": "complete", "venue": "Hermosa Pier"}
+{"tid": 4722, "date": "2026-09-06", "tdId": 16693, "name": null, "gender": "male", "size": 2, "level": "unrated", "maxAge": null, "status": "complete", "venue": "Manhattan Pier"}
+{"tid": 4722, "date": "2026-09-06", "tdId": 16694, "name": null, "gender": "female", "size": 2, "level": "a", "maxAge": null, "status": "complete", "venue": "Manhattan Pier"}
+{"tid": 4722, "date": "2026-09-06", "tdId": 16695, "name": null, "gender": "male", "size": 2, "level": "aa", "maxAge": null, "status": "complete", "venue": "Manhattan Pier"}
+{"tid": 4718, "date": "2026-09-05", "tdId": 16683, "name": "Mich Ultra Premier Tour: $2,500", "gender": "female", "size": 2, "level": "open", "maxAge": null, "status": "complete", "venue": "Hermosa Pier"}
+{"tid": 4718, "date": "2026-09-05", "tdId": 16682, "name": "Mich Ultra Premier Tour: $2,500", "gender": "male", "size": 2, "level": "open", "maxAge": null, "status": "complete", "venue": "Hermosa Pier"}
+{"tid": 4718, "date": "2026-09-05", "tdId": 16681, "name": null, "gender": "coed", "size": 2, "level": "b", "maxAge": null, "status": "complete", "venue": "Hermosa Pier"}
+{"tid": 4717, "date": "2026-09-05", "tdId": 16927, "name": "AVP Bid Event", "gender": "male", "size": 2, "level": "16u", "maxAge": 16, "status": "complete", "venue": "Manhattan Pier"}
+{"tid": 4717, "date": "2026-09-05", "tdId": 16678, "name": "AVP Bid Event", "gender": "male", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Manhattan Pier"}
+{"tid": 4717, "date": "2026-09-05", "tdId": 16679, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Manhattan Pier"}
+{"tid": 4717, "date": "2026-09-05", "tdId": 16680, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "complete", "venue": "Manhattan Pier"}
+{"tid": 4831, "date": "2026-08-30", "tdId": 17151, "name": "AVP Bid Event", "gender": "male", "size": 2, "level": "16u", "maxAge": 16, "status": "complete", "venue": "Wave Courts"}
+{"tid": 4831, "date": "2026-08-30", "tdId": 17152, "name": "AVP Bid Event", "gender": "male", "size": 2, "level": "18u", "maxAge": 18, "status": "complete", "venue": "Wave Courts"}
+{"tid": 4831, "date": "2026-08-30", "tdId": 17485, "name": "AVP Bid Event", "gender": "male", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Wave Courts"}
+{"tid": 4720, "date": "2026-08-30", "tdId": 16685, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "12u", "maxAge": 12, "status": "complete", "venue": "Belmont Shore"}
+{"tid": 4720, "date": "2026-08-30", "tdId": 16686, "name": "AVP Bid Event", "gender": "male", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Belmont Shore"}
+{"tid": 4720, "date": "2026-08-30", "tdId": 16687, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Belmont Shore"}
+{"tid": 4720, "date": "2026-08-30", "tdId": 16688, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "complete", "venue": "Belmont Shore"}
+{"tid": 4719, "date": "2026-08-29", "tdId": 16684, "name": null, "gender": "female", "size": 2, "level": "a", "maxAge": null, "status": "complete", "venue": "Waterfront Park"}
 {"tid": 4716, "date": "2026-08-23", "tdId": 16672, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "12u", "maxAge": 12, "status": "complete", "venue": "Central Beach"}
 {"tid": 4716, "date": "2026-08-23", "tdId": 16673, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Central Beach"}
 {"tid": 4716, "date": "2026-08-23", "tdId": 16674, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "complete", "venue": "Central Beach"}

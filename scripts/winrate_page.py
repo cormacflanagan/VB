@@ -25,7 +25,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "..", "data")
 OUT = os.path.join(HERE, "..", "docs", "winrate.html")
 HAISLEY = 64896
-LO, HI, STEP = 6.0, 9.0, 0.25
+LO, HI, STEP = 6.0, 10.5, 0.25   # the ceiling is above her best win, not below it
 MIN_SOLID = 5          # fewer matches than this and the bar is hatched
 
 
@@ -35,10 +35,81 @@ def truvolley():
     for k, v in json.load(open(os.path.join(DATA, "tvcache.json"))).items():
         if v.get("tv"):
             tv[int(k)] = v["tv"]
+    p = os.path.join(DATA, "opptv.json")
+    if os.path.exists(p):                       # adult opponents, fetched by opptv.py
+        for k, v in json.load(open(p)).items():
+            if v.get("tv"):
+                tv.setdefault(int(k), v["tv"])
+    # The college scrape is the last resort, not the second: its TruVolley column was
+    # captured on an older crawl and is pre-September-2026, so letting it win the
+    # setdefault silently mixes rating epochs -- it had Clara Stowell at 9.22 against a
+    # current 10.46, which is the difference between "above her" and "below her".
     for r in read_jsonl(os.path.join(DATA, "college", "players.jsonl")):
         if r.get("vblId") and r.get("tv"):
             tv.setdefault(r["vblId"], r["tv"])
     return tv
+
+
+def names():
+    """Opponent names, for the results table. Same three sources as the ratings."""
+    out = {}
+    p = os.path.join(DATA, "opptv.json")
+    if os.path.exists(p):
+        for k, v in json.load(open(p)).items():
+            if v.get("name"):
+                out[int(k)] = v["name"]
+    for f in ("cohort2027.json", "cohort2028.json"):
+        q = os.path.join(DATA, f)
+        if os.path.exists(q):
+            for v in json.load(open(q)).values():
+                out.setdefault(v["id"], v["name"])
+    return out
+
+
+def beat_better(tv, nm, pid=HAISLEY, days=730):
+    """Every match against a team whose mean rating is above the player's own, newest
+    first. This is the question a recruiter actually asks, and until opptv.py existed the
+    answer was empty: both wins that qualify are over adults the junior cache never held."""
+    me = tv.get(pid)
+    since = (datetime.date.today() - datetime.timedelta(days=days)).isoformat()
+    # merge.py keeps both sources id-only, so event names come from their own indexes:
+    # CBVA's tournament crawl, and the per-cohort `tour_info` the collectors already save.
+    cb = {}
+    q = os.path.join(DATA, "cbva", "tournaments.jsonl")
+    if os.path.exists(q):
+        for t in read_jsonl(q):
+            cb[t["id"]] = t
+    vb = {}
+    for f in sorted(os.listdir(DATA)):
+        if f.endswith("_clean.json"):
+            for k, t in (json.load(open(os.path.join(DATA, f))).get("tour_info") or {}).items():
+                vb.setdefault(int(k), t)
+    out = []
+    for m in read_jsonl(os.path.join(DATA, "all_matches.jsonl")):
+        if pid not in m["a"] + m["b"] or m["date"] < since:
+            continue
+        home = pid in m["a"]
+        opp = m["b"] if home else m["a"]
+        if not all(o in tv for o in opp):
+            continue
+        mean = sum(tv[o] for o in opp) / len(opp)
+        if me is None or mean <= me:
+            continue
+        sets = [(x, y) if home else (y, x) for x, y in (m.get("sets") or []) if (x, y) != (0, 0)]
+        ev = m.get("event") or m.get("div") or ""
+        if not ev:
+            if m.get("src") == "cbva":
+                ev = (cb.get(m.get("tid")) or {}).get("venue") or "CBVA"
+            else:
+                t = vb.get(m.get("tid")) or {}
+                ev = t.get("name") or t.get("event") or t.get("short") or "Volleyball Life"
+            ev += f" &#183; {m['phase']}" if m.get("phase") else ""
+        out.append({"date": m["date"], "won": m["aWon"] if home else not m["aWon"],
+                    "mean": mean, "top": max(tv[o] for o in opp),
+                    "who": " / ".join(f"{nm.get(o, o)} {tv[o]:.2f}" for o in opp),
+                    "sets": " ".join(f"{x}&#8211;{y}" for x, y in sets),
+                    "event": ev})
+    return sorted(out, key=lambda r: r["date"], reverse=True)
 
 
 def wilson(w, n, z=1.96):
@@ -241,8 +312,27 @@ def table(rows):
     return "".join(out)
 
 
+def rowsof(rows):
+    if not rows:
+        return '<tr><td colspan="6">No match on record against a higher-rated team.</td></tr>'
+    out = []
+    for r in rows:
+        out.append(
+            f'<tr><td class="n">{r["date"]}</td>'
+            f'<td class="n"><b>{"WIN" if r["won"] else "loss"}</b></td>'
+            f'<td>{r["who"]}</td>'
+            f'<td class="n">{r["mean"]:.2f}</td>'
+            f'<td class="n">{r["sets"] or "&#8212;"}</td>'
+            f'<td>{r["event"][:60]}</td></tr>')
+    return "\n    ".join(out)
+
+
 def build():
     tv = truvolley()
+    nm = names()
+    better = beat_better(tv, nm)
+    bw = sum(1 for r in better if r["won"])
+    today = datetime.date.today().strftime("%-d %B %Y")
     yr = gather(tv, 365)
     two = gather(tv, 730)
     rows = yr["rows"]
@@ -257,7 +347,7 @@ def build():
 <style>{CSS}</style>
 <div class="wrap">
 <header>
-  <p class="eyebrow">Haisley Flanagan &#183; doubles &#183; twelve months to 24 August 2026</p>
+  <p class="eyebrow">Haisley Flanagan &#183; doubles &#183; twelve months to {today}</p>
   <h1>At what level of opponent does she <em>stop winning?</em></h1>
   <p class="standfirst">Every doubles match of the past year, bucketed by the mean
   TruVolley of the two players across the net. Bars are win rate; the whisker is a 95%
@@ -265,16 +355,32 @@ def build():
 </header>
 
 <div class="facts">
-  <div class="fact"><b>{yr["inrange"]}</b><span>Matches in the 6.0&#8211;9.0 range</span></div>
+  <div class="fact"><b>{yr["inrange"]}</b><span>Matches in the {LO:.1f}&#8211;{HI:.1f} range</span></div>
   <div class="fact"><b>{sw}&#8211;{sl}</b><span>Against 7.25 and above</span></div>
   <div class="fact"><b>{tw}&#8211;{tl}</b><span>Against 8.0 and above</span></div>
+  <div class="fact"><b>{bw}&#8211;{len(better) - bw}</b>
+    <span>Against teams rated above her</span></div>
   <div class="fact"><b>{yr["rated"]}<small> / {yr["seen"]}</small></b>
     <span>Matches with both opponents rated</span></div>
 </div>
 
 <section>
+  <h2>Against teams rated above her</h2>
+  <p class="lede">Two years, every match where the opponents' mean TruVolley exceeds her
+  own &#8212; the short list a ranking cannot show you. Most of it is Women's Open, which
+  is the point: the junior brackets she is eligible for rarely contain a team rated above
+  her, and the open draws at Main Beach routinely do.</p>
+  <div class="tbox"><table>
+    <tr><th class="n">Date</th><th class="n"></th><th>Opponents</th>
+      <th class="n">Their mean</th><th class="n">Score</th><th>Event</th></tr>
+    {rowsof(better)}
+  </table></div>
+</section>
+
+<section>
   <h2>Past twelve months</h2>
-  <p class="lede">Quarter-point bands, the same increment TruVolley itself is quoted in.
+  <p class="lede">Quarter-point bands from {LO:.1f} to {HI:.1f}, the same increment
+  TruVolley itself is quoted in.
   A band with fewer than {MIN_SOLID} matches is hatched: the bar is drawn, but the
   interval beside it is doing the honest work.</p>
   <div class="figbox">{chart(rows)}</div>
@@ -332,15 +438,22 @@ def build():
     what the band structure is for.</li>
     <li><b>Empty bands are empty, not zero.</b> Where a band shows a dash she played
     nobody at that level, which is itself the finding: her schedule has gaps above 8.25.</li>
-    <li><b>Source.</b> 679,241 matches merged from Volleyball Life, CBVA and college
-    beach; TruVolley as published, cached before the API began refusing requests.</li>
+    <li><b>Open play is CBVA's record, not Volleyball Life's.</b> Volleyball Life files
+    a CBVA event as a finish order and nothing else, so her open results existed here only
+    as placings until the games were crawled from CBVA directly. Both wins over teams
+    rated above her come from that source; neither is visible on her Volleyball Life
+    profile as a match.</li>
+    <li><b>Source.</b> Matches merged from Volleyball Life, CBVA and college beach.
+    TruVolley as published: the junior population from the roster cache, adult opponents
+    fetched per player by <code>opptv.py</code>, because the junior cache does not carry
+    them and every match against them was previously dropped as unrated.</li>
   </ul>
 </section>
 
 <footer>
-  Haisley Flanagan (Volleyball Life id 64896), doubles only, twelve months to
-  24 August 2026. Opponent strength is published TruVolley, not the rating fitted in this
-  repository. Wilson score intervals at 95%.
+  Haisley Flanagan (Volleyball Life id 64896), doubles only, twelve months to {today};
+  the results table runs two years. Opponent strength is published TruVolley, not the
+  rating fitted in this repository. Wilson score intervals at 95%.
 </footer>
 </div>
 """
