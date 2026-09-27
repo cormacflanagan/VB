@@ -5,10 +5,10 @@
 Reads the scraped rosters (ntdp_scrape.py) and the birthdates resolved against
 Volleyball Life (ntdp_dob.py). Boys' and men's groups are dropped.
 
-Two grids, same cells, different row order, because the orders answer different
-questions. By first appearance the page reads as intake: each block of rows is a
-cohort arriving together. By birth year it reads as a career: within a birth year
-the rows run from the girls who stopped earliest to the ones still being named.
+One grid per birth year. Because the age group is a birth-year cohort, a single
+year's block shares an age ladder: every row steps up the bands together, so the
+only thing that varies down the block is who keeps being named. Rows run by first
+appearance, then by the length of the record.
 
 Age bands fold to five rather than the seven the rosters use (U15 through U21).
 Seven steps on one hue cannot clear the adjacent-lightness gate of the ordinal
@@ -184,6 +184,11 @@ table.grid { border-collapse:separate; border-spacing:0; }
 .tot { width:40px; min-width:40px; text-align:center; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
   font-size:11px; color:var(--muted); font-variant-numeric:tabular-nums; border-left:1px solid var(--hair); }
 .grid tbody tr:hover .rh { background:var(--raise); }
+.yr { display:flex; align-items:baseline; gap:12px; margin:30px 0 8px; }
+.yr h3 { font-family:"Iowan Old Style",Georgia,serif; font-size:19px; color:var(--ink);
+  font-weight:600; margin:0; }
+.yr .meta { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11.5px;
+  color:var(--faint); font-variant-numeric:tabular-nums; }
 .legend { display:flex; flex-wrap:wrap; gap:8px 20px; align-items:center; margin-block:14px 0;
   font-size:12px; color:var(--muted); }
 .k { display:inline-flex; align-items:center; gap:7px; }
@@ -213,19 +218,34 @@ footer { margin-top:50px; padding-top:18px; border-top:1px solid var(--line); fo
 
 def build():
     import statistics as st
-    from collections import Counter
+    from collections import Counter, defaultdict
     series, girls = load()
     n_slots = sum(g["n"] for g in girls)
     cnt = Counter(g["n"] for g in girls)
     ages = [age_at(g["dob"], series[g["first"]]) for g in girls if g["dob"]]
+    undated = sum(1 for g in girls if not g["dob"])
 
-    # Grid 1 -- intake order: when she first appeared, then the longest records first.
-    by_intake = sorted(girls, key=lambda g: (g["first"], -g["n"], g["name"]))
-    # Grid 2 -- birth YEAR (not the full date, so that the next key can do work),
-    # then how recently she was last named, then the longest records first. Girls
-    # with no birthdate sort last rather than as year zero.
-    by_birth = sorted(girls, key=lambda g: (g["dob"] is None, (g["dob"] or "")[:4],
-                                            g["last"], -g["n"], g["name"]))
+    # One block per birth year. Within a year: first appearance, then the longest
+    # records first, then name. Girls with no birthdate get their own block last.
+    byyear = defaultdict(list)
+    for g in girls:
+        byyear[g["dob"][:4] if g["dob"] else None].append(g)
+    years = sorted([y for y in byyear if y], key=int) + ([None] if None in byyear else [])
+
+    blocks = []
+    for y in years:
+        rows = sorted(byyear[y], key=lambda g: (g["first"], -g["n"], g["name"]))
+        once = sum(1 for g in rows if g["n"] == 1)
+        places = sum(g["n"] for g in rows)
+        label = f"Born {y}" if y else "Birth year unknown"
+        span = ""
+        if rows:
+            lo, hi = min(g["first"] for g in rows), max(g["last"] for g in rows)
+            span = f" &#183; {series[lo]} to {series[hi]}"
+        blocks.append(
+            f'<div class="yr"><h3>{label}</h3><span class="meta">{len(rows)} girls &#183; '
+            f'{places} roster places &#183; {once} named once{span}</span></div>\n  '
+            + grid(series, rows))
 
     ret = []
     for i in range(1, len(series)):
@@ -234,9 +254,9 @@ def build():
         ever = {g["name"] for g in girls if any(k < i for k in g["cells"])}
         ret.append((series[i], len(cur), len(cur & prev), len(cur - ever)))
     ret_rows = "".join(
-        f'<tr><td>{s}</td><td class="n">{c}</td><td class="n">{h}</td>'
+        f'<tr><td>{s_}</td><td class="n">{c}</td><td class="n">{h}</td>'
         f'<td class="n">{nw}</td><td class="n">{round(100 * h / c)}%</td></tr>'
-        for s, c, h, nw in ret)
+        for s_, c, h, nw in ret)
     dist = "".join(
         f'<tr><td class="n">{k}</td><td class="n">{v}</td>'
         f'<td class="bar"><i style="width:{100 * v / cnt[1]:.1f}%"></i></td></tr>'
@@ -244,7 +264,6 @@ def build():
     legend = "".join(f'<span class="k"><i class="b{i}"></i>{b}</span>'
                      for i, b in enumerate(BANDS))
     legend += '<span class="k"><i class="ne"></i>Not named</span>'
-    undated = sum(1 for g in girls if not g["dob"])
 
     html = f"""<title>Who Gets Called Back</title>
 <style>{CSS}</style>
@@ -254,8 +273,9 @@ def build():
   <h1>Who gets <em>called back</em></h1>
   <p class="standfirst">Every girl named to a Beach NTDP training-series roster over four years,
   one row each, against the fifteen series that have been held. A filled cell is a roster
-  appearance, shaded by the age group she attended as. The same cells are laid out twice, in
-  two row orders, because they answer different questions.</p>
+  appearance, and the number in it is the age group she attended as. One grid per birth year,
+  because the age group is a birth-year cohort: a single year's block climbs the age ladder
+  together, so the only thing that varies down a block is who keeps being named.</p>
   <div class="facts">
     <div class="fact"><b>{len(girls)}</b><span>Girls named</span></div>
     <div class="fact"><b>{n_slots}</b><span>Roster places</span></div>
@@ -266,25 +286,13 @@ def build():
 </header>
 
 <section>
-  <h2>By intake</h2>
-  <p class="lede">Rows ordered by the series a girl first appeared in, then by the length of her
-  record. Series run left to right in the order they were held &#8212; Spring, Summer, Fall, then
-  Winter, which falls at the end of its series year and already uses the next year's age bands.
-  Read this way the page is about arrival: each block of rows is a group that entered together,
-  and the newest intake sits at the bottom.</p>
-  {grid(series, by_intake)}
+  <h2>The grids</h2>
+  <p class="lede">Series run left to right in the order they were held &#8212; Spring, Summer,
+  Fall, then Winter, which falls at the end of its series year and already uses the next year's
+  age bands. Within each birth year, rows are ordered by the series a girl first appeared in,
+  then by the length of her record.</p>
   <div class="legend">{legend}</div>
-</section>
-
-<section>
-  <h2>By birth year</h2>
-  <p class="lede">The same {len(girls)} rows and the same cells, ordered by birth year, then by
-  how recently she was last named, then by the length of her record. Read this way the page is
-  about careers: each birth-year block runs from the girls who stopped earliest to the ones still
-  being named, and the band numbers hold steady across a block because the age group is set by
-  birth year. The {undated} girls with no birthdate on Volleyball Life sort to the end.</p>
-  {grid(series, by_birth)}
-  <div class="legend">{legend}</div>
+  {"".join(blocks)}
 </section>
 
 <section>
@@ -315,17 +323,18 @@ def build():
   <ul>
     <li><b>A gap is not a drop.</b> Plenty of girls miss a series and return. Reading across a row
     shows that invitation is decided series by series rather than as a standing place.</li>
-    <li><b>The diagonal is the age ladder.</b> Where a row runs long, its shade darkens left to
-    right as she moves up the bands. A row that stays one shade is a girl who came and went inside
-    a single age group.</li>
-    <li><b>Age groups are birth-year cohorts.</b> The band a girl attends as is set by her birth
-    year, not by how good she is: birth year = series year &#8722; group number + 1. The Winter
-    series is the exception that proves it &#8212; held at the end of its year, it already uses the
-    following year's bands.</li>
+    <li><b>A block shares one age ladder.</b> Because the band is set by birth year, every row in a
+    block carries the same group number in the same column: birth year = series year &#8722; group
+    number + 1. The Winter series is the exception that proves it &#8212; held at the end of its
+    year, it already uses the following year's bands. What varies down a block is only who is
+    still being named.</li>
+    <li><b>The blocks are not the same size.</b> A birth year at the edge of the window has had
+    fewer chances: 2012 has barely started and 2003 was already ageing out when the record
+    begins.</li>
     <li><b>Birth years come from Volleyball Life</b>, matched by name. {len(girls) - undated} of the
-    {len(girls)} girls resolved to a profile carrying a date of birth; the rest show a dash. Where
-    more than one profile carried the same name the one with a birthdate and the longest match
-    record was taken, so a small number of birth years may be wrong.</li>
+    {len(girls)} girls resolved to a profile carrying a date of birth; the other {undated} are in
+    the last block. Where more than one profile carried the same name the one with a birthdate and
+    the longest match record was taken, so a small number of birth years may be wrong.</li>
     <li><b>Rosters only.</b> Being named is what this records. It says nothing about who attended,
     who was invited and declined, or who was cut.</li>
   </ul>
@@ -338,7 +347,7 @@ def build():
 </div>"""
     open(OUT, "w").write(html)
     print(f"wrote {OUT} ({len(html):,} bytes) -- {len(girls)} girls, {n_slots} places, "
-          f"{len(series)} series, two orderings")
+          f"{len(blocks)} birth-year blocks")
 
 
 if __name__ == "__main__":
