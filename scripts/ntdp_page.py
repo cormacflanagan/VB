@@ -14,8 +14,11 @@ Age bands fold to five rather than the seven the rosters use (U15 through U21).
 Seven steps on one hue cannot clear the adjacent-lightness gate of the ordinal
 ramp, and five is how USAV itself combines them -- "U17, U18", "U19/U20".
 """
-import datetime, json, os, re
+import datetime, json, os, re, sys
 from collections import defaultdict
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from ntdp_names import key
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "..", "data", "ntdp")
@@ -42,22 +45,40 @@ def band(div):
 
 
 def load():
+    """One record per athlete: her cells, her birthdate and her current rating."""
     rows = [r for r in json.load(open(os.path.join(DATA, "rosters.json")))
             if not re.match(r"(boys|men)", (r["division"] or ""), re.I)]
-    dob = json.load(open(os.path.join(DATA, "dob.json")))
+    players = json.load(open(os.path.join(DATA, "players.json")))
+
+    def resolved(k):
+        """Follow the fold left by ntdp_players.py for two names on one profile."""
+        seen = set()
+        while k in players and "same_as" in players[k] and k not in seen:
+            seen.add(k)
+            k = players[k]["same_as"]
+        return k
+
     series = sorted({r["series"] for r in rows}, key=skey)
-    girls = defaultdict(dict)
+    girls = defaultdict(lambda: defaultdict(list))
     for r in rows:
-        n, b = band(r["division"])
-        girls[f"{r['first'].strip()} {r['last'].strip()}"][r["series"]] = \
-            {"g": str(r["division"]), "n": n, "b": b}
+        # A girl can be listed twice in one series -- on her age-group roster and
+        # on the national team named alongside it. That is one cell, not two rows.
+        girls[resolved(key(r["first"], r["last"]))][r["series"]].append(str(r["division"]))
+
     out = []
-    for name, cells in girls.items():
-        d = (dob.get(name) or {}).get("dob")
+    for k, cells in girls.items():
+        p = players.get(k, {})
+        d = p.get("dob")
         d = d if d and "2002" <= d[:4] <= "2013" else None
         idx = [series.index(s) for s in cells]
-        out.append({"name": name, "dob": d, "first": min(idx), "last": max(idx),
-                    "n": len(cells), "cells": {series.index(s): v for s, v in cells.items()}})
+        cs = {}
+        for s, divs in cells.items():
+            top = max(divs, key=lambda dv: (band(dv)[1] is not None, band(dv)[1] or 0))
+            n, b = band(top)
+            cs[series.index(s)] = {"g": " &#183; ".join(sorted(set(divs))), "n": n, "b": b}
+        out.append({"name": p.get("name") or k.title(), "dob": d, "vid": p.get("id"),
+                    "tv": p.get("tv"), "conf": p.get("conf") or 0, "m": p.get("m") or 0,
+                    "first": min(idx), "last": max(idx), "n": len(cells), "cells": cs})
     return series, out
 
 
@@ -84,12 +105,22 @@ def grid(series, girls):
             tip = f"{g['name']} &#8212; {s} &#183; {c['g']}" + (f" &#183; age {a}" if a else "")
             cells.append(f'<td class="c b{c["b"]}" title="{tip}">'
                          f'<span>{c["n"] or ""}</span></td>')
-        body.append(f'<tr><th class="rh"><span class="nm">{g["name"]}</span>'
-                    f'<span class="by">{g["dob"][:4] if g["dob"] else "&#8212;"}</span></th>'
+        nm = g["name"]
+        if g["vid"]:
+            nm = (f'<a href="https://volleyballlife.com/player/{g["vid"]}" '
+                  f'target="_blank" rel="noopener">{nm}</a>')
+        if g["tv"]:
+            rating = (f'<b title="TruVolley {g["tv"]:.3f} &#183; confidence {g["conf"]} '
+                      f'&#183; {g["m"]} matches">{g["tv"]:.2f}</b>')
+        else:
+            rating = '<i title="no Volleyball Life rating">&#8212;</i>'
+        body.append(f'<tr><th class="rh"><span class="nm">{nm}</span>'
+                    f'<span class="by">{g["dob"][:4] if g["dob"] else "&#8212;"}'
+                    f' &#183; {rating}</span></th>'
                     f'{"".join(cells)}<td class="tot">{g["n"]}</td></tr>')
     return f"""<div class="gridbox">
     <table class="grid">
-      <thead><tr><th class="corner">Athlete &#183; birth year</th>{head}
+      <thead><tr><th class="corner">Athlete &#183; born &#183; TruVolley</th>{head}
         <th class="th-tot">All</th></tr></thead>
       <tbody>{''.join(body)}</tbody>
     </table>
@@ -171,6 +202,10 @@ table.grid { border-collapse:separate; border-spacing:0; }
   text-overflow:ellipsis; max-width:164px; }
 .by { display:block; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:10px;
   color:var(--faint); font-variant-numeric:tabular-nums; }
+.by b { color:var(--accent); font-weight:650; }
+.by i { font-style:normal; }
+.nm a { color:inherit; text-decoration:none; border-bottom:1px solid transparent; }
+.nm a:hover { border-bottom-color:var(--accent); }
 .c { width:34px; min-width:34px; height:26px; text-align:center; padding:0;
   border-right:1px solid var(--surface); }
 .c span { display:block; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:10px;
@@ -221,6 +256,11 @@ def build():
     from collections import Counter, defaultdict
     series, girls = load()
     n_slots = sum(g["n"] for g in girls)
+    n_tv = sum(1 for g in girls if g["tv"])
+    raw_names = len({f'{r["first"].strip()} {r["last"].strip()}' for r in
+                     json.load(open(os.path.join(DATA, "rosters.json")))
+                     if not re.match(r"(boys|men)", (r["division"] or ""), re.I)})
+    today = datetime.date.today().strftime("%-d %B %Y")
     cnt = Counter(g["n"] for g in girls)
     ages = [age_at(g["dob"], series[g["first"]]) for g in girls if g["dob"]]
     undated = sum(1 for g in girls if not g["dob"])
@@ -275,7 +315,8 @@ def build():
   one row each, against the fifteen series that have been held. A filled cell is a roster
   appearance, and the number in it is the age group she attended as. One grid per birth year,
   because the age group is a birth-year cohort: a single year's block climbs the age ladder
-  together, so the only thing that varies down a block is who keeps being named.</p>
+  together, so the only thing that varies down a block is who keeps being named. Each name
+  carries her birth year and her TruVolley rating as it stands today.</p>
   <div class="facts">
     <div class="fact"><b>{len(girls)}</b><span>Girls named</span></div>
     <div class="fact"><b>{n_slots}</b><span>Roster places</span></div>
@@ -331,10 +372,25 @@ def build():
     <li><b>The blocks are not the same size.</b> A birth year at the edge of the window has had
     fewer chances: 2012 has barely started and 2003 was already ageing out when the record
     begins.</li>
+    <li><b>The rating is today's, not the rating she held at the series.</b> TruVolley is a single
+    current number per player, so a 2023 cell sits next to a 2026 rating. It says how good she
+    turned out to be, not how good she looked when she was picked. {n_tv} of the {len(girls)} girls
+    have one; it is blank for the rest, who either have no Volleyball Life profile or have never
+    been rated. Hover a rating for its confidence and match count. All of them were refetched for
+    this build, so they are on one side of the September 2026 rating replacement.</li>
     <li><b>Birth years come from Volleyball Life</b>, matched by name. {len(girls) - undated} of the
     {len(girls)} girls resolved to a profile carrying a date of birth; the other {undated} are in
     the last block. Where more than one profile carried the same name the one with a birthdate and
     the longest match record was taken, so a small number of birth years may be wrong.</li>
+    <li><b>One girl, one row.</b> USAV spells the same athlete several ways &#8212; a footnote
+    asterisk, a shouted surname, a nickname, a dropped middle name &#8212; and two spellings used
+    to get two rows. Spellings are now folded together, and two names that resolve to the same
+    Volleyball Life profile are merged even when the strings share nothing, which is what joins
+    "Jess" to "Jessica Horwath". Same-surname pairs are not merged on a shared birthdate: Mallory
+    and Molly LaBreche are twins, and several other pairs are sisters. That folding took
+    {raw_names} roster spellings down to {len(girls)} athletes. A girl listed twice in one series,
+    on her age group and on the national team named beside it, is one cell; the tooltip names
+    both.</li>
     <li><b>Rosters only.</b> Being named is what this records. It says nothing about who attended,
     who was invited and declined, or who was cut.</li>
   </ul>
@@ -342,7 +398,7 @@ def build():
 <footer>
   Rosters as published by USA Volleyball for the Beach NTDP training series, girls and women's
   groups only, 2023 through 2026. Fifteen series; the 2026 Winter series has not been dated.
-  Birth years from Volleyball Life player profiles.
+  Birth years and TruVolley ratings from Volleyball Life player profiles, read {today}.
 </footer>
 </div>"""
     open(OUT, "w").write(html)
