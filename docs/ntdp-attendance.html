@@ -53,13 +53,13 @@ p { max-width:70ch; }
 .fact b { display:block; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:23px;
   color:var(--ink); font-weight:600; font-variant-numeric:tabular-nums; }
 .fact span { font-size:11px; letter-spacing:.09em; text-transform:uppercase; color:var(--faint); }
+/* Horizontal scroll only: the blocks run their full height and the page scrolls. */
 .gridbox { border:1px solid var(--line); border-radius:3px; background:var(--surface);
-  overflow:auto; max-height:80vh; width:max-content; max-width:100%; }
+  overflow-x:auto; width:max-content; max-width:100%; }
 table.grid { border-collapse:separate; border-spacing:0; }
 .grid th, .grid td { border-bottom:1px solid var(--hair); }
-.grid thead th { position:sticky; top:0; z-index:2; background:var(--wash);
-  border-bottom:1px solid var(--line); }
-.corner { position:sticky; left:0; top:0; z-index:4 !important; width:252px; min-width:252px;
+.grid thead th { z-index:2; background:var(--wash); border-bottom:1px solid var(--line); }
+.corner { position:sticky; left:0; z-index:4 !important; width:252px; min-width:252px;
   text-align:left; padding:8px 12px; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase;
   color:var(--faint); font-weight:650; border-right:1px solid var(--line); }
 .sh { width:34px; min-width:34px; padding:7px 2px; text-align:center; font-weight:650; }
