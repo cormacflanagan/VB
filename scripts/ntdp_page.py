@@ -293,7 +293,10 @@ def build():
 
     blocks = []
     for y in years:
-        rows = sorted(byyear[y], key=lambda g: (g["first"], -g["n"], g["name"]))
+        # Strongest first. An unrated girl has no place on that scale, so she
+        # sorts to the foot of the block rather than to the top as a zero.
+        rows = sorted(byyear[y],
+                      key=lambda g: (g["tv"] is None, -(g["tv"] or 0), g["name"]))
         once = sum(1 for g in rows if g["n"] == 1)
         places = sum(g["n"] for g in rows)
         label = f"Born {y}" if y else "Birth year unknown"
@@ -350,8 +353,8 @@ def build():
   <h2>The grids</h2>
   <p class="lede">Series run left to right in the order they were held &#8212; Spring, Summer,
   Fall, then Winter, which falls at the end of its series year and already uses the next year's
-  age bands. Within each birth year, rows are ordered by the series a girl first appeared in,
-  then by the length of her record.</p>
+  age bands. Within each birth year, rows run from the highest TruVolley down; the girls with no
+  rating sit at the foot of the block.</p>
   <div class="legend">{legend}</div>
   {"".join(blocks)}
 </section>
@@ -382,6 +385,10 @@ def build():
 <section class="notes">
   <h2>How to read it</h2>
   <ul>
+    <li><b>The order is today's rating, not the order they were picked in.</b> A block reads
+    strongest-first on TruVolley as it stands now, which is hindsight: it puts the girls who turned
+    out well at the top whatever their record looks like. Read down a block to see how much of the
+    top of a birth year the programme kept calling back, and how much of it it only saw once.</li>
     <li><b>A gap is not a drop.</b> Plenty of girls miss a series and return. Reading across a row
     shows that invitation is decided series by series rather than as a standing place.</li>
     <li><b>A block shares one age ladder.</b> Because the band is set by birth year, every row in a
