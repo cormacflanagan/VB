@@ -60,10 +60,15 @@ def load():
 
     series = sorted({r["series"] for r in rows}, key=skey)
     girls = defaultdict(lambda: defaultdict(list))
+    region = {}
     for r in rows:
+        k = resolved(key(r["first"], r["last"]))
         # A girl can be listed twice in one series -- on her age-group roster and
         # on the national team named alongside it. That is one cell, not two rows.
-        girls[resolved(key(r["first"], r["last"]))][r["series"]].append(str(r["division"]))
+        girls[k][r["series"]].append(str(r["division"]))
+        # Keep the latest region USAV filed her under, as a fallback home.
+        if r.get("region") and (k not in region or skey(r["series"]) > region[k][0]):
+            region[k] = (skey(r["series"]), r["region"].strip())
 
     out = []
     for k, cells in girls.items():
@@ -76,8 +81,11 @@ def load():
             top = max(divs, key=lambda dv: (band(dv)[1] is not None, band(dv)[1] or 0))
             n, b = band(top)
             cs[series.index(s)] = {"g": " &#183; ".join(sorted(set(divs))), "n": n, "b": b}
+        town = ", ".join(x for x in (p.get("city"), p.get("state")) if x)
         out.append({"name": p.get("name") or k.title(), "dob": d, "vid": p.get("id"),
                     "tv": p.get("tv"), "conf": p.get("conf") or 0, "m": p.get("m") or 0,
+                    "town": town or None, "club": p.get("club"),
+                    "region": region.get(k, (None, None))[1],
                     "first": min(idx), "last": max(idx), "n": len(cells), "cells": cs})
     return series, out
 
@@ -114,13 +122,19 @@ def grid(series, girls):
                       f'&#183; {g["m"]} matches">{g["tv"]:.2f}</b>')
         else:
             rating = '<i title="no Volleyball Life rating">&#8212;</i>'
+        # Third line: where she is from and who she plays for. The profile's own
+        # town wins; failing that, the USAV region she was last rostered under,
+        # which is a region and not a town, so it is marked as one.
+        where = g["town"] or (f'{g["region"]} region' if g["region"] else "")
+        place = " &#183; ".join(x for x in (where, g["club"]) if x) or "&#8212;"
         body.append(f'<tr><th class="rh"><span class="nm">{nm}</span>'
                     f'<span class="by">{g["dob"][:4] if g["dob"] else "&#8212;"}'
-                    f' &#183; {rating}</span></th>'
+                    f' &#183; {rating}</span>'
+                    f'<span class="pl" title="{place.replace("&#183;", "-")}">{place}</span></th>'
                     f'{"".join(cells)}<td class="tot">{g["n"]}</td></tr>')
     return f"""<div class="gridbox">
     <table class="grid">
-      <thead><tr><th class="corner">Athlete &#183; born &#183; TruVolley</th>{head}
+      <thead><tr><th class="corner">Athlete &#183; born &#183; TruVolley<br>Home &#183; club</th>{head}
         <th class="th-tot">All</th></tr></thead>
       <tbody>{''.join(body)}</tbody>
     </table>
@@ -187,7 +201,7 @@ table.grid { border-collapse:separate; border-spacing:0; }
 .grid th, .grid td { border-bottom:1px solid var(--hair); }
 .grid thead th { position:sticky; top:0; z-index:2; background:var(--wash);
   border-bottom:1px solid var(--line); }
-.corner { position:sticky; left:0; top:0; z-index:4 !important; width:188px; min-width:188px;
+.corner { position:sticky; left:0; top:0; z-index:4 !important; width:252px; min-width:252px;
   text-align:left; padding:8px 12px; font-size:10.5px; letter-spacing:.1em; text-transform:uppercase;
   color:var(--faint); font-weight:650; border-right:1px solid var(--line); }
 .sh { width:34px; min-width:34px; padding:7px 2px; text-align:center; font-weight:650; }
@@ -196,20 +210,22 @@ table.grid { border-collapse:separate; border-spacing:0; }
   color:var(--muted); font-variant-numeric:tabular-nums; }
 .th-tot { width:40px; min-width:40px; padding:7px 4px; font-size:10px; letter-spacing:.06em;
   text-transform:uppercase; color:var(--faint); font-weight:650; }
-.rh { position:sticky; left:0; z-index:1; background:var(--surface); width:188px; min-width:188px;
+.rh { position:sticky; left:0; z-index:1; background:var(--surface); width:252px; min-width:252px;
   text-align:left; padding:5px 10px 5px 12px; font-weight:500; border-right:1px solid var(--line); }
 .nm { display:block; font-size:12.5px; color:var(--ink); white-space:nowrap; overflow:hidden;
-  text-overflow:ellipsis; max-width:164px; }
+  text-overflow:ellipsis; max-width:228px; }
 .by { display:block; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:10px;
   color:var(--faint); font-variant-numeric:tabular-nums; }
 .by b { color:var(--accent); font-weight:650; }
+.pl { display:block; font-size:10px; color:var(--faint); white-space:nowrap; overflow:hidden;
+  text-overflow:ellipsis; max-width:228px; }
 .by i { font-style:normal; }
 .nm a { color:inherit; text-decoration:none; border-bottom:1px solid transparent; }
 .nm a:hover { border-bottom-color:var(--accent); }
-.c { width:34px; min-width:34px; height:26px; text-align:center; padding:0;
+.c { width:34px; min-width:34px; height:34px; text-align:center; padding:0;
   border-right:1px solid var(--surface); }
 .c span { display:block; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:10px;
-  font-weight:650; line-height:26px; font-variant-numeric:tabular-nums; }
+  font-weight:650; line-height:34px; font-variant-numeric:tabular-nums; }
 .c.e { background:repeating-linear-gradient(-45deg,transparent,transparent 5px,var(--hair) 5px,var(--hair) 6px); }
 .b0 { background:var(--b0); } .b0 span { color:var(--onb0); }
 .b1 { background:var(--b1); } .b1 span { color:var(--onb1); }
@@ -247,7 +263,8 @@ td.bar i { display:block; height:9px; border-radius:0 4px 4px 0; background:var(
 .notes ul { padding-left:19px; }
 footer { margin-top:50px; padding-top:18px; border-top:1px solid var(--line); font-size:12px;
   color:var(--faint); max-width:80ch; }
-@media (max-width:560px) { .corner,.rh { width:132px; min-width:132px; } .nm { max-width:110px; } }
+@media (max-width:560px) { .corner,.rh { width:168px; min-width:168px; }
+  .nm,.pl { max-width:146px; } }
 """
 
 
@@ -257,6 +274,8 @@ def build():
     series, girls = load()
     n_slots = sum(g["n"] for g in girls)
     n_tv = sum(1 for g in girls if g["tv"])
+    n_town = sum(1 for g in girls if g["town"])
+    n_club = sum(1 for g in girls if g["club"])
     raw_names = len({f'{r["first"].strip()} {r["last"].strip()}' for r in
                      json.load(open(os.path.join(DATA, "rosters.json")))
                      if not re.match(r"(boys|men)", (r["division"] or ""), re.I)})
@@ -316,7 +335,8 @@ def build():
   appearance, and the number in it is the age group she attended as. One grid per birth year,
   because the age group is a birth-year cohort: a single year's block climbs the age ladder
   together, so the only thing that varies down a block is who keeps being named. Each name
-  carries her birth year and her TruVolley rating as it stands today.</p>
+  carries her birth year, her TruVolley rating as it stands today, and where she is from and
+  who she plays for.</p>
   <div class="facts">
     <div class="fact"><b>{len(girls)}</b><span>Girls named</span></div>
     <div class="fact"><b>{n_slots}</b><span>Roster places</span></div>
@@ -372,6 +392,11 @@ def build():
     <li><b>The blocks are not the same size.</b> A birth year at the edge of the window has had
     fewer chances: 2012 has barely started and 2003 was already ageing out when the record
     begins.</li>
+    <li><b>Home town and club are current, and self-reported.</b> Both come from the athlete's own
+    Volleyball Life profile, so a club can be a season or two stale and some profiles carry none:
+    {n_town} of the {len(girls)} girls give a town and {n_club} a club. Where the profile gives no
+    town, the row falls back to the USAV region she was last rostered under, marked as a region
+    rather than a town &#8212; that is a quarter of the country, not a home.</li>
     <li><b>The rating is today's, not the rating she held at the series.</b> TruVolley is a single
     current number per player, so a 2023 cell sits next to a 2026 rating. It says how good she
     turned out to be, not how good she looked when she was picked. {n_tv} of the {len(girls)} girls
@@ -398,7 +423,8 @@ def build():
 <footer>
   Rosters as published by USA Volleyball for the Beach NTDP training series, girls and women's
   groups only, 2023 through 2026. Fifteen series; the 2026 Winter series has not been dated.
-  Birth years and TruVolley ratings from Volleyball Life player profiles, read {today}.
+  Birth years, TruVolley ratings, home towns and clubs from Volleyball Life player profiles,
+  read {today}; regions from the USAV rosters themselves.
 </footer>
 </div>"""
     open(OUT, "w").write(html)

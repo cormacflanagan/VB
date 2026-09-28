@@ -12,6 +12,11 @@ amount of string cleaning would.
 TruVolley is refetched rather than read from data/tvcache.json: that cache
 predates the September 2026 rating replacement, and mixing the two epochs is
 what put a 9.2 next to a 10.5 on an earlier page.
+
+Home town and club come from the same profile. They are what the athlete last
+put there, so a club can be a season or two out of date -- USAV's own roster
+region is carried separately, per series, and is the fallback when the profile
+gives no town.
 """
 import json, os, re, sys, urllib.parse, urllib.request
 from collections import defaultdict
@@ -70,7 +75,8 @@ def resolve(spellings):
             pr = get(f"/playerprofile/{c['id']}") or {}
             tv = get(f"/playerprofile/{c['id']}/truvolley") or {}
             cand = {"id": c["id"], "dob": (pr.get("dob") or "")[:10] or None,
-                    "grad": pr.get("gradYear") or None,
+                    "grad": pr.get("gradYear") or None, "club": pr.get("club") or None,
+                    "city": pr.get("city") or None, "state": pr.get("state") or None,
                     "tv": tv.get("truVolley") or None, "conf": tv.get("confidence") or 0,
                     "peak": tv.get("peak") or None, "m": tv.get("matchesPlayed") or 0,
                     "w": tv.get("wins") or 0}
@@ -113,7 +119,9 @@ def main():
     live = {k: r for k, r in out.items() if "same_as" not in r}
     print(f"wrote players.json -- {len(live)} athletes, "
           f"{sum(1 for r in live.values() if r.get('id'))} with a profile, "
-          f"{sum(1 for r in live.values() if r.get('tv'))} with a TruVolley")
+          f"{sum(1 for r in live.values() if r.get('tv'))} with a TruVolley, "
+          f"{sum(1 for r in live.values() if r.get('city'))} with a town, "
+          f"{sum(1 for r in live.values() if r.get('club'))} with a club")
 
 
 if __name__ == "__main__":
