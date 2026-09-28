@@ -28,6 +28,13 @@ from ntdp_names import clean, key, display
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "..", "data", "ntdp")
 API = "https://api-v8.volleyballlife.com"
+
+# Profiles the search will not find from the roster spelling, supplied by hand.
+# Keyed the way ntdp_names.key() keys a roster line.
+PINNED = {
+    "regina stella broshear": 64782,
+    "abigail (abby) king": 26871,
+}
 H = {"User-Agent": ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
                     "(KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"),
      "Accept": "application/json"}
@@ -58,8 +65,23 @@ def variants_of_rosters():
     return v
 
 
-def resolve(spellings):
+def profile(pid):
+    pr = get(f"/playerprofile/{pid}") or {}
+    tv = get(f"/playerprofile/{pid}/truvolley") or {}
+    clean = lambda x: (x or "").strip() or None
+    return {"id": pid, "dob": (pr.get("dob") or "")[:10] or None,
+            "grad": pr.get("gradYear") or None, "club": clean(pr.get("club")),
+            "city": clean(pr.get("city")), "state": clean(pr.get("state")),
+            "tv": tv.get("truVolley") or None, "conf": tv.get("confidence") or 0,
+            "peak": tv.get("peak") or None, "m": tv.get("matchesPlayed") or 0,
+            "w": tv.get("wins") or 0}
+
+
+def resolve(item):
     """Search every spelling; keep the profile with a birthdate and most matches."""
+    k, spellings = item
+    if k in PINNED:
+        return profile(PINNED[k])
     best = None
     for first, last in sorted(spellings):
         res = get("/playerprofile/search/" + urllib.parse.quote(f"{first} {last}")) or []
@@ -72,14 +94,7 @@ def resolve(spellings):
             sur = [p for p in res if norm(p.get("lastName")) == norm(last)]
             cands = sur if len(sur) == 1 else []
         for c in cands[:4]:
-            pr = get(f"/playerprofile/{c['id']}") or {}
-            tv = get(f"/playerprofile/{c['id']}/truvolley") or {}
-            cand = {"id": c["id"], "dob": (pr.get("dob") or "")[:10] or None,
-                    "grad": pr.get("gradYear") or None, "club": pr.get("club") or None,
-                    "city": pr.get("city") or None, "state": pr.get("state") or None,
-                    "tv": tv.get("truVolley") or None, "conf": tv.get("confidence") or 0,
-                    "peak": tv.get("peak") or None, "m": tv.get("matchesPlayed") or 0,
-                    "w": tv.get("wins") or 0}
+            cand = profile(c["id"])
             if best is None or (cand["dob"] and not best["dob"]) or \
                (bool(cand["dob"]) == bool(best["dob"]) and cand["m"] > best["m"]):
                 best = cand
@@ -91,7 +106,7 @@ def main():
     print(f"{len(v)} canonical athletes", flush=True)
     out = {}
     with ThreadPoolExecutor(8) as ex:
-        for i, (k, r) in enumerate(zip(v, ex.map(resolve, v.values())), 1):
+        for i, (k, r) in enumerate(zip(v, ex.map(resolve, v.items())), 1):
             names = sorted(f"{f} {l}" for f, l in v[k])
             out[k] = {"name": display(names), "spellings": names, **r}
             if i % 40 == 0:

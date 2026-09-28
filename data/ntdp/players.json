@@ -18,14 +18,25 @@
   "w": 376
  },
  "abigail (abby) king": {
+  "city": "Richmond",
+  "club": "Golden gate volleyball",
+  "conf": 100,
+  "dob": "2008-12-20",
+  "grad": 2027,
+  "id": 26871,
+  "m": 483,
   "name": "Abigail (Abby) King",
+  "peak": 9.521,
   "spellings": [
    "Abigail (Abby) King"
-  ]
+  ],
+  "state": "CA",
+  "tv": 9.438,
+  "w": 337
  },
  "addison duell": {
   "city": "Scottsdale",
-  "club": "Dune ",
+  "club": "Dune",
   "conf": 100,
   "dob": "2007-10-03",
   "grad": 2026,
@@ -58,7 +69,7 @@
   "w": 408
  },
  "addison west": {
-  "city": "Omaha ",
+  "city": "Omaha",
   "club": null,
   "conf": 51,
   "dob": "2007-11-08",
@@ -161,7 +172,7 @@
  },
  "alexia heyn": {
   "city": "Gilbert",
-  "club": "Dune ",
+  "club": "Dune",
   "conf": 100,
   "dob": "2007-12-31",
   "grad": 2026,
@@ -194,7 +205,7 @@
   "w": 403
  },
  "alexis keeter": {
-  "city": "Yorktown ",
+  "city": "Yorktown",
   "club": "Club 757",
   "conf": 100,
   "dob": "2006-07-06",
@@ -245,7 +256,7 @@
   "w": 147
  },
  "allyn brewer": {
-  "city": "Leonard ",
+  "city": "Leonard",
   "club": null,
   "conf": 100,
   "dob": "2007-11-15",
@@ -279,7 +290,7 @@
   "w": 254
  },
  "anna koehl": {
-  "city": "Baton rouge ",
+  "city": "Baton rouge",
   "club": "Future Beach Volleyball",
   "conf": 94,
   "dob": "2009-08-11",
@@ -347,7 +358,7 @@
   "w": 503
  },
  "ashley ruschill": {
-  "city": "McKinney ",
+  "city": "McKinney",
   "club": "Jaja beach",
   "conf": 100,
   "dob": "2011-01-25",
@@ -432,7 +443,7 @@
   "w": 165
  },
  "audrey flanagan": {
-  "city": "Redondo Beach ",
+  "city": "Redondo Beach",
   "club": "South Bay Sand",
   "conf": 23,
   "dob": "2007-10-17",
@@ -758,7 +769,7 @@
   "w": 229
  },
  "breeze johnson": {
-  "city": "Winchester ",
+  "city": "Winchester",
   "club": "BRVA Beach",
   "conf": 100,
   "dob": "2010-08-06",
@@ -827,7 +838,7 @@
  },
  "brooklynn poerner": {
   "city": "Plano",
-  "club": "ATX Juniors ",
+  "club": "ATX Juniors",
   "conf": 100,
   "dob": "2011-07-07",
   "grad": 2029,
@@ -946,7 +957,7 @@
  },
  "cayden dorger": {
   "city": "Spanish Fort",
-  "club": "MVP Beach ",
+  "club": "MVP Beach",
   "conf": 100,
   "dob": "2010-04-06",
   "grad": 2028,
@@ -1030,7 +1041,7 @@
   "w": 286
  },
  "chloe hoffman": {
-  "city": "Santa Barbara ",
+  "city": "Santa Barbara",
   "club": null,
   "conf": 100,
   "dob": "2005-04-29",
@@ -1104,7 +1115,7 @@
   "w": 204
  },
  "claire newell": {
-  "city": "Green Cove Springs ",
+  "city": "Green Cove Springs",
   "club": "On Sand Sports",
   "conf": 100,
   "dob": "2009-05-19",
@@ -1206,8 +1217,8 @@
   "w": 316
  },
  "delaney singleton": {
-  "city": "Phoenix ",
-  "club": "Dune ",
+  "city": "Phoenix",
+  "club": "Dune",
   "conf": 100,
   "dob": "2008-02-08",
   "grad": 2026,
@@ -1530,7 +1541,7 @@
   "w": 47
  },
  "elle sossong": {
-  "city": "Phoenixville ",
+  "city": "Phoenixville",
   "club": null,
   "conf": 100,
   "dob": "2010-10-28",
@@ -1598,7 +1609,7 @@
   "w": 132
  },
  "emerson harper": {
-  "city": "Los Angeles ",
+  "city": "Los Angeles",
   "club": "South Bay Sand",
   "conf": 100,
   "dob": "2011-12-12",
@@ -1810,7 +1821,7 @@
   "w": 206
  },
  "georgeann lee": {
-  "city": "Honolulu ",
+  "city": "Honolulu",
   "club": "Outrigger Canoe Club Girls Beach Volleyball",
   "conf": 100,
   "dob": "2009-04-19",
@@ -1929,7 +1940,7 @@
   "w": 490
  },
  "hannah byers": {
-  "city": "Olympia ",
+  "city": "Olympia",
   "club": "Dakine Beach Volleyball Club",
   "conf": 100,
   "dob": "2005-12-04",
@@ -2269,7 +2280,7 @@
   "w": 357
  },
  "julianna godbey": {
-  "city": "McKinney ",
+  "city": "McKinney",
   "club": "Spiker Beach Volleyball Club",
   "conf": 100,
   "dob": "2011-07-13",
@@ -2647,7 +2658,7 @@
  },
  "laney evers": {
   "city": "Queen Creek",
-  "club": "Dune ",
+  "club": "Dune",
   "conf": 100,
   "dob": "2009-01-23",
   "grad": 2027,
@@ -2765,7 +2776,7 @@
   "w": 237
  },
  "lia ray": {
-  "city": "Delray Beach ",
+  "city": "Delray Beach",
   "club": "Optimum Beach",
   "conf": 63,
   "dob": "2009-11-26",
@@ -2932,7 +2943,7 @@
  },
  "macey moore": {
   "city": "Gulf Shores",
-  "club": "MVP Beach ",
+  "club": "MVP Beach",
   "conf": 100,
   "dob": "2007-06-29",
   "grad": 2026,
@@ -2948,7 +2959,7 @@
   "w": 223
  },
  "mackenzie miller": {
-  "city": "New braunfels ",
+  "city": "New braunfels",
   "club": "STVA",
   "conf": 92,
   "dob": "2011-02-28",
@@ -3164,7 +3175,7 @@
   "w": 199
  },
  "mikki carlin": {
-  "city": "Encinitas ",
+  "city": "Encinitas",
   "club": "WAVE Beach",
   "conf": 100,
   "dob": "2007-04-25",
@@ -3201,7 +3212,7 @@
   "same_as": "milana rivera"
  },
  "milana rivera": {
-  "city": "Spring ",
+  "city": "Spring",
   "club": "Third Coast",
   "conf": 100,
   "dob": "2010-09-20",
@@ -3577,10 +3588,21 @@
   "w": 278
  },
  "regina stella broshear": {
+  "city": "Saratoga",
+  "club": "Golden Gate volleyball",
+  "conf": 100,
+  "dob": "2010-08-26",
+  "grad": 2028,
+  "id": 64782,
+  "m": 500,
   "name": "Regina Stella Broshear",
+  "peak": 8.823,
   "spellings": [
    "Regina Stella Broshear"
-  ]
+  ],
+  "state": "CA",
+  "tv": 8.596,
+  "w": 393
  },
  "ruby cochrane": {
   "city": "Hermosa Beach",
@@ -3635,7 +3657,7 @@
  },
  "ryan lambert": {
   "city": "Hampstead",
-  "club": "Wilmington Beach Academy ",
+  "club": "Wilmington Beach Academy",
   "conf": 95,
   "dob": "2007-05-05",
   "grad": 2025,
@@ -3719,7 +3741,7 @@
   "w": 367
  },
  "sage illian": {
-  "city": "Wichita ",
+  "city": "Wichita",
   "club": "P4:13 Beach",
   "conf": 100,
   "dob": "2009-12-28",
@@ -4026,7 +4048,7 @@
   "w": 180
  },
  "sienna cicero": {
-  "city": "Villa Park ",
+  "city": "Villa Park",
   "club": "Spiker Beach Volleyball Club",
   "conf": 100,
   "dob": "2010-12-11",
@@ -4315,7 +4337,7 @@
   "w": 184
  },
  "thais treumann": {
-  "city": "St Pete Beach ",
+  "city": "St Pete Beach",
   "club": "Bevolley Academy",
   "conf": 100,
   "dob": "2008-12-07",
@@ -4349,7 +4371,7 @@
   "w": 593
  },
  "vanessa moriarty": {
-  "city": "Bokeelia ",
+  "city": "Bokeelia",
   "club": null,
   "conf": 100,
   "dob": "2007-04-21",
