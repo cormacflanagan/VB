@@ -82,12 +82,33 @@ def load():
             n, b = band(top)
             cs[series.index(s)] = {"g": " &#183; ".join(sorted(set(divs))), "n": n, "b": b}
         town = ", ".join(x for x in (p.get("city"), p.get("state")) if x)
+        by = d[:4] if d else oldest_qualifying(series, cs)
         out.append({"name": p.get("name") or k.title(), "dob": d, "vid": p.get("id"),
+                    "byear": by, "inferred": d is None and by is not None,
                     "tv": p.get("tv"), "conf": p.get("conf") or 0, "m": p.get("m") or 0,
                     "town": town or None, "club": p.get("club"),
                     "region": region.get(k, (None, None))[1],
                     "first": min(idx), "last": max(idx), "n": len(cells), "cells": cs})
     return series, out
+
+
+def oldest_qualifying(series, cells):
+    """The oldest birth year consistent with every group she was rostered in.
+
+    A band is a ceiling, not a window: U-N in series year Y admits anyone born
+    in Y - N + 1 or later. Each appearance is therefore a floor on her birth
+    year, and she has to clear all of them, so the oldest she can be is the
+    highest of those floors. A combined group ("U19/U20") is read at its wider
+    end, which is the reading that lets her be oldest. Winter counts as the
+    following year, since it already runs on the next year's bands.
+    """
+    floors = []
+    for i, c in cells.items():
+        y, q = series[i].split()
+        ns = [int(x) for x in re.findall(r"U\s*-?\s*(\d{2})", c["g"])]
+        if ns:
+            floors.append(int(y) + (1 if q == "Winter" else 0) - max(ns) + 1)
+    return str(max(floors)) if floors else None
 
 
 def age_at(dob, s):
@@ -125,11 +146,18 @@ def grid(series, girls):
         # Third line: where she is from and who she plays for. The profile's own
         # town wins; failing that, the USAV region she was last rostered under,
         # which is a region and not a town, so it is marked as one.
+        if not g["byear"]:
+            yr = "&#8212;"
+        elif g["inferred"]:
+            yr = (f'<u title="No birthdate found. {g["byear"]} is the oldest birth year that '
+                  f'would have qualified her for every group she was rostered in.">'
+                  f'{g["byear"]}?</u>')
+        else:
+            yr = g["byear"]
         where = g["town"] or (f'{g["region"]} region' if g["region"] else "")
         place = " &#183; ".join(x for x in (where, g["club"]) if x) or "&#8212;"
         body.append(f'<tr><th class="rh"><span class="nm">{nm}</span>'
-                    f'<span class="by">{g["dob"][:4] if g["dob"] else "&#8212;"}'
-                    f' &#183; {rating}</span>'
+                    f'<span class="by">{yr} &#183; {rating}</span>'
                     f'<span class="pl" title="{place.replace("&#183;", "-")}">{place}</span></th>'
                     f'{"".join(cells)}<td class="tot">{g["n"]}</td></tr>')
     return f"""<div class="gridbox">
@@ -217,6 +245,7 @@ table.grid { border-collapse:separate; border-spacing:0; }
 .by { display:block; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:10px;
   color:var(--faint); font-variant-numeric:tabular-nums; }
 .by b { color:var(--accent); font-weight:650; }
+.by u { text-decoration:underline dotted; text-underline-offset:2px; }
 .pl { display:block; font-size:10px; color:var(--faint); white-space:nowrap; overflow:hidden;
   text-overflow:ellipsis; max-width:228px; }
 .by i { font-style:normal; }
@@ -288,7 +317,7 @@ def build():
     # records first, then name. Girls with no birthdate get their own block last.
     byyear = defaultdict(list)
     for g in girls:
-        byyear[g["dob"][:4] if g["dob"] else None].append(g)
+        byyear[g["byear"]].append(g)
     years = sorted([y for y in byyear if y], key=int) + ([None] if None in byyear else [])
 
     blocks = []
@@ -300,13 +329,16 @@ def build():
         once = sum(1 for g in rows if g["n"] == 1)
         places = sum(g["n"] for g in rows)
         label = f"Born {y}" if y else "Birth year unknown"
+        guessed = sum(1 for g in rows if g["inferred"])
+        guess = (f" &#183; {guessed} year{'s' if guessed > 1 else ''} inferred"
+                 if guessed else "")
         span = ""
         if rows:
             lo, hi = min(g["first"] for g in rows), max(g["last"] for g in rows)
             span = f" &#183; {series[lo]} to {series[hi]}"
         blocks.append(
             f'<div class="yr"><h3>{label}</h3><span class="meta">{len(rows)} girls &#183; '
-            f'{places} roster places &#183; {once} named once{span}</span></div>\n  '
+            f'{places} roster places &#183; {once} named once{span}{guess}</span></div>\n  '
             + grid(series, rows))
 
     ret = []
@@ -411,9 +443,16 @@ def build():
     been rated. Hover a rating for its confidence and match count. All of them were refetched for
     this build, so they are on one side of the September 2026 rating replacement.</li>
     <li><b>Birth years come from Volleyball Life</b>, matched by name. {len(girls) - undated} of the
-    {len(girls)} girls resolved to a profile carrying a date of birth; the other {undated} are in
-    the last block. Where more than one profile carried the same name the one with a birthdate and
-    the longest match record was taken, so a small number of birth years may be wrong.</li>
+    {len(girls)} girls resolved to a profile carrying a date of birth. Where more than one profile
+    carried the same name the one with a birthdate and the longest match record was taken, so a
+    small number of birth years may be wrong.</li>
+    <li><b>{undated} years are inferred, and marked with a dotted "?".</b> For a girl with no
+    birthdate, the year shown is the oldest she could be and still have qualified for every group
+    she was rostered in: a band is a ceiling, so U-N in year Y admits anyone born in Y &#8722; N + 1
+    or later, and she has to clear that floor at every appearance. A combined group is read at its
+    wider end. These are upper bounds on age, not findings &#8212; a girl who only ever played up
+    will be placed older than she is, and one series in a young band pulls the estimate down hard.
+    Hover the year to see what it rests on.</li>
     <li><b>One girl, one row.</b> USAV spells the same athlete several ways &#8212; a footnote
     asterisk, a shouted surname, a nickname, a dropped middle name &#8212; and two spellings used
     to get two rows. Spellings are now folded together, and two names that resolve to the same
@@ -430,7 +469,8 @@ def build():
 <footer>
   Rosters as published by USA Volleyball for the Beach NTDP training series, girls and women's
   groups only, 2023 through 2026. Fifteen series; the 2026 Winter series has not been dated.
-  Birth years, TruVolley ratings, home towns and clubs from Volleyball Life player profiles,
+  Birth years where known, plus TruVolley ratings, home towns and clubs, from Volleyball Life
+  player profiles,
   read {today}; regions from the USAV rosters themselves.
 </footer>
 </div>"""
