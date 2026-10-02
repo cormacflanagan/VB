@@ -1,0 +1,1380 @@
+<title>2026 and Younger &#183; Season calendar</title>
+<style>
+:root {
+  --ground:#EFF1EE; --surface:#FAFBFA; --raise:#FFFFFF;
+  --ink:#111B19; --body:#2C3A37; --muted:#5F6E6A; --faint:#8B9995;
+  --line:#D5DCD9; --hair:#E4E9E7; --wash:#EAEDEB;
+  --accent:#0B6E68; --accent-soft:#D9E7E5; --gold:#9A6B12; --gold-soft:#F3E4C4;
+  --h1:#EDF5F3; --h2:#CDE8E2; --h3:#A2D6CC; --h4:#6FC0B3; --h5:#2FA694; --h6:#00806F;
+  --hink1:var(--body); --hink5:#FFFFFF; --hink6:#FFFFFF;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:#0B1211; --surface:#121B19; --raise:#182322;
+    --ink:#E9EFEC; --body:#C6D2CE; --muted:#93A29E; --faint:#6E7D79;
+    --line:#243330; --hair:#1C2827; --wash:#161F1E;
+    --accent:#57C3B6; --accent-soft:#123733; --gold:#DCA84A; --gold-soft:#382B12;
+    --h1:#152220; --h2:#183A34; --h3:#1B5248; --h4:#1D6B5D; --h5:#1E8574; --h6:#2AA08C;
+    --hink1:var(--body); --hink5:#F2FBF8; --hink6:#06201B;
+  }
+}
+:root[data-theme="dark"] {
+  --ground:#0B1211; --surface:#121B19; --raise:#182322;
+  --ink:#E9EFEC; --body:#C6D2CE; --muted:#93A29E; --faint:#6E7D79;
+  --line:#243330; --hair:#1C2827; --wash:#161F1E;
+  --accent:#57C3B6; --accent-soft:#123733; --gold:#DCA84A; --gold-soft:#382B12;
+  --h1:#152220; --h2:#183A34; --h3:#1B5248; --h4:#1D6B5D; --h5:#1E8574; --h6:#2AA08C;
+  --hink1:var(--body); --hink5:#F2FBF8; --hink6:#06201B;
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--ground); color:var(--body);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; font-size:15px;
+  line-height:1.6; -webkit-font-smoothing:antialiased; }
+.wrap { max-width:none; margin:0; padding:0 clamp(18px,2.4vw,44px); }
+header { padding:60px 0 32px; border-bottom:1px solid var(--line); }
+.eyebrow { font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--accent); font-weight:650; margin:0 0 18px; }
+h1 { font-family:"Iowan Old Style",Georgia,"Times New Roman",serif;
+  font-size:clamp(32px,5vw,50px); line-height:1.06; letter-spacing:-.02em; color:var(--ink);
+  margin:0 0 16px; font-weight:600; text-wrap:balance; max-width:22ch; }
+h1 em { font-style:italic; color:var(--accent); }
+.standfirst { font-size:17px; color:var(--muted); max-width:68ch; margin:0; }
+h2 { font-family:"Iowan Old Style",Georgia,"Times New Roman",serif; font-size:24px;
+  color:var(--ink); font-weight:600; margin:0 0 6px; }
+.lede { color:var(--muted); margin:0 0 20px; max-width:72ch; font-size:14.5px; }
+section { padding:44px 0 0; }
+.facts { display:flex; flex-wrap:wrap; margin:30px 0 0; max-width:1300px;
+  border:1px solid var(--line); border-radius:3px; background:var(--surface); overflow:hidden; }
+.fact { flex:1 1 140px; padding:14px 18px; border-right:1px solid var(--hair); }
+.fact:last-child { border-right:0; }
+.fact b { display:block; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:23px; color:var(--ink); font-weight:600; font-variant-numeric:tabular-nums; }
+.fact span { font-size:11px; letter-spacing:.09em; text-transform:uppercase; color:var(--faint); }
+
+/* season shape */
+.months { display:flex; gap:6px; align-items:flex-end; height:150px; max-width:900px;
+  border:1px solid var(--line); border-radius:3px; background:var(--surface);
+  padding:16px 16px 8px; }
+.mb { flex:1; display:flex; flex-direction:column; justify-content:flex-end;
+  align-items:center; height:100%; gap:4px; }
+.mbar { width:100%; max-width:46px; background:var(--h5); border-radius:3px 3px 0 0;
+  min-height:2px; }
+.mbn { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:11px;
+  color:var(--ink); font-weight:650; font-variant-numeric:tabular-nums; }
+.mbl { font-size:10.5px; color:var(--faint); letter-spacing:.04em; }
+
+.panel { border:1px solid var(--line); border-radius:3px; background:var(--surface);
+  overflow-x:auto; }
+table { border-collapse:collapse; width:100%; }
+thead th { font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint);
+  font-weight:650; background:var(--wash); border-bottom:1px solid var(--line);
+  padding:10px 12px; text-align:left; white-space:nowrap; position:sticky; top:0; z-index:2; }
+td { padding:9px 12px; border-bottom:1px solid var(--hair); vertical-align:top; }
+tbody tr:hover td { background:var(--raise); }
+.mrow th { background:var(--wash); border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line); padding:9px 12px; text-align:left;
+  font-family:"Iowan Old Style",Georgia,serif; font-size:15px; color:var(--ink);
+  font-weight:600; letter-spacing:.01em; position:sticky; top:37px; z-index:1; }
+.mcount { font-family:system-ui,sans-serif; font-size:11px; font-weight:500;
+  color:var(--faint); letter-spacing:.06em; text-transform:uppercase; margin-left:10px; }
+.num { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-variant-numeric:tabular-nums; font-size:13px; }
+.dt { white-space:nowrap; color:var(--ink); font-weight:600; width:74px; }
+.brk { white-space:nowrap; width:170px; }
+.brk .dv { white-space:normal; }
+.brk b { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:12px;
+  color:var(--ink); font-weight:650; letter-spacing:.02em; }
+.evs td { border-top:1px solid var(--line); }
+.evc2 .brk { padding-left:12px; }
+.dow { color:var(--faint); font-weight:400; font-size:11px; }
+.evc { min-width:250px; max-width:420px; }
+.evc .lnk { color:var(--ink); font-weight:600; font-size:13.5px; text-decoration:none; }
+.evc .lnk:hover { color:var(--accent); text-decoration:underline; text-underline-offset:2px; }
+.dv { display:block; font-size:11.5px; color:var(--faint); margin-top:2px; }
+.dv i { font-style:normal; color:var(--muted); font-weight:650;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:10.5px; }
+.loc { font-size:12.5px; color:var(--muted); max-width:200px; }
+.sanc { font-size:9.5px; letter-spacing:.07em; text-transform:uppercase; color:var(--muted);
+  border:1px solid var(--line); border-radius:2px; padding:2px 5px; white-space:nowrap;
+  display:inline-block; }
+.bdy { white-space:nowrap; }
+h3 { font-family:"Iowan Old Style",Georgia,serif; font-size:17px; color:var(--ink);
+  font-weight:600; margin:0 0 10px; }
+.ldivs { display:flex; flex-wrap:wrap; gap:5px; max-width:460px; }
+.lcl td { background:color-mix(in srgb,var(--accent-soft) 24%,transparent); }
+.tr { color:var(--gold); background:var(--gold-soft); }
+.trn td { background:color-mix(in srgb,var(--gold-soft) 32%,transparent); }
+.lt { display:inline-block; margin-left:7px; font-size:9px; letter-spacing:.09em;
+  text-transform:uppercase; color:var(--accent); background:var(--accent-soft);
+  border-radius:2px; padding:1px 5px; font-weight:650; vertical-align:1px; }
+.ldiv { font-size:11px; color:var(--accent); background:var(--accent-soft);
+  border-radius:2px; padding:2px 7px; text-decoration:none; white-space:nowrap; }
+.ldiv:hover { text-decoration:underline; text-underline-offset:2px; }
+.cbva { color:var(--accent); border-color:var(--accent-soft); text-decoration:none;
+  font-weight:650; margin-left:5px; }
+.cbva:hover { background:var(--accent-soft); }
+.ht { width:52px; text-align:center; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-variant-numeric:tabular-nums; font-size:13.5px; font-weight:650; color:var(--hink1);
+  border-left:2px solid var(--surface); }
+.h0 { color:var(--faint); font-weight:400; }
+.h1 { background:var(--h1); } .h2 { background:var(--h2); } .h3 { background:var(--h3); }
+.h4 { background:var(--h4); }
+.h5 { background:var(--h5); color:var(--hink5); }
+.h6 { background:var(--h6); color:var(--hink6); }
+.nxc { white-space:nowrap; font-size:12.5px; }
+.nx { color:var(--accent); font-weight:600; text-decoration:none; }
+.nx:hover { text-decoration:underline; text-underline-offset:2px; }
+.dim { color:var(--faint); }
+.nw { white-space:nowrap; }
+.lnk { color:inherit; }
+.legend { display:flex; flex-wrap:wrap; gap:8px 18px; align-items:center; margin:14px 0 0;
+  font-size:12px; color:var(--muted); }
+.key { display:inline-flex; align-items:center; gap:6px; }
+.sw { width:26px; height:14px; border:1px solid var(--line); border-radius:2px; display:inline-block; }
+.ramp { display:inline-flex; }
+.ramp span { width:22px; height:14px; border:1px solid var(--line); border-left:0; }
+.ramp span:first-child { border-left:1px solid var(--line); }
+.notes ul { padding-left:19px; margin:10px 0 0; }
+.notes li { margin:7px 0; font-size:13.5px; color:var(--muted); max-width:78ch; }
+.notes b { color:var(--body); font-weight:600; }
+footer { border-top:1px solid var(--line); padding:20px 0 64px; margin-top:44px;
+  font-size:12px; color:var(--faint); max-width:82ch; }
+a { color:var(--accent); }
+:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+@media (prefers-reduced-motion:reduce) { * { transition:none !important; } }
+
+.lt.nat { background:var(--gold-soft); color:var(--gold); }
+.pill { display:inline-block; min-width:22px; padding:1px 5px; margin-right:3px;
+  border-radius:3px; font-size:12px; text-align:center; font-variant-numeric:tabular-nums; }
+</style>
+
+<div class="wrap">
+<header>
+  <p class="eyebrow">Girls beach volleyball &#183; 2026 and younger &#183; Season calendar</p>
+  <h1>Where the 2026-and-younger field <em>actually turns up</em></h1>
+  <p class="standfirst">Every tournament the 60 highest-rated girls graduating in 2026 or
+  later contested in the twelve months to 14 September 2026, in calendar
+  order, split by age bracket, with how many of the top 60, top 30 and top 15 entered each
+  field. Underneath it, the season ahead: every date already posted that this field has a
+  reason to look at, the p1440 Futures Tour included.</p>
+  <div class="facts">
+    <div class="fact"><b>93</b><span>Brackets shown</span></div>
+    <div class="fact"><b>82</b><span>Across events</span></div>
+    <div class="fact"><b>34</b><span>Biggest single field</span></div>
+    <div class="fact"><b>24</b><span>Dates posted ahead</span></div>
+    <div class="fact"><b>11</b><span>Futures Tour stops</span></div>
+    <div class="fact"><b>232</b><span>Events entered in all</span></div>
+  </div>
+</header>
+
+<section>
+  <h2>The shape of the season</h2>
+  <p class="lede">The biggest single field in each month &#8212; how many of the top 60 met in
+  one bracket at the busiest event of that month.</p>
+  <div class="months"><div class="mb" title="Sep 2025 &#183; busiest: AVP Laguna - Contender  2025 &#183; Women&#x27;s (11 of 60)"><span class="mbar" style="height:32%"></span><span class="mbn">11</span><span class="mbl">Sep</span></div><div class="mb" title="Oct 2025 &#183; busiest: Women&#x27;s Open at Manhattan Pier, Manhattan Beach &#183; Women&#x27;s (9 of 60)"><span class="mbar" style="height:26%"></span><span class="mbn">9</span><span class="mbl">Oct</span></div><div class="mb" title="Nov 2025 &#183; busiest: AVP Juniors West Coast Championships 2025 &#183; 18U (25 of 60)"><span class="mbar" style="height:74%"></span><span class="mbn">25</span><span class="mbl">Nov</span></div><div class="mb" title="Dec 2025 &#183; busiest: Beach NTDP Winter Training Series &#183; U19/U20 (17 of 60)"><span class="mbar" style="height:50%"></span><span class="mbn">17</span><span class="mbl">Dec</span></div><div class="mb" title="Jan 2026 &#183; busiest: 2026 Futures Tour: Arizona &#183; 18U (19 of 60)"><span class="mbar" style="height:56%"></span><span class="mbn">19</span><span class="mbl">Jan</span></div><div class="mb" title="Feb 2026 &#183; busiest: Girls Beach High School Pre-Season Tournament &#183; 18U (9 of 60)"><span class="mbar" style="height:26%"></span><span class="mbn">9</span><span class="mbl">Feb</span></div><div class="mb" title="Mar 2026 &#183; busiest: 2026 Futures Tour Spring Championship &#183; 18U (33 of 60)"><span class="mbar" style="height:97%"></span><span class="mbn">33</span><span class="mbl">Mar</span></div><div class="mb" title="Apr 2026 &#183; busiest: AVP Austin Open &#183; Women&#x27;s (12 of 60)"><span class="mbar" style="height:35%"></span><span class="mbn">12</span><span class="mbl">Apr</span></div><div class="mb" title="May 2026 &#183; busiest: Beach NTDP Spring Training Series &#183; U19/U20 (15 of 60)"><span class="mbar" style="height:44%"></span><span class="mbn">15</span><span class="mbl">May</span></div><div class="mb" title="Jun 2026 &#183; busiest: 2026 Futures Tour WESTERN NATIONAL CHAMPIONSHIPS &#183; 18U (16 of 60)"><span class="mbar" style="height:47%"></span><span class="mbn">16</span><span class="mbl">Jun</span></div><div class="mb" title="Jul 2026 &#183; busiest: 2026 BVCA Individual Pairs National Championship &#183; 18U (34 of 60)"><span class="mbar" style="height:100%"></span><span class="mbn">34</span><span class="mbl">Jul</span></div><div class="mb" title="Aug 2026 &#183; busiest: AVP Manhattan Beach - Heritage Major 2026 &#183; Women&#x27;s (11 of 60)"><span class="mbar" style="height:32%"></span><span class="mbn">11</span><span class="mbl">Aug</span></div><div class="mb" title="Sep 2026 &#183; busiest: Wedbush presents The Hermosa Beach Open 2026 &#183; Women&#x27;s (7 of 60)"><span class="mbar" style="height:21%"></span><span class="mbn">7</span><span class="mbl">Sep</span></div></div>
+</section>
+
+<section>
+  <h2>The calendar</h2>
+  <p class="lede">One row per <i>bracket</i>, not per event: the 18U field and the 17U field
+  running beside it are separate competitions, so each is counted and judged on its own. Every
+  bracket that drew at least 4 of the top 60 is here, oldest first; 171
+  further brackets drew fewer and are left out. Shading runs on the share of each tier present,
+  so the three columns are directly comparable: 12 of the top 15 shades darker than 21 of the
+  top 30. The last column is this season's edition where one is already scheduled.</p>
+  <p class="lede"><b>The NTDP training series</b>, marked <span class="lt tr">training</span>:
+  invitational residential camps that produce no result, so their turnout columns count who was
+  <i>selected</i>, not who entered. Rosters come from USA Volleyball, one row per girls' age
+  group, with the names on hover.</p>
+  <div class="panel">
+    <table>
+      <thead><tr>
+        <th scope="col">Date</th><th scope="col">Tournament</th><th scope="col">Bracket</th>
+        <th scope="col" style="text-align:center">Top 60</th>
+        <th scope="col" style="text-align:center">Top 30</th>
+        <th scope="col" style="text-align:center">Top 15</th>
+        <th scope="col">Location</th><th scope="col">Body</th>
+        <th scope="col">This season</th>
+      </tr></thead>
+      <tbody>
+<tr class="mrow"><th colspan="9" scope="rowgroup">September 2025<span class="mcount">5 events</span></th></tr>
+      <tr class="evs">
+        <td class="dt num">14 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/30510" target="_blank"
+          rel="noopener">AVP Laguna - Contender  2025</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens <i>&#215;11</i></span></td>
+<td class="ht h3" title="11 of the top 60 played Women&#x27;s">11</td><td class="ht h3" title="9 of the top 30 played Women&#x27;s">9</td><td class="ht h4" title="5 of the top 15 played Women&#x27;s">5</td>
+        <td class="loc">Laguna Beach</td>
+        <td class="bdy"><span class="sanc">AVPA</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">14 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/32636" target="_blank"
+          rel="noopener">Women&#x27;s Open at Ocean Park, Santa Monica</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;5</i></span></td>
+<td class="ht h2" title="5 of the top 60 played Women&#x27;s">5</td><td class="ht h1" title="1 of the top 30 played Women&#x27;s">1</td><td class="ht h0" title="0 of the top 15 played Women&#x27;s">&#183;</td>
+        <td class="loc">&#8212;</td>
+        <td class="bdy"><span class="sanc">AVPA</span><a class="sanc cbva" href="https://cbva.com/tournaments/154/503" target="_blank" rel="noopener" title="This event on CBVA">CBVA</a></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">21 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/32055" target="_blank"
+          rel="noopener">Super Girl Pro Invitational &#x27;25</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Girls 18U <i>&#215;4</i></span></td>
+<td class="ht h1" title="4 of the top 60 played 18U">4</td><td class="ht h1" title="1 of the top 30 played 18U">1</td><td class="ht h0" title="0 of the top 15 played 18U">&#183;</td>
+        <td class="loc">Oceanside Pier</td>
+        <td class="bdy"><span class="sanc">—</span></td>
+        <td class="nxc"><a class="lnk nx" href="https://volleyballlife.com/tournament/40465" target="_blank" rel="noopener">22 Aug 2026</a></td>
+      </tr>
+      <tr class="evs trn">
+        <td class="dt num" rowspan="2">27&#8211;28 <span class="dow">Sat</span></td>
+        <td class="evc" rowspan="2"><a class="lnk" href="https://usavolleyball.org/story/2025-beach-ntdp-fall-training-series-rosters-announced/" target="_blank"
+          rel="noopener">Beach NTDP Fall Training Series</a><span class="lt tr">training</span></td>
+        <td class="brk"><b>U19</b><span class="dv"><span title="Julia Anisimova, Christy Boulware, Allyn Brewer, Ella Hughes, Abigail (Abby) King, Thalia Lindahl, Cora Loomer, Macy Ludwig, Kara Namimatsu, Delaney Singleton, Madison Vega, Madeleine Wagner, Kylee (Jojo) Wilson">Girls U19 <i>&#215;13</i></span></span></td>
+<td class="ht h2" title="6 of the top 60 played U19">6</td><td class="ht h2" title="3 of the top 30 played U19">3</td><td class="ht h1" title="1 of the top 15 played U19">1</td>
+        <td class="loc" rowspan="2">Virginia Beach, Virginia</td>
+        <td class="bdy" rowspan="2"><span class="sanc">USAV</span></td>
+        <td class="nxc" rowspan="2"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evc2 trn">
+        <td class="brk"><b>U17</b><span class="dv"><span title="Simrin Adams, Sarah Cowan, Emerson Harper, Breeze Johnson, Nariah Johnson, Edie Joseph, Anna Koehl, Ashlynn Proctor, Brooke Proctor, Capri Romjue, Milan Rivera, Elle Sossong, Summer Tukua, Danica Waterman, Jordyn Wilson">Girls U17 <i>&#215;15</i></span></span></td>
+<td class="ht h1" title="4 of the top 60 played U17">4</td><td class="ht h1" title="1 of the top 30 played U17">1</td><td class="ht h0" title="0 of the top 15 played U17">&#183;</td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">28 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/30429" target="_blank"
+          rel="noopener">AVP Next Men’s &amp; Women’s Fall Triple Crown Series #1 $8,000 Purse</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Women&#x27;s Open <i>&#215;4</i></span></td>
+<td class="ht h1" title="4 of the top 60 played Women&#x27;s">4</td><td class="ht h2" title="4 of the top 30 played Women&#x27;s">4</td><td class="ht h3" title="4 of the top 15 played Women&#x27;s">4</td>
+        <td class="loc">ATX Beach</td>
+        <td class="bdy"><span class="sanc">AVPA</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+<tr class="mrow"><th colspan="9" scope="rowgroup">October 2025<span class="mcount">5 events</span></th></tr>
+      <tr class="evs">
+        <td class="dt num">5 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/33020" target="_blank"
+          rel="noopener">Women&#x27;s Open at Manhattan Pier, Manhattan Beach</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;9</i></span></td>
+<td class="ht h2" title="9 of the top 60 played Women&#x27;s">9</td><td class="ht h2" title="4 of the top 30 played Women&#x27;s">4</td><td class="ht h1" title="1 of the top 15 played Women&#x27;s">1</td>
+        <td class="loc">&#8212;</td>
+        <td class="bdy"><span class="sanc">AVPA</span><a class="sanc cbva" href="https://cbva.com/tournaments/170/540" target="_blank" rel="noopener" title="This event on CBVA">CBVA</a></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">18 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/33259" target="_blank"
+          rel="noopener">Women&#x27;s Open at Belmont Shore, Long Beach</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;5</i></span></td>
+<td class="ht h2" title="5 of the top 60 played Women&#x27;s">5</td><td class="ht h2" title="3 of the top 30 played Women&#x27;s">3</td><td class="ht h0" title="0 of the top 15 played Women&#x27;s">&#183;</td>
+        <td class="loc">&#8212;</td>
+        <td class="bdy"><span class="sanc">AVPA</span><a class="sanc cbva" href="https://cbva.com/tournaments/175/555" target="_blank" rel="noopener" title="This event on CBVA">CBVA</a></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">25 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/30472" target="_blank"
+          rel="noopener">Surf City Women’s Open ($1000)</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;4</i></span></td>
+<td class="ht h1" title="4 of the top 60 played Women&#x27;s">4</td><td class="ht h1" title="1 of the top 30 played Women&#x27;s">1</td><td class="ht h0" title="0 of the top 15 played Women&#x27;s">&#183;</td>
+        <td class="loc">Huntington Beach Pier</td>
+        <td class="bdy"><span class="sanc">—</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">26 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/33462" target="_blank"
+          rel="noopener">Women&#x27;s Open at Ocean Park, Santa Monica</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;8</i></span></td>
+<td class="ht h2" title="8 of the top 60 played Women&#x27;s">8</td><td class="ht h2" title="5 of the top 30 played Women&#x27;s">5</td><td class="ht h0" title="0 of the top 15 played Women&#x27;s">&#183;</td>
+        <td class="loc">&#8212;</td>
+        <td class="bdy"><span class="sanc">AVPA</span><a class="sanc cbva" href="https://cbva.com/tournaments/183/582" target="_blank" rel="noopener" title="This event on CBVA">CBVA</a></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">26 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/30437" target="_blank"
+          rel="noopener">AVP Next Men’s &amp; Women’s Fall Triple Crown Series #2 $8,000 Purse</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Women&#x27;s Open <i>&#215;5</i></span></td>
+<td class="ht h2" title="5 of the top 60 played Women&#x27;s">5</td><td class="ht h2" title="4 of the top 30 played Women&#x27;s">4</td><td class="ht h3" title="4 of the top 15 played Women&#x27;s">4</td>
+        <td class="loc">ATX Beach</td>
+        <td class="bdy"><span class="sanc">AVPA</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+<tr class="mrow"><th colspan="9" scope="rowgroup">November 2025<span class="mcount">7 events</span></th></tr>
+      <tr class="evs">
+        <td class="dt num">1 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/33620" target="_blank"
+          rel="noopener">Women&#x27;s Open at Newland, Huntington Beach</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;5</i></span></td>
+<td class="ht h2" title="5 of the top 60 played Women&#x27;s">5</td><td class="ht h2" title="3 of the top 30 played Women&#x27;s">3</td><td class="ht h2" title="2 of the top 15 played Women&#x27;s">2</td>
+        <td class="loc">&#8212;</td>
+        <td class="bdy"><span class="sanc">AVPA</span><a class="sanc cbva" href="https://cbva.com/tournaments/184/585" target="_blank" rel="noopener" title="This event on CBVA">CBVA</a></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num" rowspan="2">9 <span class="dow">Sun</span></td>
+        <td class="evc" rowspan="2"><a class="lnk" href="https://volleyballlife.com/tournament/25578" target="_blank"
+          rel="noopener">AVP Juniors West Coast Championships 2025</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Girls 18U <i>&#215;25</i></span></td>
+<td class="ht h4" title="25 of the top 60 played 18U">25</td><td class="ht h6" title="19 of the top 30 played 18U">19</td><td class="ht h5" title="9 of the top 15 played 18U">9</td>
+        <td class="loc" rowspan="2">Manhattan Beach</td>
+        <td class="bdy" rowspan="2"><span class="sanc">AVPA</span></td>
+        <td class="nxc" rowspan="2"><a class="lnk nx" href="https://volleyballlife.com/tournament/34245" target="_blank" rel="noopener">7 Nov 2026</a></td>
+      </tr>
+      <tr class="evc2">
+        <td class="brk"><b>17U</b><span class="dv">Girls 17U <i>&#215;7</i></span></td>
+<td class="ht h2" title="7 of the top 60 played 17U">7</td><td class="ht h1" title="1 of the top 30 played 17U">1</td><td class="ht h0" title="0 of the top 15 played 17U">&#183;</td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">16 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/31995" target="_blank"
+          rel="noopener">2025 p1440 Elite Dev Open Tournament</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Girls 18U <i>&#215;5</i></span></td>
+<td class="ht h2" title="5 of the top 60 played 18U">5</td><td class="ht h2" title="5 of the top 30 played 18U">5</td><td class="ht h3" title="3 of the top 15 played 18U">3</td>
+        <td class="loc">Grand Sands</td>
+        <td class="bdy"><span class="sanc">p1440</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">16 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/33840" target="_blank"
+          rel="noopener">Women&#x27;s Open at Newland, Huntington Beach</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;4</i></span></td>
+<td class="ht h1" title="4 of the top 60 played Women&#x27;s">4</td><td class="ht h1" title="1 of the top 30 played Women&#x27;s">1</td><td class="ht h0" title="0 of the top 15 played Women&#x27;s">&#183;</td>
+        <td class="loc">&#8212;</td>
+        <td class="bdy"><span class="sanc">AVPA</span><a class="sanc cbva" href="https://cbva.com/tournaments/190/608" target="_blank" rel="noopener" title="This event on CBVA">CBVA</a></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">23 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/34019" target="_blank"
+          rel="noopener">Women&#x27;s Open at Main Beach, Laguna Beach</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;5</i></span></td>
+<td class="ht h2" title="5 of the top 60 played Women&#x27;s">5</td><td class="ht h1" title="2 of the top 30 played Women&#x27;s">2</td><td class="ht h1" title="1 of the top 15 played Women&#x27;s">1</td>
+        <td class="loc">&#8212;</td>
+        <td class="bdy"><span class="sanc">AVPA</span><a class="sanc cbva" href="https://cbva.com/tournaments/193/619" target="_blank" rel="noopener" title="This event on CBVA">CBVA</a></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">23 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/30438" target="_blank"
+          rel="noopener">AVP Next Men’s &amp; Women’s Fall Triple Crown Series #3 $12,000 Purse</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Women&#x27;s Open <i>&#215;4</i></span></td>
+<td class="ht h1" title="4 of the top 60 played Women&#x27;s">4</td><td class="ht h2" title="3 of the top 30 played Women&#x27;s">3</td><td class="ht h3" title="3 of the top 15 played Women&#x27;s">3</td>
+        <td class="loc">ATX Beach</td>
+        <td class="bdy"><span class="sanc">AVPA</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">30 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/25638" target="_blank"
+          rel="noopener">AVP Juniors East Coast Championships 2025</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Girls 18U <i>&#215;7</i></span></td>
+<td class="ht h2" title="7 of the top 60 played 18U">7</td><td class="ht h2" title="4 of the top 30 played 18U">4</td><td class="ht h2" title="2 of the top 15 played 18U">2</td>
+        <td class="loc">Sheraton Sand Key</td>
+        <td class="bdy"><span class="sanc">AVPA</span></td>
+        <td class="nxc"><a class="lnk nx" href="https://volleyballlife.com/tournament/34246" target="_blank" rel="noopener">27 Nov 2026</a></td>
+      </tr>
+<tr class="mrow"><th colspan="9" scope="rowgroup">December 2025<span class="mcount">2 events</span></th></tr>
+      <tr class="evs">
+        <td class="dt num">14 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/31527" target="_blank"
+          rel="noopener">AAU Herrmosa Beach Winter Series Championships</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Girls 18U <i>&#215;9</i></span></td>
+<td class="ht h2" title="9 of the top 60 played 18U">9</td><td class="ht h3" title="6 of the top 30 played 18U">6</td><td class="ht h2" title="2 of the top 15 played 18U">2</td>
+        <td class="loc">Hermosa Beach Pier</td>
+        <td class="bdy"><span class="sanc">AAU</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs trn">
+        <td class="dt num" rowspan="3">27&#8211;29 <span class="dow">Sat</span></td>
+        <td class="evc" rowspan="3"><a class="lnk" href="https://usavolleyball.org/story/usa-volleyball-announces-2025-beach-ntdp-winter-training-series-rosters/" target="_blank"
+          rel="noopener">Beach NTDP Winter Training Series</a><span class="lt tr">training</span></td>
+        <td class="brk"><b>U19/U20</b><span class="dv"><span title="Bella Amey, Christy Boulware, Emma Champagne, Ella Dueck, Elena Fisher, Ella Grimes, Sarah Gyepes, Ciela Hendrickson, Alexia Heyn, Avery Junk, Addison Junk, Abigail (Abby) King, Cora Loomer, Macy Ludwig, Shayla Martinez, Sara Moynihan, Kara Namimatsu, Estelle Reese, Jordyn Scribner, Delaney Singleton, Sandie Souza, Madison Vega, Madeleine Wagner, Addison West, Kylee (JoJo) Wilson">Girls U19/U20 <i>&#215;25</i></span></span></td>
+<td class="ht h3" title="17 of the top 60 played U19/U20">17</td><td class="ht h4" title="11 of the top 30 played U19/U20">11</td><td class="ht h4" title="6 of the top 15 played U19/U20">6</td>
+        <td class="loc" rowspan="3">Manhattan Beach, California</td>
+        <td class="bdy" rowspan="3"><span class="sanc">USAV</span></td>
+        <td class="nxc" rowspan="3"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evc2 trn">
+        <td class="brk"><b>U18</b><span class="dv"><span title="Simrin Adams, Sarah Albers, Sienna Castillo, Ava Champagne, Sarah Cowan, Logan Ann Georgy, Claire Hanson, Milan Hendrickson, Olivia Herron, Sage Illian, Lauren Leach, Georgeann Lee, Abby Moffett, Milaniakai Padilla, Ashlynn Proctor, Lia Ray, Lerin Rosenthal, Sadie Stafford, Jordyn Wilson, Zoe Znider">Girls U18 <i>&#215;20</i></span></span></td>
+<td class="ht h3" title="13 of the top 60 played U18">13</td><td class="ht h3" title="6 of the top 30 played U18">6</td><td class="ht h3" title="3 of the top 15 played U18">3</td>
+      </tr>
+      <tr class="evc2 trn">
+        <td class="brk"><b>U17</b><span class="dv"><span title="Stacy Balestrieri, Kate Berry, Kara Boas, Ella Buchanan, Reagan Carlin, Isabella Elston, Haisley Flanagan, Madison Gillinger, Julianna Godbey, Taylie Hansen, Emerson Harper, Charlotte Jansen, Nariah Johnson, Sienna Mattoon, Lucy Matuszak, Brooke Proctor, Milana Rivera, Elyse Smelcer, Harper Terry, Summer Tukua, Avery Tussing, Lily Vandeweghe, Parker Wilson, Elyse Wong">Girls U17 <i>&#215;24</i></span></span></td>
+<td class="ht h1" title="4 of the top 60 played U17">4</td><td class="ht h1" title="2 of the top 30 played U17">2</td><td class="ht h0" title="0 of the top 15 played U17">&#183;</td>
+      </tr>
+<tr class="mrow"><th colspan="9" scope="rowgroup">January 2026<span class="mcount">6 events</span></th></tr>
+      <tr class="evs">
+        <td class="dt num">11 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/25718" target="_blank"
+          rel="noopener">California IBVL Winter Classic - p1440</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Girls 18:U (Grad Year 2026-2027) <i>&#215;13</i></span></td>
+<td class="ht h3" title="13 of the top 60 played 18U">13</td><td class="ht h3" title="8 of the top 30 played 18U">8</td><td class="ht h3" title="4 of the top 15 played 18U">4</td>
+        <td class="loc">Hermosa Beach Pier</td>
+        <td class="bdy"><span class="sanc">p1440</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">17 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/33070" target="_blank"
+          rel="noopener">PCA/FBC COLLEGE SHOWCASE Pairs Tournament</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Class of 2026 <i>&#215;4</i></span></td>
+<td class="ht h1" title="4 of the top 60 played 18U">4</td><td class="ht h2" title="3 of the top 30 played 18U">3</td><td class="ht h3" title="3 of the top 15 played 18U">3</td>
+        <td class="loc">Pompano Beach North of pier</td>
+        <td class="bdy"><span class="sanc">AVPA</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">18 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/31568" target="_blank"
+          rel="noopener">2026 Futures Tour: Arizona</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Class of &#x27;26 &amp; Younger <i>&#215;19</i></span></td>
+<td class="ht h4" title="19 of the top 60 played 18U">19</td><td class="ht h3" title="9 of the top 30 played 18U">9</td><td class="ht h3" title="3 of the top 15 played 18U">3</td>
+        <td class="loc">Arizona Athletic Grounds</td>
+        <td class="bdy"><span class="sanc">p1440</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">19 <span class="dow">Mon</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/32390" target="_blank"
+          rel="noopener">AAU MLK Open</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Girls 18U <i>&#215;5</i></span></td>
+<td class="ht h2" title="5 of the top 60 played 18U">5</td><td class="ht h1" title="2 of the top 30 played 18U">2</td><td class="ht h0" title="0 of the top 15 played 18U">&#183;</td>
+        <td class="loc">Hermosa Beach Pier</td>
+        <td class="bdy"><span class="sanc">AAU</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">25 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/25008" target="_blank"
+          rel="noopener">IBVL Winter Nationals &amp; U18 ISF Trials</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Girls U18 (Year Born: 2008-2009-2010) <i>&#215;10</i></span></td>
+<td class="ht h2" title="10 of the top 60 played 18U">10</td><td class="ht h2" title="4 of the top 30 played 18U">4</td><td class="ht h3" title="3 of the top 15 played 18U">3</td>
+        <td class="loc">Hermosa Beach Pier</td>
+        <td class="bdy"><span class="sanc">—</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">31 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/34180" target="_blank"
+          rel="noopener">2026 USA Volleyball U18 Beach National Team Trials</a></td>
+        <td class="brk"><b>18U</b><span class="dv">U18 Girls <i>&#215;13</i></span></td>
+<td class="ht h3" title="13 of the top 60 played 18U">13</td><td class="ht h3" title="6 of the top 30 played 18U">6</td><td class="ht h3" title="3 of the top 15 played 18U">3</td>
+        <td class="loc">Manhattan Beach Pier</td>
+        <td class="bdy"><span class="sanc">USAV</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+<tr class="mrow"><th colspan="9" scope="rowgroup">February 2026<span class="mcount">7 events</span></th></tr>
+      <tr class="evs">
+        <td class="dt num">1 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/32392" target="_blank"
+          rel="noopener">Girls Beach High School Pre-Season Tournament</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Girls Varsity <i>&#215;9</i></span></td>
+<td class="ht h2" title="9 of the top 60 played 18U">9</td><td class="ht h2" title="3 of the top 30 played 18U">3</td><td class="ht h2" title="2 of the top 15 played 18U">2</td>
+        <td class="loc">Hermosa Beach Pier</td>
+        <td class="bdy"><span class="sanc">AAU</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">15 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/34360" target="_blank"
+          rel="noopener">AVP Next Spring Texas Triple Crown Series #1 $8,000 Purse</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Women&#x27;s Open <i>&#215;4</i></span></td>
+<td class="ht h1" title="4 of the top 60 played Women&#x27;s">4</td><td class="ht h2" title="3 of the top 30 played Women&#x27;s">3</td><td class="ht h3" title="3 of the top 15 played Women&#x27;s">3</td>
+        <td class="loc">ATX Beach</td>
+        <td class="bdy"><span class="sanc">AVPA</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">21 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/35531" target="_blank"
+          rel="noopener">Men&#x27;s/Women&#x27;s Open - AVP League Format</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;7</i></span></td>
+<td class="ht h2" title="7 of the top 60 played Women&#x27;s">7</td><td class="ht h2" title="5 of the top 30 played Women&#x27;s">5</td><td class="ht h3" title="3 of the top 15 played Women&#x27;s">3</td>
+        <td class="loc">2400 Ocean Front Walk</td>
+        <td class="bdy"><span class="sanc">—</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">22 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/31569" target="_blank"
+          rel="noopener">2026 Futures Tour: Alabama</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Class of &#x27;26 &amp; Younger <i>&#215;8</i></span></td>
+<td class="ht h2" title="8 of the top 60 played 18U">8</td><td class="ht h2" title="5 of the top 30 played 18U">5</td><td class="ht h3" title="4 of the top 15 played 18U">4</td>
+        <td class="loc">Gulf Shores Public Beach</td>
+        <td class="bdy"><span class="sanc">p1440</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">22 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/32993" target="_blank"
+          rel="noopener">AAU California Open</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Girls 18U <i>&#215;6</i></span></td>
+<td class="ht h2" title="6 of the top 60 played 18U">6</td><td class="ht h2" title="3 of the top 30 played 18U">3</td><td class="ht h0" title="0 of the top 15 played 18U">&#183;</td>
+        <td class="loc">Hermosa Beach Pier</td>
+        <td class="bdy"><span class="sanc">AAU</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">28 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/36177" target="_blank"
+          rel="noopener">Highline Sponsorship Open ($5K)</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;6</i></span></td>
+<td class="ht h2" title="6 of the top 60 played Women&#x27;s">6</td><td class="ht h2" title="5 of the top 30 played Women&#x27;s">5</td><td class="ht h2" title="2 of the top 15 played Women&#x27;s">2</td>
+        <td class="loc">Ocean Park North</td>
+        <td class="bdy"><span class="sanc">AVPA</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">28 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/34540" target="_blank"
+          rel="noopener">2/27-28 ~ AVPnext $10K ‘SIDEOUT Rules’ (M/W O)</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;4</i></span></td>
+<td class="ht h1" title="4 of the top 60 played Women&#x27;s">4</td><td class="ht h2" title="3 of the top 30 played Women&#x27;s">3</td><td class="ht h3" title="3 of the top 15 played Women&#x27;s">3</td>
+        <td class="loc">Third Coast HTX</td>
+        <td class="bdy"><span class="sanc">AVPA</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+<tr class="mrow"><th colspan="9" scope="rowgroup">March 2026<span class="mcount">9 events</span></th></tr>
+      <tr class="evs">
+        <td class="dt num">1 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/32939" target="_blank"
+          rel="noopener">California IBVL Winter Series Championships - p1440 Crown Series</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Girls 18U <i>&#215;6</i></span></td>
+<td class="ht h2" title="6 of the top 60 played 18U">6</td><td class="ht h1" title="1 of the top 30 played 18U">1</td><td class="ht h0" title="0 of the top 15 played 18U">&#183;</td>
+        <td class="loc">Hermosa Beach Pier</td>
+        <td class="bdy"><span class="sanc">p1440</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">7 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/37252" target="_blank"
+          rel="noopener">Men&#x27;s Open + Women&#x27;s Open at Manhattan Pier, Manhattan Beach</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;5</i></span></td>
+<td class="ht h2" title="5 of the top 60 played Women&#x27;s">5</td><td class="ht h1" title="2 of the top 30 played Women&#x27;s">2</td><td class="ht h1" title="1 of the top 15 played Women&#x27;s">1</td>
+        <td class="loc">&#8212;</td>
+        <td class="bdy"><span class="sanc">AVPA</span><a class="sanc cbva" href="https://cbva.com/tournaments/4578/16223" target="_blank" rel="noopener" title="This event on CBVA">CBVA</a></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">8 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/36426" target="_blank"
+          rel="noopener">Men&#x27;s/Women&#x27;s Open - “League” Format</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;4</i></span></td>
+<td class="ht h1" title="4 of the top 60 played Women&#x27;s">4</td><td class="ht h2" title="3 of the top 30 played Women&#x27;s">3</td><td class="ht h0" title="0 of the top 15 played Women&#x27;s">&#183;</td>
+        <td class="loc">Manhattan Beach Pier South</td>
+        <td class="bdy"><span class="sanc">AVPA</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">14 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/37255" target="_blank"
+          rel="noopener">Women&#x27;s Open + Women&#x27;s B at North Beach, Santa Monica</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;5</i></span></td>
+<td class="ht h2" title="5 of the top 60 played Women&#x27;s">5</td><td class="ht h1" title="1 of the top 30 played Women&#x27;s">1</td><td class="ht h0" title="0 of the top 15 played Women&#x27;s">&#183;</td>
+        <td class="loc">&#8212;</td>
+        <td class="bdy"><span class="sanc">AVPA</span><a class="sanc cbva" href="https://cbva.com/tournaments/4781/16871" target="_blank" rel="noopener" title="This event on CBVA">CBVA</a></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">15 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/32995" target="_blank"
+          rel="noopener">AAU Super Regional</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Girls 18U <i>&#215;8</i></span></td>
+<td class="ht h2" title="8 of the top 60 played 18U">8</td><td class="ht h2" title="4 of the top 30 played 18U">4</td><td class="ht h3" title="4 of the top 15 played 18U">4</td>
+        <td class="loc">Hermosa Beach Pier</td>
+        <td class="bdy"><span class="sanc">AAU</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">15 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/31622" target="_blank"
+          rel="noopener">2026 Futures Tour: Florida</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Class of &#x27;26 &amp; Younger <i>&#215;8</i></span></td>
+<td class="ht h2" title="8 of the top 60 played 18U">8</td><td class="ht h2" title="3 of the top 30 played 18U">3</td><td class="ht h1" title="1 of the top 15 played 18U">1</td>
+        <td class="loc">Pompano Beach</td>
+        <td class="bdy"><span class="sanc">p1440</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">15 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/34361" target="_blank"
+          rel="noopener">AVP Next Spring Texas Triple Crown Series #2 $8,000 Purse</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;6</i></span></td>
+<td class="ht h2" title="6 of the top 60 played Women&#x27;s">6</td><td class="ht h2" title="5 of the top 30 played Women&#x27;s">5</td><td class="ht h3" title="4 of the top 15 played Women&#x27;s">4</td>
+        <td class="loc">ATX Beach</td>
+        <td class="bdy"><span class="sanc">AVPA</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">21 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/37257" target="_blank"
+          rel="noopener">Men&#x27;s A + Women&#x27;s Open + Women&#x27;s A at Newland, Huntington Beach</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;10</i></span></td>
+<td class="ht h2" title="10 of the top 60 played Women&#x27;s">10</td><td class="ht h2" title="5 of the top 30 played Women&#x27;s">5</td><td class="ht h1" title="1 of the top 15 played Women&#x27;s">1</td>
+        <td class="loc">&#8212;</td>
+        <td class="bdy"><span class="sanc">AVPA</span><a class="sanc cbva" href="https://cbva.com/tournaments/4581/16233" target="_blank" rel="noopener" title="This event on CBVA">CBVA</a></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">29 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/31567" target="_blank"
+          rel="noopener">2026 Futures Tour Spring Championship</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Class of &#x27;26 &amp; Younger <i>&#215;33</i></span></td>
+<td class="ht h5" title="33 of the top 60 played 18U">33</td><td class="ht h5" title="17 of the top 30 played 18U">17</td><td class="ht h5" title="7 of the top 15 played 18U">7</td>
+        <td class="loc">North Beach - Santa Monica, CA</td>
+        <td class="bdy"><span class="sanc">p1440</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+<tr class="mrow"><th colspan="9" scope="rowgroup">April 2026<span class="mcount">9 events</span></th></tr>
+      <tr class="evs">
+        <td class="dt num">4 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/37280" target="_blank"
+          rel="noopener">Highline x HOBVF x Beach United - Men&#x27;s/Women&#x27;s Open</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;5</i></span></td>
+<td class="ht h2" title="5 of the top 60 played Women&#x27;s">5</td><td class="ht h2" title="4 of the top 30 played Women&#x27;s">4</td><td class="ht h2" title="2 of the top 15 played Women&#x27;s">2</td>
+        <td class="loc">The Huntington Beach Courts</td>
+        <td class="bdy"><span class="sanc">AVPA</span><a class="sanc cbva" href="https://cbva.com/tournaments/4588" target="_blank" rel="noopener" title="This event on CBVA">CBVA</a></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">12 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/37794" target="_blank"
+          rel="noopener">Men&#x27;s A + Women&#x27;s B + Women&#x27;s Open at Ocean Park, Santa Monica</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;9</i></span></td>
+<td class="ht h2" title="9 of the top 60 played Women&#x27;s">9</td><td class="ht h3" title="6 of the top 30 played Women&#x27;s">6</td><td class="ht h3" title="3 of the top 15 played Women&#x27;s">3</td>
+        <td class="loc">&#8212;</td>
+        <td class="bdy"><span class="sanc">AVPA</span><a class="sanc cbva" href="https://cbva.com/tournaments/4782/16876" target="_blank" rel="noopener" title="This event on CBVA">CBVA</a></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">12 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/31625" target="_blank"
+          rel="noopener">2026 Futures Tour: Texas</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Class of &#x27;26 &amp; Younger <i>&#215;6</i></span></td>
+<td class="ht h2" title="6 of the top 60 played 18U">6</td><td class="ht h1" title="2 of the top 30 played 18U">2</td><td class="ht h1" title="1 of the top 15 played 18U">1</td>
+        <td class="loc">The Strand</td>
+        <td class="bdy"><span class="sanc">p1440</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">12 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/35430" target="_blank"
+          rel="noopener">AVP NEXT South Beach April Open</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;4</i></span></td>
+<td class="ht h1" title="4 of the top 60 played Women&#x27;s">4</td><td class="ht h0" title="0 of the top 30 played Women&#x27;s">&#183;</td><td class="ht h0" title="0 of the top 15 played Women&#x27;s">&#183;</td>
+        <td class="loc">South Beach Volley Courts </td>
+        <td class="bdy"><span class="sanc">AVPA</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">18 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/34366" target="_blank"
+          rel="noopener">AVP Austin Open</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Women&#x27;s Open <i>&#215;12</i></span></td>
+<td class="ht h3" title="12 of the top 60 played Women&#x27;s">12</td><td class="ht h3" title="9 of the top 30 played Women&#x27;s">9</td><td class="ht h5" title="7 of the top 15 played Women&#x27;s">7</td>
+        <td class="loc">ATX Beach</td>
+        <td class="bdy"><span class="sanc">AVPA</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">19 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/32941" target="_blank"
+          rel="noopener">West Coast Championships (p1440) &amp; Boys 17U ISF Trials</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Girls 18:U (Grad Year 2026-2027) <i>&#215;8</i></span></td>
+<td class="ht h2" title="8 of the top 60 played 18U">8</td><td class="ht h3" title="7 of the top 30 played 18U">7</td><td class="ht h3" title="4 of the top 15 played 18U">4</td>
+        <td class="loc">Hermosa Beach Pier</td>
+        <td class="bdy"><span class="sanc">p1440</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">19 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/38073" target="_blank"
+          rel="noopener">4/19/26, Newland, Huntington Beach</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Girls 18U <i>&#215;4</i></span></td>
+<td class="ht h1" title="4 of the top 60 played 18U">4</td><td class="ht h1" title="2 of the top 30 played 18U">2</td><td class="ht h0" title="0 of the top 15 played 18U">&#183;</td>
+        <td class="loc">&#8212;</td>
+        <td class="bdy"><span class="sanc">AVPA</span><a class="sanc cbva" href="https://cbva.com/tournaments/4798" target="_blank" rel="noopener" title="This event on CBVA">CBVA</a></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">25 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/38229" target="_blank"
+          rel="noopener">4/25/26, Manhattan Pier, Manhattan Beach</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;5</i></span></td>
+<td class="ht h2" title="5 of the top 60 played Women&#x27;s">5</td><td class="ht h2" title="4 of the top 30 played Women&#x27;s">4</td><td class="ht h3" title="3 of the top 15 played Women&#x27;s">3</td>
+        <td class="loc">&#8212;</td>
+        <td class="bdy"><span class="sanc">AVPA</span><a class="sanc cbva" href="https://cbva.com/tournaments/4602" target="_blank" rel="noopener" title="This event on CBVA">CBVA</a></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">25 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/38207" target="_blank"
+          rel="noopener">4/25/26, Main Beach, Santa Cruz</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;4</i></span></td>
+<td class="ht h1" title="4 of the top 60 played Women&#x27;s">4</td><td class="ht h1" title="1 of the top 30 played Women&#x27;s">1</td><td class="ht h0" title="0 of the top 15 played Women&#x27;s">&#183;</td>
+        <td class="loc">&#8212;</td>
+        <td class="bdy"><span class="sanc">AVPA</span><a class="sanc cbva" href="https://cbva.com/tournaments/4603" target="_blank" rel="noopener" title="This event on CBVA">CBVA</a></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+<tr class="mrow"><th colspan="9" scope="rowgroup">May 2026<span class="mcount">7 events</span></th></tr>
+      <tr class="evs">
+        <td class="dt num">2 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/38400" target="_blank"
+          rel="noopener">5/2/26, Manhattan Pier, Manhattan Beach</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;6</i></span></td>
+<td class="ht h2" title="6 of the top 60 played Women&#x27;s">6</td><td class="ht h2" title="3 of the top 30 played Women&#x27;s">3</td><td class="ht h2" title="2 of the top 15 played Women&#x27;s">2</td>
+        <td class="loc">&#8212;</td>
+        <td class="bdy"><span class="sanc">AVPA</span><a class="sanc cbva" href="https://cbva.com/tournaments/4607" target="_blank" rel="noopener" title="This event on CBVA">CBVA</a></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">3 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/32578" target="_blank"
+          rel="noopener">2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Girls 18U Open <i>&#215;10</i></span></td>
+<td class="ht h2" title="10 of the top 60 played 18U">10</td><td class="ht h1" title="2 of the top 30 played 18U">2</td><td class="ht h0" title="0 of the top 15 played 18U">&#183;</td>
+        <td class="loc">Gulf Shores Public Beach - Gulf Place</td>
+        <td class="bdy"><span class="sanc">USAV</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">7 <span class="dow">Thu</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/38462" target="_blank"
+          rel="noopener">CIFSS Pairs Championship 2026</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Varsity Pairs <i>&#215;9</i></span></td>
+<td class="ht h2" title="9 of the top 60 played 18U">9</td><td class="ht h3" title="7 of the top 30 played 18U">7</td><td class="ht h3" title="3 of the top 15 played 18U">3</td>
+        <td class="loc">Huntington Beach Pier</td>
+        <td class="bdy"><span class="sanc">—</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs trn">
+        <td class="dt num" rowspan="2">15&#8211;17 <span class="dow">Fri</span></td>
+        <td class="evc" rowspan="2"><a class="lnk" href="https://usavolleyball.org/story/usa-volleyball-announces-2026-beach-ntdp-spring-training-series-rosters/" target="_blank"
+          rel="noopener">Beach NTDP Spring Training Series</a><span class="lt tr">training</span></td>
+        <td class="brk"><b>U19/U20</b><span class="dv"><span title="Julia Anisimova, Christy Boulware, Mikki Carlin, Addison Duell, Clara Evans, Elena Fisher, Elle Gemberling, Sarah Gyepes, Milan Hendrickson, Olivia* Herron, Avery Junk, Addison Junk, Abigail (Abby) King, Anna Koehl, Georgeann Lee, Cora Loomer, Macy Ludwig, Abby Moffett, Sara Moynihan, Makaela Munzon, Kara Namimatsu, Milaniakai* Padilla, Ashlynn Proctor, Estelle Reese, Lerin Rosenthal, Dreya Scherfenberg, Jordyn Scribner, Sadie Stafford, Madeleine Wagner, Jordyn Wilson, Kylee (JoJo) Wilson">Women&#x27;s U19/U20 <i>&#215;31</i></span></span></td>
+<td class="ht h3" title="15 of the top 60 played U19/U20">15</td><td class="ht h3" title="7 of the top 30 played U19/U20">7</td><td class="ht h3" title="3 of the top 15 played U19/U20">3</td>
+        <td class="loc" rowspan="2">Manhattan Beach, California</td>
+        <td class="bdy" rowspan="2"><span class="sanc">USAV</span></td>
+        <td class="nxc" rowspan="2"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evc2 trn">
+        <td class="brk"><b>U17</b><span class="dv"><span title="Elizabeth Belnap, Kate Berry, Kara Boas, Regina Stella Broshear, Ella Buchanan, Reagan Carlin, Taylor Daley, Haisley Flanagan, Madison Gillinger, Julianna Godbey, Taylie Hansen, Charlotte Jansen, Nariah* Johnson, Lucy* Matuszak, Milana Rivera, Elle Sossong, Summer Tukua, Parker Wilson">Girls U17 <i>&#215;18</i></span></span></td>
+<td class="ht h1" title="2 of the top 60 played U17">2</td><td class="ht h1" title="1 of the top 30 played U17">1</td><td class="ht h0" title="0 of the top 15 played U17">&#183;</td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">17 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/37126" target="_blank"
+          rel="noopener">AVP Huntington Beach - Heritage Major 2026</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens <i>&#215;5</i></span></td>
+<td class="ht h2" title="5 of the top 60 played Women&#x27;s">5</td><td class="ht h2" title="5 of the top 30 played Women&#x27;s">5</td><td class="ht h3" title="3 of the top 15 played Women&#x27;s">3</td>
+        <td class="loc">Huntington Beach Pier</td>
+        <td class="bdy"><span class="sanc">AVPA</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">17 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/34968" target="_blank"
+          rel="noopener">AVP Juniors Huntington Beach Regionals 2026</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Girls 18U <i>&#215;4</i></span></td>
+<td class="ht h1" title="4 of the top 60 played 18U">4</td><td class="ht h1" title="1 of the top 30 played 18U">1</td><td class="ht h0" title="0 of the top 15 played 18U">&#183;</td>
+        <td class="loc">Huntington Beach Pier</td>
+        <td class="bdy"><span class="sanc">AVPA</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">23 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/39012" target="_blank"
+          rel="noopener">5/23/26, Hermosa Pier, Hermosa Beach</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;5</i></span></td>
+<td class="ht h2" title="5 of the top 60 played Women&#x27;s">5</td><td class="ht h2" title="3 of the top 30 played Women&#x27;s">3</td><td class="ht h2" title="2 of the top 15 played Women&#x27;s">2</td>
+        <td class="loc">&#8212;</td>
+        <td class="bdy"><span class="sanc">AVPA</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+<tr class="mrow"><th colspan="9" scope="rowgroup">June 2026<span class="mcount">11 events</span></th></tr>
+      <tr class="evs">
+        <td class="dt num">10 <span class="dow">Wed</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/39439" target="_blank"
+          rel="noopener">6/10/26, Main Beach, Santa Cruz</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Girls 18U <i>&#215;5</i></span></td>
+<td class="ht h2" title="5 of the top 60 played 18U">5</td><td class="ht h1" title="1 of the top 30 played 18U">1</td><td class="ht h0" title="0 of the top 15 played 18U">&#183;</td>
+        <td class="loc">&#8212;</td>
+        <td class="bdy"><span class="sanc">AVPA</span><a class="sanc cbva" href="https://cbva.com/tournaments/4639" target="_blank" rel="noopener" title="This event on CBVA">CBVA</a></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">13 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/39469" target="_blank"
+          rel="noopener">6/13/26, Manhattan Pier, Manhattan Beach</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;13</i></span></td>
+<td class="ht h3" title="13 of the top 60 played Women&#x27;s">13</td><td class="ht h3" title="7 of the top 30 played Women&#x27;s">7</td><td class="ht h1" title="1 of the top 15 played Women&#x27;s">1</td>
+        <td class="loc">&#8212;</td>
+        <td class="bdy"><span class="sanc">AVPA</span><a class="sanc cbva" href="https://cbva.com/tournaments/4642" target="_blank" rel="noopener" title="This event on CBVA">CBVA</a></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">13 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/36774" target="_blank"
+          rel="noopener">AVP Virginia Beach - Contender 2026</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;5</i></span></td>
+<td class="ht h2" title="5 of the top 60 played Women&#x27;s">5</td><td class="ht h2" title="3 of the top 30 played Women&#x27;s">3</td><td class="ht h3" title="3 of the top 15 played Women&#x27;s">3</td>
+        <td class="loc">32nd Street Virginia Beach Oceanfront</td>
+        <td class="bdy"><span class="sanc">AVPA</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">14 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/39487" target="_blank"
+          rel="noopener">, 6/14/26, North Beach, Santa Monica</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;6</i></span></td>
+<td class="ht h2" title="6 of the top 60 played Women&#x27;s">6</td><td class="ht h1" title="1 of the top 30 played Women&#x27;s">1</td><td class="ht h0" title="0 of the top 15 played Women&#x27;s">&#183;</td>
+        <td class="loc">&#8212;</td>
+        <td class="bdy"><span class="sanc">AVPA</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">16 <span class="dow">Tue</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/36482" target="_blank"
+          rel="noopener">2026 U23 Beach National Team Trials</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Women&#x27;s Division <i>&#215;12</i></span></td>
+<td class="ht h3" title="12 of the top 60 played Women&#x27;s">12</td><td class="ht h3" title="7 of the top 30 played Women&#x27;s">7</td><td class="ht h3" title="3 of the top 15 played Women&#x27;s">3</td>
+        <td class="loc">Hermosa Beach Pier</td>
+        <td class="bdy"><span class="sanc">USAV</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">18 <span class="dow">Thu</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/36451" target="_blank"
+          rel="noopener">2026 USA Volleyball Youth Olympic Games Trials</a></td>
+        <td class="brk"><b>18U</b><span class="dv">U18 Girls <i>&#215;13</i></span></td>
+<td class="ht h3" title="13 of the top 60 played 18U">13</td><td class="ht h3" title="8 of the top 30 played 18U">8</td><td class="ht h3" title="4 of the top 15 played 18U">4</td>
+        <td class="loc">Hermosa Beach Pier</td>
+        <td class="bdy"><span class="sanc">USAV</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">19 <span class="dow">Fri</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/30985" target="_blank"
+          rel="noopener">2026 Futures Tour WESTERN NATIONAL CHAMPIONSHIPS</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Class of 2026 &amp; Younger <i>&#215;16</i></span></td>
+<td class="ht h3" title="16 of the top 60 played 18U">16</td><td class="ht h3" title="7 of the top 30 played 18U">7</td><td class="ht h2" title="2 of the top 15 played 18U">2</td>
+        <td class="loc">North Beach, Santa Monica</td>
+        <td class="bdy"><span class="sanc">p1440</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">20 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/37035" target="_blank"
+          rel="noopener">Western Futures Tour Pro (FTP)</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;7</i></span></td>
+<td class="ht h2" title="7 of the top 60 played Women&#x27;s">7</td><td class="ht h2" title="4 of the top 30 played Women&#x27;s">4</td><td class="ht h3" title="3 of the top 15 played Women&#x27;s">3</td>
+        <td class="loc">North Beach, Santa Monica</td>
+        <td class="bdy"><span class="sanc">p1440</span><a class="sanc cbva" href="https://cbva.com/tournaments/4650" target="_blank" rel="noopener" title="This event on CBVA">CBVA</a></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">21 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/34377" target="_blank"
+          rel="noopener">AVP Next Spring Texas Triple Crown Series Finale $12,000 Purse</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;4</i></span></td>
+<td class="ht h1" title="4 of the top 60 played Women&#x27;s">4</td><td class="ht h2" title="3 of the top 30 played Women&#x27;s">3</td><td class="ht h3" title="3 of the top 15 played Women&#x27;s">3</td>
+        <td class="loc">ATX Beach</td>
+        <td class="bdy"><span class="sanc">AVPA</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">28 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/39831" target="_blank"
+          rel="noopener">6/28/26, Santa Monica Pier, Santa Monica</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;12</i></span></td>
+<td class="ht h3" title="12 of the top 60 played Women&#x27;s">12</td><td class="ht h2" title="5 of the top 30 played Women&#x27;s">5</td><td class="ht h2" title="2 of the top 15 played Women&#x27;s">2</td>
+        <td class="loc">&#8212;</td>
+        <td class="bdy"><span class="sanc">AVPA</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">30 <span class="dow">Tue</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/35588" target="_blank"
+          rel="noopener">BVCA Pairs West Coast Championships 2026</a></td>
+        <td class="brk"><b>18U</b><span class="dv">18U (2026 Grad Year) <i>&#215;8</i></span></td>
+<td class="ht h2" title="8 of the top 60 played 18U">8</td><td class="ht h1" title="1 of the top 30 played 18U">1</td><td class="ht h1" title="1 of the top 15 played 18U">1</td>
+        <td class="loc">Huntington State Beach (Newland)</td>
+        <td class="bdy"><span class="sanc">BVCA</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+<tr class="mrow"><th colspan="9" scope="rowgroup">July 2026<span class="mcount">7 events</span></th></tr>
+      <tr class="evs">
+        <td class="dt num">5 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/37451" target="_blank"
+          rel="noopener">AVP Denver - Contender  2026</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens <i>&#215;5</i></span></td>
+<td class="ht h2" title="5 of the top 60 played Women&#x27;s">5</td><td class="ht h2" title="5 of the top 30 played Women&#x27;s">5</td><td class="ht h4" title="5 of the top 15 played Women&#x27;s">5</td>
+        <td class="loc">The Island</td>
+        <td class="bdy"><span class="sanc">AVPA</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num" rowspan="2">11 <span class="dow">Sat</span></td>
+        <td class="evc" rowspan="2"><a class="lnk" href="https://volleyballlife.com/tournament/38087" target="_blank"
+          rel="noopener">2026 BVCA Individual Pairs National Championship</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Girls 18U <i>&#215;34</i></span></td>
+<td class="ht h5" title="34 of the top 60 played 18U">34</td><td class="ht h5" title="15 of the top 30 played 18U">15</td><td class="ht h4" title="5 of the top 15 played 18U">5</td>
+        <td class="loc" rowspan="2">Hermosa Beach</td>
+        <td class="bdy" rowspan="2"><span class="sanc">BVCA</span></td>
+        <td class="nxc" rowspan="2"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evc2">
+        <td class="brk"><b>16U</b><span class="dv">Girls 16U <i>&#215;6</i></span></td>
+<td class="ht h2" title="6 of the top 60 played 16U">6</td><td class="ht h1" title="1 of the top 30 played 16U">1</td><td class="ht h0" title="0 of the top 15 played 16U">&#183;</td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num" rowspan="2">19 <span class="dow">Sun</span></td>
+        <td class="evc" rowspan="2"><a class="lnk" href="https://volleyballlife.com/tournament/31483" target="_blank"
+          rel="noopener">33rd AAU Hermosa Beach National Pairs Championships</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Girls 18 - 2026 <i>&#215;13</i></span></td>
+<td class="ht h3" title="13 of the top 60 played 18U">13</td><td class="ht h3" title="8 of the top 30 played 18U">8</td><td class="ht h3" title="4 of the top 15 played 18U">4</td>
+        <td class="loc" rowspan="2">Hermosa Beach Pier</td>
+        <td class="bdy" rowspan="2"><span class="sanc">AAU</span></td>
+        <td class="nxc" rowspan="2"><a class="lnk nx" href="https://volleyballlife.com/tournament/40248" target="_blank" rel="noopener">14 Jul 2027</a></td>
+      </tr>
+      <tr class="evc2">
+        <td class="brk"><b>17U</b><span class="dv">Girls 17 - 2027 <i>&#215;8</i></span></td>
+<td class="ht h2" title="8 of the top 60 played 17U">8</td><td class="ht h1" title="1 of the top 30 played 17U">1</td><td class="ht h0" title="0 of the top 15 played 17U">&#183;</td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">19 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/31484" target="_blank"
+          rel="noopener">AAU Hermosa Beach Coed Championships</a></td>
+        <td class="brk"><b>Coed</b><span class="dv">Coed 18 - Grad Year 2026 <i>&#215;5</i>, Coed 16 - Grad Year 2028 <i>&#215;1</i></span></td>
+<td class="ht h2" title="6 of the top 60 played Coed">6</td><td class="ht h2" title="4 of the top 30 played Coed">4</td><td class="ht h2" title="2 of the top 15 played Coed">2</td>
+        <td class="loc">Hermosa Beach Pier</td>
+        <td class="bdy"><span class="sanc">AAU</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">19 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/40270" target="_blank"
+          rel="noopener">7/19/26, Ocean Park, Santa Monica</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;4</i></span></td>
+<td class="ht h1" title="4 of the top 60 played Women&#x27;s">4</td><td class="ht h1" title="1 of the top 30 played Women&#x27;s">1</td><td class="ht h1" title="1 of the top 15 played Women&#x27;s">1</td>
+        <td class="loc">&#8212;</td>
+        <td class="bdy"><span class="sanc">AVPA</span><a class="sanc cbva" href="https://cbva.com/tournaments/4681" target="_blank" rel="noopener" title="This event on CBVA">CBVA</a></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num" rowspan="3">26 <span class="dow">Sun</span></td>
+        <td class="evc" rowspan="3"><a class="lnk" href="https://volleyballlife.com/tournament/34243" target="_blank"
+          rel="noopener">AVP Juniors National Championships 2026</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Girls 18U <i>&#215;33</i></span></td>
+<td class="ht h5" title="33 of the top 60 played 18U">33</td><td class="ht h6" title="20 of the top 30 played 18U">20</td><td class="ht h5" title="9 of the top 15 played 18U">9</td>
+        <td class="loc" rowspan="3">Hermosa Beach Pier</td>
+        <td class="bdy" rowspan="3"><span class="sanc">AVPA</span></td>
+        <td class="nxc" rowspan="3"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evc2">
+        <td class="brk"><b>17U</b><span class="dv">Girls 17U <i>&#215;8</i></span></td>
+<td class="ht h2" title="8 of the top 60 played 17U">8</td><td class="ht h1" title="2 of the top 30 played 17U">2</td><td class="ht h1" title="1 of the top 15 played 17U">1</td>
+      </tr>
+      <tr class="evc2">
+        <td class="brk"><b>16U</b><span class="dv">Girls 16U <i>&#215;4</i></span></td>
+<td class="ht h1" title="4 of the top 60 played 16U">4</td><td class="ht h1" title="1 of the top 30 played 16U">1</td><td class="ht h0" title="0 of the top 15 played 16U">&#183;</td>
+      </tr>
+      <tr class="evs trn">
+        <td class="dt num" rowspan="3">26&#8211;30 <span class="dow">Sun</span></td>
+        <td class="evc" rowspan="3"><a class="lnk" href="https://usavolleyball.org/story/usa-volleyball-announces-2026-beach-ntdp-summer-training-series-rosters/" target="_blank"
+          rel="noopener">Beach NTDP Summer Training Series</a><span class="lt tr">training</span></td>
+        <td class="brk"><b>U19/U20</b><span class="dv"><span title="Christy Boulware, Ella Dueck, Clara Evans, Elle Gemberling, Ella Grimes, Sarah Gyepes, Avery Junk, Addison Junk, Abigail (Abby) King, Thalia Lindahl, Cora Loomer, Macy Ludwig, Shayla Martinez, Sara Moynihan, Estelle Reese, Jordyn Scribner, Madison Vega, Madeleine Wagner, Kylee (JoJo) Wilson">Women&#x27;s U19/U20 <i>&#215;19</i></span></span></td>
+<td class="ht h3" title="14 of the top 60 played U19/U20">14</td><td class="ht h3" title="9 of the top 30 played U19/U20">9</td><td class="ht h4" title="5 of the top 15 played U19/U20">5</td>
+        <td class="loc" rowspan="3">Chula Vista Elite Athlete Training Center, California</td>
+        <td class="bdy" rowspan="3"><span class="sanc">USAV</span></td>
+        <td class="nxc" rowspan="3"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evc2 trn">
+        <td class="brk"><b>U18</b><span class="dv"><span title="Simrin Adams, Sarah Albers, Sienna Castillo, Sarah Cowan, Sadie Harris, Olivia Herron, Sage Illian, Lauren Leach, Georgeann Lee, Janie McCanna, Milaniakai Padilla, Sadie Stafford, Jordyn Wilson">Girls U18 <i>&#215;13</i></span></span></td>
+<td class="ht h2" title="10 of the top 60 played U18">10</td><td class="ht h3" title="7 of the top 30 played U18">7</td><td class="ht h3" title="4 of the top 15 played U18">4</td>
+      </tr>
+      <tr class="evc2 trn">
+        <td class="brk"><b>U17</b><span class="dv"><span title="Regina Stella Broshear, Ella Buchanan, Reagan Carlin, Sienna Cicero, Cayden Dorger, Haisley Flanagan, Madison Gillinger, Julianna Godbey, Taylie Hansen, Emerson Harper, Charlotte Jansen, Nariah Johnson, Olivia Ledoyen, Lucy Matuszak, Brooke Proctor, Milana Rivera, Ashley Ruschill, Elyse Smelcer, Elle Sossong, Ella Whiteside">Girls U17 <i>&#215;20</i></span></span></td>
+<td class="ht h1" title="4 of the top 60 played U17">4</td><td class="ht h1" title="2 of the top 30 played U17">2</td><td class="ht h0" title="0 of the top 15 played U17">&#183;</td>
+      </tr>
+<tr class="mrow"><th colspan="9" scope="rowgroup">August 2026<span class="mcount">5 events</span></th></tr>
+      <tr class="evs">
+        <td class="dt num">2 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/40614" target="_blank"
+          rel="noopener">8/2/26, Hermosa Pier, Hermosa Beach</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;5</i></span></td>
+<td class="ht h2" title="5 of the top 60 played Women&#x27;s">5</td><td class="ht h2" title="4 of the top 30 played Women&#x27;s">4</td><td class="ht h3" title="3 of the top 15 played Women&#x27;s">3</td>
+        <td class="loc">&#8212;</td>
+        <td class="bdy"><span class="sanc">AVPA</span><a class="sanc cbva" href="https://cbva.com/tournaments/4698" target="_blank" rel="noopener" title="This event on CBVA">CBVA</a></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">8 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/35935" target="_blank"
+          rel="noopener">Adult OPEN</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Women&#x27;s Doubles OPEN <i>&#215;4</i></span></td>
+<td class="ht h1" title="4 of the top 60 played Women&#x27;s">4</td><td class="ht h1" title="2 of the top 30 played Women&#x27;s">2</td><td class="ht h1" title="1 of the top 15 played Women&#x27;s">1</td>
+        <td class="loc">Seaside, Oregon</td>
+        <td class="bdy"><span class="sanc">—</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">9 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/40756" target="_blank"
+          rel="noopener">2026 Cal Cup Championships, 8/9/26, Hermosa Pier, Hermosa Beach</a></td>
+        <td class="brk"><b>18U</b><span class="dv">Girls 18U <i>&#215;5</i></span></td>
+<td class="ht h2" title="5 of the top 60 played 18U">5</td><td class="ht h1" title="1 of the top 30 played 18U">1</td><td class="ht h0" title="0 of the top 15 played 18U">&#183;</td>
+        <td class="loc">&#8212;</td>
+        <td class="bdy"><span class="sanc">AVPA</span><a class="sanc cbva" href="https://cbva.com/tournaments/4672" target="_blank" rel="noopener" title="This event on CBVA">CBVA</a></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">16 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/39628" target="_blank"
+          rel="noopener">AVP Manhattan Beach - Heritage Major 2026</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens <i>&#215;11</i></span></td>
+<td class="ht h3" title="11 of the top 60 played Women&#x27;s">11</td><td class="ht h3" title="8 of the top 30 played Women&#x27;s">8</td><td class="ht h4" title="5 of the top 15 played Women&#x27;s">5</td>
+        <td class="loc">Manhattan Beach Pier </td>
+        <td class="bdy"><span class="sanc">AVPA</span></td>
+        <td class="nxc"><a class="lnk nx" href="https://volleyballlife.com/tournament/39628" target="_blank" rel="noopener">13 Aug 2026</a></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">16 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/40877" target="_blank"
+          rel="noopener">8/16/26, Ocean Park, Santa Monica</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;7</i></span></td>
+<td class="ht h2" title="7 of the top 60 played Women&#x27;s">7</td><td class="ht h2" title="4 of the top 30 played Women&#x27;s">4</td><td class="ht h1" title="1 of the top 15 played Women&#x27;s">1</td>
+        <td class="loc">&#8212;</td>
+        <td class="bdy"><span class="sanc">AVPA</span></td>
+        <td class="nxc"><a class="lnk nx" href="https://volleyballlife.com/tournament/40877" target="_blank" rel="noopener">16 Aug 2026</a></td>
+      </tr>
+<tr class="mrow"><th colspan="9" scope="rowgroup">September 2026<span class="mcount">2 events</span></th></tr>
+      <tr class="evs">
+        <td class="dt num">13 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/39261" target="_blank"
+          rel="noopener">Wedbush presents The Hermosa Beach Open 2026</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;7</i></span></td>
+<td class="ht h2" title="7 of the top 60 played Women&#x27;s">7</td><td class="ht h3" title="7 of the top 30 played Women&#x27;s">7</td><td class="ht h3" title="4 of the top 15 played Women&#x27;s">4</td>
+        <td class="loc">Hermosa Beach</td>
+        <td class="bdy"><span class="sanc">—</span></td>
+        <td class="nxc"><a class="lnk nx" href="https://volleyballlife.com/tournament/39261" target="_blank" rel="noopener">10 Sep 2026</a></td>
+      </tr>
+      <tr class="evs">
+        <td class="dt num">13 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/41617" target="_blank"
+          rel="noopener">, 9/13/26, Ocean Park, Santa Monica</a></td>
+        <td class="brk"><b>Women&#x27;s</b><span class="dv">Womens Open <i>&#215;7</i></span></td>
+<td class="ht h2" title="7 of the top 60 played Women&#x27;s">7</td><td class="ht h2" title="5 of the top 30 played Women&#x27;s">5</td><td class="ht h1" title="1 of the top 15 played Women&#x27;s">1</td>
+        <td class="loc">&#8212;</td>
+        <td class="bdy"><span class="sanc">AVPA</span></td>
+        <td class="nxc"><a class="lnk nx" href="https://volleyballlife.com/tournament/41617" target="_blank" rel="noopener">13 Sep 2026</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="legend">
+    <span class="key">Share of the tier present:</span>
+    <span class="key"><span class="ramp"><span style="background:var(--h1)"></span>
+      <span style="background:var(--h2)"></span><span style="background:var(--h3)"></span>
+      <span style="background:var(--h4)"></span><span style="background:var(--h5)"></span>
+      <span style="background:var(--h6)"></span></span> low &#8594; high</span>
+    <span class="key"><span class="sw"></span> nobody from that tier</span>
+  </div>
+</section>
+
+<section>
+  <h2>This season</h2>
+  <p class="lede">24 dates from 15 September 2026 onwards,
+  in calendar order. A date earns its place three ways, and the tag says which:
+  <span class="lt">returning</span> &#8212; this field played the last edition, and the right-hand
+  column carries that turnout; <span class="lt tr">Futures Tour</span> &#8212; a p1440 Futures
+  Tour date, listed whole because the Tour is published as a season rather than discovered
+  one stop at a time; <span class="lt nat">national</span> &#8212; a national championship.
+  Everything else posted this far out is a local one-day draw and would bury the rest.</p>
+  <p class="lede">Read the right-hand column as <i>where the depth was</i>, not where it will
+  be: these girls move up a bracket for the new season, so last year's 17U number describes a
+  field they have now left.</p>
+  <div class="panel">
+    <table>
+      <thead><tr>
+        <th scope="col">Date</th><th scope="col">Event</th><th scope="col">Location</th>
+        <th scope="col">Run by</th><th scope="col">Why listed</th>
+        <th scope="col">Last season 60&#8202;/&#8202;30&#8202;/&#8202;15</th>
+      </tr></thead>
+      <tbody>
+<tr class="mrow"><th colspan="6" scope="rowgroup">September 2026<span class="mcount">3 dates</span></th></tr>
+      <tr>
+        <td class="dt num">20 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/41301" target="_blank"
+          rel="noopener">Highline - Men&#x27;s/Women&#x27;s $2.5K</a><span class="dv">Open</span></td>
+        <td class="loc">Coronado Beach</td>
+        <td class="bdy">Highline</td>
+        <td class="bdy" title="This cohort played the last edition"><span class="lt">returning</span></td>
+        <td class="nxc"><span class="pill h1" title="2 of the top 60">2</span><span class="pill h1" title="1 of the top 30">1</span><span class="pill h0" title="0 of the top 15">&#183;</span><span class="dv">Women&#x27;s at 19 Jul 2026</span></td>
+      </tr>
+      <tr>
+        <td class="dt num">26 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/40782" target="_blank"
+          rel="noopener">THE Myrtle Beach Open &#x27;26</a><span class="dv">Open, AA</span></td>
+        <td class="loc">Myrtle Beach Boardwalk Courts</td>
+        <td class="bdy">Myrtle Beach Volleyball</td>
+        <td class="bdy" title="This cohort played the last edition"><span class="lt">returning</span></td>
+        <td class="nxc"><span class="pill h1" title="1 of the top 60">1</span><span class="pill h0" title="0 of the top 30">&#183;</span><span class="pill h0" title="0 of the top 15">&#183;</span><span class="dv">Women&#x27;s at 18 Oct 2025</span></td>
+      </tr>
+      <tr>
+        <td class="dt num">27 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/40783" target="_blank"
+          rel="noopener">Myrtle Beach Open Jr &amp; Coed. &#x27;26</a><span class="dv">18U, 16U, 14U</span></td>
+        <td class="loc">Myrtle Beach Boardwalk Courts</td>
+        <td class="bdy">Myrtle Beach Volleyball</td>
+        <td class="bdy" title="This cohort played the last edition"><span class="lt">returning</span></td>
+        <td class="nxc"><span class="pill h1" title="1 of the top 60">1</span><span class="pill h0" title="0 of the top 30">&#183;</span><span class="pill h0" title="0 of the top 15">&#183;</span><span class="dv">18U at 19 Oct 2025</span></td>
+      </tr>
+<tr class="mrow"><th colspan="6" scope="rowgroup">October 2026<span class="mcount">5 dates</span></th></tr>
+      <tr>
+        <td class="dt num">3&#8211;4 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/40320" target="_blank"
+          rel="noopener">Shawnee Kansas Showdown</a><span class="dv">18U, 16U, 14U</span></td>
+        <td class="loc">Shawnee Mission Beach Volleyball</td>
+        <td class="bdy">p1440</td>
+        <td class="bdy" title="A p1440 Futures Tour date"><span class="lt tr">Futures Tour</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr>
+        <td class="dt num">4 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/32239" target="_blank"
+          rel="noopener">GNBV National Recruiting Showcase Oct 2026</a><span class="dv">18U, 16U, 14U</span></td>
+        <td class="loc">BVNE North Beach Santa Monica</td>
+        <td class="bdy">Get Noticed Beach Volleyball</td>
+        <td class="bdy" title="This cohort played the last edition"><span class="lt">returning</span></td>
+        <td class="nxc"><span class="pill h1" title="2 of the top 60">2</span><span class="pill h1" title="1 of the top 30">1</span><span class="pill h0" title="0 of the top 15">&#183;</span><span class="dv">16U at 5 Oct 2025</span></td>
+      </tr>
+      <tr>
+        <td class="dt num">15 <span class="dow">Thu</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/39948" target="_blank"
+          rel="noopener">2026 FALL M/W DOUBLES</a><span class="dv">Open, A, BB, B</span></td>
+        <td class="loc">The Boardwalk on Okaloosa Island</td>
+        <td class="bdy">Emerald Coast Volleyball</td>
+        <td class="bdy" title="This cohort played the last edition"><span class="lt">returning</span></td>
+        <td class="nxc"><span class="pill h1" title="1 of the top 60">1</span><span class="pill h0" title="0 of the top 30">&#183;</span><span class="pill h0" title="0 of the top 15">&#183;</span><span class="dv">Women&#x27;s at 16 Oct 2025</span></td>
+      </tr>
+      <tr>
+        <td class="dt num">23 <span class="dow">Fri</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/36558" target="_blank"
+          rel="noopener">2026 AVP Grass Nationals (M/W 2s) | Gainesville, Florida</a><span class="dv">Open, AA, A, BB</span></td>
+        <td class="loc">Jonesville Soccer Park*</td>
+        <td class="bdy">AVP</td>
+        <td class="bdy" title="A national championship"><span class="lt nat">national</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr>
+        <td class="dt num">30&#8211;1 <span class="dow">Fri</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/38071" target="_blank"
+          rel="noopener">2026 USA Volleyball Adult Grass National Championship</a><span class="dv">Open, AA, BB</span></td>
+        <td class="loc">Fair Park Nashville</td>
+        <td class="bdy">USA Volleyball</td>
+        <td class="bdy" title="A national championship"><span class="lt nat">national</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+<tr class="mrow"><th colspan="6" scope="rowgroup">November 2026<span class="mcount">4 dates</span></th></tr>
+      <tr>
+        <td class="dt num">7&#8211;8 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/34245" target="_blank"
+          rel="noopener">AVP Juniors West Coast Championships 2026</a><span class="dv">18U, 17U, 16U, 15U, 14U</span></td>
+        <td class="loc">Manhattan Beach</td>
+        <td class="bdy">AVP</td>
+        <td class="bdy" title="This cohort played the last edition"><span class="lt">returning</span></td>
+        <td class="nxc"><span class="pill h4" title="25 of the top 60">25</span><span class="pill h6" title="19 of the top 30">19</span><span class="pill h5" title="9 of the top 15">9</span><span class="dv">18U at 9 Nov 2025</span></td>
+      </tr>
+      <tr>
+        <td class="dt num">21&#8211;22 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/41692" target="_blank"
+          rel="noopener">Futures Tour 3X: Fall Championships 🏆</a><span class="dv">18U, 16U, 14U</span></td>
+        <td class="loc">Manhattan Beach</td>
+        <td class="bdy">p1440</td>
+        <td class="bdy" title="A p1440 Futures Tour date"><span class="lt tr">Futures Tour</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr>
+        <td class="dt num">21 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/41796" target="_blank"
+          rel="noopener">Small &amp; Junior College Pairs</a><span class="dv">Open, A</span></td>
+        <td class="loc">Manhattan Beach</td>
+        <td class="bdy">p1440</td>
+        <td class="bdy" title="A p1440 Futures Tour date"><span class="lt tr">Futures Tour</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr>
+        <td class="dt num">27&#8211;29 <span class="dow">Fri</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/34246" target="_blank"
+          rel="noopener">AVP Juniors East Coast Championships 2026</a><span class="dv">18U, 17U, 16U, 15U, 14U</span></td>
+        <td class="loc">Sheraton Sand Key</td>
+        <td class="bdy">AVP</td>
+        <td class="bdy" title="This cohort played the last edition"><span class="lt">returning</span></td>
+        <td class="nxc"><span class="pill h2" title="7 of the top 60">7</span><span class="pill h2" title="4 of the top 30">4</span><span class="pill h2" title="2 of the top 15">2</span><span class="dv">18U at 30 Nov 2025</span></td>
+      </tr>
+<tr class="mrow"><th colspan="6" scope="rowgroup">December 2026<span class="mcount">2 dates</span></th></tr>
+      <tr>
+        <td class="dt num">13 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/41887" target="_blank"
+          rel="noopener">fab50 &amp; Rising Stars Invitational</a><span class="dv">18U, 15U</span></td>
+        <td class="loc">Grand Sands</td>
+        <td class="bdy">p1440</td>
+        <td class="bdy" title="A p1440 Futures Tour date"><span class="lt tr">Futures Tour</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr>
+        <td class="dt num">29&#8211;30 <span class="dow">Tue</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/41588" target="_blank"
+          rel="noopener">Futures Tour 3X: Winter Championships 🏆</a><span class="dv">18U, 16U, 14U</span></td>
+        <td class="loc">Hickory Point Recreation Park, Tavares, FL</td>
+        <td class="bdy">p1440</td>
+        <td class="bdy" title="A p1440 Futures Tour date"><span class="lt tr">Futures Tour</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+<tr class="mrow"><th colspan="6" scope="rowgroup">January 2027<span class="mcount">2 dates</span></th></tr>
+      <tr>
+        <td class="dt num">16&#8211;17 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/41707" target="_blank"
+          rel="noopener">Futures Tour 2X: Arizona</a><span class="dv">18U, 16U</span></td>
+        <td class="loc">Arizona Athletic Grounds</td>
+        <td class="bdy">p1440</td>
+        <td class="bdy" title="A p1440 Futures Tour date"><span class="lt tr">Futures Tour</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr>
+        <td class="dt num">23&#8211;24 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/41651" target="_blank"
+          rel="noopener">Snowball &#x27;27</a><span class="dv">18U, 16U, 14U, 12U</span></td>
+        <td class="loc">Tidewater Volleyball Center</td>
+        <td class="bdy">Tidewater Volleyball Association</td>
+        <td class="bdy" title="This cohort played the last edition"><span class="lt">returning</span></td>
+        <td class="nxc"><span class="pill h1" title="1 of the top 60">1</span><span class="pill h0" title="0 of the top 30">&#183;</span><span class="pill h0" title="0 of the top 15">&#183;</span><span class="dv">18U at 25 Jan 2026</span></td>
+      </tr>
+<tr class="mrow"><th colspan="6" scope="rowgroup">February 2027<span class="mcount">2 dates</span></th></tr>
+      <tr>
+        <td class="dt num">27&#8211;28 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/41709" target="_blank"
+          rel="noopener">Futures Tour 3X: Spring Championships 🏆</a><span class="dv">18U</span></td>
+        <td class="loc">Gulf Shores</td>
+        <td class="bdy">p1440</td>
+        <td class="bdy" title="A p1440 Futures Tour date"><span class="lt tr">Futures Tour</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr>
+        <td class="dt num">27&#8211;28 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/41652" target="_blank"
+          rel="noopener">Heart and Soul Showdown &#x27;27</a><span class="dv">18U, 16U, 14U</span></td>
+        <td class="loc">Tidewater Volleyball Center</td>
+        <td class="bdy">Tidewater Volleyball Association</td>
+        <td class="bdy" title="This cohort played the last edition"><span class="lt">returning</span></td>
+        <td class="nxc"><span class="pill h1" title="1 of the top 60">1</span><span class="pill h1" title="1 of the top 30">1</span><span class="pill h0" title="0 of the top 15">&#183;</span><span class="dv">18U at 8 Feb 2026</span></td>
+      </tr>
+<tr class="mrow"><th colspan="6" scope="rowgroup">March 2027<span class="mcount">1 date</span></th></tr>
+      <tr>
+        <td class="dt num">20 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/41710" target="_blank"
+          rel="noopener">Futures Tour 2X: Florida</a><span class="dv">18U, 16U</span></td>
+        <td class="loc">Pompano Beach</td>
+        <td class="bdy">p1440</td>
+        <td class="bdy" title="A p1440 Futures Tour date"><span class="lt tr">Futures Tour</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+<tr class="mrow"><th colspan="6" scope="rowgroup">April 2027<span class="mcount">2 dates</span></th></tr>
+      <tr>
+        <td class="dt num">3&#8211;4 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/41882" target="_blank"
+          rel="noopener">Futures Tour 2X: California</a><span class="dv">18U, 14U</span></td>
+        <td class="loc">North Beach - Santa Monica, CA</td>
+        <td class="bdy">p1440</td>
+        <td class="bdy" title="A p1440 Futures Tour date"><span class="lt tr">Futures Tour</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr>
+        <td class="dt num">24&#8211;25 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/41712" target="_blank"
+          rel="noopener">Futures Tour 2X: Texas</a><span class="dv">18U, 16U</span></td>
+        <td class="loc">The Strand</td>
+        <td class="bdy">p1440</td>
+        <td class="bdy" title="A p1440 Futures Tour date"><span class="lt tr">Futures Tour</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+<tr class="mrow"><th colspan="6" scope="rowgroup">May 2027<span class="mcount">2 dates</span></th></tr>
+      <tr>
+        <td class="dt num">29&#8211;30 <span class="dow">Sat</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/41713" target="_blank"
+          rel="noopener">Futures Tour 2X: Washington</a><span class="dv">18U, 16U</span></td>
+        <td class="loc">Brown&#x27;s Park</td>
+        <td class="bdy">p1440</td>
+        <td class="bdy" title="A p1440 Futures Tour date"><span class="lt tr">Futures Tour</span></td>
+        <td class="nxc"><span class="dim">&#8212;</span></td>
+      </tr>
+      <tr>
+        <td class="dt num">30&#8211;31 <span class="dow">Sun</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/41583" target="_blank"
+          rel="noopener">Beach Prospects National Recruiting Showcase 2027</a><span class="dv">18U, 16U</span></td>
+        <td class="loc">Hickory Point Beach Sand Volleyball</td>
+        <td class="bdy">SandStorm Juniors Tournament Series</td>
+        <td class="bdy" title="This cohort played the last edition"><span class="lt">returning</span></td>
+        <td class="nxc"><span class="pill h1" title="1 of the top 60">1</span><span class="pill h0" title="0 of the top 30">&#183;</span><span class="pill h0" title="0 of the top 15">&#183;</span><span class="dv">18U at 25 May 2026</span></td>
+      </tr>
+<tr class="mrow"><th colspan="6" scope="rowgroup">July 2027<span class="mcount">1 date</span></th></tr>
+      <tr>
+        <td class="dt num">14 <span class="dow">Wed</span></td>
+        <td class="evc"><a class="lnk" href="https://volleyballlife.com/tournament/40248" target="_blank"
+          rel="noopener">34th AAU Hermosa Beach National Pairs Championships</a><span class="dv">18U, 17U, 16U, 15U, 14U</span></td>
+        <td class="loc">Hermosa Beach Pier</td>
+        <td class="bdy">AAU National Championships</td>
+        <td class="bdy" title="This cohort played the last edition"><span class="lt">returning</span></td>
+        <td class="nxc"><span class="pill h3" title="13 of the top 60">13</span><span class="pill h3" title="8 of the top 30">8</span><span class="pill h3" title="4 of the top 15">4</span><span class="dv">18U at 19 Jul 2026</span></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="notes">
+  <h2>How to read it, and what it is not</h2>
+  <ul>
+    <li><b>This is a field, not a year group.</b> The cohort is everyone graduating in 2026
+    or later, because that is who an 18U draw admits. 30 of the top 60 graduate in 2026
+    itself; the rest are younger girls playing up, and they are the reason the field is harder
+    than a single class would suggest.</li>
+    <li><b>Turnout counts athletes, not teams.</b> A number is how many of that tier entered
+    that bracket; a girl who played both the 18U and the 17U is counted in both rows, which is
+    the point of splitting them.</li>
+    <li><b>Brackets are folded onto the age they are actually played at.</b> Organisers label
+    one field a dozen ways &#8212; "Girls 18U", "U18 Girls", "Girls 18:U (Grad Year 2026-2027)"
+    and "Class of '26 &amp; Younger" are the same competition. An explicit age wins; failing
+    that the youngest graduating year admitted sets the ceiling.</li>
+    <li><b>Doubles only.</b> Club, 3v3 and 5v5 entries are excluded throughout: a placing in
+    those says little about an individual.</li>
+    <li><b>A blank in the last column means "not posted", not "not happening".</b> Only
+    11 of the 232 events this field entered have a new edition
+    listed yet. Matching is by name after stripping years and ordinals, so a renamed event
+    misses too.</li>
+    <li><b>The forward schedule is as complete as Volleyball Life is.</b> It is rebuilt by
+    walking tournament ids rather than read from a listing feed, so an event appears the day
+    its organiser creates it there &#8212; and an event run off Volleyball Life does not appear
+    at all. FIVB and international dates are out of scope.</li>
+    <li><b>The training series are not tournaments.</b> They are invitational residential camps
+    with no draw and no result, so Volleyball Life has no record of them; dates and rosters come
+    from USA Volleyball. Their turnout columns count selections, not entries, and are not
+    comparable with a tournament's.</li>
+    <li><b>Locations come from the tournament record</b> and are blank where the organiser left
+    them unset, which is common for one-day local events.</li>
+  </ul>
+</section>
+<footer>
+  2026 and younger — top 60 by TruVolley, from a partner-graph crawl run on the predicate
+  <i>graduating year &#8805; 2026</i>. Results, turnout and locations from Volleyball Life;
+  the forward schedule from a crawl of tournament ids, both retrieved
+  2 October 2026. Window 14 Sep 2025 to
+  14 Sep 2026.
+</footer>
+</div>
