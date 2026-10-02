@@ -47,6 +47,10 @@ def norm(name):
     s = re.sub(r"\b(19|20)\d{2}([/-]\d{2})?\b", " ", s)
     s = re.sub(r"'\d{2}\b", " ", s)
     s = re.sub(r"\b\d+(st|nd|rd|th)\b", " ", s)
+    # "Futures Tour 2X: Arizona" is last season's "Futures Tour: Arizona". The 2X/3X is
+    # the stop's ranking-points multiplier, which changes year to year and is not part of
+    # the event's identity.
+    s = re.sub(r"\b\d+x\b", " ", s)
     s = re.sub(r"[^a-z0-9 ]+", " ", s)
     s = re.sub(r"\b(championships?|champ|open|tour|series|event|tournament|the|of|at|a)\b", " ", s)
     return " ".join(s.split())
@@ -126,6 +130,9 @@ def main(group):
     # tournament crawl (scripts/season.py) and is read first; the older upcoming.json came
     # from a feed that no longer answers and is frozen at the day it was taken, so it is
     # kept only to fill gaps the crawl's own filters leave.
+    # The feed starts before the window ends, so an event held in the last weeks of the
+    # window is in both and would otherwise match itself. The next edition has to be a
+    # different tournament held after the window closes.
     nxt = {}
     for f in ("upcoming_vb.json", "upcoming.json"):
         try:
@@ -133,12 +140,12 @@ def main(group):
         except FileNotFoundError:
             continue
         for t in feed:
-            if t["startDate"] >= "2026-08-12":
+            if t["startDate"] > site["window"][1]:
                 nxt.setdefault(norm(t["name"]), t)
     matched = 0
     for e in out:
         m = nxt.get(norm(e["name"]))
-        if m:
+        if m and str(m["id"]) != str(e["tid"]):
             e["next"] = {"id": m["id"], "date": m["startDate"], "name": m["name"]}
             matched += 1
 
