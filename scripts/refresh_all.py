@@ -119,6 +119,8 @@ def cut(pops, only=None):
     """
     picks = {}
     for f, rosters, younger in SOURCES:
+        if f not in pops:
+            continue
         rated = sorted([p for p in pops[f].values() if p["tv"]], key=lambda p: -p["tv"])
         for key, n, label in rosters:
             if only and key != only:
