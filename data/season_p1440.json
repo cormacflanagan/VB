@@ -1,0 +1,359 @@
+[
+ {
+  "id": 40320,
+  "startDate": "2026-10-03",
+  "endDate": "2026-10-04",
+  "name": "Shawnee Kansas Showdown",
+  "org": "p1440",
+  "orgId": 1144,
+  "sanctionedBy": "p1440",
+  "national": true,
+  "locations": [
+   "Shawnee Mission Beach Volleyball"
+  ],
+  "divisions": [
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "16U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 1
+   },
+   {
+    "name": "14U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 1
+   }
+  ]
+ },
+ {
+  "id": 41692,
+  "startDate": "2026-11-21",
+  "endDate": "2026-11-22",
+  "name": "Futures Tour 3X: Fall Championships \ud83c\udfc6",
+  "org": "p1440",
+  "orgId": 41,
+  "sanctionedBy": "p1440",
+  "national": false,
+  "locations": [
+   "Manhattan Beach"
+  ],
+  "divisions": [
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "16U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 2
+   },
+   {
+    "name": "14U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 1
+   }
+  ]
+ },
+ {
+  "id": 41796,
+  "startDate": "2026-11-21",
+  "endDate": "2026-11-21",
+  "name": "Small & Junior College Pairs",
+  "org": "p1440",
+  "orgId": 41,
+  "sanctionedBy": "p1440",
+  "national": false,
+  "locations": [
+   "Manhattan Beach"
+  ],
+  "divisions": [
+   {
+    "name": "Open",
+    "gender": "Womens",
+    "age": "Adult",
+    "teams": 0
+   },
+   {
+    "name": "Open",
+    "gender": "Womens",
+    "age": "Adult",
+    "teams": 0
+   },
+   {
+    "name": "A",
+    "gender": "Womens",
+    "age": "Adult",
+    "teams": 0
+   }
+  ]
+ },
+ {
+  "id": 41887,
+  "startDate": "2026-12-13",
+  "endDate": "2026-12-13",
+  "name": "fab50 & Rising Stars Invitational",
+  "org": "p1440",
+  "orgId": 41,
+  "sanctionedBy": "p1440",
+  "national": false,
+  "locations": [
+   "Grand Sands"
+  ],
+  "divisions": [
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 10
+   },
+   {
+    "name": "15U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 9
+   }
+  ]
+ },
+ {
+  "id": 41588,
+  "startDate": "2026-12-29",
+  "endDate": "2026-12-30",
+  "name": "Futures Tour 3X: Winter Championships \ud83c\udfc6",
+  "org": "p1440",
+  "orgId": 41,
+  "sanctionedBy": "p1440",
+  "national": false,
+  "locations": [
+   "Hickory Point Recreation Park, Tavares, FL"
+  ],
+  "divisions": [
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 1
+   },
+   {
+    "name": "16U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 3
+   },
+   {
+    "name": "14U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 3
+   }
+  ]
+ },
+ {
+  "id": 41707,
+  "startDate": "2027-01-16",
+  "endDate": "2027-01-17",
+  "name": "Futures Tour 2X: Arizona",
+  "org": "p1440",
+  "orgId": 41,
+  "sanctionedBy": "p1440",
+  "national": false,
+  "locations": [
+   "Arizona Athletic Grounds"
+  ],
+  "divisions": [
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "16U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 3
+   }
+  ]
+ },
+ {
+  "id": 41709,
+  "startDate": "2027-02-27",
+  "endDate": "2027-02-28",
+  "name": "Futures Tour 3X: Spring Championships \ud83c\udfc6",
+  "org": "p1440",
+  "orgId": 41,
+  "sanctionedBy": "p1440",
+  "national": false,
+  "locations": [
+   "Gulf Shores"
+  ],
+  "divisions": [
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   }
+  ]
+ },
+ {
+  "id": 41710,
+  "startDate": "2027-03-20",
+  "endDate": "2027-03-20",
+  "name": "Futures Tour 2X: Florida",
+  "org": "p1440",
+  "orgId": 41,
+  "sanctionedBy": "p1440",
+  "national": false,
+  "locations": [
+   "Pompano Beach"
+  ],
+  "divisions": [
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "16U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 1
+   }
+  ]
+ },
+ {
+  "id": 41882,
+  "startDate": "2027-04-03",
+  "endDate": "2027-04-04",
+  "name": "Futures Tour 2X: California",
+  "org": "p1440",
+  "orgId": 41,
+  "sanctionedBy": "p1440",
+  "national": false,
+  "locations": [
+   "North Beach - Santa Monica, CA"
+  ],
+  "divisions": [
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 1
+   },
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "14U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   }
+  ]
+ },
+ {
+  "id": 41712,
+  "startDate": "2027-04-24",
+  "endDate": "2027-04-25",
+  "name": "Futures Tour 2X: Texas",
+  "org": "p1440",
+  "orgId": 41,
+  "sanctionedBy": "p1440",
+  "national": false,
+  "locations": [
+   "The Strand"
+  ],
+  "divisions": [
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "16U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 3
+   },
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   }
+  ]
+ },
+ {
+  "id": 41713,
+  "startDate": "2027-05-29",
+  "endDate": "2027-05-30",
+  "name": "Futures Tour 2X: Washington",
+  "org": "p1440",
+  "orgId": 41,
+  "sanctionedBy": "p1440",
+  "national": false,
+  "locations": [
+   "Brown's Park"
+  ],
+  "divisions": [
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "16U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 1
+   },
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   }
+  ]
+ }
+]

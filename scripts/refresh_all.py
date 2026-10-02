@@ -38,6 +38,7 @@ SOURCES = [
                       ("2028_top20", 20, "Class of 2028 — top 20")], False),
     ("cohort2027.json", [("2027_younger", 60, "2027 and younger — top 60")], True),
     ("cohort2028.json", [("2028_younger", 60, "2028 and younger — top 60")], True),
+    ("cohort2026.json", [("2026_younger", 60, "2026 and younger — top 60")], True),
 ]
 
 
@@ -52,9 +53,10 @@ def get(path, tries=4):
     return None
 
 
-def populations():
+def populations(only=None):
+    srcs = [s for s in SOURCES if not only or any(k == only for k, _, _ in s[1])]
     return {f: {int(k): v for k, v in json.load(open(os.path.join(DATA, f))).items()}
-            for f, _, _ in SOURCES}
+            for f, _, _ in srcs}
 
 
 def rate(ids):
@@ -108,12 +110,19 @@ def profiles(ids):
     return out
 
 
-def cut(pops):
-    """Re-draw every roster and report what moved in and out of each."""
+def cut(pops, only=None):
+    """Re-draw every roster and report what moved in and out of each.
+
+    `only` restricts the re-cut to one roster key. Re-cutting everything moves rosters
+    that nothing asked to move, so adding a population should not churn the reports that
+    were already drawn.
+    """
     picks = {}
     for f, rosters, younger in SOURCES:
         rated = sorted([p for p in pops[f].values() if p["tv"]], key=lambda p: -p["tv"])
         for key, n, label in rosters:
+            if only and key != only:
+                continue
             picks[key] = (rated[:n], rated, len(pops[f]), n, label, younger)
 
     wanted = sorted({p["id"] for sel, *_ in picks.values() for p in sel})
@@ -154,15 +163,16 @@ def cut(pops):
 
 
 def main(argv):
-    pops = populations()
+    only = argv[argv.index("--only") + 1] if "--only" in argv else None
+    pops = populations(only)
     ids = sorted({pid for pop in pops.values() for pid in pop})
     if "--cut" not in argv:
         cache = rate(ids)
         apply_ratings(pops, cache)
-        pops = populations()
+        pops = populations(only)
     if "--ratings" in argv:
         return
-    cut(pops)
+    cut(pops, only)
 
 
 if __name__ == "__main__":

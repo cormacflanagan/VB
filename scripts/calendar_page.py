@@ -167,6 +167,154 @@ def heat(n, size):
     return 6
 
 
+
+# Shared with the cohort calendar, which is the same page for a different
+# population: one stylesheet, so the two cannot drift apart.
+CSS = r"""
+:root {
+  --ground:#EFF1EE; --surface:#FAFBFA; --raise:#FFFFFF;
+  --ink:#111B19; --body:#2C3A37; --muted:#5F6E6A; --faint:#8B9995;
+  --line:#D5DCD9; --hair:#E4E9E7; --wash:#EAEDEB;
+  --accent:#0B6E68; --accent-soft:#D9E7E5; --gold:#9A6B12; --gold-soft:#F3E4C4;
+  --h1:#EDF5F3; --h2:#CDE8E2; --h3:#A2D6CC; --h4:#6FC0B3; --h5:#2FA694; --h6:#00806F;
+  --hink1:var(--body); --hink5:#FFFFFF; --hink6:#FFFFFF;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:#0B1211; --surface:#121B19; --raise:#182322;
+    --ink:#E9EFEC; --body:#C6D2CE; --muted:#93A29E; --faint:#6E7D79;
+    --line:#243330; --hair:#1C2827; --wash:#161F1E;
+    --accent:#57C3B6; --accent-soft:#123733; --gold:#DCA84A; --gold-soft:#382B12;
+    --h1:#152220; --h2:#183A34; --h3:#1B5248; --h4:#1D6B5D; --h5:#1E8574; --h6:#2AA08C;
+    --hink1:var(--body); --hink5:#F2FBF8; --hink6:#06201B;
+  }
+}
+:root[data-theme="dark"] {
+  --ground:#0B1211; --surface:#121B19; --raise:#182322;
+  --ink:#E9EFEC; --body:#C6D2CE; --muted:#93A29E; --faint:#6E7D79;
+  --line:#243330; --hair:#1C2827; --wash:#161F1E;
+  --accent:#57C3B6; --accent-soft:#123733; --gold:#DCA84A; --gold-soft:#382B12;
+  --h1:#152220; --h2:#183A34; --h3:#1B5248; --h4:#1D6B5D; --h5:#1E8574; --h6:#2AA08C;
+  --hink1:var(--body); --hink5:#F2FBF8; --hink6:#06201B;
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--ground); color:var(--body);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; font-size:15px;
+  line-height:1.6; -webkit-font-smoothing:antialiased; }
+.wrap { max-width:none; margin:0; padding:0 clamp(18px,2.4vw,44px); }
+header { padding:60px 0 32px; border-bottom:1px solid var(--line); }
+.eyebrow { font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--accent); font-weight:650; margin:0 0 18px; }
+h1 { font-family:"Iowan Old Style",Georgia,"Times New Roman",serif;
+  font-size:clamp(32px,5vw,50px); line-height:1.06; letter-spacing:-.02em; color:var(--ink);
+  margin:0 0 16px; font-weight:600; text-wrap:balance; max-width:22ch; }
+h1 em { font-style:italic; color:var(--accent); }
+.standfirst { font-size:17px; color:var(--muted); max-width:68ch; margin:0; }
+h2 { font-family:"Iowan Old Style",Georgia,"Times New Roman",serif; font-size:24px;
+  color:var(--ink); font-weight:600; margin:0 0 6px; }
+.lede { color:var(--muted); margin:0 0 20px; max-width:72ch; font-size:14.5px; }
+section { padding:44px 0 0; }
+.facts { display:flex; flex-wrap:wrap; margin:30px 0 0; max-width:1300px;
+  border:1px solid var(--line); border-radius:3px; background:var(--surface); overflow:hidden; }
+.fact { flex:1 1 140px; padding:14px 18px; border-right:1px solid var(--hair); }
+.fact:last-child { border-right:0; }
+.fact b { display:block; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:23px; color:var(--ink); font-weight:600; font-variant-numeric:tabular-nums; }
+.fact span { font-size:11px; letter-spacing:.09em; text-transform:uppercase; color:var(--faint); }
+
+/* season shape */
+.months { display:flex; gap:6px; align-items:flex-end; height:150px; max-width:900px;
+  border:1px solid var(--line); border-radius:3px; background:var(--surface);
+  padding:16px 16px 8px; }
+.mb { flex:1; display:flex; flex-direction:column; justify-content:flex-end;
+  align-items:center; height:100%; gap:4px; }
+.mbar { width:100%; max-width:46px; background:var(--h5); border-radius:3px 3px 0 0;
+  min-height:2px; }
+.mbn { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:11px;
+  color:var(--ink); font-weight:650; font-variant-numeric:tabular-nums; }
+.mbl { font-size:10.5px; color:var(--faint); letter-spacing:.04em; }
+
+.panel { border:1px solid var(--line); border-radius:3px; background:var(--surface);
+  overflow-x:auto; }
+table { border-collapse:collapse; width:100%; }
+thead th { font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint);
+  font-weight:650; background:var(--wash); border-bottom:1px solid var(--line);
+  padding:10px 12px; text-align:left; white-space:nowrap; position:sticky; top:0; z-index:2; }
+td { padding:9px 12px; border-bottom:1px solid var(--hair); vertical-align:top; }
+tbody tr:hover td { background:var(--raise); }
+.mrow th { background:var(--wash); border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line); padding:9px 12px; text-align:left;
+  font-family:"Iowan Old Style",Georgia,serif; font-size:15px; color:var(--ink);
+  font-weight:600; letter-spacing:.01em; position:sticky; top:37px; z-index:1; }
+.mcount { font-family:system-ui,sans-serif; font-size:11px; font-weight:500;
+  color:var(--faint); letter-spacing:.06em; text-transform:uppercase; margin-left:10px; }
+.num { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-variant-numeric:tabular-nums; font-size:13px; }
+.dt { white-space:nowrap; color:var(--ink); font-weight:600; width:74px; }
+.brk { white-space:nowrap; width:170px; }
+.brk .dv { white-space:normal; }
+.brk b { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:12px;
+  color:var(--ink); font-weight:650; letter-spacing:.02em; }
+.evs td { border-top:1px solid var(--line); }
+.evc2 .brk { padding-left:12px; }
+.dow { color:var(--faint); font-weight:400; font-size:11px; }
+.evc { min-width:250px; max-width:420px; }
+.evc .lnk { color:var(--ink); font-weight:600; font-size:13.5px; text-decoration:none; }
+.evc .lnk:hover { color:var(--accent); text-decoration:underline; text-underline-offset:2px; }
+.dv { display:block; font-size:11.5px; color:var(--faint); margin-top:2px; }
+.dv i { font-style:normal; color:var(--muted); font-weight:650;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:10.5px; }
+.loc { font-size:12.5px; color:var(--muted); max-width:200px; }
+.sanc { font-size:9.5px; letter-spacing:.07em; text-transform:uppercase; color:var(--muted);
+  border:1px solid var(--line); border-radius:2px; padding:2px 5px; white-space:nowrap;
+  display:inline-block; }
+.bdy { white-space:nowrap; }
+h3 { font-family:"Iowan Old Style",Georgia,serif; font-size:17px; color:var(--ink);
+  font-weight:600; margin:0 0 10px; }
+.ldivs { display:flex; flex-wrap:wrap; gap:5px; max-width:460px; }
+.lcl td { background:color-mix(in srgb,var(--accent-soft) 24%,transparent); }
+.tr { color:var(--gold); background:var(--gold-soft); }
+.trn td { background:color-mix(in srgb,var(--gold-soft) 32%,transparent); }
+.lt { display:inline-block; margin-left:7px; font-size:9px; letter-spacing:.09em;
+  text-transform:uppercase; color:var(--accent); background:var(--accent-soft);
+  border-radius:2px; padding:1px 5px; font-weight:650; vertical-align:1px; }
+.ldiv { font-size:11px; color:var(--accent); background:var(--accent-soft);
+  border-radius:2px; padding:2px 7px; text-decoration:none; white-space:nowrap; }
+.ldiv:hover { text-decoration:underline; text-underline-offset:2px; }
+.cbva { color:var(--accent); border-color:var(--accent-soft); text-decoration:none;
+  font-weight:650; margin-left:5px; }
+.cbva:hover { background:var(--accent-soft); }
+.ht { width:52px; text-align:center; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-variant-numeric:tabular-nums; font-size:13.5px; font-weight:650; color:var(--hink1);
+  border-left:2px solid var(--surface); }
+.h0 { color:var(--faint); font-weight:400; }
+.h1 { background:var(--h1); } .h2 { background:var(--h2); } .h3 { background:var(--h3); }
+.h4 { background:var(--h4); }
+.h5 { background:var(--h5); color:var(--hink5); }
+.h6 { background:var(--h6); color:var(--hink6); }
+.nxc { white-space:nowrap; font-size:12.5px; }
+.nx { color:var(--accent); font-weight:600; text-decoration:none; }
+.nx:hover { text-decoration:underline; text-underline-offset:2px; }
+.dim { color:var(--faint); }
+.nw { white-space:nowrap; }
+.lnk { color:inherit; }
+.legend { display:flex; flex-wrap:wrap; gap:8px 18px; align-items:center; margin:14px 0 0;
+  font-size:12px; color:var(--muted); }
+.key { display:inline-flex; align-items:center; gap:6px; }
+.sw { width:26px; height:14px; border:1px solid var(--line); border-radius:2px; display:inline-block; }
+.ramp { display:inline-flex; }
+.ramp span { width:22px; height:14px; border:1px solid var(--line); border-left:0; }
+.ramp span:first-child { border-left:1px solid var(--line); }
+.notes ul { padding-left:19px; margin:10px 0 0; }
+.notes li { margin:7px 0; font-size:13.5px; color:var(--muted); max-width:78ch; }
+.notes b { color:var(--body); font-weight:600; }
+footer { border-top:1px solid var(--line); padding:20px 0 64px; margin-top:44px;
+  font-size:12px; color:var(--faint); max-width:82ch; }
+a { color:var(--accent); }
+:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+@media (prefers-reduced-motion:reduce) { * { transition:none !important; } }
+"""
+
 def build(group):
     D = json.load(open(f"calendar_{group}.json"))
     # the unit is a competition, not an event: an 18U bracket and the 17U beside it are
@@ -379,150 +527,7 @@ def build(group):
         <td class="num dim">&#8212;</td>
       </tr>""" for t in NTDP_NEXT)
     return f"""<title>Class of {group} &#183; Tournament calendar</title>
-<style>
-:root {{
-  --ground:#EFF1EE; --surface:#FAFBFA; --raise:#FFFFFF;
-  --ink:#111B19; --body:#2C3A37; --muted:#5F6E6A; --faint:#8B9995;
-  --line:#D5DCD9; --hair:#E4E9E7; --wash:#EAEDEB;
-  --accent:#0B6E68; --accent-soft:#D9E7E5; --gold:#9A6B12; --gold-soft:#F3E4C4;
-  --h1:#EDF5F3; --h2:#CDE8E2; --h3:#A2D6CC; --h4:#6FC0B3; --h5:#2FA694; --h6:#00806F;
-  --hink1:var(--body); --hink5:#FFFFFF; --hink6:#FFFFFF;
-}}
-@media (prefers-color-scheme: dark) {{
-  :root:not([data-theme="light"]) {{
-    --ground:#0B1211; --surface:#121B19; --raise:#182322;
-    --ink:#E9EFEC; --body:#C6D2CE; --muted:#93A29E; --faint:#6E7D79;
-    --line:#243330; --hair:#1C2827; --wash:#161F1E;
-    --accent:#57C3B6; --accent-soft:#123733; --gold:#DCA84A; --gold-soft:#382B12;
-    --h1:#152220; --h2:#183A34; --h3:#1B5248; --h4:#1D6B5D; --h5:#1E8574; --h6:#2AA08C;
-    --hink1:var(--body); --hink5:#F2FBF8; --hink6:#06201B;
-  }}
-}}
-:root[data-theme="dark"] {{
-  --ground:#0B1211; --surface:#121B19; --raise:#182322;
-  --ink:#E9EFEC; --body:#C6D2CE; --muted:#93A29E; --faint:#6E7D79;
-  --line:#243330; --hair:#1C2827; --wash:#161F1E;
-  --accent:#57C3B6; --accent-soft:#123733; --gold:#DCA84A; --gold-soft:#382B12;
-  --h1:#152220; --h2:#183A34; --h3:#1B5248; --h4:#1D6B5D; --h5:#1E8574; --h6:#2AA08C;
-  --hink1:var(--body); --hink5:#F2FBF8; --hink6:#06201B;
-}}
-* {{ box-sizing:border-box; }}
-body {{ margin:0; background:var(--ground); color:var(--body);
-  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; font-size:15px;
-  line-height:1.6; -webkit-font-smoothing:antialiased; }}
-.wrap {{ max-width:none; margin:0; padding:0 clamp(18px,2.4vw,44px); }}
-header {{ padding:60px 0 32px; border-bottom:1px solid var(--line); }}
-.eyebrow {{ font-size:11px; letter-spacing:.16em; text-transform:uppercase;
-  color:var(--accent); font-weight:650; margin:0 0 18px; }}
-h1 {{ font-family:"Iowan Old Style",Georgia,"Times New Roman",serif;
-  font-size:clamp(32px,5vw,50px); line-height:1.06; letter-spacing:-.02em; color:var(--ink);
-  margin:0 0 16px; font-weight:600; text-wrap:balance; max-width:22ch; }}
-h1 em {{ font-style:italic; color:var(--accent); }}
-.standfirst {{ font-size:17px; color:var(--muted); max-width:68ch; margin:0; }}
-h2 {{ font-family:"Iowan Old Style",Georgia,"Times New Roman",serif; font-size:24px;
-  color:var(--ink); font-weight:600; margin:0 0 6px; }}
-.lede {{ color:var(--muted); margin:0 0 20px; max-width:72ch; font-size:14.5px; }}
-section {{ padding:44px 0 0; }}
-.facts {{ display:flex; flex-wrap:wrap; margin:30px 0 0; max-width:1300px;
-  border:1px solid var(--line); border-radius:3px; background:var(--surface); overflow:hidden; }}
-.fact {{ flex:1 1 140px; padding:14px 18px; border-right:1px solid var(--hair); }}
-.fact:last-child {{ border-right:0; }}
-.fact b {{ display:block; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-  font-size:23px; color:var(--ink); font-weight:600; font-variant-numeric:tabular-nums; }}
-.fact span {{ font-size:11px; letter-spacing:.09em; text-transform:uppercase; color:var(--faint); }}
-
-/* season shape */
-.months {{ display:flex; gap:6px; align-items:flex-end; height:150px; max-width:900px;
-  border:1px solid var(--line); border-radius:3px; background:var(--surface);
-  padding:16px 16px 8px; }}
-.mb {{ flex:1; display:flex; flex-direction:column; justify-content:flex-end;
-  align-items:center; height:100%; gap:4px; }}
-.mbar {{ width:100%; max-width:46px; background:var(--h5); border-radius:3px 3px 0 0;
-  min-height:2px; }}
-.mbn {{ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:11px;
-  color:var(--ink); font-weight:650; font-variant-numeric:tabular-nums; }}
-.mbl {{ font-size:10.5px; color:var(--faint); letter-spacing:.04em; }}
-
-.panel {{ border:1px solid var(--line); border-radius:3px; background:var(--surface);
-  overflow-x:auto; }}
-table {{ border-collapse:collapse; width:100%; }}
-thead th {{ font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint);
-  font-weight:650; background:var(--wash); border-bottom:1px solid var(--line);
-  padding:10px 12px; text-align:left; white-space:nowrap; position:sticky; top:0; z-index:2; }}
-td {{ padding:9px 12px; border-bottom:1px solid var(--hair); vertical-align:top; }}
-tbody tr:hover td {{ background:var(--raise); }}
-.mrow th {{ background:var(--wash); border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line); padding:9px 12px; text-align:left;
-  font-family:"Iowan Old Style",Georgia,serif; font-size:15px; color:var(--ink);
-  font-weight:600; letter-spacing:.01em; position:sticky; top:37px; z-index:1; }}
-.mcount {{ font-family:system-ui,sans-serif; font-size:11px; font-weight:500;
-  color:var(--faint); letter-spacing:.06em; text-transform:uppercase; margin-left:10px; }}
-.num {{ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-  font-variant-numeric:tabular-nums; font-size:13px; }}
-.dt {{ white-space:nowrap; color:var(--ink); font-weight:600; width:74px; }}
-.brk {{ white-space:nowrap; width:170px; }}
-.brk .dv {{ white-space:normal; }}
-.brk b {{ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:12px;
-  color:var(--ink); font-weight:650; letter-spacing:.02em; }}
-.evs td {{ border-top:1px solid var(--line); }}
-.evc2 .brk {{ padding-left:12px; }}
-.dow {{ color:var(--faint); font-weight:400; font-size:11px; }}
-.evc {{ min-width:250px; max-width:420px; }}
-.evc .lnk {{ color:var(--ink); font-weight:600; font-size:13.5px; text-decoration:none; }}
-.evc .lnk:hover {{ color:var(--accent); text-decoration:underline; text-underline-offset:2px; }}
-.dv {{ display:block; font-size:11.5px; color:var(--faint); margin-top:2px; }}
-.dv i {{ font-style:normal; color:var(--muted); font-weight:650;
-  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:10.5px; }}
-.loc {{ font-size:12.5px; color:var(--muted); max-width:200px; }}
-.sanc {{ font-size:9.5px; letter-spacing:.07em; text-transform:uppercase; color:var(--muted);
-  border:1px solid var(--line); border-radius:2px; padding:2px 5px; white-space:nowrap;
-  display:inline-block; }}
-.bdy {{ white-space:nowrap; }}
-h3 {{ font-family:"Iowan Old Style",Georgia,serif; font-size:17px; color:var(--ink);
-  font-weight:600; margin:0 0 10px; }}
-.ldivs {{ display:flex; flex-wrap:wrap; gap:5px; max-width:460px; }}
-.lcl td {{ background:color-mix(in srgb,var(--accent-soft) 24%,transparent); }}
-.tr {{ color:var(--gold); background:var(--gold-soft); }}
-.trn td {{ background:color-mix(in srgb,var(--gold-soft) 32%,transparent); }}
-.lt {{ display:inline-block; margin-left:7px; font-size:9px; letter-spacing:.09em;
-  text-transform:uppercase; color:var(--accent); background:var(--accent-soft);
-  border-radius:2px; padding:1px 5px; font-weight:650; vertical-align:1px; }}
-.ldiv {{ font-size:11px; color:var(--accent); background:var(--accent-soft);
-  border-radius:2px; padding:2px 7px; text-decoration:none; white-space:nowrap; }}
-.ldiv:hover {{ text-decoration:underline; text-underline-offset:2px; }}
-.cbva {{ color:var(--accent); border-color:var(--accent-soft); text-decoration:none;
-  font-weight:650; margin-left:5px; }}
-.cbva:hover {{ background:var(--accent-soft); }}
-.ht {{ width:52px; text-align:center; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-  font-variant-numeric:tabular-nums; font-size:13.5px; font-weight:650; color:var(--hink1);
-  border-left:2px solid var(--surface); }}
-.h0 {{ color:var(--faint); font-weight:400; }}
-.h1 {{ background:var(--h1); }} .h2 {{ background:var(--h2); }} .h3 {{ background:var(--h3); }}
-.h4 {{ background:var(--h4); }}
-.h5 {{ background:var(--h5); color:var(--hink5); }}
-.h6 {{ background:var(--h6); color:var(--hink6); }}
-.nxc {{ white-space:nowrap; font-size:12.5px; }}
-.nx {{ color:var(--accent); font-weight:600; text-decoration:none; }}
-.nx:hover {{ text-decoration:underline; text-underline-offset:2px; }}
-.dim {{ color:var(--faint); }}
-.nw {{ white-space:nowrap; }}
-.lnk {{ color:inherit; }}
-.legend {{ display:flex; flex-wrap:wrap; gap:8px 18px; align-items:center; margin:14px 0 0;
-  font-size:12px; color:var(--muted); }}
-.key {{ display:inline-flex; align-items:center; gap:6px; }}
-.sw {{ width:26px; height:14px; border:1px solid var(--line); border-radius:2px; display:inline-block; }}
-.ramp {{ display:inline-flex; }}
-.ramp span {{ width:22px; height:14px; border:1px solid var(--line); border-left:0; }}
-.ramp span:first-child {{ border-left:1px solid var(--line); }}
-.notes ul {{ padding-left:19px; margin:10px 0 0; }}
-.notes li {{ margin:7px 0; font-size:13.5px; color:var(--muted); max-width:78ch; }}
-.notes b {{ color:var(--body); font-weight:600; }}
-footer {{ border-top:1px solid var(--line); padding:20px 0 64px; margin-top:44px;
-  font-size:12px; color:var(--faint); max-width:82ch; }}
-a {{ color:var(--accent); }}
-:focus-visible {{ outline:2px solid var(--accent); outline-offset:2px; }}
-@media (prefers-reduced-motion:reduce) {{ * {{ transition:none !important; }} }}
-</style>
+<style>{CSS}</style>
 
 <div class="wrap">
 <header>

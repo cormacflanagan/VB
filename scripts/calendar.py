@@ -122,10 +122,19 @@ def main(group):
     out.sort(key=lambda x: (x["date"], -x["t60"]))
 
     # match each event to next season's edition, so the calendar is usable for planning
+    # Match each event to next season's edition. upcoming_vb.json is rebuilt from the
+    # tournament crawl (scripts/season.py) and is read first; the older upcoming.json came
+    # from a feed that no longer answers and is frozen at the day it was taken, so it is
+    # kept only to fill gaps the crawl's own filters leave.
     nxt = {}
-    for t in json.load(open("upcoming.json")):
-        if t["startDate"] >= "2026-08-12":
-            nxt.setdefault(norm(t["name"]), t)
+    for f in ("upcoming_vb.json", "upcoming.json"):
+        try:
+            feed = json.load(open(f))
+        except FileNotFoundError:
+            continue
+        for t in feed:
+            if t["startDate"] >= "2026-08-12":
+                nxt.setdefault(norm(t["name"]), t)
     matched = 0
     for e in out:
         m = nxt.get(norm(e["name"]))
