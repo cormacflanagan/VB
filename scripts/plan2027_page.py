@@ -43,14 +43,14 @@ MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "No
 TIERS = {
     "selection": ("t-sel", "Selection", "A national-team or ISF trial. The only rows that "
                                         "can put her on a team."),
-    "national": ("t-nat", "National 18U", "A national junior championship: the deepest "
-                                          "fields she is age-eligible for, and the longest days."),
-    "circuit": ("t-cir", "Circuit 18U", "The p1440 / IBVL / BVNE junior circuit. Regular, "
+    "national": ("t-nat", "National junior", "A national junior championship: the deepest "
+                                             "fields she is age-eligible for, and the longest days."),
+    "circuit": ("t-cir", "Junior circuit", "The p1440 / IBVL / BVNE junior circuit. Regular, "
                                         "shallower, useful for reps and ranking points."),
-    "open": ("t-opn", "Women's open", "An adult draw. Harder opponents than a junior "
-                                      "circuit date, four matches rather than six."),
+    "open": ("t-opn", "Women's open", "An adult draw. Harder opponents than most junior "
+                                      "dates, but four sets rather than twenty."),
     "reach": ("t-rch", "Out of reach", "Professional or qualification-only. A median above "
-                                       "10.3 and two matches before the exit."),
+                                       "10.3 and two or three sets before the exit."),
     "grass": ("t-grs", "Grass", "Played on grass, which carries its own TruVolley. Nothing "
                                 "that happens there can move her sand rating."),
 }
@@ -141,11 +141,15 @@ PLAN = [
     ("2027-06-05", True,  "Kauai Bikini Open", "North Beach, Santa Monica", "CA", "18U", "circuit", 119863),
     ("2027-06-14", False, "USAV U19 / U21 Worlds Trials &#8212; if the cycle runs", "Hermosa Beach Pier", "CA", "Open", "selection", None),
     ("2027-06-28", False, "BVCA Pairs West Coast Championships", "Newland, Huntington Beach", "CA", "18U", "circuit", 130318),
+("2027-06-28", False, "BVCA Pairs West Coast Championships", "Newland, Huntington Beach", "CA", "17U", "circuit", 130319),
     ("2027-07-06", False, "BVCA Individual Pairs National Championship", "Hermosa Beach", "CA", "18U", "national", 139559),
     ("2027-07-14", True,  "34th AAU Hermosa Beach National Pairs Championships", "Hermosa Beach Pier", "CA", "18U", "national", 117393),
+("2027-07-14", True,  "34th AAU Hermosa Beach National Pairs Championships", "Hermosa Beach Pier", "CA", "17U", "national", 126666),
     ("2027-07-21", False, "AVP Juniors National Championships", "Hermosa Beach Pier", "CA", "18U", "national", 126054),
+("2027-07-21", False, "AVP Juniors National Championships", "Hermosa Beach Pier", "CA", "17U", "national", 126055),
     ("2027-08-22", False, "Super Girl Pro Invitational", "Oceanside Pier", "CA", "18U", "circuit", 148168),
     ("2027-11-06", False, "AVP Juniors West Coast Championships", "Manhattan Beach", "CA", "18U", "national", 97147),
+("2027-11-06", False, "AVP Juniors West Coast Championships", "Manhattan Beach", "CA", "17U", "national", 97148),
     # Nevada. Everything the state has, which is not much.
     ("2027-07-24", False, "Tahoe Championships &#8212; grass, separate rating", "Kahle Park, South Lake Tahoe", "NV", "Open", "grass", 114462),
     ("2027-12-11", False, "AVP Winter Las Vegas", "Sunset Park, Las Vegas", "NV", "18U", "circuit", 59358),
@@ -233,6 +237,8 @@ EXTRA = """
 .tag { display:inline-block; font-size:10px; letter-spacing:.07em; text-transform:uppercase;
   font-weight:650; padding:2px 7px; border-radius:3px; white-space:nowrap; }
 .est { font-style:italic; color:var(--faint); }
+.own { display:block; font-size:9.5px; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--accent); font-weight:650; margin-top:2px; }
 .rank { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-variant-numeric:tabular-nums; }
 .st { display:inline-block; width:22px; font-size:10.5px; color:var(--faint); font-weight:650; }
 .keys { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -255,9 +261,13 @@ def build():
     items = []
     for date, conf, name, place, state, div, tier, ref in PLAN:
         s_ = S.get(ref) or {}
+        # The tours and USA Volleyball label the same cohort differently, one year apart,
+        # so "her band" is per-event rather than a single number.
+        own = (div == "17U") or (div == "18U" and tier == "selection") or \
+              (div == "18U" and "Futures" in name)
         items.append({"sort": date, "month": date[:7], "when": date, "conf": conf,
                       "name": name, "place": place, "state": state, "div": div,
-                      "tier": tier, **s_})
+                      "tier": tier, "own": own, **s_})
     for e in cb:
         items.append({"sort": f"2027-{e['month']:02d}-32", "month": f"2027-{e['month']:02d}",
                       "when": None, "conf": False, "name": f"CBVA women&#8217;s open",
@@ -287,6 +297,7 @@ def build():
             else:
                 when = f'<span class="est">{MON[int(k[5:7])-1]}, undated</span>'
             num = lambda x, f="{:.0f}": (f.format(x) if x is not None else "&#8212;")
+            own_tag = '<span class="own">her band</span>' if it.get("own") else ""
             sub = esc(it["place"])
             if it.get("slots"):
                 sub += f' &#183; {it["slots"]} past edition{"s" if it["slots"] != 1 else ""}'
@@ -294,7 +305,7 @@ def build():
         <td class="dt num nw">{when}</td>
         <td class="evc"><b>{it['name']}</b><span class="dv">{sub}</span></td>
         <td class="bdy"><span class="st">{it['state']}</span></td>
-        <td class="rank">{it['div']}</td>
+        <td class="rank">{it['div']}{own_tag}</td>
         <td><span class="tag {cls}">{label}</span></td>
         <td class="num rank">{num(it.get('med'), '{:.2f}')}</td>
         <td class="num rank">{num(it.get('above'))}</td>
@@ -330,18 +341,51 @@ def build():
   <p class="standfirst">The competitions within reach in the three states she can drive or
   fly to in a day, in calendar order, each with the field it drew last time and the
   volleyball it gave &#8212; counted in <b>sets</b>, because a CBVA pool game is one set
-  and a national bracket match is three. She is {HER_BAND} for the whole of 2027 &#8212; born 2010, and the
-  USA Volleyball chart reads U18&#160;=&#160;2010 next year &#8212; so this is the first
-  season she is the oldest birth year in her band rather than playing up into it.</p>
+  and a national bracket match is three. Born 2010, she turns 17 in February, and what that
+  makes her depends on who is running the draw &#8212; which is the first thing to get
+  straight.</p>
   <div class="facts">
     <div class="fact"><b>{len(items)}</b><span>Entries listed</span></div>
     <div class="fact"><b>{nconf}</b><span>Already posted</span></div>
     <div class="fact"><b>{nsel}</b><span>Selection events</span></div>
-    <div class="fact"><b>{nnat}</b><span>National 18U</span></div>
+    <div class="fact"><b>{nnat}</b><span>National junior</span></div>
     <div class="fact"><b>{len(cb)}</b><span>CBVA open slots</span></div>
     <div class="fact"><b>{jn["sets"]:.0f}</b><span>Sets at the biggest</span></div>
   </div>
 </header>
+
+<section>
+  <h2>Two age charts, one year apart</h2>
+  <p class="lede">USA Volleyball and the junior tours label the same cohort differently, and
+  the difference is exactly one year. It is visible in who actually entered the 2026 draws,
+  read off the graduating years on the entry lists.</p>
+  <div class="panel">
+    <table>
+      <thead><tr><th scope="col">Body</th><th scope="col">Division in 2026</th>
+        <th scope="col">Oldest birth year in it</th><th scope="col">Her label in 2026</th>
+        <th scope="col">Her label in 2027</th></tr></thead>
+      <tbody>
+        <tr><td class="evc"><b>USA Volleyball</b><span class="dv">NTDP rosters, national-team trials</span></td>
+          <td class="rank">U17</td><td class="rank">2010</td>
+          <td class="rank">U17</td><td class="rank"><b>U18</b></td></tr>
+        <tr><td class="evc"><b>AVP Juniors, AAU, BVCA</b><span class="dv">the junior championships</span></td>
+          <td class="rank">16U</td><td class="rank">2010</td>
+          <td class="rank">16U</td><td class="rank"><b>17U</b></td></tr>
+        <tr><td class="evc"><b>p1440 Futures Tour</b><span class="dv">no 17U draw at all</span></td>
+          <td class="rank">16U</td><td class="rank">2010</td>
+          <td class="rank">16U</td><td class="rank"><b>18U</b>, playing up</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="lede" style="margin-top:14px">She was on the NTDP <b>U17</b> roster and entered
+  AVP Juniors Nationals in <b>16U</b> in the same summer, and both were correct. In 2027 that
+  makes her a <b>U18</b> at a USA Volleyball trial and a <b>17U</b> at AVP Juniors, AAU and
+  BVCA, where entering 18U means playing up a year. The Futures Tour runs only 16U and 18U,
+  and she ages out of 16U, so there 18U is the only option.</p>
+  <p class="lede"><b>Both 17U and 18U are listed below where an event runs both</b>, with
+  &#8220;her band&#8221; marking the one she is naturally in. The numbers make the choice
+  for her: the 17U draws carry nobody above her, and the 18U draws carry up to eighteen.</p>
+</section>
 
 <section>
   <h2>What counts, and what does not</h2>
@@ -352,14 +396,14 @@ def build():
   0.75 of her own &#8212; the sets that were a contest rather than a formality. Contested
   sets are the currency; everything else is a proxy for them.</p>
   <div class="keys">{keys}</div>
-  <p class="lede" style="margin-top:18px">Four things are deliberately absent. The
+  <p class="lede" style="margin-top:18px">Three things are deliberately absent. The
   <b>recruiting showcases</b> &#8212; GNBV, the Western World Mega Collegiate Showcase
   &#8212; are off the list because she is committed to Santa&#160;Clara, and the field they
   draw backs that up: the 2026 Western World showcase carried nobody above her at a median
   of 7.26. The <b>CIFSS Pairs Championship</b> is a CIF Southern Section event and she is at
-  a Central Coast Section school, so it is not open to her. <b>17U and 16U
-  draws</b> are not listed: the 2026 AVP Juniors Nationals 17U field carried three players
-  above her against the 18U draw's eighteen, and the West Coast 17U carried none. And the
+  a Central Coast Section school, so it is not open to her. <b>16U draws</b> are not listed
+  either: she ages out of 16U in 2027, and the 2026 AVP Juniors Nationals 16U field carried
+  nobody above her in any case. And the
   <b>AVP League qualifiers and NORCECA playoffs</b> appear only as <span class="tag t-rch">
   out of reach</span> &#8212; medians above 11.3 with most of the field over 10.5, and a
   median of one and a half matches before the exit.</p>
