@@ -33,13 +33,25 @@ HER_NAME = "Haisley Flanagan"
 PAIR = 9.50
 SINCE = "2023-09-01"
 TOP = ("open", "aaa")
-LA = {"Manhattan Beach", "Santa Monica", "Hermosa Beach", "Los Angeles", "Long Beach",
-      "Pacific Palisades", "Playa del Rey", "Malibu"}
-NEAR = {"Huntington Beach", "Laguna Beach"}          # Orange County, same trip
-SOUTH = LA | NEAR | {"Santa Barbara"}
-# CBVA files the Monterey venue under "Monterey Bay"; everything else matches its own name.
-HOME = {"Santa Cruz": {"Santa Cruz"}, "Santa Barbara": {"Santa Barbara"},
-        "Monterey": {"Monterey Bay"}, "Pismo Beach": {"Pismo Beach"}}
+# Every CBVA city, filed north to south. The region is the unit a reader plans around:
+# one drive, one weekend, often one organiser's series.
+REGIONS = [
+    ("North Coast", ["Santa Cruz", "Monterey Bay"]),
+    ("Central Coast", ["Santa Barbara", "Pismo Beach", "Ventura"]),
+    ("Los Angeles", ["Malibu", "Pacific Palisades", "Santa Monica", "Playa del Rey",
+                     "Los Angeles", "Manhattan Beach", "Hermosa Beach", "Long Beach"]),
+    ("Orange County", ["Huntington Beach", "Bolsa Chica, Huntington Beach", "Newport Beach",
+                       "Laguna Beach", "Dana Point"]),
+    ("San Diego", ["Oceanside", "Del Mar, San Diego", "San Diego", "South Mission Beach",
+                   "Coronado, San Diego", "Catamaran Resort, San Diego"]),
+]
+REGION = {c: r for r, cs in REGIONS for c in cs}
+ALL_CA = set(REGION)
+# Venues outside CBVA's vocabulary that the Volleyball Life scan should still count as
+# California. CBVA covers the beaches; these are the inland and collegiate sites.
+EXTRA_CA = ("cal poly", "san luis obispo", "slo ", "davis", "stanford", "pepperdine",
+            "ucla", "usc", "long beach state", "sacramento", "fresno", "venice",
+            "redondo", "torrance", "el segundo", "capitola", "half moon bay")
 MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
 
@@ -151,7 +163,7 @@ def her_record(dv, tm, link, tv):
     return out
 
 
-def vbl_janapr(tv, cbva_days):
+def vbl_janapr(tv, cbva_days, cbva_venues):
     """The AVP, p1440 and collegiate opens CBVA does not run, Jan-April, LA and SB.
 
     Volleyball Life also carries the CBVA events themselves, under names like "Women's Open
@@ -171,8 +183,16 @@ def vbl_janapr(tv, cbva_days):
                 x = json.loads(l)
                 if not x.get("drop"):
                     ents[x["tdId"]].update(x["p"])
-    pat = re.compile(r"manhattan|hermosa|santa monica|dockweiler|long beach|huntington"
-                     r"|laguna|los angeles|santa barbara|playa|malibu|venice", re.I)
+    # CBVA's own city and venue vocabulary covers the California beaches; EXTRA_CA adds
+    # the collegiate and inland sites it has no reason to name.
+    # CBVA's own city and venue vocabulary covers the California beaches; EXTRA_CA adds
+    # the collegiate and inland sites it has no reason to name.
+    vocab = {c.split(",")[0] for c in ALL_CA} | set(ALL_CA) | set(cbva_venues) | set(EXTRA_CA)
+    pat = re.compile("|".join(re.escape(x) for x in sorted(vocab)), re.I)
+    # Volleyball Life also carries the CBVA events themselves. They are named in a fixed
+    # shape -- "Women's Open at Ocean Park, Santa Monica", or a bare date and venue -- so
+    # the shape identifies them even on a day CBVA ran nothing else.
+    cbva_named = re.compile(r"(^|\s)at .+?,\s|^\s*\d{1,2}/\d{1,2}/\d{2}", re.I)
     out = []
     for d in D:
         if d["players"] != 2 or d["gender"] not in ("Womens", "Girls"):
@@ -186,7 +206,8 @@ def vbl_janapr(tv, cbva_days):
         where = (d.get("venue") or "") + " " + t.get("name", "")
         if not pat.search(where):
             continue
-        if any(c.lower() in where.lower() for c in cbva_days.get(s, ())):
+        if cbva_named.search(t.get("name", "")) or \
+           any(c.lower() in where.lower() for c in cbva_days.get(s, ())):
             continue
         v = [tv[str(p)]["tv"] for p in ents.get(d["tdId"], ()) if tv.get(str(p), {}).get("tv")]
         if len(v) < 8:
@@ -236,15 +257,15 @@ EXTRA = """
 
 def build():
     tn, dv, tm, mt, link, tv = load()
-    la = events(tn, dv, tm, mt, link, tv, SOUTH)
+    la = events(tn, dv, tm, mt, link, tv, ALL_CA)
     home = {}
-    for c, cities in HOME.items():
+    for r, cities in REGIONS:
         for lv, key in ((TOP, "Open"), (("aa",), "AA"), (("a",), "A")):
-            evs = events(tn, dv, tm, mt, link, tv, cities, lv)
+            evs = events(tn, dv, tm, mt, link, tv, set(cities), lv)
             if evs:
-                home[(c, key)] = agg(evs)
+                home[(r, key)] = agg(evs)
             elif key == "Open":
-                home[(c, key)] = None
+                home.setdefault((r, key), None)
 
     # ---- the format: how many games a team actually plays
     dist = Counter(g for e in la for g in e["games"])
@@ -263,11 +284,9 @@ def build():
     vrows = []
     for (c, v), evs in sorted(byven.items(), key=lambda kv: -agg(kv[1])["above"]):
         a = agg(evs)
-        tier = ("t-aim" if a["above"] >= 2.5 else
-                "t-vol" if a["games"] >= 5 else "t-vol")
         vrows.append(
-            f'<tr><td class="evc"><b>{esc(v)}</b><span class="dv">{esc(c)}'
-            f'{"" if c not in NEAR else " &#183; Orange County"}</span></td>'
+            f'<tr><td class="evc"><b>{esc(v)}</b><span class="dv">{esc(c)} &#183; '
+            f'{esc(REGION.get(c, "?"))}</span></td>'
             f'<td class="num rank">{a["per_year"]:.1f}</td>'
             f'<td class="num rank">{a["teams"]:.0f}</td>'
             f'<td class="num rank">{a["med"]:.2f}</td>'
@@ -316,7 +335,7 @@ def build():
     for e in la:
         cbva_days[e["date"]].add(e["city"])
         cbva_days[e["date"]].add(e["venue"])
-    nc = vbl_janapr(tv, cbva_days)
+    nc = vbl_janapr(tv, cbva_days, {e["venue"] for e in la})
     ncrows = "".join(
         f'<tr><td class="num dim nw">{datetime.date(*map(int, e["date"].split("-"))).strftime("%-d %b %y")}</td>'
         f'<td class="evc"><a class="lnk" href="{VBL}/tournament/{e["tid"]}" target="_blank" '
@@ -343,27 +362,29 @@ def build():
                 f'<td class="num rank">{ptv}</td></tr>')
     recrows = "".join(recrow(r) for r in rec)
     wins = sum(1 for r in rec if r["finish"] == 1 and r["level"] in TOP)
-    # ---- the home-coast comparison
+    # ---- the regions, north to south
     hrows = []
-    for c in ("Santa Cruz", "Santa Barbara", "Monterey", "Pismo Beach"):
-        a = home.get((c, "Open"))
+    for r, _ in REGIONS:
+        a = home.get((r, "Open"))
         if a:
             cells_ = (f'<td class="num rank">{a["per_year"]:.1f}</td>'
                       f'<td class="num rank">{a["teams"]:.0f}</td>'
                       f'<td class="num rank">{a["med"]:.2f}</td>'
-                      f'<td class="num rank">{a["n95"]:.1f}</td>'
+                      f'<td class="ht h{heat(a["above"]/8)}">{a["above"]:.1f}</td>'
                       f'<td class="num rank">{a["games"]:.1f}</td>'
                       f'<td class="dim">{", ".join(MON[m-1] for m in a["months"])}</td>')
         else:
-            best = next((k for k in ("AA", "A") if home.get((c, k))), None)
-            b = home.get((c, best)) if best else None
+            best = next((k for k in ("AA", "A") if home.get((r, k))), None)
+            b = home.get((r, best)) if best else None
             note = (f'It tops out at {best}: {b["n"]} draw'
                     f'{"s" if b["n"] != 1 else ""} since 2023, median {b["med"]:.2f}.') if b \
                 else "It has held no women&#8217;s doubles of any level."
-            cells_ = f'<td class="dim" colspan="6">No open has ever been held here. {note}</td>'
-        hrows.append(f'<tr><td class="evc"><b>{esc(c)}</b></td>{cells_}</tr>')
+            cells_ = f'<td class="dim" colspan="6">No open has been held here. {note}</td>'
+        n = sum(1 for e in la if REGION.get(e["city"]) == r)
+        hrows.append(f'<tr><td class="evc"><b>{esc(r)}</b>'
+                     f'<span class="dv">{n} draw{"s" if n != 1 else ""}</span></td>{cells_}</tr>')
 
-    sc = home.get(("Santa Cruz", "Open"))
+    sc = agg([e for e in la if e["city"] == "Santa Cruz"])
     la_best = max((agg(v) for v in byven.values()), key=lambda a: a["above"])
     best = [(k, agg(v)) for k, v in byven.items() if agg(v)["above"] >= 3
             and agg(v)["games"] >= 5]
@@ -377,12 +398,13 @@ def build():
 
 <div class="wrap">
 <header>
-  <p class="eyebrow">Girls beach volleyball &#183; women&#8217;s open draws &#183;
-  Santa Cruz, Los Angeles, Santa Barbara</p>
+  <p class="eyebrow">Girls beach volleyball &#183; every women&#8217;s open draw in
+  California</p>
   <h1>Where to play a <em>women&#8217;s open</em></h1>
   <p class="standfirst">Which adult open draws are hard enough to be worth the drive, and
-  which of them give you more than the four matches the format hands everybody. The two
-  pull against each other: the hardest fields are the ones you leave soonest. Measured
+  which of them give you more than the four matches the format hands everybody. Every
+  open held in California over three seasons, from Santa&#160;Cruz to San&#160;Diego. The
+  two pull against each other: the hardest fields are the ones you leave soonest. Measured
   against a pair rating of {PAIR:.2f} &#8212; {HER_NAME} at {esc("9.68")} with the partners
   she actually enters with.</p>
   <div class="facts">
@@ -403,7 +425,7 @@ def build():
   a <b>top-three finish</b>, and that is the only lever there is.</p>
   <div class="bars">{bars}</div>
   <p class="lede" style="margin-top:12px">Team entries at the {len(la)} women&#8217;s opens
-  held in Los Angeles, Orange County and Santa Barbara since
+  held anywhere in California since
   {datetime.date(*map(int, SINCE.split("-"))).strftime("%B %Y")}. Shaded bars are the deep
   runs &#8212; {sum(v for k, v in dist.items() if k >= 6)} entries of {tot:,}. So the event
   to want is not the biggest or the hardest: it is the one where she is
@@ -411,34 +433,35 @@ def build():
 </section>
 
 <section>
-  <h2>Nothing north of Santa Barbara</h2>
-  <p class="lede">Before looking south, the home coast. Two of the four nearest beach towns
-  have never held a women&#8217;s open at all, and the one that holds a good one holds it
-  once a year.</p>
+  <h2>The five regions</h2>
+  <p class="lede">Every women&#8217;s open held in California since
+  {datetime.date(*map(int, SINCE.split("-"))).strftime("%B %Y")}, gathered into the five
+  stretches of coast CBVA runs on, north to south. The field hardens as you go south and
+  the number of chances goes with it.</p>
   <div class="panel">
     <table>
       <thead><tr>
-        <th scope="col">Place</th><th scope="col" class="num">Opens/yr</th>
+        <th scope="col">Region</th><th scope="col" class="num">Opens/yr</th>
         <th scope="col" class="num">Teams</th><th scope="col" class="num">Median TruVolley</th>
-        <th scope="col" class="num">&#8805;9.5</th><th scope="col" class="num">Median games</th>
-        <th scope="col">Months</th>
+        <th scope="col" class="num">Teams above her</th>
+        <th scope="col" class="num">Median games</th><th scope="col">Months</th>
       </tr></thead>
       <tbody>{"".join(hrows)}</tbody>
     </table>
   </div>
-  <p class="lede" style="margin-top:14px">San&#160;Luis&#160;Obispo is not on the list
-  because it is not a CBVA venue and has held exactly one sand open ever &#8212; the Epic
-  Cal&#160;Poly Smashdown of October 2024, 38 teams and a median of 9.20, with no edition
-  since. What runs there now is the SLO&#160;SMASH <b>grass</b> series, and grass carries a
-  separate rating: players with a hundred grass matches and no sand have a sand TruVolley of
-  zero. Grass results cannot move the number this page is measured in.</p>
+  <p class="lede" style="margin-top:14px">Two towns on the home coast hold none at all.
+  <b>Monterey</b> tops out at AA and <b>Pismo&#160;Beach</b> at A, so the nearest open to
+  Santa&#160;Cruz in either direction is Santa&#160;Cruz itself.
+  <b>San&#160;Luis&#160;Obispo</b> is not CBVA and has held exactly one sand open ever
+  &#8212; the Epic Cal&#160;Poly Smashdown of October 2024, 38 teams and a median of 9.20,
+  with no edition since. What runs there now is the SLO&#160;SMASH <b>grass</b> series, and
+  grass carries a separate rating: a player with a hundred grass matches and no sand has a
+  sand TruVolley of zero. Grass results cannot move the number this page ranks on.</p>
 </section>
 
 <section>
-  <h2>The draws within reach</h2>
-  <p class="lede">Every women&#8217;s open held in Los Angeles county, Orange County and
-  Santa Barbara since {datetime.date(*map(int, SINCE.split("-"))).strftime("%B %Y")},
-  by venue. <b>Teams above her</b> counts the pairs in a typical field whose two players
+  <h2>Every venue in the state</h2>
+  <p class="lede">The same draws by venue rather than region, hardest field first. <b>Teams above her</b> counts the pairs in a typical field whose two players
   average better than {PAIR:.2f} &#8212; the teams she would actually have to beat. It is
   shaded on the same scale as the season map below.</p>
   <div class="panel">
@@ -464,8 +487,9 @@ def build():
 <section>
   <h2>When they happen</h2>
   <p class="lede">Opens held per month across the {yrs} seasons in the window, by venue,
-  strongest field at the top. The season is March to November and the good draws cluster in
-  the middle of it; the winter is empty, and not by accident.</p>
+  strongest field at the top. CBVA&#8217;s season is March to November and the good draws
+  cluster in the middle of it. The blank winter is CBVA&#8217;s alone; the two dates that
+  fill it belong to other organisers and are in the January&#8211;April tables below.</p>
   <div class="panel" style="padding:14px 16px">
     <table class="grid2">
       <thead><tr><th></th>{"".join(f'<th>{m}</th>' for m in MON)}</tr></thead>
@@ -484,8 +508,12 @@ def build():
 <section>
   <h2>January to April</h2>
   <p class="lede">CBVA has never run a women&#8217;s open in <b>January or February</b>
-  &#8212; not once, in a database going back to 2005. The season opens in the third week of
-  March, and the March&#8211;April draws are the weakest of the year.</p>
+  &#8212; not once, in a database going back to 2005. Its season opens in the third week of
+  March, and the March&#8211;April draws are the weakest of the year. Two winter dates exist
+  outside CBVA, both at the top of the sport: the BNTDP Jr&#160;Pan&#160;Am Games Trials in
+  January, which is an invitation, and Highline&#8217;s $5K Sponsorship Open at Ocean Park
+  North on the last Saturday of February &#8212; 17 teams to a median of 10.01, nine of them
+  above 10.5.</p>
   <div class="panel">
     <table>
       <thead><tr>
