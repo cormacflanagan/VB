@@ -22,7 +22,8 @@ from collections import Counter, defaultdict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from calendar_page import CSS
-from opens_page import (ALL_CA, EXTRA_CA, REGION, PAIR, esc, heat, load, rows as jrows)
+from opens_page import (ALL_CA, CBVA_URL, EXTRA_CA, REGION, PAIR, esc, heat, load,
+                        rows as jrows)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "..", "data")
@@ -30,6 +31,9 @@ VB = os.path.join(DATA, "vb")
 OUT = os.path.join(HERE, "..", "docs", "plan-2027.html")
 VBL = "https://volleyballlife.com"
 HER = 9.678
+USAV_EVENTS = "https://usavolleyball.org/events/"
+# Rows with no comparable prior edition link to whoever runs them instead.
+SITE = {"USAV U19 / U21 Worlds Trials &#8212; if the cycle runs": USAV_EVENTS}
 HER_BAND = "U18"          # born 2010; in 2027 the USAV chart reads U18 = 2010
 # Nevada is in scope and comes back almost empty: the only recurring adult open is the
 # Tahoe Championships, which is played on grass and so cannot move a sand rating, and the
@@ -54,6 +58,24 @@ TIERS = {
     "grass": ("t-grs", "Grass", "Played on grass, which carries its own TruVolley. Nothing "
                                 "that happens there can move her sand rating."),
 }
+
+
+def link_2027(name, date, feed):
+    """The 2027 listing for a confirmed row, matched on date and name.
+
+    Looked up rather than hard-coded, so a re-run picks up whatever Volleyball Life has
+    posted since: a row that is an estimate today becomes a live link the week it goes up.
+    """
+    def norm(x):
+        return re.sub(r"[^a-z0-9]+", " ", re.sub(r"&#\d+;", "", x.lower())).strip()
+    a = norm(name)
+    for t in feed:
+        if t["startDate"] != date:
+            continue
+        b = norm(t["name"])
+        if a[:18] in b or b[:18] in a or set(a.split()[:3]) <= set(b.split()):
+            return t["id"]
+    return None
 
 
 def vbl_corpus():
@@ -132,7 +154,7 @@ PLAN = [
     ("2027-02-06", True,  "Kauai Bikini Open", "North Beach, Santa Monica", "CA", "18U", "circuit", 117945),
     ("2027-02-07", True,  "IBVL Winter Nationals (School Event) &#8212; ISF trial", "Hermosa Beach Pier", "CA", "18U", "selection", 124255),
     ("2027-02-13", True,  "p1440 1X Ranking Event", "Arizona Athletic Grounds, Phoenix", "AZ", "18U", "circuit", None),
-    ("2027-02-27", False, "Highline Sponsorship Open ($5K)", "Ocean Park North, Santa Monica", "CA", "Open", "reach", None),
+    ("2027-02-27", False, "Highline Sponsorship Open ($5K)", "Ocean Park North, Santa Monica", "CA", "Open", "reach", 132429),
     ("2027-02-27", True,  "Futures Tour 3X: Spring Championships", "California", "CA", "18U", "national", 117695),
     ("2027-03-07", True,  "California IBVL Winter Series Championships (p1440)", "Hermosa Beach Pier", "CA", "18U", "circuit", 121642),
     ("2027-03-21", True,  "Marine Open (Girls p1440)", "Manhattan Beach Lifeguard HQ", "CA", "18U", "circuit", 121649),
@@ -224,6 +246,12 @@ def cbva_2027(tn, dv, tm, mt, link, tv):
                     "above": sum(1 for z in r if z > HER) / len(evs),
                     "sets": sum(tot[e["td"]] for e in evs) / n if n else None,
                     "con": sum(con[e["td"]] for e in evs) / n if n else None})
+    vid = {}
+    for t in tn.values():
+        if t.get("venueId") and (t.get("venue"), t.get("city")) not in vid:
+            vid[(t["venue"], t["city"])] = t["venueId"]
+    for e in out:
+        e["venueId"] = vid.get((e["venue"], e["city"]))
     out.sort(key=lambda x: (x["month"], -(x["con"] or 0)))
     return out
 
@@ -250,6 +278,8 @@ EXTRA = """
 
 def build():
     tn, dv, tm, mt, link, tv = load()
+    T, D = vbl_corpus()
+    feed = json.load(open(os.path.join(DATA, "upcoming_vb.json")))
     refs = {r[7] for r in PLAN if r[7]}
     ents = entrants(refs)
     sp = sets_played(refs, lambda pid: (tv.get(str(pid)) or {}).get("tv"))
@@ -265,15 +295,20 @@ def build():
         # so "her band" is per-event rather than a single number.
         own = (div == "17U") or (div == "18U" and tier == "selection") or \
               (div == "18U" and "Futures" in name)
+        # Link the 2027 listing where one exists, and last year's page where it does not,
+        # so every row goes somewhere you can read about the event.
+        tid = link_2027(name, date, feed) if conf else None
+        was = (D.get(ref) or {}).get("tid") if ref else None
         items.append({"sort": date, "month": date[:7], "when": date, "conf": conf,
                       "name": name, "place": place, "state": state, "div": div,
-                      "tier": tier, "own": own, **s_})
+                      "tier": tier, "own": own, "tid": tid, "was": was, **s_})
     for e in cb:
         items.append({"sort": f"2027-{e['month']:02d}-32", "month": f"2027-{e['month']:02d}",
                       "when": None, "conf": False, "name": f"CBVA women&#8217;s open",
                       "place": f"{e['venue']}, {e['city']}", "state": "CA", "div": "Open",
                       "tier": "open", "med": e["med"], "above": round(e["above"]),
-                      "sets": e["sets"], "con": e["con"], "slots": e["n"]})
+                      "sets": e["sets"], "con": e["con"], "slots": e["n"],
+                      "cbva": e.get("venueId")})
     items.sort(key=lambda x: x["sort"])
 
     months, cur, rows = [], None, []
@@ -298,12 +333,25 @@ def build():
                 when = f'<span class="est">{MON[int(k[5:7])-1]}, undated</span>'
             num = lambda x, f="{:.0f}": (f.format(x) if x is not None else "&#8212;")
             own_tag = '<span class="own">her band</span>' if it.get("own") else ""
+            if it.get("tid"):
+                href, tip = f'{VBL}/tournament/{it["tid"]}', "This event on Volleyball Life"
+            elif it.get("cbva"):
+                href, tip = f'{CBVA_URL}/venues/{it["cbva"]}', "This venue on CBVA"
+            elif it.get("was"):
+                href, tip = (f'{VBL}/tournament/{it["was"]}',
+                             "Last year's edition on Volleyball Life")
+            elif it["name"] in SITE:
+                href, tip = SITE[it["name"]], "USA Volleyball's events calendar"
+            else:
+                href = tip = None
+            title = (f'<a class="lnk" href="{href}" target="_blank" rel="noopener" '
+                     f'title="{tip}">{it["name"]}</a>' if href else it["name"])
             sub = esc(it["place"])
             if it.get("slots"):
                 sub += f' &#183; {it["slots"]} past edition{"s" if it["slots"] != 1 else ""}'
             rows.append(f"""      <tr>
         <td class="dt num nw">{when}</td>
-        <td class="evc"><b>{it['name']}</b><span class="dv">{sub}</span></td>
+        <td class="evc"><b>{title}</b><span class="dv">{sub}</span></td>
         <td class="bdy"><span class="st">{it['state']}</span></td>
         <td class="rank">{it['div']}{own_tag}</td>
         <td><span class="tag {cls}">{label}</span></td>
@@ -414,7 +462,9 @@ def build():
   <p class="lede">A plain date is already posted on Volleyball Life. An
   <span class="est">~italic date</span> is an estimate: the series has run in the same week
   for two or three seasons and the 2027 edition is not up yet. Field numbers come from the
-  most recent edition of that event, not from the 2027 one, which has not happened.</p>
+  most recent edition of that event, not from the 2027 one, which has not happened.
+  Every event name is a link: to its 2027 listing where one is posted, to last year's
+  edition where it is not, and to the venue on CBVA for the open slots.</p>
   <div class="panel">
     <table>
       <thead><tr>
