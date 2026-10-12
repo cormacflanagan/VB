@@ -1,4 +1,4 @@
-"""Haisley's 2027 competition options in California and Arizona.
+"""Haisley's 2027 competition options in California, Arizona and Nevada.
 
   python3 scripts/plan2027_page.py    ->  docs/plan-2027.html
 
@@ -82,6 +82,58 @@ def vbl_corpus():
     T = {t["id"]: t for t in jrows("tournaments.jsonl", VB)}
     D = {d["tdId"]: d for d in jrows("divisions.jsonl", VB)}
     return T, D
+
+
+# Two rows where the reference division is not the 2027 event itself, so its day count
+# would be wrong. Both are judgements, not data, and are written down rather than inferred.
+DAYS_FIX = {
+    # The Feb school event is new as a standalone date; its field reference is the combined
+    # January Winter Nationals, which ran two days. Volleyball Life has the 2027 school
+    # event as a single Sunday.
+    ("2027-02-07", "18U"): 1,
+    # USA Volleyball has run its beach trials over two days every year in the record; this
+    # row is an estimate in the first place.
+    ("2027-06-14", "Open"): 2,
+}
+
+# No prior edition and no posted span: a p1440 1X ranking event is a one-day date.
+DAYS_FEED_ONLY = 1
+
+
+def division_days(tdids, T, D):
+    """How many days her own draw played, not how long the festival around it ran.
+
+    AAU Hermosa runs five days and AVP Juniors Nationals five; an age group plays three of
+    them, and 18U and 17U play different three. Counting the distinct dates on which the
+    division actually played is the only way to get that right. Stray dates outside the
+    tournament's own window are data errors and are dropped.
+    """
+    import gzip
+    seen = defaultdict(set)
+    for path, op in ((os.path.join(VB, "matches.jsonl.gz"), gzip.open),
+                     (os.path.join(VB, "matches.jsonl"), open)):
+        if not os.path.exists(path):
+            continue
+        with op(path, "rt") as fh:
+            for l in fh:
+                x = json.loads(l)
+                if x["tdId"] in tdids:
+                    seen[x["tdId"]].add(x["date"])
+    out = {}
+    for i in tdids:
+        d = D.get(i)
+        t = T.get(d["tid"]) if d else None
+        if not t:
+            continue
+        played = [x for x in seen.get(i, ()) if t["start"] <= x <= t["end"]]
+        out[i] = len(played) or span(t["start"], t["end"])
+    return out
+
+
+def span(a, b):
+    a = datetime.date.fromisoformat(a)
+    b = datetime.date.fromisoformat(b)
+    return (b - a).days + 1
 
 
 def entrants(tdids):
@@ -267,6 +319,8 @@ EXTRA = """
 .est { font-style:italic; color:var(--faint); }
 .own { display:block; font-size:9.5px; letter-spacing:.06em; text-transform:uppercase;
   color:var(--accent); font-weight:650; margin-top:2px; }
+.days { color:var(--faint); }
+.dmulti { color:var(--ink); font-weight:650; }
 .rank { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-variant-numeric:tabular-nums; }
 .st { display:inline-block; width:22px; font-size:10.5px; color:var(--faint); font-weight:650; }
 .keys { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -285,6 +339,7 @@ def build():
     sp = sets_played(refs, lambda pid: (tv.get(str(pid)) or {}).get("tv"))
     S = {i: stats(i, ents, sp, tv) for i in refs}
     cb = cbva_2027(tn, dv, tm, mt, link, tv)
+    DAYS = division_days(refs, T, D)
 
     # One calendar. A dated event sorts on its date; a CBVA slot has only a month, so it
     # sorts to the end of that month and says so.
@@ -299,15 +354,22 @@ def build():
         # so every row goes somewhere you can read about the event.
         tid = link_2027(name, date, feed) if conf else None
         was = (D.get(ref) or {}).get("tid") if ref else None
+        # Her draw's length, in order of what the evidence is worth: an override where the
+        # reference is a different event, then the days her division actually played last
+        # time, then the span the 2027 listing has posted.
+        f = next((t for t in feed if t["id"] == tid), None) if tid else None
+        days = DAYS_FIX.get((date, div)) or DAYS.get(ref) or \
+            (span(f["startDate"], f["endDate"]) if f else None)
         items.append({"sort": date, "month": date[:7], "when": date, "conf": conf,
                       "name": name, "place": place, "state": state, "div": div,
-                      "tier": tier, "own": own, "tid": tid, "was": was, **s_})
+                      "tier": tier, "own": own, "tid": tid, "was": was,
+                      "days": days, **s_})
     for e in cb:
         items.append({"sort": f"2027-{e['month']:02d}-32", "month": f"2027-{e['month']:02d}",
                       "when": None, "conf": False, "name": f"CBVA women&#8217;s open",
                       "place": f"{e['venue']}, {e['city']}", "state": "CA", "div": "Open",
                       "tier": "open", "med": e["med"], "above": round(e["above"]),
-                      "sets": e["sets"], "con": e["con"], "slots": e["n"],
+                      "sets": e["sets"], "con": e["con"], "slots": e["n"], "days": 1,
                       "cbva": e.get("venueId")})
     items.sort(key=lambda x: x["sort"])
 
@@ -319,7 +381,7 @@ def build():
         months[-1][1].append(it)
     for k, v in months:
         d0 = datetime.date(int(k[:4]), int(k[5:7]), 1)
-        rows.append(f'<tr class="mrow"><th colspan="8" scope="rowgroup">{d0.strftime("%B %Y")}'
+        rows.append(f'<tr class="mrow"><th colspan="9" scope="rowgroup">{d0.strftime("%B %Y")}'
                     f'<span class="mcount">{len(v)} entr{"ies" if len(v) != 1 else "y"}</span></th></tr>')
         for it in v:
             cls, label, _ = TIERS[it["tier"]]
@@ -357,6 +419,7 @@ def build():
         <td><span class="tag {cls}">{label}</span></td>
         <td class="num rank">{num(it.get('med'), '{:.2f}')}</td>
         <td class="num rank">{num(it.get('above'))}</td>
+        <td class="num rank days{'' if (it.get('days') or 1) < 2 else ' dmulti'}">{num(it.get('days'))}</td>
         <td class="num rank">{num(it.get('sets'), '{:.0f}')}</td>
         <td class="ht h{heat((it.get('con') or 0)/13)}">{num(it.get('con'), '{:.1f}')}</td>
       </tr>""")
@@ -372,6 +435,7 @@ def build():
     shares = sorted(100 * e["con"] / e["sets"] for e in cb
                     if e["city"] != "Santa Cruz" and e["sets"])
     jn = S.get(126054) or {}
+    nmulti = sum(1 for i in items if (i.get("days") or 1) > 1)
     nconf = sum(1 for r in PLAN if r[1])
     nsel = sum(1 for r in PLAN if r[6] == "selection")
     nnat = sum(1 for r in PLAN if r[6] == "national")
@@ -379,12 +443,12 @@ def build():
         f'<div class="keyc"><span class="tag {c}">{lab}</span><p>{txt}</p></div>'
         for c, lab, txt in TIERS.values())
     today = datetime.date.today()
-    return f"""<title>Haisley 2027 &#183; California and Arizona</title>
+    return f"""<title>Haisley 2027 &#183; California, Arizona and Nevada</title>
 <style>{CSS}{EXTRA}</style>
 
 <div class="wrap">
 <header>
-  <p class="eyebrow">Beach volleyball &#183; 2027 planning &#183; California and Arizona</p>
+  <p class="eyebrow">Beach volleyball &#183; 2027 planning &#183; California, Arizona and Nevada</p>
   <h1>Every draw worth entering in <em>2027</em></h1>
   <p class="standfirst">The competitions within reach in the three states she can drive or
   fly to in a day, in calendar order, each with the field it drew last time and the
@@ -398,6 +462,7 @@ def build():
     <div class="fact"><b>{nsel}</b><span>Selection events</span></div>
     <div class="fact"><b>{nnat}</b><span>National junior</span></div>
     <div class="fact"><b>{len(cb)}</b><span>CBVA open slots</span></div>
+    <div class="fact"><b>{nmulti}</b><span>Multi-day dates</span></div>
     <div class="fact"><b>{jn["sets"]:.0f}</b><span>Sets at the biggest</span></div>
   </div>
 </header>
@@ -442,7 +507,11 @@ def build():
   9.68 and <b>median</b> is the field's median TruVolley. <b>Sets</b> is what a pair rated
   like hers actually played, and <b>contested</b> is the part of it against a pair within
   0.75 of her own &#8212; the sets that were a contest rather than a formality. Contested
-  sets are the currency; everything else is a proxy for them.</p>
+  sets are the currency; everything else is a proxy for them. <b>Days</b> is how long her
+  own draw runs, which is not the same as how long the event runs: AAU Hermosa and AVP
+  Juniors Nationals each occupy five days of the pier, and an age group plays three of
+  them. It is counted from the dates her division actually played last time, so 18U and
+  17U at the same championship can differ.</p>
   <div class="keys">{keys}</div>
   <p class="lede" style="margin-top:18px">Three things are deliberately absent. The
   <b>recruiting showcases</b> &#8212; GNBV, the Western World Mega Collegiate Showcase
@@ -464,13 +533,19 @@ def build():
   for two or three seasons and the 2027 edition is not up yet. Field numbers come from the
   most recent edition of that event, not from the 2027 one, which has not happened.
   Every event name is a link: to its 2027 listing where one is posted, to last year's
-  edition where it is not, and to the venue on CBVA for the open slots.</p>
+  edition where it is not, and to the venue on CBVA for the open slots.
+  <b>Days</b> separates the Saturday dates from the ones that need a hotel: every CBVA open
+  and most of the p1440 circuit is a single day, the Futures Tour and the trials are
+  weekends, and the four national championships are three days apiece. Where a date and a
+  day count disagree &#8212; 14 July is a Wednesday &#8212; the date is when the event
+  opens and the days are the part of it her draw plays.</p>
   <div class="panel">
     <table>
       <thead><tr>
         <th scope="col">Date</th><th scope="col">Event</th><th scope="col">St</th>
         <th scope="col">Draw</th><th scope="col">Kind</th>
         <th scope="col" class="num">Median</th><th scope="col" class="num">Above her</th>
+        <th scope="col" class="num">Days</th>
         <th scope="col" class="num">Sets</th><th scope="col" class="num">Contested</th>
       </tr></thead>
       <tbody>
@@ -504,7 +579,7 @@ def build():
           <td class="ht h{heat((best["con"] or 0)/13)}">{best["con"]:.1f}</td>
           <td class="num rank">{100*best["con"]/best["sets"]:.0f}%</td></tr>
         <tr><td class="evc"><b>AVP Juniors National Championships</b>
-          <span class="dv">Hermosa Beach, one weekend in July</span></td>
+          <span class="dv">Hermosa Beach, three days in July</span></td>
           <td class="num rank">{jn["med"]:.2f}</td><td class="num rank">{jn["above"]:.0f}</td>
           <td class="num rank">{jn["sets"]:.1f}</td>
           <td class="ht h{heat((jn["con"] or 0)/13)}">{jn["con"]:.1f}</td>
@@ -516,7 +591,8 @@ def build():
     <li><b>It is the weakest contest on the circuit, by a distance.</b> Santa Cruz gives
     {sc["sets"]:.1f} sets to a pair rated like hers and {sc["con"]:.1f} of them against
     anyone near her level &#8212; {100*sc["con"]/sc["sets"]:.0f}%. The other CBVA slots on the
-    list run from {shares[0]:.0f}% to {shares[-1]:.0f}%, median {st.median(shares):.0f}%. One July weekend at AVP Juniors Nationals is worth
+    list run from {shares[0]:.0f}% to {shares[-1]:.0f}%, median {st.median(shares):.0f}%.
+    Three days at AVP Juniors Nationals are worth
     {jn["con"]/sc["con"]:.0f} Santa Cruz Saturdays in contested volleyball.</li>
     <li><b>Against a field with a median of {sc["med"]:.2f} she is an
     {100/(1+2.718281828**-(PAIR-sc["med"])):.0f}% favourite in a typical match.</b> That figure is not a guess: across 7,000 rated CBVA
@@ -557,6 +633,11 @@ def build():
     <li><b>Ratings are current TruVolley</b>, applied to fields up to two years old, so an
     older edition reads slightly stronger than it was. Unrated entrants are excluded from
     the medians, which skews them a little high.</li>
+    <li><b>The day count is last year's, not next year's.</b> It is the number of distinct
+    dates her division played at the most recent edition, so it catches the part of a
+    five-day festival that belongs to her age group &#8212; but a tour that adds a day or
+    merges two age groups changes it, and the 2027 listings mostly post a single opening
+    date rather than a span.</li>
     <li><b>Age bands are birth-year ceilings.</b> U-N in year Y admits anyone born in
     Y&#8722;N+1 or later, so an 18U draw in 2027 admits 2010 and younger. She is the oldest
     year in it. In 2028 she ages out of U18 and that year's U19 becomes the equivalent
@@ -566,10 +647,12 @@ def build():
     and athletes two years younger than her entered, so the route is open &#8212; but the
     published criteria should be confirmed with her NTDP contact rather than inferred from
     who turned up.</li>
-    <li><b>Arizona is in and Nevada is not</b>, because the p1440 circuit runs Phoenix dates
-    she can reach and because nothing in the record puts a draw worth her time in the other
-    neighbouring states. Out-of-region national events &#8212; the Futures Tour stops in
-    Florida, Texas and Washington &#8212; are left out for the same reason.</li>
+    <li><b>Nevada contributes two dates and neither is a reason to go.</b> Arizona earns
+    its place because the p1440 circuit runs Phoenix dates she can reach; Nevada is listed
+    for completeness, and what the record holds is a December girls' pairs date in Las Vegas
+    and a Tahoe Saturday played on grass, which carries its own rating and cannot move her
+    sand one. Out-of-region national events &#8212; the Futures Tour stops in Florida, Texas
+    and Washington &#8212; are left out because they are not a day's travel.</li>
   </ul>
 </section>
 <footer>
