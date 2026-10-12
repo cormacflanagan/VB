@@ -1,0 +1,516 @@
+<title>Haisley 2027 &#183; California and Arizona</title>
+<style>
+:root {
+  --ground:#EFF1EE; --surface:#FAFBFA; --raise:#FFFFFF;
+  --ink:#111B19; --body:#2C3A37; --muted:#5F6E6A; --faint:#8B9995;
+  --line:#D5DCD9; --hair:#E4E9E7; --wash:#EAEDEB;
+  --accent:#0B6E68; --accent-soft:#D9E7E5; --gold:#9A6B12; --gold-soft:#F3E4C4;
+  --h1:#EDF5F3; --h2:#CDE8E2; --h3:#A2D6CC; --h4:#6FC0B3; --h5:#2FA694; --h6:#00806F;
+  --hink1:var(--body); --hink5:#FFFFFF; --hink6:#FFFFFF;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:#0B1211; --surface:#121B19; --raise:#182322;
+    --ink:#E9EFEC; --body:#C6D2CE; --muted:#93A29E; --faint:#6E7D79;
+    --line:#243330; --hair:#1C2827; --wash:#161F1E;
+    --accent:#57C3B6; --accent-soft:#123733; --gold:#DCA84A; --gold-soft:#382B12;
+    --h1:#152220; --h2:#183A34; --h3:#1B5248; --h4:#1D6B5D; --h5:#1E8574; --h6:#2AA08C;
+    --hink1:var(--body); --hink5:#F2FBF8; --hink6:#06201B;
+  }
+}
+:root[data-theme="dark"] {
+  --ground:#0B1211; --surface:#121B19; --raise:#182322;
+  --ink:#E9EFEC; --body:#C6D2CE; --muted:#93A29E; --faint:#6E7D79;
+  --line:#243330; --hair:#1C2827; --wash:#161F1E;
+  --accent:#57C3B6; --accent-soft:#123733; --gold:#DCA84A; --gold-soft:#382B12;
+  --h1:#152220; --h2:#183A34; --h3:#1B5248; --h4:#1D6B5D; --h5:#1E8574; --h6:#2AA08C;
+  --hink1:var(--body); --hink5:#F2FBF8; --hink6:#06201B;
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--ground); color:var(--body);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; font-size:15px;
+  line-height:1.6; -webkit-font-smoothing:antialiased; }
+.wrap { max-width:none; margin:0; padding:0 clamp(18px,2.4vw,44px); }
+header { padding:60px 0 32px; border-bottom:1px solid var(--line); }
+.eyebrow { font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--accent); font-weight:650; margin:0 0 18px; }
+h1 { font-family:"Iowan Old Style",Georgia,"Times New Roman",serif;
+  font-size:clamp(32px,5vw,50px); line-height:1.06; letter-spacing:-.02em; color:var(--ink);
+  margin:0 0 16px; font-weight:600; text-wrap:balance; max-width:22ch; }
+h1 em { font-style:italic; color:var(--accent); }
+.standfirst { font-size:17px; color:var(--muted); max-width:68ch; margin:0; }
+h2 { font-family:"Iowan Old Style",Georgia,"Times New Roman",serif; font-size:24px;
+  color:var(--ink); font-weight:600; margin:0 0 6px; }
+.lede { color:var(--muted); margin:0 0 20px; max-width:72ch; font-size:14.5px; }
+section { padding:44px 0 0; }
+.facts { display:flex; flex-wrap:wrap; margin:30px 0 0; max-width:1300px;
+  border:1px solid var(--line); border-radius:3px; background:var(--surface); overflow:hidden; }
+.fact { flex:1 1 140px; padding:14px 18px; border-right:1px solid var(--hair); }
+.fact:last-child { border-right:0; }
+.fact b { display:block; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:23px; color:var(--ink); font-weight:600; font-variant-numeric:tabular-nums; }
+.fact span { font-size:11px; letter-spacing:.09em; text-transform:uppercase; color:var(--faint); }
+
+/* season shape */
+.months { display:flex; gap:6px; align-items:flex-end; height:150px; max-width:900px;
+  border:1px solid var(--line); border-radius:3px; background:var(--surface);
+  padding:16px 16px 8px; }
+.mb { flex:1; display:flex; flex-direction:column; justify-content:flex-end;
+  align-items:center; height:100%; gap:4px; }
+.mbar { width:100%; max-width:46px; background:var(--h5); border-radius:3px 3px 0 0;
+  min-height:2px; }
+.mbn { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:11px;
+  color:var(--ink); font-weight:650; font-variant-numeric:tabular-nums; }
+.mbl { font-size:10.5px; color:var(--faint); letter-spacing:.04em; }
+
+.panel { border:1px solid var(--line); border-radius:3px; background:var(--surface);
+  overflow-x:auto; }
+table { border-collapse:collapse; width:100%; }
+thead th { font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint);
+  font-weight:650; background:var(--wash); border-bottom:1px solid var(--line);
+  padding:10px 12px; text-align:left; white-space:nowrap; position:sticky; top:0; z-index:2; }
+td { padding:9px 12px; border-bottom:1px solid var(--hair); vertical-align:top; }
+tbody tr:hover td { background:var(--raise); }
+.mrow th { background:var(--wash); border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line); padding:9px 12px; text-align:left;
+  font-family:"Iowan Old Style",Georgia,serif; font-size:15px; color:var(--ink);
+  font-weight:600; letter-spacing:.01em; position:sticky; top:37px; z-index:1; }
+.mcount { font-family:system-ui,sans-serif; font-size:11px; font-weight:500;
+  color:var(--faint); letter-spacing:.06em; text-transform:uppercase; margin-left:10px; }
+.num { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-variant-numeric:tabular-nums; font-size:13px; }
+.dt { white-space:nowrap; color:var(--ink); font-weight:600; width:74px; }
+.brk { white-space:nowrap; width:170px; }
+.brk .dv { white-space:normal; }
+.brk b { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:12px;
+  color:var(--ink); font-weight:650; letter-spacing:.02em; }
+.evs td { border-top:1px solid var(--line); }
+.evc2 .brk { padding-left:12px; }
+.dow { color:var(--faint); font-weight:400; font-size:11px; }
+.evc { min-width:250px; max-width:420px; }
+.evc .lnk { color:var(--ink); font-weight:600; font-size:13.5px; text-decoration:none; }
+.evc .lnk:hover { color:var(--accent); text-decoration:underline; text-underline-offset:2px; }
+.dv { display:block; font-size:11.5px; color:var(--faint); margin-top:2px; }
+.dv i { font-style:normal; color:var(--muted); font-weight:650;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:10.5px; }
+.loc { font-size:12.5px; color:var(--muted); max-width:200px; }
+.sanc { font-size:9.5px; letter-spacing:.07em; text-transform:uppercase; color:var(--muted);
+  border:1px solid var(--line); border-radius:2px; padding:2px 5px; white-space:nowrap;
+  display:inline-block; }
+.bdy { white-space:nowrap; }
+h3 { font-family:"Iowan Old Style",Georgia,serif; font-size:17px; color:var(--ink);
+  font-weight:600; margin:0 0 10px; }
+.ldivs { display:flex; flex-wrap:wrap; gap:5px; max-width:460px; }
+.lcl td { background:color-mix(in srgb,var(--accent-soft) 24%,transparent); }
+.tr { color:var(--gold); background:var(--gold-soft); }
+.trn td { background:color-mix(in srgb,var(--gold-soft) 32%,transparent); }
+.lt { display:inline-block; margin-left:7px; font-size:9px; letter-spacing:.09em;
+  text-transform:uppercase; color:var(--accent); background:var(--accent-soft);
+  border-radius:2px; padding:1px 5px; font-weight:650; vertical-align:1px; }
+.ldiv { font-size:11px; color:var(--accent); background:var(--accent-soft);
+  border-radius:2px; padding:2px 7px; text-decoration:none; white-space:nowrap; }
+.ldiv:hover { text-decoration:underline; text-underline-offset:2px; }
+.cbva { color:var(--accent); border-color:var(--accent-soft); text-decoration:none;
+  font-weight:650; margin-left:5px; }
+.cbva:hover { background:var(--accent-soft); }
+.ht { width:52px; text-align:center; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-variant-numeric:tabular-nums; font-size:13.5px; font-weight:650; color:var(--hink1);
+  border-left:2px solid var(--surface); }
+.h0 { color:var(--faint); font-weight:400; }
+.h1 { background:var(--h1); } .h2 { background:var(--h2); } .h3 { background:var(--h3); }
+.h4 { background:var(--h4); }
+.h5 { background:var(--h5); color:var(--hink5); }
+.h6 { background:var(--h6); color:var(--hink6); }
+.nxc { white-space:nowrap; font-size:12.5px; }
+.nx { color:var(--accent); font-weight:600; text-decoration:none; }
+.nx:hover { text-decoration:underline; text-underline-offset:2px; }
+.dim { color:var(--faint); }
+.nw { white-space:nowrap; }
+.lnk { color:inherit; }
+.legend { display:flex; flex-wrap:wrap; gap:8px 18px; align-items:center; margin:14px 0 0;
+  font-size:12px; color:var(--muted); }
+.key { display:inline-flex; align-items:center; gap:6px; }
+.sw { width:26px; height:14px; border:1px solid var(--line); border-radius:2px; display:inline-block; }
+.ramp { display:inline-flex; }
+.ramp span { width:22px; height:14px; border:1px solid var(--line); border-left:0; }
+.ramp span:first-child { border-left:1px solid var(--line); }
+.notes ul { padding-left:19px; margin:10px 0 0; }
+.notes li { margin:7px 0; font-size:13.5px; color:var(--muted); max-width:78ch; }
+.notes b { color:var(--body); font-weight:600; }
+footer { border-top:1px solid var(--line); padding:20px 0 64px; margin-top:44px;
+  font-size:12px; color:var(--faint); max-width:82ch; }
+a { color:var(--accent); }
+:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+@media (prefers-reduced-motion:reduce) { * { transition:none !important; } }
+
+.t-sel { background:var(--accent); color:#fff; }
+.t-nat { background:var(--accent-soft); color:var(--accent); }
+.t-cir { background:var(--wash); color:var(--muted); }
+.t-opn { background:var(--gold-soft); color:var(--gold); }
+.t-rch { background:var(--hair); color:var(--faint); }
+.tag { display:inline-block; font-size:10px; letter-spacing:.07em; text-transform:uppercase;
+  font-weight:650; padding:2px 7px; border-radius:3px; white-space:nowrap; }
+.est { font-style:italic; color:var(--faint); }
+.rank { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-variant-numeric:tabular-nums; }
+.st { display:inline-block; width:22px; font-size:10.5px; color:var(--faint); font-weight:650; }
+.keys { display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  margin:18px 0 0; }
+.keyc { border:1px solid var(--line); border-radius:3px; background:var(--surface); padding:12px 14px; }
+.keyc p { margin:7px 0 0; font-size:13px; color:var(--muted); max-width:46ch; }
+</style>
+
+<div class="wrap">
+<header>
+  <p class="eyebrow">Beach volleyball &#183; 2027 planning &#183; California and Arizona</p>
+  <h1>Every draw worth entering in <em>2027</em></h1>
+  <p class="standfirst">The competitions within reach in the two states she can drive or
+  fly to in a day, in calendar order, each with the field it drew last time and the number
+  of matches it gave. She is U18 for the whole of 2027 &#8212; born 2010, and the
+  USA Volleyball chart reads U18&#160;=&#160;2010 next year &#8212; so this is the first
+  season she is the oldest birth year in her band rather than playing up into it.</p>
+  <div class="facts">
+    <div class="fact"><b>22</b><span>Dates listed</span></div>
+    <div class="fact"><b>14</b><span>Already posted</span></div>
+    <div class="fact"><b>3</b><span>Selection events</span></div>
+    <div class="fact"><b>5</b><span>National 18U</span></div>
+    <div class="fact"><b>33</b><span>CBVA open slots</span></div>
+    <div class="fact"><b>9.68</b><span>Her TruVolley</span></div>
+  </div>
+</header>
+
+<section>
+  <h2>What counts, and what does not</h2>
+  <p class="lede">Five kinds of date, and the difference between them is the whole plan.
+  <b>Above her</b> throughout is the number of individual players in that draw rated better
+  than her 9.68; <b>median</b> is the field's median TruVolley; <b>games</b> is what a
+  typical team played.</p>
+  <div class="keys"><div class="keyc"><span class="tag t-sel">Selection</span><p>A national-team or ISF trial. The only rows that can put her on a team.</p></div><div class="keyc"><span class="tag t-nat">National 18U</span><p>A national junior championship: the deepest fields she is age-eligible for, and the longest days.</p></div><div class="keyc"><span class="tag t-cir">Circuit 18U</span><p>The p1440 / IBVL / BVNE junior circuit. Regular, shallower, useful for reps and ranking points.</p></div><div class="keyc"><span class="tag t-opn">Women's open</span><p>An adult draw. Harder opponents than a junior circuit date, four matches rather than six.</p></div><div class="keyc"><span class="tag t-rch">Out of reach</span><p>Professional or qualification-only. A median above 10.3 and a median of two matches before the exit.</p></div></div>
+  <p class="lede" style="margin-top:18px">Four things are deliberately absent. The
+  <b>recruiting showcases</b> &#8212; GNBV, the Western World Mega Collegiate Showcase
+  &#8212; are off the list because she is committed to Santa&#160;Clara, and the field they
+  draw backs that up: the 2026 Western World showcase carried nobody above her at a median
+  of 7.26. The <b>CIFSS Pairs Championship</b> is a CIF Southern Section event and she is at
+  a Central Coast Section school, so it is not open to her. <b>17U and 16U
+  draws</b> are not listed: the 2026 AVP Juniors Nationals 17U field carried three players
+  above her against the 18U draw's eighteen, and the West Coast 17U carried none. And the
+  <b>AVP League qualifiers and NORCECA playoffs</b> appear only as <span class="tag t-rch">
+  out of reach</span> &#8212; medians above 11.3 with most of the field over 10.5, and a
+  median of one and a half matches before the exit.</p>
+</section>
+
+<section>
+  <h2>The 2027 calendar</h2>
+  <p class="lede">A plain date is already posted on Volleyball Life. An
+  <span class="est">~italic date</span> is an estimate: the series has run in the same week
+  for two or three seasons and the 2027 edition is not up yet. Field numbers come from the
+  most recent edition of that event, not from the 2027 one, which has not happened.</p>
+  <div class="panel">
+    <table>
+      <thead><tr>
+        <th scope="col">Date</th><th scope="col">Event</th><th scope="col">St</th>
+        <th scope="col">Draw</th><th scope="col">Kind</th>
+        <th scope="col" class="num">Median</th><th scope="col" class="num">Above her</th>
+        <th scope="col" class="num">Games</th>
+      </tr></thead>
+      <tbody>
+<tr class="mrow"><th colspan="8" scope="rowgroup">January 2027<span class="mcount">5 dates</span></th></tr>
+      <tr>
+        <td class="dt num nw">9 Jan <span class="dow">Sat</span></td>
+        <td class="evc"><b>p1440 1X Ranking Event</b><span class="dv">Arizona Athletic Grounds, Phoenix</span></td>
+        <td class="bdy"><span class="st">AZ</span></td>
+        <td class="rank">18U</td>
+        <td><span class="tag t-cir">Circuit 18U</span></td>
+        <td class="num rank">&#8212;</td>
+        <td class="num"><span class="dim">&#8212;</span></td>
+        <td class="num rank">&#8212;</td>
+      </tr>
+      <tr>
+        <td class="dt num nw">10 Jan <span class="dow">Sun</span></td>
+        <td class="evc"><b>IBVL Winter Classic (Girls p1440)</b><span class="dv">Hermosa Beach Pier</span></td>
+        <td class="bdy"><span class="st">CA</span></td>
+        <td class="rank">18U</td>
+        <td><span class="tag t-cir">Circuit 18U</span></td>
+        <td class="num rank">9.08</td>
+        <td class="num"><span class="rank">8</span></td>
+        <td class="num rank">4</td>
+      </tr>
+      <tr>
+        <td class="dt num nw">16 Jan <span class="dow">Sat</span></td>
+        <td class="evc"><b>Futures Tour 2X: Arizona</b><span class="dv">Arizona Athletic Grounds, Phoenix</span></td>
+        <td class="bdy"><span class="st">AZ</span></td>
+        <td class="rank">18U</td>
+        <td><span class="tag t-cir">Circuit 18U</span></td>
+        <td class="num rank">8.29</td>
+        <td class="num"><span class="rank">9</span></td>
+        <td class="num rank">6</td>
+      </tr>
+      <tr>
+        <td class="dt num nw">23 Jan <span class="dow">Sat</span></td>
+        <td class="evc"><b>IBVL Winter Nationals (Girls)</b><span class="dv">Hermosa Beach Pier</span></td>
+        <td class="bdy"><span class="st">CA</span></td>
+        <td class="rank">18U</td>
+        <td><span class="tag t-cir">Circuit 18U</span></td>
+        <td class="num rank">9.48</td>
+        <td class="num"><span class="rank">4</span></td>
+        <td class="num rank">5</td>
+      </tr>
+      <tr>
+        <td class="dt num nw"><span class="est">~23 Jan</span></td>
+        <td class="evc"><b>USAV U18 Beach National Team Trials</b><span class="dv">Manhattan Beach Pier</span></td>
+        <td class="bdy"><span class="st">CA</span></td>
+        <td class="rank">18U</td>
+        <td><span class="tag t-sel">Selection</span></td>
+        <td class="num rank">9.40</td>
+        <td class="num"><span class="rank">4</span></td>
+        <td class="num rank">4</td>
+      </tr>
+<tr class="mrow"><th colspan="8" scope="rowgroup">February 2027<span class="mcount">5 dates</span></th></tr>
+      <tr>
+        <td class="dt num nw">6 Feb <span class="dow">Sat</span></td>
+        <td class="evc"><b>Kauai Bikini Open</b><span class="dv">North Beach, Santa Monica</span></td>
+        <td class="bdy"><span class="st">CA</span></td>
+        <td class="rank">18U</td>
+        <td><span class="tag t-cir">Circuit 18U</span></td>
+        <td class="num rank">7.22</td>
+        <td class="num"><span class="rank">0</span></td>
+        <td class="num rank">4</td>
+      </tr>
+      <tr>
+        <td class="dt num nw">7 Feb <span class="dow">Sun</span></td>
+        <td class="evc"><b>IBVL Winter Nationals (School Event) &#8212; ISF trial</b><span class="dv">Hermosa Beach Pier</span></td>
+        <td class="bdy"><span class="st">CA</span></td>
+        <td class="rank">18U</td>
+        <td><span class="tag t-sel">Selection</span></td>
+        <td class="num rank">9.48</td>
+        <td class="num"><span class="rank">4</span></td>
+        <td class="num rank">5</td>
+      </tr>
+      <tr>
+        <td class="dt num nw">13 Feb <span class="dow">Sat</span></td>
+        <td class="evc"><b>p1440 1X Ranking Event</b><span class="dv">Arizona Athletic Grounds, Phoenix</span></td>
+        <td class="bdy"><span class="st">AZ</span></td>
+        <td class="rank">18U</td>
+        <td><span class="tag t-cir">Circuit 18U</span></td>
+        <td class="num rank">&#8212;</td>
+        <td class="num"><span class="dim">&#8212;</span></td>
+        <td class="num rank">&#8212;</td>
+      </tr>
+      <tr>
+        <td class="dt num nw"><span class="est">~27 Feb</span></td>
+        <td class="evc"><b>Highline Sponsorship Open ($5K)</b><span class="dv">Ocean Park North, Santa Monica</span></td>
+        <td class="bdy"><span class="st">CA</span></td>
+        <td class="rank">Open</td>
+        <td><span class="tag t-rch">Out of reach</span></td>
+        <td class="num rank">&#8212;</td>
+        <td class="num"><span class="dim">&#8212;</span></td>
+        <td class="num rank">&#8212;</td>
+      </tr>
+      <tr>
+        <td class="dt num nw">27 Feb <span class="dow">Sat</span></td>
+        <td class="evc"><b>Futures Tour 3X: Spring Championships</b><span class="dv">California</span></td>
+        <td class="bdy"><span class="st">CA</span></td>
+        <td class="rank">18U</td>
+        <td><span class="tag t-nat">National 18U</span></td>
+        <td class="num rank">8.77</td>
+        <td class="num"><span class="rank">15</span></td>
+        <td class="num rank">6</td>
+      </tr>
+<tr class="mrow"><th colspan="8" scope="rowgroup">March 2027<span class="mcount">2 dates</span></th></tr>
+      <tr>
+        <td class="dt num nw">7 Mar <span class="dow">Sun</span></td>
+        <td class="evc"><b>California IBVL Winter Series Championships (p1440)</b><span class="dv">Hermosa Beach Pier</span></td>
+        <td class="bdy"><span class="st">CA</span></td>
+        <td class="rank">18U</td>
+        <td><span class="tag t-cir">Circuit 18U</span></td>
+        <td class="num rank">8.92</td>
+        <td class="num"><span class="rank">1</span></td>
+        <td class="num rank">4</td>
+      </tr>
+      <tr>
+        <td class="dt num nw">21 Mar <span class="dow">Sun</span></td>
+        <td class="evc"><b>Marine Open (Girls p1440)</b><span class="dv">Manhattan Beach Lifeguard HQ</span></td>
+        <td class="bdy"><span class="st">CA</span></td>
+        <td class="rank">18U</td>
+        <td><span class="tag t-cir">Circuit 18U</span></td>
+        <td class="num rank">&#8212;</td>
+        <td class="num"><span class="rank">0</span></td>
+        <td class="num rank">&#8212;</td>
+      </tr>
+<tr class="mrow"><th colspan="8" scope="rowgroup">April 2027<span class="mcount">2 dates</span></th></tr>
+      <tr>
+        <td class="dt num nw">3 Apr <span class="dow">Sat</span></td>
+        <td class="evc"><b>Futures Tour 2X: California</b><span class="dv">North Beach, Santa Monica</span></td>
+        <td class="bdy"><span class="st">CA</span></td>
+        <td class="rank">18U</td>
+        <td><span class="tag t-cir">Circuit 18U</span></td>
+        <td class="num rank">&#8212;</td>
+        <td class="num"><span class="dim">&#8212;</span></td>
+        <td class="num rank">&#8212;</td>
+      </tr>
+      <tr>
+        <td class="dt num nw">18 Apr <span class="dow">Sun</span></td>
+        <td class="evc"><b>West Coast Championships (p1440 2X)</b><span class="dv">Hermosa Beach Pier</span></td>
+        <td class="bdy"><span class="st">CA</span></td>
+        <td class="rank">18U</td>
+        <td><span class="tag t-cir">Circuit 18U</span></td>
+        <td class="num rank">9.41</td>
+        <td class="num"><span class="rank">7</span></td>
+        <td class="num rank">4</td>
+      </tr>
+<tr class="mrow"><th colspan="8" scope="rowgroup">June 2027<span class="mcount">3 dates</span></th></tr>
+      <tr>
+        <td class="dt num nw">5 Jun <span class="dow">Sat</span></td>
+        <td class="evc"><b>Kauai Bikini Open</b><span class="dv">North Beach, Santa Monica</span></td>
+        <td class="bdy"><span class="st">CA</span></td>
+        <td class="rank">18U</td>
+        <td><span class="tag t-cir">Circuit 18U</span></td>
+        <td class="num rank">6.82</td>
+        <td class="num"><span class="rank">0</span></td>
+        <td class="num rank">4</td>
+      </tr>
+      <tr>
+        <td class="dt num nw"><span class="est">~14 Jun</span></td>
+        <td class="evc"><b>USAV U19 / U21 Worlds Trials &#8212; if the cycle runs</b><span class="dv">Hermosa Beach Pier</span></td>
+        <td class="bdy"><span class="st">CA</span></td>
+        <td class="rank">Open</td>
+        <td><span class="tag t-sel">Selection</span></td>
+        <td class="num rank">&#8212;</td>
+        <td class="num"><span class="dim">&#8212;</span></td>
+        <td class="num rank">&#8212;</td>
+      </tr>
+      <tr>
+        <td class="dt num nw"><span class="est">~28 Jun</span></td>
+        <td class="evc"><b>BVCA Pairs West Coast Championships</b><span class="dv">Newland, Huntington Beach</span></td>
+        <td class="bdy"><span class="st">CA</span></td>
+        <td class="rank">18U</td>
+        <td><span class="tag t-cir">Circuit 18U</span></td>
+        <td class="num rank">8.18</td>
+        <td class="num"><span class="rank">1</span></td>
+        <td class="num rank">5</td>
+      </tr>
+<tr class="mrow"><th colspan="8" scope="rowgroup">July 2027<span class="mcount">3 dates</span></th></tr>
+      <tr>
+        <td class="dt num nw"><span class="est">~6 Jul</span></td>
+        <td class="evc"><b>BVCA Individual Pairs National Championship</b><span class="dv">Hermosa Beach</span></td>
+        <td class="bdy"><span class="st">CA</span></td>
+        <td class="rank">18U</td>
+        <td><span class="tag t-nat">National 18U</span></td>
+        <td class="num rank">7.49</td>
+        <td class="num"><span class="rank">14</span></td>
+        <td class="num rank">6</td>
+      </tr>
+      <tr>
+        <td class="dt num nw">14 Jul <span class="dow">Wed</span></td>
+        <td class="evc"><b>34th AAU Hermosa Beach National Pairs Championships</b><span class="dv">Hermosa Beach Pier</span></td>
+        <td class="bdy"><span class="st">CA</span></td>
+        <td class="rank">18U</td>
+        <td><span class="tag t-nat">National 18U</span></td>
+        <td class="num rank">8.29</td>
+        <td class="num"><span class="rank">7</span></td>
+        <td class="num rank">7</td>
+      </tr>
+      <tr>
+        <td class="dt num nw"><span class="est">~21 Jul</span></td>
+        <td class="evc"><b>AVP Juniors National Championships</b><span class="dv">Hermosa Beach Pier</span></td>
+        <td class="bdy"><span class="st">CA</span></td>
+        <td class="rank">18U</td>
+        <td><span class="tag t-nat">National 18U</span></td>
+        <td class="num rank">8.50</td>
+        <td class="num"><span class="rank">18</span></td>
+        <td class="num rank">7</td>
+      </tr>
+<tr class="mrow"><th colspan="8" scope="rowgroup">August 2027<span class="mcount">1 date</span></th></tr>
+      <tr>
+        <td class="dt num nw"><span class="est">~22 Aug</span></td>
+        <td class="evc"><b>Super Girl Pro Invitational</b><span class="dv">Oceanside Pier</span></td>
+        <td class="bdy"><span class="st">CA</span></td>
+        <td class="rank">18U</td>
+        <td><span class="tag t-cir">Circuit 18U</span></td>
+        <td class="num rank">7.35</td>
+        <td class="num"><span class="rank">0</span></td>
+        <td class="num rank">4</td>
+      </tr>
+<tr class="mrow"><th colspan="8" scope="rowgroup">November 2027<span class="mcount">1 date</span></th></tr>
+      <tr>
+        <td class="dt num nw"><span class="est">~6 Nov</span></td>
+        <td class="evc"><b>AVP Juniors West Coast Championships</b><span class="dv">Manhattan Beach</span></td>
+        <td class="bdy"><span class="st">CA</span></td>
+        <td class="rank">18U</td>
+        <td><span class="tag t-nat">National 18U</span></td>
+        <td class="num rank">9.50</td>
+        <td class="num"><span class="rank">17</span></td>
+        <td class="num rank">4</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>The CBVA women&#8217;s open circuit</h2>
+  <p class="lede">CBVA publishes about seven weeks ahead, so none of 2027 is dated yet. What
+  is predictable is the shape: these are the venue-and-month slots that have carried a
+  women&#8217;s open in at least 2 of the last three seasons, with the
+  field each has drawn. Expect roughly one of these a fortnight from March to November.</p>
+  <div class="panel">
+    <table>
+      <thead><tr>
+        <th scope="col">Month</th><th scope="col">Venue</th>
+        <th scope="col" class="num">Editions</th><th scope="col" class="num">Teams</th>
+        <th scope="col" class="num">Median</th><th scope="col" class="num">Above her</th>
+        <th scope="col" class="num">Games</th>
+      </tr></thead>
+      <tbody><tr><td class="dt num nw">Mar</td><td class="evc"><b>Newland</b><span class="dv">Huntington Beach &#183; Orange County</span></td><td class="num rank">3</td><td class="num rank">22</td><td class="num rank">9.09</td><td class="ht h4">8</td><td class="num rank">5</td></tr><tr><td class="dt num nw">Mar</td><td class="evc"><b>Manhattan Pier</b><span class="dv">Manhattan Beach &#183; Los Angeles</span></td><td class="num rank">3</td><td class="num rank">16</td><td class="num rank">9.17</td><td class="ht h3">6</td><td class="num rank">3</td></tr><tr><td class="dt num nw">Mar</td><td class="evc"><b>Dockweiler</b><span class="dv">Los Angeles &#183; Los Angeles</span></td><td class="num rank">2</td><td class="num rank">12</td><td class="num rank">8.76</td><td class="ht h2">2</td><td class="num rank">4</td></tr><tr><td class="dt num nw">Apr</td><td class="evc"><b>Manhattan Pier</b><span class="dv">Manhattan Beach &#183; Los Angeles</span></td><td class="num rank">3</td><td class="num rank">22</td><td class="num rank">8.88</td><td class="ht h4">7</td><td class="num rank">4</td></tr><tr><td class="dt num nw">Apr</td><td class="evc"><b>Ocean Park</b><span class="dv">Santa Monica &#183; Los Angeles</span></td><td class="num rank">3</td><td class="num rank">19</td><td class="num rank">9.02</td><td class="ht h3">6</td><td class="num rank">5</td></tr><tr><td class="dt num nw">Apr</td><td class="evc"><b>Main Beach</b><span class="dv">Santa Cruz &#183; North Coast</span></td><td class="num rank">3</td><td class="num rank">17</td><td class="num rank">7.68</td><td class="ht h2">1</td><td class="num rank">5</td></tr><tr><td class="dt num nw">May</td><td class="evc"><b>Hermosa Pier</b><span class="dv">Hermosa Beach &#183; Los Angeles</span></td><td class="num rank">3</td><td class="num rank">16</td><td class="num rank">9.11</td><td class="ht h4">9</td><td class="num rank">4</td></tr><tr><td class="dt num nw">May</td><td class="evc"><b>Manhattan Pier</b><span class="dv">Manhattan Beach &#183; Los Angeles</span></td><td class="num rank">3</td><td class="num rank">20</td><td class="num rank">8.83</td><td class="ht h3">4</td><td class="num rank">4</td></tr><tr><td class="dt num nw">May</td><td class="evc"><b>Belmont Shore</b><span class="dv">Long Beach &#183; Los Angeles</span></td><td class="num rank">2</td><td class="num rank">24</td><td class="num rank">8.76</td><td class="ht h3">4</td><td class="num rank">4</td></tr><tr><td class="dt num nw">May</td><td class="evc"><b>Ocean Park</b><span class="dv">Santa Monica &#183; Los Angeles</span></td><td class="num rank">4</td><td class="num rank">17</td><td class="num rank">8.76</td><td class="ht h2">3</td><td class="num rank">4</td></tr><tr><td class="dt num nw">May</td><td class="evc"><b>Ocean Beach</b><span class="dv">San Diego &#183; San Diego</span></td><td class="num rank">2</td><td class="num rank">16</td><td class="num rank">7.78</td><td class="ht h2">3</td><td class="num rank">4</td></tr><tr><td class="dt num nw">May</td><td class="evc"><b>Main Beach</b><span class="dv">Santa Cruz &#183; North Coast</span></td><td class="num rank">3</td><td class="num rank">18</td><td class="num rank">7.67</td><td class="ht h2">1</td><td class="num rank">5</td></tr><tr><td class="dt num nw">Jun</td><td class="evc"><b>Santa Monica Pier</b><span class="dv">Santa Monica &#183; Los Angeles</span></td><td class="num rank">3</td><td class="num rank">33</td><td class="num rank">9.33</td><td class="ht h6">22</td><td class="num rank">4</td></tr><tr><td class="dt num nw">Jun</td><td class="evc"><b>Manhattan Pier</b><span class="dv">Manhattan Beach &#183; Los Angeles</span></td><td class="num rank">3</td><td class="num rank">26</td><td class="num rank">9.21</td><td class="ht h5">13</td><td class="num rank">4</td></tr><tr><td class="dt num nw">Jun</td><td class="evc"><b>Ocean Park</b><span class="dv">Santa Monica &#183; Los Angeles</span></td><td class="num rank">3</td><td class="num rank">21</td><td class="num rank">8.80</td><td class="ht h4">7</td><td class="num rank">5</td></tr><tr><td class="dt num nw">Jun</td><td class="evc"><b>Dockweiler</b><span class="dv">Los Angeles &#183; Los Angeles</span></td><td class="num rank">2</td><td class="num rank">19</td><td class="num rank">8.88</td><td class="ht h3">6</td><td class="num rank">4</td></tr><tr><td class="dt num nw">Jun</td><td class="evc"><b>Mission Beach</b><span class="dv">San Diego &#183; San Diego</span></td><td class="num rank">2</td><td class="num rank">21</td><td class="num rank">7.92</td><td class="ht h2">3</td><td class="num rank">4</td></tr><tr><td class="dt num nw">Jun</td><td class="evc"><b>Main Beach</b><span class="dv">Santa Cruz &#183; North Coast</span></td><td class="num rank">3</td><td class="num rank">24</td><td class="num rank">7.67</td><td class="ht h2">3</td><td class="num rank">5</td></tr><tr><td class="dt num nw">Jul</td><td class="evc"><b>Manhattan Pier</b><span class="dv">Manhattan Beach &#183; Los Angeles</span></td><td class="num rank">3</td><td class="num rank">36</td><td class="num rank">9.18</td><td class="ht h6">20</td><td class="num rank">4</td></tr><tr><td class="dt num nw">Jul</td><td class="evc"><b>Beach Blvd</b><span class="dv">Huntington Beach &#183; Orange County</span></td><td class="num rank">3</td><td class="num rank">34</td><td class="num rank">8.89</td><td class="ht h5">15</td><td class="num rank">5</td></tr><tr><td class="dt num nw">Jul</td><td class="evc"><b>Ocean Park</b><span class="dv">Santa Monica &#183; Los Angeles</span></td><td class="num rank">3</td><td class="num rank">24</td><td class="num rank">9.27</td><td class="ht h4">11</td><td class="num rank">4</td></tr><tr><td class="dt num nw">Jul</td><td class="evc"><b>East Beach</b><span class="dv">Santa Barbara &#183; Central Coast</span></td><td class="num rank">3</td><td class="num rank">23</td><td class="num rank">8.30</td><td class="ht h4">9</td><td class="num rank">5</td></tr><tr><td class="dt num nw">Jul</td><td class="evc"><b>Main Beach</b><span class="dv">Santa Cruz &#183; North Coast</span></td><td class="num rank">3</td><td class="num rank">20</td><td class="num rank">7.85</td><td class="ht h2">3</td><td class="num rank">5</td></tr><tr><td class="dt num nw">Aug</td><td class="evc"><b>Hermosa Pier</b><span class="dv">Hermosa Beach &#183; Los Angeles</span></td><td class="num rank">5</td><td class="num rank">32</td><td class="num rank">9.54</td><td class="ht h6">25</td><td class="num rank">4</td></tr><tr><td class="dt num nw">Aug</td><td class="evc"><b>Ocean Park</b><span class="dv">Santa Monica &#183; Los Angeles</span></td><td class="num rank">4</td><td class="num rank">26</td><td class="num rank">9.49</td><td class="ht h5">16</td><td class="num rank">4</td></tr><tr><td class="dt num nw">Aug</td><td class="evc"><b>Ocean Beach</b><span class="dv">San Diego &#183; San Diego</span></td><td class="num rank">3</td><td class="num rank">23</td><td class="num rank">8.14</td><td class="ht h3">5</td><td class="num rank">4</td></tr><tr><td class="dt num nw">Aug</td><td class="evc"><b>Main Beach</b><span class="dv">Santa Cruz &#183; North Coast</span></td><td class="num rank">3</td><td class="num rank">19</td><td class="num rank">7.68</td><td class="ht h2">2</td><td class="num rank">5</td></tr><tr><td class="dt num nw">Sep</td><td class="evc"><b>Huntington Pier</b><span class="dv">Huntington Beach &#183; Orange County</span></td><td class="num rank">2</td><td class="num rank">30</td><td class="num rank">9.33</td><td class="ht h5">15</td><td class="num rank">5</td></tr><tr><td class="dt num nw">Sep</td><td class="evc"><b>Ocean Park</b><span class="dv">Santa Monica &#183; Los Angeles</span></td><td class="num rank">2</td><td class="num rank">18</td><td class="num rank">8.94</td><td class="ht h3">6</td><td class="num rank">5</td></tr><tr><td class="dt num nw">Sep</td><td class="evc"><b>Main Beach</b><span class="dv">Santa Cruz &#183; North Coast</span></td><td class="num rank">3</td><td class="num rank">19</td><td class="num rank">7.67</td><td class="ht h2">1</td><td class="num rank">5</td></tr><tr><td class="dt num nw">Oct</td><td class="evc"><b>Belmont Shore</b><span class="dv">Long Beach &#183; Los Angeles</span></td><td class="num rank">2</td><td class="num rank">18</td><td class="num rank">8.91</td><td class="ht h3">4</td><td class="num rank">4</td></tr><tr><td class="dt num nw">Oct</td><td class="evc"><b>Main Beach</b><span class="dv">Santa Cruz &#183; North Coast</span></td><td class="num rank">3</td><td class="num rank">17</td><td class="num rank">7.57</td><td class="ht h2">0</td><td class="num rank">4</td></tr><tr><td class="dt num nw">Nov</td><td class="evc"><b>Newland</b><span class="dv">Huntington Beach &#183; Orange County</span></td><td class="num rank">4</td><td class="num rank">17</td><td class="num rank">8.77</td><td class="ht h3">6</td><td class="num rank">5</td></tr></tbody>
+    </table>
+  </div>
+  <p class="lede" style="margin-top:14px">Santa&#160;Cruz is on this list and should not be
+  on her schedule: it carries one or two players above her and she has won the last three.
+  The ones worth the drive are Hermosa&#160;Pier, Huntington&#160;Pier, Beach&#160;Blvd and
+  Santa&#160;Monica&#160;Pier.</p>
+</section>
+
+<section>
+  <h2>The NTDP series</h2>
+  <p class="lede">Four invitational residential camps a year, not competitions &#8212; no
+  draw and no result &#8212; but they are the pool the January trials are selected from, and
+  she has been on five consecutive rosters. The winter series runs on the <i>following</i>
+  year's bands, so the Winter&#160;2026 camp is her first as a U18 rather than a U17, and it
+  lands immediately before the January trials. USA Volleyball dates them a few months out;
+  the 2026 winter series is still undated.</p>
+</section>
+
+<section class="notes">
+  <h2>How to read it, and what it is not</h2>
+  <ul>
+    <li><b>An estimated date is an estimate.</b> Half of these rows are projected from a
+    series that has run in the same week for two or three years. Organisers move dates;
+    confirm before booking anything.</li>
+    <li><b>The field numbers describe last year's draw, not next year's.</b> They are the
+    best guide available to what a date is worth, but the 2027 entry list does not exist
+    yet, and a selection event's field in particular turns over every season.</li>
+    <li><b>Ratings are current TruVolley</b>, applied to fields up to two years old, so an
+    older edition reads slightly stronger than it was. Unrated entrants are excluded from
+    the medians, which skews them a little high.</li>
+    <li><b>Age bands are birth-year ceilings.</b> U-N in year Y admits anyone born in
+    Y&#8722;N+1 or later, so an 18U draw in 2027 admits 2010 and younger. She is the oldest
+    year in it. In 2028 she ages out of U18 and that year's U19 becomes the equivalent
+    position.</li>
+    <li><b>Trials entry is not the same as trials eligibility.</b> Nineteen of the
+    twenty-four entrants at the 2026 U18 trials came off the NTDP rosters she was also on,
+    and athletes two years younger than her entered, so the route is open &#8212; but the
+    published criteria should be confirmed with her NTDP contact rather than inferred from
+    who turned up.</li>
+    <li><b>Arizona is in and Nevada is not</b>, because the p1440 circuit runs Phoenix dates
+    she can reach and because nothing in the record puts a draw worth her time in the other
+    neighbouring states. Out-of-region national events &#8212; the Futures Tour stops in
+    Florida, Texas and Washington &#8212; are left out for the same reason.</li>
+  </ul>
+</section>
+<footer>
+  Confirmed dates from the Volleyball Life tournament crawl; estimated dates projected from
+  the 2024&#8211;2026 editions of the same series. Field strength and match counts computed
+  from those editions' entry lists and published brackets, with TruVolley for
+  2,819 players retrieved 12 October 2026. CBVA circuit from CBVA's own
+  tournament database.
+</footer>
+</div>
