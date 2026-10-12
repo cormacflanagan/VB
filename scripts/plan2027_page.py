@@ -31,6 +31,11 @@ OUT = os.path.join(HERE, "..", "docs", "plan-2027.html")
 VBL = "https://volleyballlife.com"
 HER = 9.678
 HER_BAND = "U18"          # born 2010; in 2027 the USAV chart reads U18 = 2010
+# Nevada is in scope and comes back almost empty: the only recurring adult open is the
+# Tahoe Championships, which is played on grass and so cannot move a sand rating, and the
+# Las Vegas sand events are a small local junior series. Both are listed rather than hidden.
+NV = r"\bnevada\b|las vegas|henderson|\breno\b|lake tahoe|incline village|boulder city"
+LO, HI, NEAR = 9.2, 10.1, 0.75   # a pair rated like hers; an opponent within reach
 MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
 # Tiers, worst to best for her. The page sorts nothing by these -- it is a calendar -- but
@@ -45,7 +50,9 @@ TIERS = {
     "open": ("t-opn", "Women's open", "An adult draw. Harder opponents than a junior "
                                       "circuit date, four matches rather than six."),
     "reach": ("t-rch", "Out of reach", "Professional or qualification-only. A median above "
-                                       "10.3 and a median of two matches before the exit."),
+                                       "10.3 and two matches before the exit."),
+    "grass": ("t-grs", "Grass", "Played on grass, which carries its own TruVolley. Nothing "
+                                "that happens there can move her sand rating."),
 }
 
 
@@ -71,24 +78,45 @@ def entrants(tdids):
     return out
 
 
-def games(tdids):
+def sets_played(tdids, rate):
+    """Sets, not matches: a CBVA pool game is one set and a national bracket match is three.
+
+    Counting matches makes a day at AVP Juniors Nationals look like seven and a Saturday at
+    Ocean Park look like four, when the first is twenty-one sets of volleyball and the
+    second is four. Alongside it, `contested` counts only the sets played against a pair
+    within NEAR of hers -- the ones that are actually a contest.
+    """
     import gzip
-    per = defaultdict(Counter)
+    tot, con, teams = Counter(), Counter(), defaultdict(set)
     with gzip.open(os.path.join(VB, "matches.jsonl.gz"), "rt") as fh:
         for l in fh:
             m = json.loads(l)
-            if m["tdId"] in tdids:
-                for s in ("a", "b"):
-                    per[m["tdId"]][tuple(sorted(m[s]))] += 1
-    return per
+            if m["tdId"] not in tdids:
+                continue
+            ns = len(m.get("sets") or []) or 1
+            for side, other in (("a", "b"), ("b", "a")):
+                r = [rate(p) for p in m[side]]
+                o = [rate(p) for p in m[other]]
+                if len(r) != 2 or any(x is None for x in r + o):
+                    continue
+                mine = sum(r) / 2
+                if not (LO <= mine <= HI):
+                    continue
+                tot[m["tdId"]] += ns
+                if abs(mine - sum(o) / 2) <= NEAR:
+                    con[m["tdId"]] += ns
+                teams[m["tdId"]].add(tuple(sorted(m[side])))
+    return tot, con, teams
 
 
-def stats(tdid, ents, gms, tv):
+def stats(tdid, ents, sp, tv):
+    tot, con, teams = sp
+    n = len(teams.get(tdid, ()))
     r = [tv[str(p)]["tv"] for p in ents.get(tdid, ()) if tv.get(str(p), {}).get("tv")]
-    g = sorted(gms.get(tdid, {}).values())
     return {"rated": len(r), "med": st.median(r) if r else None,
             "above": sum(1 for z in r if z > HER),
-            "games": st.median(g) if g else None}
+            "sets": tot[tdid] / n if n else None,
+            "con": con[tdid] / n if n else None, "peers": n}
 
 
 # The 2027 calendar. `ref` is the most recent comparable edition, which supplies the field
@@ -118,6 +146,9 @@ PLAN = [
     ("2027-07-21", False, "AVP Juniors National Championships", "Hermosa Beach Pier", "CA", "18U", "national", 126054),
     ("2027-08-22", False, "Super Girl Pro Invitational", "Oceanside Pier", "CA", "18U", "circuit", 148168),
     ("2027-11-06", False, "AVP Juniors West Coast Championships", "Manhattan Beach", "CA", "18U", "national", 97147),
+    # Nevada. Everything the state has, which is not much.
+    ("2027-07-24", False, "Tahoe Championships &#8212; grass, separate rating", "Kahle Park, South Lake Tahoe", "NV", "Open", "grass", 114462),
+    ("2027-12-11", False, "AVP Winter Las Vegas", "Sunset Park, Las Vegas", "NV", "18U", "circuit", 59358),
 ]
 
 # The CBVA women's open circuit does not publish a year ahead, so it is projected from the
@@ -126,11 +157,18 @@ CBVA_MIN_SEASONS = 2
 
 
 def cbva_2027(tn, dv, tm, mt, link, tv):
-    """The CBVA women's open circuit, projected month by month from the last three seasons."""
+    """The CBVA open circuit as calendar rows, projected month by month.
+
+    CBVA publishes about seven weeks ahead, so 2027 has no dates at all. What repeats is
+    the slot: a venue that has run a women's open in the same month in at least
+    CBVA_MIN_SEASONS of the last three seasons will almost certainly run one again. Each
+    slot carries the field and the sets its past editions gave.
+    """
     def prate(p):
         e = link.get(str(p))
         return (tv.get(str(e["vblId"])) or {}).get("tv") if e else None
 
+    bytd = {}
     byvm = defaultdict(list)
     for tdid, d in dv.items():
         if d["gender"] != "female" or d["size"] != 2 or d["date"] < "2023-09-01":
@@ -141,11 +179,7 @@ def cbva_2027(tn, dv, tm, mt, link, tv):
         if t.get("city") not in ALL_CA:
             continue
         teams = [x for x in tm.get(tdid, []) if not x.get("withdrawn")]
-        per = Counter()
-        for m in mt.get(tdid, []):
-            for s in ("a", "b"):
-                per[tuple(sorted(m[s]))] += 1
-        if not teams or not per:
+        if not teams or not mt.get(tdid):
             continue
         r, ab = [], 0
         for x in teams:
@@ -153,24 +187,40 @@ def cbva_2027(tn, dv, tm, mt, link, tv):
             r += v
             if len(v) == 2 and sum(v) / 2 > PAIR:
                 ab += 1
+        bytd[tdid] = True
         byvm[(t["city"], t["venue"], int(d["date"][5:7]))].append(
-            {"yr": d["date"][:4], "teams": len(teams), "r": r, "above": ab,
-             "g": [per.get(tuple(sorted(x["p"])), 0) for x in teams]})
+            {"yr": d["date"][:4], "teams": len(teams), "r": r, "above": ab, "td": tdid})
+
+    # Sets and contested sets, for pairs rated like hers, from CBVA's own brackets.
+    tot, con, peers = Counter(), Counter(), defaultdict(set)
+    for tdid in bytd:
+        for m in mt.get(tdid, []):
+            ns = len(m.get("sets") or []) or 1
+            for side, other in (("a", "b"), ("b", "a")):
+                rr = [prate(p) for p in m[side]]
+                oo = [prate(p) for p in m[other]]
+                if len(rr) != 2 or any(x is None for x in rr + oo):
+                    continue
+                mine = sum(rr) / 2
+                if not (LO <= mine <= HI):
+                    continue
+                tot[tdid] += ns
+                if abs(mine - sum(oo) / 2) <= NEAR:
+                    con[tdid] += ns
+                peers[tdid].add(tuple(sorted(m[side])))
 
     out = []
     for (c, v, m), evs in byvm.items():
         if len({e["yr"] for e in evs}) < CBVA_MIN_SEASONS:
             continue
         r = [z for e in evs for z in e["r"]]
-        g = [z for e in evs for z in e["g"] if z]
+        n = sum(len(peers[e["td"]]) for e in evs)
         out.append({"city": c, "venue": v, "month": m, "n": len(evs),
-                    "seasons": len({e["yr"] for e in evs}),
-                    "teams": st.mean([e["teams"] for e in evs]),
                     "med": st.median(r) if r else None,
-                    "above": st.mean([e["above"] for e in evs]),
-                    "players": sum(1 for z in r if z > HER) / len(evs),
-                    "games": st.median(g) if g else None})
-    out.sort(key=lambda x: (x["month"], -x["above"]))
+                    "above": sum(1 for z in r if z > HER) / len(evs),
+                    "sets": sum(tot[e["td"]] for e in evs) / n if n else None,
+                    "con": sum(con[e["td"]] for e in evs) / n if n else None})
+    out.sort(key=lambda x: (x["month"], -(x["con"] or 0)))
     return out
 
 
@@ -194,57 +244,75 @@ EXTRA = """
 
 def build():
     tn, dv, tm, mt, link, tv = load()
-    T, D = vbl_corpus()
     refs = {r[7] for r in PLAN if r[7]}
-    ents, gms = entrants(refs), games(refs)
-    S = {i: stats(i, ents, gms, tv) for i in refs}
+    ents = entrants(refs)
+    sp = sets_played(refs, lambda pid: (tv.get(str(pid)) or {}).get("tv"))
+    S = {i: stats(i, ents, sp, tv) for i in refs}
+    cb = cbva_2027(tn, dv, tm, mt, link, tv)
 
-    months, cur = [], None
+    # One calendar. A dated event sorts on its date; a CBVA slot has only a month, so it
+    # sorts to the end of that month and says so.
+    items = []
     for date, conf, name, place, state, div, tier, ref in PLAN:
-        k = date[:7]
-        if k != cur:
-            cur = k
-            months.append((k, []))
-        months[-1][1].append((date, conf, name, place, state, div, tier, ref))
+        s_ = S.get(ref) or {}
+        items.append({"sort": date, "month": date[:7], "when": date, "conf": conf,
+                      "name": name, "place": place, "state": state, "div": div,
+                      "tier": tier, **s_})
+    for e in cb:
+        items.append({"sort": f"2027-{e['month']:02d}-32", "month": f"2027-{e['month']:02d}",
+                      "when": None, "conf": False, "name": f"CBVA women&#8217;s open",
+                      "place": f"{e['venue']}, {e['city']}", "state": "CA", "div": "Open",
+                      "tier": "open", "med": e["med"], "above": round(e["above"]),
+                      "sets": e["sets"], "con": e["con"], "slots": e["n"]})
+    items.sort(key=lambda x: x["sort"])
 
-    rows = []
+    months, cur, rows = [], None, []
+    for it in items:
+        if it["month"] != cur:
+            cur = it["month"]
+            months.append((cur, []))
+        months[-1][1].append(it)
     for k, v in months:
         d0 = datetime.date(int(k[:4]), int(k[5:7]), 1)
         rows.append(f'<tr class="mrow"><th colspan="8" scope="rowgroup">{d0.strftime("%B %Y")}'
-                    f'<span class="mcount">{len(v)} date{"s" if len(v) != 1 else ""}</span></th></tr>')
-        for date, conf, name, place, state, div, tier, ref in v:
-            dd = datetime.date(*map(int, date.split("-")))
-            cls, label, _ = TIERS[tier]
-            s = S.get(ref) or {}
-            fld = (f'<span class="rank">{s["above"]}</span>' if s.get("above") is not None
-                   else '<span class="dim">&#8212;</span>')
-            med = f'{s["med"]:.2f}' if s.get("med") else "&#8212;"
-            gm = f'{s["games"]:.0f}' if s.get("games") else "&#8212;"
-            when = (f'{dd.strftime("%-d %b")} <span class="dow">{dd.strftime("%a")}</span>'
-                    if conf else
-                    f'<span class="est">~{dd.strftime("%-d %b")}</span>')
+                    f'<span class="mcount">{len(v)} entr{"ies" if len(v) != 1 else "y"}</span></th></tr>')
+        for it in v:
+            cls, label, _ = TIERS[it["tier"]]
+            if it["when"] and it["conf"]:
+                dd = datetime.date(*map(int, it["when"].split("-")))
+                when = f'{dd.strftime("%-d %b")} <span class="dow">{dd.strftime("%a")}</span>'
+            elif it["when"]:
+                dd = datetime.date(*map(int, it["when"].split("-")))
+                when = f'<span class="est">~{dd.strftime("%-d %b")}</span>'
+            else:
+                when = f'<span class="est">{MON[int(k[5:7])-1]}, undated</span>'
+            num = lambda x, f="{:.0f}": (f.format(x) if x is not None else "&#8212;")
+            sub = esc(it["place"])
+            if it.get("slots"):
+                sub += f' &#183; {it["slots"]} past edition{"s" if it["slots"] != 1 else ""}'
             rows.append(f"""      <tr>
         <td class="dt num nw">{when}</td>
-        <td class="evc"><b>{name}</b><span class="dv">{esc(place)}</span></td>
-        <td class="bdy"><span class="st">{state}</span></td>
-        <td class="rank">{div}</td>
+        <td class="evc"><b>{it['name']}</b><span class="dv">{sub}</span></td>
+        <td class="bdy"><span class="st">{it['state']}</span></td>
+        <td class="rank">{it['div']}</td>
         <td><span class="tag {cls}">{label}</span></td>
-        <td class="num rank">{med}</td>
-        <td class="num">{fld}</td>
-        <td class="num rank">{gm}</td>
+        <td class="num rank">{num(it.get('med'), '{:.2f}')}</td>
+        <td class="num rank">{num(it.get('above'))}</td>
+        <td class="num rank">{num(it.get('sets'), '{:.0f}')}</td>
+        <td class="ht h{heat((it.get('con') or 0)/13)}">{num(it.get('con'), '{:.1f}')}</td>
       </tr>""")
 
-    cb = cbva_2027(tn, dv, tm, mt, link, tv)
-    cbrows = "".join(
-        f'<tr><td class="dt num nw">{MON[e["month"]-1]}</td>'
-        f'<td class="evc"><b>{esc(e["venue"])}</b><span class="dv">{esc(e["city"])} &#183; '
-        f'{esc(REGION.get(e["city"], ""))}</span></td>'
-        f'<td class="num rank">{e["n"]}</td>'
-        f'<td class="num rank">{e["teams"]:.0f}</td>'
-        f'<td class="num rank">{e["med"]:.2f}</td>'
-        f'<td class="ht h{heat(e["players"]/22)}">{e["players"]:.0f}</td>'
-        f'<td class="num rank">{e["games"]:.0f}</td></tr>' for e in cb)
-
+    # Santa Cruz runs five or six opens a year; pool them rather than quoting one month.
+    scs = [e for e in cb if e["city"] == "Santa Cruz"]
+    sc = {"med": st.median([e["med"] for e in scs]),
+          "above": st.mean([e["above"] for e in scs]),
+          "sets": st.mean([e["sets"] for e in scs if e["sets"]]),
+          "con": st.mean([e["con"] for e in scs if e["con"] is not None]),
+          "slots": len(scs)}
+    best = max((e for e in cb if e["city"] != "Santa Cruz"), key=lambda e: e["con"] or 0)
+    shares = sorted(100 * e["con"] / e["sets"] for e in cb
+                    if e["city"] != "Santa Cruz" and e["sets"])
+    jn = S.get(126054) or {}
     nconf = sum(1 for r in PLAN if r[1])
     nsel = sum(1 for r in PLAN if r[6] == "selection")
     nnat = sum(1 for r in PLAN if r[6] == "national")
@@ -252,7 +320,6 @@ def build():
         f'<div class="keyc"><span class="tag {c}">{lab}</span><p>{txt}</p></div>'
         for c, lab, txt in TIERS.values())
     today = datetime.date.today()
-
     return f"""<title>Haisley 2027 &#183; California and Arizona</title>
 <style>{CSS}{EXTRA}</style>
 
@@ -260,27 +327,30 @@ def build():
 <header>
   <p class="eyebrow">Beach volleyball &#183; 2027 planning &#183; California and Arizona</p>
   <h1>Every draw worth entering in <em>2027</em></h1>
-  <p class="standfirst">The competitions within reach in the two states she can drive or
-  fly to in a day, in calendar order, each with the field it drew last time and the number
-  of matches it gave. She is {HER_BAND} for the whole of 2027 &#8212; born 2010, and the
+  <p class="standfirst">The competitions within reach in the three states she can drive or
+  fly to in a day, in calendar order, each with the field it drew last time and the
+  volleyball it gave &#8212; counted in <b>sets</b>, because a CBVA pool game is one set
+  and a national bracket match is three. She is {HER_BAND} for the whole of 2027 &#8212; born 2010, and the
   USA Volleyball chart reads U18&#160;=&#160;2010 next year &#8212; so this is the first
   season she is the oldest birth year in her band rather than playing up into it.</p>
   <div class="facts">
-    <div class="fact"><b>{len(PLAN)}</b><span>Dates listed</span></div>
+    <div class="fact"><b>{len(items)}</b><span>Entries listed</span></div>
     <div class="fact"><b>{nconf}</b><span>Already posted</span></div>
     <div class="fact"><b>{nsel}</b><span>Selection events</span></div>
     <div class="fact"><b>{nnat}</b><span>National 18U</span></div>
     <div class="fact"><b>{len(cb)}</b><span>CBVA open slots</span></div>
-    <div class="fact"><b>9.68</b><span>Her TruVolley</span></div>
+    <div class="fact"><b>{jn["sets"]:.0f}</b><span>Sets at the biggest</span></div>
   </div>
 </header>
 
 <section>
   <h2>What counts, and what does not</h2>
-  <p class="lede">Five kinds of date, and the difference between them is the whole plan.
-  <b>Above her</b> throughout is the number of individual players in that draw rated better
-  than her 9.68; <b>median</b> is the field's median TruVolley; <b>games</b> is what a
-  typical team played.</p>
+  <p class="lede">Six kinds of date, and the difference between them is the whole plan.
+  <b>Above her</b> is the number of individual players in that draw rated better than her
+  9.68 and <b>median</b> is the field's median TruVolley. <b>Sets</b> is what a pair rated
+  like hers actually played, and <b>contested</b> is the part of it against a pair within
+  0.75 of her own &#8212; the sets that were a contest rather than a formality. Contested
+  sets are the currency; everything else is a proxy for them.</p>
   <div class="keys">{keys}</div>
   <p class="lede" style="margin-top:18px">Four things are deliberately absent. The
   <b>recruiting showcases</b> &#8212; GNBV, the Western World Mega Collegiate Showcase
@@ -307,7 +377,7 @@ def build():
         <th scope="col">Date</th><th scope="col">Event</th><th scope="col">St</th>
         <th scope="col">Draw</th><th scope="col">Kind</th>
         <th scope="col" class="num">Median</th><th scope="col" class="num">Above her</th>
-        <th scope="col" class="num">Games</th>
+        <th scope="col" class="num">Sets</th><th scope="col" class="num">Contested</th>
       </tr></thead>
       <tbody>
 {chr(10).join(rows)}
@@ -317,26 +387,58 @@ def build():
 </section>
 
 <section>
-  <h2>The CBVA women&#8217;s open circuit</h2>
-  <p class="lede">CBVA publishes about seven weeks ahead, so none of 2027 is dated yet. What
-  is predictable is the shape: these are the venue-and-month slots that have carried a
-  women&#8217;s open in at least {CBVA_MIN_SEASONS} of the last three seasons, with the
-  field each has drawn. Expect roughly one of these a fortnight from March to November.</p>
+  <h2>Santa Cruz, and what it is for</h2>
+  <p class="lede">Fifteen minutes from the house, roughly $200 for first, and she has won
+  the last three. It belongs on the calendar &#8212; but not as competition, and the
+  contested-sets column says why.</p>
   <div class="panel">
     <table>
-      <thead><tr>
-        <th scope="col">Month</th><th scope="col">Venue</th>
-        <th scope="col" class="num">Editions</th><th scope="col" class="num">Teams</th>
-        <th scope="col" class="num">Median</th><th scope="col" class="num">Above her</th>
-        <th scope="col" class="num">Games</th>
+      <thead><tr><th scope="col">CBVA open</th><th scope="col" class="num">Median field</th>
+        <th scope="col" class="num">Above her</th><th scope="col" class="num">Sets</th>
+        <th scope="col" class="num">Contested</th><th scope="col" class="num">Share</th>
       </tr></thead>
-      <tbody>{cbrows}</tbody>
+      <tbody>
+        <tr><td class="evc"><b>Main Beach, Santa Cruz</b><span class="dv">{sc["slots"]} slots a year &#183; 15 minutes away</span></td>
+          <td class="num rank">{sc["med"]:.2f}</td><td class="num rank">{sc["above"]:.0f}</td>
+          <td class="num rank">{sc["sets"]:.1f}</td>
+          <td class="ht h{heat((sc["con"] or 0)/13)}">{sc["con"]:.1f}</td>
+          <td class="num rank">{100*sc["con"]/sc["sets"]:.0f}%</td></tr>
+        <tr><td class="evc"><b>{esc(best["venue"])}, {esc(best["city"])}</b>
+          <span class="dv">the best CBVA slot on the list</span></td>
+          <td class="num rank">{best["med"]:.2f}</td><td class="num rank">{best["above"]:.0f}</td>
+          <td class="num rank">{best["sets"]:.1f}</td>
+          <td class="ht h{heat((best["con"] or 0)/13)}">{best["con"]:.1f}</td>
+          <td class="num rank">{100*best["con"]/best["sets"]:.0f}%</td></tr>
+        <tr><td class="evc"><b>AVP Juniors National Championships</b>
+          <span class="dv">Hermosa Beach, one weekend in July</span></td>
+          <td class="num rank">{jn["med"]:.2f}</td><td class="num rank">{jn["above"]:.0f}</td>
+          <td class="num rank">{jn["sets"]:.1f}</td>
+          <td class="ht h{heat((jn["con"] or 0)/13)}">{jn["con"]:.1f}</td>
+          <td class="num rank">{100*jn["con"]/jn["sets"]:.0f}%</td></tr>
+      </tbody>
     </table>
   </div>
-  <p class="lede" style="margin-top:14px">Santa&#160;Cruz is on this list and should not be
-  on her schedule: it carries one or two players above her and she has won the last three.
-  The ones worth the drive are Hermosa&#160;Pier, Huntington&#160;Pier, Beach&#160;Blvd and
-  Santa&#160;Monica&#160;Pier.</p>
+  <ul class="notes" style="margin-top:16px">
+    <li><b>It is the weakest contest on the circuit, by a distance.</b> Santa Cruz gives
+    {sc["sets"]:.1f} sets to a pair rated like hers and {sc["con"]:.1f} of them against
+    anyone near her level &#8212; {100*sc["con"]/sc["sets"]:.0f}%. The other CBVA slots on the
+    list run from {shares[0]:.0f}% to {shares[-1]:.0f}%, median {st.median(shares):.0f}%. One July weekend at AVP Juniors Nationals is worth
+    {jn["con"]/sc["con"]:.0f} Santa Cruz Saturdays in contested volleyball.</li>
+    <li><b>Against a field with a median of {sc["med"]:.2f} she is an
+    {100/(1+2.718281828**-(PAIR-sc["med"])):.0f}% favourite in a typical match.</b> That figure is not a guess: across 7,000 rated CBVA
+    women's matches the stronger pair's win rate tracks a logistic in the rating gap almost
+    exactly &#8212; 57% at a half-point gap, 81% at a point and a half, 91% at two and a
+    half. A match she wins seven times in eight carries almost no information and almost no
+    rating.</li>
+    <li><b>So: play it, and count it as paid practice.</b> Fifteen minutes of travel makes
+    the opportunity cost nearly zero, $200 more than covers the entry, and five sets of
+    serve-receive in a real draw beats five sets in training. The only rule is that it never
+    substitutes for a travel date &#8212; and on the 2027 calendar above, the Santa Cruz
+    slots fall in months that already hold something better.</li>
+    <li><b>The prize is not a reason by itself.</b> At roughly $200 for first it is a good
+    Saturday, not a revenue stream, and it is the one number on this page that comes from
+    you rather than from the data.</li>
+  </ul>
 </section>
 
 <section>
