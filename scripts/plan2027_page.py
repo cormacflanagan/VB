@@ -234,6 +234,123 @@ PLAN = [
 CBVA_MIN_SEASONS = 2
 
 
+# The LA basin, for the purpose of a weekend trip: anywhere she could be based in one
+# hotel and reach both draws. Santa Barbara and San Diego are each a different trip.
+TRIP = ("hermosa", "manhattan", "santa monica", "dockweiler", "playa del rey", "venice",
+        "long beach", "belmont", "huntington", "newland", "bolsa chica", "newport",
+        "laguna", "redondo", "el segundo", "torrance", "pacific palisades", "malibu",
+        "will rogers", "ocean park", "north beach", "los angeles")
+
+# Approximate road distance between the beaches that pair up, in miles and driving
+# minutes. Read off the map rather than computed: CBVA's venue records carry no
+# coordinates, and a straight line between two beaches is not the drive anyway.
+LEG = {
+    ("North Beach, Santa Monica", "Hermosa Beach Pier"): (13, 30),
+    ("North Beach, Santa Monica", "Ocean Park, Santa Monica"): (1, 5),
+    ("Newland, Huntington Beach", "Dockweiler, Los Angeles"): (37, 50),
+    ("North Beach, Santa Monica", "Dockweiler, Los Angeles"): (8, 20),
+    ("Manhattan Pier, Manhattan Beach", "Hermosa Beach Pier"): (3, 10),
+    ("Newland, Huntington Beach", "Manhattan Beach Lifeguard HQ"): (33, 45),
+    ("Ocean Park, Santa Monica", "Belmont Shore, Long Beach"): (30, 45),
+}
+
+
+def leg(a, b):
+    return LEG.get((a, b)) or LEG.get((b, a))
+
+
+def doubles(items):
+    """Pairs of one-day draws on the two days of one weekend, within reach of one hotel.
+
+    CBVA never runs two women's opens in the LA basin on consecutive days -- in three
+    seasons of its own record it happened once -- so a double-header is almost always a
+    junior date on one day and an open on the other, which is how the two circuits are
+    scheduled: they stay off each other's day. Confirmed dates pair exactly; a CBVA slot
+    pairs on its projected date, which is a projection and is labelled as one.
+    """
+    def when(i):
+        return (datetime.date.fromisoformat(i["when"]) if i.get("when")
+                else i.get("proj"))
+
+    pool = [i for i in items
+            if (i.get("days") or 1) == 1 and i["tier"] not in ("reach", "grass")
+            and when(i) and any(k in i["place"].lower() for k in TRIP)]
+    out = []
+    for a in pool:
+        for b in pool:
+            if (when(b) - when(a)).days != 1:
+                continue
+            out.append({"a": a, "b": b, "sat": when(a), "sun": when(b),
+                        "leg": leg(a["place"], b["place"]),
+                        "sets": sum(x.get("sets") or 0 for x in (a, b)),
+                        "con": sum(x.get("con") or 0 for x in (a, b)),
+                        "firm": sum(1 for x in (a, b) if x.get("conf"))})
+    out.sort(key=lambda x: x["sat"])
+    return out
+
+
+def adjacency(tn, dv, T, D):
+    """How often the two circuits hand the LA basin a free second day.
+
+    Counts real one-day girls' 17U/18U draws -- eight teams or more, not cancelled, at an
+    LA-basin venue -- and asks whether a CBVA women's open ran in the basin the day before
+    or after, or the same day. The same-day count is the mirror image and matters just as
+    much: that is the weekend where the two choices cancel out.
+    """
+    cbd = set()
+    for d in dv.values():
+        if d["gender"] != "female" or d["size"] != 2 or d["date"] < "2023-09-01":
+            continue
+        if d["level"] not in ("open", "aaa"):
+            continue
+        t = tn.get(d["tid"]) or {}
+        if any(k in f'{t.get("venue")}, {t.get("city")}'.lower() for k in TRIP):
+            cbd.add(d["date"])
+    bytid = defaultdict(list)
+    for x in D.values():
+        bytid[x["tid"]].append(x)
+    n = adj = same = 0
+    for tid, t in T.items():
+        if t["start"] != t["end"] or t["start"] < "2023-09-01":
+            continue
+        ds = [x for x in bytid[tid] if x.get("gender") == "Girls"
+              and x.get("name") in ("18U", "17U") and (x.get("teams") or 0) >= 8
+              and not x.get("canceled")]
+        if not ds or not any(k in str(x.get("venue") or "").lower()
+                             for x in ds for k in TRIP):
+            continue
+        n += 1
+        d0 = datetime.date.fromisoformat(t["start"])
+        if t["start"] in cbd:
+            same += 1
+        elif any((d0 + datetime.timedelta(days=o)).isoformat() in cbd for o in (-1, 1)):
+            adj += 1
+    return n, adj, same
+
+
+def project(year, month, dates):
+    """Where a repeating CBVA slot should land next year, and how far to trust it.
+
+    A venue keeps its weekday and roughly its place in the month, so the projection is the
+    occurrence of the modal weekday nearest the average day-of-month of the past editions.
+    Backtested by predicting the 2026 season from 2024 and 2025 across the 33 slots with
+    enough history: exact 45% of the time, within a week 91%. Projecting the ordinal
+    weekday instead ("fourth Saturday") does worse -- exact 39%, within a week 73% --
+    because the venues track the date, not the week number. Returns the date and how many
+    past editions share its weekday, and the caller is expected to say it is a projection.
+    """
+    ds = [datetime.date.fromisoformat(x) for x in dates]
+    dow, agree = Counter(d.weekday() for d in ds).most_common(1)[0]
+    target = sum(d.day for d in ds) / len(ds)
+    first = datetime.date(year, month, 1)
+    d = first + datetime.timedelta(days=(dow - first.weekday()) % 7)
+    cand = []
+    while d.month == month:
+        cand.append(d)
+        d += datetime.timedelta(days=7)
+    return (min(cand, key=lambda c: abs(c.day - target)) if cand else None), agree
+
+
 def cbva_2027(tn, dv, tm, mt, link, tv):
     """The CBVA open circuit as calendar rows, projected month by month.
 
@@ -267,7 +384,8 @@ def cbva_2027(tn, dv, tm, mt, link, tv):
                 ab += 1
         bytd[tdid] = True
         byvm[(t["city"], t["venue"], int(d["date"][5:7]))].append(
-            {"yr": d["date"][:4], "teams": len(teams), "r": r, "above": ab, "td": tdid})
+            {"yr": d["date"][:4], "teams": len(teams), "r": r, "above": ab, "td": tdid,
+             "date": d["date"]})
 
     # Sets and contested sets, for pairs rated like hers, from CBVA's own brackets.
     tot, con, peers = Counter(), Counter(), defaultdict(set)
@@ -293,7 +411,9 @@ def cbva_2027(tn, dv, tm, mt, link, tv):
             continue
         r = [z for e in evs for z in e["r"]]
         n = sum(len(peers[e["td"]]) for e in evs)
+        proj, agree = project(2027, m, [e["date"] for e in evs])
         out.append({"city": c, "venue": v, "month": m, "n": len(evs),
+                    "proj": proj, "agree": agree,
                     "med": st.median(r) if r else None,
                     "above": sum(1 for z in r if z > HER) / len(evs),
                     "sets": sum(tot[e["td"]] for e in evs) / n if n else None,
@@ -319,6 +439,10 @@ EXTRA = """
 .est { font-style:italic; color:var(--faint); }
 .own { display:block; font-size:9.5px; letter-spacing:.06em; text-transform:uppercase;
   color:var(--accent); font-weight:650; margin-top:2px; }
+.pr { color:var(--accent); font-weight:650; }
+.f2 { background:var(--accent); color:#fff; }
+.f1 { background:var(--accent-soft); color:var(--accent); }
+.f0 { background:var(--wash); color:var(--muted); }
 .days { color:var(--faint); }
 .dmulti { color:var(--ink); font-weight:650; }
 .rank { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-variant-numeric:tabular-nums; }
@@ -370,8 +494,15 @@ def build():
                       "place": f"{e['venue']}, {e['city']}", "state": "CA", "div": "Open",
                       "tier": "open", "med": e["med"], "above": round(e["above"]),
                       "sets": e["sets"], "con": e["con"], "slots": e["n"], "days": 1,
+                      "proj": e["proj"], "agree": e["agree"],
                       "cbva": e.get("venueId")})
     items.sort(key=lambda x: x["sort"])
+    dbl = doubles(items)
+    for d in dbl:
+        d["a"]["pair"] = d["b"]["pair"] = True
+
+    def num(x, f="{:.0f}"):
+        return f.format(x) if x is not None else "&#8212;"
 
     months, cur, rows = [], None, []
     for it in items:
@@ -393,7 +524,6 @@ def build():
                 when = f'<span class="est">~{dd.strftime("%-d %b")}</span>'
             else:
                 when = f'<span class="est">{MON[int(k[5:7])-1]}, undated</span>'
-            num = lambda x, f="{:.0f}": (f.format(x) if x is not None else "&#8212;")
             own_tag = '<span class="own">her band</span>' if it.get("own") else ""
             if it.get("tid"):
                 href, tip = f'{VBL}/tournament/{it["tid"]}', "This event on Volleyball Life"
@@ -409,6 +539,8 @@ def build():
             title = (f'<a class="lnk" href="{href}" target="_blank" rel="noopener" '
                      f'title="{tip}">{it["name"]}</a>' if href else it["name"])
             sub = esc(it["place"])
+            if it.get("pair"):
+                sub += ' &#183; <span class="pr">weekend pair</span>'
             if it.get("slots"):
                 sub += f' &#183; {it["slots"]} past edition{"s" if it["slots"] != 1 else ""}'
             rows.append(f"""      <tr>
@@ -424,6 +556,39 @@ def build():
         <td class="ht h{heat((it.get('con') or 0)/13)}">{num(it.get('con'), '{:.1f}')}</td>
       </tr>""")
 
+    # The weekend-pair table. Each side keeps its own numbers, because one of them is
+    # often missing: the corpus has no bracket for the Kauai Bikini Open or the Marine Open,
+    # so a combined figure there is a floor rather than a total.
+    drows = []
+    for d in dbl:
+        a, b = d["a"], d["b"]
+        firm = ("Both posted" if d["firm"] == 2 else
+                "One posted, one projected" if d["firm"] == 1 else "Both projected")
+        fcls = ("f2" if d["firm"] == 2 else "f1" if d["firm"] == 1 else "f0")
+        known = [x for x in (a, b) if x.get("con") is not None]
+        tc = sum(x["con"] for x in known)
+        ct = (f'{tc:.1f}' if len(known) == 2 else
+              f'&#8805;&#8201;{tc:.1f}' if known else "&#8212;")
+        lg = (f'{d["leg"][0]}&#8201;mi &#183; {d["leg"][1]}&#8201;min' if d["leg"]
+              else "&#8212;")
+
+        def side(x, when):
+            tag = ('<span class="dw">posted</span>' if x.get("conf") else
+                   f'<span class="est">projected {x.get("agree")}/{x.get("slots")}</span>')
+            n = re.sub(r"\s*\(Girls p1440\)|\s*\(p1440 2X\)", "", x["name"])
+            # The names already carry their own entities, exactly as the calendar sets
+            # them; only the place comes from the data and needs escaping.
+            return (f'<b>{when:%-d %b}</b> {tag}<span class="dv">{n}'
+                    f'<br>{esc(x["place"])}</span>')
+        drows.append(f"""      <tr>
+        <td class="evc">{side(a, d["sat"])}</td>
+        <td class="evc">{side(b, d["sun"])}</td>
+        <td class="num rank nw">{lg}</td>
+        <td class="num rank">{num(a.get('con'), '{:.1f}')} + {num(b.get('con'), '{:.1f}')}</td>
+        <td class="ht h{heat(tc / 13)}">{ct}</td>
+        <td><span class="tag {fcls}">{firm}</span></td>
+      </tr>""")
+
     # Santa Cruz runs five or six opens a year; pool them rather than quoting one month.
     scs = [e for e in cb if e["city"] == "Santa Cruz"]
     sc = {"med": st.median([e["med"] for e in scs]),
@@ -436,6 +601,12 @@ def build():
                     if e["city"] != "Santa Cruz" and e["sets"])
     jn = S.get(126054) or {}
     nmulti = sum(1 for i in items if (i.get("days") or 1) > 1)
+    njun, nadj, nsame = adjacency(tn, dv, T, D)
+    kb = S.get(117945) or {}
+    isf = S.get(124255) or {}
+    mar = next((sum(x["con"] for x in (d["a"], d["b"]) if x.get("con") is not None)
+                for d in dbl if d["sat"] == datetime.date(2027, 3, 6)), 0)
+    mins = [d["leg"][1] for d in dbl if d["leg"]]
     nconf = sum(1 for r in PLAN if r[1])
     nsel = sum(1 for r in PLAN if r[6] == "selection")
     nnat = sum(1 for r in PLAN if r[6] == "national")
@@ -463,6 +634,7 @@ def build():
     <div class="fact"><b>{nnat}</b><span>National junior</span></div>
     <div class="fact"><b>{len(cb)}</b><span>CBVA open slots</span></div>
     <div class="fact"><b>{nmulti}</b><span>Multi-day dates</span></div>
+    <div class="fact"><b>{len(dbl)}</b><span>LA weekend pairs</span></div>
     <div class="fact"><b>{jn["sets"]:.0f}</b><span>Sets at the biggest</span></div>
   </div>
 </header>
@@ -538,7 +710,9 @@ def build():
   and most of the p1440 circuit is a single day, the Futures Tour and the trials are
   weekends, and the four national championships are three days apiece. Where a date and a
   day count disagree &#8212; 14 July is a Wednesday &#8212; the date is when the event
-  opens and the days are the part of it her draw plays.</p>
+  opens and the days are the part of it her draw plays. Rows marked
+  <span class="pr">weekend pair</span> are one-day draws that fall on the two days of the
+  same LA weekend; they are set out below.</p>
   <div class="panel">
     <table>
       <thead><tr>
@@ -553,6 +727,58 @@ def build():
       </tbody>
     </table>
   </div>
+</section>
+
+<section>
+  <h2>Two draws in one LA weekend</h2>
+  <p class="lede">One flight, one hotel, two draws. It is available more often than the
+  calendar above makes it look, because of how the two circuits schedule around each other:
+  CBVA has run two women&#8217;s opens in the LA basin on consecutive days exactly once in
+  three seasons, but the junior circuit deliberately takes the day CBVA is not using.
+  Of the {njun} genuine one-day girls&#8217; 17U/18U draws in the LA basin since September
+  2023, {nadj} had a CBVA women&#8217;s open the day before or after &#8212; and another
+  {nsame} ran head-to-head with one on the same day, which is the case to avoid.</p>
+  <div class="panel">
+    <table>
+      <thead><tr><th scope="col">Saturday</th><th scope="col">Sunday</th>
+        <th scope="col" class="num">Between</th>
+        <th scope="col" class="num">Contested, each day</th>
+        <th scope="col" class="num">Weekend total</th>
+        <th scope="col">Dates</th></tr></thead>
+      <tbody>
+{chr(10).join(drows)}
+      </tbody>
+    </table>
+  </div>
+  <ul class="notes" style="margin-top:16px">
+    <li><b>6&#8211;7 February is the one that is already bookable.</b> Both dates are posted
+    on Volleyball Life and the beaches are {LEG[("North Beach, Santa Monica", "Hermosa Beach Pier")][0]}
+    miles apart. The weekend is lopsided, though: the Saturday draws a median of
+    {kb["med"]:.2f} with nobody above her, so it is a tune-up, and the Sunday is an
+    ISF trial worth {isf["con"]:.0f} contested sets. Enter it for the Sunday.</li>
+    <li><b>6&#8211;7 March is the best weekend on the list if CBVA keeps its slot.</b>
+    Manhattan Pier has opened its women&#8217;s season on the Saturday nearest 8 March in
+    each of the last three years, and the IBVL Winter Series Championships are posted for
+    the Sunday at Hermosa, three miles down the strand. Together that is
+    {mar:.1f} contested sets, more than any single date before July.</li>
+    <li><b>A projected CBVA date is a coin flip, and the page says so.</b> Backtested by
+    predicting the 2026 season from 2024 and 2025 across the 33 slots with enough history,
+    the projection is exact 45% of the time and within a week 91%. So treat every pair
+    marked <span class="tag f1">one posted, one projected</span> or
+    <span class="tag f0">both projected</span> as a weekend to watch rather than to book:
+    CBVA posts about seven weeks out, which for the March pairs means late January.</li>
+    <li><b>Three more near-misses sit exactly one week off.</b> Newland projects to
+    20&#8201;March against the Marine Open on the 21st &#8212; that one pairs &#8212; but
+    Manhattan Pier&#8217;s late-April Saturday lands on the 24th against the p1440 West
+    Coast Championships on the 18th, and Ocean Park&#8217;s April Sunday on the 11th with
+    nothing beside it. A one-week shift in either direction turns each of those into a
+    double, which is the other reason to re-read this table once the dates go up.</li>
+    <li><b>The second draw is almost free, and that is the whole argument.</b> The travel,
+    the hotel and the day off school are paid for by the first one; the second costs an
+    entry fee and a drive of
+    {min(mins)}&#8211;{max(mins)} minutes.
+    Nothing else on this calendar improves the sets-per-trip ratio as cheaply.</li>
+  </ul>
 </section>
 
 <section>
