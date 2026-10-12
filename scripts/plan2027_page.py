@@ -53,6 +53,8 @@ TIERS = {
                                         "shallower, useful for reps and ranking points."),
     "open": ("t-opn", "Women's open", "An adult draw. Harder opponents than most junior "
                                       "dates, but four sets rather than twenty."),
+    "proam": ("t-nxt", "Pro-am open", "A promoter's adult open with a purse -- Highline or "
+                                      "AVP Next. Harder than CBVA and three times the sets."),
     "reach": ("t-rch", "Out of reach", "Professional or qualification-only. A median above "
                                        "10.3 and two or three sets before the exit."),
     "grass": ("t-grs", "Grass", "Played on grass, which carries its own TruVolley. Nothing "
@@ -222,6 +224,9 @@ PLAN = [
     ("2027-07-21", False, "AVP Juniors National Championships", "Hermosa Beach Pier", "CA", "18U", "national", 126054),
 ("2027-07-21", False, "AVP Juniors National Championships", "Hermosa Beach Pier", "CA", "17U", "national", 126055),
     ("2027-08-22", False, "Super Girl Pro Invitational", "Oceanside Pier", "CA", "18U", "circuit", 148168),
+    # The one pro-am date with two editions at the same venue in the same month, which is
+    # the bar the CBVA slots have to clear. The rest of that circuit is in its own section.
+    ("2027-10-01", False, "The Santa Barbara Open (AVP Next)", "East Beach, Santa Barbara", "CA", "Open", "proam", 109248),
     ("2027-11-06", False, "AVP Juniors West Coast Championships", "Manhattan Beach", "CA", "18U", "national", 97147),
 ("2027-11-06", False, "AVP Juniors West Coast Championships", "Manhattan Beach", "CA", "17U", "national", 97148),
     # Nevada. Everything the state has, which is not much.
@@ -287,6 +292,89 @@ def doubles(items):
                         "firm": sum(1 for x in (a, b) if x.get("conf"))})
     out.sort(key=lambda x: x["sat"])
     return out
+
+
+# The California beaches Highline and the AVP Next promoters use. Their Puerto Rico,
+# Hawaii, Texas, Florida and Virginia dates are a different trip and are left out.
+PROAM_VENUES = ("santa monica", "dockweiler", "manhattan beach", "ocean park", "ocean front",
+                "huntington", "laguna", "santa barbara", "coronado", "el porto",
+                "beach elite", "hermosa")
+
+
+def proam(T, D, since="2025-01-01"):
+    """Highline and AVP Next women's open draws in California, newest first.
+
+    Two names for one tier: a one- or two-day adult open with a $2,500-$10,000 purse, run
+    by a promoter rather than by CBVA. AVP Next is the AVP's own developmental label and
+    Highline is the Los Angeles promoter that runs most of the California dates, including
+    some of the AVP Next ones. Neither has a repeating slot the way CBVA does -- Highline's
+    first full season was 2026 -- so they are listed as what they were, not projected onto
+    the 2027 calendar.
+    """
+    bytid = defaultdict(list)
+    for x in D.values():
+        bytid[x["tid"]].append(x)
+    out = []
+    for tid, t in T.items():
+        nm = t["name"].lower()
+        org = t.get("org") or ""
+        # Labelled by the banner the draw ran under, not by who took the entries: Highline
+        # runs some of the AVP Next dates itself, and the field each one pulls follows the
+        # banner rather than the promoter.
+        label = ("AVP Next" if ("avp next" in nm or "avpnext" in nm) else
+                 "Highline" if org == "Highline" else None)
+        if not label or t["start"] < since:
+            continue
+        for d in bytid[tid]:
+            v = str(d.get("venue") or "")
+            if (d.get("gender") == "Womens" and d.get("players") == 2
+                    and (d.get("teams") or 0) >= 8
+                    and any(k in v.lower() for k in PROAM_VENUES)):
+                out.append({"td": d["tdId"], "date": t["start"],
+                            "days": span(t["start"], t["end"]), "label": label,
+                            "name": t["name"], "venue": v, "teams": d["teams"],
+                            "tid": tid, "next": "avp next" in nm or "avpnext" in nm,
+                            "org": org})
+    out.sort(key=lambda x: x["date"])
+    return out
+
+
+def bpt(T, D, ents, tv):
+    """The Beach Pro Tour, split into the tier Mexico hosts and the tier below it.
+
+    Only the US entrants carry a TruVolley, so these are the ratings of the Americans in
+    each draw rather than of the whole field -- which is the right comparison anyway, since
+    it is the US entry list she would have to be on.
+    """
+    bytid = defaultdict(list)
+    for x in D.values():
+        bytid[x["tid"]].append(x)
+    MX = ("Tlaxcala", "Nayarit", "Guadalajara", "Veracruz", "Yucatan", "Tepic", "Quintana",
+          "Paz", " MEX")
+    g = defaultdict(list)
+    for tid, t in T.items():
+        n = t["name"]
+        if "BPT" not in n and "FIVB" not in n:
+            continue
+        tier = ("Elite16" if "Elite" in n else "Challenge" if "Challenge" in n else
+                "Futures" if "Futures" in n else None)
+        if not tier or t["start"] < "2024-01-01":
+            continue
+        mex = any(k in n for k in MX)
+        usa = "Pompano" in n or "Halifax" in n
+        for d in bytid[tid]:
+            if d.get("gender") != "Womens" or not (d.get("teams") or 0):
+                continue
+            r = [tv[str(p)]["tv"] for p in ents.get(d["tdId"], ())
+                 if tv.get(str(p), {}).get("tv")]
+            if not r:
+                continue
+            key = (f"Mexico {tier}" if mex else
+                   "Futures, the Americas" if (usa and tier == "Futures") else
+                   f"{tier}, worldwide")
+            g[key] += r
+    return {k: {"n": len(v), "med": st.median(v), "lo": min(v),
+                "under": sum(1 for x in v if x < HER)} for k, v in g.items()}
 
 
 def adjacency(tn, dv, T, D):
@@ -443,6 +531,10 @@ EXTRA = """
 .f2 { background:var(--accent); color:#fff; }
 .f1 { background:var(--accent-soft); color:var(--accent); }
 .f0 { background:var(--wash); color:var(--muted); }
+.t-hl { background:var(--gold-soft); color:var(--gold); }
+.t-nxt { background:var(--accent); color:#fff; }
+h3 { font-size:17px; margin:30px 0 0; letter-spacing:-.01em; }
+h3 + .lede { margin-top:8px; }
 .days { color:var(--faint); }
 .dmulti { color:var(--ink); font-weight:650; }
 .rank { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-variant-numeric:tabular-nums; }
@@ -459,7 +551,14 @@ def build():
     T, D = vbl_corpus()
     feed = json.load(open(os.path.join(DATA, "upcoming_vb.json")))
     refs = {r[7] for r in PLAN if r[7]}
-    ents = entrants(refs)
+    pa = proam(T, D)
+    # The Beach Pro Tour draws are wanted for their entry lists only, not their brackets.
+    bptd = {d["tdId"] for d in D.values()
+            if d.get("gender") == "Womens" and (d.get("teams") or 0)
+            and ("BPT" in (T.get(d["tid"]) or {}).get("name", "")
+                 or "FIVB" in (T.get(d["tid"]) or {}).get("name", ""))}
+    refs |= {x["td"] for x in pa}
+    ents = entrants(refs | bptd)
     sp = sets_played(refs, lambda pid: (tv.get(str(pid)) or {}).get("tv"))
     S = {i: stats(i, ents, sp, tv) for i in refs}
     cb = cbva_2027(tn, dv, tm, mt, link, tv)
@@ -589,6 +688,53 @@ def build():
         <td><span class="tag {fcls}">{firm}</span></td>
       </tr>""")
 
+    # The pro-am circuit, as it actually ran. One row per draw, newest last.
+    prows = []
+    for x in pa:
+        t = S.get(x["td"]) or {}
+        d0 = datetime.date.fromisoformat(x["date"])
+        nm = re.sub(r"\s*\$[\d.,]+K?\)?$|\s*\(\$[^)]*\)", "", x["name"]).strip()
+        prows.append(f"""      <tr>
+        <td class="dt num nw">{d0:%-d %b}&#8201;<span class="dow">{d0:%y}</span></td>
+        <td class="evc"><b><a class="lnk" href="{VBL}/tournament/{x["tid"]}" target="_blank"
+          rel="noopener" title="This event on Volleyball Life">{esc(nm)}</a></b>
+          <span class="dv">{esc(x["venue"])}</span></td>
+        <td><span class="tag {'t-nxt' if x['next'] else 't-hl'}">{x["label"]}</span></td>
+        <td class="num rank days{'' if x["days"] < 2 else ' dmulti'}">{x["days"]}</td>
+        <td class="num rank">{num(t.get('med'), '{:.2f}')}</td>
+        <td class="num rank">{num(t.get('above'))}</td>
+        <td class="num rank">{num(t.get('sets'), '{:.0f}')}</td>
+        <td class="ht h{heat((t.get('con') or 0) / 13)}">{num(t.get('con'), '{:.1f}')}</td>
+        <td class="num rank days">{t.get('peers', 0)}</td>
+      </tr>""")
+
+    # The Beach Pro Tour, by tier.
+    B = bpt(T, D, ents, tv)
+    ORDER = ["Mexico Elite16", "Mexico Challenge", "Elite16, worldwide",
+             "Challenge, worldwide", "Futures, the Americas", "Futures, worldwide"]
+    WHERE = {
+        "Mexico Elite16": "Tepic, Quintana Roo",
+        "Mexico Challenge": "Tlaxcala, Nayarit, Yucat&#225;n, Veracruz, Guadalajara, La Paz",
+        "Elite16, worldwide": "the sixteen-team top tier",
+        "Challenge, worldwide": "the tier below it",
+        "Futures, the Americas": "Pompano Beach FL, Halifax CAN &#8212; never Mexico",
+        "Futures, worldwide": "mostly Europe and China",
+    }
+    brows = []
+    for k in ORDER:
+        v = B.get(k)
+        if not v:
+            continue
+        mx = k.startswith("Mexico")
+        brows.append(f"""      <tr>
+        <td class="evc"><b>{k}</b><span class="dv">{WHERE[k]}</span></td>
+        <td class="num rank">{v["n"]}</td>
+        <td class="num rank">{v["med"]:.2f}</td>
+        <td class="num rank">{v["lo"]:.2f}</td>
+        <td class="ht h{heat(v["under"] / v["n"] * 3)}">{100 * v["under"] / v["n"]:.0f}%</td>
+        <td class="num rank nw">{100 / (1 + 2.718281828 ** (v["med"] - PAIR)):.0f}%</td>
+      </tr>""")
+
     # Santa Cruz runs five or six opens a year; pool them rather than quoting one month.
     scs = [e for e in cb if e["city"] == "Santa Cruz"]
     sc = {"med": st.median([e["med"] for e in scs]),
@@ -607,6 +753,43 @@ def build():
     mar = next((sum(x["con"] for x in (d["a"], d["b"]) if x.get("con") is not None)
                 for d in dbl if d["sat"] == datetime.date(2027, 3, 6)), 0)
     mins = [d["leg"][1] for d in dbl if d["leg"]]
+
+    # The pro-am numbers quoted in the prose, read off the same rows as the table.
+    # Three groups, because the split is not simply geographic: Highline's own purse dates
+    # in Los Angeles, its away dates at Santa Barbara and Coronado, and the two draws that
+    # carry the AVP Next brand, which pull a different field entirely.
+    LA_V = ("santa monica", "dockweiler", "manhattan", "ocean park", "ocean front",
+            "huntington", "laguna", "hermosa", "el porto", "beach elite")
+
+    def rng(rows, key):
+        v = [S[x["td"]][key] for x in rows if S.get(x["td"], {}).get(key) is not None]
+        return min(v), max(v)
+
+    nxt = [x for x in pa if x["next"]]
+    own = [x for x in pa if not x["next"]]
+    la = [x for x in own if any(k in x["venue"].lower() for k in LA_V)]
+    aw = [x for x in own if not any(k in x["venue"].lower() for k in LA_V)]
+    lamin, lamax = rng(la, "med")
+    awmin, awmax = rng(aw, "med")
+    laa0, laa1 = rng(la, "above")
+    awa0, awa1 = rng(aw, "above")
+    nxmin, nxmax = rng(nxt, "med")
+    nxa0, nxa1 = rng(nxt, "above")
+    pr = [S[x["td"]]["peers"] for x in pa if S.get(x["td"])]
+    pmin, pmax = min(pr), max(pr)
+    # The two 2026 league-format dates, which are the volume outlier.
+    lgx = [S[x["td"]] for x in pa if "League" in x["name"]]
+    lg = st.mean(z["sets"] for z in lgx)
+    lgc = st.mean(z["con"] for z in lgx)
+    bv = defaultdict(set)
+    for d in D.values():
+        if (T.get(d["tid"]) or {}).get("org") == "BRAVO Beach":
+            bv[d["tid"]].add(str(d.get("venue") or ""))
+    bravoall = len(bv)
+    bravo = sum(1 for vs in bv.values()
+                if any(k in v for v in vs
+                       for k in ("BRAVO Beach", "Bowling Green", "Marshall Court",
+                                 "Rockrohr")))
     nconf = sum(1 for r in PLAN if r[1])
     nsel = sum(1 for r in PLAN if r[6] == "selection")
     nnat = sum(1 for r in PLAN if r[6] == "national")
@@ -778,6 +961,125 @@ def build():
     entry fee and a drive of
     {min(mins)}&#8211;{max(mins)} minutes.
     Nothing else on this calendar improves the sets-per-trip ratio as cheaply.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Highline, AVP Next, BRAVO and Mexico</h2>
+  <p class="lede">Four names worth checking, and they do not turn out to be four options.
+  Two are real and sit a tier above anything else she can drive to; one is a good series in
+  the wrong state; and the Mexican one is a tier she cannot enter, under a name that stopped
+  existing in 2022.</p>
+
+  <h3>The pro-am circuit in California</h3>
+  <p class="lede">Highline is a Los Angeles promoter running one- and two-day adult opens
+  with purses from $2,500 to $10,000 &#8212; Dockweiler, Ocean Park, Manhattan, Venice,
+  Huntington, and away dates at Santa Barbara and Coronado. AVP Next is the AVP&#8217;s own
+  developmental label, $8,000 minimum purse, and Highline runs some of its California
+  stops. Both are harder than any CBVA open, and both hand out far more volleyball.
+  Every draw either of them has run in California since 2025:</p>
+  <div class="panel">
+    <table>
+      <thead><tr><th scope="col">Date</th><th scope="col">Event</th>
+        <th scope="col">Series</th><th scope="col" class="num">Days</th>
+        <th scope="col" class="num">Median</th><th scope="col" class="num">Above her</th>
+        <th scope="col" class="num">Sets</th><th scope="col" class="num">Contested</th>
+        <th scope="col" class="num">Pairs</th></tr></thead>
+      <tbody>
+{chr(10).join(prows)}
+      </tbody>
+    </table>
+  </div>
+  <ul class="notes" style="margin-top:16px">
+    <li><b>The league-format dates are the volume outlier on this whole page.</b> Highline
+    ran two of them in 2026 &#8212; Venice in February and Manhattan Pier in March &#8212;
+    and a pair rated like hers played {lg:.0f} sets in a single day with {lgc:.1f} of them
+    contested. The best CBVA slot on the calendar gives {best["con"]:.1f} contested in a
+    day and AVP Juniors Nationals {jn["con"]:.1f} across three. Nothing else comes close
+    per day of travel.</li>
+    <li><b>There are three different events here wearing one name.</b> Highline&#8217;s own
+    purse dates in Los Angeles median {lamin:.2f} to {lamax:.2f} with {laa0:.0f} to
+    {laa1:.0f} players above her &#8212; harder than the hardest CBVA open, which medians
+    {best["med"]:.2f}. Its away dates at Santa Barbara and Coronado median {awmin:.2f} to
+    {awmax:.2f} with {awa0:.0f} to {awa1:.0f} above her, and give twelve sets for it. And
+    the {len(nxt)} draws carrying the AVP Next banner &#8212; Santa Barbara, Huntington
+    Beach, Santa Monica &#8212; median {nxmin:.2f} to {nxmax:.2f} but pull
+    {nxa0:.0f} to {nxa1:.0f} players above her, the deepest adult fields in the state
+    outside the AVP itself. Pick by the row, not by the promoter.</li>
+    <li><b>Read the per-event set counts as indicative, not settled.</b> The last column is
+    how many pairs rated within her band were actually in that draw, and it runs from
+    {pmin} to {pmax}. A figure resting on one or two pairs is one or two teams&#8217;
+    afternoon, not a property of the event. The medians and the count above her rest on the
+    whole entry list and are solid.</li>
+    <li><b>Entry is a membership, not a qualification.</b> AVP Next is a double-elimination
+    or pool format played best of three to 21, 21, 15, capped at four full matches a day,
+    with a published minimum age of fourteen and an AVP membership required; Highline&#8217;s
+    own opens are open entry. There is nothing to qualify for and nothing to be nominated
+    to, which is what separates this tier from the one below the next heading.</li>
+    <li><b>Only one of them is on the 2027 calendar above, and that is deliberate.</b> A
+    CBVA slot earns a calendar row by running the same venue in the same month in two of the
+    last three seasons. Of this whole circuit only the Santa Barbara Open clears that bar
+    &#8212; 3&#8211;5 October 2025 and 2&#8211;4 October 2026 &#8212; so it is listed and the
+    rest are not. Highline&#8217;s first full season was 2026; it ran roughly one
+    women&#8217;s open a month from February to September, and until a second season
+    repeats them there is no slot to project. Watch its listings rather than planning
+    around a date.</li>
+    <li><b>BRAVO Beach is in Bowling Green, Kentucky.</b> It is a real series &#8212; USAV
+    points and AVP East and West Coast Championship qualifiers, about thirty dates a year
+    &#8212; and {bravo} of its {bravoall} recorded events are at its own facility in
+    Kentucky. None are in California, Arizona or Nevada. Whoever recommended it was almost
+    certainly recommending the format rather than the place.</li>
+  </ul>
+
+  <h3>Mexico, and what happened to the stars</h3>
+  <p class="lede">There is no such thing as a one- or two-star tournament any more. The star
+  ratings belonged to the FIVB World Tour, whose last season was 2021; the Beach Pro Tour
+  replaced it in 2022 with three tiers &#8212; Futures, Challenge and Elite16 &#8212; of
+  which Futures is roughly where the old one-star sat. The ratings below are the
+  <i>American</i> entrants in each draw, because the US entry list is the one she would have
+  to be on, and the last column is her chance of winning a given match against a pair at
+  that median, read off the same curve the rest of this page uses.</p>
+  <div class="panel">
+    <table>
+      <thead><tr><th scope="col">Tier</th>
+        <th scope="col" class="num">US entrants rated</th>
+        <th scope="col" class="num">Median</th><th scope="col" class="num">Weakest</th>
+        <th scope="col" class="num">Below her</th>
+        <th scope="col" class="num">Her match odds</th></tr></thead>
+      <tbody>
+{chr(10).join(brows)}
+      </tbody>
+    </table>
+  </div>
+  <ul class="notes" style="margin-top:16px">
+    <li><b>Mexico does not host the entry tier.</b> In the whole record there has never been
+    a Futures in Mexico. What Mexico hosts is Challenge and Elite16 &#8212; Tlaxcala and
+    Nayarit in March 2026, Yucat&#225;n and Quintana Roo in 2025, Tepic, Veracruz,
+    Guadalajara, La Paz before that. The American entrants in those draws median
+    {B["Mexico Challenge"]["med"]:.2f}, and the weakest of them is
+    {B["Mexico Challenge"]["lo"]:.2f}. Against that median she wins about one match in
+    {round(1 / (1 / (1 + 2.718281828 ** (B["Mexico Challenge"]["med"] - PAIR))))}.</li>
+    <li><b>The tier she could genuinely enter is Futures, and it is not next door.</b>
+    Across every women&#8217;s Futures draw since 2024, {B["Futures, worldwide"]["under"]} of
+    {B["Futures, worldwide"]["n"]} rated American entrants &#8212;
+    {100 * B["Futures, worldwide"]["under"] / B["Futures, worldwide"]["n"]:.0f}% &#8212; are
+    rated below her, and a 2026 graduate rated 9.18 played one. The Americas get one or two
+    a year: Pompano Beach, Florida in December 2024 and again in December 2025, and Halifax
+    in 2024. Nothing on the Pacific side, and nothing in Mexico.</li>
+    <li><b>You do not enter; USA Volleyball enters you.</b> A federation may put at most
+    four teams on a Futures confirmed entry list, the entry form is due about 35 days out
+    and the confirmed list is published 28 days out. That makes it the same kind of decision
+    as the January trials rather than something to book &#8212; which is an argument for
+    the trials, not against the Futures.</li>
+    <li><b>And the whole structure is being rebuilt during her 2027.</b> Volleyball World
+    announced in January 2026 that an FIVB Beach World Series would launch in November 2026
+    and replace the Beach Pro Tour, built around roughly ten destination events. What
+    happens to Futures, Challenge and Elite16 under it has not been published, so no 2027
+    international calendar on this page would be worth printing.</li>
+    <li><b>So the honest answer on Mexico is no, and the useful one is the tier below.</b>
+    A Futures entry is worth asking her NTDP contact about for 2028, after a season of the
+    pro-am dates above and a trials appearance. A Mexican Challenge is a professional event
+    two rating points above her and is not a 2027 question.</li>
   </ul>
 </section>
 
