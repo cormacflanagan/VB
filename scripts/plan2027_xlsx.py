@@ -99,7 +99,8 @@ def calendar_sheet(wb, D):
         ws.cell(row=r, column=12, value=it.get("sets"))
         ws.cell(row=r, column=13, value=it.get("con"))
         # A share rather than a second number: it is what the two columns beside it mean.
-        ws.cell(row=r, column=14, value=f'=IF(N(L{r})=0,"",M{r}/L{r})')
+        # IFERROR rather than a test on the denominator, because Numbers has no N().
+        ws.cell(row=r, column=14, value=f'=IFERROR(M{r}/L{r},"")')
         ws.cell(row=r, column=15,
                 value=f'{pair["sat"]:%-d %b} + {pair["sun"]:%-d %b}' if pair else "")
         ws.cell(row=r, column=16, value=link_of(it))
@@ -184,7 +185,7 @@ def proam_sheet(wb, D):
         ws.cell(row=r, column=8, value=t.get("above"))
         ws.cell(row=r, column=9, value=t.get("sets"))
         ws.cell(row=r, column=10, value=t.get("con"))
-        ws.cell(row=r, column=11, value=f'=IF(N(I{r})=0,"",J{r}/I{r})')
+        ws.cell(row=r, column=11, value=f'=IFERROR(J{r}/I{r},"")')
         ws.cell(row=r, column=12, value=t.get("peers"))
         ws.cell(row=r, column=13, value=f'{P.VBL}/tournament/{x["tid"]}')
         r += 1
@@ -348,6 +349,29 @@ def link_of(it):
     return P.SITE.get(it["name"], "")
 
 
+# Functions every one of Excel, Numbers, Google Sheets and LibreOffice evaluates. Numbers
+# is the strict one: it has no N(), no spilling array functions and no _xlfn. prefixes, and
+# it reports anything it cannot evaluate as an unsupported formula on import.
+PORTABLE = {"IF", "IFERROR", "SUM", "EXP", "ROUND", "MIN", "MAX", "AVERAGE", "COUNT"}
+
+
+def check_portable(wb):
+    """Refuse to ship a formula one of the four spreadsheet apps would reject."""
+    used, bad = set(), []
+    for ws in wb:
+        for row in ws.iter_rows():
+            for c in row:
+                if isinstance(c.value, str) and c.value.startswith("="):
+                    for f in re.findall(r"([A-Z][A-Z0-9_.]*)\s*\(", c.value):
+                        used.add(f)
+                        if f not in PORTABLE:
+                            bad.append((ws.title, c.coordinate, f, c.value))
+    if bad:
+        raise SystemExit("non-portable formulas: " + "; ".join(
+            f"{s}!{co} uses {f}" for s, co, f, _ in bad[:10]))
+    return sorted(used)
+
+
 def main():
     P.build()               # the page computes everything; the book only lays it out
     D = P.DATA_OUT
@@ -358,6 +382,7 @@ def main():
     proam_sheet(wb, D)
     tour_sheet(wb, D)
     key_sheet(wb, D, ncal - 1)
+    print("formulas use", ", ".join(check_portable(wb)))
     wb.save(OUT)
     print("wrote", OUT)
 
