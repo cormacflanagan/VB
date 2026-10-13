@@ -86,6 +86,13 @@ def vbl_corpus():
     return T, D
 
 
+# One row where the edition that carries the numbers and the edition that carries the name
+# are not the same listing. The Las Vegas December date was renamed when AVP took the
+# series over, so its field numbers come from the December 2025 edition while the link goes
+# to the December 2026 one, which is what a reader clicking "AVP Winter Las Vegas" expects
+# to land on.
+LINK_FIX = {("2027-12-11", "AVP Winter Las Vegas"): 41138}
+
 # Two rows where the reference division is not the 2027 event itself, so its day count
 # would be wrong. Both are judgements, not data, and are written down rather than inferred.
 DAYS_FIX = {
@@ -204,7 +211,7 @@ PLAN = [
     ("2027-01-10", True,  "IBVL Winter Classic (Girls p1440)", "Hermosa Beach Pier", "CA", "18U", "circuit", 97612),
     ("2027-01-16", True,  "Futures Tour 2X: Arizona", "Arizona Athletic Grounds, Phoenix", "AZ", "18U", "circuit", 117699),
     ("2027-01-23", True,  "IBVL Winter Nationals (Girls)", "Hermosa Beach Pier", "CA", "18U", "circuit", 124255),
-    ("2027-01-23", False, "USAV U18 Beach National Team Trials", "Manhattan Beach Pier", "CA", "18U", "selection", 125823),
+    ("2027-01-29", False, "USAV U18 Beach National Team Trials", "Manhattan Beach Pier", "CA", "18U", "selection", 125823),
     ("2027-02-06", True,  "Kauai Bikini Open", "North Beach, Santa Monica", "CA", "18U", "circuit", 117945),
     ("2027-02-07", True,  "IBVL Winter Nationals (School Event) &#8212; ISF trial", "Hermosa Beach Pier", "CA", "18U", "selection", 124255),
     ("2027-02-13", True,  "p1440 1X Ranking Event", "Arizona Athletic Grounds, Phoenix", "AZ", "18U", "circuit", None),
@@ -213,11 +220,14 @@ PLAN = [
     ("2027-03-07", True,  "California IBVL Winter Series Championships (p1440)", "Hermosa Beach Pier", "CA", "18U", "circuit", 121642),
     ("2027-03-21", True,  "Marine Open (Girls p1440)", "Manhattan Beach Lifeguard HQ", "CA", "18U", "circuit", 121649),
     ("2027-04-03", True,  "Futures Tour 2X: California", "North Beach, Santa Monica", "CA", "18U", "circuit", None),
-    ("2027-04-18", True,  "West Coast Championships (p1440 2X)", "Hermosa Beach Pier", "CA", "18U", "circuit", 121655),
+    ("2027-04-18", True,  "p1440 Hermosa Beach Circuit Championships (2X)", "Hermosa Beach Pier", "CA", "18U", "circuit", 121655),
     ("2027-06-05", True,  "Kauai Bikini Open", "North Beach, Santa Monica", "CA", "18U", "circuit", 119863),
     ("2027-06-14", False, "USAV U19 / U21 Worlds Trials &#8212; if the cycle runs", "Hermosa Beach Pier", "CA", "Open", "selection", None),
     ("2027-06-28", False, "BVCA Pairs West Coast Championships", "Newland, Huntington Beach", "CA", "18U", "circuit", 130318),
 ("2027-06-28", False, "BVCA Pairs West Coast Championships", "Newland, Huntington Beach", "CA", "17U", "circuit", 130319),
+    # Posted for 2027 since the last crawl: the Futures Tour's own national championship,
+    # five days in California of which her 18U draw played two last year.
+    ("2027-06-28", True,  "2027 Futures Tour National Championships", "California", "CA", "18U", "national", 115902),
     ("2027-07-06", False, "BVCA Individual Pairs National Championship", "Hermosa Beach", "CA", "18U", "national", 139559),
     ("2027-07-14", True,  "34th AAU Hermosa Beach National Pairs Championships", "Hermosa Beach Pier", "CA", "18U", "national", 117393),
 ("2027-07-14", True,  "34th AAU Hermosa Beach National Pairs Championships", "Hermosa Beach Pier", "CA", "17U", "national", 126666),
@@ -231,7 +241,7 @@ PLAN = [
 ("2027-11-06", False, "AVP Juniors West Coast Championships", "Manhattan Beach", "CA", "17U", "national", 97148),
     # Nevada. Everything the state has, which is not much.
     ("2027-07-24", False, "Tahoe Championships &#8212; grass, separate rating", "Kahle Park, South Lake Tahoe", "NV", "Open", "grass", 114462),
-    ("2027-12-11", False, "AVP Winter Las Vegas", "Sunset Park, Las Vegas", "NV", "18U", "circuit", 59358),
+    ("2027-12-11", False, "AVP Winter Las Vegas", "Sunset Park, Las Vegas", "NV", "18U", "circuit", 94993),
 ]
 
 # The CBVA women's open circuit does not publish a year ahead, so it is projected from the
@@ -546,6 +556,10 @@ h3 + .lede { margin-top:8px; }
 """
 
 
+# Filled by build(); the spreadsheet reads it rather than recomputing the page.
+DATA_OUT = {}
+
+
 def build():
     tn, dv, tm, mt, link, tv = load()
     T, D = vbl_corpus()
@@ -576,7 +590,7 @@ def build():
         # Link the 2027 listing where one exists, and last year's page where it does not,
         # so every row goes somewhere you can read about the event.
         tid = link_2027(name, date, feed) if conf else None
-        was = (D.get(ref) or {}).get("tid") if ref else None
+        was = LINK_FIX.get((date, name)) or ((D.get(ref) or {}).get("tid") if ref else None)
         # Her draw's length, in order of what the evidence is worth: an override where the
         # reference is a different event, then the days her division actually played last
         # time, then the span the 2027 listing has posted.
@@ -797,6 +811,11 @@ def build():
         f'<div class="keyc"><span class="tag {c}">{lab}</span><p>{txt}</p></div>'
         for c, lab, txt in TIERS.values())
     today = datetime.date.today()
+    # Everything the page is made of, handed back alongside the markup so the spreadsheet
+    # is the same numbers rather than a second computation of them.
+    DATA_OUT.update({"items": items, "doubles": dbl, "proam": pa, "stats": S,
+                     "bpt": B, "tiers": TIERS, "tv": len(tv), "built": today,
+                     "santacruz": sc, "bestcbva": best, "juniors": jn})
     return f"""<title>Haisley 2027 &#183; California, Arizona and Nevada</title>
 <style>{CSS}{EXTRA}</style>
 
@@ -1188,7 +1207,8 @@ def build():
   the 2024&#8211;2026 editions of the same series. Field strength and match counts computed
   from those editions' entry lists and published brackets, with TruVolley for
   {len(tv):,} players retrieved {today.strftime("%-d %B %Y")}. CBVA circuit from CBVA's own
-  tournament database.
+  tournament database. The five tables on this page are also a
+  <a href="plan-2027.xlsx">spreadsheet</a>, built from the same numbers.
 </footer>
 </div>
 """

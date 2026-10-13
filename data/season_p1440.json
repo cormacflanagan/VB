@@ -1,34 +1,70 @@
 [
  {
-  "id": 40320,
-  "startDate": "2026-10-03",
-  "endDate": "2026-10-04",
-  "name": "Shawnee Kansas Showdown",
+  "id": 41796,
+  "startDate": "2026-11-21",
+  "endDate": "2026-11-21",
+  "name": "College Pairs",
   "org": "p1440",
-  "orgId": 1144,
+  "orgId": 41,
   "sanctionedBy": "p1440",
-  "national": true,
+  "national": false,
   "locations": [
-   "Shawnee Mission Beach Volleyball"
+   "Manhattan Beach"
   ],
   "divisions": [
    {
-    "name": "18U",
-    "gender": "Girls",
-    "age": "Juniors",
+    "name": "Open",
+    "gender": "Womens",
+    "age": "Adult",
     "teams": 0
    },
    {
-    "name": "16U",
-    "gender": "Girls",
-    "age": "Juniors",
-    "teams": 1
+    "name": "Open",
+    "gender": "Womens",
+    "age": "Adult",
+    "teams": 0
    },
    {
-    "name": "14U",
-    "gender": "Girls",
-    "age": "Juniors",
-    "teams": 1
+    "name": "A",
+    "gender": "Womens",
+    "age": "Adult",
+    "teams": 0
+   },
+   {
+    "name": "Open",
+    "gender": "Womens",
+    "age": "Adult",
+    "teams": 8
+   },
+   {
+    "name": "Open",
+    "gender": "Womens",
+    "age": "Adult",
+    "teams": 0
+   },
+   {
+    "name": "A",
+    "gender": "Womens",
+    "age": "Adult",
+    "teams": 8
+   },
+   {
+    "name": "Open",
+    "gender": "Womens",
+    "age": "Adult",
+    "teams": 8
+   },
+   {
+    "name": "Open",
+    "gender": "Womens",
+    "age": "Adult",
+    "teams": 0
+   },
+   {
+    "name": "A",
+    "gender": "Womens",
+    "age": "Adult",
+    "teams": 8
    }
   ]
  },
@@ -62,39 +98,24 @@
     "gender": "Girls",
     "age": "Juniors",
     "teams": 1
-   }
-  ]
- },
- {
-  "id": 41796,
-  "startDate": "2026-11-21",
-  "endDate": "2026-11-21",
-  "name": "Small & Junior College Pairs",
-  "org": "p1440",
-  "orgId": 41,
-  "sanctionedBy": "p1440",
-  "national": false,
-  "locations": [
-   "Manhattan Beach"
-  ],
-  "divisions": [
-   {
-    "name": "Open",
-    "gender": "Womens",
-    "age": "Adult",
-    "teams": 0
    },
    {
-    "name": "Open",
-    "gender": "Womens",
-    "age": "Adult",
-    "teams": 0
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 3
    },
    {
-    "name": "A",
-    "gender": "Womens",
-    "age": "Adult",
-    "teams": 0
+    "name": "16U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 4
+   },
+   {
+    "name": "14U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 1
    }
   ]
  },
@@ -122,6 +143,30 @@
     "gender": "Girls",
     "age": "Juniors",
     "teams": 9
+   },
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 18
+   },
+   {
+    "name": "15U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 13
+   },
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 18
+   },
+   {
+    "name": "15U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 13
    }
   ]
  },
@@ -155,6 +200,24 @@
     "gender": "Girls",
     "age": "Juniors",
     "teams": 3
+   },
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 9
+   },
+   {
+    "name": "16U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 6
+   },
+   {
+    "name": "14U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 5
    }
   ]
  },
@@ -182,6 +245,18 @@
     "gender": "Girls",
     "age": "Juniors",
     "teams": 3
+   },
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 1
+   },
+   {
+    "name": "16U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 5
    }
   ]
  },
@@ -221,6 +296,30 @@
     "gender": "Girls",
     "age": "Juniors",
     "teams": 0
+   },
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 2
+   },
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
    }
   ]
  },
@@ -248,6 +347,18 @@
     "gender": "Girls",
     "age": "Juniors",
     "teams": 1
+   },
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 3
+   },
+   {
+    "name": "16U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 1
    }
   ]
  },
@@ -264,6 +375,54 @@
    "North Beach - Santa Monica, CA"
   ],
   "divisions": [
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 1
+   },
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "14U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 1
+   },
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "14U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
    {
     "name": "18U",
     "gender": "Girls",
@@ -320,6 +479,24 @@
     "gender": "Girls",
     "age": "Juniors",
     "teams": 0
+   },
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "16U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 4
+   },
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
    }
   ]
  },
@@ -350,6 +527,124 @@
    },
    {
     "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "16U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 1
+   },
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   }
+  ]
+ },
+ {
+  "id": 39825,
+  "startDate": "2027-06-28",
+  "endDate": "2027-07-02",
+  "name": "2027 Futures Tour NATIONAL CHAMPIONSHIPS",
+  "org": "p1440",
+  "orgId": 1144,
+  "sanctionedBy": "p1440",
+  "national": false,
+  "locations": [
+   "California",
+   "Southern California"
+  ],
+  "divisions": [
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "16U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "15U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "14U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "12U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "Unrated",
+    "gender": "Womens",
+    "age": "Adult",
+    "teams": 0
+   },
+   {
+    "name": "17U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "18U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "16U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "15U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "14U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "12U",
+    "gender": "Girls",
+    "age": "Juniors",
+    "teams": 0
+   },
+   {
+    "name": "Unrated",
+    "gender": "Womens",
+    "age": "Adult",
+    "teams": 0
+   },
+   {
+    "name": "17U",
     "gender": "Girls",
     "age": "Juniors",
     "teams": 0
