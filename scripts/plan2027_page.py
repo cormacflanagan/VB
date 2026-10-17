@@ -1,4 +1,4 @@
-"""Haisley's 2027 competition options in California, Arizona and Nevada.
+"""Haisley's competition options from November 2026 through December 2027.
 
   python3 scripts/plan2027_page.py    ->  docs/plan-2027.html
 
@@ -40,6 +40,10 @@ HER_BAND = "U18"          # born 2010; in 2027 the USAV chart reads U18 = 2010
 # Las Vegas sand events are a small local junior series. Both are listed rather than hidden.
 NV = r"\bnevada\b|las vegas|henderson|\breno\b|lake tahoe|incline village|boulder city"
 LO, HI, NEAR = 9.2, 10.1, 0.75   # a pair rated like hers; an opponent within reach
+# The window. It opens in November 2026 because that is where the posted schedule starts
+# being hers -- the junior tours rolled their age bands over on 1 September -- and runs to
+# the end of 2027.
+START, END = "2026-11-01", "2027-12-31"
 MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
 # Tiers, worst to best for her. The page sorts nothing by these -- it is a calendar -- but
@@ -69,7 +73,10 @@ def link_2027(name, date, feed):
     posted since: a row that is an estimate today becomes a live link the week it goes up.
     """
     def norm(x):
-        return re.sub(r"[^a-z0-9]+", " ", re.sub(r"&#\d+;", "", x.lower())).strip()
+        # Drop apostrophes rather than turning them into word breaks, so that
+        # "America's Challenge" and "America&#8217;s Challenge" normalise alike.
+        x = re.sub(r"&#\d+;|['\u2018\u2019]", "", x.lower())
+        return re.sub(r"[^a-z0-9]+", " ", x).strip()
     a = norm(name)
     for t in feed:
         if t["startDate"] != date:
@@ -207,6 +214,21 @@ def stats(tdid, ents, sp, tv):
 # it, and otherwise the prior edition's date moved into 2027, flagged as an estimate.
 #   (date, confirmed?, event, place, state, division, tier, ref tdId)
 PLAN = [
+    # November and December 2026. The junior tours rolled their age bands over on
+    # 1 September, so these months are already run on the labels she carries through 2027.
+    ("2026-11-01", True,  "America&#8217;s Challenge (p1440)", "Hermosa Beach Pier", "CA", "18U", "circuit", None),
+    ("2026-11-07", True,  "AVP Juniors West Coast Championships", "Manhattan Beach", "CA", "18U", "national", 97147),
+("2026-11-07", True,  "AVP Juniors West Coast Championships", "Manhattan Beach", "CA", "17U", "national", 97148),
+    ("2026-11-14", True,  "p1440 1X Ranking Event", "Arizona Athletic Grounds, Mesa", "AZ", "18U", "circuit", None),
+    ("2026-11-14", True,  "The National Classic (p1440)", "Hermosa Beach Pier", "CA", "18U", "circuit", 32402),
+    ("2026-11-21", True,  "Futures Tour 3X: Fall Championships", "Manhattan Beach", "CA", "18U", "national", None),
+    ("2026-11-21", True,  "MAVERICKS AVP Qualifier", "Main Beach, Santa Cruz", "CA", "18U", "circuit", 130451),
+    ("2026-12-12", True,  "AVP Winter Las Vegas", "Sunset Park, Las Vegas", "NV", "18U", "circuit", 94993),
+    ("2026-12-12", True,  "p1440 1X Ranking Event", "Arizona Athletic Grounds, Mesa", "AZ", "18U", "circuit", None),
+    ("2026-12-13", True,  "Los Angeles Grand Prix (p1440)", "Hermosa Beach Pier", "CA", "18U", "circuit", 54093),
+    ("2026-12-13", True,  "Pan Pacific Championships (p1440)", "Hermosa Beach Pier", "CA", "18U", "circuit", 85328),
+    ("2026-12-30", True,  "IBVL Winter Series #1 (Girls)", "Hermosa Beach Pier", "CA", "18U", "circuit", 97612),
+    # 2027.
     ("2027-01-09", True,  "p1440 1X Ranking Event", "Arizona Athletic Grounds, Phoenix", "AZ", "18U", "circuit", None),
     ("2027-01-10", True,  "IBVL Winter Classic (Girls p1440)", "Hermosa Beach Pier", "CA", "18U", "circuit", 97612),
     ("2027-01-16", True,  "Futures Tour 2X: Arizona", "Arizona Athletic Grounds, Phoenix", "AZ", "18U", "circuit", 117699),
@@ -267,6 +289,7 @@ LEG = {
     ("Manhattan Pier, Manhattan Beach", "Hermosa Beach Pier"): (3, 10),
     ("Newland, Huntington Beach", "Manhattan Beach Lifeguard HQ"): (33, 45),
     ("Ocean Park, Santa Monica", "Belmont Shore, Long Beach"): (30, 45),
+    ("North Beach, Santa Monica", "Main Beach, Laguna Beach"): (52, 70),
 }
 
 
@@ -503,26 +526,57 @@ def cbva_2027(tn, dv, tm, mt, link, tv):
                     con[tdid] += ns
                 peers[tdid].add(tuple(sorted(m[side])))
 
+    # Anything CBVA has already posted inside the window is a real date, not a projection.
+    # It still takes its field numbers from its own slot's history, because the draw that
+    # turns up is a property of the venue and the month.
+    posted = defaultdict(list)
+    for tdid, d in dv.items():
+        if d["gender"] != "female" or d["size"] != 2 or d["level"] not in ("open", "aaa"):
+            continue
+        if not (START <= d["date"] <= END):
+            continue
+        t = tn.get(d["tid"]) or {}
+        if t.get("city") in ALL_CA:
+            posted[(t["city"], t["venue"], int(d["date"][5:7]),
+                    int(d["date"][:4]))].append(d["date"])
+
+    def field_of(c, v, m):
+        evs = byvm.get((c, v, m)) or []
+        if not evs:
+            return {"city": c, "venue": v, "month": m, "n": 0, "med": None,
+                    "above": 0, "sets": None, "con": None}
+        r = [z for e in evs for z in e["r"]]
+        n = sum(len(peers[e["td"]]) for e in evs)
+        return {"city": c, "venue": v, "month": m, "n": len(evs),
+                "med": st.median(r) if r else None,
+                "above": sum(1 for z in r if z > HER) / len(evs),
+                "sets": sum(tot[e["td"]] for e in evs) / n if n else None,
+                "con": sum(con[e["td"]] for e in evs) / n if n else None}
+
     out = []
+    # A posted date is on the calendar because CBVA has posted it, however short its
+    # history; the two-season rule is what lets a date be *projected*, not what makes an
+    # open worth listing.
+    for (c, v, m, yr), dates in posted.items():
+        f = field_of(c, v, m)
+        for date in sorted(set(dates)):
+            out.append({**f, "on": date, "year": yr})
+    seen = {(c, v, m, yr) for (c, v, m, yr) in posted}
     for (c, v, m), evs in byvm.items():
         if len({e["yr"] for e in evs}) < CBVA_MIN_SEASONS:
             continue
-        r = [z for e in evs for z in e["r"]]
-        n = sum(len(peers[e["td"]]) for e in evs)
-        proj, agree = project(2027, m, [e["date"] for e in evs])
-        out.append({"city": c, "venue": v, "month": m, "n": len(evs),
-                    "proj": proj, "agree": agree,
-                    "med": st.median(r) if r else None,
-                    "above": sum(1 for z in r if z > HER) / len(evs),
-                    "sets": sum(tot[e["td"]] for e in evs) / n if n else None,
-                    "con": sum(con[e["td"]] for e in evs) / n if n else None})
+        for yr in (2027,):
+            if (c, v, m, yr) in seen:
+                continue
+            proj, agree = project(yr, m, [e["date"] for e in evs])
+            out.append({**field_of(c, v, m), "proj": proj, "agree": agree, "year": yr})
     vid = {}
     for t in tn.values():
         if t.get("venueId") and (t.get("venue"), t.get("city")) not in vid:
             vid[(t["venue"], t["city"])] = t["venueId"]
     for e in out:
         e["venueId"] = vid.get((e["venue"], e["city"]))
-    out.sort(key=lambda x: (x["month"], -(x["con"] or 0)))
+    out.sort(key=lambda x: (x["year"], x["month"], -(x["con"] or 0)))
     return out
 
 
@@ -602,12 +656,16 @@ def build():
                       "tier": tier, "own": own, "tid": tid, "was": was,
                       "days": days, **s_})
     for e in cb:
-        items.append({"sort": f"2027-{e['month']:02d}-32", "month": f"2027-{e['month']:02d}",
-                      "when": None, "conf": False, "name": f"CBVA women&#8217;s open",
+        # A posted slot sorts and reads as the date it is; a projected one has only a
+        # month, so it sorts to the end of that month and says it is undated.
+        on = e.get("on")
+        items.append({"sort": on or f'{e["year"]}-{e["month"]:02d}-32',
+                      "month": f'{e["year"]}-{e["month"]:02d}',
+                      "when": on, "conf": bool(on), "name": f"CBVA women&#8217;s open",
                       "place": f"{e['venue']}, {e['city']}", "state": "CA", "div": "Open",
                       "tier": "open", "med": e["med"], "above": round(e["above"]),
                       "sets": e["sets"], "con": e["con"], "slots": e["n"], "days": 1,
-                      "proj": e["proj"], "agree": e["agree"],
+                      "proj": e.get("proj"), "agree": e.get("agree"),
                       "cbva": e.get("venueId")})
     items.sort(key=lambda x: x["sort"])
     dbl = doubles(items)
@@ -761,12 +819,25 @@ def build():
                     if e["city"] != "Santa Cruz" and e["sets"])
     jn = S.get(126054) or {}
     nmulti = sum(1 for i in items if (i.get("days") or 1) > 1)
+    n26 = sum(1 for i in items if i["month"] < "2027-01")
+    # The rollover, read off the November entry list rather than asserted.
+    wcc = entrants({126068, 126069})
+    gr = Counter(tv[str(p)]["grad"] for p in wcc.get(126068, ())
+                 if tv.get(str(p), {}).get("grad"))
+    wcc_n = sum(gr.values())
+    wcc_grad = gr.most_common(1)[0][0] if gr else 2028
+    g16 = sorted({tv[str(p)]["grad"] for p in wcc.get(126069, ())
+                  if tv.get(str(p), {}).get("grad")})
+    wcc16 = " and ".join(str(x) for x in g16) if g16 else "2029 and later"
     njun, nadj, nsame = adjacency(tn, dv, T, D)
     kb = S.get(117945) or {}
     isf = S.get(124255) or {}
     mar = next((sum(x["con"] for x in (d["a"], d["b"]) if x.get("con") is not None)
                 for d in dbl if d["sat"] == datetime.date(2027, 3, 6)), 0)
     mins = [d["leg"][1] for d in dbl if d["leg"]]
+    nov = next((d for d in dbl if d["sat"] == datetime.date(2026, 11, 21)), None)
+    lag = nov["leg"][0] if nov and nov["leg"] else 0
+    lagc = (nov["b"].get("con") or 0) if nov else 0
 
     # The pro-am numbers quoted in the prose, read off the same rows as the table.
     # Three groups, because the split is not simply geographic: Highline's own purse dates
@@ -816,17 +887,18 @@ def build():
     DATA_OUT.update({"items": items, "doubles": dbl, "proam": pa, "stats": S,
                      "bpt": B, "tiers": TIERS, "tv": len(tv), "built": today,
                      "santacruz": sc, "bestcbva": best, "juniors": jn})
-    return f"""<title>Haisley 2027 &#183; California, Arizona and Nevada</title>
+    return f"""<title>Haisley &#183; November 2026 to December 2027</title>
 <style>{CSS}{EXTRA}</style>
 
 <div class="wrap">
 <header>
-  <p class="eyebrow">Beach volleyball &#183; 2027 planning &#183; California, Arizona and Nevada</p>
-  <h1>Every draw worth entering in <em>2027</em></h1>
-  <p class="standfirst">The competitions within reach in the three states she can drive or
-  fly to in a day, in calendar order, each with the field it drew last time and the
-  volleyball it gave &#8212; counted in <b>sets</b>, because a CBVA pool game is one set
-  and a national bracket match is three. Born 2010, she turns 17 in February, and what that
+  <p class="eyebrow">Beach volleyball &#183; November 2026 to December 2027 &#183; California, Arizona and Nevada</p>
+  <h1>Every draw worth entering,<br><em>November 2026 to December 2027</em></h1>
+  <p class="standfirst">Fourteen months, from the November that opens her first season as a
+  17U to the end of 2027: every competition within reach in the three states she can drive
+  or fly to in a day, in calendar order, each with the field it drew last time and the
+  volleyball it gave &#8212; counted in <b>sets</b>, because a CBVA pool game is one set and
+  a national bracket match is three. Born 2010, she turns 17 in February, and what that
   makes her depends on who is running the draw &#8212; which is the first thing to get
   straight.</p>
   <div class="facts">
@@ -842,33 +914,40 @@ def build():
 </header>
 
 <section>
-  <h2>Two age charts, one year apart</h2>
-  <p class="lede">USA Volleyball and the junior tours label the same cohort differently, and
-  the difference is exactly one year. It is visible in who actually entered the 2026 draws,
-  read off the graduating years on the entry lists.</p>
+  <h2>Why the window opens in November</h2>
+  <p class="lede">The junior tours roll their age bands over on <b>1 September</b>, and
+  USA Volleyball&#8217;s winter series already runs on the following year&#8217;s. So the
+  season that starts this November is the one she plays as a 17U and a U18, and everything
+  before it was a different athlete on paper. The two bodies still label the same cohort a
+  year apart, and that difference runs through every row below.</p>
   <div class="panel">
     <table>
-      <thead><tr><th scope="col">Body</th><th scope="col">Division in 2026</th>
-        <th scope="col">Oldest birth year in it</th><th scope="col">Her label in 2026</th>
-        <th scope="col">Her label in 2027</th></tr></thead>
+      <thead><tr><th scope="col">Body</th>
+        <th scope="col">Oldest birth year in her band</th>
+        <th scope="col">Her label to Aug 2026</th>
+        <th scope="col">Her label from Sep 2026</th></tr></thead>
       <tbody>
         <tr><td class="evc"><b>USA Volleyball</b><span class="dv">NTDP rosters, national-team trials</span></td>
-          <td class="rank">U17</td><td class="rank">2010</td>
+          <td class="rank">2010</td>
           <td class="rank">U17</td><td class="rank"><b>U18</b></td></tr>
         <tr><td class="evc"><b>AVP Juniors, AAU, BVCA</b><span class="dv">the junior championships</span></td>
-          <td class="rank">16U</td><td class="rank">2010</td>
+          <td class="rank">2010</td>
           <td class="rank">16U</td><td class="rank"><b>17U</b></td></tr>
         <tr><td class="evc"><b>p1440 Futures Tour</b><span class="dv">no 17U draw at all</span></td>
-          <td class="rank">16U</td><td class="rank">2010</td>
+          <td class="rank">2010</td>
           <td class="rank">16U</td><td class="rank"><b>18U</b>, playing up</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="lede" style="margin-top:14px">She was on the NTDP <b>U17</b> roster and entered
-  AVP Juniors Nationals in <b>16U</b> in the same summer, and both were correct. In 2027 that
-  makes her a <b>U18</b> at a USA Volleyball trial and a <b>17U</b> at AVP Juniors, AAU and
-  BVCA, where entering 18U means playing up a year. The Futures Tour runs only 16U and 18U,
-  and she ages out of 16U, so there 18U is the only option.</p>
+  <p class="lede" style="margin-top:14px">The rollover is not a reading of the rulebook, it
+  is on the entry list. Every player so far entered in the <b>17U</b> draw at the AVP
+  Juniors West Coast Championships on 7&#8211;8 November graduates in <b>{wcc_grad}</b>
+  &#8212; her year &#8212; and the 16U draw beside it has moved on to {wcc16}. Last November the same 17U draw was a year older. She was on the
+  NTDP <b>U17</b> roster and entered AVP Juniors Nationals in <b>16U</b> in the same
+  summer, and both were correct; from this November she is a <b>U18</b> at a USA
+  Volleyball trial and a <b>17U</b> at AVP Juniors, AAU and BVCA, where entering 18U means
+  playing up a year. The Futures Tour runs only 16U and 18U, and she has aged out of 16U,
+  so there 18U is the only option.</p>
   <p class="lede"><b>Both 17U and 18U are listed below where an event runs both</b>, with
   &#8220;her band&#8221; marking the one she is naturally in. The numbers make the choice
   for her: the 17U draws carry nobody above her, and the 18U draws carry up to eighteen.</p>
@@ -893,21 +972,25 @@ def build():
   draw backs that up: the 2026 Western World showcase carried nobody above her at a median
   of 7.26. The <b>CIFSS Pairs Championship</b> is a CIF Southern Section event and she is at
   a Central Coast Section school, so it is not open to her. <b>16U draws</b> are not listed
-  either: she ages out of 16U in 2027, and the 2026 AVP Juniors Nationals 16U field carried
-  nobody above her in any case. And the
+  either: she aged out of 16U when the bands rolled over in September, and the last 16U
+  field she could have entered, at the 2026 AVP Juniors Nationals, carried nobody above her
+  in any case. And the
   <b>AVP League qualifiers and NORCECA playoffs</b> appear only as <span class="tag t-rch">
   out of reach</span> &#8212; medians above 11.3 with most of the field over 10.5, and a
   median of one and a half matches before the exit.</p>
 </section>
 
 <section>
-  <h2>The 2027 calendar</h2>
-  <p class="lede">A plain date is already posted on Volleyball Life. An
-  <span class="est">~italic date</span> is an estimate: the series has run in the same week
-  for two or three seasons and the 2027 edition is not up yet. Field numbers come from the
-  most recent edition of that event, not from the 2027 one, which has not happened.
-  Every event name is a link: to its 2027 listing where one is posted, to last year's
-  edition where it is not, and to the venue on CBVA for the open slots.
+  <h2>The calendar</h2>
+  <p class="lede">A plain date is already posted &#8212; on Volleyball Life for an event,
+  on CBVA for an open. All {n26} rows between now and the end of December are posted,
+  because both bodies publish about two months out; almost everything from January on is
+  not. An <span class="est">~italic date</span> is an estimate: the
+  series has run in the same week for two or three seasons and the next edition is not up
+  yet. Field numbers come from the most recent edition of that event, never from the one
+  on the row, which has not happened. Every event name is a link: to its own listing where
+  one is posted, to last year's edition where it is not, and to the venue on CBVA for the
+  open slots.
   <b>Days</b> separates the Saturday dates from the ones that need a hotel: every CBVA open
   and most of the p1440 circuit is a single day, the Futures Tour and the trials are
   weekends, and the four national championships are three days apiece. Where a date and a
@@ -936,7 +1019,8 @@ def build():
   <p class="lede">One flight, one hotel, two draws. It is available more often than the
   calendar above makes it look, because of how the two circuits schedule around each other:
   CBVA has run two women&#8217;s opens in the LA basin on consecutive days exactly once in
-  three seasons, but the junior circuit deliberately takes the day CBVA is not using.
+  three completed seasons &#8212; and has posted a second for 21&#8211;22 November &#8212;
+  but the junior circuit deliberately takes the day CBVA is not using.
   Of the {njun} genuine one-day girls&#8217; 17U/18U draws in the LA basin since September
   2023, {nadj} had a CBVA women&#8217;s open the day before or after &#8212; and another
   {nsame} ran head-to-head with one on the same day, which is the case to avoid.</p>
@@ -953,8 +1037,15 @@ def build():
     </table>
   </div>
   <ul class="notes" style="margin-top:16px">
-    <li><b>6&#8211;7 February is the one that is already bookable.</b> Both dates are posted
-    on Volleyball Life and the beaches are {LEG[("North Beach, Santa Monica", "Hermosa Beach Pier")][0]}
+    <li><b>21&#8211;22 November is bookable now, and it closes the CBVA season.</b> Both
+    dates are posted: North Beach on the Saturday, Laguna on the Sunday, {lag} miles apart.
+    It is the one weekend where CBVA itself supplies both halves &#8212; in three completed
+    seasons it has done that in the LA basin exactly once &#8212; and after 22 November the
+    circuit stops until March, so this is the last open of the year. The evidence is thin
+    on one side: North Beach has never run a November open before, and Laguna&#8217;s one
+    previous November gave {lagc:.1f} contested sets.</li>
+    <li><b>6&#8211;7 February is the next one that needs no guessing.</b> Both dates are
+    posted on Volleyball Life and the beaches are {LEG[("North Beach, Santa Monica", "Hermosa Beach Pier")][0]}
     miles apart. The weekend is lopsided, though: the Saturday draws a median of
     {kb["med"]:.2f} with nobody above her, so it is a tune-up, and the Sunday is an
     ISF trial worth {isf["con"]:.0f} contested sets. Enter it for the Sunday.</li>
@@ -1035,7 +1126,7 @@ def build():
     with a published minimum age of fourteen and an AVP membership required; Highline&#8217;s
     own opens are open entry. There is nothing to qualify for and nothing to be nominated
     to, which is what separates this tier from the one below the next heading.</li>
-    <li><b>Only one of them is on the 2027 calendar above, and that is deliberate.</b> A
+    <li><b>Only one of them is on the calendar above, and that is deliberate.</b> A
     CBVA slot earns a calendar row by running the same venue in the same month in two of the
     last three seasons. Of this whole circuit only the Santa Barbara Open clears that bar
     &#8212; 3&#8211;5 October 2025 and 2&#8211;4 October 2026 &#8212; so it is listed and the
@@ -1150,8 +1241,8 @@ def build():
     <li><b>So: play it, and count it as paid practice.</b> Fifteen minutes of travel makes
     the opportunity cost nearly zero, $200 more than covers the entry, and five sets of
     serve-receive in a real draw beats five sets in training. The only rule is that it never
-    substitutes for a travel date &#8212; and on the 2027 calendar above, the Santa Cruz
-    slots fall in months that already hold something better.</li>
+    substitutes for a travel date &#8212; and on the calendar above, the Santa Cruz slots
+    fall in months that already hold something better.</li>
     <li><b>The prize is not a reason by itself.</b> At roughly $200 for first it is a good
     Saturday, not a revenue stream, and it is the one number on this page that comes from
     you rather than from the data.</li>
@@ -1171,24 +1262,29 @@ def build():
 <section class="notes">
   <h2>How to read it, and what it is not</h2>
   <ul>
-    <li><b>An estimated date is an estimate.</b> Half of these rows are projected from a
-    series that has run in the same week for two or three years. Organisers move dates;
-    confirm before booking anything.</li>
+    <li><b>An estimated date is an estimate.</b> {nconf} of the {len(items)} rows carry a
+    date their organiser has posted; the other {len(items) - nconf} are projected from a
+    series that has run in the same week for two or three years. Everything through
+    December is posted and almost nothing after it is. Organisers move dates; confirm
+    before booking anything.</li>
     <li><b>The field numbers describe last year's draw, not next year's.</b> They are the
-    best guide available to what a date is worth, but the 2027 entry list does not exist
-    yet, and a selection event's field in particular turns over every season.</li>
+    best guide available to what a date is worth, but next season's entry list does not
+    exist yet, and a selection event's field in particular turns over every season.</li>
     <li><b>Ratings are current TruVolley</b>, applied to fields up to two years old, so an
     older edition reads slightly stronger than it was. Unrated entrants are excluded from
     the medians, which skews them a little high.</li>
     <li><b>The day count is last year's, not next year's.</b> It is the number of distinct
     dates her division played at the most recent edition, so it catches the part of a
     five-day festival that belongs to her age group &#8212; but a tour that adds a day or
-    merges two age groups changes it, and the 2027 listings mostly post a single opening
-    date rather than a span.</li>
-    <li><b>Age bands are birth-year ceilings.</b> U-N in year Y admits anyone born in
-    Y&#8722;N+1 or later, so an 18U draw in 2027 admits 2010 and younger. She is the oldest
-    year in it. In 2028 she ages out of U18 and that year's U19 becomes the equivalent
-    position.</li>
+    merges two age groups changes it, and a listing often posts a single opening date
+    rather than a span.</li>
+    <li><b>Age bands are birth-year ceilings, and the junior ones turn over in September.</b>
+    U-N admits anyone born in the qualifying year or later, so a 17U draw this season
+    admits 2010 and younger and she is the oldest year in it; an 18U draw admits 2009 and
+    younger and she is playing up. USA Volleyball counts a year differently, which is what
+    the first section is about. In September 2027 the tours roll again and she becomes an
+    18U; in 2028 she ages out of USA Volleyball's U18 and that year's U19 becomes the
+    equivalent position.</li>
     <li><b>Trials entry is not the same as trials eligibility.</b> Nineteen of the
     twenty-four entrants at the 2026 U18 trials came off the NTDP rosters she was also on,
     and athletes two years younger than her entered, so the route is open &#8212; but the

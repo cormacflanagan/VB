@@ -115,7 +115,7 @@ def calendar_sheet(wb, D):
         row[15].font = Font(name=FONT, size=9, color="0B6CB5", underline="single")
         for i in (2, 9, 10, 11, 12, 13):
             row[i].alignment = Alignment(horizontal="right", vertical="center")
-    table(ws, "Calendar2027", 1, last, len(cols))
+    table(ws, "SeasonCalendar", 1, last, len(cols))
     note(ws, last + 2,
          "Date: a posted date is the organiser's; an estimated date is last year's edition "
          "moved into 2027; a projected date is a CBVA slot placed by its own history "
@@ -261,7 +261,8 @@ def key_sheet(wb, D, ncal):
     ws.column_dimensions["A"].width = 30
     ws.column_dimensions["B"].width = 15
     ws.column_dimensions["C"].width = 92
-    t = ws.cell(row=1, column=1, value="Haisley 2027 · competition options")
+    t = ws.cell(row=1, column=1,
+                value="Haisley · competition options, November 2026 to December 2027")
     t.font = Font(name=FONT, bold=True, size=15, color=INK)
     ws.cell(row=2, column=1,
             value=f'Built {D["built"]:%-d %B %Y} from the Volleyball Life crawl and '
