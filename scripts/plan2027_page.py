@@ -1,5 +1,9 @@
 """Haisley's competition options from November 2026 through December 2027.
 
+Run scripts/venues.py first when the calendar gains a row or an organiser moves an event:
+it caches the address behind every listing's map link, and the build refuses to write the
+page when a row's state or venue disagrees with it.
+
   python3 scripts/plan2027_page.py    ->  docs/plan-2027.html
 
 One chronological planning page. Every draw she could enter in the two states she can
@@ -64,6 +68,134 @@ TIERS = {
     "grass": ("t-grs", "Grass", "Played on grass, which carries its own TruVolley. Nothing "
                                 "that happens there can move her sand rating."),
 }
+
+
+# Place names inside the three states, for the venues whose organiser published no
+# address. Generic words are deliberately absent: "Pompano Beach" and "Gulf Shores" must
+# not pass on the strength of the word "beach".
+REGION = {
+    "hermosa", "manhattan", "monica", "dockweiler", "huntington", "newland", "newport",
+    "laguna", "oceanside", "coronado", "barbara", "cruz", "pismo", "ventura", "monterey",
+    "malibu", "redondo", "porto", "playa", "venice", "belmont", "segundo", "torrance",
+    "mesa", "phoenix", "arizona", "vegas", "tahoe", "kahle", "california",
+    "angeles", "brookhurst", "marine", "mission", "dana", "carlsbad", "oxnard", "goleta",
+    "capitola", "rogers", "diego", "catamaran", "bolsa", "chica", "moorpark", "pepperdine",
+}
+# In-region venues whose names carry no distinctive word, or whose only distinctive word
+# is ambiguous -- there is a Sunset Beach in New Jersey and Sunset Hills in Missouri.
+NAMED = {"Ocean Park North": "CA",
+         "Volleyball Courts at Sunset Park": "NV",
+         "Sunset Park Beach": "NV"}
+
+# Words that say nothing about where a venue is, so a match on one proves nothing.
+GENERIC = {
+    "beach", "park", "courts", "court", "volleyball", "the", "and", "pier", "state",
+    "north", "south", "east", "west", "main", "open", "grounds", "athletic", "avenue",
+    "headquarters", "lifeguard", "recreation", "bvne", "club", "sports", "complex",
+    "center", "centre", "city", "site", "tba", "tbd", "field", "fields", "high", "school",
+}
+# Cities the listings name. Used only to catch a row that claims the wrong one.
+CITIES = {"phoenix", "mesa", "monica", "hermosa", "manhattan", "huntington", "laguna",
+          "oceanside", "coronado", "barbara", "cruz", "ventura", "monterey", "malibu",
+          "redondo", "venice", "diego", "vegas", "tahoe", "angeles", "carlsbad", "oxnard"}
+# Enough to read a state off an address, which is often typed in lower case, misspelt,
+# and without the postal abbreviation at all. Two-word forms where the one-word form is
+# a city in another state as well: there is a Manhattan in Kansas and a Huntington in
+# New York. Arizona and Nevada are tested first so that a match there wins.
+PLACE_STATE = [
+    ("AZ", ("arizona", " az", ",az", "mesa", "phoenix", "tempe", "scottsdale", "chandler",
+            "gilbert", "glendale, az")),
+    ("NV", ("nevada", " nv", ",nv", "las vegas", "henderson", "reno", "stateline",
+            "south lake tahoe", "kahle")),
+    ("CA", ("california", " ca ", " ca,", ",ca", " ca9", "santa monica", "hermosa beach",
+            "manhattan beach", "huntington beach", "huntington state beach", "newland",
+            "brookhurst", "dockweiler", "playa del rey", "santa barbara", "san diego",
+            "coronado", "coranado", "oceanside", "long beach", "belmont shore",
+            "newport beach", "laguna beach", "santa cruz", "redondo beach", "el segundo",
+            "pismo", "monterey", "malibu", "ventura", "carlsbad", "oxnard", "goleta",
+            "capitola", "half moon bay", "ocean park", "venice", "los angeles",
+            "pacific palisades", "will rogers")),
+]
+
+
+def words(x):
+    x = re.sub(r"&#\d+;|['\u2018\u2019]", "", str(x).lower())
+    return {w for w in re.sub(r"[^a-z0-9]+", " ", x).split() if len(w) > 2}
+
+
+def venue_state(name, addr):
+    """The state a venue is in, read off the address its organiser published.
+
+    A venue name is not a location: "2400 Ocean Front Walk" is Santa Monica, "Gulf Shores"
+    is Alabama, and "Arizona Athletic Grounds" is Mesa, not Phoenix. Volleyball Life hangs
+    a Google Maps query off every division's location and scripts/venues.py caches it, so
+    the address decides; the name is only a fallback for the venues that have none.
+    Returns a state code, or None when neither says.
+    """
+    for text in (addr or "", name):
+        low = " " + re.sub(r"\s+", " ", str(text).lower()).strip() + " "
+        for st, keys in PLACE_STATE:
+            if any(k in low for k in keys):
+                return st
+    for k, st in NAMED.items():
+        if k in name:
+            return st
+    return None
+
+
+def check_places(feed, D, venues):
+    """Every row must be where it says it is, checked against its own listing.
+
+    The 2027 Futures Tour spring championship moved from Santa Monica to Gulf Shores,
+    Alabama, and the row kept the previous year's state until a reader caught it. The
+    build now refuses to write the page when a row disagrees with its source: the posted
+    listing where there is one, the reference edition otherwise.
+
+      state       the published address puts the venue in a different state
+      region      no address, and the name points nowhere inside the three states
+      venue       the row's venue and the listing's share no distinguishing word
+      city        both name a city and they are different ones
+    """
+    bytid = defaultdict(set)
+    for d in D.values():
+        if d.get("venue"):
+            bytid[d["tid"]].add(str(d["venue"]))
+    bad = []
+    for date, conf, name, place, state, div, tier, ref in PLAN:
+        tid = link_2027(name, date, feed) if conf else None
+        if not (tid and bytid.get(tid)):
+            tid = (D.get(ref) or {}).get("tid")
+        if not (tid and bytid.get(tid)):
+            continue
+        vs = sorted(bytid[tid])
+        ven = " ".join(vs)
+        v, pl = words(ven), words(place)
+        label = date + " " + re.sub(r"&#\d+;", "", name)[:40]
+        got = {venue_state(n, (venues.get(str(tid)) or {}).get(n)) for n in vs}
+        got.discard(None)
+        if got and state not in got:
+            bad.append(label + f': row says {state}, {vs} is in {"/".join(sorted(got))}')
+        elif not got and not (v & REGION or any(k in ven for k in NAMED)):
+            bad.append(label + f': no published address, and "{ven}" names nowhere in CA, '
+                                "AZ or NV")
+        elif not (v - GENERIC) & (pl - GENERIC):
+            bad.append(label + f': row says "{place}", its listing says "{ven}"')
+        elif (v & CITIES) and (pl & CITIES) and not (v & CITIES & pl):
+            bad.append(label + f': row says {sorted(pl & CITIES)}, '
+                                f'its listing says {sorted(v & CITIES)}')
+    if bad:
+        raise SystemExit("place check failed:\n  " + "\n  ".join(bad))
+
+
+def check_proam(pa, venues):
+    """The pro-am table is filtered by venue substring, so it gets the same guard."""
+    bad = [f'{x["date"]} {x["name"][:44]}: "{x["venue"]}" is in '
+           f'{venue_state(x["venue"], (venues.get(str(x["tid"])) or {}).get(x["venue"]))}'
+           for x in pa
+           if venue_state(x["venue"], (venues.get(str(x["tid"])) or {}).get(x["venue"]))
+           != "CA"]
+    if bad:
+        raise SystemExit("pro-am place check failed:\n  " + "\n  ".join(bad))
 
 
 def link_2027(name, date, feed):
@@ -229,16 +361,15 @@ PLAN = [
     ("2026-12-13", True,  "Pan Pacific Championships (p1440)", "Hermosa Beach Pier", "CA", "18U", "circuit", 85328),
     ("2026-12-30", True,  "IBVL Winter Series #1 (Girls)", "Hermosa Beach Pier", "CA", "18U", "circuit", 97612),
     # 2027.
-    ("2027-01-09", True,  "p1440 1X Ranking Event", "Arizona Athletic Grounds, Phoenix", "AZ", "18U", "circuit", None),
+    ("2027-01-09", True,  "p1440 1X Ranking Event", "Arizona Athletic Grounds, Mesa", "AZ", "18U", "circuit", None),
     ("2027-01-10", True,  "IBVL Winter Classic (Girls p1440)", "Hermosa Beach Pier", "CA", "18U", "circuit", 97612),
-    ("2027-01-16", True,  "Futures Tour 2X: Arizona", "Arizona Athletic Grounds, Phoenix", "AZ", "18U", "circuit", 117699),
+    ("2027-01-16", True,  "Futures Tour 2X: Arizona", "Arizona Athletic Grounds, Mesa", "AZ", "18U", "circuit", 117699),
     ("2027-01-23", True,  "IBVL Winter Nationals (Girls)", "Hermosa Beach Pier", "CA", "18U", "circuit", 124255),
     ("2027-01-29", False, "USAV U18 Beach National Team Trials", "Manhattan Beach Pier", "CA", "18U", "selection", 125823),
     ("2027-02-06", True,  "Kauai Bikini Open", "North Beach, Santa Monica", "CA", "18U", "circuit", 117945),
     ("2027-02-07", True,  "IBVL Winter Nationals (School Event) &#8212; ISF trial", "Hermosa Beach Pier", "CA", "18U", "selection", 124255),
-    ("2027-02-13", True,  "p1440 1X Ranking Event", "Arizona Athletic Grounds, Phoenix", "AZ", "18U", "circuit", None),
+    ("2027-02-13", True,  "p1440 1X Ranking Event", "Arizona Athletic Grounds, Mesa", "AZ", "18U", "circuit", None),
     ("2027-02-27", False, "Highline Sponsorship Open ($5K)", "Ocean Park North, Santa Monica", "CA", "Open", "reach", 132429),
-    ("2027-02-27", True,  "Futures Tour 3X: Spring Championships", "California", "CA", "18U", "national", 117695),
     ("2027-03-07", True,  "California IBVL Winter Series Championships (p1440)", "Hermosa Beach Pier", "CA", "18U", "circuit", 121642),
     ("2027-03-21", True,  "Marine Open (Girls p1440)", "Manhattan Beach Lifeguard HQ", "CA", "18U", "circuit", 121649),
     ("2027-04-03", True,  "Futures Tour 2X: California", "North Beach, Santa Monica", "CA", "18U", "circuit", None),
@@ -249,7 +380,7 @@ PLAN = [
 ("2027-06-28", False, "BVCA Pairs West Coast Championships", "Newland, Huntington Beach", "CA", "17U", "circuit", 130319),
     # Posted for 2027 since the last crawl: the Futures Tour's own national championship,
     # five days in California of which her 18U draw played two last year.
-    ("2027-06-28", True,  "2027 Futures Tour National Championships", "California", "CA", "18U", "national", 115902),
+    ("2027-06-28", True,  "2027 Futures Tour National Championships", "Southern California", "CA", "18U", "national", 115902),
     ("2027-07-06", False, "BVCA Individual Pairs National Championship", "Hermosa Beach", "CA", "18U", "national", 139559),
     ("2027-07-14", True,  "34th AAU Hermosa Beach National Pairs Championships", "Hermosa Beach Pier", "CA", "18U", "national", 117393),
 ("2027-07-14", True,  "34th AAU Hermosa Beach National Pairs Championships", "Hermosa Beach Pier", "CA", "17U", "national", 126666),
@@ -383,7 +514,9 @@ def bpt(T, D, ents, tv):
     for x in D.values():
         bytid[x["tid"]].append(x)
     MX = ("Tlaxcala", "Nayarit", "Guadalajara", "Veracruz", "Yucatan", "Tepic", "Quintana",
-          "Paz", " MEX")
+          "Paz", " MEX", "Mexico", "Rosarito", "Cancun", "Playa del Carmen", "Vallarta",
+          "Acapulco", "Mazatlan", "Merida", "Monterrey", "Oaxaca", "Tijuana", "Puebla",
+          "Baja", "Cabo")
     g = defaultdict(list)
     for tid, t in T.items():
         n = t["name"]
@@ -629,6 +762,9 @@ def build():
     ents = entrants(refs | bptd)
     sp = sets_played(refs, lambda pid: (tv.get(str(pid)) or {}).get("tv"))
     S = {i: stats(i, ents, sp, tv) for i in refs}
+    venues = json.load(open(os.path.join(DATA, "venues.json")))
+    check_places(feed, D, venues)
+    check_proam(pa, venues)
     cb = cbva_2027(tn, dv, tm, mt, link, tv)
     DAYS = division_days(refs, T, D)
 
@@ -1083,8 +1219,8 @@ def build():
 
   <h3>The pro-am circuit in California</h3>
   <p class="lede">Highline is a Los Angeles promoter running one- and two-day adult opens
-  with purses from $2,500 to $10,000 &#8212; Dockweiler, Ocean Park, Manhattan, Venice,
-  Huntington, and away dates at Santa Barbara and Coronado. AVP Next is the AVP&#8217;s own
+  with purses from $2,500 to $10,000 &#8212; Ocean Park and Santa Monica Pier,
+  Dockweiler, Manhattan, Huntington, and away dates at Santa Barbara and Coronado. AVP Next is the AVP&#8217;s own
   developmental label, $8,000 minimum purse, and Highline runs some of its California
   stops. Both are harder than any CBVA open, and both hand out far more volleyball.
   Every draw either of them has run in California since 2025:</p>
@@ -1102,7 +1238,8 @@ def build():
   </div>
   <ul class="notes" style="margin-top:16px">
     <li><b>The league-format dates are the volume outlier on this whole page.</b> Highline
-    ran two of them in 2026 &#8212; Venice in February and Manhattan Pier in March &#8212;
+    ran two of them in 2026 &#8212; Ocean Park in February and Manhattan Pier in March
+    &#8212;
     and a pair rated like hers played {lg:.0f} sets in a single day with {lgc:.1f} of them
     contested. The best CBVA slot on the calendar gives {best["con"]:.1f} contested in a
     day and AVP Juniors Nationals {jn["con"]:.1f} across three. Nothing else comes close
@@ -1113,7 +1250,7 @@ def build():
     {best["med"]:.2f}. Its away dates at Santa Barbara and Coronado median {awmin:.2f} to
     {awmax:.2f} with {awa0:.0f} to {awa1:.0f} above her, and give twelve sets for it. And
     the {len(nxt)} draws carrying the AVP Next banner &#8212; Santa Barbara, Huntington
-    Beach, Santa Monica &#8212; median {nxmin:.2f} to {nxmax:.2f} but pull
+    Beach and Santa Monica Pier &#8212; median {nxmin:.2f} to {nxmax:.2f} but pull
     {nxa0:.0f} to {nxa1:.0f} players above her, the deepest adult fields in the state
     outside the AVP itself. Pick by the row, not by the promoter.</li>
     <li><b>Read the per-event set counts as indicative, not settled.</b> The last column is
@@ -1291,11 +1428,14 @@ def build():
     published criteria should be confirmed with her NTDP contact rather than inferred from
     who turned up.</li>
     <li><b>Nevada contributes two dates and neither is a reason to go.</b> Arizona earns
-    its place because the p1440 circuit runs Phoenix dates she can reach; Nevada is listed
+    its place because the p1440 circuit runs Mesa dates she can reach; Nevada is listed
     for completeness, and what the record holds is a December girls' pairs date in Las Vegas
     and a Tahoe Saturday played on grass, which carries its own rating and cannot move her
-    sand one. Out-of-region national events &#8212; the Futures Tour stops in Florida, Texas
-    and Washington &#8212; are left out because they are not a day's travel.</li>
+    sand one. Out-of-region national events are left out because they are not a day's
+    travel: the Futures Tour stops in Florida, Texas and Washington, and its <b>spring
+    championship</b>, which was at Santa Monica in March 2026 and has moved to Gulf
+    Shores, Alabama for 27&#8211;28 February 2027. That move is the reason every row on
+    this page is now checked against its own listing before the page is written.</li>
   </ul>
 </section>
 <footer>
