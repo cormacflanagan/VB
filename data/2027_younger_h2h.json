@@ -2,69 +2,69 @@
  "group": "2027_younger",
  "players": {
   "2227": "Thais Treumann",
-  "8426": "Lauren Leach",
-  "24515": "Janie McCanna",
-  "29854": "Sienna Castillo",
-  "28688": "Olivia Herron",
-  "2771": "Sandie Souza",
-  "3113": "Ella Olson",
   "18671": "Leann Wise",
+  "29854": "Sienna Castillo",
+  "8426": "Lauren Leach",
+  "28688": "Olivia Herron",
+  "24515": "Janie McCanna",
+  "3113": "Ella Olson",
+  "147394": "Sadie Stafford",
   "22544": "Lucy Matuszak",
-  "25289": "Simrin Adams",
-  "95165": "Milaniakai Padilla",
-  "91052": "Sage Illian",
-  "64896": "Haisley Flanagan",
+  "91896": "Brooke Proctor",
+  "59411": "Brooklyn Rosales",
   "5973": "Lerin Rosenthal",
-  "91897": "Ashlynn Proctor",
+  "92974": "Reagan Carlin",
+  "95165": "Milaniakai Padilla",
+  "64896": "Haisley Flanagan",
+  "2771": "Sandie Souza",
+  "91052": "Sage Illian",
+  "25289": "Simrin Adams",
   "53164": "Sammy Nammack",
-  "92193": "Nariah Johnson",
+  "91897": "Ashlynn Proctor",
+  "59914": "JoJo Wilson",
   "4517": "Ella Dueck",
+  "92193": "Nariah Johnson",
+  "26984": "Maddy  Wagner",
+  "26871": "Abby King",
+  "5160": "Addison Choi",
   "44267": "Thalia Lindahl",
   "84725": "Sarah Cowan",
-  "26984": "Maddy  Wagner",
-  "59914": "JoJo Wilson",
-  "26871": "Abby King",
-  "147394": "Sadie Stafford",
   "61785": "Georgeann Lee",
-  "5160": "Addison Choi",
   "99596": "Madison Gillinger",
-  "25288": "Zoe Znider",
-  "59411": "Brooklyn Rosales",
-  "40933": "Allyn Hilt",
-  "22857": "Milan Hendrickson",
+  "161398": "Charlotte Jansen",
   "64683": "Bristyn Burness",
+  "60877": "Milana Rivera",
+  "25288": "Zoe Znider",
+  "22857": "Milan Hendrickson",
+  "23868": "Jordyn Wilson",
   "2420": "Christy Boulware",
   "2048": "Dreya Scherfenberg",
-  "91896": "Brooke Proctor",
-  "98425": "Eden Cisneros",
-  "17437": "London Merchant",
   "29918": "Karsyn Rogers",
+  "40933": "Allyn Hilt",
+  "17437": "London Merchant",
+  "98425": "Eden Cisneros",
   "53120": "Summer Tukua",
-  "60877": "Milana Rivera",
-  "105245": "Ashley Ruschill",
   "20220": "Ryan Anderson",
-  "105342": "Izzy Fischer",
+  "105245": "Ashley Ruschill",
   "24727": "Isabelle Izzy Ramos",
-  "92974": "Reagan Carlin",
-  "66728": "Tristan Ana Del Riego",
-  "98125": "Ella Buchanan",
   "42463": "Stella Sheeran",
+  "105342": "Izzy Fischer",
+  "98125": "Ella Buchanan",
   "128445": "Cayden Dorger",
   "68351": "Megan McLarty",
-  "23868": "Jordyn Wilson",
   "84049": "Breeze Johnson",
   "63770": "Marley Robinson",
-  "9258": "Abigail Moffett",
-  "23641": "Kendyl Maxwell",
+  "96236": "Olivia Marroquin",
   "17491": "Paloma Smith",
-  "92803": "Linnaea Nielsen",
-  "48567": "Sienna Mattoon",
+  "23641": "Kendyl Maxwell",
   "99506": "Taylie Hansen",
-  "19592": "Lyla Paulsen"
+  "94909": "Sadie Harris",
+  "19592": "Lyla Paulsen",
+  "98124": "Brooke Canaday"
  },
- "asof": "2026-09-23",
+ "asof": "2026-10-20",
  "source": "corpus",
- "matches": 332,
+ "matches": 330,
  "pairs": [
   {
    "a": "Addison Choi",
@@ -205,7 +205,137 @@
       "Abby King"
      ],
      "against": [
-      "Linnaea Nielsen"
+      92803
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sadie Stafford",
+   "b": "Charlotte Jansen",
+   "aId": 147394,
+   "bId": 161398,
+   "aWins": 2,
+   "bWins": 2,
+   "games": [
+    {
+     "date": "2026-03-14",
+     "event": "2026 Futures Tour: Florida",
+     "division": "",
+     "tid": 31622,
+     "tdId": 117904,
+     "phase": "Pool",
+     "round": "Day 1: RD2 (1sts)",
+     "won": false,
+     "sets": [
+      [
+       21,
+       13
+      ],
+      [
+       15,
+       21
+      ],
+      [
+       11,
+       15
+      ]
+     ],
+     "with": [
+      "Brooklyn Rosales"
+     ],
+     "against": [
+      "Nariah Johnson"
+     ]
+    },
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       15
+      ],
+      [
+       21,
+       19
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Nariah Johnson"
+     ],
+     "against": [
+      "Ella Buchanan"
+     ]
+    },
+    {
+     "date": "2026-06-19",
+     "event": "2026 Futures Tour WESTERN NATIONAL CHAMPIONSHIPS",
+     "division": "",
+     "tid": 30985,
+     "tdId": 115903,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       21,
+       17
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Nariah Johnson"
+     ],
+     "against": [
+      94563
+     ]
+    },
+    {
+     "date": "2026-07-23",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "",
+     "tid": 34243,
+     "tdId": 126056,
+     "phase": "Pool",
+     "round": "Power Pools 1st",
+     "won": false,
+     "sets": [
+      [
+       24,
+       22
+      ],
+      [
+       19,
+       21
+      ],
+      [
+       15,
+       17
+      ]
+     ],
+     "with": [
+      9258
+     ],
+     "against": [
+      94563
      ]
     }
    ]
@@ -959,120 +1089,6 @@
    ]
   },
   {
-   "a": "Abigail Moffett",
-   "b": "Thalia Lindahl",
-   "aId": 9258,
-   "bId": 44267,
-   "aWins": 0,
-   "bWins": 4,
-   "games": [
-    {
-     "date": "2025-09-21",
-     "event": "Super Girl Pro Invitational '25",
-     "division": "",
-     "tid": 32055,
-     "tdId": 119282,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": false,
-     "sets": [
-      [
-       13,
-       21
-      ],
-      [
-       11,
-       21
-      ],
-      [
-       0,
-       0
-      ]
-     ],
-     "with": [
-      "Sandie Souza"
-     ],
-     "against": [
-      "Madison Gillinger"
-     ]
-    },
-    {
-     "date": "2025-11-16",
-     "event": "Newland",
-     "division": "Newland",
-     "tid": 190,
-     "tdId": 608,
-     "phase": "Pool",
-     "round": "",
-     "won": false,
-     "sets": [
-      [
-       18,
-       28
-      ]
-     ],
-     "with": [
-      "Sandie Souza"
-     ],
-     "against": [
-      92284
-     ]
-    },
-    {
-     "date": "2025-11-16",
-     "event": "Newland",
-     "division": "Newland",
-     "tid": 190,
-     "tdId": 608,
-     "phase": "Playoff",
-     "round": "-1",
-     "won": false,
-     "sets": [
-      [
-       13,
-       21
-      ]
-     ],
-     "with": [
-      "Sandie Souza"
-     ],
-     "against": [
-      92284
-     ]
-    },
-    {
-     "date": "2026-03-28",
-     "event": "2026 Futures Tour Spring Championship",
-     "division": "",
-     "tid": 31567,
-     "tdId": 117695,
-     "phase": "Pool",
-     "round": "Day 1: RD1",
-     "won": false,
-     "sets": [
-      [
-       16,
-       21
-      ],
-      [
-       10,
-       21
-      ],
-      [
-       0,
-       0
-      ]
-     ],
-     "with": [
-      153620
-     ],
-     "against": [
-      161398
-     ]
-    }
-   ]
-  },
-  {
    "a": "Thalia Lindahl",
    "b": "Sammy Nammack",
    "aId": 44267,
@@ -1164,7 +1180,7 @@
       ]
      ],
      "with": [
-      "Linnaea Nielsen"
+      92803
      ],
      "against": [
       "JoJo Wilson"
@@ -1278,7 +1294,7 @@
       ]
      ],
      "with": [
-      "Abigail Moffett"
+      9258
      ],
      "against": [
       "Sadie Stafford"
@@ -1601,174 +1617,6 @@
    ]
   },
   {
-   "a": "Sienna Mattoon",
-   "b": "Brooke Proctor",
-   "aId": 48567,
-   "bId": 91896,
-   "aWins": 0,
-   "bWins": 3,
-   "games": [
-    {
-     "date": "2025-10-12",
-     "event": "Newland",
-     "division": "Newland",
-     "tid": 173,
-     "tdId": 550,
-     "phase": "Pool",
-     "round": "",
-     "won": false,
-     "sets": [
-      [
-       9,
-       21
-      ]
-     ],
-     "with": [
-      5270
-     ],
-     "against": [
-      "Reagan Carlin"
-     ]
-    },
-    {
-     "date": "2025-10-12",
-     "event": "Newland",
-     "division": "Newland",
-     "tid": 173,
-     "tdId": 550,
-     "phase": "Playoff",
-     "round": "-1",
-     "won": false,
-     "sets": [
-      [
-       20,
-       28
-      ]
-     ],
-     "with": [
-      "Reagan Carlin"
-     ],
-     "against": [
-      5270
-     ]
-    },
-    {
-     "date": "2026-07-26",
-     "event": "AVP Juniors National Championships 2026",
-     "division": "",
-     "tid": 34243,
-     "tdId": 126057,
-     "phase": "Playoffs",
-     "round": "Gold",
-     "won": false,
-     "sets": [
-      [
-       18,
-       21
-      ],
-      [
-       17,
-       21
-      ],
-      [
-       0,
-       0
-      ]
-     ],
-     "with": [
-      "Reagan Carlin"
-     ],
-     "against": [
-      "Tristan Ana Del Riego"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Sienna Mattoon",
-   "b": "Reagan Carlin",
-   "aId": 48567,
-   "bId": 92974,
-   "aWins": 0,
-   "bWins": 3,
-   "games": [
-    {
-     "date": "2025-10-12",
-     "event": "Newland",
-     "division": "Newland",
-     "tid": 173,
-     "tdId": 550,
-     "phase": "Pool",
-     "round": "",
-     "won": false,
-     "sets": [
-      [
-       9,
-       21
-      ]
-     ],
-     "with": [
-      5270
-     ],
-     "against": [
-      "Brooke Proctor"
-     ]
-    },
-    {
-     "date": "2025-10-12",
-     "event": "Newland",
-     "division": "Newland",
-     "tid": 173,
-     "tdId": 550,
-     "phase": "Playoff",
-     "round": "-1",
-     "won": false,
-     "sets": [
-      [
-       20,
-       28
-      ]
-     ],
-     "with": [
-      "Brooke Proctor"
-     ],
-     "against": [
-      5270
-     ]
-    },
-    {
-     "date": "2026-07-26",
-     "event": "AVP Juniors National Championships 2026",
-     "division": "",
-     "tid": 34243,
-     "tdId": 126057,
-     "phase": "Playoffs",
-     "round": "Gold",
-     "won": false,
-     "sets": [
-      [
-       18,
-       21
-      ],
-      [
-       17,
-       21
-      ],
-      [
-       0,
-       0
-      ]
-     ],
-     "with": [
-      "Brooke Proctor"
-     ],
-     "against": [
-      "Tristan Ana Del Riego"
-     ]
-    }
-   ]
-  },
-  {
    "a": "Lyla Paulsen",
    "b": "Sadie Stafford",
    "aId": 19592,
@@ -2003,7 +1851,7 @@
       "Brooklyn Rosales"
      ],
      "against": [
-      161398
+      "Charlotte Jansen"
      ]
     },
     {
@@ -2030,7 +1878,7 @@
       ]
      ],
      "with": [
-      161398
+      "Charlotte Jansen"
      ],
      "against": [
       94563
@@ -2400,7 +2248,7 @@
       ]
      ],
      "with": [
-      "Linnaea Nielsen"
+      92803
      ],
      "against": [
       "Olivia Herron"
@@ -2469,101 +2317,93 @@
    ]
   },
   {
-   "a": "Thalia Lindahl",
-   "b": "Linnaea Nielsen",
-   "aId": 44267,
-   "bId": 92803,
+   "a": "Nariah Johnson",
+   "b": "Sadie Harris",
+   "aId": 92193,
+   "bId": 94909,
    "aWins": 3,
    "bWins": 0,
    "games": [
     {
-     "date": "2026-01-25",
-     "event": "IBVL Winter Nationals & U18 ISF Trials",
+     "date": "2026-01-17",
+     "event": "2026 Futures Tour: Arizona",
      "division": "",
-     "tid": 25008,
-     "tdId": 124255,
+     "tid": 31568,
+     "tdId": 117700,
+     "phase": "Pool",
+     "round": "Day 1: RD2 1sts",
+     "won": true,
+     "sets": [
+      [
+       21,
+       19
+      ],
+      [
+       21,
+       17
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      129730
+     ],
+     "against": [
+      "Madison Gillinger"
+     ]
+    },
+    {
+     "date": "2026-07-09",
+     "event": "2026 BVCA Individual Pairs National Championship",
+     "division": "",
+     "tid": 38087,
+     "tdId": 139560,
+     "phase": "Playoffs",
+     "round": "Championship Bracket",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       21,
+       16
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Madison Gillinger"
+     ],
+     "against": [
+      "Ashlynn Proctor"
+     ]
+    },
+    {
+     "date": "2026-07-19",
+     "event": "AAU Hermosa Beach Coed Championships",
+     "division": "",
+     "tid": 31484,
+     "tdId": 119176,
      "phase": "Playoffs",
      "round": "Playoffs",
      "won": true,
      "sets": [
       [
-       21,
-       17
-      ],
-      [
-       21,
+       28,
        14
-      ],
-      [
-       0,
-       0
       ]
      ],
      "with": [
-      "Sammy Nammack"
+      59849
      ],
      "against": [
-      "JoJo Wilson"
-     ]
-    },
-    {
-     "date": "2026-02-22",
-     "event": "AAU California Open",
-     "division": "",
-     "tid": 32993,
-     "tdId": 121812,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": true,
-     "sets": [
-      [
-       21,
-       10
-      ],
-      [
-       21,
-       9
-      ],
-      [
-       0,
-       0
-      ]
-     ],
-     "with": [
-      24121
-     ],
-     "against": [
-      1734
-     ]
-    },
-    {
-     "date": "2026-07-18",
-     "event": "33rd AAU Hermosa Beach National Pairs Championships",
-     "division": "",
-     "tid": 31483,
-     "tdId": 126666,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": true,
-     "sets": [
-      [
-       21,
-       17
-      ],
-      [
-       21,
-       9
-      ],
-      [
-       0,
-       0
-      ]
-     ],
-     "with": [
-      "JoJo Wilson"
-     ],
-     "against": [
-      60184
+      285632
      ]
     }
    ]
@@ -2725,7 +2565,7 @@
       "Cayden Dorger"
      ],
      "against": [
-      161398
+      "Charlotte Jansen"
      ]
     },
     {
@@ -3220,6 +3060,198 @@
      ],
      "against": [
       "Ashlynn Proctor"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Reagan Carlin",
+   "b": "Sadie Harris",
+   "aId": 92974,
+   "bId": 94909,
+   "aWins": 1,
+   "bWins": 2,
+   "games": [
+    {
+     "date": "2025-10-12",
+     "event": "Newland",
+     "division": "Newland",
+     "tid": 173,
+     "tdId": 550,
+     "phase": "Playoff",
+     "round": "-1",
+     "won": true,
+     "sets": [
+      [
+       28,
+       14
+      ]
+     ],
+     "with": [
+      "Brooke Proctor"
+     ],
+     "against": [
+      91539
+     ]
+    },
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": false,
+     "sets": [
+      [
+       0,
+       21
+      ],
+      [
+       0,
+       21
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Madison Gillinger"
+     ],
+     "against": [
+      83237
+     ]
+    },
+    {
+     "date": "2026-07-09",
+     "event": "2026 BVCA Individual Pairs National Championship",
+     "division": "",
+     "tid": 38087,
+     "tdId": 139560,
+     "phase": "Playoffs",
+     "round": "Championship Bracket",
+     "won": false,
+     "sets": [
+      [
+       18,
+       21
+      ],
+      [
+       13,
+       21
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Madison Gillinger"
+     ],
+     "against": [
+      "Brooke Proctor"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Ashley Ruschill",
+   "b": "Charlotte Jansen",
+   "aId": 105245,
+   "bId": 161398,
+   "aWins": 0,
+   "bWins": 3,
+   "games": [
+    {
+     "date": "2026-01-18",
+     "event": "2026 Futures Tour: Arizona",
+     "division": "",
+     "tid": 31568,
+     "tdId": 117700,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       9,
+       21
+      ],
+      [
+       19,
+       21
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      102482
+     ],
+     "against": [
+      9258
+     ]
+    },
+    {
+     "date": "2026-05-03",
+     "event": "2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier",
+     "division": "",
+     "tid": 32578,
+     "tdId": 120659,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": false,
+     "sets": [
+      [
+       21,
+       18
+      ],
+      [
+       15,
+       21
+      ],
+      [
+       11,
+       15
+      ]
+     ],
+     "with": [
+      9258
+     ],
+     "against": [
+      58303
+     ]
+    },
+    {
+     "date": "2026-06-19",
+     "event": "2026 Futures Tour WESTERN NATIONAL CHAMPIONSHIPS",
+     "division": "",
+     "tid": 30985,
+     "tdId": 115903,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       16,
+       21
+      ],
+      [
+       14,
+       21
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Cayden Dorger"
+     ],
+     "against": [
+      "Nariah Johnson"
      ]
     }
    ]
@@ -3759,7 +3791,7 @@
       "Jordyn Wilson"
      ],
      "against": [
-      98124
+      "Brooke Canaday"
      ]
     },
     {
@@ -3778,10 +3810,10 @@
       ]
      ],
      "with": [
-      161398
+      "Charlotte Jansen"
      ],
      "against": [
-      98124
+      "Brooke Canaday"
      ]
     },
     {
@@ -3811,7 +3843,7 @@
       "Sadie Stafford"
      ],
      "against": [
-      161398
+      "Charlotte Jansen"
      ]
     }
    ]
@@ -3951,7 +3983,7 @@
       "Sienna Castillo"
      ],
      "against": [
-      98124
+      "Brooke Canaday"
      ]
     },
     {
@@ -4011,7 +4043,7 @@
       "Sienna Castillo"
      ],
      "against": [
-      161398
+      "Charlotte Jansen"
      ]
     }
    ]
@@ -4096,106 +4128,6 @@
      ],
      "against": [
       104875
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Abigail Moffett",
-   "b": "Ashley Ruschill",
-   "aId": 9258,
-   "bId": 105245,
-   "aWins": 3,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2025-11-09",
-     "event": "AVP Juniors West Coast Championships 2025",
-     "division": "",
-     "tid": 25578,
-     "tdId": 97149,
-     "phase": "Playoffs",
-     "round": "Gold Playoffs",
-     "won": true,
-     "sets": [
-      [
-       24,
-       26
-      ],
-      [
-       21,
-       15
-      ],
-      [
-       15,
-       13
-      ]
-     ],
-     "with": [
-      "Eden Cisneros"
-     ],
-     "against": [
-      58303
-     ]
-    },
-    {
-     "date": "2026-01-18",
-     "event": "2026 Futures Tour: Arizona",
-     "division": "",
-     "tid": 31568,
-     "tdId": 117700,
-     "phase": "Playoffs",
-     "round": "Day 2: Gold Playoffs",
-     "won": true,
-     "sets": [
-      [
-       21,
-       9
-      ],
-      [
-       21,
-       19
-      ],
-      [
-       0,
-       0
-      ]
-     ],
-     "with": [
-      102482
-     ],
-     "against": [
-      161398
-     ]
-    },
-    {
-     "date": "2026-05-03",
-     "event": "2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier",
-     "division": "",
-     "tid": 32578,
-     "tdId": 120659,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": true,
-     "sets": [
-      [
-       18,
-       21
-      ],
-      [
-       21,
-       15
-      ],
-      [
-       15,
-       11
-      ]
-     ],
-     "with": [
-      161398
-     ],
-     "against": [
-      58303
      ]
     }
    ]
@@ -4722,7 +4654,7 @@
       ]
      ],
      "with": [
-      "Abigail Moffett"
+      9258
      ],
      "against": [
       "Georgeann Lee"
@@ -4755,7 +4687,91 @@
       94563
      ],
      "against": [
-      "Linnaea Nielsen"
+      92803
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Addison Choi",
+   "b": "Olivia Marroquin",
+   "aId": 5160,
+   "bId": 96236,
+   "aWins": 2,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-01-11",
+     "event": "California IBVL Winter Classic - p1440",
+     "division": "",
+     "tid": 25718,
+     "tdId": 97612,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       7
+      ]
+     ],
+     "with": [
+      56789
+     ],
+     "against": [
+      83209
+     ]
+    },
+    {
+     "date": "2026-03-01",
+     "event": "California IBVL Winter Series Championships - p1440 Crown Series",
+     "division": "",
+     "tid": 32939,
+     "tdId": 121642,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       15
+      ]
+     ],
+     "with": [
+      9258
+     ],
+     "against": [
+      56544
+     ]
+    },
+    {
+     "date": "2026-03-29",
+     "event": "2026 Futures Tour Spring Championship",
+     "division": "",
+     "tid": 31567,
+     "tdId": 117695,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoff",
+     "won": false,
+     "sets": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      69116
+     ],
+     "against": [
+      92803
      ]
     }
    ]
@@ -5029,90 +5045,6 @@
    ]
   },
   {
-   "a": "Sandie Souza",
-   "b": "Abigail Moffett",
-   "aId": 2771,
-   "bId": 9258,
-   "aWins": 3,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2025-09-21",
-     "event": "Super Girl Pro Invitational '25",
-     "division": "",
-     "tid": 32055,
-     "tdId": 119282,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": true,
-     "sets": [
-      [
-       21,
-       13
-      ],
-      [
-       21,
-       11
-      ],
-      [
-       0,
-       0
-      ]
-     ],
-     "with": [
-      "Thalia Lindahl"
-     ],
-     "against": [
-      "Madison Gillinger"
-     ]
-    },
-    {
-     "date": "2025-11-16",
-     "event": "Newland",
-     "division": "Newland",
-     "tid": 190,
-     "tdId": 608,
-     "phase": "Pool",
-     "round": "",
-     "won": true,
-     "sets": [
-      [
-       28,
-       18
-      ]
-     ],
-     "with": [
-      "Thalia Lindahl"
-     ],
-     "against": [
-      92284
-     ]
-    },
-    {
-     "date": "2025-11-16",
-     "event": "Newland",
-     "division": "Newland",
-     "tid": 190,
-     "tdId": 608,
-     "phase": "Playoff",
-     "round": "-1",
-     "won": true,
-     "sets": [
-      [
-       21,
-       13
-      ]
-     ],
-     "with": [
-      "Thalia Lindahl"
-     ],
-     "against": [
-      92284
-     ]
-    }
-   ]
-  },
-  {
    "a": "Lyla Paulsen",
    "b": "Izzy Fischer",
    "aId": 19592,
@@ -5178,68 +5110,6 @@
      ],
      "against": [
       "London Merchant"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Abigail Moffett",
-   "b": "Sadie Stafford",
-   "aId": 9258,
-   "bId": 147394,
-   "aWins": 2,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-02-01",
-     "event": "Girls Beach High School Pre-Season Tournament",
-     "division": "",
-     "tid": 32392,
-     "tdId": 121505,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": true,
-     "sets": [
-      [
-       28,
-       23
-      ]
-     ],
-     "with": [
-      "Addison Choi"
-     ],
-     "against": [
-      "Georgeann Lee"
-     ]
-    },
-    {
-     "date": "2026-07-23",
-     "event": "AVP Juniors National Championships 2026",
-     "division": "",
-     "tid": 34243,
-     "tdId": 126056,
-     "phase": "Pool",
-     "round": "Power Pools 1st",
-     "won": true,
-     "sets": [
-      [
-       22,
-       24
-      ],
-      [
-       21,
-       19
-      ],
-      [
-       17,
-       15
-      ]
-     ],
-     "with": [
-      161398
-     ],
-     "against": [
-      94563
      ]
     }
    ]
@@ -5408,7 +5278,7 @@
       ]
      ],
      "with": [
-      "Abigail Moffett"
+      9258
      ],
      "against": [
       124610
@@ -6217,146 +6087,6 @@
    ]
   },
   {
-   "a": "Nariah Johnson",
-   "b": "Linnaea Nielsen",
-   "aId": 92193,
-   "bId": 92803,
-   "aWins": 2,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-01-24",
-     "event": "IBVL Winter Nationals & U18 ISF Trials",
-     "division": "",
-     "tid": 25008,
-     "tdId": 124255,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": true,
-     "sets": [
-      [
-       21,
-       14
-      ],
-      [
-       21,
-       10
-      ],
-      [
-       0,
-       0
-      ]
-     ],
-     "with": [
-      "Sammy Nammack"
-     ],
-     "against": [
-      "Olivia Herron"
-     ]
-    },
-    {
-     "date": "2026-07-26",
-     "event": "AVP Juniors National Championships 2026",
-     "division": "",
-     "tid": 34243,
-     "tdId": 126055,
-     "phase": "Playoffs",
-     "round": "Gold",
-     "won": true,
-     "sets": [
-      [
-       23,
-       21
-      ],
-      [
-       21,
-       14
-      ],
-      [
-       0,
-       0
-      ]
-     ],
-     "with": [
-      "Milaniakai Padilla"
-     ],
-     "against": [
-      "Marley Robinson"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "JoJo Wilson",
-   "b": "Linnaea Nielsen",
-   "aId": 59914,
-   "bId": 92803,
-   "aWins": 2,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-01-25",
-     "event": "IBVL Winter Nationals & U18 ISF Trials",
-     "division": "",
-     "tid": 25008,
-     "tdId": 124255,
-     "phase": "Playoffs",
-     "round": "Playoffs",
-     "won": true,
-     "sets": [
-      [
-       21,
-       17
-      ],
-      [
-       21,
-       14
-      ],
-      [
-       0,
-       0
-      ]
-     ],
-     "with": [
-      "Sammy Nammack"
-     ],
-     "against": [
-      "Thalia Lindahl"
-     ]
-    },
-    {
-     "date": "2026-07-18",
-     "event": "33rd AAU Hermosa Beach National Pairs Championships",
-     "division": "",
-     "tid": 31483,
-     "tdId": 126666,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": true,
-     "sets": [
-      [
-       21,
-       17
-      ],
-      [
-       21,
-       9
-      ],
-      [
-       0,
-       0
-      ]
-     ],
-     "with": [
-      "Thalia Lindahl"
-     ],
-     "against": [
-      60184
-     ]
-    }
-   ]
-  },
-  {
    "a": "Sandie Souza",
    "b": "Georgeann Lee",
    "aId": 2771,
@@ -6484,114 +6214,6 @@
      ],
      "against": [
       "Lauren Leach"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Addison Choi",
-   "b": "Linnaea Nielsen",
-   "aId": 5160,
-   "bId": 92803,
-   "aWins": 1,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-01-17",
-     "event": "PCA/FBC COLLEGE SHOWCASE Pairs Tournament",
-     "division": "",
-     "tid": 33070,
-     "tdId": 122104,
-     "phase": "Playoffs",
-     "round": "Playoffs",
-     "won": false,
-     "sets": [
-      [
-       19,
-       22
-      ]
-     ],
-     "with": [
-      161530
-     ],
-     "against": [
-      56789
-     ]
-    },
-    {
-     "date": "2026-07-18",
-     "event": "33rd AAU Hermosa Beach National Pairs Championships",
-     "division": "",
-     "tid": 31483,
-     "tdId": 126666,
-     "phase": "Playoffs",
-     "round": "Gold 5th Place",
-     "won": true,
-     "sets": [
-      [
-       28,
-       15
-      ]
-     ],
-     "with": [
-      60184
-     ],
-     "against": [
-      "Sammy Nammack"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Sammy Nammack",
-   "b": "Linnaea Nielsen",
-   "aId": 53164,
-   "bId": 92803,
-   "aWins": 1,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-02-01",
-     "event": "Girls Beach High School Pre-Season Tournament",
-     "division": "",
-     "tid": 32392,
-     "tdId": 121505,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": false,
-     "sets": [
-      [
-       17,
-       28
-      ]
-     ],
-     "with": [
-      4386
-     ],
-     "against": [
-      60518
-     ]
-    },
-    {
-     "date": "2026-07-18",
-     "event": "33rd AAU Hermosa Beach National Pairs Championships",
-     "division": "",
-     "tid": 31483,
-     "tdId": 126666,
-     "phase": "Playoffs",
-     "round": "Gold 5th Place",
-     "won": true,
-     "sets": [
-      [
-       28,
-       15
-      ]
-     ],
-     "with": [
-      60184
-     ],
-     "against": [
-      "Addison Choi"
      ]
     }
    ]
@@ -6752,7 +6374,7 @@
       ]
      ],
      "with": [
-      "Abigail Moffett"
+      9258
      ],
      "against": [
       "Summer Tukua"
@@ -6786,76 +6408,6 @@
      ],
      "against": [
       "Nariah Johnson"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Abigail Moffett",
-   "b": "Stella Sheeran",
-   "aId": 9258,
-   "bId": 42463,
-   "aWins": 1,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-05-03",
-     "event": "2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier",
-     "division": "",
-     "tid": 32578,
-     "tdId": 120659,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": false,
-     "sets": [
-      [
-       11,
-       21
-      ],
-      [
-       15,
-       21
-      ],
-      [
-       0,
-       0
-      ]
-     ],
-     "with": [
-      161398
-     ],
-     "against": [
-      "Cayden Dorger"
-     ]
-    },
-    {
-     "date": "2026-07-08",
-     "event": "2026 BVCA Individual Pairs National Championship",
-     "division": "",
-     "tid": 38087,
-     "tdId": 139560,
-     "phase": "Playoffs",
-     "round": "Championship Bracket",
-     "won": true,
-     "sets": [
-      [
-       21,
-       12
-      ],
-      [
-       21,
-       18
-      ],
-      [
-       0,
-       0
-      ]
-     ],
-     "with": [
-      58303
-     ],
-     "against": [
-      81029
      ]
     }
    ]
@@ -7071,6 +6623,68 @@
    ]
   },
   {
+   "a": "Brooke Proctor",
+   "b": "Sadie Harris",
+   "aId": 91896,
+   "bId": 94909,
+   "aWins": 1,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2025-10-12",
+     "event": "Newland",
+     "division": "Newland",
+     "tid": 173,
+     "tdId": 550,
+     "phase": "Playoff",
+     "round": "-1",
+     "won": true,
+     "sets": [
+      [
+       28,
+       14
+      ]
+     ],
+     "with": [
+      "Reagan Carlin"
+     ],
+     "against": [
+      91539
+     ]
+    },
+    {
+     "date": "2026-07-09",
+     "event": "2026 BVCA Individual Pairs National Championship",
+     "division": "",
+     "tid": 38087,
+     "tdId": 139560,
+     "phase": "Playoffs",
+     "round": "Championship Bracket",
+     "won": false,
+     "sets": [
+      [
+       18,
+       21
+      ],
+      [
+       13,
+       21
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Madison Gillinger"
+     ],
+     "against": [
+      "Reagan Carlin"
+     ]
+    }
+   ]
+  },
+  {
    "a": "Reagan Carlin",
    "b": "Madison Gillinger",
    "aId": 92974,
@@ -7102,7 +6716,7 @@
       ]
      ],
      "with": [
-      94909
+      "Sadie Harris"
      ],
      "against": [
       83237
@@ -7132,7 +6746,7 @@
       ]
      ],
      "with": [
-      94909
+      "Sadie Harris"
      ],
      "against": [
       "Brooke Proctor"
@@ -7175,7 +6789,7 @@
       129730
      ],
      "against": [
-      94909
+      "Sadie Harris"
      ]
     },
     {
@@ -7202,7 +6816,7 @@
       ]
      ],
      "with": [
-      94909
+      "Sadie Harris"
      ],
      "against": [
       "Ashlynn Proctor"
@@ -7415,7 +7029,77 @@
       "Ashley Ruschill"
      ],
      "against": [
-      161398
+      "Charlotte Jansen"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Cayden Dorger",
+   "b": "Charlotte Jansen",
+   "aId": 128445,
+   "bId": 161398,
+   "aWins": 1,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-05-03",
+     "event": "2025-26 USA Volleyball Beach Tour - Gulf Coast Region - BeachFest National Qualifier",
+     "division": "",
+     "tid": 32578,
+     "tdId": 120659,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": true,
+     "sets": [
+      [
+       21,
+       11
+      ],
+      [
+       21,
+       15
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      9258
+     ],
+     "against": [
+      "Stella Sheeran"
+     ]
+    },
+    {
+     "date": "2026-06-19",
+     "event": "2026 Futures Tour WESTERN NATIONAL CHAMPIONSHIPS",
+     "division": "",
+     "tid": 30985,
+     "tdId": 115903,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       16,
+       21
+      ],
+      [
+       14,
+       21
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Ashley Ruschill"
+     ],
+     "against": [
+      "Nariah Johnson"
      ]
     }
    ]
@@ -7836,6 +7520,76 @@
      ],
      "against": [
       "Lucy Matuszak"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sage Illian",
+   "b": "Charlotte Jansen",
+   "aId": 91052,
+   "bId": 161398,
+   "aWins": 2,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       23,
+       21
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      9258
+     ],
+     "against": [
+      "Dreya Scherfenberg"
+     ]
+    },
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       16
+      ],
+      [
+       21,
+       17
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Sarah Cowan"
+     ],
+     "against": [
+      "Ella Buchanan"
      ]
     }
    ]
@@ -8611,6 +8365,76 @@
    ]
   },
   {
+   "a": "Simrin Adams",
+   "b": "Charlotte Jansen",
+   "aId": 25289,
+   "bId": 161398,
+   "aWins": 2,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       14
+      ],
+      [
+       21,
+       14
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      9258
+     ],
+     "against": [
+      "Sienna Castillo"
+     ]
+    },
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       11
+      ],
+      [
+       21,
+       9
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Sienna Castillo"
+     ],
+     "against": [
+      "Ella Buchanan"
+     ]
+    }
+   ]
+  },
+  {
    "a": "Sienna Castillo",
    "b": "Ella Buchanan",
    "aId": 29854,
@@ -8645,7 +8469,7 @@
       "Simrin Adams"
      ],
      "against": [
-      98124
+      "Brooke Canaday"
      ]
     },
     {
@@ -8675,7 +8499,77 @@
       "Simrin Adams"
      ],
      "against": [
-      161398
+      "Charlotte Jansen"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sienna Castillo",
+   "b": "Charlotte Jansen",
+   "aId": 29854,
+   "bId": 161398,
+   "aWins": 2,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       14
+      ],
+      [
+       21,
+       14
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      9258
+     ],
+     "against": [
+      "Simrin Adams"
+     ]
+    },
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       11
+      ],
+      [
+       21,
+       9
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Simrin Adams"
+     ],
+     "against": [
+      "Ella Buchanan"
      ]
     }
    ]
@@ -8854,76 +8748,6 @@
      ],
      "against": [
       15540
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Simrin Adams",
-   "b": "Linnaea Nielsen",
-   "aId": 25289,
-   "bId": 92803,
-   "aWins": 1,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-03-28",
-     "event": "2026 Futures Tour Spring Championship",
-     "division": "",
-     "tid": 31567,
-     "tdId": 117695,
-     "phase": "Pool",
-     "round": "Day 1: RD2 (1sts)",
-     "won": true,
-     "sets": [
-      [
-       21,
-       19
-      ],
-      [
-       21,
-       14
-      ],
-      [
-       0,
-       0
-      ]
-     ],
-     "with": [
-      "Abby King"
-     ],
-     "against": [
-      "Addison Choi"
-     ]
-    },
-    {
-     "date": "2026-05-07",
-     "event": "CIFSS Pairs Championship 2026",
-     "division": "",
-     "tid": 38462,
-     "tdId": 140958,
-     "phase": "Playoffs",
-     "round": "Division 1 Playoffs",
-     "won": false,
-     "sets": [
-      [
-       13,
-       21
-      ],
-      [
-       18,
-       21
-      ],
-      [
-       0,
-       0
-      ]
-     ],
-     "with": [
-      25856
-     ],
-     "against": [
-      "Sienna Castillo"
      ]
     }
    ]
@@ -9367,7 +9191,7 @@
       "Janie McCanna"
      ],
      "against": [
-      98124
+      "Brooke Canaday"
      ]
     },
     {
@@ -9398,6 +9222,138 @@
      ],
      "against": [
       "Haisley Flanagan"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Taylie Hansen",
+   "b": "Charlotte Jansen",
+   "aId": 99506,
+   "bId": 161398,
+   "aWins": 0,
+   "bWins": 2,
+   "games": [
+    {
+     "date": "2026-03-15",
+     "event": "2026 Futures Tour: Florida",
+     "division": "",
+     "tid": 31622,
+     "tdId": 117904,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       22,
+       24
+      ],
+      [
+       18,
+       21
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      33084
+     ],
+     "against": [
+      "Nariah Johnson"
+     ]
+    },
+    {
+     "date": "2026-03-29",
+     "event": "2026 Futures Tour Spring Championship",
+     "division": "",
+     "tid": 31567,
+     "tdId": 117695,
+     "phase": "Playoffs",
+     "round": "Day 2: Silver Playoff",
+     "won": false,
+     "sets": [
+      [
+       13,
+       21
+      ],
+      [
+       21,
+       15
+      ],
+      [
+       13,
+       15
+      ]
+     ],
+     "with": [
+      "Kendyl Maxwell"
+     ],
+     "against": [
+      9258
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Thalia Lindahl",
+   "b": "Charlotte Jansen",
+   "aId": 44267,
+   "bId": 161398,
+   "aWins": 2,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-11-23",
+     "event": "Main Beach",
+     "division": "Main Beach",
+     "tid": 193,
+     "tdId": 619,
+     "phase": "Playoff",
+     "round": "-1",
+     "won": true,
+     "sets": [
+      [
+       21,
+       12
+      ]
+     ],
+     "with": [
+      "Lauren Leach"
+     ],
+     "against": [
+      331350
+     ]
+    },
+    {
+     "date": "2026-03-28",
+     "event": "2026 Futures Tour Spring Championship",
+     "division": "",
+     "tid": 31567,
+     "tdId": 117695,
+     "phase": "Pool",
+     "round": "Day 1: RD1",
+     "won": true,
+     "sets": [
+      [
+       21,
+       16
+      ],
+      [
+       21,
+       10
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      153620
+     ],
+     "against": [
+      9258
      ]
     }
    ]
@@ -9535,84 +9491,30 @@
    ]
   },
   {
-   "a": "Lerin Rosenthal",
-   "b": "Abigail Moffett",
-   "aId": 5973,
-   "bId": 9258,
+   "a": "Zoe Znider",
+   "b": "Olivia Marroquin",
+   "aId": 25288,
+   "bId": 96236,
    "aWins": 1,
    "bWins": 1,
    "games": [
     {
-     "date": "2025-11-16",
-     "event": "Newland",
-     "division": "Newland",
-     "tid": 190,
-     "tdId": 608,
-     "phase": "Playoff",
-     "round": "-1",
+     "date": "2026-03-28",
+     "event": "2026 Futures Tour Spring Championship",
+     "division": "",
+     "tid": 31567,
+     "tdId": 117695,
+     "phase": "Pool",
+     "round": "Day 1: RD1",
      "won": false,
      "sets": [
       [
-       20,
-       22
-      ]
-     ],
-     "with": [
-      92284
-     ],
-     "against": [
-      "Addison Choi"
-     ]
-    },
-    {
-     "date": "2026-03-15",
-     "event": "AAU Super Regional",
-     "division": "",
-     "tid": 32995,
-     "tdId": 121820,
-     "phase": "Playoffs",
-     "round": "Gold Playoffs",
-     "won": true,
-     "sets": [
-      [
-       28,
-       11
-      ]
-     ],
-     "with": [
-      "Sienna Castillo"
-     ],
-     "against": [
-      94909
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Abigail Moffett",
-   "b": "Sienna Castillo",
-   "aId": 9258,
-   "bId": 29854,
-   "aWins": 0,
-   "bWins": 2,
-   "games": [
-    {
-     "date": "2026-01-30",
-     "event": "2026 USA Volleyball U18 Beach National Team Trials",
-     "division": "",
-     "tid": 34180,
-     "tdId": 125823,
-     "phase": "Playoffs",
-     "round": "Playoffs",
-     "won": false,
-     "sets": [
-      [
-       14,
+       18,
        21
       ],
       [
-       14,
-       21
+       20,
+       22
       ],
       [
        0,
@@ -9620,32 +9522,32 @@
       ]
      ],
      "with": [
-      161398
+      69116
      ],
      "against": [
-      "Simrin Adams"
+      "Sienna Castillo"
      ]
     },
     {
-     "date": "2026-03-15",
-     "event": "AAU Super Regional",
-     "division": "",
-     "tid": 32995,
-     "tdId": 121820,
-     "phase": "Playoffs",
-     "round": "Gold Playoffs",
-     "won": false,
+     "date": "2026-05-25",
+     "event": "Cal Cup Tour Stop",
+     "division": "Hermosa Pier",
+     "tid": 4627,
+     "tdId": 16381,
+     "phase": "Pool",
+     "round": "",
+     "won": true,
      "sets": [
       [
-       11,
-       28
+       28,
+       14
       ]
      ],
      "with": [
-      "Lerin Rosenthal"
+      90029061
      ],
      "against": [
-      94909
+      69116
      ]
     }
    ]
@@ -10055,60 +9957,6 @@
    ]
   },
   {
-   "a": "Addison Choi",
-   "b": "Abigail Moffett",
-   "aId": 5160,
-   "bId": 9258,
-   "aWins": 1,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2025-11-16",
-     "event": "Newland",
-     "division": "Newland",
-     "tid": 190,
-     "tdId": 608,
-     "phase": "Playoff",
-     "round": "-1",
-     "won": false,
-     "sets": [
-      [
-       20,
-       22
-      ]
-     ],
-     "with": [
-      92284
-     ],
-     "against": [
-      "Lerin Rosenthal"
-     ]
-    },
-    {
-     "date": "2026-03-01",
-     "event": "California IBVL Winter Series Championships - p1440 Crown Series",
-     "division": "",
-     "tid": 32939,
-     "tdId": 121642,
-     "phase": "Playoffs",
-     "round": "Playoffs",
-     "won": true,
-     "sets": [
-      [
-       21,
-       15
-      ]
-     ],
-     "with": [
-      96236
-     ],
-     "against": [
-      56544
-     ]
-    }
-   ]
-  },
-  {
    "a": "Paloma Smith",
    "b": "Ryan Anderson",
    "aId": 17491,
@@ -10228,76 +10076,6 @@
      ],
      "against": [
       7094
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Abigail Moffett",
-   "b": "Madison Gillinger",
-   "aId": 9258,
-   "bId": 99596,
-   "aWins": 1,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2025-11-09",
-     "event": "AVP Juniors West Coast Championships 2025",
-     "division": "",
-     "tid": 25578,
-     "tdId": 97149,
-     "phase": "Playoffs",
-     "round": "Gold Playoffs",
-     "won": true,
-     "sets": [
-      [
-       21,
-       12
-      ],
-      [
-       21,
-       13
-      ],
-      [
-       0,
-       0
-      ]
-     ],
-     "with": [
-      "Eden Cisneros"
-     ],
-     "against": [
-      124610
-     ]
-    },
-    {
-     "date": "2026-01-30",
-     "event": "2026 USA Volleyball U18 Beach National Team Trials",
-     "division": "",
-     "tid": 34180,
-     "tdId": 125823,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": false,
-     "sets": [
-      [
-       23,
-       25
-      ],
-      [
-       21,
-       19
-      ],
-      [
-       12,
-       15
-      ]
-     ],
-     "with": [
-      161398
-     ],
-     "against": [
-      94909
      ]
     }
    ]
@@ -10492,6 +10270,68 @@
      ],
      "against": [
       "Allyn Hilt"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Nariah Johnson",
+   "b": "Brooke Canaday",
+   "aId": 92193,
+   "bId": 98124,
+   "aWins": 2,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       16,
+       21
+      ],
+      [
+       21,
+       15
+      ],
+      [
+       15,
+       7
+      ]
+     ],
+     "with": [
+      "Jordyn Wilson"
+     ],
+     "against": [
+      "Ella Buchanan"
+     ]
+    },
+    {
+     "date": "2026-03-08",
+     "event": "Dockweiler",
+     "division": "Dockweiler",
+     "tid": 4579,
+     "tdId": 16227,
+     "phase": "Playoff",
+     "round": "3",
+     "won": true,
+     "sets": [
+      [
+       21,
+       19
+      ]
+     ],
+     "with": [
+      "Charlotte Jansen"
+     ],
+     "against": [
+      "Ella Buchanan"
      ]
     }
    ]
@@ -11659,12 +11499,12 @@
    ]
   },
   {
-   "a": "Tristan Ana Del Riego",
-   "b": "Brooke Proctor",
-   "aId": 66728,
-   "bId": 91896,
-   "aWins": 0,
-   "bWins": 1,
+   "a": "Brooke Proctor",
+   "b": "Brooke Canaday",
+   "aId": 91896,
+   "bId": 98124,
+   "aWins": 1,
+   "bWins": 0,
    "games": [
     {
      "date": "2026-07-26",
@@ -11674,15 +11514,15 @@
      "tdId": 126057,
      "phase": "Playoffs",
      "round": "Gold",
-     "won": false,
+     "won": true,
      "sets": [
       [
-       18,
-       21
+       21,
+       14
       ],
       [
-       17,
-       21
+       21,
+       13
       ],
       [
        0,
@@ -11693,18 +11533,18 @@
       "Reagan Carlin"
      ],
      "against": [
-      "Sienna Mattoon"
+      163607
      ]
     }
    ]
   },
   {
-   "a": "Tristan Ana Del Riego",
-   "b": "Reagan Carlin",
-   "aId": 66728,
-   "bId": 92974,
-   "aWins": 0,
-   "bWins": 1,
+   "a": "Reagan Carlin",
+   "b": "Brooke Canaday",
+   "aId": 92974,
+   "bId": 98124,
+   "aWins": 1,
+   "bWins": 0,
    "games": [
     {
      "date": "2026-07-26",
@@ -11714,15 +11554,15 @@
      "tdId": 126057,
      "phase": "Playoffs",
      "round": "Gold",
-     "won": false,
+     "won": true,
      "sets": [
       [
-       18,
-       21
+       21,
+       14
       ],
       [
-       17,
-       21
+       21,
+       13
       ],
       [
        0,
@@ -11733,7 +11573,47 @@
       "Brooke Proctor"
      ],
      "against": [
-      "Sienna Mattoon"
+      163607
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Milana Rivera",
+   "b": "Sadie Harris",
+   "aId": 60877,
+   "bId": 94909,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-24",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "",
+     "tid": 34243,
+     "tdId": 126056,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": true,
+     "sets": [
+      [
+       21,
+       18
+      ],
+      [
+       21,
+       16
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      64782
+     ],
+     "against": [
+      29887
      ]
     }
    ]
@@ -12134,6 +12014,86 @@
      ],
      "against": [
       24330
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Georgeann Lee",
+   "b": "Olivia Marroquin",
+   "aId": 61785,
+   "bId": 96236,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-26",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "",
+     "tid": 34243,
+     "tdId": 126055,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": true,
+     "sets": [
+      [
+       21,
+       10
+      ],
+      [
+       21,
+       14
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Sadie Stafford"
+     ],
+     "against": [
+      124610
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Olivia Marroquin",
+   "b": "Sadie Stafford",
+   "aId": 96236,
+   "bId": 147394,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-26",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "",
+     "tid": 34243,
+     "tdId": 126055,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": false,
+     "sets": [
+      [
+       10,
+       21
+      ],
+      [
+       14,
+       21
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Georgeann Lee"
+     ],
+     "against": [
+      124610
      ]
     }
    ]
@@ -13413,7 +13373,7 @@
       "Milaniakai Padilla"
      ],
      "against": [
-      "Linnaea Nielsen"
+      92803
      ]
     }
    ]
@@ -13453,47 +13413,7 @@
       "Nariah Johnson"
      ],
      "against": [
-      "Linnaea Nielsen"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Linnaea Nielsen",
-   "b": "Milaniakai Padilla",
-   "aId": 92803,
-   "bId": 95165,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-07-26",
-     "event": "AVP Juniors National Championships 2026",
-     "division": "",
-     "tid": 34243,
-     "tdId": 126055,
-     "phase": "Playoffs",
-     "round": "Gold",
-     "won": false,
-     "sets": [
-      [
-       21,
-       23
-      ],
-      [
-       14,
-       21
-      ],
-      [
-       0,
-       0
-      ]
-     ],
-     "with": [
-      "Nariah Johnson"
-     ],
-     "against": [
-      "Marley Robinson"
+      92803
      ]
     }
    ]
@@ -13860,6 +13780,46 @@
   },
   {
    "a": "Milana Rivera",
+   "b": "Brooke Canaday",
+   "aId": 60877,
+   "bId": 98124,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-24",
+     "event": "AVP Juniors National Championships 2026",
+     "division": "",
+     "tid": 34243,
+     "tdId": 126056,
+     "phase": "Playoffs",
+     "round": "Gold",
+     "won": true,
+     "sets": [
+      [
+       21,
+       18
+      ],
+      [
+       21,
+       15
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      29887
+     ],
+     "against": [
+      "Ella Buchanan"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Milana Rivera",
    "b": "Ella Buchanan",
    "aId": 60877,
    "bId": 98125,
@@ -13893,7 +13853,7 @@
       29887
      ],
      "against": [
-      98124
+      "Brooke Canaday"
      ]
     }
    ]
@@ -13980,9 +13940,9 @@
   },
   {
    "a": "Summer Tukua",
-   "b": "Tristan Ana Del Riego",
+   "b": "Charlotte Jansen",
    "aId": 53120,
-   "bId": 66728,
+   "bId": 161398,
    "aWins": 1,
    "bWins": 0,
    "games": [
@@ -14013,18 +13973,18 @@
       "Ashlynn Proctor"
      ],
      "against": [
-      161398
+      66728
      ]
     }
    ]
   },
   {
-   "a": "Tristan Ana Del Riego",
-   "b": "Ashlynn Proctor",
-   "aId": 66728,
-   "bId": 91897,
-   "aWins": 0,
-   "bWins": 1,
+   "a": "Ashlynn Proctor",
+   "b": "Charlotte Jansen",
+   "aId": 91897,
+   "bId": 161398,
+   "aWins": 1,
+   "bWins": 0,
    "games": [
     {
      "date": "2026-07-18",
@@ -14034,15 +13994,15 @@
      "tdId": 117394,
      "phase": "Playoffs",
      "round": "Gold Bracket",
-     "won": false,
+     "won": true,
      "sets": [
       [
-       12,
-       21
+       21,
+       12
       ],
       [
-       20,
-       22
+       22,
+       20
       ],
       [
        0,
@@ -14053,7 +14013,7 @@
       "Summer Tukua"
      ],
      "against": [
-      161398
+      66728
      ]
     }
    ]
@@ -14220,6 +14180,46 @@
   },
   {
    "a": "Summer Tukua",
+   "b": "Brooke Canaday",
+   "aId": 53120,
+   "bId": 98124,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-18",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships",
+     "division": "",
+     "tid": 31483,
+     "tdId": 117394,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": true,
+     "sets": [
+      [
+       21,
+       12
+      ],
+      [
+       21,
+       23
+      ],
+      [
+       19,
+       17
+      ]
+     ],
+     "with": [
+      "Ashlynn Proctor"
+     ],
+     "against": [
+      "Ella Buchanan"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Summer Tukua",
    "b": "Ella Buchanan",
    "aId": 53120,
    "bId": 98125,
@@ -14253,7 +14253,47 @@
       "Ashlynn Proctor"
      ],
      "against": [
-      98124
+      "Brooke Canaday"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Ashlynn Proctor",
+   "b": "Brooke Canaday",
+   "aId": 91897,
+   "bId": 98124,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-18",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships",
+     "division": "",
+     "tid": 31483,
+     "tdId": 117394,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": true,
+     "sets": [
+      [
+       21,
+       12
+      ],
+      [
+       21,
+       23
+      ],
+      [
+       19,
+       17
+      ]
+     ],
+     "with": [
+      "Summer Tukua"
+     ],
+     "against": [
+      "Ella Buchanan"
      ]
     }
    ]
@@ -14293,7 +14333,7 @@
       "Summer Tukua"
      ],
      "against": [
-      98124
+      "Brooke Canaday"
      ]
     }
    ]
@@ -14459,30 +14499,30 @@
    ]
   },
   {
-   "a": "Sienna Mattoon",
+   "a": "Brooke Canaday",
    "b": "Ashley Ruschill",
-   "aId": 48567,
+   "aId": 98124,
    "bId": 105245,
    "aWins": 0,
    "bWins": 1,
    "games": [
     {
-     "date": "2026-07-16",
+     "date": "2026-07-17",
      "event": "33rd AAU Hermosa Beach National Pairs Championships",
      "division": "",
      "tid": 31483,
-     "tdId": 117395,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
+     "tdId": 117394,
+     "phase": "Pool",
+     "round": "Power Pools",
      "won": false,
      "sets": [
       [
-       18,
+       17,
        21
       ],
       [
-       22,
-       24
+       17,
+       21
       ],
       [
        0,
@@ -14490,10 +14530,10 @@
       ]
      ],
      "with": [
-      105637
+      "Cayden Dorger"
      ],
      "against": [
-      65102
+      "Ella Buchanan"
      ]
     }
    ]
@@ -14533,7 +14573,47 @@
       "Cayden Dorger"
      ],
      "against": [
-      98124
+      "Brooke Canaday"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Brooke Canaday",
+   "b": "Cayden Dorger",
+   "aId": 98124,
+   "bId": 128445,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-17",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships",
+     "division": "",
+     "tid": 31483,
+     "tdId": 117394,
+     "phase": "Pool",
+     "round": "Power Pools",
+     "won": false,
+     "sets": [
+      [
+       17,
+       21
+      ],
+      [
+       17,
+       21
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Ashley Ruschill"
+     ],
+     "against": [
+      "Ella Buchanan"
      ]
     }
    ]
@@ -14573,7 +14653,7 @@
       "Ashley Ruschill"
      ],
      "against": [
-      98124
+      "Brooke Canaday"
      ]
     }
    ]
@@ -14740,6 +14820,46 @@
   },
   {
    "a": "Stella Sheeran",
+   "b": "Brooke Canaday",
+   "aId": 42463,
+   "bId": 98124,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-07-18",
+     "event": "33rd AAU Hermosa Beach National Pairs Championships",
+     "division": "",
+     "tid": 31483,
+     "tdId": 117394,
+     "phase": "Playoffs",
+     "round": "Gold Bracket",
+     "won": false,
+     "sets": [
+      [
+       18,
+       21
+      ],
+      [
+       16,
+       21
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Ella Buchanan"
+     ],
+     "against": [
+      95433
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Stella Sheeran",
    "b": "Ella Buchanan",
    "aId": 42463,
    "bId": 98125,
@@ -14770,7 +14890,7 @@
       ]
      ],
      "with": [
-      98124
+      "Brooke Canaday"
      ],
      "against": [
       95433
@@ -15083,86 +15203,6 @@
    ]
   },
   {
-   "a": "Abigail Moffett",
-   "b": "Sienna Mattoon",
-   "aId": 9258,
-   "bId": 48567,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-07-09",
-     "event": "2026 BVCA Individual Pairs National Championship",
-     "division": "",
-     "tid": 38087,
-     "tdId": 139560,
-     "phase": "Playoffs",
-     "round": "Championship Bracket",
-     "won": false,
-     "sets": [
-      [
-       21,
-       17
-      ],
-      [
-       15,
-       21
-      ],
-      [
-       11,
-       15
-      ]
-     ],
-     "with": [
-      58303
-     ],
-     "against": [
-      "Tristan Ana Del Riego"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Abigail Moffett",
-   "b": "Tristan Ana Del Riego",
-   "aId": 9258,
-   "bId": 66728,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-07-09",
-     "event": "2026 BVCA Individual Pairs National Championship",
-     "division": "",
-     "tid": 38087,
-     "tdId": 139560,
-     "phase": "Playoffs",
-     "round": "Championship Bracket",
-     "won": false,
-     "sets": [
-      [
-       21,
-       17
-      ],
-      [
-       15,
-       21
-      ],
-      [
-       11,
-       15
-      ]
-     ],
-     "with": [
-      58303
-     ],
-     "against": [
-      "Sienna Mattoon"
-     ]
-    }
-   ]
-  },
-  {
    "a": "Olivia Herron",
    "b": "Georgeann Lee",
    "aId": 28688,
@@ -15238,166 +15278,6 @@
      ],
      "against": [
       23369
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Lucy Matuszak",
-   "b": "Sienna Mattoon",
-   "aId": 22544,
-   "bId": 48567,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-07-09",
-     "event": "2026 BVCA Individual Pairs National Championship",
-     "division": "",
-     "tid": 38087,
-     "tdId": 139560,
-     "phase": "Playoffs",
-     "round": "Championship Bracket",
-     "won": true,
-     "sets": [
-      [
-       21,
-       19
-      ],
-      [
-       20,
-       22
-      ],
-      [
-       15,
-       12
-      ]
-     ],
-     "with": [
-      "Tristan Ana Del Riego"
-     ],
-     "against": [
-      "Sarah Cowan"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Sienna Mattoon",
-   "b": "Sarah Cowan",
-   "aId": 48567,
-   "bId": 84725,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-07-09",
-     "event": "2026 BVCA Individual Pairs National Championship",
-     "division": "",
-     "tid": 38087,
-     "tdId": 139560,
-     "phase": "Playoffs",
-     "round": "Championship Bracket",
-     "won": false,
-     "sets": [
-      [
-       19,
-       21
-      ],
-      [
-       22,
-       20
-      ],
-      [
-       12,
-       15
-      ]
-     ],
-     "with": [
-      "Tristan Ana Del Riego"
-     ],
-     "against": [
-      "Lucy Matuszak"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Lucy Matuszak",
-   "b": "Tristan Ana Del Riego",
-   "aId": 22544,
-   "bId": 66728,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-07-09",
-     "event": "2026 BVCA Individual Pairs National Championship",
-     "division": "",
-     "tid": 38087,
-     "tdId": 139560,
-     "phase": "Playoffs",
-     "round": "Championship Bracket",
-     "won": true,
-     "sets": [
-      [
-       21,
-       19
-      ],
-      [
-       20,
-       22
-      ],
-      [
-       15,
-       12
-      ]
-     ],
-     "with": [
-      "Sienna Mattoon"
-     ],
-     "against": [
-      "Sarah Cowan"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Tristan Ana Del Riego",
-   "b": "Sarah Cowan",
-   "aId": 66728,
-   "bId": 84725,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-07-09",
-     "event": "2026 BVCA Individual Pairs National Championship",
-     "division": "",
-     "tid": 38087,
-     "tdId": 139560,
-     "phase": "Playoffs",
-     "round": "Championship Bracket",
-     "won": false,
-     "sets": [
-      [
-       19,
-       21
-      ],
-      [
-       22,
-       20
-      ],
-      [
-       12,
-       15
-      ]
-     ],
-     "with": [
-      "Sienna Mattoon"
-     ],
-     "against": [
-      "Lucy Matuszak"
      ]
     }
    ]
@@ -15594,10 +15474,50 @@
       ]
      ],
      "with": [
-      94909
+      "Sadie Harris"
      ],
      "against": [
       "Reagan Carlin"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Ashlynn Proctor",
+   "b": "Sadie Harris",
+   "aId": 91897,
+   "bId": 94909,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-07-09",
+     "event": "2026 BVCA Individual Pairs National Championship",
+     "division": "",
+     "tid": 38087,
+     "tdId": 139560,
+     "phase": "Playoffs",
+     "round": "Championship Bracket",
+     "won": true,
+     "sets": [
+      [
+       21,
+       17
+      ],
+      [
+       21,
+       16
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Madison Gillinger"
+     ],
+     "against": [
+      "Nariah Johnson"
      ]
     }
    ]
@@ -15634,7 +15554,7 @@
       ]
      ],
      "with": [
-      94909
+      "Sadie Harris"
      ],
      "against": [
       "Nariah Johnson"
@@ -16357,7 +16277,47 @@
       "Sage Illian"
      ],
      "against": [
-      161398
+      "Charlotte Jansen"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sarah Cowan",
+   "b": "Charlotte Jansen",
+   "aId": 84725,
+   "bId": 161398,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       16
+      ],
+      [
+       21,
+       17
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Sage Illian"
+     ],
+     "against": [
+      "Ella Buchanan"
      ]
     }
    ]
@@ -16397,7 +16357,7 @@
       "Sarah Cowan"
      ],
      "against": [
-      161398
+      "Charlotte Jansen"
      ]
     }
    ]
@@ -17003,6 +16963,46 @@
    ]
   },
   {
+   "a": "Nariah Johnson",
+   "b": "Charlotte Jansen",
+   "aId": 92193,
+   "bId": 161398,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-06-16",
+     "event": "2026 USA Volleyball Youth Olympic Games Trials",
+     "division": "",
+     "tid": 36451,
+     "tdId": 133267,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       15
+      ],
+      [
+       21,
+       19
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Sadie Stafford"
+     ],
+     "against": [
+      "Ella Buchanan"
+     ]
+    }
+   ]
+  },
+  {
    "a": "Ella Buchanan",
    "b": "Sadie Stafford",
    "aId": 98125,
@@ -17037,7 +17037,7 @@
       "Nariah Johnson"
      ],
      "against": [
-      161398
+      "Charlotte Jansen"
      ]
     }
    ]
@@ -17229,18 +17229,18 @@
       25856
      ],
      "against": [
-      "Linnaea Nielsen"
+      92803
      ]
     }
    ]
   },
   {
-   "a": "Abigail Moffett",
-   "b": "Cayden Dorger",
-   "aId": 9258,
-   "bId": 128445,
-   "aWins": 0,
-   "bWins": 1,
+   "a": "Stella Sheeran",
+   "b": "Charlotte Jansen",
+   "aId": 42463,
+   "bId": 161398,
+   "aWins": 1,
+   "bWins": 0,
    "games": [
     {
      "date": "2026-05-03",
@@ -17250,15 +17250,15 @@
      "tdId": 120659,
      "phase": "Playoffs",
      "round": "Gold Bracket",
-     "won": false,
+     "won": true,
      "sets": [
       [
-       11,
-       21
+       21,
+       11
       ],
       [
-       15,
-       21
+       21,
+       15
       ],
       [
        0,
@@ -17266,10 +17266,10 @@
       ]
      ],
      "with": [
-      161398
+      9258
      ],
      "against": [
-      "Stella Sheeran"
+      "Cayden Dorger"
      ]
     }
    ]
@@ -19165,58 +19165,18 @@
       "Simrin Adams"
      ],
      "against": [
-      "Linnaea Nielsen"
+      92803
      ]
     }
    ]
   },
   {
-   "a": "Abby King",
-   "b": "Linnaea Nielsen",
-   "aId": 26871,
-   "bId": 92803,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-03-28",
-     "event": "2026 Futures Tour Spring Championship",
-     "division": "",
-     "tid": 31567,
-     "tdId": 117695,
-     "phase": "Pool",
-     "round": "Day 1: RD2 (1sts)",
-     "won": true,
-     "sets": [
-      [
-       21,
-       19
-      ],
-      [
-       21,
-       14
-      ],
-      [
-       0,
-       0
-      ]
-     ],
-     "with": [
-      "Simrin Adams"
-     ],
-     "against": [
-      "Addison Choi"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Abigail Moffett",
-   "b": "Kendyl Maxwell",
-   "aId": 9258,
-   "bId": 23641,
-   "aWins": 1,
-   "bWins": 0,
+   "a": "Kendyl Maxwell",
+   "b": "Charlotte Jansen",
+   "aId": 23641,
+   "bId": 161398,
+   "aWins": 0,
+   "bWins": 1,
    "games": [
     {
      "date": "2026-03-29",
@@ -19226,106 +19186,26 @@
      "tdId": 117695,
      "phase": "Playoffs",
      "round": "Day 2: Silver Playoff",
-     "won": true,
+     "won": false,
      "sets": [
       [
-       21,
-       13
-      ],
-      [
-       15,
+       13,
        21
-      ],
-      [
-       15,
-       13
-      ]
-     ],
-     "with": [
-      "Taylie Hansen"
-     ],
-     "against": [
-      161398
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Abigail Moffett",
-   "b": "Taylie Hansen",
-   "aId": 9258,
-   "bId": 99506,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-03-29",
-     "event": "2026 Futures Tour Spring Championship",
-     "division": "",
-     "tid": 31567,
-     "tdId": 117695,
-     "phase": "Playoffs",
-     "round": "Day 2: Silver Playoff",
-     "won": true,
-     "sets": [
-      [
-       21,
-       13
-      ],
-      [
-       15,
-       21
-      ],
-      [
-       15,
-       13
-      ]
-     ],
-     "with": [
-      "Kendyl Maxwell"
-     ],
-     "against": [
-      161398
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Linnaea Nielsen",
-   "b": "Sadie Stafford",
-   "aId": 92803,
-   "bId": 147394,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-03-28",
-     "event": "2026 Futures Tour Spring Championship",
-     "division": "",
-     "tid": 31567,
-     "tdId": 117695,
-     "phase": "Pool",
-     "round": "Day 1: RD1",
-     "won": true,
-     "sets": [
-      [
-       21,
-       19
       ],
       [
        21,
        15
       ],
       [
-       0,
-       0
+       13,
+       15
       ]
      ],
      "with": [
-      94563
+      "Taylie Hansen"
      ],
      "against": [
-      "Addison Choi"
+      9258
      ]
     }
    ]
@@ -19651,6 +19531,86 @@
    ]
   },
   {
+   "a": "Ashlynn Proctor",
+   "b": "Olivia Marroquin",
+   "aId": 91897,
+   "bId": 96236,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-03-29",
+     "event": "2026 Futures Tour Spring Championship",
+     "division": "",
+     "tid": 31567,
+     "tdId": 117695,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoff",
+     "won": true,
+     "sets": [
+      [
+       21,
+       12
+      ],
+      [
+       14,
+       21
+      ],
+      [
+       15,
+       8
+      ]
+     ],
+     "with": [
+      "Nariah Johnson"
+     ],
+     "against": [
+      69116
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Nariah Johnson",
+   "b": "Olivia Marroquin",
+   "aId": 92193,
+   "bId": 96236,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-03-29",
+     "event": "2026 Futures Tour Spring Championship",
+     "division": "",
+     "tid": 31567,
+     "tdId": 117695,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoff",
+     "won": true,
+     "sets": [
+      [
+       21,
+       12
+      ],
+      [
+       14,
+       21
+      ],
+      [
+       15,
+       8
+      ]
+     ],
+     "with": [
+      "Ashlynn Proctor"
+     ],
+     "against": [
+      69116
+     ]
+    }
+   ]
+  },
+  {
    "a": "Allyn Hilt",
    "b": "Bristyn Burness",
    "aId": 40933,
@@ -19686,46 +19646,6 @@
      ],
      "against": [
       56789
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Sienna Mattoon",
-   "b": "Tristan Ana Del Riego",
-   "aId": 48567,
-   "bId": 66728,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2026-03-28",
-     "event": "2026 Futures Tour Spring Championship",
-     "division": "",
-     "tid": 31567,
-     "tdId": 117696,
-     "phase": "Pool",
-     "round": "Day 1: RD2 (1sts)",
-     "won": false,
-     "sets": [
-      [
-       16,
-       21
-      ],
-      [
-       21,
-       18
-      ],
-      [
-       13,
-       15
-      ]
-     ],
-     "with": [
-      129730
-     ],
-     "against": [
-      65102
      ]
     }
    ]
@@ -19771,10 +19691,114 @@
    ]
   },
   {
+   "a": "Sienna Castillo",
+   "b": "Olivia Marroquin",
+   "aId": 29854,
+   "bId": 96236,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-03-28",
+     "event": "2026 Futures Tour Spring Championship",
+     "division": "",
+     "tid": 31567,
+     "tdId": 117695,
+     "phase": "Pool",
+     "round": "Day 1: RD1",
+     "won": false,
+     "sets": [
+      [
+       18,
+       21
+      ],
+      [
+       20,
+       22
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      69116
+     ],
+     "against": [
+      "Zoe Znider"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lerin Rosenthal",
+   "b": "Sadie Harris",
+   "aId": 5973,
+   "bId": 94909,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-03-15",
+     "event": "AAU Super Regional",
+     "division": "",
+     "tid": 32995,
+     "tdId": 121820,
+     "phase": "Playoffs",
+     "round": "Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       28,
+       11
+      ]
+     ],
+     "with": [
+      "Sienna Castillo"
+     ],
+     "against": [
+      9258
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sienna Castillo",
+   "b": "Sadie Harris",
+   "aId": 29854,
+   "bId": 94909,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-03-15",
+     "event": "AAU Super Regional",
+     "division": "",
+     "tid": 32995,
+     "tdId": 121820,
+     "phase": "Playoffs",
+     "round": "Gold Playoffs",
+     "won": true,
+     "sets": [
+      [
+       28,
+       11
+      ]
+     ],
+     "with": [
+      "Lerin Rosenthal"
+     ],
+     "against": [
+      9258
+     ]
+    }
+   ]
+  },
+  {
    "a": "Lauren Leach",
-   "b": "Abigail Moffett",
+   "b": "Sadie Harris",
    "aId": 8426,
-   "bId": 9258,
+   "bId": 94909,
    "aWins": 1,
    "bWins": 0,
    "games": [
@@ -19805,18 +19829,18 @@
       "Olivia Herron"
      ],
      "against": [
-      94909
+      9258
      ]
     }
    ]
   },
   {
-   "a": "Abigail Moffett",
-   "b": "Olivia Herron",
-   "aId": 9258,
-   "bId": 28688,
-   "aWins": 0,
-   "bWins": 1,
+   "a": "Olivia Herron",
+   "b": "Sadie Harris",
+   "aId": 28688,
+   "bId": 94909,
+   "aWins": 1,
+   "bWins": 0,
    "games": [
     {
      "date": "2026-03-15",
@@ -19826,15 +19850,15 @@
      "tdId": 121820,
      "phase": "Pool",
      "round": "Pools",
-     "won": false,
+     "won": true,
      "sets": [
       [
-       14,
-       21
+       21,
+       14
       ],
       [
-       11,
-       21
+       21,
+       11
       ],
       [
        0,
@@ -19845,7 +19869,7 @@
       "Lauren Leach"
      ],
      "against": [
-      94909
+      9258
      ]
     }
    ]
@@ -20045,7 +20069,7 @@
       33084
      ],
      "against": [
-      161398
+      "Charlotte Jansen"
      ]
     }
    ]
@@ -20085,7 +20109,47 @@
       "Sadie Stafford"
      ],
      "against": [
-      161398
+      "Charlotte Jansen"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Brooklyn Rosales",
+   "b": "Charlotte Jansen",
+   "aId": 59411,
+   "bId": 161398,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-03-14",
+     "event": "2026 Futures Tour: Florida",
+     "division": "",
+     "tid": 31622,
+     "tdId": 117904,
+     "phase": "Pool",
+     "round": "Day 1: RD2 (1sts)",
+     "won": false,
+     "sets": [
+      [
+       21,
+       13
+      ],
+      [
+       15,
+       21
+      ],
+      [
+       11,
+       15
+      ]
+     ],
+     "with": [
+      "Sadie Stafford"
+     ],
+     "against": [
+      "Nariah Johnson"
      ]
     }
    ]
@@ -20915,38 +20979,6 @@
    ]
   },
   {
-   "a": "Abigail Moffett",
-   "b": "Georgeann Lee",
-   "aId": 9258,
-   "bId": 61785,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-02-01",
-     "event": "Girls Beach High School Pre-Season Tournament",
-     "division": "",
-     "tid": 32392,
-     "tdId": 121505,
-     "phase": "Playoffs",
-     "round": "Gold Bracket",
-     "won": true,
-     "sets": [
-      [
-       28,
-       23
-      ]
-     ],
-     "with": [
-      "Addison Choi"
-     ],
-     "against": [
-      "Sadie Stafford"
-     ]
-    }
-   ]
-  },
-  {
    "a": "Paloma Smith",
    "b": "Ashley Ruschill",
    "aId": 17491,
@@ -21011,10 +21043,90 @@
    ]
   },
   {
+   "a": "Sadie Harris",
+   "b": "Charlotte Jansen",
+   "aId": 94909,
+   "bId": 161398,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       25,
+       23
+      ],
+      [
+       19,
+       21
+      ],
+      [
+       15,
+       12
+      ]
+     ],
+     "with": [
+      9258
+     ],
+     "against": [
+      "Madison Gillinger"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Madison Gillinger",
+   "b": "Charlotte Jansen",
+   "aId": 99596,
+   "bId": 161398,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       25,
+       23
+      ],
+      [
+       19,
+       21
+      ],
+      [
+       15,
+       12
+      ]
+     ],
+     "with": [
+      9258
+     ],
+     "against": [
+      "Sadie Harris"
+     ]
+    }
+   ]
+  },
+  {
    "a": "Dreya Scherfenberg",
-   "b": "Abigail Moffett",
+   "b": "Charlotte Jansen",
    "aId": 2048,
-   "bId": 9258,
+   "bId": 161398,
    "aWins": 1,
    "bWins": 0,
    "games": [
@@ -21042,7 +21154,7 @@
       ]
      ],
      "with": [
-      161398
+      9258
      ],
      "against": [
       "Sage Illian"
@@ -21051,12 +21163,12 @@
    ]
   },
   {
-   "a": "Abigail Moffett",
-   "b": "Sage Illian",
-   "aId": 9258,
-   "bId": 91052,
-   "aWins": 0,
-   "bWins": 1,
+   "a": "Lauren Leach",
+   "b": "Brooke Canaday",
+   "aId": 8426,
+   "bId": 98124,
+   "aWins": 1,
+   "bWins": 0,
    "games": [
     {
      "date": "2026-01-30",
@@ -21066,15 +21178,15 @@
      "tdId": 125823,
      "phase": "Pool",
      "round": "Pools",
-     "won": false,
+     "won": true,
      "sets": [
       [
-       17,
-       21
+       21,
+       14
       ],
       [
        21,
-       23
+       18
       ],
       [
        0,
@@ -21082,21 +21194,21 @@
       ]
      ],
      "with": [
-      161398
+      "Janie McCanna"
      ],
      "against": [
-      "Dreya Scherfenberg"
+      "Ella Buchanan"
      ]
     }
    ]
   },
   {
-   "a": "Abigail Moffett",
-   "b": "Simrin Adams",
-   "aId": 9258,
-   "bId": 25289,
-   "aWins": 0,
-   "bWins": 1,
+   "a": "Janie McCanna",
+   "b": "Brooke Canaday",
+   "aId": 24515,
+   "bId": 98124,
+   "aWins": 1,
+   "bWins": 0,
    "games": [
     {
      "date": "2026-01-30",
@@ -21104,17 +21216,17 @@
      "division": "",
      "tid": 34180,
      "tdId": 125823,
-     "phase": "Playoffs",
-     "round": "Playoffs",
-     "won": false,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
      "sets": [
       [
-       14,
-       21
+       21,
+       14
       ],
       [
-       14,
-       21
+       21,
+       18
       ],
       [
        0,
@@ -21122,10 +21234,10 @@
       ]
      ],
      "with": [
-      161398
+      "Lauren Leach"
      ],
      "against": [
-      "Sienna Castillo"
+      "Ella Buchanan"
      ]
     }
    ]
@@ -21165,7 +21277,7 @@
       "Lauren Leach"
      ],
      "against": [
-      98124
+      "Brooke Canaday"
      ]
     }
    ]
@@ -21212,6 +21324,46 @@
   },
   {
    "a": "Dreya Scherfenberg",
+   "b": "Sadie Harris",
+   "aId": 2048,
+   "bId": 94909,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       17,
+       21
+      ],
+      [
+       21,
+       19
+      ],
+      [
+       15,
+       8
+      ]
+     ],
+     "with": [
+      "Sage Illian"
+     ],
+     "against": [
+      "Madison Gillinger"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Dreya Scherfenberg",
    "b": "Madison Gillinger",
    "aId": 2048,
    "bId": 99596,
@@ -21245,7 +21397,47 @@
       "Sage Illian"
      ],
      "against": [
-      94909
+      "Sadie Harris"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sage Illian",
+   "b": "Sadie Harris",
+   "aId": 91052,
+   "bId": 94909,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       17,
+       21
+      ],
+      [
+       21,
+       19
+      ],
+      [
+       15,
+       8
+      ]
+     ],
+     "with": [
+      "Dreya Scherfenberg"
+     ],
+     "against": [
+      "Madison Gillinger"
      ]
     }
    ]
@@ -21285,7 +21477,7 @@
       "Dreya Scherfenberg"
      ],
      "against": [
-      94909
+      "Sadie Harris"
      ]
     }
    ]
@@ -21372,6 +21564,86 @@
   },
   {
    "a": "Sarah Cowan",
+   "b": "Sadie Harris",
+   "aId": 84725,
+   "bId": 94909,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-31",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       21,
+       18
+      ],
+      [
+       21,
+       14
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Madison Gillinger"
+     ],
+     "against": [
+      "Milaniakai Padilla"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sadie Harris",
+   "b": "Milaniakai Padilla",
+   "aId": 94909,
+   "bId": 95165,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-01-31",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": false,
+     "sets": [
+      [
+       18,
+       21
+      ],
+      [
+       14,
+       21
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Madison Gillinger"
+     ],
+     "against": [
+      "Sarah Cowan"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sarah Cowan",
    "b": "Madison Gillinger",
    "aId": 84725,
    "bId": 99596,
@@ -21402,7 +21674,7 @@
       ]
      ],
      "with": [
-      94909
+      "Sadie Harris"
      ],
      "against": [
       "Milaniakai Padilla"
@@ -21442,7 +21714,7 @@
       ]
      ],
      "with": [
-      94909
+      "Sadie Harris"
      ],
      "against": [
       "Sarah Cowan"
@@ -21566,6 +21838,86 @@
      ],
      "against": [
       "Sammy Nammack"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Simrin Adams",
+   "b": "Brooke Canaday",
+   "aId": 25289,
+   "bId": 98124,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       16
+      ],
+      [
+       21,
+       16
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Sienna Castillo"
+     ],
+     "against": [
+      "Ella Buchanan"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Sienna Castillo",
+   "b": "Brooke Canaday",
+   "aId": 29854,
+   "bId": 98124,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": true,
+     "sets": [
+      [
+       21,
+       16
+      ],
+      [
+       21,
+       16
+      ],
+      [
+       0,
+       0
+      ]
+     ],
+     "with": [
+      "Simrin Adams"
+     ],
+     "against": [
+      "Ella Buchanan"
      ]
     }
    ]
@@ -21812,6 +22164,46 @@
   },
   {
    "a": "Jordyn Wilson",
+   "b": "Brooke Canaday",
+   "aId": 23868,
+   "bId": 98124,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-01-30",
+     "event": "2026 USA Volleyball U18 Beach National Team Trials",
+     "division": "",
+     "tid": 34180,
+     "tdId": 125823,
+     "phase": "Playoffs",
+     "round": "Playoffs",
+     "won": true,
+     "sets": [
+      [
+       16,
+       21
+      ],
+      [
+       21,
+       15
+      ],
+      [
+       15,
+       7
+      ]
+     ],
+     "with": [
+      "Nariah Johnson"
+     ],
+     "against": [
+      "Ella Buchanan"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Jordyn Wilson",
    "b": "Ella Buchanan",
    "aId": 23868,
    "bId": 98125,
@@ -21845,7 +22237,39 @@
       "Nariah Johnson"
      ],
      "against": [
-      98124
+      "Brooke Canaday"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Olivia Marroquin",
+   "b": "Charlotte Jansen",
+   "aId": 96236,
+   "bId": 161398,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-01-25",
+     "event": "Western World Mega Collegiate Showcase Event - Oceanside CA.",
+     "division": "",
+     "tid": 33844,
+     "tdId": 124876,
+     "phase": "Playoffs",
+     "round": "Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       15,
+       21
+      ]
+     ],
+     "with": [
+      9258
+     ],
+     "against": [
+      20587
      ]
     }
    ]
@@ -21882,47 +22306,7 @@
       ]
      ],
      "with": [
-      "Linnaea Nielsen"
-     ],
-     "against": [
-      "Nariah Johnson"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Olivia Herron",
-   "b": "Linnaea Nielsen",
-   "aId": 28688,
-   "bId": 92803,
-   "aWins": 1,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2026-01-24",
-     "event": "IBVL Winter Nationals & U18 ISF Trials",
-     "division": "",
-     "tid": 25008,
-     "tdId": 124255,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": true,
-     "sets": [
-      [
-       21,
-       14
-      ],
-      [
-       21,
-       10
-      ],
-      [
-       0,
-       0
-      ]
-     ],
-     "with": [
-      "Sammy Nammack"
+      92803
      ],
      "against": [
       "Nariah Johnson"
@@ -21962,7 +22346,7 @@
       ]
      ],
      "with": [
-      "Linnaea Nielsen"
+      92803
      ],
      "against": [
       "Thalia Lindahl"
@@ -22051,6 +22435,46 @@
    ]
   },
   {
+   "a": "Sadie Harris",
+   "b": "Ashley Ruschill",
+   "aId": 94909,
+   "bId": 105245,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-01-18",
+     "event": "2026 Futures Tour: Arizona",
+     "division": "",
+     "tid": 31568,
+     "tdId": 117700,
+     "phase": "Playoffs",
+     "round": "Day 2: Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       24,
+       22
+      ],
+      [
+       16,
+       21
+      ],
+      [
+       15,
+       17
+      ]
+     ],
+     "with": [
+      102482
+     ],
+     "against": [
+      "Madison Gillinger"
+     ]
+    }
+   ]
+  },
+  {
    "a": "Madison Gillinger",
    "b": "Ashley Ruschill",
    "aId": 99596,
@@ -22085,7 +22509,7 @@
       102482
      ],
      "against": [
-      94909
+      "Sadie Harris"
      ]
     }
    ]
@@ -22171,12 +22595,12 @@
    ]
   },
   {
-   "a": "Abigail Moffett",
-   "b": "Haisley Flanagan",
-   "aId": 9258,
-   "bId": 64896,
-   "aWins": 1,
-   "bWins": 0,
+   "a": "Haisley Flanagan",
+   "b": "Charlotte Jansen",
+   "aId": 64896,
+   "bId": 161398,
+   "aWins": 0,
+   "bWins": 1,
    "games": [
     {
      "date": "2026-01-17",
@@ -22186,23 +22610,23 @@
      "tdId": 117700,
      "phase": "Pool",
      "round": "Day 1: RD2 1sts",
-     "won": true,
+     "won": false,
      "sets": [
       [
-       21,
-       16
-      ],
-      [
-       18,
+       16,
        21
       ],
       [
-       15,
-       13
+       21,
+       18
+      ],
+      [
+       13,
+       15
       ]
      ],
      "with": [
-      161398
+      9258
      ],
      "against": [
       150387
@@ -22211,12 +22635,12 @@
    ]
   },
   {
-   "a": "Abigail Moffett",
-   "b": "Reagan Carlin",
-   "aId": 9258,
-   "bId": 92974,
-   "aWins": 1,
-   "bWins": 0,
+   "a": "Reagan Carlin",
+   "b": "Charlotte Jansen",
+   "aId": 92974,
+   "bId": 161398,
+   "aWins": 0,
+   "bWins": 1,
    "games": [
     {
      "date": "2026-01-18",
@@ -22226,23 +22650,23 @@
      "tdId": 117700,
      "phase": "Playoffs",
      "round": "Day 2: Gold Playoffs",
-     "won": true,
+     "won": false,
      "sets": [
       [
-       15,
+       21,
+       15
+      ],
+      [
+       19,
        21
       ],
       [
-       21,
-       19
-      ],
-      [
-       16,
-       14
+       14,
+       16
       ]
      ],
      "with": [
-      161398
+      9258
      ],
      "against": [
       167128
@@ -23283,6 +23707,46 @@
    ]
   },
   {
+   "a": "Sadie Harris",
+   "b": "Eden Cisneros",
+   "aId": 94909,
+   "bId": 98425,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2025-11-08",
+     "event": "AVP Juniors West Coast Championships 2025",
+     "division": "",
+     "tid": 25578,
+     "tdId": 97149,
+     "phase": "Pool",
+     "round": "Pools",
+     "won": false,
+     "sets": [
+      [
+       15,
+       21
+      ],
+      [
+       22,
+       20
+      ],
+      [
+       10,
+       15
+      ]
+     ],
+     "with": [
+      9258
+     ],
+     "against": [
+      92629
+     ]
+    }
+   ]
+  },
+  {
    "a": "Eden Cisneros",
    "b": "Ashley Ruschill",
    "aId": 98425,
@@ -23314,90 +23778,10 @@
       ]
      ],
      "with": [
-      "Abigail Moffett"
+      9258
      ],
      "against": [
       58303
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Abigail Moffett",
-   "b": "Summer Tukua",
-   "aId": 9258,
-   "bId": 53120,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2025-11-09",
-     "event": "AVP Juniors West Coast Championships 2025",
-     "division": "",
-     "tid": 25578,
-     "tdId": 97149,
-     "phase": "Playoffs",
-     "round": "Gold Playoffs",
-     "won": false,
-     "sets": [
-      [
-       10,
-       21
-      ],
-      [
-       19,
-       21
-      ],
-      [
-       0,
-       0
-      ]
-     ],
-     "with": [
-      "Eden Cisneros"
-     ],
-     "against": [
-      "Ashlynn Proctor"
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Abigail Moffett",
-   "b": "Ashlynn Proctor",
-   "aId": 9258,
-   "bId": 91897,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2025-11-09",
-     "event": "AVP Juniors West Coast Championships 2025",
-     "division": "",
-     "tid": 25578,
-     "tdId": 97149,
-     "phase": "Playoffs",
-     "round": "Gold Playoffs",
-     "won": false,
-     "sets": [
-      [
-       10,
-       21
-      ],
-      [
-       19,
-       21
-      ],
-      [
-       0,
-       0
-      ]
-     ],
-     "with": [
-      "Eden Cisneros"
-     ],
-     "against": [
-      "Summer Tukua"
      ]
     }
    ]
@@ -23434,7 +23818,7 @@
       ]
      ],
      "with": [
-      "Abigail Moffett"
+      9258
      ],
      "against": [
       "Ashlynn Proctor"
@@ -23763,6 +24147,46 @@
    ]
   },
   {
+   "a": "Brooke Canaday",
+   "b": "Taylie Hansen",
+   "aId": 98124,
+   "bId": 99506,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2025-11-09",
+     "event": "AVP Juniors West Coast Championships 2025",
+     "division": "",
+     "tid": 25578,
+     "tdId": 97149,
+     "phase": "Playoffs",
+     "round": "Gold Playoffs",
+     "won": false,
+     "sets": [
+      [
+       21,
+       14
+      ],
+      [
+       16,
+       21
+      ],
+      [
+       11,
+       15
+      ]
+     ],
+     "with": [
+      105341
+     ],
+     "against": [
+      "Ella Buchanan"
+     ]
+    }
+   ]
+  },
+  {
    "a": "Ella Buchanan",
    "b": "Taylie Hansen",
    "aId": 98125,
@@ -23797,7 +24221,7 @@
       105341
      ],
      "against": [
-      98124
+      "Brooke Canaday"
      ]
     }
    ]
@@ -23883,10 +24307,10 @@
    ]
   },
   {
-   "a": "Megan McLarty",
-   "b": "Linnaea Nielsen",
-   "aId": 68351,
-   "bId": 92803,
+   "a": "Ella Olson",
+   "b": "Olivia Marroquin",
+   "aId": 3113,
+   "bId": 96236,
    "aWins": 1,
    "bWins": 0,
    "games": [
@@ -23895,18 +24319,18 @@
      "event": "AVP Juniors West Coast Championships 2025",
      "division": "",
      "tid": 25578,
-     "tdId": 97148,
+     "tdId": 97147,
      "phase": "Pool",
      "round": "Pools",
      "won": true,
      "sets": [
       [
        21,
-       18
+       9
       ],
       [
        21,
-       17
+       8
       ],
       [
        0,
@@ -23914,50 +24338,10 @@
       ]
      ],
      "with": [
-      "Izzy Fischer"
+      24140
      ],
      "against": [
-      1735
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Linnaea Nielsen",
-   "b": "Izzy Fischer",
-   "aId": 92803,
-   "bId": 105342,
-   "aWins": 0,
-   "bWins": 1,
-   "games": [
-    {
-     "date": "2025-11-08",
-     "event": "AVP Juniors West Coast Championships 2025",
-     "division": "",
-     "tid": 25578,
-     "tdId": 97148,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": false,
-     "sets": [
-      [
-       18,
-       21
-      ],
-      [
-       17,
-       21
-      ],
-      [
-       0,
-       0
-      ]
-     ],
-     "with": [
-      "Megan McLarty"
-     ],
-     "against": [
-      1735
+      24253
      ]
     }
    ]
@@ -24004,9 +24388,9 @@
   },
   {
    "a": "Stella Sheeran",
-   "b": "Sienna Mattoon",
+   "b": "Sadie Harris",
    "aId": 42463,
-   "bId": 48567,
+   "bId": 94909,
    "aWins": 1,
    "bWins": 0,
    "games": [
@@ -24016,28 +24400,20 @@
      "division": "",
      "tid": 30469,
      "tdId": 115528,
-     "phase": "Pool",
-     "round": "Pools",
+     "phase": "Playoffs",
+     "round": "Gold Playoffs",
      "won": true,
      "sets": [
       [
-       21,
-       18
-      ],
-      [
-       21,
-       18
-      ],
-      [
-       0,
-       0
+       28,
+       22
       ]
      ],
      "with": [
       150387
      ],
      "against": [
-      94434
+      92629
      ]
     }
    ]
@@ -24117,7 +24493,7 @@
       "Thalia Lindahl"
      ],
      "against": [
-      "Abigail Moffett"
+      9258
      ]
     }
    ]
@@ -24157,7 +24533,7 @@
       "Sandie Souza"
      ],
      "against": [
-      "Abigail Moffett"
+      9258
      ]
     }
    ]
@@ -24643,6 +25019,70 @@
    ]
   },
   {
+   "a": "Reagan Carlin",
+   "b": "Olivia Marroquin",
+   "aId": 92974,
+   "bId": 96236,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-03-15",
+     "event": "Belmont Shore",
+     "division": "Belmont Shore",
+     "tid": 4580,
+     "tdId": 16230,
+     "phase": "Pool",
+     "round": "",
+     "won": true,
+     "sets": [
+      [
+       21,
+       19
+      ]
+     ],
+     "with": [
+      127431
+     ],
+     "against": [
+      167128
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Addison Choi",
+   "b": "Brooke Canaday",
+   "aId": 5160,
+   "bId": 98124,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-03-08",
+     "event": "Dockweiler",
+     "division": "Dockweiler",
+     "tid": 4579,
+     "tdId": 16227,
+     "phase": "Playoff",
+     "round": "2",
+     "won": false,
+     "sets": [
+      [
+       15,
+       21
+      ]
+     ],
+     "with": [
+      56789
+     ],
+     "against": [
+      "Ella Buchanan"
+     ]
+    }
+   ]
+  },
+  {
    "a": "Addison Choi",
    "b": "Ella Buchanan",
    "aId": 5160,
@@ -24669,7 +25109,103 @@
       56789
      ],
      "against": [
-      98124
+      "Brooke Canaday"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Brooke Canaday",
+   "b": "Charlotte Jansen",
+   "aId": 98124,
+   "bId": 161398,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-03-08",
+     "event": "Dockweiler",
+     "division": "Dockweiler",
+     "tid": 4579,
+     "tdId": 16227,
+     "phase": "Playoff",
+     "round": "3",
+     "won": false,
+     "sets": [
+      [
+       19,
+       21
+      ]
+     ],
+     "with": [
+      "Nariah Johnson"
+     ],
+     "against": [
+      "Ella Buchanan"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Ella Buchanan",
+   "b": "Charlotte Jansen",
+   "aId": 98125,
+   "bId": 161398,
+   "aWins": 0,
+   "bWins": 1,
+   "games": [
+    {
+     "date": "2026-03-08",
+     "event": "Dockweiler",
+     "division": "Dockweiler",
+     "tid": 4579,
+     "tdId": 16227,
+     "phase": "Playoff",
+     "round": "3",
+     "won": false,
+     "sets": [
+      [
+       19,
+       21
+      ]
+     ],
+     "with": [
+      "Nariah Johnson"
+     ],
+     "against": [
+      "Brooke Canaday"
+     ]
+    }
+   ]
+  },
+  {
+   "a": "Lauren Leach",
+   "b": "Charlotte Jansen",
+   "aId": 8426,
+   "bId": 161398,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2025-11-23",
+     "event": "Main Beach",
+     "division": "Main Beach",
+     "tid": 193,
+     "tdId": 619,
+     "phase": "Playoff",
+     "round": "-1",
+     "won": true,
+     "sets": [
+      [
+       21,
+       12
+      ]
+     ],
+     "with": [
+      "Thalia Lindahl"
+     ],
+     "against": [
+      331350
      ]
     }
    ]
@@ -24835,9 +25371,9 @@
    ]
   },
   {
-   "a": "Sienna Mattoon",
+   "a": "Sadie Harris",
    "b": "Madison Gillinger",
-   "aId": 48567,
+   "aId": 94909,
    "bId": 99596,
    "aWins": 1,
    "bWins": 0,
@@ -24848,17 +25384,17 @@
      "division": "Newland",
      "tid": 173,
      "tdId": 550,
-     "phase": "Playoff",
-     "round": "-1",
+     "phase": "Pool",
+     "round": "",
      "won": true,
      "sets": [
       [
        28,
-       0
+       17
       ]
      ],
      "with": [
-      5270
+      91539
      ],
      "against": [
       124610
@@ -24868,11 +25404,6 @@
   }
  ],
  "partnered": [
-  {
-   "a": "Sienna Mattoon",
-   "b": "Tristan Ana Del Riego",
-   "matches": 52
-  },
   {
    "a": "Brooke Proctor",
    "b": "Reagan Carlin",
@@ -24887,6 +25418,16 @@
    "a": "Abby King",
    "b": "Maddy  Wagner",
    "matches": 42
+  },
+  {
+   "a": "Brooke Canaday",
+   "b": "Ella Buchanan",
+   "matches": 40
+  },
+  {
+   "a": "Sadie Harris",
+   "b": "Madison Gillinger",
+   "matches": 40
   },
   {
    "a": "Paloma Smith",
@@ -24949,6 +25490,11 @@
    "matches": 19
   },
   {
+   "a": "Nariah Johnson",
+   "b": "Charlotte Jansen",
+   "matches": 18
+  },
+  {
    "a": "Sarah Cowan",
    "b": "Milaniakai Padilla",
    "matches": 17
@@ -24979,13 +25525,13 @@
    "matches": 16
   },
   {
-   "a": "Lucy Matuszak",
-   "b": "Olivia Herron",
-   "matches": 15
+   "a": "Haisley Flanagan",
+   "b": "Charlotte Jansen",
+   "matches": 16
   },
   {
-   "a": "Addison Choi",
-   "b": "Linnaea Nielsen",
+   "a": "Lucy Matuszak",
+   "b": "Olivia Herron",
    "matches": 15
   },
   {
@@ -25054,11 +25600,6 @@
    "matches": 10
   },
   {
-   "a": "Abigail Moffett",
-   "b": "Madison Gillinger",
-   "matches": 10
-  },
-  {
    "a": "Sandie Souza",
    "b": "Thalia Lindahl",
    "matches": 10
@@ -25096,11 +25637,6 @@
   {
    "a": "Ella Olson",
    "b": "Sienna Castillo",
-   "matches": 8
-  },
-  {
-   "a": "Marley Robinson",
-   "b": "Linnaea Nielsen",
    "matches": 8
   },
   {
@@ -25154,11 +25690,6 @@
    "matches": 7
   },
   {
-   "a": "Sienna Castillo",
-   "b": "Linnaea Nielsen",
-   "matches": 7
-  },
-  {
    "a": "Dreya Scherfenberg",
    "b": "Megan McLarty",
    "matches": 7
@@ -25179,11 +25710,6 @@
    "matches": 7
   },
   {
-   "a": "Abigail Moffett",
-   "b": "Eden Cisneros",
-   "matches": 7
-  },
-  {
    "a": "Sandie Souza",
    "b": "Zoe Znider",
    "matches": 7
@@ -25196,11 +25722,6 @@
   {
    "a": "Christy Boulware",
    "b": "Sage Illian",
-   "matches": 6
-  },
-  {
-   "a": "Ella Dueck",
-   "b": "Linnaea Nielsen",
    "matches": 6
   },
   {
@@ -25231,6 +25752,11 @@
   {
    "a": "Milaniakai Padilla",
    "b": "Sadie Stafford",
+   "matches": 6
+  },
+  {
+   "a": "Jordyn Wilson",
+   "b": "Charlotte Jansen",
    "matches": 6
   },
   {
@@ -25279,6 +25805,11 @@
    "matches": 5
   },
   {
+   "a": "Madison Gillinger",
+   "b": "Charlotte Jansen",
+   "matches": 5
+  },
+  {
    "a": "Addison Choi",
    "b": "Lerin Rosenthal",
    "matches": 5
@@ -25299,18 +25830,8 @@
    "matches": 4
   },
   {
-   "a": "Addison Choi",
-   "b": "Abigail Moffett",
-   "matches": 4
-  },
-  {
    "a": "Jordyn Wilson",
    "b": "Nariah Johnson",
-   "matches": 4
-  },
-  {
-   "a": "Sammy Nammack",
-   "b": "Linnaea Nielsen",
    "matches": 4
   },
   {
@@ -25336,6 +25857,11 @@
   {
    "a": "Christy Boulware",
    "b": "Thalia Lindahl",
+   "matches": 3
+  },
+  {
+   "a": "Ella Buchanan",
+   "b": "Charlotte Jansen",
    "matches": 3
   },
   {

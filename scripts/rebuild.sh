@@ -19,7 +19,11 @@ echo "=== collect"
 python3 "$ROOT/scripts/collect_group.py" $GROUPS
 
 echo "=== head-to-head"
-python3 "$ROOT/scripts/h2h.py" $GROUPS
+# From the corpus, not the live feed: POST /playerprofile/feed/matches answers 401 to
+# anyone not signed in. merge.py rebuilds the corpus it reads, and is gitignored output,
+# so it has to run first in a fresh checkout.
+python3 "$ROOT/scripts/merge.py"
+python3 "$ROOT/scripts/h2h_corpus.py" $GROUPS
 
 echo "=== calendar"
 python3 "$ROOT/scripts/calendar.py" 2027

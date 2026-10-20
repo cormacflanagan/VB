@@ -1,4 +1,10 @@
-"""Match-level head-to-head record between the players in a group.
+"""Match-level head-to-head record between the players in a group, from the live feed.
+
+Superseded: POST /playerprofile/feed/matches now requires a signed-in account and answers
+401 to everyone else, so this script can no longer reach anything. scripts/h2h_corpus.py
+produces the identical file from the merged corpus and is what scripts/rebuild.sh runs.
+This is kept because the endpoint may reopen, and it now refuses to write an empty file.
+
 
 Finishes only say who placed higher in the same field. This pulls the actual matches
 from POST /playerprofile/feed/matches, so a head-to-head is a match the two players
@@ -130,6 +136,15 @@ def main(group):
            "pairs": sorted(pairs.values(), key=lambda p: -(p["aWins"] + p["bWins"])),
            "partnered": [{"a": ids[k[0]], "b": ids[k[1]], "matches": v}
                          for k, v in sorted(partnered.items(), key=lambda kv: -kv[1])]}
+    # The feed answers 401 to anyone not signed in, and a failed POST is indistinguishable
+    # from a player with no matches, so an empty result used to overwrite a good file with
+    # nothing. Refuse rather than destroy: scripts/h2h_corpus.py builds the same file from
+    # the local corpus and is what the rebuild uses now.
+    if not matches:
+        raise SystemExit(
+            f"{group}: the match feed returned nothing for all {len(site['players'])} "
+            "players, which is what a 401 looks like. Nothing written; use "
+            "scripts/h2h_corpus.py instead.")
     json.dump(out, open(f"{group}_h2h.json", "w"), indent=1)
     tot = sum(p["aWins"] + p["bWins"] for p in out["pairs"])
     print(f"  {len(out['pairs'])} head-to-head pairings, {tot} matches between group members")
