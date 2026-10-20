@@ -54,6 +54,10 @@ def main(year, n=60, floor=None, workers=24):
     path = os.path.join(DATA, f"cohort{year}.json")
     pop = {int(k): v for k, v in json.load(open(path)).items()}
     _, before = top_of(pop, n)
+    # top_of hands back the dicts themselves, and the fetch below updates them in place,
+    # so the old ratings have to be copied out now or the churn report prints the new
+    # number on both sides of the arrow.
+    was = {i: p.get("tv") for i, p in pop.items()}
     names_before = {p["name"] for p in before}
     ids = [i for i in pop
            if floor is None or (pop[i].get("tv") or 0) >= floor]
@@ -92,12 +96,15 @@ def main(year, n=60, floor=None, workers=24):
     ins = [p for p in after if p["name"] not in names_before]
     outs = [p for p in before if p["name"] not in names_after]
     print(f"churn: {len(ins)} in, {len(outs)} out")
+    def line(tag, p):
+        old_tv, now = was.get(p["id"]), pop[p["id"]].get("tv")
+        fmt = lambda v: f"{v:.3f}" if v else "unrated"
+        print(f"  {tag}  {p['name']:26} {fmt(old_tv):>7} -> {fmt(now)}")
+
     for p in ins:
-        print(f"  IN   {p['name']:26} {p['tv']:.3f}")
+        line("IN ", p)
     for p in outs:
-        now = pop[p["id"]].get("tv")
-        print(f"  OUT  {p['name']:26} {p['tv']:.3f} -> "
-              + (f"{now:.3f}" if now else "unrated"))
+        line("OUT", p)
 
 
 def arg(flag, cast, default):
