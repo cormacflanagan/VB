@@ -300,6 +300,17 @@ def entrants(tdids):
     return out
 
 
+def played_sets(m):
+    """Sets actually played, not set slots recorded.
+
+    Volleyball Life files a best-of-three as three slots and fills the unplayed decider
+    with [0, 0], so counting the slots turns every straight-sets win into three sets. A
+    quarter of the slots in the reference divisions this page uses are those placeholders,
+    which inflated every sets and contested figure until it was caught.
+    """
+    return sum(1 for x in (m.get("sets") or []) if x != [0, 0]) or 1
+
+
 def sets_played(tdids, rate):
     """Sets, not matches: a CBVA pool game is one set and a national bracket match is three.
 
@@ -315,7 +326,7 @@ def sets_played(tdids, rate):
             m = json.loads(l)
             if m["tdId"] not in tdids:
                 continue
-            ns = len(m.get("sets") or []) or 1
+            ns = played_sets(m)
             for side, other in (("a", "b"), ("b", "a")):
                 r = [rate(p) for p in m[side]]
                 o = [rate(p) for p in m[other]]
@@ -645,7 +656,7 @@ def cbva_2027(tn, dv, tm, mt, link, tv):
     tot, con, peers = Counter(), Counter(), defaultdict(set)
     for tdid in bytd:
         for m in mt.get(tdid, []):
-            ns = len(m.get("sets") or []) or 1
+            ns = played_sets(m)
             for side, other in (("a", "b"), ("b", "a")):
                 rr = [prate(p) for p in m[side]]
                 oo = [prate(p) for p in m[other]]
