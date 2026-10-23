@@ -26,6 +26,14 @@ from jsonl import read as read_jsonl
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "..", "data")
+# CBVA id -> Volleyball Life id, for players the partnership evidence cannot reach because
+# their Volleyball Life record carries no CBVA event. Both were given by someone who knows
+# the athlete, and both check out: Bush is Santa Cruz with 21 Santa Cruz entries and a
+# second and a third at Main Beach this summer; Broshear is Saratoga with 20.
+PINNED = {
+    28771: 47764,   # Isabella "Bella" Bush
+    28809: 64782,   # Regina "Stella" Broshear
+}
 # A single agreement is already strong: it needs *both* partners' names to match the same
 # Volleyball Life team on the same day, and that team to be the only one on that date with
 # that pair of names. Requiring two agreements turned out to reject 4,108 players who had
@@ -164,6 +172,14 @@ def main():
             taken.add(vid)
             second += 1
     print(f"second pass linked {second} more by unique name on a shared date")
+
+    # Players the inference cannot reach, confirmed by hand and applied last so a rerun
+    # keeps them. A pin needs a reason: these two were supplied by someone who knows the
+    # athlete, and each is corroborated by home town and a long Santa Cruz record.
+    for cid, vid in PINNED.items():
+        link[cid] = {"vblId": vid, "votes": 0, "of": 0, "pass": "pinned"}
+        ambiguous.pop(cid, None)
+    print(f"pinned {len(PINNED)} by hand")
 
     seen = set()
     for tm in (json.loads(l) for l in open(os.path.join(DATA, "cbva", "matches.jsonl"))):
