@@ -172,34 +172,35 @@ def build(tdid, highlight="Haisley"):
                f'is seeded {best["seed"]} of {len(teams)}.')
     story.append(Paragraph(
         f'{len(teams)} teams in {len(pools)} pools. {len(rated)} of {len(teams)} are rated '
-        f'on both players; the field median pair is {st.median(rated):.2f}. Every table '
-        f'below is ordered by <b>TruVolley</b>, Volleyball Life&#8217;s rating, which counts '
-        f'results everywhere. CBVA&#8217;s own seeding counts CBVA results only and sorts a '
-        f'pair by its weaker half, so the two orders differ sharply.' + gap, P))
+        f'on both players; the field median pair is {st.median(rated):.2f}. The pools below '
+        f'run in CBVA&#8217;s own order, with each team&#8217;s rank by <b>TruVolley</b> &#8212; '
+        f'Volleyball Life&#8217;s rating, which counts results everywhere &#8212; alongside. '
+        f'CBVA seeds on CBVA results only and sorts a pair by its weaker half, so the two '
+        f'orders differ sharply.' + gap, P))
 
     # ---- pools
     story.append(Paragraph("The pools", H2))
     order = sorted(pools, key=lambda p: str(p.get("name")))
     for pl in order:
-        rows = sorted((teams[e["teamId"]] for e in pl["teams"]),
-                      key=lambda x: -(x["pair"] or 0))
-        poolseed = {e["teamId"]: e["seed"] for e in pl["teams"]}
-        back = {id(x): k for k, x in teams.items()}
-        med = [x["pair"] for x in rows if x["pair"]]
-        body = [["", "Team", "In pool", "Overall", "Pair", "Players"]]
+        ents = sorted(pl["teams"], key=lambda e: (e.get("seed") or 99))
+        byrating = sorted(ents, key=lambda e: -(teams[e["teamId"]]["pair"] or 0))
+        rank = {e["teamId"]: i for i, e in enumerate(byrating, 1)}
+        med = [teams[e["teamId"]]["pair"] for e in ents if teams[e["teamId"]]["pair"]]
+        body = [["", "Team", "By rating", "Overall", "Pair", "Players"]]
         hi = []
-        for i, x in enumerate(rows, 1):
-            key = next(k for k, v in teams.items() if v is x)
+        for i, e in enumerate(ents, 1):
+            x = teams[e["teamId"]]
             if x["mine"]:
                 hi.append(i)
             names = " / ".join(p["name"] for p in x["players"])
             indiv = " / ".join(cell(p) for p in x["players"])
-            body.append([str(i), names, str(poolseed.get(key, "")),
+            body.append([str(e.get("seed") or i), names,
+                         str(rank[e["teamId"]]) if x["pair"] else "—",
                          str(x["seed"] or ""), pair_cell(x), indiv])
         story.append(Paragraph(
             f'<b>Pool {pl.get("name")}</b> &#183; {pl.get("court") or "court tba"} &#183; '
             f'median {st.median(med):.2f}' if med else f'<b>Pool {pl.get("name")}</b>', P))
-        story.append(table(body, [16, 190, 38, 38, 40, 96], hi))
+        story.append(table(body, [16, 176, 48, 42, 40, 96], hi))
         story.append(Spacer(1, 7))
 
     # ---- the whole field
