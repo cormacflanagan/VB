@@ -25,7 +25,10 @@ OUT = os.path.join(HERE, "..", "docs")
 # p1440 publishes the Futures Tour as a season, so it is listed whole rather than only
 # where it matched something played last year.
 P1440_ORGS = {41, 1144}
-SEASON_FROM = "2026-09-15"
+# The season ahead starts where the results window closes, so the two tables meet
+# without overlapping. Both come from rosters.WINDOW.
+from rosters import WINDOW as _W
+SEASON_FROM = _W[1]
 # announced but not yet rostered, so it cannot come from the roster scrape
 NTDP_NEXT = [{"date": "2026-12-01", "endDate": "2026-12-31", "season": "Winter",
               "location": "not yet dated",
@@ -356,5 +359,7 @@ def build(group):
 if __name__ == "__main__":
     g = sys.argv[1] if len(sys.argv) > 1 else "2026_younger"
     path = os.path.join(OUT, f"calendar-{g}.html")
-    open(path, "w").write(build(g))
+    # Build first, write second: open(..., "w") truncates on a build that raises.
+    page = build(g)
+    open(path, "w").write(page)
     print("wrote", path)

@@ -37,8 +37,10 @@ try:
 except FileNotFoundError:
     SERIES = {"series": [], "appearances": {}}
 # announced but not yet rostered, so it cannot come from the scrape
-NTDP_NEXT = [{"date": "2026-09-25", "endDate": "2026-09-27", "season": "Fall",
-              "location": "Dania Beach, Florida",
+# The Fall series has been held and its roster is in the scrape; Winter is announced
+# with neither dates nor a venue, so the row carries no date rather than a guessed one.
+NTDP_NEXT = [{"date": None, "endDate": None, "season": "Winter",
+              "location": "dates and venue not yet announced",
               "url": "https://usavolleyball.org/play/national-team-development-program"
                      "/beach-ntdp/beach-ntdp-training-series/"}]
 
@@ -518,8 +520,8 @@ def build(group):
       </tr>""" for t in next_local)
     ret += "".join(
         f"""      <tr class="trn">
-        <td class="num dim nw">{dfmt(t['date']).strftime('%-d')}&#8211;{
-          dfmt(t['endDate']).strftime('%-d %b %Y')}</td>
+        <td class="num dim nw">{(dfmt(t['date']).strftime('%-d') + '&#8211;' +
+          dfmt(t['endDate']).strftime('%-d %b %Y')) if t['date'] else '&#8212;'}</td>
         <td><a class="lnk" href="{t['url']}" target="_blank" rel="noopener">Beach NTDP {
           t['season']} Training Series</a><span class="lt tr">training</span></td>
         <td class="loc">{esc(t['location'])}</td>

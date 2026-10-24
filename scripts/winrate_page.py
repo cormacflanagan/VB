@@ -460,5 +460,7 @@ def build():
 
 
 if __name__ == "__main__":
-    open(OUT, "w").write(build())
+    # Build first, write second: open(..., "w") truncates on a build that raises.
+    page = build()
+    open(OUT, "w").write(page)
     print("wrote", OUT)

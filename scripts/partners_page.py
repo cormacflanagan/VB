@@ -389,5 +389,7 @@ a {{ color:var(--accent); }}
 if __name__ == "__main__":
     g = sys.argv[1] if len(sys.argv) > 1 else "2028_top30"
     out = f"partners-{g}.html"
-    open(out, "w").write(build(g))
+    # Build first, write second: open(..., "w") truncates on a build that raises.
+    page = build(g)
+    open(out, "w").write(page)
     print("wrote", out)

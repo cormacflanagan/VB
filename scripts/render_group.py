@@ -722,5 +722,8 @@ a {{ color:var(--accent); }}
 if __name__ == "__main__":
     for grp in (sys.argv[1:] or ["18U", "17U"]):
         out = f"bntdp-{grp.lower()}.html"
-        open(out, "w").write(build(grp))
+        # Build first, write second: open(..., "w") truncates, so a build that raises
+        # would otherwise leave a zero-byte page behind.
+        page = build(grp)
+        open(out, "w").write(page)
         print("wrote", out)

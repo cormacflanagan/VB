@@ -101,4 +101,4 @@ for _p in sorted(_glob.glob(_os.path.join(_os.path.dirname(__file__) or ".", "ro
                            "ratedPop": _d.get("rated"),
                            "thresh": _thresh(len(_d["roster"]))}
 
-WINDOW = ("2025-09-14", "2026-09-14")
+WINDOW = ("2025-10-24", "2026-10-24")

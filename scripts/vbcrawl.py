@@ -24,6 +24,9 @@ kept, because women play in it. Lift the filter in `wanted()` to take everything
 import json, os, sys, time, urllib.request
 from concurrent.futures import ThreadPoolExecutor
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from jsonl import read as read_jsonl
+
 API = "https://api-v8.volleyballlife.com"
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36")  # the API 404s a short UA
@@ -113,10 +116,11 @@ def main(argv):
     done = set(json.load(open(donep))) if os.path.exists(donep) else set()
     seen = set()
     pp = os.path.join(OUT, "players.jsonl")
-    if os.path.exists(pp):
-        with open(pp) as fh:
-            for line in fh:
-                seen.add(json.loads(line)["id"])
+    # Through the shared reader, so the gzipped archive counts as held: reading only the
+    # plain increment re-emits every player already in the archive.
+    if os.path.exists(pp) or os.path.exists(pp + ".gz"):
+        for row in read_jsonl(pp):
+            seen.add(row["id"])
     todo = [i for i in range(lo, hi + 1) if i not in done]
     print(f"{hi - lo + 1} ids in range, {len(done)} already crawled, {len(todo)} to go; "
           f"{len(seen)} players held", flush=True)

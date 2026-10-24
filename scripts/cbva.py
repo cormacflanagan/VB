@@ -138,8 +138,13 @@ def link(window):
 
 
 if __name__ == "__main__":
-    win = ("2025-08-20", "2026-08-20")
-    ahead = ("2026-08-12", "2027-08-11")
+    # One source of truth for the results window: rosters.WINDOW, the same twelve months
+    # every report is drawn on. The forward window runs a year out from today.
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from rosters import WINDOW
+    win = WINDOW
+    today = datetime.date.today()
+    ahead = (today.isoformat(), today.replace(year=today.year + 1).isoformat())
     if "--link" in sys.argv:
         link(win)
     elif "--upcoming" in sys.argv:
