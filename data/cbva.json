@@ -1,677 +1,9 @@
 {
  "window": [
-  "2025-08-11",
-  "2026-08-11"
+  "2025-10-24",
+  "2026-10-24"
  ],
  "tournaments": {
-  "145": {
-   "id": 145,
-   "venue": "Hermosa Pier, Hermosa Beach",
-   "date": "2025-08-31",
-   "divisions": [
-    {
-     "id": 470,
-     "name": "Coed A"
-    },
-    {
-     "id": 471,
-     "name": "Men's B"
-    },
-    {
-     "id": 472,
-     "name": "Women's AA"
-    },
-    {
-     "id": 473,
-     "name": "Coed AAA"
-    }
-   ]
-  },
-  "144": {
-   "id": 144,
-   "venue": "Belmont Shore, Long Beach",
-   "date": "2025-08-31",
-   "divisions": [
-    {
-     "id": 466,
-     "name": "AVP Bid Event Girl's 12U"
-    },
-    {
-     "id": 467,
-     "name": "AVP Bid Event Boy's 14U"
-    },
-    {
-     "id": 469,
-     "name": "AVP Bid Event Girl's 14U"
-    },
-    {
-     "id": 468,
-     "name": "AVP Bid Event Girl's 16U"
-    }
-   ]
-  },
-  "146": {
-   "id": 146,
-   "venue": "Manhattan Pier, Manhattan Beach",
-   "date": "2025-08-31",
-   "divisions": [
-    {
-     "id": 474,
-     "name": "Men's Unrated"
-    },
-    {
-     "id": 475,
-     "name": "Men's AA"
-    },
-    {
-     "id": 476,
-     "name": "Women's A"
-    }
-   ]
-  },
-  "142": {
-   "id": 142,
-   "venue": "Hermosa Pier, Hermosa Beach",
-   "date": "2025-08-30",
-   "divisions": [
-    {
-     "id": 463,
-     "name": "Mich Ultra Premier Tour: $4,000 Gene Selznick Men's Open"
-    },
-    {
-     "id": 464,
-     "name": "Mich Ultra Premier Tour: $4,000 Gene Selznick Women's Open"
-    },
-    {
-     "id": 462,
-     "name": "Coed B"
-    }
-   ]
-  },
-  "141": {
-   "id": 141,
-   "venue": "Manhattan Pier, Manhattan Beach",
-   "date": "2025-08-30",
-   "divisions": [
-    {
-     "id": 459,
-     "name": "AVP Bid Event Boy's 12U"
-    },
-    {
-     "id": 457,
-     "name": "AVP Bid Event Girl's 12U"
-    },
-    {
-     "id": 460,
-     "name": "AVP Bid Event Boy's 14U"
-    },
-    {
-     "id": 461,
-     "name": "AVP Bid Event Girl's 14U"
-    },
-    {
-     "id": 458,
-     "name": "AVP Bid Event Girl's 16U"
-    }
-   ]
-  },
-  "143": {
-   "id": 143,
-   "venue": "Waterfront Park, Monterey Bay",
-   "date": "2025-08-30",
-   "divisions": [
-    {
-     "id": 465,
-     "name": "Men's B"
-    }
-   ]
-  },
-  "140": {
-   "id": 140,
-   "venue": "Central Beach, Coronado, San Diego",
-   "date": "2025-08-24",
-   "divisions": [
-    {
-     "id": 455,
-     "name": "AVP Bid Event Girl's 12U"
-    },
-    {
-     "id": 454,
-     "name": "AVP Bid Event Girl's 14U"
-    },
-    {
-     "id": 453,
-     "name": "AVP Bid Event Girl's 16U"
-    },
-    {
-     "id": 456,
-     "name": "AVP Bid Event Girl's 18U"
-    }
-   ]
-  },
-  "139": {
-   "id": 139,
-   "venue": "Manhattan Pier, Manhattan Beach",
-   "date": "2025-08-24",
-   "divisions": [
-    {
-     "id": 450,
-     "name": "Women's AA"
-    },
-    {
-     "id": 451,
-     "name": "Women's A"
-    },
-    {
-     "id": 452,
-     "name": "Men's AA"
-    }
-   ]
-  },
-  "135": {
-   "id": 135,
-   "venue": "Manhattan Pier, Manhattan Beach",
-   "date": "2025-08-23",
-   "divisions": [
-    {
-     "id": 439,
-     "name": "Women's B"
-    },
-    {
-     "id": 440,
-     "name": "Men's B"
-    }
-   ]
-  },
-  "136": {
-   "id": 136,
-   "venue": "Ocean Beach, San Diego",
-   "date": "2025-08-23",
-   "divisions": [
-    {
-     "id": 441,
-     "name": "Mich Ultra Premier Tour: $2,000 Men's Open"
-    },
-    {
-     "id": 442,
-     "name": "Mich Ultra Premier Tour: $2,000 Women's Open"
-    }
-   ]
-  },
-  "137": {
-   "id": 137,
-   "venue": "Main Beach, Santa Cruz",
-   "date": "2025-08-23",
-   "divisions": [
-    {
-     "id": 443,
-     "name": "Women's B"
-    },
-    {
-     "id": 444,
-     "name": "Women's AA"
-    },
-    {
-     "id": 445,
-     "name": "Men's B"
-    },
-    {
-     "id": 446,
-     "name": "Men's AA"
-    }
-   ]
-  },
-  "138": {
-   "id": 138,
-   "venue": "North Beach, Santa Monica",
-   "date": "2025-08-23",
-   "divisions": [
-    {
-     "id": 448,
-     "name": "AVP Bid Event Girl's 12U"
-    },
-    {
-     "id": 449,
-     "name": "AVP Bid Event Girl's 14U"
-    },
-    {
-     "id": 447,
-     "name": "AVP Bid Event Girl's 16U"
-    }
-   ]
-  },
-  "134": {
-   "id": 134,
-   "venue": "Wave Courts, Del Mar, San Diego",
-   "date": "2025-08-17",
-   "divisions": [
-    {
-     "id": 438,
-     "name": "AVP Bid Event Boy's 14U"
-    },
-    {
-     "id": 436,
-     "name": "AVP Bid Event Boy's 16U"
-    },
-    {
-     "id": 437,
-     "name": "AVP Bid Event Boy's 18U"
-    }
-   ]
-  },
-  "133": {
-   "id": 133,
-   "venue": "Belmont Shore, Long Beach",
-   "date": "2025-08-12",
-   "divisions": [
-    {
-     "id": 432,
-     "name": "AVP Bid Event Girl's 12U"
-    },
-    {
-     "id": 433,
-     "name": "AVP Bid Event Boy's 14U"
-    },
-    {
-     "id": 435,
-     "name": "AVP Bid Event Girl's 14U"
-    },
-    {
-     "id": 434,
-     "name": "AVP Bid Event Girl's 18U"
-    }
-   ]
-  },
-  "167": {
-   "id": 167,
-   "venue": "Main Beach, Laguna Beach",
-   "date": "2025-09-28",
-   "divisions": [
-    {
-     "id": 533,
-     "name": "Men's B"
-    }
-   ]
-  },
-  "168": {
-   "id": 168,
-   "venue": "Belmont Shore, Long Beach",
-   "date": "2025-09-28",
-   "divisions": [
-    {
-     "id": 535,
-     "name": "AVP Bid Event Girl's 14U"
-    },
-    {
-     "id": 534,
-     "name": "AVP Bid Event Girl's 16U"
-    }
-   ]
-  },
-  "164": {
-   "id": 164,
-   "venue": "Belmont Shore, Long Beach",
-   "date": "2025-09-27",
-   "divisions": [
-    {
-     "id": 525,
-     "name": "Women's A"
-    },
-    {
-     "id": 526,
-     "name": "Women's Unrated"
-    },
-    {
-     "id": 527,
-     "name": "Men's A"
-    },
-    {
-     "id": 528,
-     "name": "Men's Unrated"
-    }
-   ]
-  },
-  "166": {
-   "id": 166,
-   "venue": "Dockweiler, Los Angeles",
-   "date": "2025-09-27",
-   "divisions": [
-    {
-     "id": 531,
-     "name": "Women's Open"
-    },
-    {
-     "id": 532,
-     "name": "Men's Open"
-    }
-   ]
-  },
-  "165": {
-   "id": 165,
-   "venue": "East Beach, Santa Barbara",
-   "date": "2025-09-27",
-   "divisions": [
-    {
-     "id": 529,
-     "name": "Women's B"
-    },
-    {
-     "id": 530,
-     "name": "Men's B"
-    }
-   ]
-  },
-  "163": {
-   "id": 163,
-   "venue": "Marine Ave, Manhattan Beach",
-   "date": "2025-09-21",
-   "divisions": [
-    {
-     "id": 523,
-     "name": "Men's AA"
-    },
-    {
-     "id": 524,
-     "name": "Women's AA"
-    }
-   ]
-  },
-  "162": {
-   "id": 162,
-   "venue": "Mira Costa College, Oceanside",
-   "date": "2025-09-21",
-   "divisions": [
-    {
-     "id": 522,
-     "name": "AVP Bid Event Girl's 14U"
-    },
-    {
-     "id": 521,
-     "name": "AVP Bid Event Boy's 16U"
-    }
-   ]
-  },
-  "161": {
-   "id": 161,
-   "venue": "Belmont Shore, Long Beach",
-   "date": "2025-09-20",
-   "divisions": [
-    {
-     "id": 518,
-     "name": "AVP Bid Event Boy's 14U"
-    },
-    {
-     "id": 520,
-     "name": "AVP Bid Event Girl's 14U"
-    },
-    {
-     "id": 519,
-     "name": "AVP Bid Event Girl's 16U"
-    }
-   ]
-  },
-  "160": {
-   "id": 160,
-   "venue": "Marine Ave, Manhattan Beach",
-   "date": "2025-09-20",
-   "divisions": [
-    {
-     "id": 516,
-     "name": "Women's A"
-    },
-    {
-     "id": 517,
-     "name": "Men's B"
-    }
-   ]
-  },
-  "159": {
-   "id": 159,
-   "venue": "Mira Costa College, Oceanside",
-   "date": "2025-09-20",
-   "divisions": [
-    {
-     "id": 515,
-     "name": "AVP Bid Event Girl's 16U"
-    },
-    {
-     "id": 514,
-     "name": "AVP Bid Event Girl's 18U"
-    }
-   ]
-  },
-  "158": {
-   "id": 158,
-   "venue": "Main Beach, Santa Cruz",
-   "date": "2025-09-20",
-   "divisions": [
-    {
-     "id": 510,
-     "name": "Women's AA"
-    },
-    {
-     "id": 511,
-     "name": "Men's B"
-    },
-    {
-     "id": 512,
-     "name": "Men's AA"
-    },
-    {
-     "id": 513,
-     "name": "Women's B"
-    }
-   ]
-  },
-  "156": {
-   "id": 156,
-   "venue": "Wave Courts, Del Mar, San Diego",
-   "date": "2025-09-14",
-   "divisions": [
-    {
-     "id": 508,
-     "name": "AVP Bid Event Boy's 14U"
-    },
-    {
-     "id": 507,
-     "name": "AVP Bid Event Girl's 14U"
-    }
-   ]
-  },
-  "157": {
-   "id": 157,
-   "venue": "Waterfront Park, Monterey Bay",
-   "date": "2025-09-14",
-   "divisions": [
-    {
-     "id": 509,
-     "name": "Men's A"
-    }
-   ]
-  },
-  "155": {
-   "id": 155,
-   "venue": "East Beach, Santa Barbara",
-   "date": "2025-09-14",
-   "divisions": [
-    {
-     "id": 505,
-     "name": "Men's A"
-    },
-    {
-     "id": 506,
-     "name": "Women's A"
-    }
-   ]
-  },
-  "154": {
-   "id": 154,
-   "venue": "Ocean Park, Santa Monica",
-   "date": "2025-09-14",
-   "divisions": [
-    {
-     "id": 502,
-     "name": "Men's AA"
-    },
-    {
-     "id": 503,
-     "name": "Women's Open"
-    },
-    {
-     "id": 504,
-     "name": "Women's A"
-    }
-   ]
-  },
-  "152": {
-   "id": 152,
-   "venue": "Waterfront Park, Monterey Bay",
-   "date": "2025-09-13",
-   "divisions": [
-    {
-     "id": 498,
-     "name": "Women's AA"
-    }
-   ]
-  },
-  "153": {
-   "id": 153,
-   "venue": "Ocean Park, Santa Monica",
-   "date": "2025-09-13",
-   "divisions": [
-    {
-     "id": 499,
-     "name": "Men's A"
-    },
-    {
-     "id": 500,
-     "name": "Women's B"
-    },
-    {
-     "id": 501,
-     "name": "Women's AA"
-    }
-   ]
-  },
-  "150": {
-   "id": 150,
-   "venue": "Central Beach, Coronado, San Diego",
-   "date": "2025-09-07",
-   "divisions": [
-    {
-     "id": 493,
-     "name": "AVP Bid Event Girl's 14U"
-    },
-    {
-     "id": 494,
-     "name": "AVP Bid Event Girl's 16U"
-    },
-    {
-     "id": 495,
-     "name": "AVP Bid Event Girl's 18U"
-    }
-   ]
-  },
-  "149": {
-   "id": 149,
-   "venue": "Huntington Pier, Huntington Beach",
-   "date": "2025-09-07",
-   "divisions": [
-    {
-     "id": 489,
-     "name": "Coed Junior Championships Coed 18U"
-    },
-    {
-     "id": 491,
-     "name": "Coed Junior Championships Coed 16U"
-    },
-    {
-     "id": 490,
-     "name": "Surf City Days Men's A"
-    },
-    {
-     "id": 487,
-     "name": "Surf City Days Women's A"
-    },
-    {
-     "id": 492,
-     "name": "Surf City Days Men's Unrated"
-    },
-    {
-     "id": 486,
-     "name": "Surf City Days $2,000 Men's Open"
-    },
-    {
-     "id": 488,
-     "name": "Surf City Days $2,000 Women's Open"
-    }
-   ]
-  },
-  "151": {
-   "id": 151,
-   "venue": "East Beach, Santa Barbara",
-   "date": "2025-09-07",
-   "divisions": [
-    {
-     "id": 496,
-     "name": "Women's AA"
-    },
-    {
-     "id": 497,
-     "name": "Men's AA"
-    }
-   ]
-  },
-  "147": {
-   "id": 147,
-   "venue": "Huntington Pier, Huntington Beach",
-   "date": "2025-09-06",
-   "divisions": [
-    {
-     "id": 480,
-     "name": "Surf City Days Coed Unrated"
-    },
-    {
-     "id": 477,
-     "name": "Surf City Days Men's B"
-    },
-    {
-     "id": 478,
-     "name": "Surf City Days Women's B"
-    },
-    {
-     "id": 479,
-     "name": "Surf City Days Men's AA"
-    },
-    {
-     "id": 481,
-     "name": "Surf City Days Women's AA"
-    }
-   ]
-  },
-  "148": {
-   "id": 148,
-   "venue": "Main Beach, Santa Cruz",
-   "date": "2025-09-06",
-   "divisions": [
-    {
-     "id": 482,
-     "name": "Women's Open"
-    },
-    {
-     "id": 483,
-     "name": "Women's A"
-    },
-    {
-     "id": 484,
-     "name": "Men's A"
-    },
-    {
-     "id": 485,
-     "name": "Men's Open"
-    }
-   ]
-  },
   "181": {
    "id": 181,
    "venue": "Central Beach, Coronado, San Diego",
@@ -780,196 +112,6 @@
     {
      "id": 572,
      "name": "Men's B"
-    }
-   ]
-  },
-  "177": {
-   "id": 177,
-   "venue": "Newland, Huntington Beach",
-   "date": "2025-10-19",
-   "divisions": [
-    {
-     "id": 563,
-     "name": "Halloween Haunt 4's"
-    },
-    {
-     "id": 564,
-     "name": "Halloween Haunt 4's"
-    }
-   ]
-  },
-  "178": {
-   "id": 178,
-   "venue": "Main Beach, Laguna Beach",
-   "date": "2025-10-19",
-   "divisions": [
-    {
-     "id": 565,
-     "name": "Men's Open"
-    }
-   ]
-  },
-  "176": {
-   "id": 176,
-   "venue": "Belmont Shore, Long Beach",
-   "date": "2025-10-19",
-   "divisions": [
-    {
-     "id": 559,
-     "name": "Women's AA"
-    },
-    {
-     "id": 560,
-     "name": "Women's B"
-    },
-    {
-     "id": 561,
-     "name": "Men's AA"
-    },
-    {
-     "id": 562,
-     "name": "Men's B"
-    }
-   ]
-  },
-  "175": {
-   "id": 175,
-   "venue": "Belmont Shore, Long Beach",
-   "date": "2025-10-18",
-   "divisions": [
-    {
-     "id": 555,
-     "name": "Women's Open"
-    },
-    {
-     "id": 556,
-     "name": "Men's A"
-    },
-    {
-     "id": 557,
-     "name": "Men's Unrated"
-    },
-    {
-     "id": 558,
-     "name": "Women's A"
-    }
-   ]
-  },
-  "174": {
-   "id": 174,
-   "venue": "Wave Courts, Del Mar, San Diego",
-   "date": "2025-10-12",
-   "divisions": [
-    {
-     "id": 554,
-     "name": "AVP Bid Event"
-    },
-    {
-     "id": 553,
-     "name": "Girl's 12U"
-    }
-   ]
-  },
-  "173": {
-   "id": 173,
-   "venue": "Newland, Huntington Beach",
-   "date": "2025-10-12",
-   "divisions": [
-    {
-     "id": 550,
-     "name": "2025 CBVA Fall Championships: Invitation Only"
-    },
-    {
-     "id": 551,
-     "name": "2025 CBVA Fall Championships: Invitation Only"
-    },
-    {
-     "id": 552,
-     "name": "2025 CBVA Fall Championships: Invitation Only"
-    }
-   ]
-  },
-  "171": {
-   "id": 171,
-   "venue": "Central Beach, Coronado, San Diego",
-   "date": "2025-10-05",
-   "divisions": [
-    {
-     "id": 545,
-     "name": "AVP Bid Event Girl's 14U"
-    },
-    {
-     "id": 548,
-     "name": "AVP Bid Event Girl's 16U"
-    },
-    {
-     "id": 547,
-     "name": "AVP Bid Event Girl's 18U"
-    },
-    {
-     "id": 546,
-     "name": "Coed 18U"
-    }
-   ]
-  },
-  "172": {
-   "id": 172,
-   "venue": "Main Beach, Laguna Beach",
-   "date": "2025-10-05",
-   "divisions": [
-    {
-     "id": 549,
-     "name": "2 x Prize Purse 4's"
-    }
-   ]
-  },
-  "170": {
-   "id": 170,
-   "venue": "Manhattan Pier, Manhattan Beach",
-   "date": "2025-10-05",
-   "divisions": [
-    {
-     "id": 540,
-     "name": "Women's Open"
-    },
-    {
-     "id": 541,
-     "name": "Men's Open"
-    },
-    {
-     "id": 542,
-     "name": "Men's B"
-    },
-    {
-     "id": 543,
-     "name": "Men's A"
-    },
-    {
-     "id": 544,
-     "name": "Women's B"
-    }
-   ]
-  },
-  "169": {
-   "id": 169,
-   "venue": "Main Beach, Santa Cruz",
-   "date": "2025-10-04",
-   "divisions": [
-    {
-     "id": 536,
-     "name": "Women's AA"
-    },
-    {
-     "id": 537,
-     "name": "Men's Open"
-    },
-    {
-     "id": 538,
-     "name": "Women's B"
-    },
-    {
-     "id": 539,
-     "name": "Men's A"
     }
    ]
   },
@@ -1376,10 +518,6 @@
    "date": "2026-03-15",
    "divisions": [
     {
-     "id": 16228,
-     "name": "Women's Unrated"
-    },
-    {
      "id": 16230,
      "name": "Women's A"
     },
@@ -1390,6 +528,10 @@
     {
      "id": 16229,
      "name": "Men's B"
+    },
+    {
+     "id": 16228,
+     "name": "Women's Unrated"
     }
    ]
   },
@@ -1437,12 +579,12 @@
      "name": "Men's A"
     },
     {
-     "id": 16222,
-     "name": "Women's A"
-    },
-    {
      "id": 16220,
      "name": "Women's B"
+    },
+    {
+     "id": 16222,
+     "name": "Women's A"
     }
    ]
   },
@@ -1569,10 +711,6 @@
    "date": "2026-04-19",
    "divisions": [
     {
-     "id": 16947,
-     "name": "Cal Cup Bid + AVP Bid Event Boy's 12U"
-    },
-    {
      "id": 16948,
      "name": "Cal Cup Bid + AVP Bid Event Girl's 12U"
     },
@@ -1696,10 +834,6 @@
      "name": "Cal Cup Bid + AVP Bid Event Boy's 14U"
     },
     {
-     "id": 17382,
-     "name": "Cal Cup Bid + AVP Bid Event Boy's 18U"
-    },
-    {
      "id": 17383,
      "name": "Cal Cup Bid + AVP Bid Event Boy's 16U"
     },
@@ -1782,10 +916,6 @@
    "venue": "Newland, Huntington Beach",
    "date": "2026-04-04",
    "divisions": [
-    {
-     "id": 16253,
-     "name": "Cal Cup Bid + AVP Bid Event Boy's 12U"
-    },
     {
      "id": 16255,
      "name": "Cal Cup Bid + AVP Bid Event Girl's 14U"
@@ -2024,16 +1154,8 @@
      "name": "Cal Cup Bid + AVP Bid Event Girl's 16U"
     },
     {
-     "id": 16365,
-     "name": "Cal Cup Bid + AVP Bid Event Girl's 18U"
-    },
-    {
      "id": 17117,
      "name": "Coed 18U"
-    },
-    {
-     "id": 17118,
-     "name": "Coed 16U"
     }
    ]
   },
@@ -2103,10 +1225,6 @@
    "date": "2026-05-10",
    "divisions": [
     {
-     "id": 17116,
-     "name": "Cal Cup Bid + AVP Bid Event Girl's 14U"
-    },
-    {
      "id": 17378,
      "name": "Mother/Daughter 14/12U"
     },
@@ -2151,10 +1269,6 @@
     {
      "id": 16338,
      "name": "Cal Cup Bid + AVP Bid Event Boy's 14U"
-    },
-    {
-     "id": 16929,
-     "name": "Cal Cup Bid + AVP Bid Event Boy's 18U"
     },
     {
      "id": 16342,
@@ -2427,8 +1541,8 @@
    "date": "2026-06-21",
    "divisions": [
     {
-     "id": 16445,
-     "name": "Father/Daughter 18U"
+     "id": 16442,
+     "name": "Father/Daughter 12U"
     },
     {
      "id": 16443,
@@ -2439,8 +1553,8 @@
      "name": "Father/Daughter 16U"
     },
     {
-     "id": 16442,
-     "name": "Father/Daughter 12U"
+     "id": 16445,
+     "name": "Father/Daughter 18U"
     },
     {
      "id": 16446,
@@ -2449,10 +1563,6 @@
     {
      "id": 17132,
      "name": "Father/Son 14U"
-    },
-    {
-     "id": 17130,
-     "name": "Father/Son 16U"
     }
    ]
   },
@@ -2494,10 +1604,6 @@
     {
      "id": 17125,
      "name": "Cal Cup Bid + AVP Bid Event Girl's 12U"
-    },
-    {
-     "id": 17126,
-     "name": "Cal Cup Bid + AVP Bid Event Boy's 14U"
     },
     {
      "id": 17127,
@@ -2697,10 +1803,6 @@
    "date": "2026-06-13",
    "divisions": [
     {
-     "id": 17026,
-     "name": "Cal Cup Bid + AVP Bid Event Boy's 12U"
-    },
-    {
      "id": 17027,
      "name": "Cal Cup Bid + AVP Bid Event Girl's 12U"
     },
@@ -2711,14 +1813,6 @@
     {
      "id": 17029,
      "name": "Cal Cup Bid + AVP Bid Event Girl's 14U"
-    },
-    {
-     "id": 17031,
-     "name": "Cal Cup Bid + AVP Bid Event Girl's 16U"
-    },
-    {
-     "id": 17033,
-     "name": "Cal Cup Bid + AVP Bid Event Girl's 18U"
     }
    ]
   },
@@ -2823,10 +1917,6 @@
    "date": "2026-06-07",
    "divisions": [
     {
-     "id": 17119,
-     "name": "Cal Cup Bid + AVP Bid Event Girl's 12U"
-    },
-    {
      "id": 17120,
      "name": "Cal Cup Bid + AVP Bid Event Girl's 14U"
     },
@@ -2894,10 +1984,6 @@
     {
      "id": 16402,
      "name": "Cal Cup Bid + AVP Bid Event Girl's 16U"
-    },
-    {
-     "id": 16403,
-     "name": "Cal Cup Bid + AVP Bid Event Girl's 18U"
     }
    ]
   },
@@ -2968,10 +2054,6 @@
      "name": "Cal Cup Bid + AVP Bid Event Boy's 16U"
     },
     {
-     "id": 17143,
-     "name": "Cal Cup Bid + AVP Bid Event Boy's 18U"
-    },
-    {
      "id": 17461,
      "name": "Cal Cup Bid + AVP Bid Event  Boy's 14U"
     }
@@ -3023,10 +2105,6 @@
     {
      "id": 16992,
      "name": "Cal Cup Bid + AVP Bid Event Girl's 14U"
-    },
-    {
-     "id": 16993,
-     "name": "Cal Cup Bid + AVP Bid Event Girl's 16U"
     },
     {
      "id": 16994,
@@ -3250,32 +2328,12 @@
      "name": "Cal Cup Bid + AVP Bid Event Boy's 14U"
     },
     {
-     "id": 16562,
-     "name": "Cal Cup Bid + AVP Bid Event Boy's 16U"
-    },
-    {
-     "id": 16563,
-     "name": "Cal Cup Bid + AVP Bid Event Girl's 16U"
-    },
-    {
      "id": 16564,
      "name": "Cal Cup Bid + AVP Bid Event Boy's 18U"
     },
     {
      "id": 16559,
      "name": "Cal Cup Bid + AVP Bid Event Boy's 12U"
-    },
-    {
-     "id": 16560,
-     "name": "Cal Cup Bid + AVP Bid Event Girl's 12U"
-    },
-    {
-     "id": 16932,
-     "name": "Cal Cup Bid + AVP Bid Event Girl's 14U"
-    },
-    {
-     "id": 16933,
-     "name": "Cal Cup Bid + AVP Bid Event Girl's 18U"
     }
    ]
   },
@@ -3308,36 +2366,8 @@
    "date": "2026-07-14",
    "divisions": [
     {
-     "id": 17058,
-     "name": "Cal Cup Bid + AVP Bid Event Boy's 12U"
-    },
-    {
-     "id": 17059,
-     "name": "Cal Cup Bid + AVP Bid Event Girl's 12U"
-    },
-    {
      "id": 17060,
      "name": "Cal Cup Bid + AVP Bid Event Boy's 14U"
-    },
-    {
-     "id": 17061,
-     "name": "Cal Cup Bid + AVP Bid Event Girl's 14U"
-    },
-    {
-     "id": 17062,
-     "name": "Cal Cup Bid + AVP Bid Event Boy's 16U"
-    },
-    {
-     "id": 17063,
-     "name": "Cal Cup Bid + AVP Bid Event Girl's 16U"
-    },
-    {
-     "id": 17064,
-     "name": "Cal Cup Bid + AVP Bid Event Boy's 18U"
-    },
-    {
-     "id": 17065,
-     "name": "Cal Cup Bid + AVP Bid Event Girl's 18U"
     }
    ]
   },
@@ -3411,10 +2441,6 @@
     {
      "id": 16924,
      "name": "Cal Cup Bid + AVP Bid Event Girl's 16U"
-    },
-    {
-     "id": 16925,
-     "name": "Cal Cup Bid + AVP Bid Event Boy's 18U"
     }
    ]
   },
@@ -3439,10 +2465,6 @@
    "date": "2026-07-11",
    "divisions": [
     {
-     "id": 17288,
-     "name": "Cal Cup Bid + AVP Bid Event Boy's 14U"
-    },
-    {
      "id": 17289,
      "name": "Cal Cup Bid + AVP Bid Event Girl's 14U"
     },
@@ -3453,10 +2475,6 @@
     {
      "id": 17293,
      "name": "Cal Cup Bid + AVP Bid Event Girl's 18U"
-    },
-    {
-     "id": 17286,
-     "name": "Cal Cup Bid + AVP Bid Event Boy's 12U"
     },
     {
      "id": 17290,
@@ -3574,10 +2592,6 @@
      "name": "Cal Cup Bid + AVP Bid Event Boy's 18U"
     },
     {
-     "id": 17000,
-     "name": "Cal Cup Bid + AVP Bid Event Boy's 14U"
-    },
-    {
      "id": 16999,
      "name": "Cal Cup Bid + AVP Bid Event Girl's 18U"
     }
@@ -3686,6 +2700,192 @@
     }
    ]
   },
+  "4831": {
+   "id": 4831,
+   "venue": "Wave Courts, Del Mar, San Diego",
+   "date": "2026-08-30",
+   "divisions": [
+    {
+     "id": 17151,
+     "name": "AVP Bid Event Boy's 16U"
+    },
+    {
+     "id": 17152,
+     "name": "AVP Bid Event Boy's 18U"
+    },
+    {
+     "id": 17485,
+     "name": "AVP Bid Event Boy's 14U"
+    }
+   ]
+  },
+  "4720": {
+   "id": 4720,
+   "venue": "Belmont Shore, Long Beach",
+   "date": "2026-08-30",
+   "divisions": [
+    {
+     "id": 16685,
+     "name": "AVP Bid Event Girl's 12U"
+    },
+    {
+     "id": 16686,
+     "name": "AVP Bid Event Boy's 14U"
+    },
+    {
+     "id": 16687,
+     "name": "AVP Bid Event Girl's 14U"
+    },
+    {
+     "id": 16688,
+     "name": "AVP Bid Event Girl's 16U"
+    }
+   ]
+  },
+  "4719": {
+   "id": 4719,
+   "venue": "Waterfront Park, Monterey Bay",
+   "date": "2026-08-29",
+   "divisions": [
+    {
+     "id": 16684,
+     "name": "Women's A"
+    }
+   ]
+  },
+  "4716": {
+   "id": 4716,
+   "venue": "Central Beach, Coronado, San Diego",
+   "date": "2026-08-23",
+   "divisions": [
+    {
+     "id": 16672,
+     "name": "AVP Bid Event Girl's 12U"
+    },
+    {
+     "id": 16673,
+     "name": "AVP Bid Event Girl's 14U"
+    },
+    {
+     "id": 16674,
+     "name": "AVP Bid Event Girl's 16U"
+    },
+    {
+     "id": 16675,
+     "name": "AVP Bid Event Girl's 18U"
+    }
+   ]
+  },
+  "4715": {
+   "id": 4715,
+   "venue": "Manhattan Pier, Manhattan Beach8/23/2026",
+   "date": "2026-08-23",
+   "divisions": [
+    {
+     "id": 16671,
+     "name": "Mich Ultra Premier Tour: $2,500 Women's Open"
+    },
+    {
+     "id": 16670,
+     "name": "Mich Ultra Premier Tour: $2,500 Men's Open"
+    },
+    {
+     "id": 16669,
+     "name": "Women's A"
+    }
+   ]
+  },
+  "4711": {
+   "id": 4711,
+   "venue": "Manhattan Pier, Manhattan Beach",
+   "date": "2026-08-22",
+   "divisions": [
+    {
+     "id": 16658,
+     "name": "Men's B"
+    },
+    {
+     "id": 16659,
+     "name": "Women's B"
+    }
+   ]
+  },
+  "4712": {
+   "id": 4712,
+   "venue": "Ocean Beach, San Diego",
+   "date": "2026-08-22",
+   "divisions": [
+    {
+     "id": 16661,
+     "name": "Mich Ultra Premier Tour: $2,500 Women's Open"
+    },
+    {
+     "id": 16660,
+     "name": "Mich Ultra Premier Tour: $2,500 Men's Open"
+    }
+   ]
+  },
+  "4713": {
+   "id": 4713,
+   "venue": "Main Beach, Santa Cruz",
+   "date": "2026-08-22",
+   "divisions": [
+    {
+     "id": 16662,
+     "name": "Men's B"
+    },
+    {
+     "id": 16663,
+     "name": "Women's B"
+    },
+    {
+     "id": 16664,
+     "name": "Men's AA"
+    },
+    {
+     "id": 16665,
+     "name": "Women's AA"
+    }
+   ]
+  },
+  "4730": {
+   "id": 4730,
+   "venue": "Ocean Park, Santa Monica8/16/2026",
+   "date": "2026-08-16",
+   "divisions": [
+    {
+     "id": 16723,
+     "name": "$7,500 Gene Selznick Open Women's Open"
+    },
+    {
+     "id": 16722,
+     "name": "$7,500 Gene Selznick Open Men's Open"
+    }
+   ]
+  },
+  "4729": {
+   "id": 4729,
+   "venue": "Ocean Park, Santa Monica",
+   "date": "2026-08-15",
+   "divisions": [
+    {
+     "id": 16718,
+     "name": "Women's B"
+    },
+    {
+     "id": 16719,
+     "name": "Men's B"
+    },
+    {
+     "id": 16720,
+     "name": "Coed Open"
+    },
+    {
+     "id": 16908,
+     "name": "Coed A"
+    }
+   ]
+  },
   "4820": {
    "id": 4820,
    "venue": "Belmont Shore, Long Beach",
@@ -3730,7 +2930,7 @@
   },
   "4672": {
    "id": 4672,
-   "venue": "2026 Cal Cup ChampionshipsHermosa Pier, Hermosa Beach",
+   "venue": "2026 Cal Cup ChampionshipsHermosa Pier, Hermosa Beach8/9/2026",
    "date": "2026-08-09",
    "divisions": [
     {
@@ -3923,6 +3123,664 @@
     {
      "id": 16906,
      "name": "Men's AA"
+    }
+   ]
+  },
+  "4822": {
+   "id": 4822,
+   "venue": "Belmont Shore, Long Beach",
+   "date": "2026-09-27",
+   "divisions": [
+    {
+     "id": 17106,
+     "name": "AVP Bid Event Girl's 12U"
+    },
+    {
+     "id": 17108,
+     "name": "AVP Bid Event Girl's 14U"
+    },
+    {
+     "id": 17110,
+     "name": "AVP Bid Event Girl's 16U"
+    }
+   ]
+  },
+  "4785": {
+   "id": 4785,
+   "venue": "North Beach, Santa Monica",
+   "date": "2026-09-27",
+   "divisions": [
+    {
+     "id": 16885,
+     "name": "Women's B"
+    },
+    {
+     "id": 16884,
+     "name": "Men's B"
+    },
+    {
+     "id": 16883,
+     "name": "Coed A"
+    },
+    {
+     "id": 16882,
+     "name": "Coed AAA"
+    }
+   ]
+  },
+  "4740": {
+   "id": 4740,
+   "venue": "Belmont Shore, Long Beach",
+   "date": "2026-09-26",
+   "divisions": [
+    {
+     "id": 16744,
+     "name": "Men's Unrated"
+    },
+    {
+     "id": 16745,
+     "name": "Women's Unrated"
+    },
+    {
+     "id": 16746,
+     "name": "Men's A"
+    },
+    {
+     "id": 16747,
+     "name": "Women's A"
+    }
+   ]
+  },
+  "4742": {
+   "id": 4742,
+   "venue": "Dockweiler, Los Angeles",
+   "date": "2026-09-26",
+   "divisions": [
+    {
+     "id": 16750,
+     "name": "Men's Open"
+    },
+    {
+     "id": 16751,
+     "name": "Women's Open"
+    }
+   ]
+  },
+  "4733": {
+   "id": 4733,
+   "venue": "Waterfront Park, Monterey Bay",
+   "date": "2026-09-26",
+   "divisions": [
+    {
+     "id": 16728,
+     "name": "Women's AA"
+    }
+   ]
+  },
+  "4738": {
+   "id": 4738,
+   "venue": "Wave Courts, Del Mar, San Diego",
+   "date": "2026-09-20",
+   "divisions": [
+    {
+     "id": 16741,
+     "name": "Coed 18U"
+    },
+    {
+     "id": 16740,
+     "name": "AVP Bid Event Girl's 14U"
+    }
+   ]
+  },
+  "4739": {
+   "id": 4739,
+   "venue": "Marine Ave, Manhattan Beach",
+   "date": "2026-09-20",
+   "divisions": [
+    {
+     "id": 16742,
+     "name": "Men's AA"
+    },
+    {
+     "id": 16743,
+     "name": "Women's AA"
+    }
+   ]
+  },
+  "4821": {
+   "id": 4821,
+   "venue": "Belmont Shore, Long Beach",
+   "date": "2026-09-19",
+   "divisions": [
+    {
+     "id": 17101,
+     "name": "AVP Bid Event Girl's 12U"
+    },
+    {
+     "id": 17103,
+     "name": "AVP Bid Event Girl's 14U"
+    },
+    {
+     "id": 17105,
+     "name": "AVP Bid Event Girl's 16U"
+    }
+   ]
+  },
+  "4736": {
+   "id": 4736,
+   "venue": "Marine Ave, Manhattan Beach",
+   "date": "2026-09-19",
+   "divisions": [
+    {
+     "id": 16735,
+     "name": "Men's B"
+    },
+    {
+     "id": 16736,
+     "name": "Women's A"
+    }
+   ]
+  },
+  "4728": {
+   "id": 4728,
+   "venue": "Waterfront Park, Monterey Bay",
+   "date": "2026-09-19",
+   "divisions": [
+    {
+     "id": 16717,
+     "name": "Men's Open"
+    }
+   ]
+  },
+  "4735": {
+   "id": 4735,
+   "venue": "Mira Costa College, Oceanside",
+   "date": "2026-09-19",
+   "divisions": [
+    {
+     "id": 16734,
+     "name": "AVP Bid Event Girl's 18U"
+    }
+   ]
+  },
+  "4832": {
+   "id": 4832,
+   "venue": "Central Beach, Coronado, San Diego",
+   "date": "2026-09-13",
+   "divisions": [
+    {
+     "id": 17153,
+     "name": "AVP Bid Event Girl's 12U"
+    },
+    {
+     "id": 17154,
+     "name": "AVP Bid Event Girl's 14U"
+    },
+    {
+     "id": 17155,
+     "name": "AVP Bid Event Girl's 16U"
+    },
+    {
+     "id": 17156,
+     "name": "AVP Bid Event Girl's 18U"
+    }
+   ]
+  },
+  "4795": {
+   "id": 4795,
+   "venue": "Ocean Park, Santa Monica",
+   "date": "2026-09-13",
+   "divisions": [
+    {
+     "id": 16912,
+     "name": "Women's Open"
+    },
+    {
+     "id": 16913,
+     "name": "Men's AA"
+    },
+    {
+     "id": 16914,
+     "name": "Women's A"
+    }
+   ]
+  },
+  "4724": {
+   "id": 4724,
+   "venue": "Main Beach, Santa Cruz",
+   "date": "2026-09-12",
+   "divisions": [
+    {
+     "id": 16703,
+     "name": "Men's Open"
+    },
+    {
+     "id": 16704,
+     "name": "Women's Open"
+    },
+    {
+     "id": 16701,
+     "name": "Men's A"
+    },
+    {
+     "id": 16702,
+     "name": "Women's A"
+    }
+   ]
+  },
+  "4794": {
+   "id": 4794,
+   "venue": "Ocean Park, Santa Monica",
+   "date": "2026-09-12",
+   "divisions": [
+    {
+     "id": 16909,
+     "name": "Women's AA"
+    },
+    {
+     "id": 16910,
+     "name": "Men's B"
+    },
+    {
+     "id": 16911,
+     "name": "Women's B"
+    }
+   ]
+  },
+  "4721": {
+   "id": 4721,
+   "venue": "Hermosa Pier, Hermosa Beach",
+   "date": "2026-09-06",
+   "divisions": [
+    {
+     "id": 16689,
+     "name": "Men's B"
+    },
+    {
+     "id": 16690,
+     "name": "Coed A"
+    },
+    {
+     "id": 16691,
+     "name": "Women's AA"
+    },
+    {
+     "id": 16692,
+     "name": "Coed AAA"
+    }
+   ]
+  },
+  "4722": {
+   "id": 4722,
+   "venue": "Manhattan Pier, Manhattan Beach",
+   "date": "2026-09-06",
+   "divisions": [
+    {
+     "id": 16693,
+     "name": "Men's Unrated"
+    },
+    {
+     "id": 16694,
+     "name": "Women's A"
+    },
+    {
+     "id": 16695,
+     "name": "Men's AA"
+    }
+   ]
+  },
+  "4718": {
+   "id": 4718,
+   "venue": "Hermosa Pier, Hermosa Beach9/5/2026",
+   "date": "2026-09-05",
+   "divisions": [
+    {
+     "id": 16683,
+     "name": "Mich Ultra Premier Tour: $2,500 Women's Open"
+    },
+    {
+     "id": 16682,
+     "name": "Mich Ultra Premier Tour: $2,500 Men's Open"
+    },
+    {
+     "id": 16681,
+     "name": "Coed B"
+    }
+   ]
+  },
+  "4717": {
+   "id": 4717,
+   "venue": "Manhattan Pier, Manhattan Beach",
+   "date": "2026-09-05",
+   "divisions": [
+    {
+     "id": 16927,
+     "name": "AVP Bid Event Boy's 16U"
+    },
+    {
+     "id": 16678,
+     "name": "AVP Bid Event Boy's 14U"
+    },
+    {
+     "id": 16679,
+     "name": "AVP Bid Event Girl's 14U"
+    },
+    {
+     "id": 16680,
+     "name": "AVP Bid Event Girl's 16U"
+    }
+   ]
+  },
+  "4803": {
+   "id": 4803,
+   "venue": "Newland, Huntington Beach",
+   "date": "2026-10-24",
+   "divisions": [
+    {
+     "id": 17381,
+     "name": "Adult Halloween Haunt/Fall Fours(4's)  Coed 4's"
+    },
+    {
+     "id": 17379,
+     "name": "Halloween Haunt/Fall Fours Girl's 14U 4's"
+    },
+    {
+     "id": 17380,
+     "name": "Halloween Haunt/Fall Fours B&G Mixed Coed 12U"
+    },
+    {
+     "id": 16983,
+     "name": "Halloween Haunt/Fall Fours(4's) Girl's 18U 4's"
+    },
+    {
+     "id": 17487,
+     "name": "Halloween Haunt/Fall Fours(4's)  Boy's 16U 4's"
+    },
+    {
+     "id": 16984,
+     "name": "Halloween Haunt/Fall Fours(4's)  Boy's 14U 4's"
+    }
+   ]
+  },
+  "4755": {
+   "id": 4755,
+   "venue": "Main Beach, Santa Cruz",
+   "date": "2026-10-24",
+   "divisions": [
+    {
+     "id": 16785,
+     "name": "Men's A"
+    },
+    {
+     "id": 16786,
+     "name": "Women's A"
+    },
+    {
+     "id": 16787,
+     "name": "Men's Open"
+    },
+    {
+     "id": 16788,
+     "name": "Women's Open"
+    }
+   ]
+  },
+  "4756": {
+   "id": 4756,
+   "venue": "Ocean Park, Santa Monica",
+   "date": "2026-10-24",
+   "divisions": [
+    {
+     "id": 16789,
+     "name": "Women's B"
+    },
+    {
+     "id": 16791,
+     "name": "Women's AA"
+    },
+    {
+     "id": 16790,
+     "name": "Men's AA"
+    }
+   ]
+  },
+  "4833": {
+   "id": 4833,
+   "venue": "Wave Courts, Del Mar, San Diego",
+   "date": "2026-10-18",
+   "divisions": [
+    {
+     "id": 17162,
+     "name": "AVP Bid Event Girl's 14U"
+    }
+   ]
+  },
+  "4754": {
+   "id": 4754,
+   "venue": "Huntington Pier, Huntington Beach",
+   "date": "2026-10-18",
+   "divisions": [
+    {
+     "id": 16784,
+     "name": "Men's Open"
+    }
+   ]
+  },
+  "4887": {
+   "id": 4887,
+   "venue": "Dukes Surf City FestivalHuntington Pier, Huntington Beach",
+   "date": "2026-10-11",
+   "divisions": [
+    {
+     "id": 17369,
+     "name": "Mich Ultra Premier Tour $2,500  Women's Open"
+    },
+    {
+     "id": 17368,
+     "name": "Mich Ultra Premier Tour $2,500  Men's Open"
+    },
+    {
+     "id": 17367,
+     "name": "Men's A"
+    },
+    {
+     "id": 17366,
+     "name": "Women's A"
+    },
+    {
+     "id": 17370,
+     "name": "Men's Unrated"
+    }
+   ]
+  },
+  "4752": {
+   "id": 4752,
+   "venue": "Dockweiler, Los Angeles",
+   "date": "2026-10-11",
+   "divisions": [
+    {
+     "id": 16778,
+     "name": "Men's B"
+    },
+    {
+     "id": 16780,
+     "name": "Men's AA"
+    }
+   ]
+  },
+  "4888": {
+   "id": 4888,
+   "venue": "Dukes Surf City FestivalHuntington Pier, Huntington Beach",
+   "date": "2026-10-10",
+   "divisions": [
+    {
+     "id": 17374,
+     "name": "Women's AA"
+    },
+    {
+     "id": 17375,
+     "name": "Men's AA"
+    },
+    {
+     "id": 17373,
+     "name": "Coed Unrated"
+    },
+    {
+     "id": 17371,
+     "name": "Men's B"
+    },
+    {
+     "id": 17376,
+     "name": "Women's B"
+    }
+   ]
+  },
+  "4793": {
+   "id": 4793,
+   "venue": "Waterfront Park, Monterey Bay",
+   "date": "2026-10-10",
+   "divisions": [
+    {
+     "id": 16907,
+     "name": "Men's A"
+    }
+   ]
+  },
+  "4914": {
+   "id": 4914,
+   "venue": "Main Beach, Santa Cruz",
+   "date": "2026-10-10",
+   "divisions": [
+    {
+     "id": 17481,
+     "name": "Coed A"
+    },
+    {
+     "id": 17482,
+     "name": "Coed Open"
+    },
+    {
+     "id": 17489,
+     "name": "Men's B"
+    },
+    {
+     "id": 17490,
+     "name": "Women's B"
+    }
+   ]
+  },
+  "4747": {
+   "id": 4747,
+   "venue": "Central Beach, Coronado, San Diego",
+   "date": "2026-10-04",
+   "divisions": [
+    {
+     "id": 16765,
+     "name": "AVP Bid Event Girl's 16U"
+    },
+    {
+     "id": 16766,
+     "name": "AVP Bid Event Girl's 18U"
+    },
+    {
+     "id": 17161,
+     "name": "AVP Bid Event Boy's 14U"
+    }
+   ]
+  },
+  "4770": {
+   "id": 4770,
+   "venue": "Belmont Shore, Long Beach",
+   "date": "2026-10-04",
+   "divisions": [
+    {
+     "id": 16840,
+     "name": "Men's AA"
+    },
+    {
+     "id": 16841,
+     "name": "Women's AA"
+    },
+    {
+     "id": 16839,
+     "name": "Men's B"
+    },
+    {
+     "id": 17232,
+     "name": "Women's B"
+    }
+   ]
+  },
+  "4790": {
+   "id": 4790,
+   "venue": "Manhattan Pier, Manhattan Beach",
+   "date": "2026-10-04",
+   "divisions": [
+    {
+     "id": 16902,
+     "name": "Men's A"
+    },
+    {
+     "id": 16903,
+     "name": "Men's Open"
+    },
+    {
+     "id": 16904,
+     "name": "Women's AA"
+    },
+    {
+     "id": 17180,
+     "name": "Women's Unrated"
+    },
+    {
+     "id": 16901,
+     "name": "Men's Unrated"
+    }
+   ]
+  },
+  "4768": {
+   "id": 4768,
+   "venue": "Belmont Shore, Long Beach",
+   "date": "2026-10-03",
+   "divisions": [
+    {
+     "id": 16837,
+     "name": "Women's A"
+    },
+    {
+     "id": 16836,
+     "name": "Men's A"
+    },
+    {
+     "id": 17231,
+     "name": "Women's Open"
+    },
+    {
+     "id": 17230,
+     "name": "Men's Open"
+    }
+   ]
+  },
+  "4745": {
+   "id": 4745,
+   "venue": "Main Beach, Santa Cruz",
+   "date": "2026-10-03",
+   "divisions": [
+    {
+     "id": 16756,
+     "name": "Men's AA"
+    },
+    {
+     "id": 16758,
+     "name": "Men's B"
+    },
+    {
+     "id": 16755,
+     "name": "Women's B"
+    },
+    {
+     "id": 16757,
+     "name": "Women's AA"
     }
    ]
   }

@@ -2,8 +2,8 @@
  "group": "2027_younger",
  "label": "2027 and younger \u2014 top 60",
  "window": [
-  "2025-09-14",
-  "2026-09-14"
+  "2025-10-24",
+  "2026-10-24"
  ],
  "players": [
   {
@@ -18,7 +18,7 @@
    "peak": 12.848,
    "w": 263,
    "l": 55,
-   "comps": 12,
+   "comps": 13,
    "cells": {}
   },
   {
@@ -29,8 +29,8 @@
    "height": "6' 0\"",
    "grad": 2026,
    "city": "Stockdale, TX",
-   "tv": 10.774,
-   "peak": 10.774,
+   "tv": 10.778,
+   "peak": 10.778,
    "w": 456,
    "l": 156,
    "comps": 10,
@@ -57,11 +57,11 @@
    "height": "6' 1\"",
    "grad": 2027,
    "city": "Redondo Beach, CA",
-   "tv": 10.583,
+   "tv": 10.56,
    "peak": 10.213,
    "w": 184,
    "l": 71,
-   "comps": 17,
+   "comps": 18,
    "cells": {
     "31567:117695": {
      "f": 13,
@@ -186,10 +186,10 @@
    "grad": 2027,
    "city": "Celina, TX",
    "tv": 10.479,
-   "peak": 10.93,
+   "peak": 10.931,
    "w": 542,
    "l": 196,
-   "comps": 29,
+   "comps": 30,
    "cells": {
     "31567:117695": {
      "f": 3,
@@ -329,7 +329,7 @@
    "peak": 10.315,
    "w": 246,
    "l": 67,
-   "comps": 4,
+   "comps": 3,
    "cells": {
     "34243:126054": {
      "f": 5,
@@ -363,7 +363,7 @@
    "peak": 10.141,
    "w": 371,
    "l": 98,
-   "comps": 26,
+   "comps": 27,
    "cells": {
     "31567:117695": {
      "f": 13,
@@ -435,8 +435,8 @@
    "height": "5' 7\"",
    "grad": 2028,
    "city": "Los Angeles, CA",
-   "tv": 10.095,
-   "peak": 10.168,
+   "tv": 10.078,
+   "peak": 10.149,
    "w": 258,
    "l": 62,
    "comps": 10,
@@ -491,7 +491,7 @@
    "peak": 9.37,
    "w": 196,
    "l": 32,
-   "comps": 7,
+   "comps": 4,
    "cells": {
     "38087:139560": {
      "f": 5,
@@ -510,10 +510,10 @@
    "grad": 2028,
    "city": "Carolina Beach, NC",
    "tv": 9.966,
-   "peak": 10.014,
+   "peak": 10.015,
    "w": 349,
    "l": 104,
-   "comps": 18,
+   "comps": 15,
    "cells": {
     "32578:120658": {
      "f": 1,
@@ -530,6 +530,34 @@
    }
   },
   {
+   "name": "Reagan Carlin",
+   "id": 92974,
+   "region": "CA",
+   "club": "WAVE Beach",
+   "height": "5' 10\"",
+   "grad": 2030,
+   "city": "Encinitas, CA",
+   "tv": 9.942,
+   "peak": 9.259,
+   "w": 280,
+   "l": 47,
+   "comps": 8,
+   "cells": {
+    "34180:125823": {
+     "f": 9,
+     "partners": [
+      "Parker Wilson"
+     ]
+    },
+    "38087:139560": {
+     "f": 5,
+     "partners": [
+      "Brooke Proctor"
+     ]
+    }
+   }
+  },
+  {
    "name": "Lerin Rosenthal",
    "id": 5973,
    "region": "CA",
@@ -537,7 +565,7 @@
    "height": "5' 11\"",
    "grad": 2027,
    "city": "Hermosa Beach, CA",
-   "tv": 9.958,
+   "tv": 9.934,
    "peak": 9.797,
    "w": 242,
    "l": 116,
@@ -583,34 +611,6 @@
      "f": 5,
      "partners": [
       "Allyn Hilt"
-     ]
-    }
-   }
-  },
-  {
-   "name": "Reagan Carlin",
-   "id": 92974,
-   "region": "CA",
-   "club": "WAVE Beach",
-   "height": "5' 10\"",
-   "grad": 2030,
-   "city": "Encinitas, CA",
-   "tv": 9.942,
-   "peak": 9.259,
-   "w": 280,
-   "l": 47,
-   "comps": 11,
-   "cells": {
-    "34180:125823": {
-     "f": 9,
-     "partners": [
-      "Parker Wilson"
-     ]
-    },
-    "38087:139560": {
-     "f": 5,
-     "partners": [
-      "Brooke Proctor"
      ]
     }
    }
@@ -739,11 +739,11 @@
    "height": "5' 11\"",
    "grad": 2027,
    "city": "Riverside, CA",
-   "tv": 9.836,
-   "peak": 9.953,
+   "tv": 9.838,
+   "peak": 9.954,
    "w": 466,
    "l": 128,
-   "comps": 14,
+   "comps": 12,
    "cells": {
     "34243:126054": {
      "f": 5,
@@ -783,7 +783,7 @@
    "peak": 9.934,
    "w": 252,
    "l": 78,
-   "comps": 16,
+   "comps": 17,
    "cells": {
     "31567:117695": {
      "f": 5,
@@ -849,11 +849,11 @@
    "height": "5' 9\"",
    "grad": 2027,
    "city": "Long Beach, CA",
-   "tv": 9.757,
-   "peak": 10.368,
+   "tv": 9.756,
+   "peak": 10.369,
    "w": 384,
    "l": 131,
-   "comps": 24,
+   "comps": 26,
    "cells": {
     "31567:117695": {
      "f": 9,
@@ -913,11 +913,11 @@
    "height": "5' 9\"",
    "grad": 2027,
    "city": "Manhattan Beach, CA",
-   "tv": 9.748,
-   "peak": 9.793,
+   "tv": 9.73,
+   "peak": 9.773,
    "w": 365,
    "l": 214,
-   "comps": 27,
+   "comps": 25,
    "cells": {
     "31567:117695": {
      "f": 13,
@@ -1047,11 +1047,11 @@
    "height": "6'",
    "grad": 2027,
    "city": "Del Mar, CA",
-   "tv": 9.677,
+   "tv": 9.676,
    "peak": 9.883,
    "w": 221,
    "l": 86,
-   "comps": 10,
+   "comps": 9,
    "cells": {
     "31483:126666": {
      "f": 1,
@@ -1284,10 +1284,10 @@
    "grad": 2027,
    "city": "Redondo Beach, CA",
    "tv": 9.607,
-   "peak": 9.815,
+   "peak": 9.816,
    "w": 480,
    "l": 175,
-   "comps": 25,
+   "comps": 23,
    "cells": {
     "31567:117695": {
      "f": 17,
@@ -1353,11 +1353,11 @@
    "height": "5' 11\"",
    "grad": 2027,
    "city": "Rancho Palos Verdes, CA",
-   "tv": 9.596,
+   "tv": 9.595,
    "peak": 10.107,
    "w": 596,
    "l": 225,
-   "comps": 28,
+   "comps": 26,
    "cells": {
     "31567:117695": {
      "f": 5,
@@ -1553,7 +1553,7 @@
    "name": "Madison Gillinger",
    "id": 99596,
    "region": "CA",
-   "club": "Spiker Beach",
+   "club": "Spiker Beach Volleyball Club",
    "height": "5' 11\"",
    "grad": 2028,
    "city": "Huntington Beach, CA",
@@ -1561,7 +1561,7 @@
    "peak": 9.566,
    "w": 253,
    "l": 128,
-   "comps": 16,
+   "comps": 13,
    "cells": {
     "34180:125823": {
      "f": 5,
@@ -1609,8 +1609,8 @@
    "height": "5' 10\"",
    "grad": 2028,
    "city": "Del Mar, CA",
-   "tv": 9.504,
-   "peak": 9.504,
+   "tv": 9.503,
+   "peak": 9.503,
    "w": 292,
    "l": 125,
    "comps": 21,
@@ -1668,7 +1668,7 @@
    "grad": 2027,
    "city": "Phoenix, AZ",
    "tv": 9.488,
-   "peak": 9.668,
+   "peak": 9.669,
    "w": 200,
    "l": 188,
    "comps": 13,
@@ -1723,7 +1723,7 @@
    "peak": 9.478,
    "w": 227,
    "l": 140,
-   "comps": 11,
+   "comps": 12,
    "cells": {
     "38087:139559": {
      "f": 17,
@@ -1955,7 +1955,7 @@
    "peak": 9.815,
    "w": 281,
    "l": 92,
-   "comps": 13,
+   "comps": 12,
    "cells": {
     "31567:117695": {
      "f": 5,
@@ -2053,7 +2053,7 @@
    "peak": 9.572,
    "w": 357,
    "l": 126,
-   "comps": 11,
+   "comps": 10,
    "cells": {
     "38087:139559": {
      "f": 17,
@@ -2269,7 +2269,7 @@
    "peak": 9.476,
    "w": 526,
    "l": 151,
-   "comps": 19,
+   "comps": 20,
    "cells": {
     "31567:117695": {
      "f": 13,
@@ -2339,7 +2339,7 @@
    "peak": 9.29,
    "w": 407,
    "l": 103,
-   "comps": 11,
+   "comps": 10,
    "cells": {
     "34243:126054": {
      "f": 33,
@@ -2421,11 +2421,11 @@
    "height": "5' 9\"",
    "grad": 2027,
    "city": "Jacksonville Beach, FL",
-   "tv": 9.221,
+   "tv": 9.22,
    "peak": 8.753,
    "w": 366,
    "l": 136,
-   "comps": 22,
+   "comps": 20,
    "cells": {
     "31567:117695": {
      "f": 13,
@@ -2479,7 +2479,7 @@
    "height": null,
    "grad": 2028,
    "city": "San Luis Obispo, CA",
-   "tv": 9.216,
+   "tv": 9.215,
    "peak": 9.35,
    "w": 169,
    "l": 67,
@@ -2593,7 +2593,7 @@
    "peak": 9.33,
    "w": 283,
    "l": 82,
-   "comps": 14,
+   "comps": 13,
    "cells": {
     "34243:126054": {
      "f": 33,
@@ -2715,11 +2715,11 @@
    "height": "5' 7\"",
    "grad": 2027,
    "city": "Downey, CA",
-   "tv": 9.089,
-   "peak": 9.089,
+   "tv": 9.088,
+   "peak": 9.088,
    "w": 339,
    "l": 201,
-   "comps": 24,
+   "comps": 22,
    "cells": {
     "31567:117695": {
      "f": 13,
@@ -2765,7 +2765,7 @@
    "peak": 9.257,
    "w": 455,
    "l": 198,
-   "comps": 11,
+   "comps": 10,
    "cells": {
     "38087:139559": {
      "f": 17,
@@ -2893,11 +2893,11 @@
    "height": "5' 11\"",
    "grad": 2028,
    "city": "San Juan Capistrano, CA",
-   "tv": 9.041,
+   "tv": 9.04,
    "peak": 9.176,
    "w": 228,
    "l": 124,
-   "comps": 16,
+   "comps": 14,
    "cells": {
     "34180:125823": {
      "f": 5,
@@ -2991,7 +2991,7 @@
    "height": "5' 11\"",
    "grad": 2029,
    "city": "San Luis Obispo, CA",
-   "tv": 9,
+   "tv": 8.999,
    "peak": 8.872,
    "w": 160,
    "l": 67,
@@ -3333,6 +3333,75 @@
   }
  ],
  "pairs": [
+  {
+   "key": "41940:152942",
+   "tid": 41940,
+   "tdId": 152942,
+   "event": "10/3/26, Belmont Shore, Long Beach",
+   "short": "10/3/26, Belmont Shore",
+   "division": "Womens Open",
+   "field": 7,
+   "date": "2026-10-03",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Sandie Souza",
+     "id": 2771,
+     "f": 3
+    },
+    {
+     "name": "Simrin Adams",
+     "id": 25289,
+     "f": 3
+    }
+   ]
+  },
+  {
+   "key": "41843:152582",
+   "tid": 41843,
+   "tdId": 152582,
+   "event": "9/26/26, Dockweiler, Los Angeles",
+   "short": "9/26/26, Dockweiler, Los",
+   "division": "Womens Open",
+   "field": 4,
+   "date": "2026-09-26",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Olivia Herron",
+     "id": 28688,
+     "f": 1
+    },
+    {
+     "name": "Simrin Adams",
+     "id": 25289,
+     "f": 1
+    }
+   ]
+  },
+  {
+   "key": "41724:152250",
+   "tid": 41724,
+   "tdId": 152250,
+   "event": "9/19/26, Mira Costa College, Oceanside",
+   "short": "9/19/26, Mira Costa",
+   "division": "Girls 18U",
+   "field": 11,
+   "date": "2026-09-19",
+   "sanction": "AVPA",
+   "players": [
+    {
+     "name": "Charlotte Jansen",
+     "id": 161398,
+     "f": 1
+    },
+    {
+     "name": "Olivia Marroquin",
+     "id": 96236,
+     "f": 1
+    }
+   ]
+  },
   {
    "key": "35687:130674",
    "tid": 35687,
@@ -4574,221 +4643,14 @@
      "f": 5
     }
    ]
-  },
-  {
-   "key": "33135:122337",
-   "tid": 33135,
-   "tdId": 122337,
-   "event": "2025 CBVA Fall Championships: Invitation Only Girl's 18u at Newland, Huntington Beach",
-   "short": "CBVA Fall Champs:",
-   "division": "Girls 18U",
-   "field": 5,
-   "date": "2025-10-12",
-   "sanction": "AVPA",
-   "players": [
-    {
-     "name": "Sammy Nammack",
-     "id": 53164,
-     "f": 1
-    },
-    {
-     "name": "Addison Choi",
-     "id": 5160,
-     "f": 1
-    }
-   ]
-  },
-  {
-   "key": "33029:121953",
-   "tid": 33029,
-   "tdId": 121953,
-   "event": "CBVA Fall Championship Bid + AVP Bid Event Girl's 18u at Central Beach, Coronado, San Diego",
-   "short": "CBVA Fall Champ Bid + AVP",
-   "division": "Girls 18U",
-   "field": 9,
-   "date": "2025-10-05",
-   "sanction": "AVPA",
-   "players": [
-    {
-     "name": "Brooke Proctor",
-     "id": 91896,
-     "f": 2
-    },
-    {
-     "name": "Reagan Carlin",
-     "id": 92974,
-     "f": 2
-    }
-   ]
-  },
-  {
-   "key": "23700:119582",
-   "tid": 23700,
-   "tdId": 119582,
-   "event": "GNBV National Recruiting Showcase Oct 2025",
-   "short": "GNBV Nat'l Recruiting",
-   "division": "16U Elite (1300 Pts Required)",
-   "field": 14,
-   "date": "2025-10-05",
-   "sanction": "BVNE",
-   "players": [
-    {
-     "name": "Haisley Flanagan",
-     "id": 64896,
-     "f": 1
-    },
-    {
-     "name": "Charlotte Jansen",
-     "id": 161398,
-     "f": 1
-    }
-   ]
-  },
-  {
-   "key": "31981:119037",
-   "tid": 31981,
-   "tdId": 119037,
-   "event": "AVP/USAV ECC/WCC Dual Qualifier - October 4",
-   "short": "AVP/USAV ECC/WCC Dual",
-   "division": "Girls 18U",
-   "field": 9,
-   "date": "2025-10-04",
-   "sanction": "AVPA",
-   "players": [
-    {
-     "name": "Karsyn Rogers",
-     "id": 29918,
-     "f": 1
-    },
-    {
-     "name": "Paloma Smith",
-     "id": 17491,
-     "f": 1
-    }
-   ]
-  },
-  {
-   "key": "26009:98759",
-   "tid": 26009,
-   "tdId": 98759,
-   "event": "First Coast Volleyball Jax Beach Series Presented by PT Solutions Sept 20-21st",
-   "short": "First Coast Volleyball",
-   "division": "Girls 18U",
-   "field": 4,
-   "date": "2025-09-21",
-   "sanction": "AVPA",
-   "players": [
-    {
-     "name": "Brooklyn Rosales",
-     "id": 59411,
-     "f": 1
-    },
-    {
-     "name": "Izzy Fischer",
-     "id": 105342,
-     "f": 1
-    }
-   ]
-  },
-  {
-   "key": "28233:106871",
-   "tid": 28233,
-   "tdId": 106871,
-   "event": "South Beach Volley AVP NEXT $8k Minimum Purse",
-   "short": "South Beach Volley AVP",
-   "division": "Womens Open",
-   "field": 20,
-   "date": "2025-09-21",
-   "sanction": "AVPA",
-   "players": [
-    {
-     "name": "Sarah Cowan",
-     "id": 84725,
-     "f": 9
-    },
-    {
-     "name": "Isabelle Izzy Ramos",
-     "id": 24727,
-     "f": 9
-    }
-   ]
-  },
-  {
-   "key": "32754:121123",
-   "tid": 32754,
-   "tdId": 121123,
-   "event": "CBVA Fall Championship Bid + AVP Bid Event Girl's 18u at Mira Costa College, Oceanside",
-   "short": "CBVA Fall Champ Bid + AVP",
-   "division": "Girls 18U",
-   "field": 6,
-   "date": "2025-09-20",
-   "sanction": "AVPA",
-   "players": [
-    {
-     "name": "Brooke Proctor",
-     "id": 91896,
-     "f": 1
-    },
-    {
-     "name": "Reagan Carlin",
-     "id": 92974,
-     "f": 1
-    }
-   ]
-  },
-  {
-   "key": "30510:114594",
-   "tid": 30510,
-   "tdId": 114594,
-   "event": "AVP Laguna - Contender  2025",
-   "short": "AVP Laguna - Contender",
-   "division": "Womens",
-   "field": 55,
-   "date": "2025-09-14",
-   "sanction": "AVPA",
-   "players": [
-    {
-     "name": "Lauren Leach",
-     "id": 8426,
-     "f": 45
-    },
-    {
-     "name": "Ella Olson",
-     "id": 3113,
-     "f": 45
-    }
-   ]
-  },
-  {
-   "key": "26299:99830",
-   "tid": 26299,
-   "tdId": 99830,
-   "event": "MAVERICKS AVP @ Santa Cruz Beach - LuluLemon Qualifier - Sunday, September 14 (12u, 14u, 16u, & 18u)",
-   "short": "MAVERICKS AVP @ Santa",
-   "division": "Girls 18U",
-   "field": 6,
-   "date": "2025-09-14",
-   "sanction": "AVPA",
-   "players": [
-    {
-     "name": "Ella Buchanan",
-     "id": 98125,
-     "f": 1
-    },
-    {
-     "name": "Brooke Canaday",
-     "id": 98124,
-     "f": 1
-    }
-   ]
   }
  ],
- "totalComps": 258,
- "totalEvents": 228,
- "totalEntries": 834,
- "droppedTeam": 229,
+ "totalComps": 242,
+ "totalEvents": 214,
+ "totalEntries": 810,
+ "droppedTeam": 241,
  "thresh": 8,
  "population": 17178,
- "ratedPop": 12016,
- "cutNote": "The cut is tight: #61 is Abigail Moffett at 8.977, 0.023 behind #60."
+ "ratedPop": 15529,
+ "cutNote": "The cut is tight: #61 is Abigail Moffett at 8.976, 0.023 behind #60."
 }

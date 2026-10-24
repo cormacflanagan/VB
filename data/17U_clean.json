@@ -125,17 +125,6 @@
     "field": 23
    },
    {
-    "tid": 26299,
-    "tdId": 99830,
-    "division": "Girls 18U",
-    "finish": 1,
-    "date": "2025-09-14",
-    "partners": [
-     "Brooke Canaday"
-    ],
-    "field": 6
-   },
-   {
     "tid": 31567,
     "tdId": 117695,
     "division": "Class of '26 & Younger",
@@ -202,6 +191,17 @@
     "field": 19
    },
    {
+    "tid": 38431,
+    "tdId": 140827,
+    "division": "Womens Open",
+    "finish": 17,
+    "date": "2026-10-04",
+    "partners": [
+     "Brooke Canaday"
+    ],
+    "field": 32
+   },
+   {
     "tid": 40540,
     "tdId": 148435,
     "division": "Womens AA",
@@ -246,39 +246,6 @@
      "Brooke Proctor"
     ],
     "field": 24
-   },
-   {
-    "tid": 32754,
-    "tdId": 121123,
-    "division": "Girls 18U",
-    "finish": 1,
-    "date": "2025-09-20",
-    "partners": [
-     "Brooke Proctor"
-    ],
-    "field": 6
-   },
-   {
-    "tid": 33029,
-    "tdId": 121953,
-    "division": "Girls 18U",
-    "finish": 2,
-    "date": "2025-10-05",
-    "partners": [
-     "Brooke Proctor"
-    ],
-    "field": 9
-   },
-   {
-    "tid": 33136,
-    "tdId": 122338,
-    "division": "Girls 16U",
-    "finish": 1,
-    "date": "2025-10-12",
-    "partners": [
-     "Brooke Proctor"
-    ],
-    "field": 9
    },
    {
     "tid": 31483,
@@ -661,17 +628,6 @@
   ],
   "Haisley Flanagan": [
    {
-    "tid": 23700,
-    "tdId": 119582,
-    "division": "16U Elite (1300 Pts Required)",
-    "finish": 1,
-    "date": "2025-10-05",
-    "partners": [
-     "Charlotte Jansen"
-    ],
-    "field": 14
-   },
-   {
     "tid": 25578,
     "tdId": 97149,
     "division": "Girls 16U",
@@ -824,20 +780,20 @@
      "Ciara Cantlen"
     ],
     "field": 17
+   },
+   {
+    "tid": 42069,
+    "tdId": 153342,
+    "division": "Coed Open",
+    "finish": 1,
+    "date": "2026-10-10",
+    "partners": [
+     "Jacob Landel (FR 65th)"
+    ],
+    "field": 8
    }
   ],
   "Madison Gillinger": [
-   {
-    "tid": 32055,
-    "tdId": 119282,
-    "division": "Girls 18U",
-    "finish": 3,
-    "date": "2025-09-21",
-    "partners": [
-     "Abigail Moffett"
-    ],
-    "field": 12
-   },
    {
     "tid": 25578,
     "tdId": 97149,
@@ -848,28 +804,6 @@
      "Aubree Marsden"
     ],
     "field": 23
-   },
-   {
-    "tid": 23700,
-    "tdId": 91228,
-    "division": "16U OPEN",
-    "finish": 1,
-    "date": "2025-10-05",
-    "partners": [
-     "Abigail Moffett"
-    ],
-    "field": 26
-   },
-   {
-    "tid": 33136,
-    "tdId": 122338,
-    "division": "Girls 16U",
-    "finish": 5,
-    "date": "2025-10-12",
-    "partners": [
-     "Aubree Marsden"
-    ],
-    "field": 9
    },
    {
     "tid": 31568,
@@ -1353,17 +1287,6 @@
   ],
   "Charlotte Jansen": [
    {
-    "tid": 23700,
-    "tdId": 119582,
-    "division": "16U Elite (1300 Pts Required)",
-    "finish": 1,
-    "date": "2025-10-05",
-    "partners": [
-     "Haisley Flanagan"
-    ],
-    "field": 14
-   },
-   {
     "tid": 25578,
     "tdId": 97149,
     "division": "Girls 16U",
@@ -1384,17 +1307,6 @@
      "Abigail Moffett"
     ],
     "field": 36
-   },
-   {
-    "tid": 32769,
-    "tdId": 121145,
-    "division": "Womens AA",
-    "finish": 2,
-    "date": "2025-09-21",
-    "partners": [
-     "Lynne Galli"
-    ],
-    "field": 16
    },
    {
     "tid": 33446,
@@ -1582,6 +1494,28 @@
      "Scarlett Ollenburger"
     ],
     "field": 10
+   },
+   {
+    "tid": 41724,
+    "tdId": 152250,
+    "division": "Girls 18U",
+    "finish": 1,
+    "date": "2026-09-19",
+    "partners": [
+     "Olivia Marroquin"
+    ],
+    "field": 11
+   },
+   {
+    "tid": 42106,
+    "tdId": 153488,
+    "division": "Womens Open",
+    "finish": 5,
+    "date": "2026-10-11",
+    "partners": [
+     "Jordyn Wilson"
+    ],
+    "field": 12
    }
   ],
   "Nariah Johnson": [
@@ -1753,17 +1687,6 @@
   ],
   "Olivia LeDoyen": [
    {
-    "tid": 25894,
-    "tdId": 98356,
-    "division": "Girls 16U",
-    "finish": 3,
-    "date": "2025-10-05",
-    "partners": [
-     "Julianna  \"Julie\" Ramos"
-    ],
-    "field": 19
-   },
-   {
     "tid": 31568,
     "tdId": 117700,
     "division": "Class of '28 & Younger",
@@ -1797,17 +1720,6 @@
     "field": 22
    },
    {
-    "tid": 30815,
-    "tdId": 115472,
-    "division": "Girls 18U",
-    "finish": 1,
-    "date": "2025-10-09",
-    "partners": [
-     "Ella Whiteside"
-    ],
-    "field": 6
-   },
-   {
     "tid": 31569,
     "tdId": 117704,
     "division": "Class of '28 & Younger",
@@ -1828,28 +1740,6 @@
      "Zoey Kincaid"
     ],
     "field": 6
-   },
-   {
-    "tid": 25893,
-    "tdId": 98346,
-    "division": "Womens A",
-    "finish": 1,
-    "date": "2025-10-05",
-    "partners": [
-     "Julianna  \"Julie\" Ramos"
-    ],
-    "field": 10
-   },
-   {
-    "tid": 32469,
-    "tdId": 120383,
-    "division": "Girls 18U",
-    "finish": 1,
-    "date": "2025-10-11",
-    "partners": [
-     "Ella Whiteside"
-    ],
-    "field": 9
    },
    {
     "tid": 28788,
@@ -1946,7 +1836,7 @@
     "finish": 1,
     "date": "2026-07-19",
     "partners": [
-     "Julianna  \"Julie\" Ramos"
+     "Julianna Julie Ramos"
     ],
     "field": 34
    },
@@ -1968,7 +1858,7 @@
     "finish": 5,
     "date": "2026-07-26",
     "partners": [
-     "Julianna  \"Julie\" Ramos"
+     "Julianna Julie Ramos"
     ],
     "field": 64
    },
@@ -2001,7 +1891,7 @@
     "finish": 3,
     "date": "2026-06-05",
     "partners": [
-     "Julianna  \"Julie\" Ramos"
+     "Julianna Julie Ramos"
     ],
     "field": 13
    },
@@ -2012,7 +1902,7 @@
     "finish": 2,
     "date": "2026-05-10",
     "partners": [
-     "Julianna  \"Julie\" Ramos"
+     "Julianna Julie Ramos"
     ],
     "field": 9
    },
@@ -2100,7 +1990,7 @@
     "finish": 1,
     "date": "2026-06-25",
     "partners": [
-     "Addison Williams"
+     "Addy Williams"
     ],
     "field": 6
    },
@@ -2111,7 +2001,7 @@
     "finish": 16,
     "date": "2026-07-12",
     "partners": [
-     "Addison Williams"
+     "Addy Williams"
     ],
     "field": 23
    },
@@ -2138,6 +2028,17 @@
     "field": 40
    },
    {
+    "tid": 35689,
+    "tdId": 130682,
+    "division": "Womens AA",
+    "finish": 5,
+    "date": "2026-10-11",
+    "partners": [
+     "Kendall Page Fugate"
+    ],
+    "field": 15
+   },
+   {
     "tid": 40270,
     "tdId": 147337,
     "division": "Womens A",
@@ -2147,6 +2048,28 @@
      "Talula Walsh"
     ],
     "field": 24
+   },
+   {
+    "tid": 39710,
+    "tdId": 145466,
+    "division": "Juniors Girls - 16U",
+    "finish": 1,
+    "date": "2026-10-04",
+    "partners": [
+     "Kendall Page Fugate"
+    ],
+    "field": 8
+   },
+   {
+    "tid": 39710,
+    "tdId": 145458,
+    "division": "Womens 2's - AA",
+    "finish": 3,
+    "date": "2026-10-04",
+    "partners": [
+     "Kendall Page Fugate"
+    ],
+    "field": 10
    }
   ],
   "Lucy Matuszak": [
@@ -2272,39 +2195,6 @@
      "Reagan Carlin"
     ],
     "field": 24
-   },
-   {
-    "tid": 32754,
-    "tdId": 121123,
-    "division": "Girls 18U",
-    "finish": 1,
-    "date": "2025-09-20",
-    "partners": [
-     "Reagan Carlin"
-    ],
-    "field": 6
-   },
-   {
-    "tid": 33029,
-    "tdId": 121953,
-    "division": "Girls 18U",
-    "finish": 2,
-    "date": "2025-10-05",
-    "partners": [
-     "Reagan Carlin"
-    ],
-    "field": 9
-   },
-   {
-    "tid": 33136,
-    "tdId": 122338,
-    "division": "Girls 16U",
-    "finish": 1,
-    "date": "2025-10-12",
-    "partners": [
-     "Reagan Carlin"
-    ],
-    "field": 9
    },
    {
     "tid": 31483,
@@ -2461,6 +2351,17 @@
      "Maria Kliefoth"
     ],
     "field": 13
+   },
+   {
+    "tid": 40389,
+    "tdId": 147781,
+    "division": "Womens Open",
+    "finish": 13,
+    "date": "2026-09-20",
+    "partners": [
+     "Emily Fraik"
+    ],
+    "field": 24
    }
   ],
   "Ashley Ruschill": [
@@ -2672,6 +2573,17 @@
      "Tesa Solis"
     ],
     "field": 160
+   },
+   {
+    "tid": 40389,
+    "tdId": 147781,
+    "division": "Womens Open",
+    "finish": 13,
+    "date": "2026-09-20",
+    "partners": [
+     "Reese Baillio"
+    ],
+    "field": 24
    }
   ],
   "Elyse Smelcer": [
@@ -2685,17 +2597,6 @@
      "Sarah Albers"
     ],
     "field": 23
-   },
-   {
-    "tid": 26799,
-    "tdId": 101366,
-    "division": "Womens Open",
-    "finish": 2,
-    "date": "2025-10-04",
-    "partners": [
-     "Megan Widener"
-    ],
-    "field": 6
    },
    {
     "tid": 31483,
@@ -2760,6 +2661,28 @@
     "date": "2026-08-15",
     "partners": [
      "Meadow Rosales"
+    ],
+    "field": 16
+   },
+   {
+    "tid": 37076,
+    "tdId": 135620,
+    "division": "Girls 18U",
+    "finish": 1,
+    "date": "2026-09-20",
+    "partners": [
+     "Gwen Orth"
+    ],
+    "field": 15
+   },
+   {
+    "tid": 37078,
+    "tdId": 135623,
+    "division": "Girls 18U",
+    "finish": 3,
+    "date": "2026-10-18",
+    "partners": [
+     "Celi Clark"
     ],
     "field": 16
    }
@@ -2876,28 +2799,6 @@
      "Olivia LeDoyen"
     ],
     "field": 47
-   },
-   {
-    "tid": 30815,
-    "tdId": 115472,
-    "division": "Girls 18U",
-    "finish": 1,
-    "date": "2025-10-09",
-    "partners": [
-     "Olivia LeDoyen"
-    ],
-    "field": 6
-   },
-   {
-    "tid": 32469,
-    "tdId": 120383,
-    "division": "Girls 18U",
-    "finish": 1,
-    "date": "2025-10-11",
-    "partners": [
-     "Olivia LeDoyen"
-    ],
-    "field": 9
    },
    {
     "tid": 31622,
@@ -3056,11 +2957,6 @@
    "date": "2025-11-09",
    "sanction": "AVPA"
   },
-  "26299": {
-   "name": "MAVERICKS AVP @ Santa Cruz Beach - LuluLemon Qualifier - Sunday, September 14 (12u, 14u, 16u, & 18u)",
-   "date": "2025-09-14",
-   "sanction": "AVPA"
-  },
   "34180": {
    "name": "2026 USA Volleyball U18 Beach National Team Trials",
    "date": "2026-01-31",
@@ -3076,6 +2972,11 @@
    "date": "2026-06-13",
    "sanction": "AVPA"
   },
+  "38431": {
+   "name": "The Santa Barbara Open- AVP",
+   "date": "2026-10-04",
+   "sanction": "AVPA"
+  },
   "40540": {
    "name": "3/8/26, Dockweiler, Los Angeles",
    "date": "2026-03-08",
@@ -3089,21 +2990,6 @@
   "40756": {
    "name": "2026 Cal Cup Championships, 8/9/26, Hermosa Pier, Hermosa Beach",
    "date": "2026-08-09",
-   "sanction": "AVPA"
-  },
-  "32754": {
-   "name": "CBVA Fall Championship Bid + AVP Bid Event Girl's 18u at Mira Costa College, Oceanside",
-   "date": "2025-09-20",
-   "sanction": "AVPA"
-  },
-  "33029": {
-   "name": "CBVA Fall Championship Bid + AVP Bid Event Girl's 18u at Central Beach, Coronado, San Diego",
-   "date": "2025-10-05",
-   "sanction": "AVPA"
-  },
-  "33136": {
-   "name": "2025 CBVA Fall Championships: Invitation Only Girl's 16u at Newland, Huntington Beach",
-   "date": "2025-10-12",
    "sanction": "AVPA"
   },
   "31568": {
@@ -3206,11 +3092,6 @@
    "date": "2026-07-18",
    "sanction": "USAV"
   },
-  "23700": {
-   "name": "GNBV National Recruiting Showcase Oct 2025",
-   "date": "2025-10-05",
-   "sanction": "BVNE"
-  },
   "35614": {
    "name": "MAVERICKS AVP @ Santa Cruz Beach - LuluLemon Qualifier - Sunday, May 31 (12u, 14u, 16u, & 18u)",
    "date": "2026-05-31",
@@ -3236,10 +3117,10 @@
    "date": "2026-09-12",
    "sanction": "AVPA"
   },
-  "32055": {
-   "name": "Super Girl Pro Invitational '25",
-   "date": "2025-09-21",
-   "sanction": null
+  "42069": {
+   "name": "10/10/26, Main Beach, Santa Cruz",
+   "date": "2026-10-10",
+   "sanction": "AVPA"
   },
   "34696": {
    "name": "Beach Elite SoCal Series Winter #5 (AVP 3 STAR)-  2026",
@@ -3311,11 +3192,6 @@
    "date": "2026-08-30",
    "sanction": "p1440"
   },
-  "32769": {
-   "name": "Women's AA at Marine Ave, Manhattan Beach",
-   "date": "2025-09-21",
-   "sanction": "AVPA"
-  },
   "33633": {
    "name": "Women's AA at Newland, Huntington Beach",
    "date": "2025-11-02",
@@ -3346,6 +3222,16 @@
    "date": "2026-08-23",
    "sanction": "AVPA"
   },
+  "41724": {
+   "name": "9/19/26, Mira Costa College, Oceanside",
+   "date": "2026-09-19",
+   "sanction": "AVPA"
+  },
+  "42106": {
+   "name": "Dukes Surf City Festival, 10/11/26, Huntington Pier, Huntington Beach",
+   "date": "2026-10-11",
+   "sanction": "AVPA"
+  },
   "31527": {
    "name": "AAU Herrmosa Beach Winter Series Championships",
    "date": "2025-12-14",
@@ -3365,26 +3251,6 @@
    "name": "AAU Hermosa Beach Coed Championships",
    "date": "2026-07-19",
    "sanction": "AAU"
-  },
-  "25894": {
-   "name": "SSOVA Juniors AVP & USAV Regional Qualifier Siesta Key, Beach Volleyball Tournament- BRQ",
-   "date": "2025-10-05",
-   "sanction": "AVPA"
-  },
-  "30815": {
-   "name": "FBV Sunset Series AAU 10/09",
-   "date": "2025-10-09",
-   "sanction": "AAU"
-  },
-  "25893": {
-   "name": "SSOVA Men's/Women's/Coed\u2019s Siesta Key, Beach Volleyball Tournament",
-   "date": "2025-10-05",
-   "sanction": "AVPA"
-  },
-  "32469": {
-   "name": "Battle for Lulu & AVP Bids",
-   "date": "2025-10-11",
-   "sanction": "AVPA"
   },
   "31623": {
    "name": "2026 Futures Tour: Washington",
@@ -3456,10 +3322,20 @@
    "date": "2026-09-13",
    "sanction": "BVNE"
   },
+  "35689": {
+   "name": "South Beach Volley AVP NEXT South Beach October Open",
+   "date": "2026-10-11",
+   "sanction": "AVPA"
+  },
   "40270": {
    "name": "7/19/26, Ocean Park, Santa Monica",
    "date": "2026-07-19",
    "sanction": "AVPA"
+  },
+  "39710": {
+   "name": "Sand Ballerz Halloween - \"Spooky Spike Showdown\" - Sand Volleyball Tournament Festival",
+   "date": "2026-10-04",
+   "sanction": null
   },
   "33462": {
    "name": "Women's Open at Ocean Park, Santa Monica",
@@ -3506,9 +3382,9 @@
    "date": "2026-08-15",
    "sanction": "AVPA"
   },
-  "26799": {
-   "name": "WVS 2025 Adults Season Championships Sponsored by Castle Productions (100% Open Payout)",
-   "date": "2025-10-04",
+  "40389": {
+   "name": "AVP Next Fall Texas Triple Crown Series #1 $8,000 Purse",
+   "date": "2026-09-20",
    "sanction": "AVPA"
   },
   "37070": {
@@ -3531,6 +3407,16 @@
    "date": "2026-08-15",
    "sanction": "AVPA"
   },
+  "37076": {
+   "name": "Sinjin Collegiate Showcase #4 U18/U14 hosted with Blue Sky",
+   "date": "2026-09-20",
+   "sanction": "AVPA"
+  },
+  "37078": {
+   "name": "Sinjin October U18/U14 Event hosted with Blue Sky",
+   "date": "2026-10-18",
+   "sanction": "AVPA"
+  },
   "38003": {
    "name": "Pro Doubles @ 4th Annual Carlisle Crush 2026",
    "date": "2026-07-19",
@@ -3550,8 +3436,8 @@
    "height": "5' 10\"",
    "grad": 2028,
    "cityState": "Saratoga , CA",
-   "truvolley": 8.611,
-   "peak": 8.84,
+   "truvolley": 8.676,
+   "peak": 8.898,
    "conf": 100,
    "w": 393,
    "matches": 500
@@ -3563,11 +3449,11 @@
    "height": null,
    "grad": 2028,
    "cityState": "San Luis Obispo, CA",
-   "truvolley": 9.153,
-   "peak": 9.241,
-   "conf": 100,
-   "w": 164,
-   "matches": 227
+   "truvolley": 9.215,
+   "peak": 9.35,
+   "conf": 90,
+   "w": 169,
+   "matches": 236
   },
   "Reagan Carlin": {
    "region": "So. Cal / So. Nevada",
@@ -3576,11 +3462,11 @@
    "height": "5' 10\"",
    "grad": 2030,
    "cityState": "Encinitas, CA",
-   "truvolley": 9.191,
-   "peak": 9.191,
-   "conf": 100,
-   "w": 273,
-   "matches": 320
+   "truvolley": 9.942,
+   "peak": 9.259,
+   "conf": 91,
+   "w": 280,
+   "matches": 327
   },
   "Sienna Cicero": {
    "region": "So. Cal / So. Nevada",
@@ -3589,11 +3475,11 @@
    "height": "5' 7\"",
    "grad": 2029,
    "cityState": "Villa Park , CA",
-   "truvolley": 8.667,
-   "peak": 8.761,
+   "truvolley": 8.609,
+   "peak": 8.814,
    "conf": 100,
-   "w": 226,
-   "matches": 299
+   "w": 230,
+   "matches": 304
   },
   "Cayden Dorger": {
    "region": "Gulf Coast",
@@ -3602,8 +3488,8 @@
    "height": "5' 10\"",
    "grad": 2028,
    "cityState": "Spanish Fort, AL",
-   "truvolley": 9.119,
-   "peak": 9.2,
+   "truvolley": 9.198,
+   "peak": 9.278,
    "conf": 100,
    "w": 183,
    "matches": 255
@@ -3612,11 +3498,11 @@
    "region": "Northern California",
    "id": 64896,
    "club": "Santa Cruz Beach Volleyball Club",
-   "height": "5' 9\"",
+   "height": null,
    "grad": 2028,
    "cityState": "Santa Cruz, CA",
-   "truvolley": 9.695,
-   "peak": 9.597,
+   "truvolley": 9.88,
+   "peak": 9.731,
    "conf": 84,
    "w": 272,
    "matches": 345
@@ -3628,11 +3514,11 @@
    "height": "5' 11\"",
    "grad": 2028,
    "cityState": "Huntington Beach, CA",
-   "truvolley": 9.419,
-   "peak": 9.487,
+   "truvolley": 9.52,
+   "peak": 9.566,
    "conf": 100,
-   "w": 249,
-   "matches": 376
+   "w": 253,
+   "matches": 381
   },
   "Julianna Godbey": {
    "region": "North Texas",
@@ -3641,8 +3527,8 @@
    "height": "5' 10\"",
    "grad": 2030,
    "cityState": "McKinney , TX",
-   "truvolley": 8.717,
-   "peak": 8.828,
+   "truvolley": 8.783,
+   "peak": 8.894,
    "conf": 100,
    "w": 455,
    "matches": 585
@@ -3654,8 +3540,8 @@
    "height": "6' 2\"",
    "grad": 2028,
    "cityState": "Vero Beach, FL",
-   "truvolley": 8.918,
-   "peak": 9.117,
+   "truvolley": 9.042,
+   "peak": 9.245,
    "conf": 100,
    "w": 243,
    "matches": 342
@@ -3667,11 +3553,11 @@
    "height": "5' 6\"",
    "grad": 2030,
    "cityState": "Los Angeles , CA",
-   "truvolley": 7.913,
-   "peak": 7.615,
+   "truvolley": 8.006,
+   "peak": 8.1,
    "conf": 100,
-   "w": 301,
-   "matches": 356
+   "w": 303,
+   "matches": 359
   },
   "Charlotte Jansen": {
    "region": "So. Cal / So. Nevada",
@@ -3680,11 +3566,11 @@
    "height": "5' 10\"",
    "grad": 2028,
    "cityState": "Del Mar, CA",
-   "truvolley": 8.813,
-   "peak": 9.049,
+   "truvolley": 9.503,
+   "peak": 9.503,
    "conf": 100,
-   "w": 280,
-   "matches": 400
+   "w": 292,
+   "matches": 417
   },
   "Nariah Johnson": {
    "region": "So. Cal / So. Nevada",
@@ -3693,8 +3579,8 @@
    "height": "5' 9\"",
    "grad": 2029,
    "cityState": "RCHO SANTA FE, CA",
-   "truvolley": 9.561,
-   "peak": 9.561,
+   "truvolley": 9.66,
+   "peak": 9.66,
    "conf": 100,
    "w": 219,
    "matches": 256
@@ -3702,15 +3588,15 @@
   "Olivia LeDoyen": {
    "region": "So. Cal / So. Nevada",
    "id": 30929,
-   "club": "Southbay Sand",
+   "club": "South Bay Sand",
    "height": "5' 8\"",
    "grad": 2030,
    "cityState": "Viera, FL",
-   "truvolley": 8.074,
-   "peak": 8.401,
-   "conf": 91,
-   "w": 827,
-   "matches": 1098
+   "truvolley": 7.813,
+   "peak": 8.446,
+   "conf": 99,
+   "w": 841,
+   "matches": 1116
   },
   "Lucy Matuszak": {
    "region": "So. Cal / So. Nevada",
@@ -3719,9 +3605,9 @@
    "height": "5' 7\"",
    "grad": 2028,
    "cityState": "Los Angeles, CA",
-   "truvolley": 10.099,
-   "peak": 9.696,
-   "conf": 93,
+   "truvolley": 10.078,
+   "peak": 10.149,
+   "conf": 100,
    "w": 258,
    "matches": 320
   },
@@ -3729,14 +3615,14 @@
    "region": "So. Cal / So. Nevada",
    "id": 91896,
    "club": "WAVE Beach",
-   "height": "6'",
+   "height": "6' 1\"",
    "grad": 2029,
    "cityState": "Coronado, CA",
-   "truvolley": 9.303,
-   "peak": 9.303,
-   "conf": 100,
-   "w": 189,
-   "matches": 221
+   "truvolley": 9.974,
+   "peak": 9.37,
+   "conf": 90,
+   "w": 196,
+   "matches": 228
   },
   "Milana Rivera": {
    "region": "Lone Star",
@@ -3745,11 +3631,11 @@
    "height": "5' 7\"",
    "grad": 2029,
    "cityState": "Spring , TX",
-   "truvolley": 9.286,
-   "peak": 9.286,
+   "truvolley": 9.478,
+   "peak": 9.478,
    "conf": 100,
-   "w": 226,
-   "matches": 364
+   "w": 227,
+   "matches": 367
   },
   "Ashley Ruschill": {
    "region": "North Texas",
@@ -3758,11 +3644,11 @@
    "height": "5' 5\"",
    "grad": 2029,
    "cityState": "McKinney , TX",
-   "truvolley": 9.239,
-   "peak": 9.384,
+   "truvolley": 9.3,
+   "peak": 9.476,
    "conf": 100,
-   "w": 525,
-   "matches": 674
+   "w": 526,
+   "matches": 677
   },
   "Elyse Smelcer": {
    "region": "Carolina",
@@ -3771,11 +3657,11 @@
    "height": "5' 11\"",
    "grad": 2028,
    "cityState": "Cary, NC",
-   "truvolley": 8.573,
-   "peak": 8.407,
-   "conf": 100,
-   "w": 312,
-   "matches": 458
+   "truvolley": 8.427,
+   "peak": 8.917,
+   "conf": 99,
+   "w": 322,
+   "matches": 471
   },
   "Elle Sossong": {
    "region": "Keystone",
@@ -3784,8 +3670,8 @@
    "height": "5' 8\"",
    "grad": 2028,
    "cityState": "Phoenixville , PA",
-   "truvolley": 8.605,
-   "peak": 9.072,
+   "truvolley": 8.69,
+   "peak": 9.303,
    "conf": 100,
    "w": 261,
    "matches": 342
@@ -3793,15 +3679,15 @@
   "Ella Whiteside": {
    "region": "North Texas",
    "id": 70421,
-   "club": "Southbay Sand",
+   "club": "South Bay Sand",
    "height": "5' 11\"",
    "grad": 2029,
    "cityState": "Millsap, TX",
-   "truvolley": 7.397,
-   "peak": 7.694,
+   "truvolley": 7.597,
+   "peak": 8.428,
    "conf": 100,
-   "w": 320,
-   "matches": 455
+   "w": 322,
+   "matches": 458
   }
  }
 }

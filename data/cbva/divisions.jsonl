@@ -55,15 +55,12 @@
 {"tid": 4761, "date": "2026-11-01", "tdId": 16813, "name": null, "gender": "female", "size": 2, "level": "aa", "maxAge": null, "status": "closed", "venue": "Newland"}
 {"tid": 4762, "date": "2026-11-01", "tdId": 16814, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Mira Costa College"}
 {"tid": 4762, "date": "2026-11-01", "tdId": 17167, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "closed", "venue": "Mira Costa College"}
+{"tid": 4762, "date": "2026-11-01", "tdId": 17513, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Mira Costa College"}
 {"tid": 4760, "date": "2026-10-31", "tdId": 16804, "name": null, "gender": "coed", "size": 2, "level": "unrated", "maxAge": null, "status": "closed", "venue": "Newland"}
 {"tid": 4760, "date": "2026-10-31", "tdId": 16805, "name": null, "gender": "male", "size": 2, "level": "a", "maxAge": null, "status": "closed", "venue": "Newland"}
 {"tid": 4760, "date": "2026-10-31", "tdId": 16806, "name": null, "gender": "female", "size": 2, "level": "a", "maxAge": null, "status": "closed", "venue": "Newland"}
 {"tid": 4760, "date": "2026-10-31", "tdId": 16807, "name": null, "gender": "male", "size": 2, "level": "open", "maxAge": null, "status": "closed", "venue": "Newland"}
 {"tid": 4760, "date": "2026-10-31", "tdId": 16808, "name": null, "gender": "female", "size": 2, "level": "open", "maxAge": null, "status": "closed", "venue": "Newland"}
-{"tid": 4758, "date": "2026-10-31", "tdId": 16797, "name": "Halloween Classic", "gender": "female", "size": 2, "level": "12u", "maxAge": 12, "status": "closed", "venue": "North Beach"}
-{"tid": 4758, "date": "2026-10-31", "tdId": 16798, "name": "Halloween Classic", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "North Beach"}
-{"tid": 4758, "date": "2026-10-31", "tdId": 16799, "name": "Halloween Classic", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "North Beach"}
-{"tid": 4758, "date": "2026-10-31", "tdId": 16800, "name": "Halloween Classic", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "closed", "venue": "North Beach"}
 {"tid": 4757, "date": "2026-10-25", "tdId": 16792, "name": "Annual SD Halloween Classic/Costume Contest- AVP Bid Event", "gender": "male", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Central Beach"}
 {"tid": 4757, "date": "2026-10-25", "tdId": 16793, "name": "Annual SD Halloween Classic/Costume Contest- AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Central Beach"}
 {"tid": 4757, "date": "2026-10-25", "tdId": 16794, "name": "Annual SD Halloween Classic/Costume Contest- AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Central Beach"}
@@ -88,10 +85,8 @@
 {"tid": 4756, "date": "2026-10-24", "tdId": 16789, "name": null, "gender": "female", "size": 2, "level": "b", "maxAge": null, "status": "closed", "venue": "Ocean Park"}
 {"tid": 4756, "date": "2026-10-24", "tdId": 16791, "name": null, "gender": "female", "size": 2, "level": "aa", "maxAge": null, "status": "closed", "venue": "Ocean Park"}
 {"tid": 4756, "date": "2026-10-24", "tdId": 16790, "name": null, "gender": "male", "size": 2, "level": "aa", "maxAge": null, "status": "closed", "venue": "Ocean Park"}
-{"tid": 4833, "date": "2026-10-18", "tdId": 17163, "name": "", "gender": "coed", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Wave Courts"}
-{"tid": 4833, "date": "2026-10-18", "tdId": 17162, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Wave Courts"}
-{"tid": 4833, "date": "2026-10-18", "tdId": 17164, "name": null, "gender": "coed", "size": 2, "level": "18u", "maxAge": 18, "status": "closed", "venue": "Wave Courts"}
-{"tid": 4754, "date": "2026-10-18", "tdId": 16784, "name": null, "gender": "male", "size": 2, "level": "open", "maxAge": null, "status": "closed", "venue": "Huntington Pier"}
+{"tid": 4833, "date": "2026-10-18", "tdId": 17162, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Wave Courts"}
+{"tid": 4754, "date": "2026-10-18", "tdId": 16784, "name": null, "gender": "male", "size": 2, "level": "open", "maxAge": null, "status": "complete", "venue": "Huntington Pier"}
 {"tid": 4887, "date": "2026-10-11", "tdId": 17369, "name": "Mich Ultra Premier Tour $2,500 ", "gender": "female", "size": 2, "level": "open", "maxAge": null, "status": "complete", "venue": "Huntington Pier"}
 {"tid": 4887, "date": "2026-10-11", "tdId": 17368, "name": "Mich Ultra Premier Tour $2,500 ", "gender": "male", "size": 2, "level": "open", "maxAge": null, "status": "complete", "venue": "Huntington Pier"}
 {"tid": 4887, "date": "2026-10-11", "tdId": 17367, "name": null, "gender": "male", "size": 2, "level": "a", "maxAge": null, "status": "complete", "venue": "Huntington Pier"}
@@ -105,19 +100,13 @@
 {"tid": 4888, "date": "2026-10-10", "tdId": 17371, "name": null, "gender": "male", "size": 2, "level": "b", "maxAge": null, "status": "complete", "venue": "Huntington Pier"}
 {"tid": 4888, "date": "2026-10-10", "tdId": 17376, "name": null, "gender": "female", "size": 2, "level": "b", "maxAge": null, "status": "complete", "venue": "Huntington Pier"}
 {"tid": 4793, "date": "2026-10-10", "tdId": 16907, "name": null, "gender": "male", "size": 2, "level": "a", "maxAge": null, "status": "complete", "venue": "Waterfront Park"}
-{"tid": 4914, "date": "2026-10-10", "tdId": 17483, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Main Beach"}
 {"tid": 4914, "date": "2026-10-10", "tdId": 17481, "name": null, "gender": "coed", "size": 2, "level": "a", "maxAge": null, "status": "complete", "venue": "Main Beach"}
 {"tid": 4914, "date": "2026-10-10", "tdId": 17482, "name": null, "gender": "coed", "size": 2, "level": "open", "maxAge": null, "status": "complete", "venue": "Main Beach"}
 {"tid": 4914, "date": "2026-10-10", "tdId": 17489, "name": null, "gender": "male", "size": 2, "level": "b", "maxAge": null, "status": "complete", "venue": "Main Beach"}
 {"tid": 4914, "date": "2026-10-10", "tdId": 17490, "name": null, "gender": "female", "size": 2, "level": "b", "maxAge": null, "status": "complete", "venue": "Main Beach"}
-{"tid": 4747, "date": "2026-10-04", "tdId": 16764, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Central Beach"}
 {"tid": 4747, "date": "2026-10-04", "tdId": 16765, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "complete", "venue": "Central Beach"}
 {"tid": 4747, "date": "2026-10-04", "tdId": 16766, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "complete", "venue": "Central Beach"}
-{"tid": 4747, "date": "2026-10-04", "tdId": 17160, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "12u", "maxAge": 12, "status": "closed", "venue": "Central Beach"}
 {"tid": 4747, "date": "2026-10-04", "tdId": 17161, "name": "AVP Bid Event", "gender": "male", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Central Beach"}
-{"tid": 4747, "date": "2026-10-04", "tdId": 17491, "name": "AVP Bid Event", "gender": "male", "size": 2, "level": "18u", "maxAge": 18, "status": "closed", "venue": "Central Beach"}
-{"tid": 4747, "date": "2026-10-04", "tdId": 17492, "name": "AVP Bid Event", "gender": "male", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Central Beach"}
-{"tid": 4747, "date": "2026-10-04", "tdId": 17493, "name": null, "gender": "coed", "size": 2, "level": "18u", "maxAge": 18, "status": "closed", "venue": "Central Beach"}
 {"tid": 4770, "date": "2026-10-04", "tdId": 16840, "name": null, "gender": "male", "size": 2, "level": "aa", "maxAge": null, "status": "closed", "venue": "Belmont Shore"}
 {"tid": 4770, "date": "2026-10-04", "tdId": 16841, "name": null, "gender": "female", "size": 2, "level": "aa", "maxAge": null, "status": "closed", "venue": "Belmont Shore"}
 {"tid": 4770, "date": "2026-10-04", "tdId": 16839, "name": null, "gender": "male", "size": 2, "level": "b", "maxAge": null, "status": "complete", "venue": "Belmont Shore"}
@@ -159,14 +148,11 @@
 {"tid": 4736, "date": "2026-09-19", "tdId": 16735, "name": null, "gender": "male", "size": 2, "level": "b", "maxAge": null, "status": "complete", "venue": "Marine Ave"}
 {"tid": 4736, "date": "2026-09-19", "tdId": 16736, "name": null, "gender": "female", "size": 2, "level": "a", "maxAge": null, "status": "complete", "venue": "Marine Ave"}
 {"tid": 4728, "date": "2026-09-19", "tdId": 16717, "name": null, "gender": "male", "size": 2, "level": "open", "maxAge": null, "status": "complete", "venue": "Waterfront Park"}
-{"tid": 4735, "date": "2026-09-19", "tdId": 16733, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Mira Costa College"}
 {"tid": 4735, "date": "2026-09-19", "tdId": 16734, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "complete", "venue": "Mira Costa College"}
-{"tid": 4735, "date": "2026-09-19", "tdId": 17488, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Mira Costa College"}
 {"tid": 4832, "date": "2026-09-13", "tdId": 17153, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "12u", "maxAge": 12, "status": "complete", "venue": "Central Beach"}
 {"tid": 4832, "date": "2026-09-13", "tdId": 17154, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Central Beach"}
 {"tid": 4832, "date": "2026-09-13", "tdId": 17155, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "complete", "venue": "Central Beach"}
 {"tid": 4832, "date": "2026-09-13", "tdId": 17156, "name": "AVP Bid Event", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "complete", "venue": "Central Beach"}
-{"tid": 4832, "date": "2026-09-13", "tdId": 17157, "name": null, "gender": "coed", "size": 2, "level": "18u", "maxAge": 18, "status": "closed", "venue": "Central Beach"}
 {"tid": 4795, "date": "2026-09-13", "tdId": 16912, "name": null, "gender": "female", "size": 2, "level": "open", "maxAge": null, "status": "complete", "venue": "Ocean Park"}
 {"tid": 4795, "date": "2026-09-13", "tdId": 16913, "name": null, "gender": "male", "size": 2, "level": "aa", "maxAge": null, "status": "complete", "venue": "Ocean Park"}
 {"tid": 4795, "date": "2026-09-13", "tdId": 16914, "name": null, "gender": "female", "size": 2, "level": "a", "maxAge": null, "status": "complete", "venue": "Ocean Park"}
@@ -269,7 +255,6 @@
 {"tid": 4818, "date": "2026-07-28", "tdId": 17080, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "18u", "maxAge": 18, "status": "complete", "venue": "Belmont Shore"}
 {"tid": 4818, "date": "2026-07-28", "tdId": 17081, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "complete", "venue": "Belmont Shore"}
 {"tid": 4829, "date": "2026-07-26", "tdId": 17142, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "16u", "maxAge": 16, "status": "complete", "venue": "Wave Courts"}
-{"tid": 4829, "date": "2026-07-26", "tdId": 17143, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "18u", "maxAge": 18, "status": "closed", "venue": "Wave Courts"}
 {"tid": 4829, "date": "2026-07-26", "tdId": 17461, "name": "Cal Cup Bid + AVP Bid Event ", "gender": "male", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Wave Courts"}
 {"tid": 4693, "date": "2026-07-26", "tdId": 16606, "name": null, "gender": "male", "size": 2, "level": "b", "maxAge": null, "status": "complete", "venue": "Manhattan Pier"}
 {"tid": 4693, "date": "2026-07-26", "tdId": 16607, "name": null, "gender": "male", "size": 2, "level": "aa", "maxAge": null, "status": "complete", "venue": "Manhattan Pier"}
@@ -278,7 +263,6 @@
 {"tid": 4691, "date": "2026-07-25", "tdId": 16602, "name": null, "gender": "female", "size": 2, "level": "open", "maxAge": null, "status": "complete", "venue": "Manhattan Pier"}
 {"tid": 4807, "date": "2026-07-25", "tdId": 16991, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "12u", "maxAge": 12, "status": "complete", "venue": "Pismo Beach"}
 {"tid": 4807, "date": "2026-07-25", "tdId": 16992, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Pismo Beach"}
-{"tid": 4807, "date": "2026-07-25", "tdId": 16993, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Pismo Beach"}
 {"tid": 4807, "date": "2026-07-25", "tdId": 16994, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "complete", "venue": "Pismo Beach"}
 {"tid": 4689, "date": "2026-07-25", "tdId": 16597, "name": null, "gender": "male", "size": 2, "level": "b", "maxAge": null, "status": "complete", "venue": "Ocean Beach"}
 {"tid": 4689, "date": "2026-07-25", "tdId": 16598, "name": null, "gender": "female", "size": 2, "level": "a", "maxAge": null, "status": "complete", "venue": "Ocean Beach"}
@@ -315,25 +299,13 @@
 {"tid": 4680, "date": "2026-07-18", "tdId": 16567, "name": null, "gender": "male", "size": 2, "level": "a", "maxAge": null, "status": "complete", "venue": "Ocean Park"}
 {"tid": 4806, "date": "2026-07-17", "tdId": 16990, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Waterfront Park"}
 {"tid": 4679, "date": "2026-07-15", "tdId": 16561, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Marine Ave"}
-{"tid": 4679, "date": "2026-07-15", "tdId": 16562, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Marine Ave"}
-{"tid": 4679, "date": "2026-07-15", "tdId": 16563, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Marine Ave"}
 {"tid": 4679, "date": "2026-07-15", "tdId": 16564, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "18u", "maxAge": 18, "status": "complete", "venue": "Marine Ave"}
 {"tid": 4679, "date": "2026-07-15", "tdId": 16559, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "12u", "maxAge": 12, "status": "complete", "venue": "Marine Ave"}
-{"tid": 4679, "date": "2026-07-15", "tdId": 16560, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "12u", "maxAge": 12, "status": "closed", "venue": "Marine Ave"}
-{"tid": 4679, "date": "2026-07-15", "tdId": 16932, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Marine Ave"}
-{"tid": 4679, "date": "2026-07-15", "tdId": 16933, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "closed", "venue": "Marine Ave"}
 {"tid": 4678, "date": "2026-07-15", "tdId": 16555, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "12u", "maxAge": 12, "status": "complete", "venue": "Main Beach"}
 {"tid": 4678, "date": "2026-07-15", "tdId": 16556, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Main Beach"}
 {"tid": 4678, "date": "2026-07-15", "tdId": 16557, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "complete", "venue": "Main Beach"}
 {"tid": 4678, "date": "2026-07-15", "tdId": 16558, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "complete", "venue": "Main Beach"}
-{"tid": 4816, "date": "2026-07-14", "tdId": 17058, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "12u", "maxAge": 12, "status": "closed", "venue": "Belmont Shore"}
-{"tid": 4816, "date": "2026-07-14", "tdId": 17059, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "12u", "maxAge": 12, "status": "closed", "venue": "Belmont Shore"}
 {"tid": 4816, "date": "2026-07-14", "tdId": 17060, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Belmont Shore"}
-{"tid": 4816, "date": "2026-07-14", "tdId": 17061, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Belmont Shore"}
-{"tid": 4816, "date": "2026-07-14", "tdId": 17062, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Belmont Shore"}
-{"tid": 4816, "date": "2026-07-14", "tdId": 17063, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Belmont Shore"}
-{"tid": 4816, "date": "2026-07-14", "tdId": 17064, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "18u", "maxAge": 18, "status": "closed", "venue": "Belmont Shore"}
-{"tid": 4816, "date": "2026-07-14", "tdId": 17065, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "closed", "venue": "Belmont Shore"}
 {"tid": 4674, "date": "2026-07-12", "tdId": 16543, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Wave Courts"}
 {"tid": 4673, "date": "2026-07-12", "tdId": 16539, "name": null, "gender": "male", "size": 2, "level": "a", "maxAge": null, "status": "complete", "venue": "Beach Blvd"}
 {"tid": 4673, "date": "2026-07-12", "tdId": 16540, "name": null, "gender": "female", "size": 2, "level": "a", "maxAge": null, "status": "complete", "venue": "Beach Blvd"}
@@ -372,7 +344,6 @@
 {"tid": 4665, "date": "2026-07-08", "tdId": 16510, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Main Beach"}
 {"tid": 4665, "date": "2026-07-08", "tdId": 16511, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "complete", "venue": "Main Beach"}
 {"tid": 4665, "date": "2026-07-08", "tdId": 16512, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "18u", "maxAge": 18, "status": "complete", "venue": "Main Beach"}
-{"tid": 4665, "date": "2026-07-08", "tdId": 17000, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Main Beach"}
 {"tid": 4665, "date": "2026-07-08", "tdId": 16999, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "complete", "venue": "Main Beach"}
 {"tid": 4815, "date": "2026-07-07", "tdId": 17053, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Belmont Shore"}
 {"tid": 4663, "date": "2026-07-05", "tdId": 16501, "name": null, "gender": "male", "size": 2, "level": "unrated", "maxAge": null, "status": "complete", "venue": "Belmont Shore"}
@@ -408,19 +379,17 @@
 {"tid": 4814, "date": "2026-06-23", "tdId": 17045, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Belmont Shore"}
 {"tid": 4814, "date": "2026-06-23", "tdId": 17047, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "complete", "venue": "Belmont Shore"}
 {"tid": 4814, "date": "2026-06-23", "tdId": 17049, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "complete", "venue": "Belmont Shore"}
-{"tid": 4646, "date": "2026-06-21", "tdId": 16445, "name": "Father/Daughter", "gender": "coed", "size": 2, "level": "18u", "maxAge": 18, "status": "complete", "venue": "Central Beach"}
+{"tid": 4646, "date": "2026-06-21", "tdId": 16442, "name": "Father/Daughter", "gender": "coed", "size": 2, "level": "12u", "maxAge": 12, "status": "closed", "venue": "Central Beach"}
 {"tid": 4646, "date": "2026-06-21", "tdId": 16443, "name": "Father/Daughter", "gender": "coed", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Central Beach"}
 {"tid": 4646, "date": "2026-06-21", "tdId": 16444, "name": "Father/Daughter", "gender": "coed", "size": 2, "level": "16u", "maxAge": 16, "status": "complete", "venue": "Central Beach"}
-{"tid": 4646, "date": "2026-06-21", "tdId": 16442, "name": "Father/Daughter", "gender": "coed", "size": 2, "level": "12u", "maxAge": 12, "status": "closed", "venue": "Central Beach"}
+{"tid": 4646, "date": "2026-06-21", "tdId": 16445, "name": "Father/Daughter", "gender": "coed", "size": 2, "level": "18u", "maxAge": 18, "status": "complete", "venue": "Central Beach"}
 {"tid": 4646, "date": "2026-06-21", "tdId": 16446, "name": "Father/Son", "gender": "male", "size": 2, "level": "18u", "maxAge": 18, "status": "closed", "venue": "Central Beach"}
 {"tid": 4646, "date": "2026-06-21", "tdId": 17132, "name": "Father/Son 14U", "gender": "male", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Central Beach"}
-{"tid": 4646, "date": "2026-06-21", "tdId": 17130, "name": "Father/Son 16U", "gender": "male", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Central Beach"}
 {"tid": 4900, "date": "2026-06-21", "tdId": 17427, "name": null, "gender": "male", "size": 2, "level": "a", "maxAge": null, "status": "complete", "venue": "Waterfront Park"}
 {"tid": 4652, "date": "2026-06-21", "tdId": 16468, "name": null, "gender": "female", "size": 2, "level": "a", "maxAge": null, "status": "complete", "venue": "Ocean Park"}
 {"tid": 4652, "date": "2026-06-21", "tdId": 16469, "name": null, "gender": "male", "size": 2, "level": "aa", "maxAge": null, "status": "complete", "venue": "Ocean Park"}
 {"tid": 4652, "date": "2026-06-21", "tdId": 16467, "name": null, "gender": "female", "size": 2, "level": "open", "maxAge": null, "status": "complete", "venue": "Ocean Park"}
 {"tid": 4827, "date": "2026-06-20", "tdId": 17125, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "12u", "maxAge": 12, "status": "running", "venue": "Central Beach"}
-{"tid": 4827, "date": "2026-06-20", "tdId": 17126, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Central Beach"}
 {"tid": 4827, "date": "2026-06-20", "tdId": 17127, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Central Beach"}
 {"tid": 4827, "date": "2026-06-20", "tdId": 17128, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "complete", "venue": "Central Beach"}
 {"tid": 4827, "date": "2026-06-20", "tdId": 17129, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "complete", "venue": "Central Beach"}
@@ -451,12 +420,9 @@
 {"tid": 4640, "date": "2026-06-13", "tdId": 16423, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "complete", "venue": "Wave Courts"}
 {"tid": 4640, "date": "2026-06-13", "tdId": 16424, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "complete", "venue": "Wave Courts"}
 {"tid": 4640, "date": "2026-06-13", "tdId": 17123, "name": null, "gender": "coed", "size": 2, "level": "18u", "maxAge": 18, "status": "complete", "venue": "Wave Courts"}
-{"tid": 4812, "date": "2026-06-13", "tdId": 17026, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "12u", "maxAge": 12, "status": "closed", "venue": "Belmont Shore"}
 {"tid": 4812, "date": "2026-06-13", "tdId": 17027, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "12u", "maxAge": 12, "status": "complete", "venue": "Belmont Shore"}
 {"tid": 4812, "date": "2026-06-13", "tdId": 17028, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Belmont Shore"}
 {"tid": 4812, "date": "2026-06-13", "tdId": 17029, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Belmont Shore"}
-{"tid": 4812, "date": "2026-06-13", "tdId": 17031, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Belmont Shore"}
-{"tid": 4812, "date": "2026-06-13", "tdId": 17033, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "closed", "venue": "Belmont Shore"}
 {"tid": 4642, "date": "2026-06-13", "tdId": 16428, "name": null, "gender": "male", "size": 2, "level": "b", "maxAge": null, "status": "complete", "venue": "Manhattan Pier"}
 {"tid": 4642, "date": "2026-06-13", "tdId": 16429, "name": null, "gender": "female", "size": 2, "level": "a", "maxAge": null, "status": "complete", "venue": "Manhattan Pier"}
 {"tid": 4642, "date": "2026-06-13", "tdId": 16430, "name": null, "gender": "male", "size": 2, "level": "aa", "maxAge": null, "status": "complete", "venue": "Manhattan Pier"}
@@ -472,7 +438,6 @@
 {"tid": 4639, "date": "2026-06-10", "tdId": 16419, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "complete", "venue": "Main Beach"}
 {"tid": 4639, "date": "2026-06-10", "tdId": 16420, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "complete", "venue": "Main Beach"}
 {"tid": 4638, "date": "2026-06-09", "tdId": 16413, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Belmont Shore"}
-{"tid": 4825, "date": "2026-06-07", "tdId": 17119, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "12u", "maxAge": 12, "status": "closed", "venue": "Central Beach"}
 {"tid": 4825, "date": "2026-06-07", "tdId": 17120, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Central Beach"}
 {"tid": 4825, "date": "2026-06-07", "tdId": 17121, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "complete", "venue": "Central Beach"}
 {"tid": 4825, "date": "2026-06-07", "tdId": 17122, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "complete", "venue": "Central Beach"}
@@ -485,7 +450,6 @@
 {"tid": 4634, "date": "2026-06-06", "tdId": 16400, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "12u", "maxAge": 12, "status": "complete", "venue": "Pismo Beach"}
 {"tid": 4634, "date": "2026-06-06", "tdId": 16401, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Pismo Beach"}
 {"tid": 4634, "date": "2026-06-06", "tdId": 16402, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "complete", "venue": "Pismo Beach"}
-{"tid": 4634, "date": "2026-06-06", "tdId": 16403, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "closed", "venue": "Pismo Beach"}
 {"tid": 4631, "date": "2026-05-31", "tdId": 16393, "name": null, "gender": "male", "size": 2, "level": "a", "maxAge": null, "status": "complete", "venue": "Ocean Park"}
 {"tid": 4631, "date": "2026-05-31", "tdId": 16395, "name": null, "gender": "female", "size": 2, "level": "open", "maxAge": null, "status": "complete", "venue": "Ocean Park"}
 {"tid": 4631, "date": "2026-05-31", "tdId": 16394, "name": null, "gender": "female", "size": 2, "level": "a", "maxAge": null, "status": "complete", "venue": "Ocean Park"}
@@ -518,9 +482,7 @@
 {"tid": 4623, "date": "2026-05-17", "tdId": 16362, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "12u", "maxAge": 12, "status": "complete", "venue": "Central Beach"}
 {"tid": 4623, "date": "2026-05-17", "tdId": 16363, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Central Beach"}
 {"tid": 4623, "date": "2026-05-17", "tdId": 16364, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "complete", "venue": "Central Beach"}
-{"tid": 4623, "date": "2026-05-17", "tdId": 16365, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "closed", "venue": "Central Beach"}
 {"tid": 4623, "date": "2026-05-17", "tdId": 17117, "name": null, "gender": "coed", "size": 2, "level": "18u", "maxAge": 18, "status": "closed", "venue": "Central Beach"}
-{"tid": 4623, "date": "2026-05-17", "tdId": 17118, "name": null, "gender": "coed", "size": 2, "level": "16u", "maxAge": 16, "status": "closed", "venue": "Central Beach"}
 {"tid": 4622, "date": "2026-05-17", "tdId": 16358, "name": null, "gender": "male", "size": 2, "level": "a", "maxAge": null, "status": "complete", "venue": "Belmont Shore"}
 {"tid": 4622, "date": "2026-05-17", "tdId": 16359, "name": null, "gender": "female", "size": 2, "level": "a", "maxAge": null, "status": "complete", "venue": "Belmont Shore"}
 {"tid": 4780, "date": "2026-05-16", "tdId": 16870, "name": null, "gender": "coed", "size": 2, "level": "open", "maxAge": null, "status": "complete", "venue": "Main Beach"}
@@ -529,7 +491,6 @@
 {"tid": 4620, "date": "2026-05-16", "tdId": 16355, "name": null, "gender": "male", "size": 2, "level": "aa", "maxAge": null, "status": "complete", "venue": "Belmont Shore"}
 {"tid": 4620, "date": "2026-05-16", "tdId": 16356, "name": null, "gender": "female", "size": 2, "level": "aa", "maxAge": null, "status": "complete", "venue": "Belmont Shore"}
 {"tid": 4619, "date": "2026-05-16", "tdId": 16352, "name": null, "gender": "male", "size": 2, "level": "b", "maxAge": null, "status": "complete", "venue": "Waterfront Park"}
-{"tid": 4824, "date": "2026-05-10", "tdId": 17116, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "closed", "venue": "Wave Courts"}
 {"tid": 4824, "date": "2026-05-10", "tdId": 17378, "name": "Mother/Daughter 14/12U", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Wave Courts"}
 {"tid": 4824, "date": "2026-05-10", "tdId": 17377, "name": "Mother/Daughter 18/16U", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "complete", "venue": "Wave Courts"}
 {"tid": 4615, "date": "2026-05-10", "tdId": 16343, "name": null, "gender": "female", "size": 2, "level": "b", "maxAge": null, "status": "complete", "venue": "Ocean Park"}
@@ -538,7 +499,6 @@
 {"tid": 4614, "date": "2026-05-09", "tdId": 16339, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Hermosa Pier"}
 {"tid": 4614, "date": "2026-05-09", "tdId": 16337, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "12u", "maxAge": 12, "status": "complete", "venue": "Hermosa Pier"}
 {"tid": 4614, "date": "2026-05-09", "tdId": 16338, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Hermosa Pier"}
-{"tid": 4614, "date": "2026-05-09", "tdId": 16929, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "18u", "maxAge": 18, "status": "closed", "venue": "Hermosa Pier"}
 {"tid": 4614, "date": "2026-05-09", "tdId": 16342, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "complete", "venue": "Hermosa Pier"}
 {"tid": 4614, "date": "2026-05-09", "tdId": 16928, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "12u", "maxAge": 12, "status": "complete", "venue": "Hermosa Pier"}
 {"tid": 4614, "date": "2026-05-09", "tdId": 16340, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "16u", "maxAge": 16, "status": "complete", "venue": "Hermosa Pier"}
@@ -580,7 +540,6 @@
 {"tid": 4603, "date": "2026-04-25", "tdId": 16306, "name": null, "gender": "male", "size": 2, "level": "open", "maxAge": null, "status": "complete", "venue": "Main Beach"}
 {"tid": 4603, "date": "2026-04-25", "tdId": 16307, "name": null, "gender": "female", "size": 2, "level": "open", "maxAge": null, "status": "complete", "venue": "Main Beach"}
 {"tid": 4598, "date": "2026-04-19", "tdId": 16290, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Wave Courts"}
-{"tid": 4798, "date": "2026-04-19", "tdId": 16947, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "12u", "maxAge": 12, "status": "closed", "venue": "Newland"}
 {"tid": 4798, "date": "2026-04-19", "tdId": 16948, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "12u", "maxAge": 12, "status": "complete", "venue": "Newland"}
 {"tid": 4798, "date": "2026-04-19", "tdId": 16950, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Newland"}
 {"tid": 4798, "date": "2026-04-19", "tdId": 16951, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "16u", "maxAge": 16, "status": "complete", "venue": "Newland"}
@@ -603,7 +562,6 @@
 {"tid": 4823, "date": "2026-04-12", "tdId": 17113, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Central Beach"}
 {"tid": 4823, "date": "2026-04-12", "tdId": 17115, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "18u", "maxAge": 18, "status": "complete", "venue": "Central Beach"}
 {"tid": 4823, "date": "2026-04-12", "tdId": 17112, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Central Beach"}
-{"tid": 4823, "date": "2026-04-12", "tdId": 17382, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "18u", "maxAge": 18, "status": "closed", "venue": "Central Beach"}
 {"tid": 4823, "date": "2026-04-12", "tdId": 17383, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "16u", "maxAge": 16, "status": "running", "venue": "Central Beach"}
 {"tid": 4823, "date": "2026-04-12", "tdId": 17114, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "complete", "venue": "Central Beach"}
 {"tid": 4594, "date": "2026-04-12", "tdId": 16274, "name": null, "gender": "female", "size": 2, "level": "unrated", "maxAge": null, "status": "complete", "venue": "Belmont Shore"}
@@ -616,7 +574,6 @@
 {"tid": 4592, "date": "2026-04-11", "tdId": 16271, "name": null, "gender": "female", "size": 2, "level": "a", "maxAge": null, "status": "complete", "venue": "Hermosa Pier"}
 {"tid": 4589, "date": "2026-04-05", "tdId": 17390, "name": null, "gender": "male", "size": 2, "level": "a", "maxAge": null, "status": "closed", "venue": "Ocean Park"}
 {"tid": 4589, "date": "2026-04-05", "tdId": 16260, "name": null, "gender": "female", "size": 2, "level": "a", "maxAge": null, "status": "complete", "venue": "Ocean Park"}
-{"tid": 4588, "date": "2026-04-04", "tdId": 16253, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "12u", "maxAge": 12, "status": "closed", "venue": "Newland"}
 {"tid": 4588, "date": "2026-04-04", "tdId": 16255, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "14u", "maxAge": 14, "status": "complete", "venue": "Newland"}
 {"tid": 4588, "date": "2026-04-04", "tdId": 16257, "name": "Cal Cup Bid + AVP Bid Event", "gender": "female", "size": 2, "level": "16u", "maxAge": 16, "status": "complete", "venue": "Newland"}
 {"tid": 4588, "date": "2026-04-04", "tdId": 16258, "name": "Cal Cup Bid + AVP Bid Event", "gender": "male", "size": 2, "level": "18u", "maxAge": 18, "status": "complete", "venue": "Newland"}

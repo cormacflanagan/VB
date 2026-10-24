@@ -57,13 +57,13 @@
    "NC"
   ],
   [
-   "Lerin Rosenthal",
-   5973,
+   "Reagan Carlin",
+   92974,
    "CA"
   ],
   [
-   "Reagan Carlin",
-   92974,
+   "Lerin Rosenthal",
+   5973,
    "CA"
   ],
   [
@@ -316,7 +316,7 @@
    "club": "210 Beach",
    "city": "Stockdale",
    "state": "TX",
-   "tv": 10.774,
+   "tv": 10.778,
    "grad": 2026
   },
   "29854": {
@@ -324,7 +324,7 @@
    "club": "South Bay Sand",
    "city": "Redondo Beach",
    "state": "CA",
-   "tv": 10.583,
+   "tv": 10.56,
    "grad": 2027
   },
   "8426": {
@@ -372,7 +372,7 @@
    "club": "MBsand",
    "city": "Los Angeles",
    "state": "CA",
-   "tv": 10.095,
+   "tv": 10.078,
    "grad": 2028
   },
   "91896": {
@@ -391,14 +391,6 @@
    "tv": 9.966,
    "grad": 2028
   },
-  "5973": {
-   "height": "5' 11\"",
-   "club": "MBsand",
-   "city": "Hermosa Beach",
-   "state": "CA",
-   "tv": 9.958,
-   "grad": 2027
-  },
   "92974": {
    "height": "5' 10\"",
    "club": "WAVE Beach",
@@ -406,6 +398,14 @@
    "state": "CA",
    "tv": 9.942,
    "grad": 2030
+  },
+  "5973": {
+   "height": "5' 11\"",
+   "club": "MBsand",
+   "city": "Hermosa Beach",
+   "state": "CA",
+   "tv": 9.934,
+   "grad": 2027
   },
   "95165": {
    "height": "5' 10\"",
@@ -428,7 +428,7 @@
    "club": "Spiker Beach Volleyball Club",
    "city": "Riverside",
    "state": "CA",
-   "tv": 9.836,
+   "tv": 9.838,
    "grad": 2027
   },
   "91052": {
@@ -444,7 +444,7 @@
    "club": "Spiker Beach Volleyball Club",
    "city": "Long Beach",
    "state": "CA",
-   "tv": 9.757,
+   "tv": 9.756,
    "grad": 2027
   },
   "53164": {
@@ -452,7 +452,7 @@
    "club": "MBsand",
    "city": "Manhattan Beach",
    "state": "CA",
-   "tv": 9.748,
+   "tv": 9.73,
    "grad": 2027
   },
   "91897": {
@@ -468,7 +468,7 @@
    "club": "WAVE Beach",
    "city": "Del Mar",
    "state": "CA",
-   "tv": 9.677,
+   "tv": 9.676,
    "grad": 2027
   },
   "4517": {
@@ -516,7 +516,7 @@
    "club": "Spiker Beach Volleyball Club",
    "city": "Rancho Palos Verdes",
    "state": "CA",
-   "tv": 9.596,
+   "tv": 9.595,
    "grad": 2027
   },
   "84725": {
@@ -537,7 +537,7 @@
   },
   "99596": {
    "height": "5' 11\"",
-   "club": "Spiker Beach",
+   "club": "Spiker Beach Volleyball Club",
    "city": "Huntington Beach",
    "state": "CA",
    "tv": 9.52,
@@ -548,7 +548,7 @@
    "club": "WAVE Beach",
    "city": "Del Mar",
    "state": "CA",
-   "tv": 9.504,
+   "tv": 9.503,
    "grad": 2028
   },
   "64683": {
@@ -684,7 +684,7 @@
    "club": "",
    "city": "Jacksonville Beach",
    "state": "FL",
-   "tv": 9.221,
+   "tv": 9.22,
    "grad": 2027
   },
   "98125": {
@@ -692,7 +692,7 @@
    "club": "SLOVBC",
    "city": "San Luis Obispo",
    "state": "CA",
-   "tv": 9.216,
+   "tv": 9.215,
    "grad": 2028
   },
   "128445": {
@@ -732,7 +732,7 @@
    "club": "Spiker Beach Volleyball Club",
    "city": "Downey",
    "state": "CA",
-   "tv": 9.089,
+   "tv": 9.088,
    "grad": 2027
   },
   "17491": {
@@ -764,7 +764,7 @@
    "club": "Spiker Beach Volleyball Club",
    "city": "San Juan Capistrano",
    "state": "CA",
-   "tv": 9.041,
+   "tv": 9.04,
    "grad": 2028
   },
   "19592": {
@@ -780,15 +780,15 @@
    "club": "SLOVBC",
    "city": "San Luis Obispo",
    "state": "CA",
-   "tv": 9,
+   "tv": 8.999,
    "grad": 2029
   }
  },
  "population": 17178,
- "rated": 12016,
+ "rated": 15529,
  "cut": {
-  "nTop": 9,
-  "next": 8.977,
+  "nTop": 8.999,
+  "next": 8.976,
   "nextName": "Abigail Moffett"
  },
  "classes": {

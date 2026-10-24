@@ -24,17 +24,6 @@
     "field": 23
    },
    {
-    "tid": 33020,
-    "tdId": 121928,
-    "division": "Womens Open",
-    "finish": 3,
-    "date": "2025-10-05",
-    "partners": [
-     "Sandie Souza"
-    ],
-    "field": 14
-   },
-   {
     "tid": 31567,
     "tdId": 117695,
     "division": "Class of '26 & Younger",
@@ -264,6 +253,39 @@
      "Sandie Souza"
     ],
     "field": 17
+   },
+   {
+    "tid": 41843,
+    "tdId": 152582,
+    "division": "Womens Open",
+    "finish": 1,
+    "date": "2026-09-26",
+    "partners": [
+     "Olivia Herron"
+    ],
+    "field": 4
+   },
+   {
+    "tid": 41940,
+    "tdId": 152942,
+    "division": "Womens Open",
+    "finish": 3,
+    "date": "2026-10-03",
+    "partners": [
+     "Sandie Souza"
+    ],
+    "field": 7
+   },
+   {
+    "tid": 42106,
+    "tdId": 153488,
+    "division": "Womens Open",
+    "finish": 5,
+    "date": "2026-10-11",
+    "partners": [
+     "Sienna Castillo"
+    ],
+    "field": 12
    }
   ],
   "Sarah Albers": [
@@ -329,7 +351,7 @@
     "finish": 17,
     "date": "2026-05-03",
     "partners": [
-     "Elizabeth Selinger"
+     "Liz Selinger"
     ],
     "field": 103
    },
@@ -554,6 +576,17 @@
      "Lucy Matuszak"
     ],
     "field": 17
+   },
+   {
+    "tid": 42106,
+    "tdId": 153488,
+    "division": "Womens Open",
+    "finish": 5,
+    "date": "2026-10-11",
+    "partners": [
+     "Simrin Adams"
+    ],
+    "field": 12
    }
   ],
   "Sarah Cowan": [
@@ -611,17 +644,6 @@
      "Brynn Hughbanks"
     ],
     "field": 48
-   },
-   {
-    "tid": 28233,
-    "tdId": 106871,
-    "division": "Womens Open",
-    "finish": 9,
-    "date": "2025-09-21",
-    "partners": [
-     "Isabelle Izzy Ramos"
-    ],
-    "field": 20
    },
    {
     "tid": 34180,
@@ -721,6 +743,17 @@
      "Lucy Matuszak"
     ],
     "field": 159
+   },
+   {
+    "tid": 35689,
+    "tdId": 130681,
+    "division": "Womens Open",
+    "finish": 7,
+    "date": "2026-10-11",
+    "partners": [
+     "Sage Illian"
+    ],
+    "field": 28
    }
   ],
   "Sadie Harris": [
@@ -734,28 +767,6 @@
      "Jordyn Flynn"
     ],
     "field": 23
-   },
-   {
-    "tid": 33136,
-    "tdId": 122338,
-    "division": "Girls 16U",
-    "finish": 2,
-    "date": "2025-10-12",
-    "partners": [
-     "Kara Boas"
-    ],
-    "field": 9
-   },
-   {
-    "tid": 33260,
-    "tdId": 122916,
-    "division": "Womens A",
-    "finish": 3,
-    "date": "2025-10-18",
-    "partners": [
-     "Aubree Marsden"
-    ],
-    "field": 17
    },
    {
     "tid": 30469,
@@ -903,17 +914,6 @@
   ],
   "Olivia Herron": [
    {
-    "tid": 30429,
-    "tdId": 114404,
-    "division": "Women's Open",
-    "finish": 17,
-    "date": "2025-09-28",
-    "partners": [
-     "Kennedi Diamond"
-    ],
-    "field": 35
-   },
-   {
     "tid": 25578,
     "tdId": 97147,
     "division": "Girls 18U",
@@ -925,17 +925,6 @@
     "field": 23
    },
    {
-    "tid": 28899,
-    "tdId": 109248,
-    "division": "Womens Open",
-    "finish": 9,
-    "date": "2025-10-05",
-    "partners": [
-     "Estelle Reese"
-    ],
-    "field": 28
-   },
-   {
     "tid": 30437,
     "tdId": 114423,
     "division": "Women's Open",
@@ -945,17 +934,6 @@
      "Milana Rivera"
     ],
     "field": 21
-   },
-   {
-    "tid": 33020,
-    "tdId": 121928,
-    "division": "Womens Open",
-    "finish": 2,
-    "date": "2025-10-05",
-    "partners": [
-     "Estelle Reese"
-    ],
-    "field": 14
    },
    {
     "tid": 31569,
@@ -1220,6 +1198,50 @@
      "Jordyn Scribner"
     ],
     "field": 28
+   },
+   {
+    "tid": 40389,
+    "tdId": 147781,
+    "division": "Womens Open",
+    "finish": 3,
+    "date": "2026-09-20",
+    "partners": [
+     "Lauren Leach"
+    ],
+    "field": 24
+   },
+   {
+    "tid": 38431,
+    "tdId": 140827,
+    "division": "Womens Open",
+    "finish": 17,
+    "date": "2026-10-04",
+    "partners": [
+     "Janie McCanna"
+    ],
+    "field": 32
+   },
+   {
+    "tid": 41843,
+    "tdId": 152582,
+    "division": "Womens Open",
+    "finish": 1,
+    "date": "2026-09-26",
+    "partners": [
+     "Simrin Adams"
+    ],
+    "field": 4
+   },
+   {
+    "tid": 35689,
+    "tdId": 130681,
+    "division": "Womens Open",
+    "finish": 3,
+    "date": "2026-10-11",
+    "partners": [
+     "Lauren Leach"
+    ],
+    "field": 28
    }
   ],
   "Sage Illian": [
@@ -1389,6 +1411,17 @@
     "field": 10
    },
    {
+    "tid": 35689,
+    "tdId": 130681,
+    "division": "Womens Open",
+    "finish": 7,
+    "date": "2026-10-11",
+    "partners": [
+     "Sarah Cowan"
+    ],
+    "field": 28
+   },
+   {
     "tid": 33876,
     "tdId": 124946,
     "division": "Women's Open",
@@ -1411,17 +1444,6 @@
      "Ella Grimes"
     ],
     "field": 23
-   },
-   {
-    "tid": 30510,
-    "tdId": 114594,
-    "division": "Womens",
-    "finish": 45,
-    "date": "2025-09-14",
-    "partners": [
-     "Ella Olson"
-    ],
-    "field": 55
    },
    {
     "tid": 31569,
@@ -1466,17 +1488,6 @@
      "Janie McCanna"
     ],
     "field": 48
-   },
-   {
-    "tid": 30429,
-    "tdId": 114404,
-    "division": "Women's Open",
-    "finish": 7,
-    "date": "2025-09-28",
-    "partners": [
-     "Janie McCanna"
-    ],
-    "field": 35
    },
    {
     "tid": 34019,
@@ -1587,6 +1598,28 @@
      "Melanie Fleig"
     ],
     "field": 22
+   },
+   {
+    "tid": 40389,
+    "tdId": 147781,
+    "division": "Womens Open",
+    "finish": 3,
+    "date": "2026-09-20",
+    "partners": [
+     "Olivia Herron"
+    ],
+    "field": 24
+   },
+   {
+    "tid": 35689,
+    "tdId": 130681,
+    "division": "Womens Open",
+    "finish": 3,
+    "date": "2026-10-11",
+    "partners": [
+     "Olivia Herron"
+    ],
+    "field": 28
    }
   ],
   "Georgeann Lee": [
@@ -1769,17 +1802,6 @@
     "field": 48
    },
    {
-    "tid": 30429,
-    "tdId": 114404,
-    "division": "Women's Open",
-    "finish": 7,
-    "date": "2025-09-28",
-    "partners": [
-     "Lauren Leach"
-    ],
-    "field": 35
-   },
-   {
     "tid": 30438,
     "tdId": 114425,
     "division": "Women's Open",
@@ -1844,6 +1866,17 @@
      "Courtney Schwan"
     ],
     "field": 19
+   },
+   {
+    "tid": 38431,
+    "tdId": 140827,
+    "division": "Womens Open",
+    "finish": 17,
+    "date": "2026-10-04",
+    "partners": [
+     "Olivia Herron"
+    ],
+    "field": 32
    }
   ],
   "Milaniakai Padilla": [
@@ -2255,20 +2288,20 @@
      "Brooklyn Rosales"
     ],
     "field": 20
+   },
+   {
+    "tid": 35689,
+    "tdId": 130681,
+    "division": "Womens Open",
+    "finish": 2,
+    "date": "2026-10-11",
+    "partners": [
+     "Brooklyn Rosales"
+    ],
+    "field": 28
    }
   ],
   "Jordyn Wilson": [
-   {
-    "tid": 32636,
-    "tdId": 120809,
-    "division": "Womens Open",
-    "finish": 17,
-    "date": "2025-09-14",
-    "partners": [
-     "Sarah Uebelhoer"
-    ],
-    "field": 19
-   },
    {
     "tid": 31567,
     "tdId": 117695,
@@ -2419,7 +2452,7 @@
     "finish": 9,
     "date": "2026-07-26",
     "partners": [
-     "Addison Williams"
+     "Addy Williams"
     ],
     "field": 64
    },
@@ -2532,6 +2565,17 @@
      "Simrin Adams"
     ],
     "field": 54
+   },
+   {
+    "tid": 42106,
+    "tdId": 153488,
+    "division": "Womens Open",
+    "finish": 5,
+    "date": "2026-10-11",
+    "partners": [
+     "Charlotte Jansen"
+    ],
+    "field": 12
    }
   ]
  },
@@ -2544,11 +2588,6 @@
   "25578": {
    "name": "AVP Juniors West Coast Championships 2025",
    "date": "2025-11-09",
-   "sanction": "AVPA"
-  },
-  "33020": {
-   "name": "Women's Open at Manhattan Pier, Manhattan Beach",
-   "date": "2025-10-05",
    "sanction": "AVPA"
   },
   "31567": {
@@ -2656,6 +2695,21 @@
    "date": "2026-09-13",
    "sanction": "AVPA"
   },
+  "41843": {
+   "name": "9/26/26, Dockweiler, Los Angeles",
+   "date": "2026-09-26",
+   "sanction": "AVPA"
+  },
+  "41940": {
+   "name": "10/3/26, Belmont Shore, Long Beach",
+   "date": "2026-10-03",
+   "sanction": "AVPA"
+  },
+  "42106": {
+   "name": "Dukes Surf City Festival, 10/11/26, Huntington Pier, Huntington Beach",
+   "date": "2026-10-11",
+   "sanction": "AVPA"
+  },
   "31622": {
    "name": "2026 Futures Tour: Florida",
    "date": "2026-03-15",
@@ -2721,11 +2775,6 @@
    "date": "2026-04-12",
    "sanction": "p1440"
   },
-  "28233": {
-   "name": "South Beach Volley AVP NEXT $8k Minimum Purse",
-   "date": "2025-09-21",
-   "sanction": "AVPA"
-  },
   "34366": {
    "name": "AVP Austin Open",
    "date": "2026-04-18",
@@ -2746,14 +2795,9 @@
    "date": "2026-07-11",
    "sanction": "BVCA"
   },
-  "33136": {
-   "name": "2025 CBVA Fall Championships: Invitation Only Girl's 16u at Newland, Huntington Beach",
-   "date": "2025-10-12",
-   "sanction": "AVPA"
-  },
-  "33260": {
-   "name": "Women's A at Belmont Shore, Long Beach",
-   "date": "2025-10-18",
+  "35689": {
+   "name": "South Beach Volley AVP NEXT South Beach October Open",
+   "date": "2026-10-11",
    "sanction": "AVPA"
   },
   "30469": {
@@ -2784,16 +2828,6 @@
   "38074": {
    "name": "4/4/26, Newland, Huntington Beach",
    "date": "2026-04-04",
-   "sanction": "AVPA"
-  },
-  "30429": {
-   "name": "AVP Next Men\u2019s & Women\u2019s Fall Triple Crown Series #1 $8,000 Purse",
-   "date": "2025-09-28",
-   "sanction": "AVPA"
-  },
-  "28899": {
-   "name": "The Santa Barbara Open- AVP Next",
-   "date": "2025-10-05",
    "sanction": "AVPA"
   },
   "30437": {
@@ -2851,6 +2885,16 @@
    "date": "2026-08-02",
    "sanction": "AVPA"
   },
+  "40389": {
+   "name": "AVP Next Fall Texas Triple Crown Series #1 $8,000 Purse",
+   "date": "2026-09-20",
+   "sanction": "AVPA"
+  },
+  "38431": {
+   "name": "The Santa Barbara Open- AVP",
+   "date": "2026-10-04",
+   "sanction": "AVPA"
+  },
   "25638": {
    "name": "AVP Juniors East Coast Championships 2025",
    "date": "2025-11-30",
@@ -2864,11 +2908,6 @@
   "33876": {
    "name": "AVP NEXT $10,000 SandBox Open 2026",
    "date": "2026-08-09",
-   "sanction": "AVPA"
-  },
-  "30510": {
-   "name": "AVP Laguna - Contender  2025",
-   "date": "2025-09-14",
    "sanction": "AVPA"
   },
   "34019": {
@@ -2956,11 +2995,6 @@
    "date": "2026-09-13",
    "sanction": "AVPA"
   },
-  "32636": {
-   "name": "Women's Open at Ocean Park, Santa Monica",
-   "date": "2025-09-14",
-   "sanction": "AVPA"
-  },
   "39039": {
    "name": "Cal Cup Tour Stop, 5/25/26, Hermosa Pier, Hermosa Beach",
    "date": "2026-05-25",
@@ -2995,11 +3029,11 @@
    "height": "5' 9\"",
    "grad": 2027,
    "cityState": "Long Beach, CA",
-   "truvolley": 10.065,
-   "peak": 10.104,
-   "conf": 97,
-   "w": 369,
-   "matches": 494
+   "truvolley": 9.756,
+   "peak": 10.369,
+   "conf": 100,
+   "w": 384,
+   "matches": 515
   },
   "Sarah Albers": {
    "region": "Gateway",
@@ -3008,8 +3042,8 @@
    "height": "6' 0\"",
    "grad": 2028,
    "cityState": "Arnold, MO",
-   "truvolley": 8.424,
-   "peak": 8.474,
+   "truvolley": 8.513,
+   "peak": 8.973,
    "conf": 100,
    "w": 148,
    "matches": 208
@@ -3021,11 +3055,11 @@
    "height": "6' 1\"",
    "grad": 2027,
    "cityState": "Redondo Beach, CA",
-   "truvolley": 10.229,
-   "peak": 10.063,
-   "conf": 90,
-   "w": 180,
-   "matches": 249
+   "truvolley": 10.56,
+   "peak": 10.213,
+   "conf": 97,
+   "w": 184,
+   "matches": 255
   },
   "Sarah Cowan": {
    "region": "Florida",
@@ -3034,11 +3068,11 @@
    "height": "6'",
    "grad": 2028,
    "cityState": "Boca Raton, FL",
-   "truvolley": 9.518,
-   "peak": 9.621,
+   "truvolley": 9.576,
+   "peak": 9.758,
    "conf": 100,
-   "w": 348,
-   "matches": 497
+   "w": 352,
+   "matches": 503
   },
   "Sadie Harris": {
    "region": "So. Cal / So. Nevada",
@@ -3047,24 +3081,24 @@
    "height": "5' 11\"",
    "grad": 2028,
    "cityState": "San Juan Capistrano, CA",
-   "truvolley": 8.829,
-   "peak": 9.11,
+   "truvolley": 9.04,
+   "peak": 9.176,
    "conf": 100,
-   "w": 224,
-   "matches": 347
+   "w": 228,
+   "matches": 352
   },
   "Olivia Herron": {
    "region": "North Texas",
    "id": 28688,
-   "club": null,
+   "club": "",
    "height": "6' 2\"",
    "grad": 2027,
    "cityState": "Celina, TX",
-   "truvolley": 10.228,
-   "peak": 10.68,
+   "truvolley": 10.479,
+   "peak": 10.931,
    "conf": 100,
-   "w": 528,
-   "matches": 716
+   "w": 542,
+   "matches": 738
   },
   "Sage Illian": {
    "region": "Heart of America",
@@ -3073,11 +3107,11 @@
    "height": "6' 1\"",
    "grad": 2028,
    "cityState": "Wichita , KS",
-   "truvolley": 9.702,
-   "peak": 9.795,
+   "truvolley": 9.768,
+   "peak": 9.934,
    "conf": 100,
-   "w": 248,
-   "matches": 324
+   "w": 252,
+   "matches": 330
   },
   "Lauren Leach": {
    "region": "So. Cal / So. Nevada",
@@ -3086,11 +3120,11 @@
    "height": "6'",
    "grad": 2027,
    "cityState": "Laguna Beach, CA",
-   "truvolley": 10.524,
-   "peak": 10.601,
-   "conf": 100,
-   "w": 367,
-   "matches": 439
+   "truvolley": 10.542,
+   "peak": 10.782,
+   "conf": 95,
+   "w": 374,
+   "matches": 450
   },
   "Georgeann Lee": {
    "region": "Aloha",
@@ -3099,8 +3133,8 @@
    "height": "6'",
    "grad": 2027,
    "cityState": "Honolulu , HI",
-   "truvolley": 9.443,
-   "peak": 9.554,
+   "truvolley": 9.573,
+   "peak": 9.685,
    "conf": 100,
    "w": 196,
    "matches": 294
@@ -3112,11 +3146,11 @@
    "height": "6' 0\"",
    "grad": 2027,
    "cityState": "Seattle, WA",
-   "truvolley": 10.328,
-   "peak": 10.463,
+   "truvolley": 10.469,
+   "peak": 10.621,
    "conf": 100,
-   "w": 339,
-   "matches": 448
+   "w": 340,
+   "matches": 451
   },
   "Milaniakai Padilla": {
    "region": "Aloha",
@@ -3125,8 +3159,8 @@
    "height": "5' 10\"",
    "grad": 2028,
    "cityState": "Wailuku, HI",
-   "truvolley": 9.805,
-   "peak": 9.805,
+   "truvolley": 9.933,
+   "peak": 9.933,
    "conf": 100,
    "w": 263,
    "matches": 373
@@ -3138,11 +3172,11 @@
    "height": "6' 0\"",
    "grad": 2028,
    "cityState": "NORFOLK, VA",
-   "truvolley": 9.448,
-   "peak": 9.57,
-   "conf": 94,
-   "w": 367,
-   "matches": 464
+   "truvolley": 10.097,
+   "peak": 10.141,
+   "conf": 100,
+   "w": 371,
+   "matches": 469
   },
   "Jordyn Wilson": {
    "region": "So. Cal / So. Nevada",
@@ -3151,11 +3185,11 @@
    "height": "5' 10\"",
    "grad": 2027,
    "cityState": "Colton, CA",
-   "truvolley": 9.093,
-   "peak": 9.526,
+   "truvolley": 9.443,
+   "peak": 9.665,
    "conf": 100,
-   "w": 423,
-   "matches": 606
+   "w": 425,
+   "matches": 611
   }
  }
 }
