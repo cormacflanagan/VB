@@ -72,6 +72,10 @@ def load():
         p = os.path.join(DATA, f)
         if os.path.exists(p):
             extra[f.split(".")[0]] = json.load(open(p))
+    # The fit's own record of what it was fitted to and how it scored, so the page quotes
+    # the run that produced the ratings beside it rather than a figure typed in once.
+    fitmeta = json.load(open(os.path.join(DATA, "rating.json")))
+    extra["fit"] = {k: fitmeta.get(k) for k in ("corpus", "holdout")}
     return se["ratings"], se, pop, extra
 
 
@@ -454,6 +458,22 @@ def build():
                key=lambda t: t[0]) if widths else None
     firm = min(widths, key=lambda t: t[0]) if widths else None
 
+    # Both figures come from the run that wrote data/rating.json: the corpus it was fitted
+    # to, and how it scored against TruVolley on the matches it was held out of.
+    fit = extra.get("fit") or {}
+    cm, h = fit.get("corpus") or {}, fit.get("holdout") or {}
+    corpus = (f'{cm["matches"]:,} matches' if cm.get("matches")
+              else "the merged match corpus")
+    if h.get("both_seen"):
+        gap = h["both_seen"]["ll"] - h["truvolley"]["ll"]
+        hold = (f'On the {h["n"]:,} held-out matches where both rate all four players and '
+                f'both have seen the data, TruVolley scores {h["truvolley"]["ll"]:.3f} '
+                f'log-loss and {h["truvolley"]["acc"]:.3f} accuracy against this fit\'s '
+                f'{h["both_seen"]["ll"]:.3f} and {h["both_seen"]["acc"]:.3f} &#8212; '
+                f'{gap:.3f} of a log-loss point behind. ')
+    else:
+        hold = ("The two ratings have not been scored against each other on this corpus. ")
+
     return f"""<title>The 2027 Field, Re-Ranked</title>
 <style>{CSS}</style>
 <div class="wrap">
@@ -610,11 +630,11 @@ def build():
     {seinfo["reps"]} times on results resampled by tournament-division &#8212; whole draws
     at a time, since six pool results out of one bracket are not six independent facts
     &#8212; across {seinfo["clusters"]:,} divisions.</li>
-    <li><b>Neither rating is the truth.</b> On held-out matches where both rate all four
-    players and both have seen the data, TruVolley scores 0.397 log-loss against this fit's
-    0.397 with accuracy 0.843. Out of sample TruVolley looks far better, but it is quoted
-    as of today and has already absorbed the matches being predicted. The case for this
-    rating is that it is transparent and adjustable, not that it is sharper.</li>
+    <li><b>This rating is not the sharper of the two.</b> {hold}Out of sample the gap is
+    wider still, but there TruVolley is quoted as of today and has already absorbed the
+    matches being predicted, which is why the figures above let this fit see them too.
+    The case for this rating is that it is transparent and adjustable, and that it reaches
+    the players TruVolley has no number for &#8212; not that it predicts better.</li>
     <li><b>Ratings sit on the TruVolley scale by a quantile map</b>, which is monotone and
     reorders nobody.</li>
   </ul>
@@ -622,7 +642,7 @@ def build():
 
 <footer>
   {LABEL}, the closed cohort of {len(pop):,} girls from a partner-graph crawl, ranked on a
-  Bradley-Terry rating fitted to 679,241 matches from Volleyball Life, CBVA and college
+  Bradley-Terry rating fitted to {corpus} from Volleyball Life, CBVA and college
   beach. Intervals from {seinfo["reps"]} bootstrap refits resampled by tournament-division.
   Records and opponent strength are computed over the same three-year window as the fit.
   Built by rate.py, uncertainty.py, shrink.py, extrapolation.py, stepup.py, schedule.py,

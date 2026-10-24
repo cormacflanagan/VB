@@ -1,30 +1,30 @@
 {
  "group": "19U",
  "players": {
-  "91052": "Sage Illian",
-  "64896": "Haisley Flanagan",
-  "84725": "Sarah Cowan",
   "147394": "Sadie Stafford",
+  "64896": "Haisley Flanagan",
+  "91052": "Sage Illian",
+  "84725": "Sarah Cowan",
+  "161398": "Charlotte Jansen",
   "98125": "Ella Buchanan",
   "9258": "Abigail Moffett",
-  "161398": "Charlotte Jansen",
   "94563": "Danica Waterman",
-  "124871": "Sienna Cicero",
-  "64782": "Regina Stella Broshear",
   "98360": "Stacy Balestrieri",
-  "25298": "Lia Ray",
-  "77570": "Elyse Smelcer",
+  "64782": "Regina Stella Broshear",
   "211882": "Reese Hislop",
+  "124871": "Sienna Cicero",
+  "77570": "Elyse Smelcer",
   "129730": "Taylor Daley",
+  "25298": "Lia Ray",
   "123209": "Olivia Leon",
   "147247": "Lauren Eklund",
   "196589": "Hazel Williams",
   "193639": "Celi Clark",
   "70421": "Ella Whiteside"
  },
- "asof": "2026-09-23",
+ "asof": "2026-10-24",
  "source": "corpus",
- "matches": 57,
+ "matches": 56,
  "pairs": [
   {
    "a": "Celi Clark",
@@ -1304,114 +1304,6 @@
      ],
      "against": [
       178761
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Haisley Flanagan",
-   "b": "Stacy Balestrieri",
-   "aId": 64896,
-   "bId": 98360,
-   "aWins": 2,
-   "bWins": 0,
-   "games": [
-    {
-     "date": "2025-10-05",
-     "event": "GNBV National Recruiting Showcase Oct 2025",
-     "division": "",
-     "tid": 23700,
-     "tdId": 119582,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": true,
-     "sets": [
-      [
-       28,
-       24
-      ]
-     ],
-     "with": [
-      "Charlotte Jansen"
-     ],
-     "against": [
-      89436
-     ]
-    },
-    {
-     "date": "2025-10-05",
-     "event": "GNBV National Recruiting Showcase Oct 2025",
-     "division": "",
-     "tid": 23700,
-     "tdId": 119582,
-     "phase": "Playoffs",
-     "round": "Gold Elite Playoffs",
-     "won": true,
-     "sets": [
-      [
-       21,
-       17
-      ]
-     ],
-     "with": [
-      "Charlotte Jansen"
-     ],
-     "against": [
-      89436
-     ]
-    }
-   ]
-  },
-  {
-   "a": "Stacy Balestrieri",
-   "b": "Charlotte Jansen",
-   "aId": 98360,
-   "bId": 161398,
-   "aWins": 0,
-   "bWins": 2,
-   "games": [
-    {
-     "date": "2025-10-05",
-     "event": "GNBV National Recruiting Showcase Oct 2025",
-     "division": "",
-     "tid": 23700,
-     "tdId": 119582,
-     "phase": "Pool",
-     "round": "Pools",
-     "won": false,
-     "sets": [
-      [
-       24,
-       28
-      ]
-     ],
-     "with": [
-      "Haisley Flanagan"
-     ],
-     "against": [
-      89436
-     ]
-    },
-    {
-     "date": "2025-10-05",
-     "event": "GNBV National Recruiting Showcase Oct 2025",
-     "division": "",
-     "tid": 23700,
-     "tdId": 119582,
-     "phase": "Playoffs",
-     "round": "Gold Elite Playoffs",
-     "won": false,
-     "sets": [
-      [
-       17,
-       21
-      ]
-     ],
-     "with": [
-      "Haisley Flanagan"
-     ],
-     "against": [
-      89436
      ]
     }
    ]
@@ -2721,6 +2613,38 @@
    ]
   },
   {
+   "a": "Regina Stella Broshear",
+   "b": "Haisley Flanagan",
+   "aId": 64782,
+   "bId": 64896,
+   "aWins": 1,
+   "bWins": 0,
+   "games": [
+    {
+     "date": "2026-06-27",
+     "event": "Main Beach",
+     "division": "Main Beach",
+     "tid": 4656,
+     "tdId": 16483,
+     "phase": "Playoff",
+     "round": "3",
+     "won": true,
+     "sets": [
+      [
+       31,
+       29
+      ]
+     ],
+     "with": [
+      98425
+     ],
+     "against": [
+      44555
+     ]
+    }
+   ]
+  },
+  {
    "a": "Ella Buchanan",
    "b": "Charlotte Jansen",
    "aId": 98125,
@@ -2770,11 +2694,6 @@
    "matches": 19
   },
   {
-   "a": "Haisley Flanagan",
-   "b": "Charlotte Jansen",
-   "matches": 16
-  },
-  {
    "a": "Lauren Eklund",
    "b": "Reese Hislop",
    "matches": 15
@@ -2783,6 +2702,11 @@
    "a": "Haisley Flanagan",
    "b": "Ella Buchanan",
    "matches": 14
+  },
+  {
+   "a": "Haisley Flanagan",
+   "b": "Charlotte Jansen",
+   "matches": 8
   },
   {
    "a": "Elyse Smelcer",

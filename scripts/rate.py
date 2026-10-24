@@ -370,7 +370,7 @@ def versus_truvolley(ids, ix, d, r, c, r_all=None, scale=None):
     for k in ("a1", "a2", "b1", "b2"):
         ok = ok & ~np.isnan(tv[d[k]])
     if ok.sum() < 200:
-        return
+        return None
     y = d["y"][ok]
     diff = (team(tv, d["a1"][ok], d["a2"][ok], 1.0)
             - team(tv, d["b1"][ok], d["b2"][ok], 1.0))
@@ -387,6 +387,14 @@ def versus_truvolley(ids, ix, d, r, c, r_all=None, scale=None):
                         np.mean((q - y) ** 2), k_tv)
     mine = score(r, d, c, ok, scale=scale)
     seen = score(r_all, d, c, ok, scale=scale) if r_all is not None else None
+    out = {"n": int(ok.sum()),
+           "truvolley": {"ll": round(best[0], 4), "acc": round(float(best[2]), 3),
+                         "brier": round(float(best[3]), 4), "scale": round(best[1], 2)},
+           "fit": {"ll": round(mine[0], 4), "acc": round(float(mine[1]), 3),
+                   "brier": round(float(mine[2]), 4)}}
+    if seen:
+        out["both_seen"] = {"ll": round(seen[0], 4), "acc": round(float(seen[1]), 3),
+                            "brier": round(float(seen[2]), 4)}
     print("")
     print(f"head to head on {int(ok.sum())} held-out matches where both rate all four:")
     print(f"  {'':10}{'LOG-LOSS':>10}{'ACCURACY':>10}{'BRIER':>9}")
@@ -401,6 +409,9 @@ def versus_truvolley(ids, ix, d, r, c, r_all=None, scale=None):
     if seen:
         print(f"  {'both seen':10}{seen[0]:>10.4f}{seen[1]:>10.3f}{seen[2]:>9.4f}"
               f"   ({best[0] - seen[0]:+.4f} vs TruVolley)")
+    # Returned as well as printed: the report pages quote these figures, and a page that
+    # carries them as typed-in constants goes stale the first time the fit is re-run.
+    return out
 
 
 def counts(ids, d):
@@ -456,7 +467,7 @@ def main(argv):
 
     print("\n  refitting on everything")
     r = fit(n, d, c, mask=np.ones(len(d["y"]), bool))
-    versus_truvolley(ids, ix, d, r_tr, c, r_all=r, scale=ps)
+    holdout = versus_truvolley(ids, ix, d, r_tr, c, r_all=r, scale=ps)
     nm = counts(ids, d)
 
     # Put it on TruVolley's scale. A least-squares line was wrong here: fitted with
@@ -507,6 +518,9 @@ def main(argv):
     json.dump({"config": c, "map": {"kind": "quantile", "r": corr,
                                     "x": [round(float(v), 4) for v in kx],
                                     "y": [round(float(v), 4) for v in ky]},
+               "corpus": {"observations": int(len(d["y"])), "matches": int(d["real"].sum()),
+                          "players": len(ids)},
+               "holdout": holdout,
                "ratings": out}, open(dest, "w"), indent=1)
     print(f"wrote {os.path.relpath(dest)} ({len(out)} players)")
 
